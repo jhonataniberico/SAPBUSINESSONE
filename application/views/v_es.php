@@ -21,8 +21,9 @@
 	<section id="principal">
 	    <div class="section">
 	        <div class="slide">
-	        	<img src="">
-	            <h2>Diferentes escenarios. Una soluci&oacute;n</h2>
+        		<div class="container">
+	            	<h2>Diferentes escenarios. Una soluci&oacute;n</h2>
+        		</div>
 	        </div>
 	        <div class="slide">
 	            <h1>And a normal website under it</h1>
