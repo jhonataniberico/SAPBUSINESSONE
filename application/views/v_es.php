@@ -117,7 +117,7 @@
 	    		</div>
 	            <div class="container">
 	            	<div class="col-xs-12">
-	            		<div class="col-xs-3 ALIGN_RIGHT">
+	            		<div class="col-xs-3 ALIGN_RIGHT m-t-65">
 	            			<span class="PAGE">05/05</span>
 	            		</div>
 	            		<div class="col-xs-9">
@@ -183,8 +183,23 @@
 	            				</div>
 	            			</div>
 			            </div>
-			            <div class="col-xs-8" style="border: 1px solid #FDB917; height: 300px;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;">
-			            	
+			            <div class="col-xs-8" style="border: 1px solid #FDB917; height: 450px;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;">
+			            	<div class="col-xs-12">
+			            		<h5>PERMITA QUE NUESTROS EXPERTOS LO CONTACTEN</h5>
+			            		<div class="col-xs-12">
+			            			<div class="col-xs-8">
+			            				<h5>Introduzca aquí sus datos o conéctate vía</h5>
+			            			</div>
+			            			<div class="col-xs-4" style="background-color: #0977B9;">
+			            				<div class="col-xs-4"><i class="fa fa-linkedin fa-lg" aria-hidden="true" style="background-color: #0977B9;"></i></div>
+			            				<div class="col-xs-8">
+			            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored BOTON_CONECTESE" style="width: 132%;">
+												  Conéctese ahora
+											</button>
+			            				</div>
+			            			</div>
+			            		</div>
+			            	</div>
 			            </div>
 	            	</div>
 	        	</div>
