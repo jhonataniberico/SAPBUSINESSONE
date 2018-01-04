@@ -38,8 +38,8 @@
 	    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
 	    		</div>
-	            <div class="container">
-	            	<h2>¿En qu&eacute; industria se desempe&ntilde;a&#63;</h2>
+	            <div class="container text-center">
+	            	<h2 class="question"><span class="number">01/05</span>¿En qu&eacute; industria se desempe&ntilde;a&#63;</h2>
 	            	<div class="mdl-card">
             			
 	            	</div>
@@ -50,8 +50,8 @@
 	    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
 	    		</div>
-	            <div class="container">
-	            	<h2>¿De qu&eacute; tama&ntilde;o es su empresa&#63;</h2>
+	            <div class="container text-center">
+	            	<h2 class="question"><span class="number">02/05</span>¿De qu&eacute; tama&ntilde;o es su empresa&#63;</h2>
 	            	<div class="mdl-card">
             			
 	            	</div>
@@ -62,8 +62,8 @@
 	    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
 	    		</div>
-	            <div class="container">
-	            	<h2>¿Cu&aacute;l es la prioridad de su negocio&#63;</h2>
+	            <div class="container text-center">
+	            	<h2 class="question"><span class="number">03/05</span>¿Cu&aacute;l es la prioridad de su negocio&#63;</h2>
 	            	<div class="mdl-card">
             			
 	            	</div>
@@ -74,8 +74,8 @@
 	    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
 	    		</div>
-	            <div class="container">
-	            	<h2>¿Que tipo de infraestructura utiliza&#63;</h2>
+	            <div class="container text-center">
+	            	<h2 class="question"><span class="number">04/05</span>¿Que tipo de infraestructura utiliza&#63;</h2>
 	            	<div class="mdl-card">
             			
 	            	</div>

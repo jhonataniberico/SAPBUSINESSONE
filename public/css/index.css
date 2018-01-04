@@ -41,6 +41,15 @@ body{
 	max-width: 140px;
 	margin-right: 20px;
 }
+/*QUESTIONS*/
+h2.question{
+	font-size: 32px;
+}
+span.number{
+	color: #FBB819;
+    font-size: 75px;
+    font-weight: 100;
+}
 /*FULLPAGE*/
 .fp-controlArrow.fp-prev{
 	border-color: transparent #FBB819 transparent transparent
