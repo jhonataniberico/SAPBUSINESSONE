@@ -59,7 +59,8 @@
 	        </div>
 	        <div class="slide">
 	            <div class="container">
-	            	<h2>Gracias por su respuesta&#63;</h2>
+	            	<h2><span>Gracias por sus respuestas.</span> Estamos seguros
+						que SAP Business One es lo que necesita.</h2>
 	            	<div class="mdl-card">
             			
 	            	</div>
