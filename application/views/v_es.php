@@ -44,6 +44,9 @@
             			
 	            	</div>
 	        	</div>
+	        	<div class="logo-bottom">
+        			<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
+        		</div>
 	        </div>
 	        <div class="slide">
 	        	<div class="header">
@@ -56,6 +59,9 @@
             			
 	            	</div>
 	        	</div>
+	        	<div class="logo-bottom">
+        			<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
+        		</div>
 	        </div>
 	        <div class="slide">
 	        	<div class="header">
@@ -68,6 +74,9 @@
             			
 	            	</div>
 	        	</div>
+	        	<div class="logo-bottom">
+        			<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
+        		</div>
 	        </div>
 	        <div class="slide">
 	        	<div class="header">
@@ -80,6 +89,9 @@
             			
 	            	</div>
 	        	</div>
+				<div class="logo-bottom">
+        			<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
+        		</div>
 	        </div>
 	        <div class="slide">
 	        	<div class="header">

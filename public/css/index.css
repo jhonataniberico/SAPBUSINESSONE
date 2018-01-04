@@ -21,6 +21,14 @@ body{
 .fondo-bottom img{
 	max-width: 1500px;
 }
+.logo-bottom{
+	position: absolute;
+	bottom: 0;
+	padding: 40px;
+}
+.logo-bottom img{
+	max-width: 150px;
+}
 .header{
     position: fixed;
     top: 0;
