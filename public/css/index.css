@@ -14,6 +14,13 @@ body{
 .header-home img{
 	max-width: 150px;
 }
+.fondo-bottom{
+	position: absolute;
+	bottom: 0;
+}
+.fondo-bottom img{
+	max-width: 1500px;
+}
 .header{
     position: fixed;
     top: 0;

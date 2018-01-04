@@ -29,6 +29,9 @@
         			<img src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	            	<h2>Diferentes escenarios. Una soluci&oacute;n</h2>
         		</div>
+        		<div class="fondo-bottom">
+        			<img src="<?php echo RUTA_IMG?>fondo/fondo.png">
+        		</div>
 	        </div>
 	        <div class="slide">
 		    	<div class="header">
