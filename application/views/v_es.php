@@ -26,15 +26,47 @@
         		</div>
 	        </div>
 	        <div class="slide">
-	            <h1>And a normal website under it</h1>
+	            <div class="container">
+	            	<h2>¿En qu&eacute; industria se desempe&ntilde;a&#63;</h2>
+	            	<div class="mdl-card">
+            			
+	            	</div>
+	        	</div>
 	        </div>
 	        <div class="slide">
-	             <h1>A great single slider!</h1>
+	            <div class="container">
+	            	<h2>¿De qu&eacute; tama&ntilde;o es su empresa&#63;</h2>
+	            	<div class="mdl-card">
+            			
+	            	</div>
+	        	</div>
+	        </div>
+	        <div class="slide">
+	            <div class="container">
+	            	<h2>¿Cu&aacute;l es la prioridad de su negocio&#63;</h2>
+	            	<div class="mdl-card">
+            			
+	            	</div>
+	        	</div>
+	        </div>
+	        <div class="slide">
+	            <div class="container">
+	            	<h2>¿Que tipo de infraestructura utiliza&#63;</h2>
+	            	<div class="mdl-card">
+            			
+	            	</div>
+	        	</div>
+	        </div>
+	        <div class="slide">
+	            <div class="container">
+	            	<h2>Gracias por su respuesta&#63;</h2>
+	            	<div class="mdl-card">
+            			
+	            	</div>
+	        	</div>
 	        </div>
 	    </div>
 	</section>
-
-
 	<script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
 	<script src="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_PLUGINS?>fullPage/vendors/jquery.easings.min.js?v=<?php echo time();?>"></script>
