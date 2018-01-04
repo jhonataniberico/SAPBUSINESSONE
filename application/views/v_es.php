@@ -20,6 +20,10 @@
 <body>
 	<section id="principal">
 	    <div class="section">
+	    	<div class="header">
+    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo.png">
+    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
+    		</div>
 	        <div class="slide">
         		<div class="container">
 	            	<h2>Diferentes escenarios. Una soluci&oacute;n</h2>
