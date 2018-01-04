@@ -1,0 +1,25 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+/*FULLPAGE*/
+.fp-controlArrow.fp-prev{
+	border-color: transparent #FBB819 transparent transparent
+}
+.fp-controlArrow.fp-next{
+	border-color: transparent transparent transparent #FBB819;
+}
+/*BARRA SCROLL*/
+::-webkit-scrollbar {
+	width: 4px;
+	height: 5px;
+}
+::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb {
+	background: rgba(0, 0, 0, 0.2);
+}
