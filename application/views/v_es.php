@@ -44,21 +44,39 @@
 	            <div class="container text-center">
 	            	<h2 class="question"><span class="number">01/05</span>¿En qu&eacute; industria se desempe&ntilde;a&#63;</h2>
 	            	<div class="mdl-card mdl-card-question">
-            			<div class="mdl-card__menu">
+            			<div class="mdl-card__title">
+            				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
+            				<p>Servicios Profesionales</p>
 							<i class="mdi mdi-add"></i>
             			</div>
 	            	</div>
 	            	<div class="mdl-card mdl-card-question">
-            			
+	            		<div class="mdl-card__title">
+            				<img src="<?php echo RUTA_IMG?>cards/card-retail.png">
+            				<p>Retail</p>
+							<i class="mdi mdi-add"></i>
+            			</div>
 	            	</div>
 	            	<div class="mdl-card mdl-card-question">
-            			
+	            		<div class="mdl-card__title">
+            				<img src="<?php echo RUTA_IMG?>cards/card-distribucion.png">
+            				<p>Distribuci&oacute;n</p>
+							<i class="mdi mdi-add"></i>
+            			</div>
 	            	</div>
 	            	<div class="mdl-card mdl-card-question">
-            			
+	            		<div class="mdl-card__title">
+            				<img src="<?php echo RUTA_IMG?>cards/card-producto.png">
+            				<p>Productos de consumo</p>
+							<i class="mdi mdi-add"></i>
+            			</div>
 	            	</div>
 	            	<div class="mdl-card mdl-card-question">
-            			
+	            		<div class="mdl-card__title">
+            				<img src="<?php echo RUTA_IMG?>cards/card-proceso.png">
+            				<p>Procesos/Manufactura</p>
+							<i class="mdi mdi-add"></i>
+            			</div>
 	            	</div>
 	        	</div>
 	        	<div class="logo-bottom">
