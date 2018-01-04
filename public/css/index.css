@@ -5,6 +5,15 @@ body{
 	color: #FFFFFF;
 }
 /*HEADER*/
+.header-home{
+	position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 40px;
+}
+.header-home img{
+	max-width: 150px;
+}
 .header{
     position: fixed;
     top: 0;

@@ -13,6 +13,7 @@
 	<title>SAP Business One</title>
     <link rel="shortcut icon" href="<?php echo RUTA_IMG?>header/logo-smiledu.png">
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.css?v=<?php echo time();?>">
+    <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>fullPage/dist/jquery.fullpage.min.css?v=<?php echo time();?>">
 	<link type="text/css"       rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
@@ -20,16 +21,20 @@
 <body>
 	<section id="principal">
 	    <div class="section">
-	    	<div class="header">
-    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
-    		</div>
 	        <div class="slide">
+	        	<div class="header-home">
+					<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
+		    	</div>
         		<div class="container">
+        			<img src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	            	<h2>Diferentes escenarios. Una soluci&oacute;n</h2>
         		</div>
 	        </div>
 	        <div class="slide">
+		    	<div class="header">
+	    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+	    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
+	    		</div>
 	            <div class="container">
 	            	<h2>¿En qu&eacute; industria se desempe&ntilde;a&#63;</h2>
 	            	<div class="mdl-card">
@@ -38,6 +43,10 @@
 	        	</div>
 	        </div>
 	        <div class="slide">
+	        	<div class="header">
+	    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+	    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
+	    		</div>
 	            <div class="container">
 	            	<h2>¿De qu&eacute; tama&ntilde;o es su empresa&#63;</h2>
 	            	<div class="mdl-card">
@@ -46,6 +55,10 @@
 	        	</div>
 	        </div>
 	        <div class="slide">
+	        	<div class="header">
+	    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+	    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
+	    		</div>
 	            <div class="container">
 	            	<h2>¿Cu&aacute;l es la prioridad de su negocio&#63;</h2>
 	            	<div class="mdl-card">
@@ -54,6 +67,10 @@
 	        	</div>
 	        </div>
 	        <div class="slide">
+	        	<div class="header">
+	    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+	    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
+	    		</div>
 	            <div class="container">
 	            	<h2>¿Que tipo de infraestructura utiliza&#63;</h2>
 	            	<div class="mdl-card">
@@ -62,6 +79,10 @@
 	        	</div>
 	        </div>
 	        <div class="slide">
+	        	<div class="header">
+	    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+	    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
+	    		</div>
 	            <div class="container">
 	            	<h2><span>Gracias por sus respuestas.</span> Estamos seguros
 						que SAP Business One es lo que necesita.</h2>
@@ -74,6 +95,7 @@
 	</section>
 	<script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
 	<script src="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.js?v=<?php echo time();?>"></script>
+	<script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_PLUGINS?>fullPage/vendors/jquery.easings.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_PLUGINS?>fullPage/vendors/scrolloverflow.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_PLUGINS?>fullPage/dist/jquery.fullpage.min.js?v=<?php echo time();?>"></script>
