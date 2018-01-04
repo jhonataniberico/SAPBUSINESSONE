@@ -191,14 +191,56 @@
 			            				<h5>Introduzca aquí sus datos o conéctate vía</h5>
 			            			</div>
 			            			<div class="col-xs-4" style="background-color: #0977B9;">
-			            				<div class="col-xs-4"><i class="fa fa-linkedin fa-lg" aria-hidden="true" style="background-color: #0977B9;"></i></div>
-			            				<div class="col-xs-8">
-			            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored BOTON_CONECTESE" style="width: 132%;">
+			            				<div class="col-xs-2"><i class="fa fa-linkedin fa-lg" aria-hidden="true" style="background-color: #0977B9;"></i></div>
+			            				<div class="col-xs-10">
+			            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored BOTON_CONECTESE" style="width: 132%; font-size: 12px;">
 												  Conéctese ahora
 											</button>
 			            				</div>
 			            			</div>
 			            		</div>
+			            		<form>
+			            		  <div class="col-xs-12">
+			            		  	<div class="col-xs-6">
+			            		  		<div class="form-group">
+										    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre Completo">
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Empresa">
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="País">
+										</div>
+			            		  	</div>
+			            		  	<div class="col-xs-6">
+			            		  		</br>
+			            		  		</br>
+			            		  		<div class="form-group">
+									    	<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Cargo">
+									  	</div>
+									  	<div class="form-group">
+											<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Teléfono">
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Notes">
+										</div>
+			            		  	</div>
+			            		  	<div class="col-xs-12">
+			            		  		<div class="col-xs-8">
+			            		  			<div class="form-check">
+											    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+											    <label class="form-check-label" for="exampleCheck1">He leido y acepto los <a href="" style="color: #337AB7 !important;">Términos y condiciones de SAP</a></label>
+											</div>
+			            		  		</div>
+			            		  		<div class="col-xs-4">
+			            		  			<button type="submit" class="btn btn-primary" style="background-color: #1B8DCB !important;border: none;border-radius: 0;">Solicitar estimación</button>
+			            		  		</div>
+			            		  	</div>
+			            		  </div>
+								</form>
 			            	</div>
 			            </div>
 	            	</div>
