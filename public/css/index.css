@@ -65,6 +65,12 @@ span.number{
 .fp-controlArrow.fp-next{
 	border-color: transparent transparent transparent #FBB819;
 }
+/*MDL-CARD-QUESTION*/
+.mdl-card-question{
+	display: inline-block;
+	border: 1px solid #FBB819;
+	background-color: transparent;
+}
 /*BARRA SCROLL*/
 ::-webkit-scrollbar {
 	width: 4px;

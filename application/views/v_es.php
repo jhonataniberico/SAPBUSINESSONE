@@ -15,7 +15,8 @@
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>fullPage/dist/jquery.fullpage.min.css?v=<?php echo time();?>">
-	<link type="text/css"       rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.css?v=<?php echo time();?>">
+	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.css?v=<?php echo time();?>">
+    <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>index2.css?v=<?php echo time();?>">
 </head>
@@ -41,7 +42,19 @@
 	    		</div>
 	            <div class="container text-center">
 	            	<h2 class="question"><span class="number">01/05</span>¿En qu&eacute; industria se desempe&ntilde;a&#63;</h2>
-	            	<div class="mdl-card">
+	            	<div class="mdl-card mdl-card-question">
+            			
+	            	</div>
+	            	<div class="mdl-card mdl-card-question">
+            			
+	            	</div>
+	            	<div class="mdl-card mdl-card-question">
+            			
+	            	</div>
+	            	<div class="mdl-card mdl-card-question">
+            			
+	            	</div>
+	            	<div class="mdl-card mdl-card-question">
             			
 	            	</div>
 	        	</div>
