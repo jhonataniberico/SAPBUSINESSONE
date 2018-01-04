@@ -5,6 +5,10 @@
 .BLANCO_FONDO {
 	background-color: #fff;
 }
+.NEGRO_FONDO {
+	background-color: #000 !important;
+	border-radius: 0;
+}
 .NEGRO_COLOR {
 	color: #000;
 }

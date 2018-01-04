@@ -221,29 +221,29 @@
 			            		  <div class="col-xs-12">
 			            		  	<div class="col-xs-6">
 			            		  		<div class="form-group">
-										    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre Completo">
+										    <input type="text" class="form-control NEGRO_FONDO" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre Completo">
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Empresa">
+											<input type="text" class="form-control NEGRO_FONDO" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Empresa">
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+											<input type="text" class="form-control NEGRO_FONDO" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="País">
+											<input type="text" class="form-control NEGRO_FONDO" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="País">
 										</div>
 			            		  	</div>
 			            		  	<div class="col-xs-6">
 			            		  		</br>
 			            		  		</br>
 			            		  		<div class="form-group">
-									    	<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Cargo">
+									    	<input type="text" class="form-control NEGRO_FONDO" id="exampleInputPassword1" placeholder="Cargo">
 									  	</div>
 									  	<div class="form-group">
-											<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Teléfono">
+											<input type="text" class="form-control NEGRO_FONDO" id="exampleInputPassword1" placeholder="Teléfono">
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Notes">
+											<input type="text" class="form-control NEGRO_FONDO" id="exampleInputPassword1" placeholder="Notes">
 										</div>
 			            		  	</div>
 			            		  	<div class="col-xs-12">
