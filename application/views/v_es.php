@@ -249,8 +249,10 @@
 			            		  	<div class="col-xs-12">
 			            		  		<div class="col-xs-8">
 			            		  			<div class="form-check">
-											    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-											    <label class="form-check-label" for="exampleCheck1">He leido y acepto los <a href="" style="color: #337AB7 !important;">Términos y condiciones de SAP</a></label>
+			            		  				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+												  <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
+												  <span class="mdl-checkbox__label">He leido y acepto los <a href="" style="color: #337AB7 !important;">Términos y condiciones de SAP</a></span>
+												</label>
 											</div>
 			            		  		</div>
 			            		  		<div class="col-xs-4">
