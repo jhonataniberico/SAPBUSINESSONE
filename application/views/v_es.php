@@ -423,8 +423,92 @@
 	    		</div>
 	            <div class="mdl-container text-center">
 	            	<h2 class="question"><span class="number">04/05</span>¿Que tipo de infraestructura utiliza&#63;</h2>
-	            	<div class="mdl-card">
-            			
+	            	<div class="mdl-card-question">
+	            		<div class="flip-card">
+	            			<div class="card-front">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-local.png">
+	            				<p>Local</p>
+								<i class="mdi mdi-add"></i>
+	            			</div>
+	            			<div class="card-back">
+	            				<label>Ideal para las compa&tilde;&iacute;as que necesitan alta protecc&oacute;n de datos y ediciones a nivel de servicio. Son propietarios
+	            				 del servidor, red, disco y pueden decidir qu&eacute; usuarios est&aacute;n autorizados a utilizar la infraestructura.</label>
+	            				<p>Local</p>
+								<i class="mdi mdi-remove"></i>
+	            			</div>
+	            		</div>
+	            		<div class="content-card">
+	            			<button id="buttonLocal" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<div class="contenido">
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            				</div>
+	            				<div class="contenido-right">
+            						<h2>Sab&iacute;a que...</h2>
+            						<p>... se puede hacer la conexi&oacute;n de estas aplicaciones (comercio electr&oacute;nico, punto de venta, Marketplace, CRM, etc.) con
+            						 SAP Business One f&aacute;cilmente cuando es empleas On-Premise.</p>
+            						<small>(IDC, septiembre 2016)</small>
+	            				</div>
+	            			</div>
+	            		</div>
+	            	</div>
+	            	<div class="mdl-card-question">
+	            		<div class="flip-card">
+	            			<div class="card-front">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-cloud.png">
+	            				<p>Cloud</p>
+								<i class="mdi mdi-add"></i>
+	            			</div>
+	            			<div class="card-back">
+	            				<label>Los servicios que ofrecen se encuentran en servidores externos al usuario, teniendo la capacidad de procesamiento y almacenamiento
+	            				 sin instalar m&aacute;quinas localmente, por lo que no tiene una inversi&oacute;n inicial o gasto de mantenimiento en este sentido, si
+	            				 no que se paga por el uso.</label>
+	            				<p>Cloud</p>
+								<i class="mdi mdi-remove"></i>
+	            			</div>
+	            		</div>
+	            		<div class="content-card">
+	            			<button id="buttonCloudI" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<div class="contenido">
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            				</div>
+	            				<div class="contenido-right">
+            						<h2>Sab&iacute;a que...</h2>
+            						<p>... el 21% est&aacute; cada vez m&aacute;s interesado en alternativas o alojadas a lo que ahora ejecutan On-Premise.</p>
+            						<small>(IDC, septiembre 2016)</small>
+	            				</div>
+	            			</div>
+	            		</div>
+	            	</div>
+	            	<div class="mdl-card-question">
+	            		<div class="flip-card">
+	            			<div class="card-front">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-hibrida.png">
+	            				<p>H&iacute;brida</p>
+								<i class="mdi mdi-add"></i>
+	            			</div>
+	            			<div class="card-back">
+	            				<label>Incluye soluciones tanto en la nube como On-Premise. Las nubes h&iacute;bridas ofrecen variedad, por lo que puede tomar y elegir qu&eacute;
+	            				 aspectos de su negocio est&aacute;n mejor en una nube p&uacute;blica o privada versus On-Premise.</label>
+	            				<p>H&iacute;brida</p>
+								<i class="mdi mdi-remove"></i>
+	            			</div>
+	            		</div>
+	            		<div class="content-card">
+	            			<button id="buttonHibrida" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<div class="contenido">
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            				</div>
+	            				<div class="contenido-right">
+            						<h2>Sab&iacute;a que...</h2>
+            						<p>... tienen una buena aceptaci&oacute;n en las empresas de cara a un futuro pr&oacute;ximo, ya que se est&aacute;n desarrollando software de
+            						 gesti&oacute;n de nubes para poder gestionar la nube privada y a su vez adquirir recursos en los grandes proveedores p&uacute;blicos.</p>
+            						<small>(IDC, septiembre 2016)</small>
+	            				</div>
+	            			</div>
+	            		</div>
 	            	</div>
 	        	</div>
 				<div class="logo-bottom">
