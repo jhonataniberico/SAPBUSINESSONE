@@ -205,7 +205,7 @@
             			<div class="flip-card">
             				<div class="card-front">
 	            				<img src="<?php echo RUTA_IMG?>cards/card-producto.png">
-	            				<p>Número de empeados</p>
+	            				<p>Número de empleados</p>
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
@@ -242,8 +242,174 @@
 	    		</div>
 	            <div class="container text-center">
 	            	<h2 class="question"><span class="number">03/05</span>¿Cu&aacute;l es la prioridad de su negocio&#63;</h2>
-	            	<div class="mdl-card">
-            			
+	            	<div class="mdl-card-question">
+	            		<div class="flip-card">
+	            			<div class="card-front">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
+	            				<p>Cloud</p>
+								<i class="mdi mdi-add"></i>
+	            			</div>
+	            			<div class="card-back">
+	            				<label>Cloud hace que sea posible para los usuarios acceder a datos, aplicaciones y servicios en internet. La nube elimina la necesidad de hardware
+	            				 costoso como discos duros y servidores y les permite a los usuarios trabajar desde cualquier lugar.</label>
+	            				<p>Cloud</p>
+								<i class="mdi mdi-remove"></i>
+	            			</div>
+	            		</div>
+	            		<div class="content-card">
+	            			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<div class="contenido">
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            				</div>
+	            				<div class="contenido-right">
+            						<h2>Sab&iacute;a que...</h2>
+            						<p>... m&aacute;s del 90% de las empresas ya est&aacute;n utilizando tecnolog&iacute;a en la nube en un entorno p&uacute;blico, privado o h&iacute;brido.</p>
+            						<small>(IDC, septiembre 2016)</small>
+	            				</div>
+	            			</div>
+	            		</div>
+	            	</div>
+	            	<div class="mdl-card-question">
+	            		<div class="flip-card">
+	            			<div class="card-front">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
+	            				<p>Anywhere</p>
+								<i class="mdi mdi-add"></i>
+	            			</div>
+	            			<div class="card-back">
+	            				<label>Gestione su empresa donde est&eacute; y aporte movilidad a su equipo de ventas, gracias a las aplicaciones m&oacute;viles de SAP Business One 
+	            				 estar&aacute; disponible desde cualquier lugar y dispositivo m&oacute;vil.</label>
+	            				<p>Anywhere</p>
+								<i class="mdi mdi-remove"></i>
+	            			</div>
+	            		</div>
+	            		<div class="content-card">
+	            			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<div class="contenido">
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            				</div>
+	            				<div class="contenido-right">
+            						<h2>Sab&iacute;a que...</h2>
+            						<p>... puedes acceder a an&aacute;lisis integrados para la toma de decisiones en tiempo real.</p>
+            						<small>(IDC, septiembre 2016)</small>
+	            				</div>
+	            			</div>
+	            		</div>
+	            	</div>
+	            	<div class="mdl-card-question">
+	            		<div class="flip-card">
+	            			<div class="card-front">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
+	            				<p>with SAP HANA</p>
+								<i class="mdi mdi-add"></i>
+	            			</div>
+	            			<div class="card-back">
+	            				<label>Obtendr&aacute; acceso en tiempo real a informes y cuadros de mando predefinidos, as&iacute; como a herramientas de productividad para dar
+	            				 soporte a la toma de decisiones.</label>
+	            				<p>with SAP HANA</p>
+								<i class="mdi mdi-remove"></i>
+	            			</div>
+	            		</div>
+	            		<div class="content-card">
+	            			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<div class="contenido">
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            				</div>
+	            				<div class="contenido-right">
+            						<h2>Sab&iacute;a que...</h2>
+            						<p>... Busimess One aprovecha una tecnolog&iacute;a In-Memory Computing para generar informes y an&aacute;lisis.</p>
+            						<small>(IDC, septiembre 2016)</small>
+	            				</div>
+	            			</div>
+	            		</div>
+	            	</div>
+	            	<div class="mdl-card-question">
+	            		<div class="flip-card">
+	            			<div class="card-front">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
+	            				<p>with Analytics</p>
+								<i class="mdi mdi-add"></i>
+	            			</div>
+	            			<div class="card-back">
+	            				<label>Permitir&aacute; poder tomar mejores decisiones de una forma r&aacute;pida accediendo inmediatamente a informaci&oacute;n relevante a trav&eacute;s
+	            				 de los modelos de an&aacute;lisis que dise&ntilde;an y poseen, eliminando as&iacute; la necesidad de depender de su equipo de TI permiti&eacute;ndole
+	            				 utilizar la TI en iniciativas que a&ntilde;adan valor a su empresa.</label>
+	            				<p>with Analytics</p>
+								<i class="mdi mdi-remove"></i>
+	            			</div>
+	            		</div>
+	            		<div class="content-card">
+	            			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<div class="contenido">
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            				</div>
+	            				<div class="contenido-right">
+            						<h2>Sab&iacute;a que...</h2>
+            						<p>... obtendr&aacute; la capacidad de explorar, aumentar y analizar de forma instant&aacute;nea todos los datos pr&aacute;cticamente en tiempo real.</p>
+            						<small>(IDC, septiembre 2016)</small>
+	            				</div>
+	            			</div>
+	            		</div>
+	            	</div>
+	            	<div class="mdl-card-question">
+	            		<div class="flip-card">
+	            			<div class="card-front">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
+	            				<p>Star-up</p>
+								<i class="mdi mdi-add"></i>
+	            			</div>
+	            			<div class="card-back">
+	            				<label>Lo ayudar&aacute;n a gestionar cada aspecto de su empresa desde las finanzas y CRM hasta la cadena de suministro y compras. Automatice los
+	            				 procesos clave y libere m&aacute;s tiempo para centrarse en el crecimiento.</label>
+	            				<p>Star-up</p>
+								<i class="mdi mdi-remove"></i>
+	            			</div>
+	            		</div>
+	            		<div class="content-card">
+	            			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<div class="contenido">
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            				</div>
+	            				<div class="contenido-right">
+            						<h2>Sab&iacute;a que...</h2>
+            						<p>... el 35% de los peque&ntilde;os y medianos minoristas han invertido en tecnolog&iacute;a para hacer crecer los ingresos.</p>
+            						<small>(IDC, septiembre 2016)</small>
+	            				</div>
+	            			</div>
+	            		</div>
+	            	</div>
+	            	<div class="mdl-card-question">
+	            		<div class="flip-card">
+	            			<div class="card-front">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
+	            				<p>Subsidaries</p>
+								<i class="mdi mdi-add"></i>
+	            			</div>
+	            			<div class="card-back">
+	            				<label>Dise&ntilde;ada espec&iacute;ficamente para las subsidiarias, permiti&eacute;ndole gestionar de forma unificada todas las &aacute;reas de su empresa
+	            				 para obtener una visi&oacute;n global de la misma.</label>
+	            				<p>Subsidaries</p>
+								<i class="mdi mdi-remove"></i>
+	            			</div>
+	            		</div>
+	            		<div class="content-card">
+	            			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<div class="contenido">
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            				</div>
+	            				<div class="contenido-right">
+            						<h2>Sab&iacute;a que...</h2>
+            						<p>... tiene una plataforma empresarial flexible que le permitir&aacute; descubrir todo el potencial de su ecosistema.</p>
+            						<small>(IDC, septiembre 2016)</small>
+	            				</div>
+	            			</div>
+	            		</div>
 	            	</div>
 	        	</div>
 	        	<div class="logo-bottom">
