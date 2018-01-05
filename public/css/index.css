@@ -7,6 +7,12 @@ body{
 h2{
 	font-family: 'BentonSansRegular';
 }
+/*GENERAL*/
+.mdl-container{
+	max-width: 1350px;
+	margin-right: auto;
+	margin-left: auto;
+}
 /*HEADER*/
 .header-home{
 	position: fixed;
