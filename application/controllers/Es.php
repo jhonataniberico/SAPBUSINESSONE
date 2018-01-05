@@ -16,16 +16,16 @@ class Es extends CI_Controller {
 		$this->load->view('v_es', $data);
 	}
 
-	function guardarDatos() {
+	function saveDatos() {
 		$data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try 
           {
-          	$datos = $_POST['datos'];
+          	$datos = $_POST['global_datos'];
           	$session = array('industria' => $datos);
           	$arrayInsert = array('Industria' => $datos,
           						 'Id_pais' => 1);
-            // $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
+            $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
             $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;
             print_r($data);
