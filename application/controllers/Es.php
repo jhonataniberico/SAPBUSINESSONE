@@ -5,7 +5,7 @@ class Es extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
-        //$this->load->model('M_preaprobacion');
+        $this->load->model('M_solicitud');
         $this->load->helper('utils');
         $this->load->helper("url");
     }
@@ -13,7 +13,7 @@ class Es extends CI_Controller {
 	public function index()
 	{
 		$data['industria'] = $_SESSION['industria'];
-		$this->load->view('v_es');
+		$this->load->view('v_es', $data);
 	}
 
 	function guardarDatos() {
@@ -23,11 +23,14 @@ class Es extends CI_Controller {
           {
           	$datos = $_POST['datos'];
           	$session = array('industria' => $datos);
+          	$arrayInsert = array('Industria' => $datos,
+          						 'Id_pais' => 1);
+            $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
             $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;
-			print_r($proj_name);
+            print_r($data);
           }catch(Exception $e) {
-           $response = array('status' => 2);
+           $data['msj'] = $e->getMessage();
         }
         echo json_encode($response);
 	}
