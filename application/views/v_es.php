@@ -348,8 +348,9 @@
 		    	setTimeout(function(){
 		    	 if($('body').attr('class') != 'fp-viewing-0-0') {
 		    		$('.fp-prev').removeClass( "hidden" );
-		    	 }else if($('body').attr('class') != 'fp-viewing-0-5') {
-		    	 	$('.fp-next').removeClass( "hidden" );
+		    	 }
+		    	 if($('body').attr('class') == 'fp-viewing-0-5') {
+		    	 	$('.fp-next').addClass( "hidden" );
 		    	 }
 		    	}, 500);
 		    });
@@ -357,8 +358,9 @@
 		    	setTimeout(function(){
 		    	 if($('body').attr('class') == 'fp-viewing-0-0') {
 		    		$('.fp-prev').addClass('hidden');
-		    	 }else if($('body').attr('class') != 'fp-viewing-0-0') {
-		    	 	$('.fp-next').removeClass('hidden');
+		    	 }
+		    	 if($('body').attr('class') != 'fp-viewing-0-5') {
+		    		$('.fp-next').removeClass('hidden');
 		    	 }
 		    	}, 500);
 		    });
