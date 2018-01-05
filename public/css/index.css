@@ -4,6 +4,9 @@ body{
 	background-color: #000000;
 	color: #FFFFFF;
 }
+h2{
+	font-family: 'BentonSansRegular';
+}
 /*HEADER*/
 .header-home{
 	position: fixed;
@@ -99,62 +102,74 @@ span.number{
 	width: 100%;
 }
 .flip-card .card-front {
-  -moz-transform: perspective(300) rotateY(0);
-  -webkit-transform: perspective(300) rotateY(0);
-  transform: perspective(300) rotateY(0);
-  z-index: 900;
+	-moz-transform: perspective(300) rotateY(0);
+	-webkit-transform: perspective(300) rotateY(0);
+	transform: perspective(300) rotateY(0);
+	z-index: 900;
 }
 .flip-card .card-back {
-  -moz-transform: rotateY(-180deg);
-  -webkit-transform: rotateY(-180deg);
-  transform: rotateY(-180deg);
-  z-index: 800;
-  background-color: #F8B22C;
+	-moz-transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	z-index: 800;
+	background-color: #F8B22C;
 }
 .flip-card:hover .card-front {
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  -moz-transform: perspective(300) rotateY(180deg);
-  -webkit-transform: perspective(300) rotateY(180deg);
-  transform: perspective(300) rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	-moz-transform: perspective(300) rotateY(180deg);
+	-webkit-transform: perspective(300) rotateY(180deg);
+	transform: perspective(300) rotateY(180deg);
 }
 .flip-card:hover .card-back {
-  z-index: 950;
-  -moz-transform: rotateY(0deg);
-  -ms-transform: rotateY(0deg);
-  -webkit-transform: rotateY(0deg);
-  transform: rotateY(0deg);
-  -moz-transform: perspective(300) rotateY(0deg);
-  -webkit-transform: perspective(300) rotateY(0deg);
-  transform: perspective(300) rotateY(0deg);
+	z-index: 950;
+	-moz-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	-moz-transform: perspective(300) rotateY(0deg);
+	-webkit-transform: perspective(300) rotateY(0deg);
+	transform: perspective(300) rotateY(0deg);
 }
 .flip-card {
-  cursor: pointer;
-  display: inline-block;
-  font-weight: bold;
-  margin: 10px;
-  text-align: center;
-  min-width: 100px;
-  max-width: 400px;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: bold;
+	margin: 10px;
+	text-align: center;
+	min-width: 100px;
+	max-width: 400px;
 }
 .flip-card .card-front,
 .flip-card .card-back {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  -moz-box-shadow: 1px 1px 2px rgba(14, 85, 143, 0.8);
-  -webkit-box-shadow: 1px 1px 2px rgba(14, 85, 143, 0.8);
-  box-shadow: 1px 1px 2px rgba(14, 85, 143, 0.8);
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 40px 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 1px 1px 2px rgba(14, 85, 143, 0.8);
+	-webkit-box-shadow: 1px 1px 2px rgba(14, 85, 143, 0.8);
+	box-shadow: 1px 1px 2px rgba(14, 85, 143, 0.8);
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.flip-card .card-back label{
+	font-family: 'BentonSansLight';
+	color: #000000;
+    line-height: 14px;
+    font-size: 12px;
+    padding: 25px 5px 0 5px;
+    height: 162px;
+}
+.flip-card .card-back p{
+	font-family: 'BentonSansBold';
+	position: relative;
+	bottom: 0;
 }
 .mdl-card-question .card-front img{
 	width: 100%;
-	max-width: 180px;
+	max-width: 165px;
 }
 .mdl-card-question .card-front p{
 	color: #FFFFFF;
@@ -167,6 +182,7 @@ span.number{
 	top: 5px;
 	right: 5px;
 	color: #FFFFFF;
+	font-size: 15px;
 }
 /*BARRA SCROLL*/
 ::-webkit-scrollbar {
