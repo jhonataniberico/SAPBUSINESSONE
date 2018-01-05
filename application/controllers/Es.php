@@ -24,12 +24,23 @@ class Es extends CI_Controller {
           	$datos = $_POST['global_datos'];
           	$arrayInsert = array('Industria' => $datos,
           						 'Id_pais' => 1);
-            $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
+            //$datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
             $session = array('industria' => $datos,
         					 'id_sol'    => $datoInsert['Id']);
             $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;
-            print_r($data);
+          }catch(Exception $e) {
+           $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($response);
+	}
+
+	function getModelo() {
+		$data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try 
+          {
+          	$data['error'] = EXIT_SUCCESS;
           }catch(Exception $e) {
            $data['msj'] = $e->getMessage();
         }

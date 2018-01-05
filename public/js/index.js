@@ -13,27 +13,32 @@ function solicitarEstimacion() {
 	var cargo 	 		= $('#cargo').val();
 	var telefono 		= $('#telefono').val();
 	var notas 	 		= $('#notas').val();
-
-	if(nombre_completo == null) {
-		//console.log('entra');
-		$('#nombre_completo:focus').css('border-color','red');
+	console.log(nombre_completo);
+	if(nombre_completo == null || nombre_completo == '') {
+		$('#nombre_completo').focus().css('border-color','red');
 		return;
 	}
-	if(empresa == null) {
+	if(empresa == null || empresa == '') {
+		$('#empresa').focus().css('border-color','red');
 		return;
 	}
-	if(email == null) {
+	if(email == null || email == '') {
+		$('#email').focus().css('border-color','red');
 		return;
 	}
-	if(pais == null) {
+	if(pais == null || pais == '') {
+		$('#pais').focus().css('border-color','red');
 		return;
 	}
-	if(cargo == null) {
+	if(cargo == null || cargo == '') {
+		$('#cargo').focus().css('border-color','red');
 		return;
 	}
-	if(telefono == null) {
+	if(telefono == null || telefono == '') {
+		$('#telefono').focus().css('border-color','red');
 		return;
 	}
+	return;
 	$.ajax({
 		data  : { nombre_completo : nombre_completo,
 				  empresa : empresa},
@@ -42,9 +47,9 @@ function solicitarEstimacion() {
 		dataType : 'json'
 	}).done(function(data){
 		try{
-			$('#modelo').html('');
+			/*$('#modelo').html('');
 			$('#modelo').append('<option value="">Modelo</option>');
-			$('#modelo').append(data.comboModelo);
+			$('#modelo').append(data.comboModelo);*/
 		} catch (err){
 			msj('error',err.message);
 		}
@@ -125,7 +130,7 @@ $(window).load(function() {
 $( document ).ready(function() {
 	var select = 0;
 	//botón adelante
-    $(".fp-next").click(function(){
+    $(".fp-next").click(function() {
     	setTimeout(function(){
     	 if($('body').attr('class') != 'fp-viewing-0-0') {
     		$('.fp-prev').removeClass( "hidden" );
