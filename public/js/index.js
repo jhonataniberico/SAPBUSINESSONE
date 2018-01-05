@@ -104,7 +104,7 @@ function validateEmail(email) {
 }
 
 var global_datos = null;
-function guardarDatos(id,datos) {
+function guardarDatos(id,datos) {//falta cambiar el 3er slider en la vista coordinar con josé
 	var buttonSelect = $('#'+id);
 	var cardSelect   = $('#'+id).parent().find('.contenido');
 	global_datos = datos;
@@ -138,6 +138,7 @@ $(window).load(function() {
 
 $( document ).ready(function() {
 	var select = 0;
+	var select_prioridad = 0;
 	//botón adelante
     $(".fp-next").click(function() {
     	setTimeout(function(){
@@ -172,6 +173,9 @@ $( document ).ready(function() {
     	if($('body').attr('class') == 'fp-viewing-0-1') {
     		saveDatos();
     	}
+    	if($('body').attr('class') == 'fp-viewing-0-3') {
+    		saveDatos();
+    	}
     });
     //botón atrás
     $(".fp-prev").click(function(){
@@ -198,6 +202,13 @@ $( document ).ready(function() {
 			$('.fp-next').css('pointer-events', '');
     	}
 	});
+	$(".select-prioridad").click(function () {
+		select_prioridad = 1;
+		if($('body').attr('class') == 'fp-viewing-0-1') {
+			$('.fp-next').css('opacity', '');
+			$('.fp-next').css('pointer-events', '');
+    	}
+	});
 });
 
 function borrarFocus(dato) {
@@ -216,7 +227,7 @@ function borrarFocus(dato) {
 	var id = this.val != null ? $('#'+this.id).focus().css('border-color','') : $('#'+this.id).focus().css('border-color','red');
 	});*/
 	var input = $('.form-control').find('input');
-	console.log(input.val());
+	//console.log(input.val());
 	if(input.val().length > 0){
 		input.focus().css('border-color','');
 	}
