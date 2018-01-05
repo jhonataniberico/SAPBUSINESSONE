@@ -161,8 +161,7 @@ span.number{
 	position: relative;
 	bottom: 0;
 }
-.content-card button:hover,
-.content-card button{
+.content-card button:hover{
     background-color: #FBB819;
 }
 .content-card button{
@@ -173,6 +172,13 @@ span.number{
     font-family: 'BentonSansBold';
     text-transform: initial;
     font-size: 18px;
+    background-color: transparent;
+    border: 1px solid #FBB819;
+    -webkit-transition: background-color .25s linear;
+    -moz-transition: background-color .25s linear;
+    -ms-transition: background-color .25s linear;
+    -o-transition: background-color .25s linear;
+    transition: background-color .25s linear;
 }
 .mdl-card-question .card-front img{
 	width: 100%;
