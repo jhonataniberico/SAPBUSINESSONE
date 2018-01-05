@@ -109,6 +109,7 @@ span.number{
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
   z-index: 800;
+  background-color: #F8B22C;
 }
 .flip-card:hover .card-front {
   -moz-transform: rotateY(180deg);
@@ -129,7 +130,6 @@ span.number{
   -webkit-transform: perspective(300) rotateY(0deg);
   transform: perspective(300) rotateY(0deg);
 }
-
 .flip-card {
   cursor: pointer;
   display: inline-block;

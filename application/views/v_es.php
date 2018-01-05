@@ -50,6 +50,9 @@
 							<i class="mdi mdi-add"></i>
             			</div>
             			<div class="card-back">
+            				<small>Satisfacer las diferentes seg&uacute;n el segmento de servicios. Mejorar el flujo de efectivo e impulsar 
+            				el crecimiento de ingresos, reducci&oacute;n de costos y optimizaci&oacute;n de tiempos. Operar en una infraestructura
+            				de tecnolog&iacute;a moderna, flexible y potente.</small>
             				<p>Servicios Profesionales</p>
 							<i class="mdi mdi-remove"></i>
             			</div>
@@ -60,12 +63,24 @@
             				<p>Retail</p>
 							<i class="mdi mdi-add"></i>
             			</div>
+            			<div class="card-back">
+            				<small>Ofrezca a sus consumidores productos, informaci&oacute;n y las experiencias de compra que desean desde cualquier canal. Saque partido de la informaci&oacute;n en tiempo real sobre sus clientes y pedidos, interact&uacute;e con sus compradores y optimice todo el proceso, desde la comercializaci&oacute;n hasta la cadena de suministro.</small>
+            				<p>Retail</p>
+							<i class="mdi mdi-remove"></i>
+            			</div>
 	            	</div>
 	            	<div class="mdl-card-question flip-card">
 	            		<div class="card-front">
             				<img src="<?php echo RUTA_IMG?>cards/card-distribucion.png">
             				<p>Distribuci&oacute;n</p>
 							<i class="mdi mdi-add"></i>
+            			</div>
+            			<div class="card-back">
+            				<small>Abarca desde fabricantes hasta los minoristas y desde otros clientes hasta los consumidores finales. Mejore todo el proceso,
+            				 desde la planificaci&oacute;n de la demanda hasta la gesti&oacute;n del inventario y la cadena de suministro, y ejecute procesos flexibles y altamente integrados
+            				 para lograr la excelencia operativa.</small>
+            				<p>Distribuci&oacute;n</p>
+							<i class="mdi mdi-remove"></i>
             			</div>
 	            	</div>
 	            	<div class="mdl-card-question flip-card">
@@ -74,12 +89,24 @@
             				<p>Productos de consumo</p>
 							<i class="mdi mdi-add"></i>
             			</div>
+            			<div class="card-back">
+            				<small>Adapte todos los detalles de sus operaciones a las necesidades del consumidor moderno. Anticipe, planifique y gestione la demanda, al tiempo que ofrece
+            				 los productos y bienes de consumo que desean los compradores.</small>
+            				<p>Productos de consumo</p>
+							<i class="mdi mdi-remove"></i>
+            			</div>
 	            	</div>
 	            	<div class="mdl-card-question flip-card">
 	            		<div class="card-front">
             				<img src="<?php echo RUTA_IMG?>cards/card-proceso.png">
             				<p>Procesos/Manufactura</p>
 							<i class="mdi mdi-add"></i>
+            			</div>
+            			<div class="card-back">
+            				<small>Satisfaga la demanda de sus clientes y desarrolle nuevas fuentes de ingresos, reduzca los costos de la cadena de suministro, acelere la duraci&oacute;n de
+            				 los ciclos, minimice los rechazos y las modificaciones y, por &uacute;ltimo, agilice la obtenci&oacute;n de beneficios.</small>
+            				<p>Procesos/Manufactura</p>
+							<i class="mdi mdi-remove"></i>
             			</div>
 	            	</div>
 	        	</div>
@@ -271,6 +298,7 @@
 	    </div>
 	</section>
 	<script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
+	<script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
 	<script src="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.js?v=<?php echo time();?>"></script>
 	<script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_PLUGINS?>fullPage/vendors/jquery.easings.min.js?v=<?php echo time();?>"></script>
