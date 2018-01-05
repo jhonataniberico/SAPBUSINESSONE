@@ -60,7 +60,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -88,7 +88,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Retail')">Seleccione</button>
+	            			<button id="buttonCard2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Retail')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -118,7 +118,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Distribución')">Seleccione</button>
+	            			<button id="buttonCard3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Distribución')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -147,7 +147,7 @@
 	            			</div>
             			</div>
             			<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Productos de consumo')">Seleccione</button>
+	            			<button id="buttonCard4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Productos de consumo')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -176,7 +176,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Retail')">Seleccione</button>
+	            			<button id="buttonCard5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Procesos/Manufactura')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">

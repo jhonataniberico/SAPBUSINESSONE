@@ -161,6 +161,7 @@ span.number{
 	position: relative;
 	bottom: 0;
 }
+.content-card button.button-select,
 .content-card button:hover{
     background-color: #FBB819;
 }

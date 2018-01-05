@@ -89,7 +89,13 @@ function validateEmail(email) {
     return re.test(email);
 }
 
-function guardarDatos(datos) {
+function guardarDatos(id,datos) {
+	var buttonSelect = $('#'+id);
+	var cardSelect   = $('#'+id).parent().find('.contenido');
+	$('.contenido').removeClass('aparecer');
+	$('.content-card').find('button').removeClass('button-select');
+	buttonSelect.addClass('button-select');
+	cardSelect.addClass('aparecer');
 	$.ajax({
 		data  : { datos : datos},
 		url   : 'es/guardarDatos',
@@ -163,7 +169,7 @@ $( document ).ready(function() {
     	 }
     	}, 500);
     });
-    $(".SELECCIONADO").click(function () {
+    $(".select").click(function () {
 		select = 1;
 		if($('body').attr('class') == 'fp-viewing-0-1') {
 			$('.fp-next').css('opacity', '');
