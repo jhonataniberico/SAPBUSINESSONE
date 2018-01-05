@@ -41,6 +41,19 @@
 		    	<div class="header">
 	    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
+	    			<div class="header-right">
+						<div class="btn-group">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Action <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Espa&ntilde;ol</a></li>
+								<li><a href="#">Ingl&eacute;s</a></li>
+								<li><a href="#">Portug&eacute;s</a></li>
+							</ul>
+						</div>
+	    			</div>
+	    			
 	    		</div>
 	            <div class="mdl-container text-center">
 	            	<h2 class="question"><span class="number">01/05</span>¿En qu&eacute; industria se desempe&ntilde;a&#63;</h2>
@@ -216,7 +229,7 @@
 	            			</div>
             			</div>
             			<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Retail')"><i class="mdi mdi-remove"></i> Seleccione <i class="mdi mdi-add"></i></button>
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos('Retail')"><i class="mdi mdi-remove"></i> Seleccione <i class="mdi mdi-add"></i></button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -257,7 +270,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonCloud" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonCloud" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-prioridad" onclick="guardarDatos(this.id,'Cloud')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
@@ -285,7 +298,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonAnywhere" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonAnywhere" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-prioridad" onclick="guardarDatos(this.id,'Anywhere')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
@@ -313,7 +326,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonSap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonSap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-prioridad" onclick="guardarDatos(this.id,'with SAP HANA')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
@@ -342,7 +355,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonAnalytics" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonAnalytics" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-prioridad" onclick="guardarDatos(this.id,'with Analytics')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
@@ -370,7 +383,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonStarup" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonStarup" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-prioridad" onclick="guardarDatos(this.id,'Star-up')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
@@ -398,7 +411,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonSubsidaries" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonSubsidaries" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-prioridad" onclick="guardarDatos(this.id,'Subsidaries')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
@@ -438,7 +451,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonLocal" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonLocal" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-prioridad" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -468,7 +481,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonCloudI" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonCloudI" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-prioridad" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -496,7 +509,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonHibrida" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonHibrida" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-prioridad" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
