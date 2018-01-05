@@ -184,6 +184,17 @@ span.number{
 	border-top: 1.5px solid #FFFFFF;
 	border-bottom: 1.5px solid #FFFFFF;
     padding: 5px 0;
+    -webkit-transition: opacity .25s linear, transform .25s linear;
+    -moz-transition: opacity .25s linear, transform .25s linea;
+    -ms-transition: opacity .25s linear, transform .25s linea;
+    -o-transition: opacity .25s linear, transform .25s linea;
+    transition: opacity .25s linear, transform .25s linea;
+    opacity: 0;
+    transform: translateY(100px);
+}
+.content-card .contenido.aparecer{
+	opacity: 1;
+    transform: translateY(0);
 }
 .content-card .contenido-left{
 	width: 48px;
