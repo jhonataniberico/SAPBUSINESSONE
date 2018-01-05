@@ -190,3 +190,7 @@ $( document ).ready(function() {
     	}
 	});
 });
+
+function borrarFocus(dato) {
+
+}
