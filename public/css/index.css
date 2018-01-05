@@ -71,14 +71,13 @@ span.number{
 }
 /*MDL-CARD-QUESTION*/
 .mdl-card-question{
-	display: block;
+	display: inline-block;
+	max-width: 200px;
+	margin: 5px;
+}
+.flip-card{
 	position: relative;
 	background-color: transparent;
-	max-width: 200px;
-	width: 200px;
-  	height: 200px;
-	border-radius: 10px;
-	margin: 5px;
 	cursor: pointer;
 	transform-style: preserve-3d;
 	-webkit-transition: all 1s ease-in-out;
@@ -86,6 +85,12 @@ span.number{
 	-ms-transition: all 1s ease-in-out;
 	-o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
+    text-align: center;
+	min-width: 100px;
+	max-width: 400px;
+	border-radius: 10px;
+	width: 200px;
+  	height: 200px;
 }
 .flip-card .card-front,
 .flip-card .card-back {
@@ -97,6 +102,15 @@ span.number{
 	-o-transition: -o-transform 500ms;
 	-webkit-transition: -webkit-transform 500ms;
 	transition: transform 500ms;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 1px 1px 2px rgba(14, 85, 143, 0.8);
+	-webkit-box-shadow: 1px 1px 2px rgba(14, 85, 143, 0.8);
+	box-shadow: 1px 1px 2px rgba(14, 85, 143, 0.8);
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 	display: block;
 	height: 100%;
 	position: absolute;
@@ -134,27 +148,6 @@ span.number{
 	-webkit-transform: perspective(300) rotateY(0deg);
 	transform: perspective(300) rotateY(0deg);
 }
-.flip-card {
-	cursor: pointer;
-	display: inline-block;
-	font-weight: bold;
-	margin: 10px;
-	text-align: center;
-	min-width: 100px;
-	max-width: 400px;
-}
-.flip-card .card-front,
-.flip-card .card-back {
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	-moz-box-shadow: 1px 1px 2px rgba(14, 85, 143, 0.8);
-	-webkit-box-shadow: 1px 1px 2px rgba(14, 85, 143, 0.8);
-	box-shadow: 1px 1px 2px rgba(14, 85, 143, 0.8);
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
 .flip-card .card-back label{
 	font-family: 'BentonSansLight';
 	color: #000000;
@@ -168,9 +161,22 @@ span.number{
 	position: relative;
 	bottom: 0;
 }
+.content-card button:hover,
+.content-card button{
+    background-color: #FBB819;
+}
+.content-card button{
+	width: 100%;
+    border-radius: 0;
+    margin: 10px 0;
+    color: #FFFFFF;
+    font-family: 'BentonSansBold';
+    text-transform: initial;
+    font-size: 18px;
+}
 .mdl-card-question .card-front img{
 	width: 100%;
-	max-width: 125px;
+	max-width: 135px;
     margin: 20px auto 10px;
 }
 .mdl-card-question .card-front p{

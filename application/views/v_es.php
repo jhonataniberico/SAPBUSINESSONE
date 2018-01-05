@@ -44,71 +44,96 @@
 	    		</div>
 	            <div class="container text-center">
 	            	<h2 class="question"><span class="number">01/05</span>¿En qu&eacute; industria se desempe&ntilde;a&#63;</h2>
-	            	<div class="mdl-card-question flip-card">
-            			<div class="card-front">
-            				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
-            				<p>Servicios Profesionales</p>
-							<i class="mdi mdi-add"></i>
-            			</div>
-            			<div class="card-back">
-            				<label>Satisfacer las diferentes seg&uacute;n el segmento de servicios. Mejorar el flujo de efectivo e impulsar 
-            				el crecimiento de ingresos, reducci&oacute;n de costos y optimizaci&oacute;n de tiempos. Operar en una infraestructura
-            				de tecnolog&iacute;a moderna, flexible y potente.</label>
-            				<p>Servicios Profesionales</p>
-							<i class="mdi mdi-remove"></i>
-            			</div>
+	            	<div class="mdl-card-question">
+	            		<div class="flip-card">
+	            			<div class="card-front">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
+	            				<p>Servicios Profesionales</p>
+								<i class="mdi mdi-add"></i>
+	            			</div>
+	            			<div class="card-back">
+	            				<label>Satisfacer las diferentes seg&uacute;n el segmento de servicios. Mejorar el flujo de efectivo e impulsar 
+	            				el crecimiento de ingresos, reducci&oacute;n de costos y optimizaci&oacute;n de tiempos. Operar en una infraestructura
+	            				de tecnolog&iacute;a moderna, flexible y potente.</label>
+	            				<p>Servicios Profesionales</p>
+								<i class="mdi mdi-remove"></i>
+	            			</div>
+	            		</div>
+	            		<div class="content-card">
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccione</button>
+	            		</div>
 	            	</div>
-	            	<div class="mdl-card-question flip-card">
-	            		<div class="card-front">
-            				<img src="<?php echo RUTA_IMG?>cards/card-retail.png">
-            				<p>Retail</p>
-							<i class="mdi mdi-add"></i>
-            			</div>
-            			<div class="card-back">
-            				<label>Ofrezca a sus consumidores productos, informaci&oacute;n y las experiencias de compra que desean desde cualquier canal. Saque partido de la informaci&oacute;n en tiempo real sobre sus clientes y pedidos, interact&uacute;e con sus compradores y optimice todo el proceso, desde la comercializaci&oacute;n hasta la cadena de suministro.</label>
-            				<p>Retail</p>
-							<i class="mdi mdi-remove"></i>
-            			</div>
+	            	<div class="mdl-card-question">
+	            		<div class="flip-card">
+            				<div class="card-front">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-retail.png">
+	            				<p>Retail</p>
+								<i class="mdi mdi-add"></i>
+	            			</div>
+	            			<div class="card-back">
+	            				<label>Ofrezca a sus consumidores productos, informaci&oacute;n y las experiencias de compra que desean desde cualquier canal. Saque partido de la informaci&oacute;n en tiempo real sobre sus clientes y pedidos, interact&uacute;e con sus compradores y optimice todo el proceso, desde la comercializaci&oacute;n hasta la cadena de suministro.</label>
+	            				<p>Retail</p>
+								<i class="mdi mdi-remove"></i>
+	            			</div>
+	            		</div>
+	            		<div class="content-card">
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccione</button>
+	            		</div>
 	            	</div>
-	            	<div class="mdl-card-question flip-card">
-	            		<div class="card-front">
-            				<img src="<?php echo RUTA_IMG?>cards/card-distribucion.png">
-            				<p>Distribuci&oacute;n</p>
-							<i class="mdi mdi-add"></i>
-            			</div>
-            			<div class="card-back">
-            				<label>Abarca desde fabricantes hasta los minoristas y desde otros clientes hasta los consumidores finales. Mejore todo el proceso,
-            				 desde la planificaci&oacute;n de la demanda hasta la gesti&oacute;n del inventario y la cadena de suministro, y ejecute procesos flexibles y altamente integrados
-            				 para lograr la excelencia operativa.</label>
-            				<p>Distribuci&oacute;n</p>
-							<i class="mdi mdi-remove"></i>
-            			</div>
+	            	<div class="mdl-card-question">
+	            		<div class="flip-card">
+	            			<div class="card-front">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-distribucion.png">
+	            				<p>Distribuci&oacute;n</p>
+								<i class="mdi mdi-add"></i>
+	            			</div>
+	            			<div class="card-back">
+	            				<label>Abarca desde fabricantes hasta los minoristas y desde otros clientes hasta los consumidores finales. Mejore todo el proceso,
+	            				 desde la planificaci&oacute;n de la demanda hasta la gesti&oacute;n del inventario y la cadena de suministro, y ejecute procesos flexibles y altamente integrados
+	            				 para lograr la excelencia operativa.</label>
+	            				<p>Distribuci&oacute;n</p>
+								<i class="mdi mdi-remove"></i>
+	            			</div>
+	            		</div>
+	            		<div class="content-card">
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccione</button>
+	            		</div>
 	            	</div>
-	            	<div class="mdl-card-question flip-card">
-	            		<div class="card-front">
-            				<img src="<?php echo RUTA_IMG?>cards/card-producto.png">
-            				<p>Productos de consumo</p>
-							<i class="mdi mdi-add"></i>
+	            	<div class="mdl-card-question">
+            			<div class="flip-card">
+            				<div class="card-front">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-producto.png">
+	            				<p>Productos de consumo</p>
+								<i class="mdi mdi-add"></i>
+	            			</div>
+	            			<div class="card-back">
+	            				<label>Adapte todos los detalles de sus operaciones a las necesidades del consumidor moderno. Anticipe, planifique y gestione la demanda, al tiempo que ofrece
+	            				 los productos y bienes de consumo que desean los compradores.</label>
+	            				<p>Productos de consumo</p>
+								<i class="mdi mdi-remove"></i>
+	            			</div>
             			</div>
-            			<div class="card-back">
-            				<label>Adapte todos los detalles de sus operaciones a las necesidades del consumidor moderno. Anticipe, planifique y gestione la demanda, al tiempo que ofrece
-            				 los productos y bienes de consumo que desean los compradores.</label>
-            				<p>Productos de consumo</p>
-							<i class="mdi mdi-remove"></i>
-            			</div>
+            			<div class="content-card">
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccione</button>
+	            		</div>
 	            	</div>
-	            	<div class="mdl-card-question flip-card">
-	            		<div class="card-front">
-            				<img src="<?php echo RUTA_IMG?>cards/card-proceso.png">
-            				<p>Procesos/Manufactura</p>
-							<i class="mdi mdi-add"></i>
-            			</div>
-            			<div class="card-back">
-            				<label>Satisfaga la demanda de sus clientes y desarrolle nuevas fuentes de ingresos, reduzca los costos de la cadena de suministro, acelere la duraci&oacute;n de
-            				 los ciclos, minimice los rechazos y las modificaciones y, por &uacute;ltimo, agilice la obtenci&oacute;n de beneficios.</label>
-            				<p>Procesos/Manufactura</p>
-							<i class="mdi mdi-remove"></i>
-            			</div>
+	            	<div class="mdl-card-question">
+	            		<div class="flip-card">
+	            			<div class="card-front">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-proceso.png">
+	            				<p>Procesos/Manufactura</p>
+								<i class="mdi mdi-add"></i>
+	            			</div>
+	            			<div class="card-back">
+	            				<label>Satisfaga la demanda de sus clientes y desarrolle nuevas fuentes de ingresos, reduzca los costos de la cadena de suministro, acelere la duraci&oacute;n de
+	            				 los ciclos, minimice los rechazos y las modificaciones y, por &uacute;ltimo, agilice la obtenci&oacute;n de beneficios.</label>
+	            				<p>Procesos/Manufactura</p>
+								<i class="mdi mdi-remove"></i>
+	            			</div>
+	            		</div>
+	            		<div class="content-card">
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccione</button>
+	            		</div>
 	            	</div>
 	        	</div>
 	        	<div class="logo-bottom">
