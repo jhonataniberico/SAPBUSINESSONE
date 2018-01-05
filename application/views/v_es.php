@@ -60,7 +60,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="guardarDatos('Servicios Profesionales')">Seleccione</button>
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Servicios Profesionales')">Seleccione</button>
 	            		</div>
 	            	</div>
 	            	<div class="mdl-card-question">
@@ -77,7 +77,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="guardarDatos('Retail')">Seleccione</button>
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Retail')">Seleccione</button>
 	            		</div>
 	            	</div>
 	            	<div class="mdl-card-question">
@@ -96,7 +96,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="guardarDatos('Distribución')">Seleccione</button>
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Distribución')">Seleccione</button>
 	            		</div>
 	            	</div>
 	            	<div class="mdl-card-question">
@@ -114,7 +114,7 @@
 	            			</div>
             			</div>
             			<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="guardarDatos('Productos de consumo')">Seleccione</button>
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Productos de consumo')">Seleccione</button>
 	            		</div>
 	            	</div>
 	            	<div class="mdl-card-question">
@@ -132,7 +132,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="guardarDatos('Procesos/Manufactura')">Seleccione</button>
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Procesos/Manufactura')">Seleccione</button>
 	            		</div>
 	            	</div>
 	        	</div>
@@ -344,11 +344,28 @@
 		});
 
 		$( document ).ready(function() {
+			var select = 0;
 		    $(".fp-next").click(function(){
 		    	setTimeout(function(){
 		    	 if($('body').attr('class') != 'fp-viewing-0-0') {
 		    		$('.fp-prev').removeClass( "hidden" );
 		    	 }
+		    	 if($('body').attr('class') == 'fp-viewing-0-1') {
+					$('.fp-next').css('opacity', '.5');
+					$('.fp-next').css('pointer-events', 'none');
+		    	}
+		    	if($('body').attr('class') == 'fp-viewing-0-2') {
+					$('.fp-next').css('opacity', '.5');
+					$('.fp-next').css('pointer-events', 'none');
+		    	}
+		    	if($('body').attr('class') == 'fp-viewing-0-2') {
+					$('.fp-next').css('opacity', '.5');
+					$('.fp-next').css('pointer-events', 'none');
+		    	}
+		    	if($('body').attr('class') == 'fp-viewing-0-4') {
+					$('.fp-next').css('opacity', '.5');
+					$('.fp-next').css('pointer-events', 'none');
+		    	}
 		    	 if($('body').attr('class') == 'fp-viewing-0-5') {
 		    	 	$('.fp-next').addClass( "hidden" );
 		    	 }
@@ -359,11 +376,22 @@
 		    	 if($('body').attr('class') == 'fp-viewing-0-0') {
 		    		$('.fp-prev').addClass('hidden');
 		    	 }
+		    	 if($('body').attr('class') == 'fp-viewing-0-1') {
+					$('.fp-next').css('opacity', '');
+					$('.fp-next').css('pointer-events', '');
+		    	}
 		    	 if($('body').attr('class') != 'fp-viewing-0-5') {
 		    		$('.fp-next').removeClass('hidden');
 		    	 }
 		    	}, 500);
 		    });
+		    $(".SELECCIONADO").click(function () {
+				select = 1;
+				if($('body').attr('class') == 'fp-viewing-0-1') {
+					$('.fp-next').css('opacity', '');
+					$('.fp-next').css('pointer-events', '');
+		    	}
+			});
 		});
     </script>
 </body>

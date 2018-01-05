@@ -90,7 +90,6 @@ function validateEmail(email) {
 }
 
 function guardarDatos(datos) {
-	console.log(datos);
 	$.ajax({
 		data  : { datos : datos},
 		url   : 'es/guardarDatos',
