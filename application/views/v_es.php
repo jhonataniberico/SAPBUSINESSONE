@@ -245,7 +245,7 @@
 	            	<div class="mdl-card-question">
 	            		<div class="flip-card">
 	            			<div class="card-front">
-	            				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-cloud.png">
 	            				<p>Cloud</p>
 								<i class="mdi mdi-add"></i>
 	            			</div>
@@ -257,7 +257,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonCloud" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -273,7 +273,7 @@
 	            	<div class="mdl-card-question">
 	            		<div class="flip-card">
 	            			<div class="card-front">
-	            				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-anywhere.png">
 	            				<p>Anywhere</p>
 								<i class="mdi mdi-add"></i>
 	            			</div>
@@ -285,7 +285,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonAnywhere" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -301,7 +301,7 @@
 	            	<div class="mdl-card-question">
 	            		<div class="flip-card">
 	            			<div class="card-front">
-	            				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-sap.png">
 	            				<p>with SAP HANA</p>
 								<i class="mdi mdi-add"></i>
 	            			</div>
@@ -313,7 +313,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonSap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -329,7 +329,7 @@
 	            	<div class="mdl-card-question">
 	            		<div class="flip-card">
 	            			<div class="card-front">
-	            				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-analytics.png">
 	            				<p>with Analytics</p>
 								<i class="mdi mdi-add"></i>
 	            			</div>
@@ -342,7 +342,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonAnalytics" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -358,7 +358,7 @@
 	            	<div class="mdl-card-question">
 	            		<div class="flip-card">
 	            			<div class="card-front">
-	            				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-starup.png">
 	            				<p>Star-up</p>
 								<i class="mdi mdi-add"></i>
 	            			</div>
@@ -370,7 +370,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonStarup" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -386,7 +386,7 @@
 	            	<div class="mdl-card-question">
 	            		<div class="flip-card">
 	            			<div class="card-front">
-	            				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-subsidaries.png">
 	            				<p>Subsidaries</p>
 								<i class="mdi mdi-add"></i>
 	            			</div>
@@ -398,7 +398,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonSubsidaries" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -524,24 +524,24 @@
 			            		  <div class="col-xs-12">
 			            		  	<div class="col-xs-6">
 			            		  		<div class="form-group">
-										    <input type="text" class="form-control NEGRO_FONDO" id="nombre_completo" maxlength="50" onkeypress="return soloLetras(event);" onkeypress="borrarFocus(1)" placeholder="Nombre Completo">
+										    <input type="text" class="form-control NEGRO_FONDO" id="nombre_completo" maxlength="50" onkeypress="return soloLetras(event);" onchange="borrarFocus(1)" placeholder="Nombre Completo">
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control NEGRO_FONDO" id="empresa" maxlength="100" onkeypress="return soloLetras(event);" onkeypress="borrarFocus(2)" placeholder="Empresa">
+											<input type="text" class="form-control NEGRO_FONDO" id="empresa" maxlength="100" onkeypress="return soloLetras(event);" onchange="borrarFocus(2)" placeholder="Empresa">
 										</div>
 										<div class="form-group">
-											<input type="email" class="form-control NEGRO_FONDO" id="email" maxlength="100" aria-describedby="emailHelp"  onkeypress="borrarFocus(3)" placeholder="Email">
+											<input type="email" class="form-control NEGRO_FONDO" id="email" maxlength="100" aria-describedby="emailHelp"  onchange="borrarFocus(3)" placeholder="Email">
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control NEGRO_FONDO" id="pais" maxlength="100" onkeypress="return soloLetras(event);"  onkeypress="borrarFocus(4)" placeholder="País">
+											<input type="text" class="form-control NEGRO_FONDO" id="pais" maxlength="100" onkeypress="return soloLetras(event);"  onchange="borrarFocus(4)" placeholder="País">
 										</div>
 			            		  	</div>
 			            		  	<div class="col-xs-6 m-t-50">
 			            		  		<div class="form-group">
-									    	<input type="text" class="form-control NEGRO_FONDO" id="cargo" maxlength="100" onkeypress="return soloLetras(event);"  onkeypress="borrarFocus(5)" placeholder="Cargo">
+									    	<input type="text" class="form-control NEGRO_FONDO" id="cargo" maxlength="100" onkeypress="return soloLetras(event);"  onchange="borrarFocus(5)" placeholder="Cargo">
 									  	</div>
 									  	<div class="form-group">
-											<input type="text" class="form-control NEGRO_FONDO" id="telefono" maxlength="7" onkeypress="return valida(event);"  onkeypress="borrarFocus(6)" placeholder="Teléfono">
+											<input type="text" class="form-control NEGRO_FONDO" id="telefono" maxlength="7" onkeypress="return valida(event);"  onchange="borrarFocus(6)" placeholder="Teléfono">
 										</div>
 										<div class="form-group">
 											<input type="text" class="form-control NEGRO_FONDO" id="notas" maxlength="500" placeholder="Notes">
