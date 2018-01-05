@@ -15,7 +15,7 @@ function solicitarEstimacion() {
 	var notas 	 		= $('#notas').val();
 
 	if(nombre_completo == null) {
-		console.log('entra');
+		//console.log('entra');
 		$('#nombre_completo:focus').css('border-color','red');
 		return;
 	}
@@ -37,7 +37,7 @@ function solicitarEstimacion() {
 	$.ajax({
 		data  : { nombre_completo : nombre_completo,
 				  empresa : empresa},
-		url   : 'C_campaign/getModelo',
+		url   : 'Es/getModelo',
 		type  : 'POST',
 		dataType : 'json'
 	}).done(function(data){
@@ -49,9 +49,6 @@ function solicitarEstimacion() {
 			msj('error',err.message);
 		}
 	});
-
-
-	console.log(nombre_completo);
 }
 
 function soloLetras(e){
@@ -90,4 +87,22 @@ function soloLetras(e){
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
+}
+
+function guardarDatos(datos) {
+	console.log(datos);
+	$.ajax({
+		data  : { datos : datos},
+		url   : 'es/guardarDatos',
+		type  : 'POST',
+		dataType : 'json'
+	}).done(function(data){
+		try{
+			/*$('#modelo').html('');
+			$('#modelo').append('<option value="">Modelo</option>');
+			$('#modelo').append(data.comboModelo);*/
+		} catch (err){
+			msj('error',err.message);
+		}
+	});
 }

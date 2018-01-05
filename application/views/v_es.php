@@ -42,7 +42,7 @@
 	    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
 	    		</div>
-	            <div class="container text-center">
+	    		<div class="container text-center">
 	            	<h2 class="question"><span class="number">01/05</span>¿En qu&eacute; industria se desempe&ntilde;a&#63;</h2>
 	            	<div class="mdl-card-question">
 	            		<div class="flip-card">
@@ -60,7 +60,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccione</button>
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="guardarDatos('Servicios Profesionales')">Seleccione</button>
 	            		</div>
 	            	</div>
 	            	<div class="mdl-card-question">
@@ -77,7 +77,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccione</button>
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="guardarDatos('Retail')">Seleccione</button>
 	            		</div>
 	            	</div>
 	            	<div class="mdl-card-question">
@@ -96,7 +96,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccione</button>
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="guardarDatos('Distribución')">Seleccione</button>
 	            		</div>
 	            	</div>
 	            	<div class="mdl-card-question">
@@ -114,7 +114,7 @@
 	            			</div>
             			</div>
             			<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccione</button>
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="guardarDatos('Productos de consumo')">Seleccione</button>
 	            		</div>
 	            	</div>
 	            	<div class="mdl-card-question">
@@ -132,7 +132,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccione</button>
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="guardarDatos('Procesos/Manufactura')">Seleccione</button>
 	            		</div>
 	            	</div>
 	        	</div>
@@ -333,5 +333,36 @@
     <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_JS?>index.js?v=<?php echo time();?>"></script>
+
+    <script type="text/javascript">
+    	$(window).load(function() {
+		  // Run code
+		  console.log($('body').attr('class') == 'fp-viewing-0-0' ? 'si' : 'no');
+		  if($('body').attr('class') == 'fp-viewing-0-0') {
+		  	$('.fp-prev').addClass('hidden');
+		  }	
+		});
+
+		$( document ).ready(function() {
+		    $(".fp-next").click(function(){
+		    	setTimeout(function(){
+		    	 if($('body').attr('class') != 'fp-viewing-0-0') {
+		    		$('.fp-prev').removeClass( "hidden" );
+		    	 }else if($('body').attr('class') != 'fp-viewing-0-5') {
+		    	 	$('.fp-next').removeClass( "hidden" );
+		    	 }
+		    	}, 500);
+		    });
+		    $(".fp-prev").click(function(){
+		    	setTimeout(function(){
+		    	 if($('body').attr('class') == 'fp-viewing-0-0') {
+		    		$('.fp-prev').addClass('hidden');
+		    	 }else if($('body').attr('class') != 'fp-viewing-0-0') {
+		    	 	$('.fp-next').removeClass('hidden');
+		    	 }
+		    	}, 500);
+		    });
+		});
+    </script>
 </body>
 </html>
