@@ -101,7 +101,6 @@ function guardarDatos(id,datos) {
 }
 
 function saveDatos() {
-	console.log(global_datos);
 	$.ajax({
 		data  : { global_datos : global_datos},
 		url   : 'es/saveDatos',
@@ -119,7 +118,6 @@ function saveDatos() {
 
 $(window).load(function() {
   // Run code
-  console.log($('body').attr('class') == 'fp-viewing-0-0' ? 'si' : 'no');
   if($('body').attr('class') == 'fp-viewing-0-0') {
   	$('.fp-prev').addClass('hidden');
   }	
