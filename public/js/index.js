@@ -122,8 +122,13 @@ $( document ).ready(function() {
     		$('.fp-prev').removeClass( "hidden" );
     	 }
     	 if($('body').attr('class') == 'fp-viewing-0-1') {
-			$('.fp-next').css('opacity', '.5');
-			$('.fp-next').css('pointer-events', 'none');
+    	 	if(select == 0) {
+    	 		$('.fp-next').css('opacity', '.5');
+				$('.fp-next').css('pointer-events', 'none');
+    	 	}else if(select == 1) {
+    	 		$('.fp-next').css('opacity', '');
+				$('.fp-next').css('pointer-events', '');
+    	 	}
     	}
     	if($('body').attr('class') == 'fp-viewing-0-2') {
 			$('.fp-next').css('opacity', '.5');

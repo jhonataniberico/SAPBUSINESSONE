@@ -201,8 +201,34 @@
 	    		</div>
 	            <div class="container text-center">
 	            	<h2 class="question"><span class="number">02/05</span>¿De qu&eacute; tama&ntilde;o es su empresa&#63;</h2>
-	            	<div class="mdl-card">
-            			
+	            	<div class="mdl-card-question">
+            			<div class="flip-card">
+            				<div class="card-front">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-producto.png">
+	            				<p>Número de empeados</p>
+								<i class="mdi mdi-add"></i>
+	            			</div>
+	            			<div class="card-back">
+	            				<label>Adapte todos los detalles de sus operaciones a las necesidades del consumidor moderno. Anticipe, planifique y gestione la demanda, al tiempo que ofrece
+	            				 los productos y bienes de consumo que desean los compradores.</label>
+	            				<p>Productos de consumo</p>
+								<i class="mdi mdi-remove"></i>
+	            			</div>
+            			</div>
+            			<div class="content-card">
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Retail')"><i class="mdi mdi-remove"></i> Seleccione <i class="mdi mdi-add"></i></button>
+	            			<div class="contenido">
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            				</div>
+	            				<div class="contenido-right">
+            						<h2>Sab&iacute;a que...</h2>
+            						<p>... las empresas exitosas del sector reinventan su forma de operar, aprovechando la tecnolog&iacute;a para perfeccionar las
+            						pr&aacute;cticas de negocio, mejorar la agilidad y atender mejor a clientes y distribuidores.</p>
+            						<small>(IDC, septiembre 2016)</small>
+	            				</div>
+	            			</div>
+	            		</div>
 	            	</div>
 	        	</div>
 	        	<div class="logo-bottom">
@@ -259,7 +285,7 @@
 	            			<h5>SUS PERFILES:</h5>
 	            			<div class="col-xs-12 BLANCO_FONDO m-t-15">
 	            				<div class="col-xs-8 NEGRO_COLOR m-t-15">
-	            					<span class="font-16">Productos de consumo</span>
+	            					<span class="font-16"><?php echo $industria ?></span>
 	            				</div>
 	            				<div class="col-xs-3">
 	            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored BOTON_EDITAR">
