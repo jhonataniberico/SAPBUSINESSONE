@@ -55,6 +55,7 @@ h2{
 /*QUESTIONS*/
 h2.question{
 	font-size: 32px;
+	margin-bottom: 50px;
 }
 span.number{
 	color: #FBB819;
@@ -169,7 +170,8 @@ span.number{
 }
 .mdl-card-question .card-front img{
 	width: 100%;
-	max-width: 165px;
+	max-width: 125px;
+    margin: 20px auto 10px;
 }
 .mdl-card-question .card-front p{
 	color: #FFFFFF;
