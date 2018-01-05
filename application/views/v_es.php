@@ -42,7 +42,7 @@
 	    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
 	    		</div>
-	            <div class="container text-center">
+	            <div class="mdl-container text-center">
 	            	<h2 class="question"><span class="number">01/05</span>¿En qu&eacute; industria se desempe&ntilde;a&#63;</h2>
 	            	<div class="mdl-card-question">
 	            		<div class="flip-card">
@@ -199,7 +199,7 @@
 	    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
 	    		</div>
-	            <div class="container text-center">
+	            <div class="mdl-container text-center">
 	            	<h2 class="question"><span class="number">02/05</span>¿De qu&eacute; tama&ntilde;o es su empresa&#63;</h2>
 	            	<div class="mdl-card-question">
             			<div class="flip-card">
@@ -240,7 +240,7 @@
 	    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
 	    		</div>
-	            <div class="container text-center">
+	            <div class="mdl-container text-center">
 	            	<h2 class="question"><span class="number">03/05</span>¿Cu&aacute;l es la prioridad de su negocio&#63;</h2>
 	            	<div class="mdl-card-question">
 	            		<div class="flip-card">
@@ -421,7 +421,7 @@
 	    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
 	    		</div>
-	            <div class="container text-center">
+	            <div class="mdl-container text-center">
 	            	<h2 class="question"><span class="number">04/05</span>¿Que tipo de infraestructura utiliza&#63;</h2>
 	            	<div class="mdl-card">
             			
@@ -436,7 +436,7 @@
 	    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
 	    		</div>
-	            <div class="container">
+	            <div class="mdl-container text-center">
 	            	<div class="col-xs-12">
 	            		<div class="col-xs-3 ALIGN_RIGHT m-t-65">
 	            			<span class="PAGE">05/05</span>
