@@ -388,64 +388,6 @@
     <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_JS?>index.js?v=<?php echo time();?>"></script>
     <script type="text/javascript">
-    	$(window).load(function() {
-		  // Run code
-		  console.log($('body').attr('class') == 'fp-viewing-0-0' ? 'si' : 'no');
-		  if($('body').attr('class') == 'fp-viewing-0-0') {
-		  	$('.fp-prev').addClass('hidden');
-		  }	
-		});
-
-		$( document ).ready(function() {
-			var select = 0;
-		    $(".fp-next").click(function(){
-		    	setTimeout(function(){
-		    	 if($('body').attr('class') != 'fp-viewing-0-0') {
-		    		$('.fp-prev').removeClass( "hidden" );
-		    	 }
-		    	 if($('body').attr('class') == 'fp-viewing-0-1') {
-					$('.fp-next').css('opacity', '.5');
-					$('.fp-next').css('pointer-events', 'none');
-		    	}
-		    	if($('body').attr('class') == 'fp-viewing-0-2') {
-					$('.fp-next').css('opacity', '.5');
-					$('.fp-next').css('pointer-events', 'none');
-		    	}
-		    	if($('body').attr('class') == 'fp-viewing-0-2') {
-					$('.fp-next').css('opacity', '.5');
-					$('.fp-next').css('pointer-events', 'none');
-		    	}
-		    	if($('body').attr('class') == 'fp-viewing-0-4') {
-					$('.fp-next').css('opacity', '.5');
-					$('.fp-next').css('pointer-events', 'none');
-		    	}
-		    	 if($('body').attr('class') == 'fp-viewing-0-5') {
-		    	 	$('.fp-next').addClass( "hidden" );
-		    	 }
-		    	}, 500);
-		    });
-		    $(".fp-prev").click(function(){
-		    	setTimeout(function(){
-		    	 if($('body').attr('class') == 'fp-viewing-0-0') {
-		    		$('.fp-prev').addClass('hidden');
-		    	 }
-		    	 if($('body').attr('class') == 'fp-viewing-0-1') {
-					$('.fp-next').css('opacity', '');
-					$('.fp-next').css('pointer-events', '');
-		    	}
-		    	 if($('body').attr('class') != 'fp-viewing-0-5') {
-		    		$('.fp-next').removeClass('hidden');
-		    	 }
-		    	}, 500);
-		    });
-		    $(".SELECCIONADO").click(function () {
-				select = 1;
-				if($('body').attr('class') == 'fp-viewing-0-1') {
-					$('.fp-next').css('opacity', '');
-					$('.fp-next').css('pointer-events', '');
-		    	}
-			});
-		});
     </script>
 </body>
 </html>
