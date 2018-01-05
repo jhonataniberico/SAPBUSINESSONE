@@ -225,29 +225,27 @@
 			            		  <div class="col-xs-12">
 			            		  	<div class="col-xs-6">
 			            		  		<div class="form-group">
-										    <input type="text" class="form-control NEGRO_FONDO" id="nombre_completo" placeholder="Nombre Completo">
+										    <input type="text" class="form-control NEGRO_FONDO" id="nombre_completo" maxlength="50" onkeypress="return soloLetras(event);" placeholder="Nombre Completo">
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control NEGRO_FONDO" id="empresa" placeholder="Empresa">
+											<input type="text" class="form-control NEGRO_FONDO" id="empresa" maxlength="100" onkeypress="return soloLetras(event);" placeholder="Empresa">
 										</div>
 										<div class="form-group">
-											<input type="email" class="form-control NEGRO_FONDO" id="email" aria-describedby="emailHelp" placeholder="Email">
+											<input type="email" class="form-control NEGRO_FONDO" id="email" maxlength="100" aria-describedby="emailHelp" placeholder="Email">
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control NEGRO_FONDO" id="pais" placeholder="País">
+											<input type="text" class="form-control NEGRO_FONDO" id="pais" maxlength="100" onkeypress="return soloLetras(event);" placeholder="País">
 										</div>
 			            		  	</div>
-			            		  	<div class="col-xs-6">
-			            		  		</br>
-			            		  		</br>
+			            		  	<div class="col-xs-6 m-t-50">
 			            		  		<div class="form-group">
-									    	<input type="text" class="form-control NEGRO_FONDO" id="cargo" placeholder="Cargo">
+									    	<input type="text" class="form-control NEGRO_FONDO" id="cargo" maxlength="100" onkeypress="return soloLetras(event);" placeholder="Cargo">
 									  	</div>
 									  	<div class="form-group">
-											<input type="text" class="form-control NEGRO_FONDO" id="telefono" placeholder="Teléfono">
+											<input type="text" class="form-control NEGRO_FONDO" id="telefono" maxlength="7" onkeypress="return valida(event);" placeholder="Teléfono">
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control NEGRO_FONDO" id="notas" placeholder="Notes">
+											<input type="text" class="form-control NEGRO_FONDO" id="notas" maxlength="500" placeholder="Notes">
 										</div>
 			            		  	</div>
 			            		  	<div class="col-xs-12">
@@ -260,7 +258,7 @@
 											</div>
 			            		  		</div>
 			            		  		<div class="col-xs-4">
-			            		  			<button type="submit" class="btn btn-primary BOTON_ESTIMACION" style="">Solicitar estimación</button>
+			            		  			<button type="button" class="btn btn-primary BOTON_ESTIMACION" onclick="solicitarEstimacion()">Solicitar estimación</button>
 			            		  		</div>
 			            		  	</div>
 			            		  </div>
