@@ -42,7 +42,7 @@
 	    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
 	    		</div>
-	    		<div class="container text-center">
+	            <div class="container text-center">
 	            	<h2 class="question"><span class="number">01/05</span>¿En qu&eacute; industria se desempe&ntilde;a&#63;</h2>
 	            	<div class="mdl-card-question">
 	            		<div class="flip-card">
@@ -60,7 +60,18 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Servicios Profesionales')">Seleccione</button>
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Retail')">Seleccione</button>
+	            			<div class="contenido">
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            				</div>
+	            				<div class="contenido-right">
+            						<h2>Sab&iacute;a que...</h2>
+            						<p>... los prestadores de servicios profesionales exitosos aprovechan la tecnolog&iacute;a en nuevas formas para perfeccionar las pr&aacute;cticas de negocio, 
+            						mejorar la agilidad y atender mejor a los clientes.</p>
+            						<small>(IDC, septiembre 2016)</small>
+	            				</div>
+	            			</div>
 	            		</div>
 	            	</div>
 	            	<div class="mdl-card-question">
@@ -78,6 +89,17 @@
 	            		</div>
 	            		<div class="content-card">
 	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Retail')">Seleccione</button>
+	            			<div class="contenido">
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            				</div>
+	            				<div class="contenido-right">
+            						<h2>Sab&iacute;a que...</h2>
+            						<p>... por cada innovador que sale a crear un nuevo mercado o tipo de producto, hay al menos un centenar de mercados
+            						 que se paralizan o se reducen.</p>
+            						<small>(IDC, septiembre 2016)</small>
+	            				</div>
+	            			</div>
 	            		</div>
 	            	</div>
 	            	<div class="mdl-card-question">
@@ -96,7 +118,18 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Distribución')">Seleccione</button>
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Retail')">Seleccione</button>
+	            			<div class="contenido">
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            				</div>
+	            				<div class="contenido-right">
+            						<h2>Sab&iacute;a que...</h2>
+            						<p>... puede mejorar la experiencia general del cliente con la realizaci&oacute;n de pedidos multicanal y su r&aacute;pido
+            						 procesamiento.</p>
+            						<small>(SAP Performance Benchmarking)</small>
+	            				</div>
+	            			</div>
 	            		</div>
 	            	</div>
 	            	<div class="mdl-card-question">
@@ -114,7 +147,18 @@
 	            			</div>
             			</div>
             			<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Productos de consumo')">Seleccione</button>
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Retail')">Seleccione</button>
+	            			<div class="contenido">
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            				</div>
+	            				<div class="contenido-right">
+            						<h2>Sab&iacute;a que...</h2>
+            						<p>... las empresas exitosas del sector reinventan su forma de operar, aprovechando la tecnolog&iacute;a para perfeccionar las
+            						pr&aacute;cticas de negocio, mejorar la agilidad y atender mejor a clientes y distribuidores.</p>
+            						<small>(IDC, septiembre 2016)</small>
+	            				</div>
+	            			</div>
 	            		</div>
 	            	</div>
 	            	<div class="mdl-card-question">
@@ -132,7 +176,17 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Procesos/Manufactura')">Seleccione</button>
+	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect SELECCIONADO" onclick="guardarDatos('Retail')">Seleccione</button>
+	            			<div class="contenido">
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            				</div>
+	            				<div class="contenido-right">
+            						<h2>Sab&iacute;a que...</h2>
+            						<p>... se reduce el 19% en el costo de fabricaci&oacute;n con un monitorio en tiempo real de costo de producci&oacute;n y variantes.</p>
+            						<small>(IDC, septiembre 2016)</small>
+	            				</div>
+	            			</div>
 	            		</div>
 	            	</div>
 	        	</div>
@@ -333,7 +387,6 @@
     <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_JS?>index.js?v=<?php echo time();?>"></script>
-
     <script type="text/javascript">
     	$(window).load(function() {
 		  // Run code
