@@ -13,7 +13,16 @@ function solicitarEstimacion() {
 	var cargo 	 		= $('#cargo').val();
 	var telefono 		= $('#telefono').val();
 	var notas 	 		= $('#notas').val();
-	console.log(nombre_completo);
+
+	if(nombre_completo == '' && empresa == '' && email == '' && pais == '' && cargo == '' && telefono == '') {
+		$('#nombre_completo').focus().css('border-color','red');
+		$('#empresa').focus().css('border-color','red');
+		$('#email').focus().css('border-color','red');
+		$('#pais').focus().css('border-color','red');
+		$('#cargo').focus().css('border-color','red');
+		$('#telefono').focus().css('border-color','red');
+		return;
+	}
 	if(nombre_completo == null || nombre_completo == '') {
 		$('#nombre_completo').focus().css('border-color','red');
 		return;
@@ -192,5 +201,45 @@ $( document ).ready(function() {
 });
 
 function borrarFocus(dato) {
+	var nombre_completo = $('#nombre_completo').val();
+	var empresa  		= $('#empresa').val();
+	var email 	 		= $('#email').val();
+	var pais 	 		= $('#pais').val();
+	var cargo 	 		= $('#cargo').val();
+	var telefono 		= $('#telefono').val();
+	var notas 	 		= $('#notas').val();
 
+	//console.log($(':input[@type=text]'));
+
+	/*$('input[type=text]').each(function(){
+	// do something to a text or password input
+	var id = this.val != null ? $('#'+this.id).focus().css('border-color','') : $('#'+this.id).focus().css('border-color','red');
+	});*/
+	var input = $('.form-control').find('input');
+	console.log(input.val());
+	if(input.val().length > 0){
+		input.focus().css('border-color','');
+	}
+	else{
+		input.focus().css('border-color','red');
+	}
+
+	/*if(nombre_completo != null || nombre_completo != '') {
+		$('#nombre_completo').focus().css('border-color','');
+	}
+	if(empresa != null || empresa != '') {
+		$('#empresa').focus().css('border-color','');
+	}
+	if(email != null || email != '') {
+		$('#email').focus().css('border-color','');
+	}
+	if(pais != null || pais != '') {
+		$('#pais').focus().css('border-color','');
+	}
+	if(cargo != null || cargo != '') {
+		$('#cargo').focus().css('border-color','');
+	}
+	if(telefono != null || telefono != '') {
+		$('#telefono').focus().css('border-color','');
+	}*/
 }
