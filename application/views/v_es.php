@@ -242,7 +242,7 @@
 	    		</div>
 	            <div class="mdl-container text-center">
 	            	<h2 class="question"><span class="number">03/05</span>¿Cu&aacute;l es la prioridad de su negocio&#63;</h2>
-	            	<div class="mdl-card-question">
+	            	<div class="mdl-card-question mdl-card-3">
 	            		<div class="flip-card">
 	            			<div class="card-front">
 	            				<img src="<?php echo RUTA_IMG?>cards/card-cloud.png">
@@ -260,7 +260,7 @@
 	            			<button id="buttonCloud" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
-	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 	            				</div>
 	            				<div class="contenido-right">
             						<h2>Sab&iacute;a que...</h2>
@@ -270,7 +270,7 @@
 	            			</div>
 	            		</div>
 	            	</div>
-	            	<div class="mdl-card-question">
+	            	<div class="mdl-card-question mdl-card-3">
 	            		<div class="flip-card">
 	            			<div class="card-front">
 	            				<img src="<?php echo RUTA_IMG?>cards/card-anywhere.png">
@@ -288,7 +288,7 @@
 	            			<button id="buttonAnywhere" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
-	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 	            				</div>
 	            				<div class="contenido-right">
             						<h2>Sab&iacute;a que...</h2>
@@ -298,7 +298,7 @@
 	            			</div>
 	            		</div>
 	            	</div>
-	            	<div class="mdl-card-question">
+	            	<div class="mdl-card-question mdl-card-3">
 	            		<div class="flip-card">
 	            			<div class="card-front">
 	            				<img src="<?php echo RUTA_IMG?>cards/card-sap.png">
@@ -316,17 +316,17 @@
 	            			<button id="buttonSap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
-	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 	            				</div>
 	            				<div class="contenido-right">
             						<h2>Sab&iacute;a que...</h2>
-            						<p>... Busimess One aprovecha una tecnolog&iacute;a In-Memory Computing para generar informes y an&aacute;lisis.</p>
+            						<p>... Business One aprovecha una tecnolog&iacute;a In-Memory Computing para generar informes y an&aacute;lisis.</p>
             						<small>(IDC, septiembre 2016)</small>
 	            				</div>
 	            			</div>
 	            		</div>
 	            	</div>
-	            	<div class="mdl-card-question">
+	            	<div class="mdl-card-question mdl-card-3">
 	            		<div class="flip-card">
 	            			<div class="card-front">
 	            				<img src="<?php echo RUTA_IMG?>cards/card-analytics.png">
@@ -345,7 +345,7 @@
 	            			<button id="buttonAnalytics" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
-	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 	            				</div>
 	            				<div class="contenido-right">
             						<h2>Sab&iacute;a que...</h2>
@@ -355,7 +355,7 @@
 	            			</div>
 	            		</div>
 	            	</div>
-	            	<div class="mdl-card-question">
+	            	<div class="mdl-card-question mdl-card-3">
 	            		<div class="flip-card">
 	            			<div class="card-front">
 	            				<img src="<?php echo RUTA_IMG?>cards/card-starup.png">
@@ -373,7 +373,7 @@
 	            			<button id="buttonStarup" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
-	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 	            				</div>
 	            				<div class="contenido-right">
             						<h2>Sab&iacute;a que...</h2>
@@ -383,7 +383,7 @@
 	            			</div>
 	            		</div>
 	            	</div>
-	            	<div class="mdl-card-question">
+	            	<div class="mdl-card-question mdl-card-3">
 	            		<div class="flip-card">
 	            			<div class="card-front">
 	            				<img src="<?php echo RUTA_IMG?>cards/card-subsidaries.png">
@@ -401,7 +401,7 @@
 	            			<button id="buttonSubsidaries" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
-	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 	            				</div>
 	            				<div class="contenido-right">
             						<h2>Sab&iacute;a que...</h2>

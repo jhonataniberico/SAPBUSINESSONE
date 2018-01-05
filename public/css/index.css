@@ -81,6 +81,12 @@ span.number{
 	max-width: 210px;
 	margin: 5px;
 }
+.mdl-card-3{
+	max-width: 190px;
+}
+.mdl-card-3 .flip-card{
+	width: 190px;
+}
 .flip-card{
 	position: relative;
 	background-color: transparent;
@@ -229,6 +235,9 @@ span.number{
     line-height: 14px;
     font-size: 12px;
     height: 100px;
+}
+.mdl-card-3 .content-card .contenido-right p{
+	height: 75px;
 }
 .content-card .contenido-right small{
 	font-family: 'BentonSansLight';
