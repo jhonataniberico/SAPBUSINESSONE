@@ -144,7 +144,7 @@
 	            		</div>
 	            	</div>
 	            	<div class="col-xs-12">
-	            		<div class="col-xs-4" style="border: 1px solid #FDB917; height: 450px;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;">
+	            		<div class="col-xs-4 CONT_FORM">
 	            			<h5>SUS PERFILES:</h5>
 	            			<div class="col-xs-12 BLANCO_FONDO m-t-15">
 	            				<div class="col-xs-8 NEGRO_COLOR m-t-15">
@@ -201,17 +201,17 @@
 	            				</div>
 	            			</div>
 			            </div>
-			            <div class="col-xs-8" style="border: 1px solid #FDB917; height: 450px;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;">
+			            <div class="col-xs-8 CONT_FORM">
 			            	<div class="col-xs-12">
 			            		<h5>PERMITA QUE NUESTROS EXPERTOS LO CONTACTEN</h5>
 			            		<div class="col-xs-12">
 			            			<div class="col-xs-8">
 			            				<h5>Introduzca aquí sus datos o conéctate vía</h5>
 			            			</div>
-			            			<div class="col-xs-4" style="background-color: #0977B9;">
-			            				<div class="col-xs-2"><i class="fa fa-linkedin fa-lg" aria-hidden="true" style="background-color: #0977B9;"></i></div>
+			            			<div class="col-xs-4 FONDO_CONTACTESE">
+			            				<div class="col-xs-2"><i class="fa fa-linkedin fa-lg FONDO_CONTACTESE" aria-hidden="true"></i></div>
 			            				<div class="col-xs-10">
-			            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored BOTON_CONECTESE" style="width: 132%; font-size: 12px;">
+			            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored BOTON_CONECTESE">
 												  Conéctese ahora
 											</button>
 			            				</div>
@@ -221,29 +221,29 @@
 			            		  <div class="col-xs-12">
 			            		  	<div class="col-xs-6">
 			            		  		<div class="form-group">
-										    <input type="text" class="form-control NEGRO_FONDO" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre Completo">
+										    <input type="text" class="form-control NEGRO_FONDO" id="nombre_completo" placeholder="Nombre Completo">
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control NEGRO_FONDO" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Empresa">
+											<input type="text" class="form-control NEGRO_FONDO" id="empresa" placeholder="Empresa">
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control NEGRO_FONDO" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+											<input type="email" class="form-control NEGRO_FONDO" id="email" aria-describedby="emailHelp" placeholder="Email">
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control NEGRO_FONDO" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="País">
+											<input type="text" class="form-control NEGRO_FONDO" id="pais" placeholder="País">
 										</div>
 			            		  	</div>
 			            		  	<div class="col-xs-6">
 			            		  		</br>
 			            		  		</br>
 			            		  		<div class="form-group">
-									    	<input type="text" class="form-control NEGRO_FONDO" id="exampleInputPassword1" placeholder="Cargo">
+									    	<input type="text" class="form-control NEGRO_FONDO" id="cargo" placeholder="Cargo">
 									  	</div>
 									  	<div class="form-group">
-											<input type="text" class="form-control NEGRO_FONDO" id="exampleInputPassword1" placeholder="Teléfono">
+											<input type="text" class="form-control NEGRO_FONDO" id="telefono" placeholder="Teléfono">
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control NEGRO_FONDO" id="exampleInputPassword1" placeholder="Notes">
+											<input type="text" class="form-control NEGRO_FONDO" id="notas" placeholder="Notes">
 										</div>
 			            		  	</div>
 			            		  	<div class="col-xs-12">
@@ -251,12 +251,12 @@
 			            		  			<div class="form-check">
 			            		  				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
 												  <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
-												  <span class="mdl-checkbox__label">He leido y acepto los <a href="" style="color: #337AB7 !important;">Términos y condiciones de SAP</a></span>
+												  <span class="mdl-checkbox__label f-s-14" style="">He leido y acepto los <a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" style="">Términos y condiciones de SAP</a></span>
 												</label>
 											</div>
 			            		  		</div>
 			            		  		<div class="col-xs-4">
-			            		  			<button type="submit" class="btn btn-primary" style="background-color: #1B8DCB !important;border: none;border-radius: 0;">Solicitar estimación</button>
+			            		  			<button type="submit" class="btn btn-primary BOTON_ESTIMACION" style="">Solicitar estimación</button>
 			            		  		</div>
 			            		  	</div>
 			            		  </div>

@@ -9,6 +9,13 @@
 	background-color: #000 !important;
 	border-radius: 0;
 }
+.FONDO_CONTACTESE {
+	background-color: #0977B9;
+	margin-top: 10px;
+}
+.FONDO_TERMINOS {
+	color: #337AB7 !important;
+}
 .NEGRO_COLOR {
 	color: #000;
 }
@@ -42,6 +49,14 @@
 	background: #1B8DCB !important;
     box-shadow: none;
     color: #FFF !important;
+    width: 132%;
+    font-size: 12px;
+}
+.BOTON_ESTIMACION {
+	background-color: #1B8DCB !important;
+	border: none;
+	border-radius: 0;
+	float: right;
 }
 
 .m-t-15 {
@@ -52,4 +67,15 @@
 }
 .m-t-65 {
 	margin-top: 65px;
+}
+.CONT_FORM {
+	border: 1px solid #FDB917; 
+	height: 450px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+.f-s-14 {
+	font-size: 14px; !important;
 }
