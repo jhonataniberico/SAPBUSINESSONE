@@ -117,7 +117,6 @@ function saveDatos() {
 
 
 $(window).load(function() {
-  // Run code
   if($('body').attr('class') == 'fp-viewing-0-0') {
   	$('.fp-prev').addClass('hidden');
   }	
@@ -125,6 +124,7 @@ $(window).load(function() {
 
 $( document ).ready(function() {
 	var select = 0;
+	//botón adelante
     $(".fp-next").click(function(){
     	setTimeout(function(){
     	 if($('body').attr('class') != 'fp-viewing-0-0') {
@@ -159,6 +159,7 @@ $( document ).ready(function() {
     		saveDatos();
     	}
     });
+    //botón atrás
     $(".fp-prev").click(function(){
     	setTimeout(function(){
     	 if($('body').attr('class') == 'fp-viewing-0-0') {
@@ -175,6 +176,7 @@ $( document ).ready(function() {
     	 }
     	}, 500);
     });
+    //botón seleccione
     $(".select").click(function () {
 		select = 1;
 		if($('body').attr('class') == 'fp-viewing-0-1') {

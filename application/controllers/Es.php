@@ -22,10 +22,11 @@ class Es extends CI_Controller {
         try 
           {
           	$datos = $_POST['global_datos'];
-          	$session = array('industria' => $datos);
           	$arrayInsert = array('Industria' => $datos,
           						 'Id_pais' => 1);
             $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
+            $session = array('industria' => $datos,
+        					 'id_sol'    => $datoInsert['Id']);
             $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;
             print_r($data);
