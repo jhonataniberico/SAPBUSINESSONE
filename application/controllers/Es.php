@@ -12,7 +12,13 @@ class Es extends CI_Controller {
 
 	public function index()
 	{
-		$data['industria'] = $_SESSION['industria'];
+		$cont = 1;
+		if($cont == 1) {
+			$session = array('industria' => '');
+        	$this->session->set_userdata($session);
+        	$cont++;
+		}
+		$data['industria'] =  $_SESSION['industria'];
 		$this->load->view('v_es', $data);
 	}
 
