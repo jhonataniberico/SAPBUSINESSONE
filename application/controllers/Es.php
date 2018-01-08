@@ -20,19 +20,20 @@ class Es extends CI_Controller {
         $data['msj']   = null;
         try 
           {
-          	$datos 	     = $_POST['global_datos'];
-          	$pantalla    = $_POST['pantalla'];
-          	$idioma      = $_POST['idioma'];
-          	$datos_array = $_POST['datos_array'];
-          	$operar      = $_POST['operar'];
-          	$columna  = null;
-          	$arr_dat = implode(",", $datos_array);
+          	$datos 	     = $this->input->post('global_datos');
+          	$pantalla    = $this->input->post('pantalla');
+          	$idioma      = $this->input->post('idioma');
+          	$datos_array = $this->input->post('datos_array');
+          	$operar      = $this->input->post('operar');
+          	$columna  	 = null;
+          	//$arr_dat = implode(",", $datos_array);
+          	print_r($pantalla);
           	if($pantalla == 2) {$columna = 'Factura_anual';} elseif ($pantalla == 3) {$columna = 'Prioridad';}elseif ($pantalla == 4) {$columna = 'Infraestructura';}
           	if($pantalla == 1) {
           		$idIdioma = $this->M_solicitud->getDatosPais($idioma);
           		$arrayInsert = array('Industria' => $datos,
           						     'Id_pais' => $idIdioma);
-            	//$datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
+            	$datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
             	$session = array('industria' => $datos,
         					 	 'id_sol'    => $datoInsert['Id']);
             	$this->session->set_userdata($session);
@@ -46,25 +47,26 @@ class Es extends CI_Controller {
           			$arrayUpdate = array($columna => $datos);
           			$session     = array($columna => $datos);
           		}
-          		//$this->M_solicitud->updateDatos($arrayUpdate, $_SESSION['id_sol'], 'solicitud');
+          		$this->M_solicitud->updateDatos($arrayUpdate, $_SESSION['id_sol'], 'solicitud');
             	$this->session->set_userdata($session);
-            	print_r($this->session->all_userdata());
+            	//print_r($this->session->all_userdata());
           	}
+          	$data['carita'] = 'hola';
             $data['error'] = EXIT_SUCCESS;
           }catch(Exception $e) {
            $data['msj'] = $e->getMessage();
         }
-        echo json_encode($response);
+        echo json_encode($data);
 	}
 
 	function mostrarDatos() {
         $data['error'] = EXIT_SUCCESS;
         $data['msj']   = null;
         try {
-            $data['industria'] 		 =  $_SESSION['industria'];
-			$data['Tamanio']   		 =  '';
-			$data['Prioridad']       = $_SESSION['Prioridad'];
-			$data['Infraestructura'] = $_SESSION['Infraestructura'];
+            $data['industria'] 		 =  'bbb'/*$_SESSION['industria']*/;
+			$data['Tamanio']   		 =  'aaa';
+			$data['Prioridad']       = 'ccc'/*$_SESSION['Prioridad']*/;
+			$data['Infraestructura'] = 'ddd'/*$_SESSION['Infraestructura']*/;
         } catch (Exception $e) {
             $data['msj'] = $e->getMessage();
         }
