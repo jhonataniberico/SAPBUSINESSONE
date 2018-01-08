@@ -25,6 +25,22 @@
 <body>
 	<section id="principal">
 	    <div class="section">
+    		<div class="header">
+    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
+    			<div class="header-right">
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Action <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Espa&ntilde;ol</a></li>
+							<li><a href="#">Ingl&eacute;s</a></li>
+							<li><a href="#">Portug&eacute;s</a></li>
+						</ul>
+					</div>
+    			</div>
+    		</div>
 	        <div class="slide">
 	        	<div class="header-home">
 					<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
@@ -38,23 +54,6 @@
         		</div>
 	        </div>
 	        <div class="slide">
-		    	<div class="header">
-	    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
-	    			<div class="header-right">
-						<div class="btn-group">
-							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Action <span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu">
-								<li><a href="#">Espa&ntilde;ol</a></li>
-								<li><a href="#">Ingl&eacute;s</a></li>
-								<li><a href="#">Portug&eacute;s</a></li>
-							</ul>
-						</div>
-	    			</div>
-	    			
-	    		</div>
 	            <div class="mdl-container text-center">
 	            	<h2 class="question"><span class="number">01/05</span>¿En qu&eacute; industria se desempe&ntilde;a&#63;</h2>
 	            	<div class="mdl-card-question">
