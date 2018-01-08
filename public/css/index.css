@@ -230,6 +230,13 @@ span.number{
 	-webkit-transform: perspective(600) rotateY(180deg);
 	transform: perspective(600) rotateY(180deg);
 }
+.flip-card:hover .card-front.card-front-none{
+	-moz-transform: rotateY(0);
+	-ms-transform: rotateY(0);
+	-webkit-transform: rotateY(0);
+	transform: rotateY(0);
+	cursor: default;
+}
 .flip-card:hover .card-back {
 	z-index: 950;
 	-moz-transform: rotateY(0deg);
@@ -253,11 +260,11 @@ span.number{
 	position: relative;
 	bottom: 0;
 }
-.content-card button.button-select,
-.content-card button:hover{
+.content-card .mdl-button--raised.button-select,
+.content-card .mdl-button--raised:hover{
     background-color: #FBB819;
 }
-.content-card button{
+.content-card .mdl-button--raised{
 	width: 100%;
     border-radius: 0;
     margin: 10px 0;
@@ -272,6 +279,11 @@ span.number{
     -ms-transition: background-color .25s linear;
     -o-transition: background-color .25s linear;
     transition: background-color .25s linear;
+}
+.content-card .select-empleados{
+	margin: 10px 0;
+	border: 1px solid #FBB819;
+	height: 36px;
 }
 .content-card .contenido{
 	border-top: 1.5px solid #FFFFFF;

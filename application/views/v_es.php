@@ -217,28 +217,26 @@
 	            	<h2 class="question"><span class="number">02/05</span>¿De qu&eacute; tama&ntilde;o es su empresa&#63;</h2>
 	            	<div class="mdl-card-question">
             			<div class="flip-card">
-            				<div class="card-front">
+            				<div class="card-front card-front-none">
 	            				<img src="<?php echo RUTA_IMG?>cards/card-empleados.png">
 	            				<p>Número de empleados</p>
-								<i class="mdi mdi-add"></i>
-	            			</div>
-	            			<div class="card-back">
-	            				<label>Adapte todos los detalles de sus operaciones a las necesidades del consumidor moderno. Anticipe, planifique y gestione la demanda, al tiempo que ofrece
-	            				 los productos y bienes de consumo que desean los compradores.</label>
-	            				<p>Productos de consumo</p>
-								<i class="mdi mdi-remove"></i>
 	            			</div>
             			</div>
             			<div class="content-card">
-	            			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos('Retail')"><i class="mdi mdi-remove"></i> Seleccione <i class="mdi mdi-add"></i></button>
+            				<div class="select-empleados">
+            					<button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-remove"></i></button>
+            					<span>Seleccione</span>
+            					<button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-add"></i></button>
+            				</div>
+	            			<!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos('Retail')"><i class="mdi mdi-remove"></i> Seleccione <i class="mdi mdi-add"></i></button> -->
 	            			<div class="contenido">
 	            				<div class="contenido-left">
-	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 	            				</div>
 	            				<div class="contenido-right">
             						<h2>Sab&iacute;a que...</h2>
-            						<p>... las empresas exitosas del sector reinventan su forma de operar, aprovechando la tecnolog&iacute;a para perfeccionar las
-            						pr&aacute;cticas de negocio, mejorar la agilidad y atender mejor a clientes y distribuidores.</p>
+            						<p>... las interacciones con los clientes y consumidores es el punto de partida para el crecimiento de los ingresos de las peque&ntilde;as y medianas
+            						 empresas de productos de consumo.</p>
             						<small>(IDC, septiembre 2016)</small>
 	            				</div>
 	            			</div>
@@ -246,27 +244,20 @@
 	            	</div>
 	            	<div class="mdl-card-question">
 	            		<div class="flip-card">
-	            			<div class="card-front">
+	            			<div class="card-front card-front-none">
 	            				<img src="<?php echo RUTA_IMG?>cards/card-facturacion.png">
-	            				<p>Procesos/Manufactura</p>
-								<i class="mdi mdi-add"></i>
-	            			</div>
-	            			<div class="card-back">
-	            				<label>Satisfaga la demanda de sus clientes y desarrolle nuevas fuentes de ingresos, reduzca los costos de la cadena de suministro, acelere la duraci&oacute;n de
-	            				 los ciclos, minimice los rechazos y las modificaciones y, por &uacute;ltimo, agilice la obtenci&oacute;n de beneficios.</label>
-	            				<p>Procesos/Manufactura</p>
-								<i class="mdi mdi-remove"></i>
+	            				<p>Facturaci&oacute;n anual</p>
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonCard5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Procesos/Manufactura')">Seleccione</button>
+	            			<button id="buttonFacturacion" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Facturación anual')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
-	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 	            				</div>
 	            				<div class="contenido-right">
             						<h2>Sab&iacute;a que...</h2>
-            						<p>... se reduce el 19% en el costo de fabricaci&oacute;n con un monitorio en tiempo real de costo de producci&oacute;n y variantes.</p>
+            						<p>... el aumento de las ventas por correo electr&oacute;nico, ahora es un poco m&aacute;s del 10% de las ventas totales.</p>
             						<small>(IDC, septiembre 2016)</small>
 	            				</div>
 	            			</div>
