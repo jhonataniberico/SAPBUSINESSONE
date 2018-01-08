@@ -315,3 +315,40 @@ function cambiarIdioma() {
 		location.href = 'Pt';
 	}
 }
+
+var i = 1;
+var r = 4;
+function operar(tipo) {
+	if(tipo == 2) {
+		if(i == 1) {
+			$('#textOperar').text('1 - 50');
+			i++;
+		}else if(i == 2) {
+			$('#textOperar').text('50 - 100');
+			i++;
+		}else if(i == 3) {
+			$('#textOperar').text('100 - 500');
+			i++;
+		}else if(i == 4) {
+			$('#textOperar').text('500 - 1000');
+			i++;
+		}else if(i == 5) {
+			$('#textOperar').text('1000 a más');
+			return;
+		}
+	}else if(tipo == 1) {
+		if(r == 4) {
+			$('#textOperar').text('500 - 1000');
+			r--;
+		}else if(r == 3) {
+			$('#textOperar').text('100 - 500');
+			r--;
+		}else if(r == 2) {
+			$('#textOperar').text('50 - 100');
+			r--;
+		}else if(r == 1) {
+			$('#textOperar').text('1 - 50');
+			return;
+		}
+	}
+}
