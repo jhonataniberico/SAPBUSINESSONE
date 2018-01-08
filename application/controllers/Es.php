@@ -51,7 +51,7 @@ class Es extends CI_Controller {
         $data['msj']   = null;
         try {
             $data['industria'] =  $_SESSION['industria'];
-			$data['Tamanio'] =  '';
+			$data['Tamanio']   =  '';
 			$data['Prioridad'] = $_SESSION['Prioridad'];
 			$data['Infraestructura'] = $_SESSION['Infraestructura'];
         } catch (Exception $e) {

@@ -50,7 +50,7 @@ function solicitarEstimacion() {
 	return;
 	$.ajax({
 		data  : { nombre_completo : nombre_completo,
-				  empresa : empresa},
+				  empresa 	      : empresa},
 		url   : 'Es/getModelo',
 		type  : 'POST',
 		dataType : 'json'
@@ -63,9 +63,9 @@ function solicitarEstimacion() {
 }
 
 function soloLetras(e){
-    key = e.keyCode || e.which;
-    tecla = String.fromCharCode(key).toLowerCase();
-    letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+    key 	   = e.keyCode || e.which;
+    tecla 	   = String.fromCharCode(key).toLowerCase();
+    letras     = " áéíóúabcdefghijklmnñopqrstuvwxyz";
     especiales = "8-37-39-46";
 
     tecla_especial = false
@@ -86,7 +86,7 @@ function soloLetras(e){
     if (tecla==8){
         return true;
     }
-    // Patron de entrada, en este caso solo acepta numeros
+    // Patron de entrada, en este caso solo acepta números
     patron =/[0-9]/;
     tecla_final = String.fromCharCode(tecla);
     return patron.test(tecla_final);
@@ -101,7 +101,7 @@ var global_datos = null;
 function guardarDatos(id,datos) {
 	var buttonSelect = $('#'+id);
 	var cardSelect   = $('#'+id).parent().find('.contenido');
-	global_datos = datos;
+	global_datos     = datos;
 	$('.contenido').removeClass('aparecer');
 	$('.content-card').find('button').removeClass('button-select');
 	buttonSelect.addClass('button-select');
@@ -134,8 +134,8 @@ $(window).load(function() {
 });
 
 $( document ).ready(function() {
-	var select = 0;
-	var select_prioridad = 0;
+	var select 				   = 0;
+	var select_prioridad 	   = 0;
 	var select_infraestructura = 0;
 	//botón adelante
     $(".fp-next").click(function() {
