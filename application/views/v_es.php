@@ -250,7 +250,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonFacturacion" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one" onclick="guardarDatos(this.id,'Facturación anual')">Seleccione</button>
+	            			<button id="buttonFacturacion" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-tam select-one" onclick="guardarDatos(this.id,'Facturación anual')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">

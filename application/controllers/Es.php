@@ -24,10 +24,11 @@ class Es extends CI_Controller {
           	$pantalla = $_POST['pantalla'];
           	$idioma   = $_POST['idioma'];
           	$datos_array = $_POST['datos_array'];
+          	$operar      = $_POST['operar'];
           	print_r('datos array: '.$datos_array);
           	$columna  = null;
           	$arr_dat = implode(",", $datos_array);
-          	if($pantalla == 2) {$columna = 'Tamanio';} elseif ($pantalla == 3) {$columna = 'Prioridad';}elseif ($pantalla == 4) {$columna = 'Infraestructura';}
+          	if($pantalla == 2) {$columna = 'Factura_anual';} elseif ($pantalla == 3) {$columna = 'Prioridad';}elseif ($pantalla == 4) {$columna = 'Infraestructura';}
           	if($pantalla == 1) {
           		$idIdioma = $this->M_solicitud->getDatosPais($idioma);
           		$arrayInsert = array('Industria' => $datos,
@@ -37,10 +38,18 @@ class Es extends CI_Controller {
         					 	 'id_sol'    => $datoInsert['Id']);
             	$this->session->set_userdata($session);
           	}else {
-          		$arrayUpdate = array($columna => $datos);
+          		if($pantalla == 2) {
+          			$arrayUpdate = array($columna => $datos,
+          								 'Tamanio' => $operar);
+          			$session = array($columna  => $datos,
+          							 'Tamanio' => $operar);
+          		}else {
+          			$arrayUpdate = array($columna => $datos);
+          			$session     = array($columna => $datos);
+          		}
           		//$this->M_solicitud->updateDatos($arrayUpdate, $_SESSION['id_sol'], 'solicitud');
-          		$session = array($columna  => $datos);
             	$this->session->set_userdata($session);
+            	print_r($this->session->all_userdata());
           	}
             $data['error'] = EXIT_SUCCESS;
           }catch(Exception $e) {
