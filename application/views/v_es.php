@@ -532,7 +532,7 @@
 	            			<h5>SUS PERFILES:</h5>
 	            			<div class="col-xs-12 BLANCO_FONDO m-t-15">
 	            				<div class="col-xs-8 NEGRO_COLOR m-t-15">
-	            					<span class="font-16"><?php echo $industria ?></span>
+	            					<span class="font-16"></span>
 	            				</div>
 	            				<div class="col-xs-3">
 	            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored BOTON_EDITAR">
