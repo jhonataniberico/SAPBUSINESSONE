@@ -33,9 +33,9 @@
     			</div>
     			<div class="header-right">
 					<select class="selectpicker" id="Idioma"  name="Idioma" onchange="cambiarIdioma()">
-						<option value="Es">Espa&ntilde;ol</option>
-						<option value="In">Ingl&eacute;s</option>
-						<option value="Por">Portug&eacute;s</option>
+						<option value="Español">Espa&ntilde;ol</option>
+						<option value="Inglés">Ingl&eacute;s</option>
+						<option value="Portugués">Portug&eacute;s</option>
 					</select>
 					<div class="background3"></div>
 					<div class="background2"></div>

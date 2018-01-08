@@ -115,9 +115,12 @@ function guardarDatos(id,datos) {//falta cambiar el 3er slider en la vista coord
 }
 
 function saveDatos(pantalla) {
+	var idioma = $('#Idioma').val();
+	console.log(idioma);
 	$.ajax({
 		data  : { global_datos : global_datos,
-				  pantalla     : pantalla},
+				  pantalla     : pantalla,
+				  idioma 	   : idioma},
 		url   : 'es/saveDatos',
 		type  : 'POST',
 		dataType : 'json'
@@ -297,5 +300,5 @@ function mostrarDatos() {
 }
 
 function cambiarIdioma() {
-	
+	location.href = '';
 }

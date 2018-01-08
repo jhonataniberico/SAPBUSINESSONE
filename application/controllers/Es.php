@@ -8,26 +8,10 @@ class Es extends CI_Controller {
         $this->load->model('M_solicitud');
         $this->load->helper('utils');
         $this->load->helper("url");
-        $this->cont  = 1;
     }
 
 	public function index()
 	{
-		/*$cont = 1;
-		if($cont == 1) {
-			$session = array('industria' => '');
-        	$this->session->set_userdata($session);
-        	$cont++;
-		}*/
-		/*if($this->cont  == 1) {
-			$session = array('industria'  => '',
-							 'id_sol' => null);
-            $this->session->set_userdata($session);
-		}else {
-			print_r('entra en 2');
-			$datosSol = $this->M_solicitud->getDatosSolicitud($_SESSION['id_sol']);
-			$data['industria'] =  $_SESSION['industria'];
-		}*/
 		$this->load->view('v_es');
 	}
 
@@ -36,13 +20,15 @@ class Es extends CI_Controller {
         $data['msj']   = null;
         try 
           {
-          	$datos = $_POST['global_datos'];
+          	$datos 	  = $_POST['global_datos'];
           	$pantalla = $_POST['pantalla'];
-          	$columna = null;
+          	$idioma   = $_POST['idioma'];
+          	$columna  = null;
           	if($pantalla == 2) {$columna = 'Tamanio';} elseif ($pantalla == 3) {$columna = 'Prioridad';}elseif ($pantalla == 4) {$columna = 'Infraestructura';}
           	if($pantalla == 1) {
+          		$idIdioma = $this->M_solicitud->getDatosPais($idioma);
           		$arrayInsert = array('Industria' => $datos,
-          						     'Id_pais' => 1);
+          						     'Id_pais' => $idIdioma);
             	$datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
             	$session = array('industria' => $datos,
         					 	 'id_sol'    => $datoInsert['Id']);
@@ -53,8 +39,6 @@ class Es extends CI_Controller {
           		$session = array($columna  => $datos);
             	$this->session->set_userdata($session);
           	}
-          	$this->cont++;
-          	print_r('contador: '.$this->cont);
           	//print_r($this->session->all_userdata());
             $data['error'] = EXIT_SUCCESS;
           }catch(Exception $e) {

@@ -31,4 +31,13 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, array($id));
         return $result->result();
     }
+
+    function getDatosPais($Nombre) {
+    	$sql = "SELECT Id_pais
+                  FROM pais
+                 WHERE Nombre LIKE ?";
+        $result = $this->db->query($sql, array($Nombre));
+		//print_r($this->db->last_query());
+        return $result->row()->Id_pais;
+    }
 }
