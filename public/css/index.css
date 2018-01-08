@@ -209,9 +209,9 @@ span.number{
 	width: 100%;
 }
 .flip-card .card-front {
-	-moz-transform: perspective(300) rotateY(0);
-	-webkit-transform: perspective(300) rotateY(0);
-	transform: perspective(300) rotateY(0);
+	-moz-transform: perspective(600) rotateY(0);
+	-webkit-transform: perspective(600) rotateY(0);
+	transform: perspective(600) rotateY(0);
 	z-index: 900;
 }
 .flip-card .card-back {
@@ -226,9 +226,9 @@ span.number{
 	-ms-transform: rotateY(180deg);
 	-webkit-transform: rotateY(180deg);
 	transform: rotateY(180deg);
-	-moz-transform: perspective(300) rotateY(180deg);
-	-webkit-transform: perspective(300) rotateY(180deg);
-	transform: perspective(300) rotateY(180deg);
+	-moz-transform: perspective(600) rotateY(180deg);
+	-webkit-transform: perspective(600) rotateY(180deg);
+	transform: perspective(600) rotateY(180deg);
 }
 .flip-card:hover .card-back {
 	z-index: 950;
@@ -236,9 +236,9 @@ span.number{
 	-ms-transform: rotateY(0deg);
 	-webkit-transform: rotateY(0deg);
 	transform: rotateY(0deg);
-	-moz-transform: perspective(300) rotateY(0deg);
-	-webkit-transform: perspective(300) rotateY(0deg);
-	transform: perspective(300) rotateY(0deg);
+	-moz-transform: perspective(600) rotateY(0deg);
+	-webkit-transform: perspective(600) rotateY(0deg);
+	transform: perspective(600) rotateY(0deg);
 }
 .flip-card .card-back label{
 	font-family: 'BentonSansLight';

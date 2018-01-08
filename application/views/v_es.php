@@ -218,7 +218,7 @@
 	            	<div class="mdl-card-question">
             			<div class="flip-card">
             				<div class="card-front">
-	            				<img src="<?php echo RUTA_IMG?>cards/card-producto.png">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-empleados.png">
 	            				<p>Número de empleados</p>
 								<i class="mdi mdi-add"></i>
 	            			</div>
@@ -239,6 +239,34 @@
             						<h2>Sab&iacute;a que...</h2>
             						<p>... las empresas exitosas del sector reinventan su forma de operar, aprovechando la tecnolog&iacute;a para perfeccionar las
             						pr&aacute;cticas de negocio, mejorar la agilidad y atender mejor a clientes y distribuidores.</p>
+            						<small>(IDC, septiembre 2016)</small>
+	            				</div>
+	            			</div>
+	            		</div>
+	            	</div>
+	            	<div class="mdl-card-question">
+	            		<div class="flip-card">
+	            			<div class="card-front">
+	            				<img src="<?php echo RUTA_IMG?>cards/card-facturacion.png">
+	            				<p>Procesos/Manufactura</p>
+								<i class="mdi mdi-add"></i>
+	            			</div>
+	            			<div class="card-back">
+	            				<label>Satisfaga la demanda de sus clientes y desarrolle nuevas fuentes de ingresos, reduzca los costos de la cadena de suministro, acelere la duraci&oacute;n de
+	            				 los ciclos, minimice los rechazos y las modificaciones y, por &uacute;ltimo, agilice la obtenci&oacute;n de beneficios.</label>
+	            				<p>Procesos/Manufactura</p>
+								<i class="mdi mdi-remove"></i>
+	            			</div>
+	            		</div>
+	            		<div class="content-card">
+	            			<button id="buttonCard5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos(this.id,'Procesos/Manufactura')">Seleccione</button>
+	            			<div class="contenido">
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+	            				</div>
+	            				<div class="contenido-right">
+            						<h2>Sab&iacute;a que...</h2>
+            						<p>... se reduce el 19% en el costo de fabricaci&oacute;n con un monitorio en tiempo real de costo de producci&oacute;n y variantes.</p>
             						<small>(IDC, septiembre 2016)</small>
 	            				</div>
 	            			</div>
