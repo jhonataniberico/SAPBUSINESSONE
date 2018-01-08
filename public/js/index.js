@@ -295,3 +295,7 @@ function mostrarDatos() {
       }
 	});
 }
+
+function cambiarIdioma() {
+	
+}

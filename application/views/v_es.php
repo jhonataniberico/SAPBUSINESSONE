@@ -32,7 +32,7 @@
     				<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
     			</div>
     			<div class="header-right">
-					<select class="selectpicker" id="Idioma"  name="Idioma">
+					<select class="selectpicker" id="Idioma"  name="Idioma" onchange="cambiarIdioma()">
 						<option value="Es">Espa&ntilde;ol</option>
 						<option value="In">Ingl&eacute;s</option>
 						<option value="Por">Portug&eacute;s</option>
