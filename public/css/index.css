@@ -280,10 +280,27 @@ span.number{
     -o-transition: background-color .25s linear;
     transition: background-color .25s linear;
 }
+.content-card .mdl-button--raised.select-tam{
+	padding: 0 5px;
+	margin: 0;
+	margin-top: 10px;
+}
 .content-card .select-empleados{
 	margin: 10px 0;
 	border: 1px solid #FBB819;
 	height: 36px;
+}
+.content-card .select-empleados span{
+	max-width: 105px;
+    display: inline-block;
+    width: 100%;
+    font-family: 'BentonSansBold';
+    font-size: 18px;
+    vertical-align: middle;
+    line-height: 32px;
+}
+.content-card .select-empleados button i{
+	color: #FFFFFF;
 }
 .content-card .contenido{
 	border-top: 1.5px solid #FFFFFF;

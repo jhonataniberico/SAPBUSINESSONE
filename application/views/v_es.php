@@ -252,8 +252,9 @@
 	            		<div class="content-card">
 	            			<button id="buttonFacturacion" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-tam select-one" onclick="guardarDatos(this.id,'')">Seleccione +</button>
 	            			<button id="button1M" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-tam select-one" onclick="guardarDatos(this.id,'Menor de $1M')">Menor de $1M</button>
-	            			<button id="button2M" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-tam select-one" onclick="guardarDatos(this.id,'Mayor de $2M')">Mayor de $2M</button>
-	            			<button id="buttonN" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-tam select-one" onclick="guardarDatos(this.id,'No poseo información')">No poseo información</button>
+	            			<button id="button2M" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-tam select-one" onclick="guardarDatos(this.id,'Menor de $1M')">$1M - $2M</button>
+	            			<button id="button3M" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-tam select-one" onclick="guardarDatos(this.id,'Mayor de $2M')">Mayor de $2M</button>
+	            			<button id="buttonN" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-tam select-one" onclick="guardarDatos(this.id,'No poseo información')">No poseo informaci&oacute;n</button>
 	            			<div class="contenido hidden">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
