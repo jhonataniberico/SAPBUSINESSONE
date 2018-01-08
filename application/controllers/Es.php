@@ -28,12 +28,26 @@ class Es extends CI_Controller {
         try 
           {
           	$datos = $_POST['global_datos'];
-          	$arrayInsert = array('Industria' => $datos,
-          						 'Id_pais' => 1);
-            //$datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
-            $session = array('industria' => $datos,
-        					 'id_sol'    => $datoInsert['Id']);
-            $this->session->set_userdata($session);
+          	print_r('datos: '.$datos);
+          	$pantalla = $_POST['pantalla'];
+          	$columna = null;
+          	if($pantalla == 2) {$columna = 'Tamanio';} elseif ($pantalla == 3) {$columna = 'Prioridad';}elseif ($pantalla == 4) {$columna = 'Infraestructura';}
+          	print_r('pantalla: '.$pantalla);
+          	print_r('columna: '.$columna);
+          	if($pantalla == 1) {
+          		$arrayInsert = array('Industria' => $datos,
+          						     'Id_pais' => 1);
+            	//$datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
+            	$session = array('industria' => $datos,
+        					 	 'id_sol'    => $datoInsert['Id']);
+            	$this->session->set_userdata($session);
+          	}else {
+          		$arrayUpdate = array($columna => $datos);
+          		//$this->M_solicitud->updateDatos($arrayUpdate, $_SESSION['id_sol'], 'solicitud');
+          		$session = array($columna  => $datos);
+            	$this->session->set_userdata($session);
+          	}
+          	print_r($this->session->all_userdata());
             $data['error'] = EXIT_SUCCESS;
           }catch(Exception $e) {
            $data['msj'] = $e->getMessage();

@@ -259,7 +259,7 @@
 	            		<div class="flip-card">
 	            			<div class="card-front">
 	            				<img src="<?php echo RUTA_IMG?>cards/card-cloud.png">
-	            				<p>Cloud</p>
+	            				<p>Cloud</p> 
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
