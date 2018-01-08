@@ -42,6 +42,11 @@
 					<div class="background1"></div>
     			</div>
     		</div>
+    		<div class="background-body">
+				<div class="background-body1"></div>
+				<div class="background-body2"></div>
+				<div class="background-body3"></div>
+    		</div>
 	        <div class="slide">
 	        	<!-- <div class="header-home">
 					<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
