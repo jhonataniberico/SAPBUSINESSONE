@@ -100,15 +100,18 @@ function validateEmail(email) {
 var global_datos = null;
 var datos_array = [];
 function guardarDatos(id,datos) {
-	var buttonSelect = $('#'+id);
+	var buttonSelect = $('#'+id+'.select-one');
 	var buttonToggle = $('#'+id+'.select-prioridad');
 	var cardSelect   = $('#'+id).parent().find('.contenido');
 	global_datos     = datos;
 	$('.contenido').removeClass('aparecer');
 	$('.content-card').find('.select-one').removeClass('button-select');
 	buttonSelect.addClass('button-select');
-	buttonToggle.addClass('button-select');
 	cardSelect.addClass('aparecer');
+    buttonToggle.click(function() {
+    	$(this).toggleClass("button-select");
+    	cardSelect.toggleClass("aparecer");
+	});
 }
 
 var x = 1;
