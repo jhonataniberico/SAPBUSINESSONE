@@ -29,13 +29,13 @@ class Es extends CI_Controller {
           		$idIdioma = $this->M_solicitud->getDatosPais($idioma);
           		$arrayInsert = array('Industria' => $datos,
           						     'Id_pais' => $idIdioma);
-            	$datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
+            	//$datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
             	$session = array('industria' => $datos,
         					 	 'id_sol'    => $datoInsert['Id']);
             	$this->session->set_userdata($session);
           	}else {
           		$arrayUpdate = array($columna => $datos);
-          		$this->M_solicitud->updateDatos($arrayUpdate, $_SESSION['id_sol'], 'solicitud');
+          		//$this->M_solicitud->updateDatos($arrayUpdate, $_SESSION['id_sol'], 'solicitud');
           		$session = array($columna  => $datos);
             	$this->session->set_userdata($session);
           	}

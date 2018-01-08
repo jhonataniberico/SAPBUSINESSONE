@@ -104,7 +104,7 @@ function validateEmail(email) {
 }
 
 var global_datos = null;
-function guardarDatos(id,datos) {//falta cambiar el 3er slider en la vista coordinar con josé
+function guardarDatos(id,datos) {
 	var buttonSelect = $('#'+id);
 	var cardSelect   = $('#'+id).parent().find('.contenido');
 	global_datos = datos;
@@ -282,7 +282,6 @@ function borrarFocus(dato) {
 
 function mostrarDatos() {
 	$.ajax({
-		/*data  : { },*/
 		url   : 'es/mostrarDatos',
 		type  : 'POST'
 	}).done(function(data){
@@ -290,6 +289,10 @@ function mostrarDatos() {
         data = JSON.parse(data);
         if(data.error == 0){
            	//console.log(data.industria);
+          /*$('#industria').text(data.industria);
+           	$('#Tamanio').text(data.Tamanio);
+           	$('#Prioridad').text(data.Prioridad);
+           	$('#Infraestructura').text(data.Infraestructura);*/
         }else {
         }
       } catch (err){
