@@ -101,11 +101,13 @@ var global_datos = null;
 var datos_array = [];
 function guardarDatos(id,datos) {
 	var buttonSelect = $('#'+id);
+	var buttonToggle = $('#'+id+'.select-prioridad');
 	var cardSelect   = $('#'+id).parent().find('.contenido');
 	global_datos     = datos;
 	$('.contenido').removeClass('aparecer');
-	$('.content-card').find('button').removeClass('button-select');
+	$('.content-card').find('.select-one').removeClass('button-select');
 	buttonSelect.addClass('button-select');
+	buttonToggle.addClass('button-select');
 	cardSelect.addClass('aparecer');
 }
 
