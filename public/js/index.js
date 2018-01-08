@@ -116,7 +116,6 @@ function guardarDatos(id,datos) {//falta cambiar el 3er slider en la vista coord
 
 function saveDatos(pantalla) {
 	var idioma = $('#Idioma').val();
-	console.log(idioma);
 	$.ajax({
 		data  : { global_datos : global_datos,
 				  pantalla     : pantalla,
@@ -290,7 +289,7 @@ function mostrarDatos() {
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
-           	console.log(data.industria);
+           	//console.log(data.industria);
         }else {
         }
       } catch (err){
@@ -300,5 +299,12 @@ function mostrarDatos() {
 }
 
 function cambiarIdioma() {
-	location.href = '';
+	var idioma = $('#Idioma').val();
+	if(idioma == 'Español') {
+		location.href = 'Es';
+	}else if(idioma == 'Inglés') {
+		location.href = 'En';
+	}else if(idioma == 'Portugés') {
+		location.href = 'Pt';
+	}
 }
