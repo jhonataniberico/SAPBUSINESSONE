@@ -34,7 +34,7 @@ class M_solicitud extends  CI_Model{
 
     function getDatosPais($Nombre) {
     	$sql = "SELECT Id_pais
-                  FROM pais
+                  FROM lenguaje
                  WHERE Nombre LIKE ?";
         $result = $this->db->query($sql, array($Nombre));
 		//print_r($this->db->last_query());

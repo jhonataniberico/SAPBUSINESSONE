@@ -127,7 +127,6 @@ function saveDatos(pantalla) {
 			x++;
 		}
 	}
-	console.log(datos_array);
 	$.ajax({
 		data  : { global_datos : global_datos,
 				  pantalla     : pantalla,

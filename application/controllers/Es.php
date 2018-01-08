@@ -20,12 +20,11 @@ class Es extends CI_Controller {
         $data['msj']   = null;
         try 
           {
-          	$datos 	  = $_POST['global_datos'];
-          	$pantalla = $_POST['pantalla'];
-          	$idioma   = $_POST['idioma'];
+          	$datos 	     = $_POST['global_datos'];
+          	$pantalla    = $_POST['pantalla'];
+          	$idioma      = $_POST['idioma'];
           	$datos_array = $_POST['datos_array'];
           	$operar      = $_POST['operar'];
-          	print_r('datos array: '.$datos_array);
           	$columna  = null;
           	$arr_dat = implode(",", $datos_array);
           	if($pantalla == 2) {$columna = 'Factura_anual';} elseif ($pantalla == 3) {$columna = 'Prioridad';}elseif ($pantalla == 4) {$columna = 'Infraestructura';}
