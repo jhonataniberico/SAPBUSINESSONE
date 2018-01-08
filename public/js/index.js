@@ -102,7 +102,8 @@ var datos_array = [];
 function guardarDatos(id,datos) {
 	var buttonSelect = $('#'+id+'.select-one');
 	var buttonToggle = $('#'+id+'.select-prioridad');
-	var cardSelect   = $('#'+id).parent().find('.contenido');
+	var cardSelect   = $('#'+id+'.select-one').parent().find('.contenido');
+	var cardToggle   = $('#'+id+'.select-prioridad').parent().find('.contenido');
 	global_datos     = datos;
 	$('.contenido').removeClass('aparecer');
 	$('.content-card').find('.select-one').removeClass('button-select');
@@ -110,7 +111,7 @@ function guardarDatos(id,datos) {
 	cardSelect.addClass('aparecer');
 	buttonToggle.toggleClass("button-select");
     buttonToggle.click(function() {
-    	cardSelect.toggleClass("aparecer");
+    	cardToggle.toggleClass("aparecer");
 	});
 }
 
