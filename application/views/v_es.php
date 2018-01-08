@@ -32,10 +32,10 @@
     				<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
     			</div>
     			<div class="header-right">
-					<select class="selectpicker">
-						<option>Espa&ntilde;ol</option>
-						<option>Ingl&eacute;s</option>
-						<option>Portug&eacute;s</option>
+					<select class="selectpicker" id="Idioma"  name="Idioma">
+						<option value="Es">Espa&ntilde;ol</option>
+						<option value="In">Ingl&eacute;s</option>
+						<option value="Por">Portug&eacute;s</option>
 					</select>
 					<div class="background3"></div>
 					<div class="background2"></div>
