@@ -61,9 +61,9 @@ class Es extends CI_Controller {
         $data['error'] = EXIT_SUCCESS;
         $data['msj']   = null;
         try {
-            $data['industria'] =  $_SESSION['industria'];
-			$data['Tamanio']   =  '';
-			$data['Prioridad'] = $_SESSION['Prioridad'];
+            $data['industria'] 		 =  $_SESSION['industria'];
+			$data['Tamanio']   		 =  '';
+			$data['Prioridad']       = $_SESSION['Prioridad'];
 			$data['Infraestructura'] = $_SESSION['Infraestructura'];
         } catch (Exception $e) {
             $data['msj'] = $e->getMessage();
