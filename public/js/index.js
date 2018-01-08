@@ -140,6 +140,7 @@ $(window).load(function() {
 $( document ).ready(function() {
 	var select = 0;
 	var select_prioridad = 0;
+	var select_infraestructura = 0;
 	//botón adelante
     $(".fp-next").click(function() {
     	setTimeout(function(){
@@ -168,10 +169,15 @@ $( document ).ready(function() {
 				$('.fp-next').css('pointer-events', '');
     	 	}
     	}
-    	/*if($('body').attr('class') == 'fp-viewing-0-4') {
-			$('.fp-next').css('opacity', '.5');
-			$('.fp-next').css('pointer-events', 'none');
-    	}*/
+    	if($('body').attr('class') == 'fp-viewing-0-4') {
+			if(select_infraestructura == 0) {
+    	 		$('.fp-next').css('opacity', '.5');
+				$('.fp-next').css('pointer-events', 'none');
+    	 	}else if(select_infraestructura == 1) {
+    	 		$('.fp-next').css('opacity', '');
+				$('.fp-next').css('pointer-events', '');
+    	 	}
+    	}
     	 if($('body').attr('class') == 'fp-viewing-0-5') {
     	 	$('.fp-next').addClass( "hidden" );
     	 }
@@ -181,6 +187,10 @@ $( document ).ready(function() {
     	}
     	if($('body').attr('class') == 'fp-viewing-0-3') {
     		saveDatos(3);
+    	}
+    	if($('body').attr('class') == 'fp-viewing-0-4') {
+    		saveDatos(4);
+    		mostrarDatos();
     	}
     });
     //botón atrás
@@ -209,9 +219,15 @@ $( document ).ready(function() {
     	}
 	});
 	$(".select-prioridad").click(function () {
-		console.log('entra');
 		select_prioridad = 1;
 		if($('body').attr('class') == 'fp-viewing-0-3') {
+			$('.fp-next').css('opacity', '');
+			$('.fp-next').css('pointer-events', '');
+    	}
+	});
+	$(".select-prioridad").click(function () {
+		select_infraestructura = 1;
+		if($('body').attr('class') == 'fp-viewing-0-4') {
 			$('.fp-next').css('opacity', '');
 			$('.fp-next').css('pointer-events', '');
     	}
@@ -260,4 +276,22 @@ function borrarFocus(dato) {
 	if(telefono != null || telefono != '') {
 		$('#telefono').focus().css('border-color','');
 	}*/
+}
+
+function mostrarDatos() {
+	$.ajax({
+		/*data  : { },*/
+		url   : 'es/mostrarDatos',
+		type  : 'POST'
+	}).done(function(data){
+		try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+           	console.log(data.industria);
+        }else {
+        }
+      } catch (err){
+        msj('error',err.message);
+      }
+	});
 }

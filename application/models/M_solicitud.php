@@ -23,4 +23,12 @@ class M_solicitud extends  CI_Model{
         }
         return array('error' => EXIT_SUCCESS,'msj' => MSJ_UPT);
     }
+
+    function getDatosSolicitud($id) {
+        $sql = "SELECT *
+                  FROM solicitud
+                 WHERE Id = ?";
+        $result = $this->db->query($sql, array($id));
+        return $result->result();
+    }
 }
