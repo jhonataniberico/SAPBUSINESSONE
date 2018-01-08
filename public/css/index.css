@@ -13,10 +13,50 @@ h2{
 	margin-right: auto;
 	margin-left: auto;
 }
+.fp-viewing-0-0 .background-body{
+	opacity: 1;
+}
+.fp-viewing-0-1 .header-home,
+.fp-viewing-0-2 .header-home,
+.fp-viewing-0-3 .header-home,
+.fp-viewing-0-4 .header-home,
+.fp-viewing-0-5 .header-home{
+	opacity: 0;
+}
+.fp-viewing-0-1 .header,
+.fp-viewing-0-2 .header,
+.fp-viewing-0-3 .header,
+.fp-viewing-0-4 .header,
+.fp-viewing-0-5 .header{
+	opacity: 1;
+}
 .background-body{
 	height: 100vh;
-	width: 400px;
+	width: 300px;
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+.background-body .background-body1,
+.background-body .background-body2,
+.background-body .background-body3{
+	height: 100%;
+    width: 100%;
+    max-width: 100px;
     float: right;
+}
+.background-body .background-body1{
+	background-color: #54442E;
+}
+.background-body .background-body2{
+	background-color: #8D6832;
+}
+.background-body .background-body3{
+	background-color: #E29D2E;
+}
+.fp-viewing-0-0 .fp-controlArrow.fp-next{
+    right: calc(0% + 350px);
 }
 /*HEADER*/
 .header-home{
@@ -24,6 +64,8 @@ h2{
     top: 0;
     width: 100%;
     padding: 40px;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
 }
 .header-home img{
 	max-width: 150px;
@@ -49,6 +91,8 @@ h2{
     width: 100%;
     border-bottom: 1px solid #FFFFFF;
     z-index: 5;
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
 }
 .header-left{
     padding: 20px 40px;

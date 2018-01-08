@@ -26,6 +26,9 @@
 <body>
 	<section id="principal">
 	    <div class="section">
+	    	<div class="header-home">
+				<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
+	    	</div>
     		<div class="header">
     			<div class="header-left">
     				<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
@@ -43,14 +46,11 @@
     			</div>
     		</div>
     		<div class="background-body">
-				<div class="background-body1"></div>
-				<div class="background-body2"></div>
 				<div class="background-body3"></div>
+				<div class="background-body2"></div>
+				<div class="background-body1"></div>
     		</div>
 	        <div class="slide">
-	        	<!-- <div class="header-home">
-					<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
-		    	</div> -->
         		<div class="container">
         			<img src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	            	<h2>Diferentes escenarios. Una soluci&oacute;n</h2>
