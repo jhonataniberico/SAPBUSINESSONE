@@ -13,6 +13,7 @@
 	<title>SAP Business One</title>
     <link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/logo_favicon.png">
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.css?v=<?php echo time();?>">
+    <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>fullPage/dist/jquery.fullpage.min.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.css?v=<?php echo time();?>">
@@ -26,25 +27,25 @@
 	<section id="principal">
 	    <div class="section">
     		<div class="header">
-    			<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-    			<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
+    			<div class="header-left">
+    				<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+    				<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
+    			</div>
     			<div class="header-right">
-					<div class="btn-group">
-						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Action <span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu">
-							<li><a href="#">Espa&ntilde;ol</a></li>
-							<li><a href="#">Ingl&eacute;s</a></li>
-							<li><a href="#">Portug&eacute;s</a></li>
-						</ul>
-					</div>
+					<select class="selectpicker">
+						<option>Espa&ntilde;ol</option>
+						<option>Ingl&eacute;s</option>
+						<option>Portug&eacute;s</option>
+					</select>
+					<div class="background3"></div>
+					<div class="background2"></div>
+					<div class="background1"></div>
     			</div>
     		</div>
 	        <div class="slide">
-	        	<div class="header-home">
+	        	<!-- <div class="header-home">
 					<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
-		    	</div>
+		    	</div> -->
         		<div class="container">
         			<img src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	            	<h2>Diferentes escenarios. Una soluci&oacute;n</h2>
@@ -450,7 +451,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonLocal" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-prioridad" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonLocal" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-infraestructura" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -480,7 +481,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonCloudI" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-prioridad" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonCloudI" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-infraestructura" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -508,7 +509,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonHibrida" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-prioridad" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonHibrida" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-infraestructura" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -668,6 +669,8 @@
 	<script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
 	<script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
 	<script src="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.js?v=<?php echo time();?>"></script>
+	<script src="<?php echo RUTA_PLUGINS?>bootstrap-select/js/bootstrap-select.min.js?v=<?php echo time();?>"></script>
+	<script src="<?php echo RUTA_PLUGINS?>bootstrap-select/js/i18n/defaults-es_ES.min.js?v=<?php echo time();?>"></script>
 	<script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_PLUGINS?>fullPage/vendors/jquery.easings.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_PLUGINS?>fullPage/vendors/scrolloverflow.min.js?v=<?php echo time();?>"></script>

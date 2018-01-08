@@ -43,7 +43,37 @@ h2{
     top: 0;
     width: 100%;
     border-bottom: 1px solid #FFFFFF;
+    z-index: 5;
+}
+.header-left{
     padding: 20px 40px;
+    float: left;
+}
+.header-right{
+    float: right;
+    height: 88px;
+    max-width: 225px;
+    width: 100%;
+}
+.header-right .bootstrap-select{
+	float: left;
+}
+.header-right .background1,
+.header-right .background2,
+.header-right .background3{
+    height: 100%;
+    width: 100%;
+    max-width: 25px;
+    float: right;
+}
+.header-right .background1{
+	background-color: #54442E;
+}
+.header-right .background2{
+	background-color: #8D6832;
+}
+.header-right .background3{
+	background-color: #E29D2E;
 }
 .header h2{
 	margin: 0;
@@ -261,6 +291,11 @@ span.number{
 	right: 5px;
 	color: #FFFFFF;
 	font-size: 15px;
+}
+/*BOOTSTRAP-SELECT*/
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+	width: 105px;
+}
 }
 /*BARRA SCROLL*/
 ::-webkit-scrollbar {
