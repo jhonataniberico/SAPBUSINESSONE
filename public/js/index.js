@@ -98,6 +98,7 @@ function validateEmail(email) {
 }
 
 var global_datos = null;
+var datos_array = [];
 function guardarDatos(id,datos) {
 	var buttonSelect = $('#'+id);
 	var cardSelect   = $('#'+id).parent().find('.contenido');
@@ -108,12 +109,21 @@ function guardarDatos(id,datos) {
 	cardSelect.addClass('aparecer');
 }
 
+var x = 1;
 function saveDatos(pantalla) {
 	var idioma = $('#Idioma').val();
+	if(pantalla == 3) {
+		if(x <= 5) {
+			datos_array.push(global_datos);
+			x++;
+		}
+	}
+	console.log(datos_array);
 	$.ajax({
 		data  : { global_datos : global_datos,
 				  pantalla     : pantalla,
-				  idioma 	   : idioma},
+				  idioma 	   : idioma,
+				  datos_array  : datos_array},
 		url   : 'es/saveDatos',
 		type  : 'POST',
 		dataType : 'json'

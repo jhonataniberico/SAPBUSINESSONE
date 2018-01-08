@@ -23,7 +23,10 @@ class Es extends CI_Controller {
           	$datos 	  = $_POST['global_datos'];
           	$pantalla = $_POST['pantalla'];
           	$idioma   = $_POST['idioma'];
+          	$datos_array = $_POST['datos_array'];
+          	print_r('datos array: '.$datos_array);
           	$columna  = null;
+          	$arr_dat = implode(",", $datos_array);
           	if($pantalla == 2) {$columna = 'Tamanio';} elseif ($pantalla == 3) {$columna = 'Prioridad';}elseif ($pantalla == 4) {$columna = 'Infraestructura';}
           	if($pantalla == 1) {
           		$idIdioma = $this->M_solicitud->getDatosPais($idioma);
