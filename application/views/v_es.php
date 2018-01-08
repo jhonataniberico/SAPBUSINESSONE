@@ -439,7 +439,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonLocal" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-infraestructura" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonLocal" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-infraestructura" onclick="guardarDatos(this.id,'Local')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -469,7 +469,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonCloudI" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-infraestructura" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonCloudI" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-infraestructura" onclick="guardarDatos(this.id,'Cloud')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -497,7 +497,7 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonHibrida" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-infraestructura" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+	            			<button id="buttonHibrida" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-infraestructura" onclick="guardarDatos(this.id,'Híbrida')">Seleccione</button>
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">

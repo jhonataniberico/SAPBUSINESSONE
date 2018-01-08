@@ -295,7 +295,7 @@ span.number{
 /*BOOTSTRAP-SELECT*/
 .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
 	width: 105px;
-}
+	margin-top: 30px;
 }
 /*BARRA SCROLL*/
 ::-webkit-scrollbar {
