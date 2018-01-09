@@ -3,7 +3,7 @@ $(document).ready(function() {
 		autoScrolling: false,
 		fitToSection: false,
 		interlockedSlides: false,
-		touchSensitivity: 5000,
+		touchSensitivity: 5000
 	});
 });
 

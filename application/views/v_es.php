@@ -693,6 +693,25 @@
 	        </div>
 	    </div>
 	</section>
+	<!--MODAL-->
+	<div class="modal fade" id="ModalQuestion" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="mdl-card" >
+                    <div class="mdl-card__title p-0">
+						<img alt="" src="">
+					</div>
+				    <div class="mdl-card__supporting-text">
+                        <h2>Sabía que...</h2>
+                        <p></p>
+					</div> 
+    				<div class="mdl-card__menu">        				    
+                        <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 	<script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
 	<script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
 	<script src="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.js?v=<?php echo time();?>"></script>
@@ -706,6 +725,7 @@
     <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_JS?>index.js?v=<?php echo time();?>"></script>
     <script type="text/javascript">
+  
     </script>
 </body>
 </html>
