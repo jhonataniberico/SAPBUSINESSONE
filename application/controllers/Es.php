@@ -27,7 +27,6 @@ class Es extends CI_Controller {
           	$operar      = $this->input->post('operar');
           	$columna  	 = null;
           	//$arr_dat = implode(",", $datos_array);
-          	print_r($pantalla);
           	if($pantalla == 2) {$columna = 'Factura_anual';} elseif ($pantalla == 3) {$columna = 'Prioridad';}elseif ($pantalla == 4) {$columna = 'Infraestructura';}
           	if($pantalla == 1) {
           		$idIdioma = $this->M_solicitud->getDatosPais($idioma);
@@ -63,10 +62,10 @@ class Es extends CI_Controller {
         $data['error'] = EXIT_SUCCESS;
         $data['msj']   = null;
         try {
-            $data['industria'] 		 =  'bbb'/*$_SESSION['industria']*/;
-			$data['Tamanio']   		 =  'aaa';
-			$data['Prioridad']       = 'ccc'/*$_SESSION['Prioridad']*/;
-			$data['Infraestructura'] = 'ddd'/*$_SESSION['Infraestructura']*/;
+            $data['industria'] 		 = $_SESSION['industria'];
+			$data['Tamanio']   		 = 'aaa';
+			$data['Prioridad']       = $_SESSION['Prioridad'];
+			$data['Infraestructura'] = $_SESSION['Infraestructura'];
         } catch (Exception $e) {
             $data['msj'] = $e->getMessage();
         }

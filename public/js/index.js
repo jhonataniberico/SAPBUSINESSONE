@@ -255,8 +255,6 @@ $( document ).ready(function() {
     		if(array_ids.length != 0) {
 				array_ids.splice(3, 1, id_button);
 			}
-			/*var id = array_ids[3];
-			$('#'+id).addClass('button-select');*/
     	}
     });
     //botón atrás
@@ -335,9 +333,7 @@ function borrarFocus(dato) {
 	var cargo 	 		= $('#cargo').val();
 	var telefono 		= $('#telefono').val();
 	var notas 	 		= $('#notas').val();
-
 	//console.log($(':input[@type=text]'));
-
 	/*$('input[type=text]').each(function(){
 	// do something to a text or password input
 	var id = this.val != null ? $('#'+this.id).focus().css('border-color','') : $('#'+this.id).focus().css('border-color','red');
@@ -350,7 +346,6 @@ function borrarFocus(dato) {
 	else{
 		input.focus().css('border-color','red');
 	}
-
 	/*if(nombre_completo != null || nombre_completo != '') {
 		$('#nombre_completo').focus().css('border-color','');
 	}
