@@ -51,17 +51,20 @@
 				<div class="background-body1"></div>
     		</div>
 	        <div class="slide">
-        		<div class="container">
-        			<img src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	            	<h2>Diferentes escenarios. Una soluci&oacute;n</h2>
+        		<div class="mdl-container">
+        			<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+	            	<h2 class="title-home">Diferentes escenarios. Una soluci&oacute;n</h2>
         		</div>
         		<div class="fondo-bottom">
         			<img src="<?php echo RUTA_IMG?>fondo/fondo.png">
         		</div>
 	        </div>
-	        <div class="slide">
-	            <div class="mdl-container text-center">
-	            	<h2 class="question"><span class="number">01/05</span>¿En qu&eacute; industria se desempe&ntilde;a&#63;</h2>
+	        <div class="slide text-center">
+            	<div class="question">
+            		<span class="number">01/05</span>
+            		<h2>¿En qu&eacute; industria se desempe&ntilde;a&#63;</h2>
+            	</div>
+	            <div class="mdl-container mdl-flex text-center">
 	            	<div class="mdl-card-question">
 	            		<div class="flip-card">
 	            			<div class="card-front">
@@ -212,9 +215,12 @@
         			<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
         		</div>
 	        </div>
-	        <div class="slide">
-	            <div class="mdl-container text-center">
-	            	<h2 class="question"><span class="number">02/05</span>¿De qu&eacute; tama&ntilde;o es su empresa&#63;</h2>
+	        <div class="slide text-center">
+	        	<div class="question">
+            		<span class="number">02/05</span>
+            		<h2>¿De qu&eacute; tama&ntilde;o es su empresa&#63;</h2>
+            	</div>
+	            <div class="mdl-container mdl-flex text-center">
 	            	<div class="mdl-card-question">
             			<div class="flip-card">
             				<div class="card-front card-front-none">
@@ -272,9 +278,12 @@
         			<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
         		</div>
 	        </div>
-	        <div class="slide">
-	            <div class="mdl-container text-center">
-	            	<h2 class="question"><span class="number">03/05</span>¿Cu&aacute;l es la prioridad de su negocio&#63;</h2>
+	        <div class="slide text-center">
+	        	<div class="question">
+            		<span class="number">03/05</span>
+            		<h2>¿Cu&aacute;l es la prioridad de su negocio&#63;</h2>
+            	</div>
+	            <div class="mdl-container mdl-flex text-center">
 	            	<div class="mdl-card-question mdl-card-3">
 	            		<div class="flip-card">
 	            			<div class="card-front">
@@ -449,9 +458,12 @@
         			<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
         		</div>
 	        </div>
-	        <div class="slide">
-	            <div class="mdl-container text-center">
-	            	<h2 class="question"><span class="number">04/05</span>¿Que tipo de infraestructura utiliza&#63;</h2>
+	        <div class="slide text-center">
+	        	<div class="question">
+            		<span class="number">04/05</span>
+            		<h2>¿Que tipo de infraestructura utiliza&#63;</h2>
+            	</div>
+	            <div class="mdl-container mdl-flex text-center">
 	            	<div class="mdl-card-question">
 	            		<div class="flip-card">
 	            			<div class="card-front">
