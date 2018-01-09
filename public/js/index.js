@@ -115,6 +115,16 @@ function guardarDatos(id,datos) {
     buttonToggle.click(function() {
     	cardToggle.toggleClass("aparecer");
 	});
+	var modal   = $('#ModalQuestion');
+    var card    = buttonSelect.closest('.mdl-card-question');
+    var img     = card.find('.contenido-left').find('img');
+    var content = card.find('.contenido-right').find('p');
+    modal.find('.mdl-card__title').find('img').attr({
+        "alt"   : img.attr('alt'),
+        "src"   : img.attr('src')
+    });
+    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
+	modal.modal('toggle');
 }
 
 var x = 1;
