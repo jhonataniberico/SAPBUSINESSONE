@@ -8,6 +8,10 @@ h2{
 	font-family: 'BentonSansRegular';
 }
 /*GENERAL*/
+.arrow-block{
+	opacity: .5;
+	pointer-events: none;
+}
 .mdl-container{
 	max-width: 1350px;
 	margin-right: auto;

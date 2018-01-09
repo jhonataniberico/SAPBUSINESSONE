@@ -204,38 +204,30 @@ $( document ).ready(function() {
     	 }
     	 if($('body').attr('class') == 'fp-viewing-0-1') {
     	 	if(select == 0) {
-    	 		$('.fp-next').css('opacity', '.5');
-				$('.fp-next').css('pointer-events', 'none');
+    	 		$('.fp-next').addClass('arrow-block');
     	 	}else if(select == 1) {
-    	 		$('.fp-next').css('opacity', '');
-				$('.fp-next').css('pointer-events', '');
+    	 		$('.fp-next').removeClass('arrow-block');
     	 	}
     	}
     	if($('body').attr('class') == 'fp-viewing-0-2') {
 			if(select_tam == 0) {
-    	 		$('.fp-next').css('opacity', '.5');
-				$('.fp-next').css('pointer-events', 'none');
+    	 		$('.fp-next').addClass('arrow-block');
     	 	}else if(select_tam == 1) {
-    	 		$('.fp-next').css('opacity', '');
-				$('.fp-next').css('pointer-events', '');
+    	 		$('.fp-next').removeClass('arrow-block');
     	 	}
     	}
     	if($('body').attr('class') == 'fp-viewing-0-3') {
     		if(select_prioridad == 0) {
-    	 		$('.fp-next').css('opacity', '.5');
-				$('.fp-next').css('pointer-events', 'none');
+    	 		$('.fp-next').addClass('arrow-block');
     	 	}else if(select_prioridad == 1) {
-    	 		$('.fp-next').css('opacity', '');
-				$('.fp-next').css('pointer-events', '');
+    	 		$('.fp-next').removeClass('arrow-block');
     	 	}
     	}
     	if($('body').attr('class') == 'fp-viewing-0-4') {
 			if(select_infraestructura == 0) {
-    	 		$('.fp-next').css('opacity', '.5');
-				$('.fp-next').css('pointer-events', 'none');
+    	 		$('.fp-next').addClass('arrow-block');
     	 	}else if(select_infraestructura == 1) {
-    	 		$('.fp-next').css('opacity', '');
-				$('.fp-next').css('pointer-events', '');
+    	 		$('.fp-next').removeClass('arrow-block');
     	 	}
     	}
     	 if($('body').attr('class') == 'fp-viewing-0-5') {
@@ -287,30 +279,25 @@ $( document ).ready(function() {
     	setTimeout(function(){
     	 if($('body').attr('class') == 'fp-viewing-0-0') {
     		$('.fp-prev').addClass('hidden');
-    		$('.fp-next').css('opacity', '');
-			$('.fp-next').css('pointer-events', '');
+			$('.fp-next').removeClass('arrow-block');
     	 }
     	 if($('body').attr('class') == 'fp-viewing-0-1') {
-			$('.fp-next').css('opacity', '');
-			$('.fp-next').css('pointer-events', '');
+			$('.fp-next').removeClass('arrow-block');
 			var id = array_ids[0];
 			$('#'+id).addClass('button-select');
     	}
     	if($('body').attr('class') == 'fp-viewing-0-2') {
-			$('.fp-next').css('opacity', '');
-			$('.fp-next').css('pointer-events', '');
+			$('.fp-next').removeClass('arrow-block');
 			var id = array_ids[1];
 			$('#'+id).addClass('button-select');
     	}
     	if($('body').attr('class') == 'fp-viewing-0-3') {
-			$('.fp-next').css('opacity', '');
-			$('.fp-next').css('pointer-events', '');
+			$('.fp-next').removeClass('arrow-block');
 			var id = array_ids[2];
 			$('#'+id).addClass('button-select');
     	}
     	if($('body').attr('class') == 'fp-viewing-0-4') {
-			$('.fp-next').css('opacity', '');
-			$('.fp-next').css('pointer-events', '');
+			$('.fp-next').removeClass('arrow-block');
 			var id = array_ids[3];
 			$('#'+id).addClass('button-select');
     	}
@@ -323,29 +310,25 @@ $( document ).ready(function() {
     $(".select").click(function () {
 		select = 1;
 		if($('body').attr('class') == 'fp-viewing-0-1') {
-			$('.fp-next').css('opacity', '');
-			$('.fp-next').css('pointer-events', '');
+			$('.fp-next').removeClass('arrow-block');
     	}
 	});
 	$(".select-tam").click(function () {
 		select_tam = 1;
 		if($('body').attr('class') == 'fp-viewing-0-2') {
-			$('.fp-next').css('opacity', '');
-			$('.fp-next').css('pointer-events', '');
+			$('.fp-next').removeClass('arrow-block');
     	}
 	});
 	$(".select-prioridad").click(function () {
 		select_prioridad = 1;
 		if($('body').attr('class') == 'fp-viewing-0-3') {
-			$('.fp-next').css('opacity', '');
-			$('.fp-next').css('pointer-events', '');
+			$('.fp-next').removeClass('arrow-block');
     	}
 	});
 	$(".select-prioridad").click(function () {
 		select_infraestructura = 1;
 		if($('body').attr('class') == 'fp-viewing-0-4') {
-			$('.fp-next').css('opacity', '');
-			$('.fp-next').css('pointer-events', '');
+			$('.fp-next').removeClass('arrow-block');
     	}
 	});
 });
