@@ -236,6 +236,8 @@ $( document ).ready(function() {
     	}, 500);
     	if($('body').attr('class') == 'fp-viewing-0-1') {
     		saveDatos(1);
+    		$('#buttonMenos').prop( "disabled", true );
+    		$('#buttonMas').prop( "disabled", false );
     		var id_button = $('.mdl-card-question .content-card').find('.select.select-one.button-select').attr('id');
     		array_ids.push(id_button);
     		if(array_ids.length != 0) {
@@ -245,7 +247,7 @@ $( document ).ready(function() {
 			}
     	}
     	if($('body').attr('class') == 'fp-viewing-0-2') {
-    		saveDatos(2);
+    		saveDatos(2);    		
     		var id_button = $('.mdl-card-question .content-card').find('.select-tam.select-one.button-select').attr('id');
     		array_ids.push(id_button);
     		if(array_ids.length != 0) {
@@ -412,36 +414,35 @@ function operar(id,tipo) {
 	if(tipo == 2) {
 		if(i == 1) {
 			$('#textOperar').text('1 - 50');
-			i++;
 		}else if(i == 2) {
 			$('#textOperar').text('50 - 100');
-			i++;
 		}else if(i == 3) {
 			$('#textOperar').text('100 - 500');
-			i++;
 		}else if(i == 4) {
 			$('#textOperar').text('500 - 1000');
-			i++;
 		}else if(i == 5) {
 			$('#textOperar').text('1000 a más');
+			$('#buttonMenos').prop( "disabled", false );
+			$('#buttonMas').prop( "disabled", true );
 			return;
 		}
+		i++;
+		console.log(i);
 	}else if(tipo == 1) {
-		if(i == 5) {
+		i--;
+		if(i == 4) {
 			$('#textOperar').text('500 - 1000');
-			i--;
-		}else if(i == 4) {
-			$('#textOperar').text('100 - 500');
-			i--;
 		}else if(i == 3) {
-			$('#textOperar').text('50 - 100');
-			i--;
+			$('#textOperar').text('100 - 500');
 		}else if(i == 2) {
+			$('#textOperar').text('50 - 100');
+		}else if(i == 1){
 			$('#textOperar').text('1 - 50');
-			i--;
-		}else{
-			$('#textOperar').text('Seleccione');
+			i++;
+			$('#buttonMenos').prop( "disabled", true );
+			$('#buttonMas').prop( "disabled", false );
 			return;
 		}
+		console.log(i);
 	}
 }
