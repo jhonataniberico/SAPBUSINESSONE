@@ -224,9 +224,9 @@
             			</div>
             			<div class="content-card">
             				<div class="select-empleados">
-            					<button class="mdl-button mdl-js-button mdl-button--icon" onclick="operar(1)"><i class="mdi mdi-remove"></i></button>
+            					<button id="buttonMenos" class="mdl-button mdl-js-button mdl-button--icon select-one" onclick="operar(this.id,1)"><i class="mdi mdi-remove"></i></button>
             					<span id="textOperar">Seleccione</span>
-            					<button class="mdl-button mdl-js-button mdl-button--icon" onclick="operar(2)"><i class="mdi mdi-add"></i></button>
+            					<button id="buttonMas" class="mdl-button mdl-js-button mdl-button--icon select-one" onclick="operar(this.id,2)"><i class="mdi mdi-add"></i></button>
             				</div>
 	            			<!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos('Retail')"><i class="mdi mdi-remove"></i> Seleccione <i class="mdi mdi-add"></i></button> -->
 	            			<div class="contenido">

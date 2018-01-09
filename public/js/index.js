@@ -343,10 +343,10 @@ function cambiarIdioma() {
 		location.href = 'Pt';
 	}
 }
-
 var i = 1;
-var r = 4;
-function operar(tipo) {
+function operar(id,tipo) {
+	var cardSelect   = $('#'+id+'.select-one').parent().closest('.contenido');
+	cardSelect.addClass('aparecer');
 	if(tipo == 2) {
 		if(i == 1) {
 			$('#textOperar').text('1 - 50');
@@ -365,17 +365,20 @@ function operar(tipo) {
 			return;
 		}
 	}else if(tipo == 1) {
-		if(r == 4) {
+		if(i == 5) {
 			$('#textOperar').text('500 - 1000');
-			r--;
-		}else if(r == 3) {
+			i--;
+		}else if(i == 4) {
 			$('#textOperar').text('100 - 500');
-			r--;
-		}else if(r == 2) {
+			i--;
+		}else if(i == 3) {
 			$('#textOperar').text('50 - 100');
-			r--;
-		}else if(r == 1) {
+			i--;
+		}else if(i == 2) {
 			$('#textOperar').text('1 - 50');
+			i--;
+		}else{
+			$('#textOperar').text('Seleccione');
 			return;
 		}
 	}
