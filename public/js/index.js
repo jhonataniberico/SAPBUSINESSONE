@@ -230,10 +230,24 @@ $( document ).ready(function() {
     	 if($('body').attr('class') == 'fp-viewing-0-1') {
 			$('.fp-next').css('opacity', '');
 			$('.fp-next').css('pointer-events', '');
+			//$('#buttonCard4').addClass('button-select');
+    	}
+    	if($('body').attr('class') == 'fp-viewing-0-2') {
+			$('.fp-next').css('opacity', '');
+			$('.fp-next').css('pointer-events', '');
+    	}
+    	if($('body').attr('class') == 'fp-viewing-0-3') {
+			$('.fp-next').css('opacity', '');
+			$('.fp-next').css('pointer-events', '');
+    	}
+    	if($('body').attr('class') == 'fp-viewing-0-4') {
+			$('.fp-next').css('opacity', '');
+			$('.fp-next').css('pointer-events', '');
     	}
     	 if($('body').attr('class') != 'fp-viewing-0-5') {
     		$('.fp-next').removeClass('hidden');
     	 }
+    	 console.log($('body').attr('class'));
     	}, 500);
     });
     //botón seleccione
