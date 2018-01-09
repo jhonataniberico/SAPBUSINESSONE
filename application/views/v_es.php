@@ -457,6 +457,9 @@
 	        	<div class="logo-bottom">
         			<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
         		</div>
+        		<div class="text-select">
+					<p>Puede seleccionar m&aacute;s de una opci&oacute;n</p>
+        		</div>
 	        </div>
 	        <div class="slide text-center">
 	        	<div class="question">

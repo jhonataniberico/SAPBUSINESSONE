@@ -535,12 +535,15 @@ span.number{
 		margin-bottom: 20px;
 	}
 	.question h2{
-		max-width: 200px;
-	    font-size: 20px;
+		max-width: 205px;
+    	font-size: 19px;
 	    line-height: 20px;
 	    margin: 0;
 	}
 	span.number{
 	    font-size: 40px;
+	}
+	.mdl-card-question .contenido{
+		display: none;
 	}
 }
