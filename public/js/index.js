@@ -119,11 +119,13 @@ function guardarDatos(id,datos) {
     var card    = buttonSelect.closest('.mdl-card-question');
     var img     = card.find('.contenido-left').find('img');
     var content = card.find('.contenido-right').find('p');
+    var small   = card.find('.contenido-right').find('small');
     modal.find('.mdl-card__title').find('img').attr({
         "alt"   : img.attr('alt'),
         "src"   : img.attr('src')
     });
     modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
+    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
 	modal.modal('toggle');
 }
 

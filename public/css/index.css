@@ -339,6 +339,7 @@ span.number{
 	text-align: left;
 	vertical-align: middle;
 }
+#ModalQuestion .mdl-card .mdl-card__supporting-text h2,
 .content-card .contenido-right h2{
 	font-size: 18px;
     font-family: 'BentonSansBold';
@@ -414,6 +415,76 @@ span.number{
 }
 ::-webkit-scrollbar-thumb {
 	background: rgba(0, 0, 0, 0.2);
+}
+/*ModalQuestion*/
+#ModalQuestion .modal-content{
+	background-color: #000000;
+}
+#ModalQuestion .mdl-card{
+	display: inline-block;
+	background-color: #000000;
+	max-width: 300px;
+	border-bottom: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+}
+#ModalQuestion .mdl-card .mdl-card__title{
+    width: 85px;
+    display: inline-block;
+    vertical-align: middle;
+} 
+#ModalQuestion .mdl-card .mdl-card__title img{
+	width: 100%;
+}
+#ModalQuestion .mdl-card .mdl-card__supporting-text{
+    width: calc(100% - 90px);
+    color: #FFFFFF;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 0;
+    text-align: left;
+}
+#ModalQuestion .mdl-card .mdl-card__supporting-text p{
+    font-family: 'BentonSansLight';
+    line-height: 16px;
+    font-size: 14px;
+    height: 120px;
+}
+#ModalQuestion .mdl-card .mdl-card__menu button i{
+	color: #FFFFFF;
+}
+.modal.fade .modal-dialog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: -webkit-fit-content;
+    height: fit-content;
+    margin: auto;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    max-width: 300px;
+    width: 100%;
+}
+.modal.fade.in .modal-dialog{
+	opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 @media (max-width: 768px){
 	.background-body{

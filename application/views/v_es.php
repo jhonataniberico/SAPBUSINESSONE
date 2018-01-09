@@ -695,7 +695,7 @@
 	</section>
 	<!--MODAL-->
 	<div class="modal fade" id="ModalQuestion" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm">
+        <div class="modal-dialog modal-sm text-center">
             <div class="modal-content">
                 <div class="mdl-card" >
                     <div class="mdl-card__title p-0">
@@ -704,6 +704,7 @@
 				    <div class="mdl-card__supporting-text">
                         <h2>Sabía que...</h2>
                         <p></p>
+                        <small></small>
 					</div> 
     				<div class="mdl-card__menu">        				    
                         <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
