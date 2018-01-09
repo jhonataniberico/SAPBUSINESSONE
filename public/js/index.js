@@ -214,21 +214,20 @@ $( document ).ready(function() {
     		array_ids.push(id_button);
     		if(array_ids.length != 0) {
 				array_ids.splice(0, 1, id_button);
-				var id = array_ids[0];
+				var id = array_ids[1];
 				$('#'+id).addClass('button-select');
 			}
     		cont_page++;
     	}
     	if($('body').attr('class') == 'fp-viewing-0-2') {
     		saveDatos(2);
- 
     		var id_button = $('.mdl-card-question .content-card').find('.select-tam.select-one.button-select').attr('id');
     		array_ids.push(id_button);
     		if(array_ids.length != 0) {
 				array_ids.splice(1, 1, id_button);
-				var id = array_ids[1];
-				$('#'+id).addClass('button-select');
 			}
+			var id = array_ids[2];
+			$('#'+id).addClass('button-select');
     		cont_page++;
     	}
     	if($('body').attr('class') == 'fp-viewing-0-3') {
@@ -237,7 +236,7 @@ $( document ).ready(function() {
     		array_ids.push(id_button);
     		if(array_ids.length != 0) {
 				array_ids.splice(2, 1, id_button);
-				var id = array_ids[2];
+				var id = array_ids[3];
 				$('#'+id).addClass('button-select');
 			}
     		cont_page++;
@@ -249,11 +248,10 @@ $( document ).ready(function() {
     		array_ids.push(id_button);
     		if(array_ids.length != 0) {
 				array_ids.splice(3, 1, id_button);
-				var id = array_ids[3];
-				$('#'+id).addClass('button-select');
 			}
+			/*var id = array_ids[3];
+			$('#'+id).addClass('button-select');*/
     	}
-    	console.log(array_ids);
     });
     //botón atrás
     $(".fp-prev").click(function(){
@@ -286,7 +284,6 @@ $( document ).ready(function() {
     	if($('body').attr('class') == 'fp-viewing-0-3') {
 			$('.fp-next').css('opacity', '');
 			$('.fp-next').css('pointer-events', '');
-			console.log('array 3: '+array_ids[2]);
 			cont_page--;
 			var id = array_ids[2];
 			$('#'+id).addClass('button-select');
@@ -301,7 +298,6 @@ $( document ).ready(function() {
     	 if($('body').attr('class') != 'fp-viewing-0-5') {
     		$('.fp-next').removeClass('hidden');
     	 }
-    	 console.log(array_ids);
     	}, 500);
     });
     //botón seleccione
