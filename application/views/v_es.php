@@ -50,6 +50,9 @@
 				<div class="background-body2"></div>
 				<div class="background-body1"></div>
     		</div>
+    		<div class="bottom-right">
+				<p>Puede seleccionar m&aacute;s de una opci&oacute;n</p>
+    		</div>
 	        <div class="slide">
         		<div class="mdl-container">
         			<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
@@ -456,9 +459,6 @@
 	        	</div>
 	        	<div class="logo-bottom">
         			<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
-        		</div>
-        		<div class="text-select">
-					<p>Puede seleccionar m&aacute;s de una opci&oacute;n</p>
         		</div>
 	        </div>
 	        <div class="slide text-center">
