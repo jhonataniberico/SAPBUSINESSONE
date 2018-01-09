@@ -140,8 +140,6 @@ function saveDatos(pantalla) {
 		type  : 'POST'
 	}).done(function(data){
 		try{
-			//data = JSON.parse(data);
-			//$('#buttonCard4').addClass("button-select");
 		} catch (err){
 			msj('error',err.message);
 		}
@@ -150,7 +148,6 @@ function saveDatos(pantalla) {
 
 
 var array_ids = new Array();
-var cont_page = 0;
 $(window).load(function() {
   if($('body').attr('class') == 'fp-viewing-0-0') {
   	$('.fp-prev').addClass('hidden');
@@ -217,7 +214,6 @@ $( document ).ready(function() {
 				var id = array_ids[1];
 				$('#'+id).addClass('button-select');
 			}
-    		cont_page++;
     	}
     	if($('body').attr('class') == 'fp-viewing-0-2') {
     		saveDatos(2);
@@ -228,7 +224,6 @@ $( document ).ready(function() {
 			}
 			var id = array_ids[2];
 			$('#'+id).addClass('button-select');
-    		cont_page++;
     	}
     	if($('body').attr('class') == 'fp-viewing-0-3') {
     		saveDatos(3);
@@ -239,7 +234,6 @@ $( document ).ready(function() {
 				var id = array_ids[3];
 				$('#'+id).addClass('button-select');
 			}
-    		cont_page++;
     	}
     	if($('body').attr('class') == 'fp-viewing-0-4') {
     		saveDatos(4);
@@ -264,34 +258,24 @@ $( document ).ready(function() {
     	 if($('body').attr('class') == 'fp-viewing-0-1') {
 			$('.fp-next').css('opacity', '');
 			$('.fp-next').css('pointer-events', '');
-			//var id_button = $('.mdl-card-question .content-card').find('.select.select-one.button-select').attr('id');
-			//console.log(id_button);
-			//$('#'+id_button).addClass('button-select');
-			/*while(array_ids.length > 0) {
-				array_ids.pop(); 
-			}*/
-			cont_page = 0;
 			var id = array_ids[0];
 			$('#'+id).addClass('button-select');
     	}
     	if($('body').attr('class') == 'fp-viewing-0-2') {
 			$('.fp-next').css('opacity', '');
 			$('.fp-next').css('pointer-events', '');
-			cont_page--;
 			var id = array_ids[1];
 			$('#'+id).addClass('button-select');
     	}
     	if($('body').attr('class') == 'fp-viewing-0-3') {
 			$('.fp-next').css('opacity', '');
 			$('.fp-next').css('pointer-events', '');
-			cont_page--;
 			var id = array_ids[2];
 			$('#'+id).addClass('button-select');
     	}
     	if($('body').attr('class') == 'fp-viewing-0-4') {
 			$('.fp-next').css('opacity', '');
 			$('.fp-next').css('pointer-events', '');
-			cont_page--;
 			var id = array_ids[3];
 			$('#'+id).addClass('button-select');
     	}
