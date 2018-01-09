@@ -614,6 +614,8 @@ span.number{
 	span.number{
 	    font-size: 40px;
 	}
+}	
+@media (max-width: 420px) and (max-height: 640px){
 	.mdl-card-question .contenido{
 		display: none;
 	}

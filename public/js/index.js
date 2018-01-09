@@ -99,6 +99,28 @@ function validateEmail(email) {
     return re.test(email);
 }
 
+//DETECT DEVICE FOR MOBILE
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
 var global_datos = null;
 var datos_array = [];
 function guardarDatos(id,datos) {
@@ -126,7 +148,10 @@ function guardarDatos(id,datos) {
     });
     modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
     modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
-	modal.modal('toggle');
+    if( isMobile.any() ) {
+    	// $('.mdl-card-question').find('.contenido').css("display","none");
+    	modal.modal('toggle');
+    }
 }
 
 var x = 1;
