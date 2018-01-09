@@ -105,7 +105,7 @@ h2{
 	z-index: 0;
 }
 .fondo-bottom img{
-	max-width: 1500px;
+	max-width: 1360px;
 }
 .logo-bottom{
 	position: absolute;
@@ -438,6 +438,10 @@ span.number{
 	margin-top: 30px;
 }
 /*BARRA SCROLL*/
+::-webkit-scrollbar {
+	width: 4px;
+	height: 5px;
+}
 ::-webkit-scrollbar-track {
 	background: rgba(0, 0, 0, 0.1);
 }
@@ -540,7 +544,7 @@ span.number{
 	}
 	.mdl-flex{
 		display: flex;
-		overflow-y: scroll;
+		overflow-x: scroll;
 		max-width: 625px;
 	}
 	.logo-header{
@@ -569,6 +573,9 @@ span.number{
 	}
 }
 @media (max-width: 420px){
+	.mdl-flex{
+		max-width: 260px;
+	}
 	.logo-bottom,
 	.header-left,
 	.header-home{
