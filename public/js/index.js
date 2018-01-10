@@ -315,7 +315,7 @@ $( document ).ready(function() {
 	});
 	$(".select-tam").click(function () {
 		select_tam = 1;
-		if(select_empl == 1) {
+		if(select_empl == 1 && $('#textOperar').text() != 'Seleccione') {
 			if($('body').attr('class') == 'fp-viewing-0-2') {
 				$('.fp-next').removeClass('arrow-block');
     		}
@@ -323,7 +323,7 @@ $( document ).ready(function() {
 	});
 	$(".select-empleados").click(function () {
 		select_empl = 1;
-		if(select_tam == 1) {
+		if(select_tam == 1 && $('#textOperar').text() != 'Seleccione') {
 			if($('body').attr('class') == 'fp-viewing-0-2') {
 				$('.fp-next').removeClass('arrow-block');
     		}
