@@ -202,9 +202,10 @@ $( document ).ready(function() {
 	var array_button 		   = new Array();
 	//botón adelante
     $(".fp-next").click(function() {
+    	console.log('entra');
     	setTimeout(function(){
     	 if($('body').attr('class') != 'fp-viewing-0-0') {
-    		$('.fp-prev').removeClass( "hidden" );
+    		$('.fp-prev').removeClass("hidden");
     	 }
     	 if($('body').attr('class') == 'fp-viewing-0-1') {
     	 	if(select == 0) {
