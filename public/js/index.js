@@ -427,12 +427,14 @@ function cambiarIdioma() {
 }
 var i = 1;
 function operar(id,tipo) {
-	var cardSelect   = $('#'+id+'.select-one').parent().closest('.contenido');
-	cardSelect.addClass('aparecer');
+	var cardSelec  = $('#'+id+'.select-one').parents('.content-card').find('.contenido');
+	var divIncrement = $('#'+id+'.select-one').parent();
 	if(tipo == 2) {
 		i++;
 		if(i == 2) {
 			$('#textOperar').text('1 - 50');
+			divIncrement.addClass('select-increment');
+			cardSelec.addClass('aparecer');
 		}else if(i == 3) {
 			$('#textOperar').text('50 - 100');
 		}else if(i == 4) {
@@ -457,6 +459,8 @@ function operar(id,tipo) {
 			$('#textOperar').text('1 - 50');
 		}else if(i == 1) {
 			$('#textOperar').text('Seleccione');
+			divIncrement.removeClass('select-increment');
+			cardSelec.removeClass('aparecer');
 			return;
 		}else if(i < 1) {
 			i = 1;

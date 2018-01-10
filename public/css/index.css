@@ -221,11 +221,6 @@ span.number{
 	background-color: transparent;
 	cursor: pointer;
 	transform-style: preserve-3d;
-	-webkit-transition: all 1s ease-in-out;
-	-moz-transition: all 1s ease-in-out;
-	-ms-transition: all 1s ease-in-out;
-	-o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
     text-align: center;
 	min-width: 100px;
 	max-width: 400px;
@@ -309,6 +304,7 @@ span.number{
 	position: relative;
 	bottom: 0;
 }
+.select-increment,
 .content-card .mdl-button--raised.button-select,
 .content-card .mdl-button--raised:hover{
     background-color: #FBB819;
@@ -338,6 +334,11 @@ span.number{
 	margin: 10px 0;
 	border: 1px solid #FBB819;
 	height: 36px;
+	-webkit-transition: background-color .25s linear;
+    -moz-transition: background-color .25s linear;
+    -ms-transition: background-color .25s linear;
+    -o-transition: background-color .25s linear;
+    transition: background-color .25s linear;
 }
 .content-card .select-empleados span{
 	max-width: 105px;
