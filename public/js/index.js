@@ -196,6 +196,7 @@ $( document ).ready(function() {
 	var select_infraestructura = 0;
 	var select_tam 			   = 0;
 	var select_empl 	       = 0;
+	var array_button 		   = new Array();
 	//botón adelante
     $(".fp-next").click(function() {
     	setTimeout(function(){
@@ -331,8 +332,17 @@ $( document ).ready(function() {
 	});
 	$(".select-prioridad").click(function () {
 		select_prioridad = 1;
+		var id_button = $('.mdl-card-question .content-card').find('.select-prioridad.button-select').attr('id');
+		array_button.push(id_button);
+		if(array_button.length > 0){
+			array_button.splice(0, 1, id_button);
+		}
 		if($('body').attr('class') == 'fp-viewing-0-3') {
-			$('.fp-next').removeClass('arrow-block');
+			if($('#'+array_button[0]).hasClass('button-select') == true) {
+				$('.fp-next').removeClass('arrow-block');
+			}else {
+				$('.fp-next').addClass('arrow-block');
+			}
     	}
 	});
 	$(".select-prioridad").click(function () {
