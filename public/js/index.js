@@ -102,6 +102,7 @@ function validateEmail(email) {
 //DETECT DEVICE FOR MOBILE
 var isMobile = {
     Android: function() {
+    	console.log('entra');
         return navigator.userAgent.match(/Android/i);
     },
     BlackBerry: function() {
@@ -128,7 +129,7 @@ function guardarDatos(id,datos) {
 	var buttonToggle = $('#'+id+'.select-prioridad');
 	var cardSelect   = $('#'+id+'.select-one').parent().find('.contenido');
 	var cardToggle   = $('#'+id+'.select-prioridad').parent().find('.contenido');
-	global_datos     = datos;
+	global_datos     = datos;	
 	$('.contenido').removeClass('aparecer');
 	$('.content-card').find('.select-one').removeClass('button-select');
 	buttonSelect.addClass('button-select');
@@ -153,7 +154,6 @@ function guardarDatos(id,datos) {
     }
 }
 
-var x = 1;
 function saveDatos(pantalla) {
 	var idioma = $('#Idioma').val();
 	var operar = null;
@@ -161,16 +161,19 @@ function saveDatos(pantalla) {
 		operar = $('#textOperar').text();
 	}
 	if(pantalla == 3) {
-		if(x <= 5) {
-			datos_array.push(global_datos);
-			x++;
-		}
+		$( ".select-prioridad.button-select" ).each(function() {
+		  var id = $( this ).attr('id');
+		  var dato_card = $('#'+id).parents('.mdl-card-question').find('.card-front p').text();
+		  if($( this ).attr('id') != undefined) {
+		  	datos_array.push(dato_card);
+		  }
+		});
 	}
 	$.ajax({
 		data  : { global_datos : global_datos,
 				  pantalla     : pantalla,
 				  idioma 	   : idioma,
-				  datos_array  : datos_array,
+				  datos_prio   : datos_array.toString(),
 				  operar       : operar},
 		url   : 'es/saveDatos',
 		type  : 'POST'
@@ -296,6 +299,9 @@ $( document ).ready(function() {
 			$('.fp-next').removeClass('arrow-block');
 			var id = array_ids[2];
 			$('#'+id).addClass('button-select');
+			while(datos_array.length > 0) {
+  				datos_array.pop();
+			}
     	}
     	if($('body').attr('class') == 'fp-viewing-0-4') {
 			$('.fp-next').removeClass('arrow-block');
@@ -345,7 +351,7 @@ $( document ).ready(function() {
 			}
     	}
 	});
-	$(".select-prioridad").click(function () {
+	$(".select-infraestructura").click(function () {
 		select_infraestructura = 1;
 		if($('body').attr('class') == 'fp-viewing-0-4') {
 			$('.fp-next').removeClass('arrow-block');

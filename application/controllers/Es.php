@@ -23,10 +23,9 @@ class Es extends CI_Controller {
           	$datos 	     = $this->input->post('global_datos');
           	$pantalla    = $this->input->post('pantalla');
           	$idioma      = $this->input->post('idioma');
-          	$datos_array = $this->input->post('datos_array');
+          	$datos_prio = $this->input->post('datos_prio');
           	$operar      = $this->input->post('operar');
           	$columna  	 = null;
-          	//$arr_dat = implode(",", $datos_array);
           	if($pantalla == 2) {$columna = 'Factura_anual';} elseif ($pantalla == 3) {$columna = 'Prioridad';}elseif ($pantalla == 4) {$columna = 'Infraestructura';}
           	if($pantalla == 1) {
           		$idIdioma = $this->M_solicitud->getDatosPais($idioma);
@@ -43,14 +42,18 @@ class Es extends CI_Controller {
           			$session = array($columna  => $datos,
           							 'Tamanio' => $operar);
           		}else {
-          			$arrayUpdate = array($columna => $datos);
-          			$session     = array($columna => $datos);
+          			if($pantalla == 3) {
+          				$arrayUpdate = array($columna => $datos_prio);
+          				$session     = array($columna => $datos_prio);
+          			}else {
+          				$arrayUpdate = array($columna => $datos);
+          				$session     = array($columna => $datos);
+          			}
           		}
           		$this->M_solicitud->updateDatos($arrayUpdate, $_SESSION['id_sol'], 'solicitud');
             	$this->session->set_userdata($session);
             	//print_r($this->session->all_userdata());
           	}
-          	$data['carita'] = 'hola';
             $data['error'] = EXIT_SUCCESS;
           }catch(Exception $e) {
            $data['msj'] = $e->getMessage();
