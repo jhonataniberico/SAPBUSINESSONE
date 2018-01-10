@@ -372,10 +372,20 @@ span.number{
 	display: inline-block;
 	vertical-align: middle;
 }
+.content-card.bottom .contenido-left{
+	vertical-align: bottom;
+	width: 40px;
+}
 .content-card .contenido-left img{
 	max-width: 45px;
 }
-
+.content-card.bottom .contenido-left img{
+	max-width: 40px;
+	height: 75px;
+}
+.content-card.bottom .contenido-right{
+	width: calc(100% - 44px);
+}
 .content-card .contenido-right{
 	width: calc(100% - 53px);
 	display: inline-block;
@@ -394,6 +404,9 @@ span.number{
     line-height: 14px;
     font-size: 12px;
     height: 100px;
+}
+.content-card.bottom .contenido-right p{
+	height: 105px;
 }
 .mdl-card-3 .content-card .contenido-right p{
 	height: 75px;

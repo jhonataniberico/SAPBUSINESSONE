@@ -455,17 +455,17 @@
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
-	            		<div class="content-card">
+	            		<div class="content-card bottom">
 	            			<button id="buttonLocal" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one select-infraestructura" onclick="guardarDatos(this.id,'Local')">Seleccione</button>
 	            			<div class="contenido">
-	            				<div class="contenido-left">
-	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
-	            				</div>
 	            				<div class="contenido-right">
             						<h2>Sab&iacute;a que...</h2>
             						<p>... se puede hacer la conexi&oacute;n de estas aplicaciones (comercio electr&oacute;nico, punto de venta, Marketplace, CRM, etc.) con
             						 SAP Business One f&aacute;cilmente cuando es empleas On-Premise.</p>
             						<small>(IDC, septiembre 2016)</small>
+	            				</div>
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido4.png">
 	            				</div>
 	            			</div>
 	            		</div>
@@ -485,16 +485,16 @@
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
-	            		<div class="content-card">
+	            		<div class="content-card bottom">
 	            			<button id="buttonCloudI" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one select-infraestructura" onclick="guardarDatos(this.id,'Cloud')">Seleccione</button>
 	            			<div class="contenido">
-	            				<div class="contenido-left">
-	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
-	            				</div>
 	            				<div class="contenido-right">
             						<h2>Sab&iacute;a que...</h2>
             						<p>... el 21% est&aacute; cada vez m&aacute;s interesado en alternativas o alojadas a lo que ahora ejecutan On-Premise.</p>
             						<small>(IDC, septiembre 2016)</small>
+	            				</div>
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido4.png">
 	            				</div>
 	            			</div>
 	            		</div>
@@ -513,17 +513,17 @@
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
-	            		<div class="content-card">
+	            		<div class="content-card bottom">
 	            			<button id="buttonHibrida" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one select-infraestructura" onclick="guardarDatos(this.id,'Híbrida')">Seleccione</button>
 	            			<div class="contenido">
-	            				<div class="contenido-left">
-	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
-	            				</div>
 	            				<div class="contenido-right">
             						<h2>Sab&iacute;a que...</h2>
             						<p>... tienen una buena aceptaci&oacute;n en las empresas de cara a un futuro pr&oacute;ximo, ya que se est&aacute;n desarrollando software de
             						 gesti&oacute;n de nubes para poder gestionar la nube privada y a su vez adquirir recursos en los grandes proveedores p&uacute;blicos.</p>
             						<small>(IDC, septiembre 2016)</small>
+	            				</div>
+	            				<div class="contenido-left">
+	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido4.png">
 	            				</div>
 	            			</div>
 	            		</div>
