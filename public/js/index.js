@@ -194,7 +194,8 @@ $( document ).ready(function() {
 	var select 				   = 0;
 	var select_prioridad 	   = 0;
 	var select_infraestructura = 0;
-	var select_tam = 0;
+	var select_tam 			   = 0;
+	var select_empl 	       = 0;
 	//botón adelante
     $(".fp-next").click(function() {
     	setTimeout(function(){
@@ -314,9 +315,19 @@ $( document ).ready(function() {
 	});
 	$(".select-tam").click(function () {
 		select_tam = 1;
-		if($('body').attr('class') == 'fp-viewing-0-2') {
-			$('.fp-next').removeClass('arrow-block');
-    	}
+		if(select_empl == 1) {
+			if($('body').attr('class') == 'fp-viewing-0-2') {
+				$('.fp-next').removeClass('arrow-block');
+    		}
+		}
+	});
+	$(".select-empleados").click(function () {
+		select_empl = 1;
+		if(select_tam == 1) {
+			if($('body').attr('class') == 'fp-viewing-0-2') {
+				$('.fp-next').removeClass('arrow-block');
+    		}
+		}
 	});
 	$(".select-prioridad").click(function () {
 		select_prioridad = 1;
