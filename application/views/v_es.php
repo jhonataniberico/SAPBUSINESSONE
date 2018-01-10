@@ -67,7 +67,7 @@
             		<span class="number">01/05</span>
             		<h2>¿En qu&eacute; industria se desempe&ntilde;a&#63;</h2>
             	</div>
-	            <div class="mdl-container mdl-flex text-center">
+	            <div class="mdl-container mdl-ipad mdl-flex text-center">
 	            	<div class="mdl-card-question">
 	            		<div class="flip-card">
 	            			<div class="card-front card-front-none">
@@ -187,7 +187,7 @@
             		<span class="number">02/05</span>
             		<h2>¿De qu&eacute; tama&ntilde;o es su empresa&#63;</h2>
             	</div>
-	            <div class="mdl-container mdl-flex text-center">
+	            <div class="mdl-container mdl-tablet mdl-flex text-center">
 	            	<div class="mdl-card-question">
             			<div class="flip-card">
             				<div class="card-front card-front-none">
@@ -260,7 +260,7 @@
             		<span class="number">03/05</span>
             		<h2>¿Cu&aacute;l es la prioridad de su negocio&#63;</h2>
             	</div>
-	            <div class="mdl-container mdl-flex text-center">
+	            <div class="mdl-container mdl-ipad mdl-flex text-center">
 	            	<div class="mdl-card-question mdl-card-3">
 	            		<div class="flip-card">
 	            			<div class="card-front">

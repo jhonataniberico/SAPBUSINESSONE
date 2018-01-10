@@ -17,6 +17,13 @@ h2{
 	margin-right: auto;
 	margin-left: auto;
 }
+.mdl-container.mdl-flex{
+	display: -webkit-flex;
+    display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	flex-direction: row;
+}
 .bottom-right{
 	position: absolute;
 	right: 0;
@@ -518,6 +525,14 @@ span.number{
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+@media (max-width: 1200px){
+	.mdl-container.mdl-ipad{
+		-webkit-justify-content: flex-start;
+		justify-content: flex-start;
+	    max-width: 900px;
+	    overflow-x: scroll;
+	}
+}
 @media (max-width: 768px){
 	.background-body{
 		max-width: 180px;
@@ -542,10 +557,15 @@ span.number{
 		max-width: 480px;
     	font-size: 40px;
 	}
-	.mdl-flex{
-		display: flex;
+	.mdl-container.mdl-flex{
 		overflow-x: scroll;
 		max-width: 625px;
+		-webkit-justify-content: flex-start;
+		justify-content: flex-start;
+	}
+	.mdl-container.mdl-tablet{
+		-webkit-justify-content: center;
+		justify-content: center;
 	}
 	.logo-header{
 		max-width: 120px;
@@ -573,8 +593,12 @@ span.number{
 	}
 }
 @media (max-width: 420px){
-	.mdl-flex{
+	.mdl-container.mdl-flex{
 		max-width: 260px;
+	}
+	.mdl-container.mdl-tablet{
+		-webkit-justify-content: flex-start;
+		justify-content: flex-start;
 	}
 	.logo-bottom,
 	.header-left,
