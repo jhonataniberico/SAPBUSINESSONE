@@ -228,12 +228,12 @@
 	            				<div class="col-xs-12">
 	            					<div class="mdl-select">
 	            						<select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
-											<option value="valor1">Menor de $1M</option>
-											<option value="valor1">$1M - $2M</option>
-											<option value="valor1">$2M - $5M</option>
-											<option value="valor1">$5M - $10M</option>
-											<option value="valor1">Mayor de $10M</option>
-											<option value="valor1">No poseo informaci&oacute;n</option>
+											<option value="Menor de $1M">Menor de $1M</option>
+											<option value="$1M - $2M">$1M - $2M</option>
+											<option value="$2M - $5M">$2M - $5M</option>
+											<option value="$5M - $10M">$5M - $10M</option>
+											<option value="Mayor de $10M">Mayor de $10M</option>
+											<option value="No poseo información">No poseo informaci&oacute;n</option>
 										</select>
 	            					</div>
 		            			</div>

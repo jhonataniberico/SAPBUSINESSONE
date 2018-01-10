@@ -23,8 +23,9 @@ class Es extends CI_Controller {
           	$datos 	     = $this->input->post('global_datos');
           	$pantalla    = $this->input->post('pantalla');
           	$idioma      = $this->input->post('idioma');
-          	$datos_prio = $this->input->post('datos_prio');
+          	$datos_prio  = $this->input->post('datos_prio');
           	$operar      = $this->input->post('operar');
+          	$facturacion = $this->input->post('facturacion');
           	$columna  	 = null;
           	if($pantalla == 2) {$columna = 'Factura_anual';} elseif ($pantalla == 3) {$columna = 'Prioridad';}elseif ($pantalla == 4) {$columna = 'Infraestructura';}
           	if($pantalla == 1) {
@@ -37,9 +38,9 @@ class Es extends CI_Controller {
             	$this->session->set_userdata($session);
           	}else {
           		if($pantalla == 2) {
-          			$arrayUpdate = array($columna => $datos,
+          			$arrayUpdate = array($columna => $facturacion,
           								 'Tamanio' => $operar);
-          			$session = array($columna  => $datos,
+          			$session = array($columna  => $facturacion,
           							 'Tamanio' => $operar);
           		}else {
           			if($pantalla == 3) {

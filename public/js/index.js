@@ -173,7 +173,8 @@ function saveDatos(pantalla) {
 				  pantalla     : pantalla,
 				  idioma 	   : idioma,
 				  datos_prio   : datos_array.toString(),
-				  operar       : operar},
+				  operar       : operar,
+				  facturacion  : facturacion},
 		url   : 'es/saveDatos',
 		type  : 'POST'
 	}).done(function(data){
@@ -321,15 +322,7 @@ $( document ).ready(function() {
 	});
 	$(".select-tam").click(function () {
 		select_tam = 1;
-		if(select_empl == 1 && $('#textOperar').text() != 'Seleccione') {
-			if($('body').attr('class') == 'fp-viewing-0-2') {
-				$('.fp-next').removeClass('arrow-block');
-    		}
-		}
-	});
-	$(".select-empleados").click(function () {
-		select_empl = 1;
-		if(select_tam == 1 && $('#textOperar').text() != 'Seleccione') {
+		if(facturacion != null) {
 			if($('body').attr('class') == 'fp-viewing-0-2') {
 				$('.fp-next').removeClass('arrow-block');
     		}
@@ -481,7 +474,12 @@ function operar(id,tipo) {
 	}
 }
 
+var facturacion = null;
 function selectFacturacion(id){
+	facturacion = $('#facturacion').val();
+	if($('#textOperar') != 'Seleccione' && facturacion != null) {
+		$('.fp-next').removeClass('arrow-block');
+	}
 	$('.contenido').removeClass('aparecer');
 	$('.mdl-select').addClass('select-increment');
 	var selectButton = $('#'+id).parents('.mdl-select .btn-group').find('button');
