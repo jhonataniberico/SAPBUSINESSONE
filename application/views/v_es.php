@@ -215,7 +215,7 @@
 	            			</div>
 	            		</div>
 	            	</div>
-	            	<div class="mdl-card-question">
+	            	<div class="mdl-card-question visi-hidden">
 	            		<div class="flip-card">
 	            			<div class="card-front card-front-none">
 	            				<img src="<?php echo RUTA_IMG?>cards/card-facturacion.png">

@@ -209,6 +209,14 @@ span.number{
 	display: inline-block;
 	max-width: 210px;
 	margin: 5px;
+	-webkit-transition: max-width .3s linear;
+	-moz-transition: max-width .3s linear;
+	-ms-transition: max-width .3s linear;
+	-o-transition: max-width .3s linear;
+	transition: max-width .3s linear;
+}
+.mdl-card-question.visi-hidden{
+	display: none;
 }
 .mdl-card-3{
 	max-width: 190px;

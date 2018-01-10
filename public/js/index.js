@@ -433,14 +433,16 @@ function cambiarIdioma() {
 }
 var i = 1;
 function operar(id,tipo) {
-	var cardSelec  = $('#'+id+'.select-one').parents('.content-card').find('.contenido');
+	var cardSelec    = $('#'+id+'.select-one').parents('.content-card').find('.contenido');
 	var divIncrement = $('#'+id+'.select-one').parent();
+	var cardHidden   = $('.mdl-card-question.visi-hidden');
 	if(tipo == 2) {
 		i++;
 		if(i == 2) {
 			$('#textOperar').text('1 - 50');
 			divIncrement.addClass('select-increment');
 			cardSelec.addClass('aparecer');
+			cardHidden.fadeIn(400);
 		}else if(i == 3) {
 			$('#textOperar').text('50 - 100');
 		}else if(i == 4) {
@@ -467,6 +469,7 @@ function operar(id,tipo) {
 			$('#textOperar').text('Seleccione');
 			divIncrement.removeClass('select-increment');
 			cardSelec.removeClass('aparecer');
+			cardHidden.fadeOut(400);
 			return;
 		}else if(i < 1) {
 			i = 1;
