@@ -102,7 +102,6 @@ function validateEmail(email) {
 //DETECT DEVICE FOR MOBILE
 var isMobile = {
     Android: function() {
-    	console.log('entra');
         return navigator.userAgent.match(/Android/i);
     },
     BlackBerry: function() {
@@ -202,7 +201,6 @@ $( document ).ready(function() {
 	var array_button 		   = new Array();
 	//botón adelante
     $(".fp-next").click(function() {
-    	console.log('entra');
     	setTimeout(function(){
     	 if($('body').attr('class') != 'fp-viewing-0-0') {
     		$('.fp-prev').removeClass("hidden");
@@ -469,8 +467,12 @@ function operar(id,tipo) {
 		}else if(i == 1) {
 			$('#textOperar').text('Seleccione');
 			divIncrement.removeClass('select-increment');
+			$('.mdl-select').removeClass('select-increment');
 			cardSelec.removeClass('aparecer');
+			$('.contenido').removeClass('aparecer');
 			cardHidden.fadeOut(400);
+			$("#facturacion").val('0');
+			$('.selectpicker').selectpicker('refresh');
 			return;
 		}else if(i < 1) {
 			i = 1;
@@ -480,8 +482,13 @@ function operar(id,tipo) {
 }
 
 function selectFacturacion(id){
-	var selectButton = $('#'+id);
-	console.log(selectButton);
-	$('.mdl-tablet .contenido').removeClass('aparecer');
-	console.log("entra");
+	$('.contenido').removeClass('aparecer');
+	$('.mdl-select').addClass('select-increment');
+	var selectButton = $('#'+id).parents('.mdl-select .btn-group').find('button');
+	var Select       = $('#'+id).parents('.mdl-card-question').find('.contenido');
+	Select.addClass('aparecer');
+	selectButton.click(function(){
+		Select.removeClass('aparecer');
+	})
 }
+
