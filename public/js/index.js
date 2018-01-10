@@ -235,8 +235,6 @@ $( document ).ready(function() {
     	}, 500);
     	if($('body').attr('class') == 'fp-viewing-0-1') {
     		saveDatos(1);
-    		$('#buttonMenos').prop( "disabled", true );
-    		$('#buttonMas').prop( "disabled", false );
     		var id_button = $('.mdl-card-question .content-card').find('.select.select-one.button-select').attr('id');
     		array_ids.push(id_button);
     		if(array_ids.length != 0) {
@@ -411,37 +409,37 @@ function operar(id,tipo) {
 	var cardSelect   = $('#'+id+'.select-one').parent().closest('.contenido');
 	cardSelect.addClass('aparecer');
 	if(tipo == 2) {
-		if(i == 1) {
+		i++;
+		if(i == 2) {
 			$('#textOperar').text('1 - 50');
-		}else if(i == 2) {
-			$('#textOperar').text('50 - 100');
 		}else if(i == 3) {
-			$('#textOperar').text('100 - 500');
+			$('#textOperar').text('50 - 100');
 		}else if(i == 4) {
-			$('#textOperar').text('500 - 1000');
+			$('#textOperar').text('100 - 500');
 		}else if(i == 5) {
+			$('#textOperar').text('500 - 1000');
+		}else if(i == 6) {
 			$('#textOperar').text('1000 a más');
-			$('#buttonMenos').prop( "disabled", false );
-			$('#buttonMas').prop( "disabled", true );
+		}else if(i > 6) {
+			i = 6;
 			return;
 		}
-		i++;
-		console.log(i);
 	}else if(tipo == 1) {
 		i--;
-		if(i == 4) {
+		if(i == 5) {
 			$('#textOperar').text('500 - 1000');
-		}else if(i == 3) {
+		}else if(i == 4) {
 			$('#textOperar').text('100 - 500');
-		}else if(i == 2) {
+		}else if(i == 3) {
 			$('#textOperar').text('50 - 100');
-		}else if(i == 1){
+		}else if(i == 2){
 			$('#textOperar').text('1 - 50');
-			i++;
-			$('#buttonMenos').prop( "disabled", true );
-			$('#buttonMas').prop( "disabled", false );
+		}else if(i == 1) {
+			$('#textOperar').text('Seleccione');
+			return;
+		}else if(i < 1) {
+			i = 1;
 			return;
 		}
-		console.log(i);
 	}
 }
