@@ -721,12 +721,12 @@ span.number{
 	.header-right .background3{
 		max-width: 3px;
 	}
-	.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+	.mdl-idioma .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
 		width: 95px;
     	margin-top: 18px;
 	}
-	.bootstrap-select.btn-group .dropdown-toggle .filter-option,
-	.bootstrap-select.btn-group .dropdown-menu li a span.text{
+	.mdl-idioma .bootstrap-select.btn-group .dropdown-toggle .filter-option,
+	.mdl-idioma .bootstrap-select.btn-group .dropdown-menu li a span.text{
 		font-size: 13px;
 	}
 	.question{
