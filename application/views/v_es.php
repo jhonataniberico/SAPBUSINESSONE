@@ -35,11 +35,13 @@
     				<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
     			</div>
     			<div class="header-right">
-					<select class="selectpicker" id="Idioma"  name="Idioma" onchange="cambiarIdioma()">
-						<option value="Español">Espa&ntilde;ol</option>
-						<option value="Inglés">Ingl&eacute;s</option>
-						<option value="Portugués">Portug&eacute;s</option>
-					</select>
+    				<div class="mdl-idioma">
+						<select class="selectpicker" id="Idioma"  name="Idioma" onchange="cambiarIdioma()">
+							<option value="Español">Espa&ntilde;ol</option>
+							<option value="Inglés">Ingl&eacute;s</option>
+							<option value="Portugués">Portug&eacute;s</option>
+						</select>
+    				</div>
 					<div class="background3"></div>
 					<div class="background2"></div>
 					<div class="background1"></div>
@@ -201,7 +203,6 @@
             					<span id="textOperar">Seleccione</span>
             					<button id="buttonMas" class="mdl-button mdl-js-button mdl-button--icon select-one" onclick="operar(this.id,2)"><i class="mdi mdi-add"></i></button>
             				</div>
-	            			<!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select" onclick="guardarDatos('Retail')"><i class="mdi mdi-remove"></i> Seleccione <i class="mdi mdi-add"></i></button> -->
 	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
@@ -223,7 +224,21 @@
 	            			</div>
 	            		</div>
 	            		<div class="content-card">
-	            			<button id="buttonFacturacion" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-tam select-one" onclick="guardarDatos(this.id,'')">
+	            			<div class="row">
+	            				<div class="col-xs-12">
+	            					<div class="mdl-select">
+	            						<select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
+											<option value="">Menor de $1M</option>
+											<option value="">$1M - $2M</option>
+											<option value="">$2M - $5M</option>
+											<option value="">$5M - $10M</option>
+											<option value="">Mayor de $10M</option>
+											<option value="">No poseo informaci&oacute;n</option>
+										</select>
+	            					</div>
+		            			</div>
+	            			</div>
+	            			<!-- <button id="buttonM" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-tam select-one" onclick="guardarDatos(this.id,'')">
 	            				Seleccione +
 	            			</button>
 	            			<button id="button1M" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-tam select-one" onclick="guardarDatos(this.id,'Menor de $1M')">
@@ -237,8 +252,8 @@
 	            			</button>
 	            			<button id="buttonN" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-tam select-one" onclick="guardarDatos(this.id,'No poseo información')">
 	            				No poseo informaci&oacute;n
-	            			</button>
-	            			<div class="contenido hidden">
+	            			</button> -->
+	            			<div class="contenido">
 	            				<div class="contenido-left">
 	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 	            				</div>

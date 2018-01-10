@@ -149,7 +149,7 @@ h2{
     max-width: 225px;
     width: 100%;
 }
-.header-right .bootstrap-select{
+.header-right .mdl-idioma{
 	float: left;
 }
 .header-right .background1,
@@ -444,15 +444,15 @@ span.number{
 	font-size: 15px;
 }
 /*BOOTSTRAP-SELECT*/
-.bootstrap-select .dropdown-menu>li>a{
+.mdl-idioma .bootstrap-select .dropdown-menu>li>a{
 	-webkit-transition: background-color .2s linear;
 	-moz-transition: background-color .2s linear;
 	-ms-transition: background-color .2s linear;
 	-o-transition: background-color .2s linear;
 	transition: background-color .2s linear;
 }
-.bootstrap-select .dropdown-menu>li>a:focus, 
-.bootstrap-select .dropdown-menu>li>a:hover{
+.mdl-idioma .bootstrap-select .dropdown-menu>li>a:focus, 
+.mdl-idioma .bootstrap-select .dropdown-menu>li>a:hover{
     background-color: #FDB917;
     outline: none;
 }
@@ -466,9 +466,52 @@ span.number{
     color: #FFFFFF;
     outline: none !important;
 }
-.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+.mdl-idioma .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
 	width: 105px;
 	margin-top: 30px;
+}
+.mdl-select .bootstrap-select .btn-default.active, 
+.mdl-select .bootstrap-select .btn-default:active, 
+.mdl-select .bootstrap-select.open>.dropdown-toggle.btn-default,
+.mdl-select .bootstrap-select .btn-default:focus,
+.mdl-select .bootstrap-select .btn-default{
+	border: 1px solid #FBB819;
+	border-radius: 0;
+	color: #FFFFFF;
+}
+.mdl-select .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+	width: 210px;
+}
+.mdl-select .bootstrap-select.btn-group .dropdown-menu li a,
+.mdl-select .bootstrap-select.btn-group .dropdown-toggle .filter-option{
+	text-align: center;
+	color: #FFFFFF;
+    font-family: 'BentonSansBold';
+    font-size: 16px;
+    outline: none;
+}
+.mdl-select .bootstrap-select.btn-group .dropdown-menu li{
+    border: 1px solid #FBB819;
+    margin: 8px 0;
+}
+.mdl-select .bootstrap-select.btn-group .dropdown-menu{
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+}
+.mdl-select .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+	background-color: #FBB819;
+}
+.mdl-select .dropdown-menu>li>a{
+    padding: 6px 10px;
+    -webkit-transition: background-color .25s linear;
+    -moz-transition: background-color .25s linear;
+    -ms-transition: background-color .25s linear;
+    -o-transition: background-color .25s linear;
+    transition: background-color .25s linear;
+}
+.mdl-select{
+    margin: 10px 0;
 }
 /*BARRA SCROLL*/
 ::-webkit-scrollbar-track {

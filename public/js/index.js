@@ -478,3 +478,10 @@ function operar(id,tipo) {
 		}
 	}
 }
+
+function selectFacturacion(id){
+	var selectButton = $('#'+id);
+	console.log(selectButton);
+	$('.mdl-tablet .contenido').removeClass('aparecer');
+	console.log("entra");
+}
