@@ -437,7 +437,9 @@ span.number{
     margin: 20px auto 10px;
 }
 .mdl-card-question .card-front p{
-	color: #FFFFFF;
+    color: #FFFFFF;
+    line-height: 18px;
+    font-size: 16px;
 }
 
 .mdl-card-question .card-back i,

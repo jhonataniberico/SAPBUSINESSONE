@@ -20,8 +20,8 @@
     <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>bentonsans.css?v=<?php echo time();?>">
+	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
-	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>index2.css?v=<?php echo time();?>">
 </head>
 <body>
 	<section id="principal">
@@ -331,7 +331,7 @@
 	            	<div class="mdl-card-question mdl-card-3">
 	            		<div class="flip-card">
 	            			<div class="card-front">
-	            				<img src="<?php echo RUTA_IMG?>cards/card-sap.png">
+	            				<img class="m-b-0" src="<?php echo RUTA_IMG?>cards/card-sap.png">
 	            				<p>An&aacute;lisis en tiempo real con SAP HANA</p>
 								<i class="mdi mdi-add"></i>
 	            			</div>
@@ -357,7 +357,7 @@
 	            	<div class="mdl-card-question mdl-card-3">
 	            		<div class="flip-card">
 	            			<div class="card-front">
-	            				<img src="<?php echo RUTA_IMG?>cards/card-analytics.png">
+	            				<img class="m-b-0" src="<?php echo RUTA_IMG?>cards/card-analytics.png">
 	            				<p>An&aacute;lisis predictivos con Analytics</p>
 								<i class="mdi mdi-add"></i>
 	            			</div>
