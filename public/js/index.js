@@ -365,7 +365,6 @@ function borrarFocus(dato) {
 	var id = this.val != null ? $('#'+this.id).focus().css('border-color','') : $('#'+this.id).focus().css('border-color','red');
 	});*/
 	var input = $('.form-control').find('input');
-	//console.log(input.val());
 	if(input.val().length > 0){
 		input.focus().css('border-color','');
 	}
@@ -400,7 +399,7 @@ function mostrarDatos() {
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
-           	//console.log(data.industria);
+           //console.log(data.industria);
           /*$('#industria').text(data.industria);
            	$('#Tamanio').text(data.Tamanio);
            	$('#Prioridad').text(data.Prioridad);
@@ -442,18 +441,26 @@ function operar(id,tipo) {
 		}else if(i == 5) {
 			$('#textOperar').text('500 - 1000');
 		}else if(i == 6) {
-			$('#textOperar').text('1000 a más');
-		}else if(i > 6) {
-			i = 6;
+			$('#textOperar').text('1000 - 2500');
+		}else if(i == 7) {
+			$('#textOperar').text('2500 - 5000');
+		}else if(i == 8) {
+			$('#textOperar').text('5000 a más');
+		}else if(i > 8) {
+			i = 8;
 			return;
 		}
 	}else if(tipo == 1) {
 		i--;
-		if(i == 5) {
+		if(i == 7) {
+			$('#textOperar').text('2500 - 5000');
+		}else if(i == 6) {
+			$('#textOperar').text('1000 - 2500');
+		}else if(i == 5) {
 			$('#textOperar').text('500 - 1000');
-		}else if(i == 4) {
+		}else if(i == 4){
 			$('#textOperar').text('100 - 500');
-		}else if(i == 3) {
+		}else if(i == 3){
 			$('#textOperar').text('50 - 100');
 		}else if(i == 2){
 			$('#textOperar').text('1 - 50');

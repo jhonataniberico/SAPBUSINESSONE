@@ -63,13 +63,15 @@ class Es extends CI_Controller {
 	}
 
 	function mostrarDatos() {
-        $data['error'] = EXIT_SUCCESS;
+        $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
             $data['industria'] 		 = $_SESSION['industria'];
-			$data['Tamanio']   		 = 'aaa';
+            $data['Factura_anual']   = $_SESSION['Factura_anual'];
+			$data['Tamanio']   		 = $_SESSION['Tamanio'];
 			$data['Prioridad']       = $_SESSION['Prioridad'];
 			$data['Infraestructura'] = $_SESSION['Infraestructura'];
+			$data['error'] 			 = EXIT_SUCCESS;
         } catch (Exception $e) {
             $data['msj'] = $e->getMessage();
         }
