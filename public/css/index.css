@@ -117,6 +117,11 @@ h2{
 }
 .fondo-bottom img{
 	max-width: 1360px;
+	-webkit-transition: max-width .3s linear;
+	-moz-transition: max-width .3s linear;
+	-ms-transition: max-width .3s linear;
+	-o-transition: max-width .3s linear;
+	transition: max-width .3s linear;
 }
 .logo-bottom{
 	position: absolute;
@@ -445,11 +450,11 @@ span.number{
 }
 /*BOOTSTRAP-SELECT*/
 .mdl-idioma .bootstrap-select .dropdown-menu>li>a{
-	-webkit-transition: background-color .2s linear;
-	-moz-transition: background-color .2s linear;
-	-ms-transition: background-color .2s linear;
-	-o-transition: background-color .2s linear;
-	transition: background-color .2s linear;
+	-webkit-transition: background-color .25s linear;
+	-moz-transition: background-color .25s linear;
+	-ms-transition: background-color .25s linear;
+	-o-transition: background-color .25s linear;
+	transition: background-color .25s linear;
 }
 .mdl-idioma .bootstrap-select .dropdown-menu>li>a:focus, 
 .mdl-idioma .bootstrap-select .dropdown-menu>li>a:hover{
@@ -714,7 +719,7 @@ span.number{
 	.logo-bottom,
 	.header-left,
 	.header-home{
-		padding: 20px;
+		padding: 20px 0 20px 20px
 	}
 	.background-body{
 		max-width: 60px;
@@ -754,7 +759,7 @@ span.number{
 	}
 	.header h2{
 	    font-size: 12px;
-	    max-width: 120px;
+	    max-width: 115px;
 	    line-height: 14px;
 	    padding-left: 5px;
 	}
@@ -796,6 +801,52 @@ span.number{
     	line-height: 16px;
 	}
 }	
+@media(max-width: 320px){
+	.mdl-container {
+	    padding-right: 15px;
+	    padding-left: 15px;
+	}
+	.mdl-container .title-home{
+	    max-width: 210px;
+	    font-size: 20px;
+	    line-height: 22px;
+	}
+	.logo-bottom, .header-left, .header-home{
+	    padding: 15px 0 15px 15px;
+	}
+	.header-right{
+		height: 58px;
+	}
+	.mdl-idioma .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+		margin-top: 15px;
+	    width: 90px;
+	}
+	.bootstrap-select.btn-group .dropdown-toggle .caret{
+		right: 8px;
+	}
+	.header-right{
+		max-width: 100px;
+	}
+	.header-home img{
+		max-width: 140px;
+	}
+	.logo-home{
+		max-width: 180px;
+	}
+	.fondo-bottom img{
+		max-width: 280px;
+	}
+	.background-body .background-body1, .background-body .background-body2, .background-body .background-body3{
+		max-width: 15px;
+	}
+	.background-body{
+		max-width: 45px;
+	}
+	.fp-viewing-0-0 .fp-controlArrow.fp-next{
+	    right: calc(0% + 55px);
+	}
+}
+
 @media (max-width: 420px) and (max-height: 640px){
 	.mdl-card-question .contenido{
 		display: none;
