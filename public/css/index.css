@@ -7,6 +7,9 @@ body{
 h2{
 	font-family: 'BentonSansRegular';
 }
+p{
+	font-family: 'BentonSansRegular';
+}
 /*GENERAL*/
 .arrow-block{
 	opacity: .5;
@@ -192,7 +195,7 @@ h2{
 	margin-bottom: 40px;
 }
 span.number{
-	color: #FBB819;
+	color: #F8B22C;
     font-size: 75px;
     font-weight: 100;
     margin-right: 10px;
@@ -202,12 +205,30 @@ span.number{
 	display: inline-block;
 	text-align: left;
 }
+.question-respuestas{
+	display: inline-block;
+	text-align: left;
+}
+.question-respuestas h2{
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    font-family: 'BentonSansBold';
+    line-height: 30px;
+}
+.question-respuestas p{
+	margin: 0;
+    padding: 0;
+    color: #F8B22C;
+    font-size: 38px;
+    line-height: 36px;
+}
 /*FULLPAGE*/
 .fp-controlArrow.fp-prev{
-	border-color: transparent #FBB819 transparent transparent
+	border-color: transparent #F8B22C transparent transparent
 }
 .fp-controlArrow.fp-next{
-	border-color: transparent transparent transparent #FBB819;
+	border-color: transparent transparent transparent #F8B22C;
 }
 /*MDL-CARD-QUESTION*/
 .mdl-card-question{
@@ -243,7 +264,7 @@ span.number{
 }
 .flip-card .card-front,
 .flip-card .card-back {
-	border: 1px solid #FBB819;
+	border: 1px solid #F8B22C;
 	-moz-backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
@@ -321,7 +342,7 @@ span.number{
 .select-increment,
 .content-card .mdl-button--raised.button-select,
 .content-card .mdl-button--raised:hover{
-    background-color: #FBB819;
+    background-color: #F8B22C;
 }
 .content-card .mdl-button--raised{
 	width: 100%;
@@ -332,7 +353,7 @@ span.number{
     text-transform: initial;
     font-size: 18px;
     background-color: transparent;
-    border: 1px solid #FBB819;
+    border: 1px solid #F8B22C;
     -webkit-transition: background-color .25s linear;
     -moz-transition: background-color .25s linear;
     -ms-transition: background-color .25s linear;
@@ -346,7 +367,7 @@ span.number{
 }
 .content-card .select-empleados{
 	margin: 10px 0;
-	border: 1px solid #FBB819;
+	border: 1px solid #F8B22C;
 	height: 36px;
 	-webkit-transition: background-color .25s linear;
     -moz-transition: background-color .25s linear;
@@ -483,7 +504,7 @@ span.number{
 .mdl-select .bootstrap-select.open>.dropdown-toggle.btn-default,
 .mdl-select .bootstrap-select .btn-default:focus,
 .mdl-select .bootstrap-select .btn-default{
-	border: 1px solid #FBB819;
+	border: 1px solid #F8B22C;
 	border-radius: 0;
 	color: #FFFFFF;
 }
@@ -499,7 +520,7 @@ span.number{
     outline: none;
 }
 .mdl-select .bootstrap-select.btn-group .dropdown-menu li{
-    border: 1px solid #FBB819;
+    border: 1px solid #F8B22C;
     margin: 8px 0;
 }
 .mdl-select .bootstrap-select.btn-group .dropdown-menu{
@@ -508,7 +529,7 @@ span.number{
 	margin: 0;
 }
 .mdl-select .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
-	background-color: #FBB819;
+	background-color: #F8B22C;
 }
 .mdl-select .dropdown-menu>li>a{
     padding: 6px 10px;
@@ -597,6 +618,118 @@ span.number{
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+/*FORMULARIO*/
+.mdl-formulario,
+.mdl-respuestas{
+	display: inline-block;
+	border-radius: 10px;
+	border: 1px solid #F8B22C;
+    margin: 5px;
+    padding: 30px 25px;
+}
+.mdl-respuestas{
+	max-width: 400px;
+	width: 100%;
+}
+.mdl-formulario{
+    width: 100%;
+    max-width: calc(100% - 425px);
+}
+.title-formulario{
+	font-size: 24px;
+    margin: 0;
+    line-height: 24px;
+}
+.div-respuestas{
+	background-color: #FFFFFF;
+	color: #000000;
+	margin: 5px 0;
+    padding: 5px 5px 5px 15px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+}
+.div-respuestas p{
+    display: inline-block;
+    max-width: calc(100% - 85px);
+    width: 100%;
+    margin: 0;
+    font-family: 'BentonSansRegular';
+    font-size: 18px;
+    line-height: 18px;
+    vertical-align: middle;
+}
+.div-respuestas button{
+    color: #4983B6;
+    text-transform: initial;
+    font-family: 'BentonSansBold';
+    font-size: 15px;
+    box-shadow: none;
+    height: 30px;
+    line-height: 32px;
+    vertical-align: middle;
+    background-color: transparent;
+    -webkit-transition: background-color .2s linear, color .2s linear;
+    -moz-transition: background-color .2s linear, color .2s linear;
+    -ms-transition: background-color .2s linear, color .2s linear;
+    -o-transition: background-color .2s linear, color .2s linear;
+    transition: background-color .2s linear, color .2s linear;
+}
+.div-respuestas button:HOVER{
+	background-color: #4983B6;
+	color: #FFFFFF;
+}
+.button-confirmar{
+	background-color: #4983B6;
+	color: #FFFFFF;
+    text-transform: initial;
+    font-family: 'BentonSansBold';
+    height: 30px;
+    line-height: 32px;
+}
+.mdl-input{
+	margin: 5px 0;
+}
+.mdl-input .form-control{
+	border-radius: 0;
+    height: 46px;
+    padding: 6px 15px;
+    font-size: 18px;
+    font-family: 'BentonSansRegular';
+}
+.mdl-formulario .col-sm-6{
+	padding: 0 5px;
+}
+.mdl-formulario .mdl-radio__outer-circle{
+	border: 2px solid #FFF;
+    border-radius: 0;
+}
+.mdl-formulario .text-contacto{
+    font-size: 18px;
+    margin: 5px 0;
+    line-height: 20px;
+}
+.mdl-label .mdl-checkbox,
+.mdl-formulario .mdl-radio{
+	font-family: 'BentonSansRegular';
+}
+.mdl-formulario .col-xs-4{
+	padding: 0 5px;
+}
+.mdl-label .mdl-checkbox{
+    max-width: 235px;
+}
+.mdl-label .mdl-checkbox__label{
+	font-size: 15px;
+    line-height: 18px;
+}
+.mdl-label .mdl-checkbox__label a{
+	text-decoration: none;
+	color: #4983B6;
+}
+.mdl-label .mdl-checkbox__box-outline{
+    border: 2px solid #FFFFFF;
 }
 @media (max-width: 1200px){
 	.mdl-container.mdl-ipad{

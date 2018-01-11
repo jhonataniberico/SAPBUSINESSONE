@@ -528,135 +528,120 @@
         			<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
         		</div>
 	        </div>
-	        <div class="slide">
+	        <div class="slide text-center">
+        		<div class="question">
+            		<span class="number">05/05</span>
+            		<div class="question-respuestas">
+            			<p>Basados en sus respuestas,</p>
+        				<h2>tenemos en mente una soluci&oacute;n ideal para su negocio.</h2>
+            		</div>
+            	</div>
 	            <div class="mdl-container text-center">
-	            	<div class="col-xs-12">
-	            		<div class="col-xs-3 ALIGN_RIGHT m-t-65">
-	            			<span class="PAGE">05/05</span>
+	            	<div>
+            			<div class="mdl-respuestas text-left">
+            				<h2 class="title-formulario m-b-10">Sus respuestas fueron:</h2>
+            				<div class="col-xs-12 p-0">
+            					<div class="div-respuestas">
+            						<p>Productos de consumo</p>
+            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
+            					</div>
+            				</div>
+            				<div class="col-xs-12 p-0">
+            					<div class="div-respuestas">
+            						<p>100 - 500 empleados</p>
+            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
+            					</div>
+            				</div>
+            				<div class="col-xs-12 p-0">
+            					<div class="div-respuestas">
+            						<p>1-3 Millones de D&oacute;lares</p>
+            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
+            					</div>
+            				</div>
+            				<div class="col-xs-12 p-0">
+            					<div class="div-respuestas">
+            						<p>An&aacute;lisis en tiempo real con SAP HANA</p>
+            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
+            					</div>
+            				</div>
+            				<div class="col-xs-12 p-0">
+            					<div class="div-respuestas">
+            						<p>Cloud</p>
+            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
+            					</div>
+            				</div>
+            				<div class="col-xs-12 p-0 text-right m-t-10">
+            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar">Confirmar respuestas</button>
+            				</div>
 	            		</div>
-	            		<div class="col-xs-9">
-	            			<h2 class="LETRA_39"><span class="ORANGE_COLOR">Gracias por sus respuestas.</span> Estamos seguros
-								que SAP Business One es lo que necesita.</h2>
-	            		</div>
-	            	</div>
-	            	<div class="col-xs-12">
-	            		<div class="col-xs-4 CONT_FORM">
-	            			<h5>SUS PERFILES:</h5>
-	            			<div class="col-xs-12 BLANCO_FONDO m-t-15">
-	            				<div class="col-xs-8 NEGRO_COLOR m-t-15">
-	            					<span class="font-16"></span>
-	            				</div>
-	            				<div class="col-xs-3">
-	            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored BOTON_EDITAR">
-									  Editar
-									</button>
-	            				</div>
-	            			</div>
-
-	            			<div class="col-xs-12 BLANCO_FONDO m-t-15">
-	            				<div class="col-xs-8 NEGRO_COLOR m-t-15">
-	            					<span class="font-16">50 - 100 empleados</span>
-	            				</div>
-	            				<div class="col-xs-4">
-	            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored BOTON_EDITAR">
-									  Editar
-									</button>
-	            				</div>
-	            			</div>
-
-	            			<div class="col-xs-12 BLANCO_FONDO m-t-15">
-	            				<div class="col-xs-8 NEGRO_COLOR m-t-15">
-	            					<span class="font-16">$1M - $2M</span>
-	            				</div>
-	            				<div class="col-xs-4">
-	            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored BOTON_EDITAR">
-									  Editar
-									</button>
-	            				</div>
-	            			</div>
-
-	            			<div class="col-xs-12 BLANCO_FONDO m-t-15">
-	            				<div class="col-xs-8 NEGRO_COLOR m-t-15">
-	            					<span class="font-16">With SAP HANA</span>
-	            				</div>
-	            				<div class="col-xs-4">
-	            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored BOTON_EDITAR">
-									  Editar
-									</button>
-	            				</div>
-	            			</div>
-
-	            			<div class="col-xs-12 BLANCO_FONDO m-t-15">
-	            				<div class="col-xs-8 NEGRO_COLOR m-t-15">
-	            					<span class="font-16">Cloud</span>
-	            				</div>
-	            				<div class="col-xs-4">
-	            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored BOTON_EDITAR">
-									  Editar
-									</button>
-	            				</div>
-	            			</div>
-			            </div>
-			            <div class="col-xs-8 CONT_FORM">
-			            	<div class="col-xs-12">
-			            		<h5>PERMITA QUE NUESTROS EXPERTOS LO CONTACTEN</h5>
-			            		<div class="col-xs-12">
-			            			<div class="col-xs-8">
-			            				<h5>Introduzca aquí sus datos o conéctate vía</h5>
-			            			</div>
-			            			<div class="col-xs-4 FONDO_CONTACTESE">
-			            				<div class="col-xs-2"><i class="fa fa-linkedin fa-lg FONDO_CONTACTESE" aria-hidden="true"></i></div>
-			            				<div class="col-xs-10">
-			            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored BOTON_CONECTESE">
-												  Conéctese ahora
-											</button>
-			            				</div>
-			            			</div>
-			            		</div>
-			            		<form>
-			            		  <div class="col-xs-12">
-			            		  	<div class="col-xs-6">
-			            		  		<div class="form-group">
-										    <input type="text" class="form-control NEGRO_FONDO" id="nombre_completo" maxlength="50" onkeypress="return soloLetras(event);" onchange="borrarFocus(1)" placeholder="Nombre Completo">
-										</div>
-										<div class="form-group">
-											<input type="text" class="form-control NEGRO_FONDO" id="empresa" maxlength="100" onkeypress="return soloLetras(event);" onchange="borrarFocus(2)" placeholder="Empresa">
-										</div>
-										<div class="form-group">
-											<input type="email" class="form-control NEGRO_FONDO" id="email" maxlength="100" aria-describedby="emailHelp"  onchange="borrarFocus(3)" placeholder="Email">
-										</div>
-										<div class="form-group">
-											<input type="text" class="form-control NEGRO_FONDO" id="pais" maxlength="100" onkeypress="return soloLetras(event);"  onchange="borrarFocus(4)" placeholder="País">
-										</div>
-			            		  	</div>
-			            		  	<div class="col-xs-6 m-t-50">
-			            		  		<div class="form-group">
-									    	<input type="text" class="form-control NEGRO_FONDO" id="cargo" maxlength="100" onkeypress="return soloLetras(event);"  onchange="borrarFocus(5)" placeholder="Cargo">
-									  	</div>
-									  	<div class="form-group">
-											<input type="text" class="form-control NEGRO_FONDO" id="telefono" maxlength="7" onkeypress="return valida(event);"  onchange="borrarFocus(6)" placeholder="Teléfono">
-										</div>
-										<div class="form-group">
-											<input type="text" class="form-control NEGRO_FONDO" id="notas" maxlength="500" placeholder="Notes">
-										</div>
-			            		  	</div>
-			            		  	<div class="col-xs-12">
-			            		  		<div class="col-xs-8">
-			            		  			<div class="form-check">
-			            		  				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-												  <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
-												  <span class="mdl-checkbox__label f-s-14" style="">He leido y acepto los <a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" style="">Términos y condiciones de SAP</a></span>
-												</label>
-											</div>
-			            		  		</div>
-			            		  		<div class="col-xs-4">
-			            		  			<button type="button" class="btn btn-primary BOTON_ESTIMACION" onclick="solicitarEstimacion()">Solicitar estimación</button>
-			            		  		</div>
-			            		  	</div>
-			            		  </div>
-								</form>
-			            	</div>
-			            </div>
+	            		<form class="mdl-formulario text-left">
+            				<h2 class="title-formulario m-b-10">Reg&iacute;strese para revisarlo juntos m&aacute;s en detalle:</h2>
+            				<div class="col-sm-6">
+            					<div class="mdl-input">
+								    <input type="text" class="form-control" id="nombre_completo" maxlength="50" onkeypress="return soloLetras(event);" onchange="borrarFocus(1)" placeholder="Nombre Completo">
+								</div>
+            				</div>
+            				<div class="col-sm-6">
+            					<div class="mdl-input">
+							    	<input type="text" class="form-control NEGRO_FONDO" id="cargo" maxlength="100" onkeypress="return soloLetras(event);"  onchange="borrarFocus(5)" placeholder="Cargo">
+							  	</div>
+            				</div>
+            				<div class="col-sm-6">
+            					<div class="mdl-input">
+									<input type="text" class="form-control" id="empresa" maxlength="100" onkeypress="return soloLetras(event);" onchange="borrarFocus(2)" placeholder="Empresa">
+								</div>
+            				</div>
+            				<div class="col-sm-6">
+            					<div class="mdl-input">
+									<input type="text" class="form-control" id="telefono" maxlength="7" onkeypress="return valida(event);"  onchange="borrarFocus(6)" placeholder="Teléfono">
+								</div>
+            				</div>
+            				<div class="col-sm-6">
+            					<div class="mdl-input">
+									<input type="email" class="form-control" id="email" maxlength="100" aria-describedby="emailHelp"  onchange="borrarFocus(3)" placeholder="Email">
+								</div>
+            				</div>
+            				<div class="col-sm-6">
+            					<div class="mdl-input">
+									<input type="email" class="form-control" id="email" maxlength="100" aria-describedby="emailHelp"  onchange="borrarFocus(3)" placeholder="Email">
+								</div>
+            				</div>
+            				<div class="col-sm-6">
+            					<div class="mdl-input">
+									<input type="text" class="form-control" id="pais" maxlength="100" onkeypress="return soloLetras(event);"  onchange="borrarFocus(4)" placeholder="País">
+								</div>
+            				</div>
+            				<div class="col-sm-6">
+            					<p class="text-contacto">Quiero ser contactado por representante de ventas:</p>
+            					<div class="col-xs-4">
+            						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="c-email">
+										<input type="radio" id="c-email" class="mdl-radio__button" name="options" value="1">
+										<span class="mdl-radio__label">Por Email</span>
+									</label>
+            					</div>
+            					<div class="col-xs-4">
+            						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="c-telefono">
+										<input type="radio" id="c-telefono" class="mdl-radio__button" name="options" value="2">
+										<span class="mdl-radio__label">Por tel&eacute;fono</span>
+									</label>
+            					</div>
+            					<div class="col-xs-4">
+            						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="c-ambos">
+										<input type="radio" id="c-ambos" class="mdl-radio__button" name="options" value="3">
+										<span class="mdl-radio__label">Ambos</span>
+									</label>
+            					</div>
+            				</div>
+            				<div class="col-sm-6 mdl-label">
+        						<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+									<input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
+									<span class="mdl-checkbox__label f-s-14" style="">He leido y acepto los <a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" style="">Términos y condiciones de SAP</a></span>
+								</label>
+            				</div>
+            				<div class="col-xs-12 text-right">
+    							<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="solicitarEstimacion()">Solicitar estimaci&oacute;n</button>
+            				</div>
+	            		</form>
 	            	</div>
 	        	</div>
 	        </div>
