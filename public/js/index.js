@@ -249,7 +249,7 @@ $( document ).ready(function() {
 			}
     	}
     	if($('body').attr('class') == 'fp-viewing-0-2') {
-    		saveDatos(2);    		
+    		saveDatos(2);   
     		var id_button = $('.mdl-card-question .content-card').find('.select-tam.select-one.button-select').attr('id');
     		array_ids.push(id_button);
     		if(array_ids.length != 0) {
@@ -320,7 +320,7 @@ $( document ).ready(function() {
 			$('.fp-next').removeClass('arrow-block');
     	}
 	});
-	$(".select-tam").click(function () {
+	$("#buttonMas").click(function () {
 		select_tam = 1;
 		if(facturacion != null) {
 			if($('body').attr('class') == 'fp-viewing-0-2') {
