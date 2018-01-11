@@ -355,7 +355,7 @@ span.number{
     transition: background-color .25s linear;
 }
 .content-card .select-empleados span{
-	max-width: 105px;
+	max-width: 115px;
     display: inline-block;
     width: 100%;
     font-family: 'BentonSansBold';
