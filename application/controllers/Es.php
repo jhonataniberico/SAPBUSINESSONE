@@ -53,7 +53,6 @@ class Es extends CI_Controller {
           		}
           		$this->M_solicitud->updateDatos($arrayUpdate, $_SESSION['id_sol'], 'solicitud');
             	$this->session->set_userdata($session);
-            	//print_r($this->session->all_userdata());
           	}
             $data['error'] = EXIT_SUCCESS;
           }catch(Exception $e) {
