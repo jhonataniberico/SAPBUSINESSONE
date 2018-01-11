@@ -305,12 +305,13 @@ span.number{
 	transform: perspective(600) rotateY(0deg);
 }
 .flip-card .card-back label{
-	font-family: 'BentonSansLight';
-	color: #000000;
-    line-height: 14px;
-    font-size: 12px;
-    padding: 25px 5px 0 5px;
+    font-family: 'BentonSansLight';
+    color: #000000;
+    line-height: 22px;
+    font-size: 17.5px;
+    padding: 25px 15px;
     height: 162px;
+    text-align: left;
 }
 .flip-card .card-back p{
 	font-family: 'BentonSansBold';

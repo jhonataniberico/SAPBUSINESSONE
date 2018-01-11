@@ -284,9 +284,7 @@
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
-	            				<label>Cloud hace que sea posible para los usuarios acceder a datos, aplicaciones y servicios en internet. La nube elimina la necesidad de hardware
-	            				 costoso como discos duros y servidores y les permite a los usuarios trabajar desde cualquier lugar.</label>
-	            				<p>Cloud</p>
+	            				<label>Aproveche la nube para concentrarse en crecer, y no en implementar y gestionar su TI.</label>
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
@@ -308,13 +306,11 @@
 	            		<div class="flip-card">
 	            			<div class="card-front">
 	            				<img src="<?php echo RUTA_IMG?>cards/card-anywhere.png">
-	            				<p>Anywhere</p>
+	            				<p>Movilidad</p>
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
-	            				<label>Gestione su empresa donde est&eacute; y aporte movilidad a su equipo de ventas, gracias a las aplicaciones m&oacute;viles de SAP Business One 
-	            				 estar&aacute; disponible desde cualquier lugar y dispositivo m&oacute;vil.</label>
-	            				<p>Anywhere</p>
+	            				<label>Ofrezca a los empleados m&oacute;viles acceso al software a trav&eacute;s de una aplicaci&oacute;n m&oacute;vil intuitiva.</label>
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
@@ -336,13 +332,11 @@
 	            		<div class="flip-card">
 	            			<div class="card-front">
 	            				<img src="<?php echo RUTA_IMG?>cards/card-sap.png">
-	            				<p>with SAP HANA</p>
+	            				<p>An&aacute;lisis en tiempo real con SAP HANA</p>
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
-	            				<label>Obtendr&aacute; acceso en tiempo real a informes y cuadros de mando predefinidos, as&iacute; como a herramientas de productividad para dar
-	            				 soporte a la toma de decisiones.</label>
-	            				<p>with SAP HANA</p>
+	            				<label>Con el poder de SAP HANA disminuya en un 70% sus tiempos de an&aacute;lisis.</label>
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
@@ -364,14 +358,11 @@
 	            		<div class="flip-card">
 	            			<div class="card-front">
 	            				<img src="<?php echo RUTA_IMG?>cards/card-analytics.png">
-	            				<p>with Analytics</p>
+	            				<p>An&aacute;lisis predictivos con Analytics</p>
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
-	            				<label>Permitir&aacute; poder tomar mejores decisiones de una forma r&aacute;pida accediendo inmediatamente a informaci&oacute;n relevante a trav&eacute;s
-	            				 de los modelos de an&aacute;lisis que dise&ntilde;an y poseen, eliminando as&iacute; la necesidad de depender de su equipo de TI permiti&eacute;ndole
-	            				 utilizar la TI en iniciativas que a&ntilde;adan valor a su empresa.</label>
-	            				<p>with Analytics</p>
+	            				<label>Anticipe resultados con anal&iacute;ticas predictivas y dele el rumbo indicado a su negocio.</label>
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
@@ -393,13 +384,11 @@
 	            		<div class="flip-card">
 	            			<div class="card-front">
 	            				<img src="<?php echo RUTA_IMG?>cards/card-starup.png">
-	            				<p>Star-up</p>
+	            				<p>Emprendedores</p>
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
-	            				<label>Lo ayudar&aacute;n a gestionar cada aspecto de su empresa desde las finanzas y CRM hasta la cadena de suministro y compras. Automatice los
-	            				 procesos clave y libere m&aacute;s tiempo para centrarse en el crecimiento.</label>
-	            				<p>Star-up</p>
+	            				<label>Cuente con un aliado, para afrontar los desaf&iacute;os de la era digital hacia la conquista de sus metas.</label>
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
@@ -421,13 +410,11 @@
 	            		<div class="flip-card">
 	            			<div class="card-front">
 	            				<img src="<?php echo RUTA_IMG?>cards/card-subsidaries.png">
-	            				<p>Subsidaries</p>
+	            				<p>Agencias o subsidiarias</p>
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
-	            				<label>Dise&ntilde;ada espec&iacute;ficamente para las subsidiarias, permiti&eacute;ndole gestionar de forma unificada todas las &aacute;reas de su empresa
-	            				 para obtener una visi&oacute;n global de la misma.</label>
-	            				<p>Subsidaries</p>
+	            				<label>Cree informes r&aacute;pidos y precisos sobre env&iacute;os entrantes y salientes, inventario y ubicaciones de productos.</label>
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
@@ -464,9 +451,7 @@
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
-	            				<label>Ideal para las compa&tilde;&iacute;as que necesitan alta protecc&oacute;n de datos y ediciones a nivel de servicio. Son propietarios
-	            				 del servidor, red, disco y pueden decidir qu&eacute; usuarios est&aacute;n autorizados a utilizar la infraestructura.</label>
-	            				<p>Local</p>
+	            				<label>Implementarlo sobre su actual infraestructura o adquirir una de las opciones de hardware certificada.</label>
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
@@ -493,10 +478,7 @@
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
-	            				<label>Los servicios que ofrecen se encuentran en servidores externos al usuario, teniendo la capacidad de procesamiento y almacenamiento
-	            				 sin instalar m&aacute;quinas localmente, por lo que no tiene una inversi&oacute;n inicial o gasto de mantenimiento en este sentido, si
-	            				 no que se paga por el uso.</label>
-	            				<p>Cloud</p>
+	            				<label>Correr el software desde la nube junto con su informaci&oacute;n empresarial.</label>
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
@@ -522,9 +504,7 @@
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
-	            				<label>Incluye soluciones tanto en la nube como On-Premise. Las nubes h&iacute;bridas ofrecen variedad, por lo que puede tomar y elegir qu&eacute;
-	            				 aspectos de su negocio est&aacute;n mejor en una nube p&uacute;blica o privada versus On-Premise.</label>
-	            				<p>H&iacute;brida</p>
+	            				<label>Una combinaci&oacute;n de ambas donde la informaci&oacute;n sensible puede permanecer en su IT local.</label>
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
