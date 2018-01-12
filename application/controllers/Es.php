@@ -181,8 +181,9 @@ class Es extends CI_Controller {
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
       try {  
-        //cargamos la libreria email de ci
+       // cargamos la libreria email de ci
        $this->load->library("email");
+
        //configuracion para gmail
        $configGmail = array(
                             'protocol'  => 'smtp',

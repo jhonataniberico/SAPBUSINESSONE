@@ -75,6 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
+	/*'hostname' => 'http://www.sap-latam.com/sAP_business_one/',
+	'username' => 'brainblue',
+	'password' => 'Bra1n#blu3',
+	'database' => 'sapbusinessone',*/
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
