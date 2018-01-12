@@ -15,17 +15,22 @@ function solicitarEstimacion() {
 	var cargo 	 		= $('#cargo').val();
 	var telefono 		= $('#telefono').val();
 	var relacion		= $('#relacion').val();
-	var contacto    	= $('#contacto').is(':checked');
+	var c_email    		= $('#c-email').is(':checked');
+	var c_telefono    	= $('#c-telefono').is(':checked');
+	var c_ambos    		= $('#c-ambos').is(':checked');
+	var terminos		= $('#checkbox-1').is(':checked');
+	var contacto		= null;
 
-	/*if(nombre_completo == '' && empresa == '' && email == '' && pais == '' && cargo == '' && telefono == '') {
-		$('#nombre_completo').focus().css('border-color','red');
-		$('#empresa').focus().css('border-color','red');
-		$('#email').focus().css('border-color','red');
-		$('#pais').focus().css('border-color','red');
-		$('#cargo').focus().css('border-color','red');
-		$('#telefono').focus().css('border-color','red');
+	if(terminos == false) {
 		return;
-	}*/
+	}
+	if(c_email == true) {
+		contacto = 1;
+	}else if(c_telefono == true) {
+		contacto = 2;
+	}else if(c_ambos == true) {
+		contacto = 3;
+	}
 	if(nombre_completo == null || nombre_completo == '') {
 		return;
 	}
@@ -36,6 +41,7 @@ function solicitarEstimacion() {
 		return;
 	}
 	if (!validateEmail(email)) {
+		$('#email').css('border-color','red');
 		return;
 	}
 	if(pais == null || pais == '') {
@@ -50,8 +56,6 @@ function solicitarEstimacion() {
 	if(contacto == false) {
 		  return;
 	}
-	validarCampos();
-	return;
 	$.ajax({
 		data  : { nombre_completo : nombre_completo,
 				  empresa 	      : empresa,
@@ -369,10 +373,9 @@ function mostrarDatos() {
 		url   : 'es/mostrarDatos',
 		type  : 'POST'
 	}).done(function(data){
-		//try{
+		try{
         data = JSON.parse(data);
         if(data.error == 0){
-        	console.log(data);
           	$('#industria').text(data.Industria);
           	$('#factura').text(data.Factura_anual)
            	$('#tamanio').text(data.Tamanio);
@@ -380,9 +383,9 @@ function mostrarDatos() {
            	$('#infraestructura').text(data.Infraestructura);
         }else {
         }
-      /*} catch (err){
+      } catch (err){
         msj('error',err.message);
-      }*/
+      }
 	});
 }
 
@@ -472,17 +475,20 @@ function selectFacturacion(id){
 }
 
 function validarCampos(){
-	var $inputs = $('#form :input'); // Obtenemos los inputs de nuestro formulario
+	var $inputs = $('form :input'); // Obtenemos los inputs de nuestro formulario
 	var formvalido = true; // Para saber si el form esta vacio 
 	$inputs.each(function() {  // Recorremos los inputs del formulario (uno a uno)
-		//console.log(this);
-		if(!isEmpty($(this).val())){ // Verificamos que el input este vacio 
+		if(isEmpty($(this).val())){ // Verificamos que el input este vacio 
 				$(this).css('border-color','red'); // Agregamos un fondo rojo si este esta vacio
 				formvalido = false;
 		}else{
-				$(this).css('border-color','red'); // quitamos el fondo rojo si este esta lleno
+				$(this).css('border-color',''); // quitamos el fondo rojo si este esta lleno
 		}
 	});
+
+	/*$("form :input").each(function() {
+	  $( this ).addClass( "foo" );
+	});*/
 	return formvalido; // retornamos segun corresponda
 }
 		 

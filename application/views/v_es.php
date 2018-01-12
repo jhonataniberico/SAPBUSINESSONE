@@ -578,37 +578,44 @@
             				<h2 class="title-formulario m-b-10">Reg&iacute;strese para revisarlo juntos m&aacute;s en detalle:</h2>
             				<div class="col-sm-6">
             					<div class="mdl-input">
-								    <input type="text" class="form-control" id="nombre_completo" maxlength="50" onkeypress="return soloLetras(event);" onchange="borrarFocus(1)" placeholder="Nombre Completo">
+								    <input type="text" class="form-control" id="nombre_completo" maxlength="50" onkeypress="return soloLetras(event);" onchange="validarCampos()" placeholder="Nombre Completo">
 								</div>
             				</div>
             				<div class="col-sm-6">
             					<div class="mdl-input">
-							    	<input type="text" class="form-control NEGRO_FONDO" id="cargo" maxlength="100" onkeypress="return soloLetras(event);"  onchange="borrarFocus(5)" placeholder="Cargo">
+							    	<input type="text" class="form-control NEGRO_FONDO" id="cargo" maxlength="100" onkeypress="return soloLetras(event);"  onchange="validarCampos()" placeholder="Cargo">
 							  	</div>
             				</div>
             				<div class="col-sm-6">
             					<div class="mdl-input">
-									<input type="text" class="form-control" id="empresa" maxlength="100" onkeypress="return soloLetras(event);" onchange="borrarFocus(2)" placeholder="Empresa">
+									<input type="text" class="form-control" id="empresa" maxlength="100" onkeypress="return soloLetras(event);" onchange="validarCampos()" placeholder="Empresa">
 								</div>
             				</div>
             				<div class="col-sm-6">
             					<div class="mdl-input">
-									<input type="text" class="form-control" id="telefono" maxlength="7" onkeypress="return valida(event);"  onchange="borrarFocus(6)" placeholder="Teléfono">
+									<input type="text" class="form-control" id="telefono" maxlength="7" onkeypress="return valida(event);"  onchange="validarCampos()" placeholder="Teléfono">
 								</div>
             				</div>
             				<div class="col-sm-6">
             					<div class="mdl-input">
-									<input type="email" class="form-control" id="email" maxlength="100" aria-describedby="emailHelp"  onchange="borrarFocus(3)" placeholder="Email">
+									<input type="email" class="form-control" id="email" maxlength="100" aria-describedby="emailHelp" placeholder="Email">
 								</div>
             				</div>
             				<div class="col-sm-6">
-            					<div class="mdl-input">
-									<input type="email" class="form-control" id="email" maxlength="100" aria-describedby="emailHelp"  onchange="borrarFocus(3)" placeholder="Email">
-								</div>
+								<select class="selectpicker" id="relacion" name="relacion" title="Relación con SAP">
+									<option value="Cliente">Cliente</option>
+									<option value="Cliente potencial">Cliente potencial</option>
+									<option value="Consultor">Consultor</option>
+									<option value="Empleado SAP">Empleado SAP</option>
+									<option value="Estudiante">Estudiante</option>
+									<option value="Partner">Partner</option>
+									<option value="Partner potencial">Partner potencial</option>
+									<option value="Prensa/Analista">Prensa/Analista</option>
+								</select>
             				</div>
             				<div class="col-sm-6">
             					<div class="mdl-input">
-									<input type="text" class="form-control" id="pais" maxlength="100" onkeypress="return soloLetras(event);"  onchange="borrarFocus(4)" placeholder="País">
+									<input type="text" class="form-control" id="pais" maxlength="100" onkeypress="return soloLetras(event);"  onchange="validarCampos()" placeholder="País">
 								</div>
             				</div>
             				<div class="col-sm-6">
@@ -639,7 +646,7 @@
 								</label>
             				</div>
             				<div class="col-xs-12 text-right">
-    							<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="solicitarEstimacion()">Solicitar estimaci&oacute;n</button>
+    							<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="solicitarEstimacion();">Solicitar estimaci&oacute;n</button>
             				</div>
 	            		</form>
 	            	</div>

@@ -103,30 +103,30 @@ class Es extends CI_Controller {
 
           	//INSERTAMOS LOS DATOS A LA BASE DE DATOS
           	$arrayInsert = array('nombre_completo' => $nombre_completo,
-          					     'Empresa' 		   => $empresa,
-          					 	 'Email' 		   => $email,
-          						 'Pais' 		   => $pais,
-          					 	 'Cargo' 	  	   => $cargo,
-          					 	 'Telefono' 	   => $telefono,
-          					 	 'Relacion' 	   => $relacion,
-          						 'Contacto' 	   => $contacto,
-          						 'Id_solicitud'    => $_SESSION['id_sol']);
+                  					     'Empresa' 		     => $empresa,
+                  					 	   'Email' 		       => $email,
+                  						   'Pais' 		       => $pais,
+                  					 	   'Cargo' 	  	     => $cargo,
+                  					 	   'Telefono' 	     => $telefono,
+                  					 	   'Relacion' 	     => $relacion,
+                  						   'Contactado' 	   => $contacto,
+                  						   'Id_solicitud'    => $_SESSION['id_sol']);
           	$datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'usuario');
 
           	//GUARDAMOS EN SESIÓN LOS DATOS
           	$session = array('nombre_completo' => $nombre_completo,
-          					 'Empresa' 		   => $empresa,
-          					 'Email' 		   => $email,
-          					 'Pais' 		   => $pais,
-          					 'Cargo' 	  	   => $cargo,
-          					 'Telefono' 	   => $telefono,
-          					 'Relacion' 	   => $relacion,
-          					 'Contacto' 	   => $contacto);
+                  					 'Empresa' 		     => $empresa,
+                  					 'Email' 		       => $email,
+                  					 'Pais' 		       => $pais,
+                  					 'Cargo' 	  	     => $cargo,
+                  					 'Telefono' 	     => $telefono,
+                  					 'Relacion' 	     => $relacion,
+                  					 'Contacto' 	     => $contacto);
           	$this->session->set_userdata($session);
 
           	//ENVIAR EMAIL
-          	//$this->sendGmailCliente($email, $datoInsert['Id']);
-          	//$this->sendGmailSap($email, $datoInsert['Id']);
+            /*$this->sendGmailCliente($email, $datoInsert['Id']);
+          	$this->sendGmailSap($email, $datoInsert['Id']);*/
           	$data['msj'] = $datoInsert['msj'];
 			$data['error'] = $datoInsert['error'];
         } catch (Exception $e) {
@@ -158,8 +158,8 @@ class Es extends CI_Controller {
        //cargamos la configuración para enviar con gmail
        $this->email->initialize($configGmail);
        $this->email->from('userauto@prymera.com');
-       $this->email->to('jhonatanibericom@gmail.com');//EMAIL AL QUIÉN IRÁ DIRIGIDO
-       $this->email->subject('Bienvenido/a a Caja Prymera');
+       $this->email->to($this->session->userdata('Email'));//EMAIL AL QUIÉN IRÁ DIRIGIDO
+       $this->email->subject('Bienvenido aaaa');
 
        //CONSTRUIMOS EL HTML
        $texto = '<!DOCTYPE html>
@@ -169,7 +169,7 @@ class Es extends CI_Controller {
 				 </head>
 				 <body>
 					<h1>Hola Cliente</h1>
-					<p>Gracias por confiar en SAPBUSENESSONE</p>
+					<p>Gracias por confiar en SAP BUSENESS ONE</p>
 				 </body>
 				</html>';
        $this->email->message($texto);//AQUI SE INSERTA EL HTML
@@ -204,7 +204,7 @@ class Es extends CI_Controller {
        $this->email->initialize($configGmail);
        $this->email->from('userauto@prymera.com');
        $this->email->to('jhonatanibericom@gmail.com');//EMAIL AL QUIÉN IRÁ DIRIGIDO
-       $this->email->subject('Bienvenido/a a Caja Prymera');
+       $this->email->subject('Bienvenido/a a SAP BUSINESS ONE');
 
        //CONSTRUIMOS EL HTML
        $texto = '<!DOCTYPE html>

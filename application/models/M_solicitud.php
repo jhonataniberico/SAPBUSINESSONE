@@ -44,7 +44,7 @@ class M_solicitud extends  CI_Model{
     function getDatosUsuario($Id_usuario) {
         $sql = "SELECT *
                   FROM usuario
-                 WHERE Id_usuario = ?";
+                 WHERE Id_persona = ?";
         $result = $this->db->query($sql, array($Id_usuario));
         return $result->result();
     }
