@@ -16,19 +16,18 @@ class Es extends CI_Controller {
 
 	public function index()
 	{
-        $this->session->unset_userdata('Industria');
-        $this->session->unset_userdata('Infraestructura');
-        $this->session->unset_userdata('Factura_anual');
-        $this->session->unset_userdata('Tamanio');
-        $this->session->unset_userdata('Prioridad');
+    $this->session->unset_userdata('Industria');
+    $this->session->unset_userdata('Infraestructura');
+    $this->session->unset_userdata('Factura_anual');
+    $this->session->unset_userdata('Tamanio');
+    $this->session->unset_userdata('Prioridad');
 		$this->load->view('v_es');
 	}
 
 	function saveDatos() {
 		$data['error'] = EXIT_ERROR;
         $data['msj']   = null;
-        try 
-          {
+        try {
           	$datos 	     = $this->input->post('global_datos');
           	$pantalla    = $this->input->post('pantalla');
           	$idioma      = $this->input->post('idioma');
@@ -39,7 +38,7 @@ class Es extends CI_Controller {
           	if($pantalla == 2) {$columna = 'Factura_anual';} elseif ($pantalla == 3) {$columna = 'Prioridad';}elseif ($pantalla == 4) {$columna = 'Infraestructura';}
           	if($pantalla == 1) {
           		$idIdioma = $this->M_solicitud->getDatosPais($idioma);
-          		$arrayInsert = array('Industria' => $datos,
+          		$arrayInsert = array('Industria'   => $datos,
           						             'Id_lenguaje' => $idIdioma);
             	$datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
             	$session = array('industria' => $datos,
@@ -47,10 +46,10 @@ class Es extends CI_Controller {
             	$this->session->set_userdata($session);
           	}else {
           		if($pantalla == 2) {
-          			$arrayUpdate = array($columna => $facturacion,
-          								 'Tamanio' => $operar);
+          			$arrayUpdate = array($columna  => $facturacion,
+          								           'Tamanio' => $operar);
           			$session = array($columna  => $facturacion,
-          							 'Tamanio' => $operar);
+          							         'Tamanio' => $operar);
           		}else {
           			if($pantalla == 3) {
           				$arrayUpdate = array($columna => $datos_prio);
@@ -63,7 +62,6 @@ class Es extends CI_Controller {
           		$this->M_solicitud->updateDatos($arrayUpdate, $_SESSION['id_sol'], 'solicitud', 'Id');
             	$this->session->set_userdata($session);
           	}
-            print_r($this->session->all_userdata());
             $data['error'] = EXIT_SUCCESS;
           }catch(Exception $e) {
            $data['msj'] = $e->getMessage();
@@ -184,7 +182,6 @@ class Es extends CI_Controller {
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
       try {  
-      	$datosUsuario = $this->M_solicitud->getDatosUsuario($id_usuario);
         //cargamos la libreria email de ci
        $this->load->library("email");
        //configuracion para gmail
