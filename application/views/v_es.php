@@ -228,12 +228,13 @@
 	            				<div class="col-xs-12">
 	            					<div class="mdl-select">
 	            						<select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
-											<option value="Menor de $1M">Menor de $1M</option>
-											<option value="$1M - $2M">$1M - $2M</option>
-											<option value="$2M - $5M">$2M - $5M</option>
-											<option value="$5M - $10M">$5M - $10M</option>
-											<option value="Mayor de $10M">Mayor de $10M</option>
-											<option value="No poseo información">No poseo informaci&oacute;n</option>
+											<option value="< 1 Millón de Dólares">< 1 Millón de Dólares</option>
+											<option value="1-3 Millones de Dólares">1-3 Millones de Dólares</option>
+											<option value="3-5 Millones de Dólares">3-5 Millones de Dólares</option>
+											<option value="5-10 Millones de Dólares">5-10 Millones de Dólares</option>
+											<option value="10-20 Millones de Dólares">10-20 Millones de Dólares</option>
+											<option value="20-40 Millones de Dólares">20-40 Millones de Dólares</option>
+											<option value="No poseo información">No poseo información</option>
 										</select>
 	            					</div>
 		            			</div>
@@ -583,12 +584,12 @@
             				</div>
             				<div class="col-sm-6">
             					<div class="mdl-input">
-							    	<input type="text" class="form-control NEGRO_FONDO" id="cargo" maxlength="100" onkeypress="return soloLetras(event);"  onchange="validarCampos()" placeholder="Cargo">
+							    	<input type="text" class="form-control NEGRO_FONDO" id="cargo" maxlength="50" onkeypress="return soloLetras(event);"  onchange="validarCampos()" placeholder="Cargo">
 							  	</div>
             				</div>
             				<div class="col-sm-6">
             					<div class="mdl-input">
-									<input type="text" class="form-control" id="empresa" maxlength="100" onkeypress="return soloLetras(event);" onchange="validarCampos()" placeholder="Empresa">
+									<input type="text" class="form-control" id="empresa" maxlength="50" onkeypress="return soloLetras(event);" onchange="validarCampos()" placeholder="Empresa">
 								</div>
             				</div>
             				<div class="col-sm-6">
@@ -598,7 +599,7 @@
             				</div>
             				<div class="col-sm-6">
             					<div class="mdl-input">
-									<input type="email" class="form-control" id="email" maxlength="100" aria-describedby="emailHelp" placeholder="Email">
+									<input type="email" class="form-control" id="email" maxlength="50" aria-describedby="emailHelp" placeholder="Email">
 								</div>
             				</div>
             				<div class="col-sm-6">
