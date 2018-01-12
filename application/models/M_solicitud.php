@@ -40,4 +40,12 @@ class M_solicitud extends  CI_Model{
 		//print_r($this->db->last_query());
         return $result->row()->Id_pais;
     }
+
+    function getDatosUsuario($Id_usuario) {
+        $sql = "SELECT *
+                  FROM usuario
+                 WHERE Id_usuario = ?";
+        $result = $this->db->query($sql, array($Id_usuario));
+        return $result->result();
+    }
 }

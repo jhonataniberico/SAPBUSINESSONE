@@ -14,9 +14,10 @@ function solicitarEstimacion() {
 	var pais 	 		= $('#pais').val();
 	var cargo 	 		= $('#cargo').val();
 	var telefono 		= $('#telefono').val();
-	var notas 	 		= $('#notas').val();
+	var relacion		= $('#relacion').val();
+	var contacto    	= $('#contacto').is(':checked');
 
-	if(nombre_completo == '' && empresa == '' && email == '' && pais == '' && cargo == '' && telefono == '') {
+	/*if(nombre_completo == '' && empresa == '' && email == '' && pais == '' && cargo == '' && telefono == '') {
 		$('#nombre_completo').focus().css('border-color','red');
 		$('#empresa').focus().css('border-color','red');
 		$('#email').focus().css('border-color','red');
@@ -24,47 +25,59 @@ function solicitarEstimacion() {
 		$('#cargo').focus().css('border-color','red');
 		$('#telefono').focus().css('border-color','red');
 		return;
-	}
+	}*/
 	if(nombre_completo == null || nombre_completo == '') {
-		$('#nombre_completo').focus().css('border-color','red');
 		return;
 	}
 	if(empresa == null || empresa == '') {
-		$('#empresa').focus().css('border-color','red');
 		return;
 	}
 	if(email == null || email == '') {
-		$('#email').focus().css('border-color','red');
+		return;
+	}
+	if (!validateEmail(email)) {
 		return;
 	}
 	if(pais == null || pais == '') {
-		$('#pais').focus().css('border-color','red');
 		return;
 	}
 	if(cargo == null || cargo == '') {
-		$('#cargo').focus().css('border-color','red');
 		return;
 	}
 	if(telefono == null || telefono == '') {
-		$('#telefono').focus().css('border-color','red');
 		return;
 	}
+	if(contacto == false) {
+		  return;
+	}
+	validarCampos();
 	return;
 	$.ajax({
 		data  : { nombre_completo : nombre_completo,
-				  empresa 	      : empresa},
-		url   : 'Es/getModelo',
-		type  : 'POST',
-		dataType : 'json'
+				  empresa 	      : empresa,
+				  email 		  : email,
+				  pais 			  : pais,
+				  cargo 		  : cargo,
+				  telefono 		  : telefono,
+				  relacion 		  : relacion,
+				  contacto 		  : contacto},
+		url   : 'es/solicitarEstimacion',
+		type  : 'POST'
 	}).done(function(data){
 		try{
-		} catch (err){
-			msj('error',err.message);
-		}
+        	data = JSON.parse(data);
+        	if(data.error == 0){
+          		//location.href = 'Formulario Gracias';
+        	}else {
+        		return;
+        	}
+      } catch (err){
+        msj('error',err.message);
+      }
 	});
 }
 
-function soloLetras(e){
+function soloLetras(e) {
     key 	   = e.keyCode || e.which;
     tecla 	   = String.fromCharCode(key).toLowerCase();
     letras     = " áéíóúabcdefghijklmnñopqrstuvwxyz";
@@ -82,7 +95,7 @@ function soloLetras(e){
      }
  }
 
- function valida(e){
+ function valida(e) {
     tecla = (document.all) ? e.keyCode : e.which;
     //Tecla de retroceso para borrar, siempre la permite
     if (tecla==8){
@@ -351,64 +364,23 @@ $( document ).ready(function() {
 	});
 });
 
-function borrarFocus(dato) {
-	var nombre_completo = $('#nombre_completo').val();
-	var empresa  		= $('#empresa').val();
-	var email 	 		= $('#email').val();
-	var pais 	 		= $('#pais').val();
-	var cargo 	 		= $('#cargo').val();
-	var telefono 		= $('#telefono').val();
-	var notas 	 		= $('#notas').val();
-	//console.log($(':input[@type=text]'));
-	/*$('input[type=text]').each(function(){
-	// do something to a text or password input
-	var id = this.val != null ? $('#'+this.id).focus().css('border-color','') : $('#'+this.id).focus().css('border-color','red');
-	});*/
-	var input = $('.form-control').find('input');
-	if(input.val().length > 0){
-		input.focus().css('border-color','');
-	}
-	else{
-		input.focus().css('border-color','red');
-	}
-	/*if(nombre_completo != null || nombre_completo != '') {
-		$('#nombre_completo').focus().css('border-color','');
-	}
-	if(empresa != null || empresa != '') {
-		$('#empresa').focus().css('border-color','');
-	}
-	if(email != null || email != '') {
-		$('#email').focus().css('border-color','');
-	}
-	if(pais != null || pais != '') {
-		$('#pais').focus().css('border-color','');
-	}
-	if(cargo != null || cargo != '') {
-		$('#cargo').focus().css('border-color','');
-	}
-	if(telefono != null || telefono != '') {
-		$('#telefono').focus().css('border-color','');
-	}*/
-}
-
 function mostrarDatos() {
 	$.ajax({
 		url   : 'es/mostrarDatos',
 		type  : 'POST'
 	}).done(function(data){
-		try{
+		/*try{
         data = JSON.parse(data);
         if(data.error == 0){
-           //console.log(data.industria);
           /*$('#industria').text(data.industria);
            	$('#Tamanio').text(data.Tamanio);
            	$('#Prioridad').text(data.Prioridad);
            	$('#Infraestructura').text(data.Infraestructura);*/
-        }else {
+        /*}else {
         }
       } catch (err){
         msj('error',err.message);
-      }
+      }*/
 	});
 }
 
@@ -495,5 +467,30 @@ function selectFacturacion(id){
 	selectButton.click(function(){
 		Select.removeClass('aparecer');
 	})
+}
+
+function validarCampos(){
+	var $inputs = $('#form :input'); // Obtenemos los inputs de nuestro formulario
+	var formvalido = true; // Para saber si el form esta vacio 
+	$inputs.each(function() {  // Recorremos los inputs del formulario (uno a uno)
+		//console.log(this);
+		if(!isEmpty($(this).val())){ // Verificamos que el input este vacio 
+				$(this).css('border-color','red'); // Agregamos un fondo rojo si este esta vacio
+				formvalido = false;
+		}else{
+				$(this).css('border-color','red'); // quitamos el fondo rojo si este esta lleno
+		}
+	});
+	return formvalido; // retornamos segun corresponda
+}
+		 
+/*
+* Funcion que valida que un campo sea completado
+* @retun bool 
+*/
+function isEmpty(val){
+	if(jQuery.trim(val).length != 0)
+    	return false;
+		return true;
 }
 
