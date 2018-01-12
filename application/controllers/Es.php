@@ -8,10 +8,19 @@ class Es extends CI_Controller {
         $this->load->model('M_solicitud');
         $this->load->helper('utils');
         $this->load->helper("url");
+        $this->output->set_header('Last-Modified:'.gmdate('D, d M Y H:i:s').'GMT');
+        $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
+        $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
+        $this->output->set_header('Pragma: no-cache');
     }
 
 	public function index()
 	{
+        $this->session->unset_userdata('Industria');
+        $this->session->unset_userdata('Infraestructura');
+        $this->session->unset_userdata('Factura_anual');
+        $this->session->unset_userdata('Tamanio');
+        $this->session->unset_userdata('Prioridad');
 		$this->load->view('v_es');
 	}
 
@@ -31,10 +40,10 @@ class Es extends CI_Controller {
           	if($pantalla == 1) {
           		$idIdioma = $this->M_solicitud->getDatosPais($idioma);
           		$arrayInsert = array('Industria' => $datos,
-          						     'Id_pais' => $idIdioma);
+          						             'Id_pais' => $idIdioma);
             	$datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
             	$session = array('industria' => $datos,
-        					 	 'id_sol'    => $datoInsert['Id']);
+        					 	           'id_sol'    => $datoInsert['Id']);
             	$this->session->set_userdata($session);
           	}else {
           		if($pantalla == 2) {
@@ -54,6 +63,7 @@ class Es extends CI_Controller {
           		$this->M_solicitud->updateDatos($arrayUpdate, $_SESSION['id_sol'], 'solicitud', 'Id');
             	$this->session->set_userdata($session);
           	}
+            print_r($this->session->all_userdata());
             $data['error'] = EXIT_SUCCESS;
           }catch(Exception $e) {
            $data['msj'] = $e->getMessage();
@@ -65,12 +75,13 @@ class Es extends CI_Controller {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
-            $data['industria'] 		 = $_SESSION['industria'];
-            $data['Factura_anual']   = $_SESSION['Factura_anual'];
-			$data['Tamanio']   		 = $_SESSION['Tamanio'];
-			$data['Prioridad']       = $_SESSION['Prioridad'];
-			$data['Infraestructura'] = $_SESSION['Infraestructura'];
-			$data['error'] 			 = EXIT_SUCCESS;
+          $tamanio = $this->session->userdata('Tamanio') == null ? '-' : $this->session->userdata('Tamanio').' empleados';
+          $data['Industria']       = $this->session->userdata('industria') == null ? '-' : $this->session->userdata('industria');
+          $data['Factura_anual']   = $this->session->userdata('Factura_anual') == null ? '-' : $this->session->userdata('Factura_anual');
+  	      $data['Tamanio']   		   = $tamanio;
+  	      $data['Prioridad']       = $this->session->userdata('Prioridad') == null ? '-' : $this->session->userdata('Prioridad');
+  	      $data['Infraestructura'] = $this->session->userdata('Infraestructura') == null ? '-' : $this->session->userdata('Infraestructura');
+  	      $data['error'] 			     = EXIT_SUCCESS;
         } catch (Exception $e) {
             $data['msj'] = $e->getMessage();
         }

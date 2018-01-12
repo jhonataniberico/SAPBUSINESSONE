@@ -542,31 +542,31 @@
             				<h2 class="title-formulario m-b-10">Sus respuestas fueron:</h2>
             				<div class="col-xs-12 p-0">
             					<div class="div-respuestas">
-            						<p>Productos de consumo</p>
+            						<p id="industria">Productos de consumo</p>
             						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
             					</div>
             				</div>
             				<div class="col-xs-12 p-0">
             					<div class="div-respuestas">
-            						<p>100 - 500 empleados</p>
+            						<p id="tamanio">100 - 500 empleados</p>
             						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
             					</div>
             				</div>
             				<div class="col-xs-12 p-0">
             					<div class="div-respuestas">
-            						<p>1-3 Millones de D&oacute;lares</p>
+            						<p id="factura">1-3 Millones de D&oacute;lares</p>
             						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
             					</div>
             				</div>
             				<div class="col-xs-12 p-0">
             					<div class="div-respuestas">
-            						<p>An&aacute;lisis en tiempo real con SAP HANA</p>
+            						<p id="prioridad">An&aacute;lisis en tiempo real con SAP HANA</p>
             						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
             					</div>
             				</div>
             				<div class="col-xs-12 p-0">
             					<div class="div-respuestas">
-            						<p>Cloud</p>
+            						<p id="infraestructura">Cloud</p>
             						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
             					</div>
             				</div>

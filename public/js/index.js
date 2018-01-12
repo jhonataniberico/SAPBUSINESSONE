@@ -369,16 +369,18 @@ function mostrarDatos() {
 		url   : 'es/mostrarDatos',
 		type  : 'POST'
 	}).done(function(data){
-		/*try{
+		//try{
         data = JSON.parse(data);
         if(data.error == 0){
-          /*$('#industria').text(data.industria);
-           	$('#Tamanio').text(data.Tamanio);
-           	$('#Prioridad').text(data.Prioridad);
-           	$('#Infraestructura').text(data.Infraestructura);*/
-        /*}else {
+        	console.log(data);
+          	$('#industria').text(data.Industria);
+          	$('#factura').text(data.Factura_anual)
+           	$('#tamanio').text(data.Tamanio);
+           	$('#prioridad').text(data.Prioridad);
+           	$('#infraestructura').text(data.Infraestructura);
+        }else {
         }
-      } catch (err){
+      /*} catch (err){
         msj('error',err.message);
       }*/
 	});
