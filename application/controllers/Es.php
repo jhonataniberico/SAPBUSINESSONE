@@ -40,7 +40,7 @@ class Es extends CI_Controller {
           	if($pantalla == 1) {
           		$idIdioma = $this->M_solicitud->getDatosPais($idioma);
           		$arrayInsert = array('Industria' => $datos,
-          						             'Id_pais' => $idIdioma);
+          						             'Id_lenguaje' => $idIdioma);
             	$datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
             	$session = array('industria' => $datos,
         					 	           'id_sol'    => $datoInsert['Id']);
@@ -124,7 +124,7 @@ class Es extends CI_Controller {
                   					 'Contacto' 	     => $contacto);
           	$this->session->set_userdata($session);
 
-          	//ENVIAR EMAIL
+          	//ENVIAR EMAIL AL CLIENTE Y A LA EMPRESA
             /*$this->sendGmailCliente($email, $datoInsert['Id']);
           	$this->sendGmailSap($email, $datoInsert['Id']);*/
           	$data['msj'] = $datoInsert['msj'];
@@ -140,8 +140,6 @@ class Es extends CI_Controller {
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
       try {
-      	$datosUsuario = $this->M_solicitud->getDatosUsuario($id_usuario);
-      	//$nombre_completo = $datosUsuarios[0]->'nombre_completo';
         //cargamos la libreria email de ci
        $this->load->library("email");
        //configuracion para gmail

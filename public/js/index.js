@@ -485,11 +485,7 @@ function validarCampos(){
 				$(this).css('border-color',''); // quitamos el fondo rojo si este esta lleno
 		}
 	});
-
-	/*$("form :input").each(function() {
-	  $( this ).addClass( "foo" );
-	});*/
-	return formvalido; // retornamos segun corresponda
+	return formvalido; // retornamos según corresponda
 }
 		 
 /*

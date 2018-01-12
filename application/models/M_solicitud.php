@@ -37,8 +37,7 @@ class M_solicitud extends  CI_Model{
                   FROM lenguaje
                  WHERE Nombre LIKE ?";
         $result = $this->db->query($sql, array($Nombre));
-		//print_r($this->db->last_query());
-        return $result->row()->Id_pais;
+        return $result->row()->Id_lenguaje;
     }
 
     function getDatosUsuario($Id_usuario) {
