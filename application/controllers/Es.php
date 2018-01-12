@@ -14,8 +14,7 @@ class Es extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 
-	public function index()
-	{
+	public function index() {
     $this->session->unset_userdata('Industria');
     $this->session->unset_userdata('Infraestructura');
     $this->session->unset_userdata('Factura_anual');
@@ -25,7 +24,7 @@ class Es extends CI_Controller {
 	}
 
 	function saveDatos() {
-		$data['error'] = EXIT_ERROR;
+		    $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
           	$datos 	     = $this->input->post('global_datos');
@@ -87,13 +86,13 @@ class Es extends CI_Controller {
 	}
 
 	function solicitarEstimacion() {
-		$data['error'] = EXIT_ERROR;
+		    $data['error']  = EXIT_ERROR;
         $data['msj']   = null;
         try {
             $nombre_completo = $this->input->post('nombre_completo');
-          	$empresa    	 = $this->input->post('empresa');
+          	$empresa    	   = $this->input->post('empresa');
           	$email           = $this->input->post('email');
-          	$pais  			 = $this->input->post('pais');
+          	$pais  			     = $this->input->post('pais');
           	$cargo           = $this->input->post('cargo');
           	$telefono 	   	 = $this->input->post('telefono');
           	$relacion 	   	 = $this->input->post('relacion');
@@ -216,8 +215,8 @@ class Es extends CI_Controller {
 					<h1>Solicitó un registro a la plataforma de SAP<h1>
 				 </body>
 				</html>';
-       $this->email->message($texto);//AQUI SE INSERTA EL HTML
-       $this->email->send();
+        $this->email->message($texto);//AQUI SE INSERTA EL HTML
+        $this->email->send();
         $data['error'] = EXIT_SUCCESS;
       }catch (Exception $e){
       	$data['msj'] = $e->getMessage();
