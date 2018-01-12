@@ -7,7 +7,7 @@ class Es extends CI_Controller {
         parent::__construct();
         $this->load->model('M_solicitud');
         $this->load->helper('utils');
-        $this->load->helper("url");
+        $this->load->helper("url");//BORRAR CACHÉ DE LA PÁGINA
         $this->output->set_header('Last-Modified:'.gmdate('D, d M Y H:i:s').'GMT');
         $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
         $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
@@ -15,6 +15,7 @@ class Es extends CI_Controller {
     }
 
 	public function index() {
+    //ELIMINAR DATOS EN SESIÓN AL CARGAR LA PÁGINA
     $this->session->unset_userdata('Industria');
     $this->session->unset_userdata('Infraestructura');
     $this->session->unset_userdata('Factura_anual');
