@@ -72,13 +72,8 @@ function solicitarEstimacion() {
 		try{
         	data = JSON.parse(data);
         	if(data.error == 0){
-        		limpiarCampos();
-        		if(c_email == true) {
-					$('#c-email').parent().removeClass('is-checked');
-				}else if(c_telefono == true) {
-					$('#c-telefono').parent().removeClass('is-checked');
-				}else if(c_ambos == true) {
-					$('#c-ambos').parent().removeClass('is-checked');
+				if(confirmar == 1) {
+					limpiarCampos();
 				}
         	}else {
         		return;
@@ -506,7 +501,9 @@ function isEmpty(val){
 		return true;
 }
 
+var confirmar = 0;
 function functionConfirmar(){
+	confirmar = 1;
 	$('.mdl-card-confirmacion').addClass('confirmar');
 }
 function limpiarCampos() {
@@ -516,5 +513,19 @@ function limpiarCampos() {
 	var pais 	 		= $('#pais').val("");
 	var cargo 	 		= $('#cargo').val("");
 	var telefono 		= $('#telefono').val("");
-	var relacion		= $('#relacion').val("");
+	var relacion		= $('#relacion').val("0");
+	$('.selectpicker').selectpicker('refresh');
+	var c_email    		= $('#c-email').is(':checked');
+	var c_telefono    	= $('#c-telefono').is(':checked');
+	var c_ambos    		= $('#c-ambos').is(':checked');
+	var terminos		= $('#checkbox-1').is(':checked');
+
+
+	if(c_email == true) {
+		$('#c-email').parent().removeClass('is-checked');
+	}else if(c_telefono == true) {
+		$('#c-telefono').parent().removeClass('is-checked');
+	}else if(c_ambos == true) {
+		$('#c-ambos').parent().removeClass('is-checked');
+	}
 }
