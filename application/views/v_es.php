@@ -524,135 +524,141 @@
             		</div>
             	</div>
 	            <div class="mdl-container text-center">
-	            	<div class="mdl-card-confirmacion">
-            			<div class="mdl-respuestas text-left">
-            				<h2 class="title-formulario m-b-10">Sus respuestas fueron:</h2>
-            				<div class="col-xs-12 p-0">
-            					<div class="div-respuestas">
-            						<p id="industria">Productos de consumo</p>
-            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
-            					</div>
-            				</div>
-            				<div class="col-xs-12 p-0">
-            					<div class="div-respuestas">
-            						<p id="tamanio">100 - 500 empleados</p>
-            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
-            					</div>
-            				</div>
-            				<div class="col-xs-12 p-0">
-            					<div class="div-respuestas">
-            						<p id="factura">1-3 Millones de D&oacute;lares</p>
-            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
-            					</div>
-            				</div>
-            				<div class="col-xs-12 p-0">
-            					<div class="div-respuestas">
-            						<p id="prioridad">An&aacute;lisis en tiempo real con SAP HANA</p>
-            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
-            					</div>
-            				</div>
-            				<div class="col-xs-12 p-0">
-            					<div class="div-respuestas">
-            						<p id="infraestructura">Cloud</p>
-            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
-            					</div>
-            				</div>
-            				<div class="col-xs-12 p-0 text-right m-t-10">
-            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="ConfirmarRespuestas()">Confirmar respuestas</button>
-            				</div>
+	            	<div class="mdl-solicitud">
+		            	<div class="mdl-card-confirmacion">
+	            			<div class="mdl-respuestas text-left">
+	            				<h2 class="title-formulario m-b-10">Sus respuestas fueron:</h2>
+	            				<div class="col-xs-12 p-0">
+	            					<div class="div-respuestas">
+	            						<p id="industria">Productos de consumo</p>
+	            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
+	            					</div>
+	            				</div>
+	            				<div class="col-xs-12 p-0">
+	            					<div class="div-respuestas">
+	            						<p id="tamanio">100 - 500 empleados</p>
+	            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
+	            					</div>
+	            				</div>
+	            				<div class="col-xs-12 p-0">
+	            					<div class="div-respuestas">
+	            						<p id="factura">1-3 Millones de D&oacute;lares</p>
+	            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
+	            					</div>
+	            				</div>
+	            				<div class="col-xs-12 p-0">
+	            					<div class="div-respuestas">
+	            						<p id="prioridad">An&aacute;lisis en tiempo real con SAP HANA</p>
+	            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
+	            					</div>
+	            				</div>
+	            				<div class="col-xs-12 p-0">
+	            					<div class="div-respuestas">
+	            						<p id="infraestructura">Cloud</p>
+	            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
+	            					</div>
+	            				</div>
+	            				<div class="col-xs-12 p-0 text-right m-t-10">
+	            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="ConfirmarRespuestas()">Confirmar respuestas</button>
+	            				</div>
+		            		</div>
+		            		<div class="mdl-back-respuestas">
+	        					<div class="mdl-back-contenido">
+	        						<span>XX.000</span>
+	        						<p>empresas en nuestra regi&oacute;n utilizan SAP Business One</p>
+	        					</div>
+	        					<div class="mdl-back-contenido second">
+	        						<span>40 a 60%</span>
+	        						<p>de reducci&oacute;n en las cargas administrativas de su negocio</p>
+	        					</div>
+	        					<div class="mdl-back-contenido">
+	        						<span>X00+</span>
+	        						<p>partners especializados en SAP Business One para nuestra regi&oacute;n</p>
+	        					</div>
+		            		</div>
 	            		</div>
-	            		<div class="mdl-back-respuestas">
-        					<div class="mdl-back-contenido">
-        						<span>XX.000</span>
-        						<p>empresas en nuestra regi&oacute;n utilizan SAP Business One</p>
-        					</div>
-        					<div class="mdl-back-contenido second">
-        						<span>40 a 60%</span>
-        						<p>de reducci&oacute;n en las cargas administrativas de su negocio</p>
-        					</div>
-        					<div class="mdl-back-contenido">
-        						<span>X00+</span>
-        						<p>partners especializados en SAP Business One para nuestra regi&oacute;n</p>
-        					</div>
-	            		</div>
+	            		<form class="mdl-formulario text-left">
+	        				<h2 class="title-formulario m-b-10">Reg&iacute;strese para revisarlo juntos m&aacute;s en detalle:</h2>
+	        				<div class="col-sm-6">
+	        					<div class="mdl-input">
+								    <input type="text" class="form-control" id="nombre_completo" maxlength="50" onkeypress="return soloLetras(event);" onchange="validarCampos()" placeholder="Nombre Completo">
+								</div>
+	        				</div>
+	        				<div class="col-sm-6">
+	        					<div class="mdl-input">
+							    	<input type="text" class="form-control NEGRO_FONDO" id="cargo" maxlength="50" onkeypress="return soloLetras(event);"  onchange="validarCampos()" placeholder="Cargo">
+							  	</div>
+	        				</div>
+	        				<div class="col-sm-6">
+	        					<div class="mdl-input">
+									<input type="text" class="form-control" id="empresa" maxlength="50" onkeypress="return soloLetras(event);" onchange="validarCampos()" placeholder="Empresa">
+								</div>
+	        				</div>
+	        				<div class="col-sm-6">
+	        					<div class="mdl-input">
+									<input type="text" class="form-control" id="telefono" maxlength="7" onkeypress="return valida(event);"  onchange="validarCampos()" placeholder="Teléfono">
+								</div>
+	        				</div>
+	        				<div class="col-sm-6">
+	        					<div class="mdl-input">
+									<input type="email" class="form-control" id="email" maxlength="50" aria-describedby="emailHelp" placeholder="Email">
+								</div>
+	        				</div>
+	        				<div class="col-sm-6">
+	        					<div class="mdl-select mdl-standar">
+									<select class="selectpicker" id="relacion" name="relacion" title="Relación con SAP">
+										<option value="Cliente">Cliente</option>
+										<option value="Cliente potencial">Cliente potencial</option>
+										<option value="Consultor">Consultor</option>
+										<option value="Empleado SAP">Empleado SAP</option>
+										<option value="Estudiante">Estudiante</option>
+										<option value="Partner">Partner</option>
+										<option value="Partner potencial">Partner potencial</option>
+										<option value="Prensa/Analista">Prensa/Analista</option>
+									</select>
+								</div>
+	        				</div>
+	        				<div class="col-sm-6">
+	        					<div class="mdl-input">
+									<input type="text" class="form-control" id="pais" maxlength="100" onkeypress="return soloLetras(event);"  onchange="validarCampos()" placeholder="País">
+								</div>
+	        				</div>
+	        				<div class="col-sm-6">
+	        					<p class="text-contacto">Quiero ser contactado por representante de ventas:</p>
+	        					<div class="col-xs-4">
+	        						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="c-email">
+										<input type="radio" id="c-email" class="mdl-radio__button" name="options" value="1">
+										<span class="mdl-radio__label">Por Email</span>
+									</label>
+	        					</div>
+	        					<div class="col-xs-4">
+	        						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="c-telefono">
+										<input type="radio" id="c-telefono" class="mdl-radio__button" name="options" value="2">
+										<span class="mdl-radio__label">Por tel&eacute;fono</span>
+									</label>
+	        					</div>
+	        					<div class="col-xs-4">
+	        						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="c-ambos">
+										<input type="radio" id="c-ambos" class="mdl-radio__button" name="options" value="3">
+										<span class="mdl-radio__label">Ambos</span>
+									</label>
+	        					</div>
+	        				</div>
+	        				<div class="col-sm-6 mdl-label">
+	    						<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+									<input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
+									<span class="mdl-checkbox__label f-s-14" style="">He leido y acepto los <a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" style="">Términos y condiciones de SAP</a></span>
+								</label>
+	        				</div>
+	        				<div class="col-xs-12 text-right m-t-25">
+								<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="solicitarEstimacion();">Solicitar estimaci&oacute;n</button>
+	        				</div>
+	            		</form>
             		</div>
-            		<form class="mdl-formulario text-left">
-        				<h2 class="title-formulario m-b-10">Reg&iacute;strese para revisarlo juntos m&aacute;s en detalle:</h2>
-        				<div class="col-sm-6">
-        					<div class="mdl-input">
-							    <input type="text" class="form-control" id="nombre_completo" maxlength="50" onkeypress="return soloLetras(event);" onchange="validarCampos()" placeholder="Nombre Completo">
-							</div>
-        				</div>
-        				<div class="col-sm-6">
-        					<div class="mdl-input">
-						    	<input type="text" class="form-control NEGRO_FONDO" id="cargo" maxlength="50" onkeypress="return soloLetras(event);"  onchange="validarCampos()" placeholder="Cargo">
-						  	</div>
-        				</div>
-        				<div class="col-sm-6">
-        					<div class="mdl-input">
-								<input type="text" class="form-control" id="empresa" maxlength="50" onkeypress="return soloLetras(event);" onchange="validarCampos()" placeholder="Empresa">
-							</div>
-        				</div>
-        				<div class="col-sm-6">
-        					<div class="mdl-input">
-								<input type="text" class="form-control" id="telefono" maxlength="7" onkeypress="return valida(event);"  onchange="validarCampos()" placeholder="Teléfono">
-							</div>
-        				</div>
-        				<div class="col-sm-6">
-        					<div class="mdl-input">
-								<input type="email" class="form-control" id="email" maxlength="50" aria-describedby="emailHelp" placeholder="Email">
-							</div>
-        				</div>
-        				<div class="col-sm-6">
-        					<div class="mdl-select mdl-standar">
-								<select class="selectpicker" id="relacion" name="relacion" title="Relación con SAP">
-									<option value="Cliente">Cliente</option>
-									<option value="Cliente potencial">Cliente potencial</option>
-									<option value="Consultor">Consultor</option>
-									<option value="Empleado SAP">Empleado SAP</option>
-									<option value="Estudiante">Estudiante</option>
-									<option value="Partner">Partner</option>
-									<option value="Partner potencial">Partner potencial</option>
-									<option value="Prensa/Analista">Prensa/Analista</option>
-								</select>
-							</div>
-        				</div>
-        				<div class="col-sm-6">
-        					<div class="mdl-input">
-								<input type="text" class="form-control" id="pais" maxlength="100" onkeypress="return soloLetras(event);"  onchange="validarCampos()" placeholder="País">
-							</div>
-        				</div>
-        				<div class="col-sm-6">
-        					<p class="text-contacto">Quiero ser contactado por representante de ventas:</p>
-        					<div class="col-xs-4">
-        						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="c-email">
-									<input type="radio" id="c-email" class="mdl-radio__button" name="options" value="1">
-									<span class="mdl-radio__label">Por Email</span>
-								</label>
-        					</div>
-        					<div class="col-xs-4">
-        						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="c-telefono">
-									<input type="radio" id="c-telefono" class="mdl-radio__button" name="options" value="2">
-									<span class="mdl-radio__label">Por tel&eacute;fono</span>
-								</label>
-        					</div>
-        					<div class="col-xs-4">
-        						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="c-ambos">
-									<input type="radio" id="c-ambos" class="mdl-radio__button" name="options" value="3">
-									<span class="mdl-radio__label">Ambos</span>
-								</label>
-        					</div>
-        				</div>
-        				<div class="col-sm-6 mdl-label">
-    						<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-								<input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
-								<span class="mdl-checkbox__label f-s-14" style="">He leido y acepto los <a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" style="">Términos y condiciones de SAP</a></span>
-							</label>
-        				</div>
-        				<div class="col-xs-12 text-right m-t-25">
-							<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="solicitarEstimacion();">Solicitar estimaci&oacute;n</button>
-        				</div>
-            		</form>
+            		<div class="mdl-agradecimiento">
+            			<h2>Gracias por su inter&eacute;s</h2>
+            			<p>Un representante de SAP se pondr&aacute; en contacto con Usted para ayudarlo a dar el primer paso.</p>
+            		</div>
 	        	</div>
 	        </div>
 	    </div>

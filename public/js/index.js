@@ -83,6 +83,8 @@ function solicitarEstimacion() {
         msj('error',err.message);
       }
 	});
+	$('.mdl-solicitud').addClass('fadeOutLeft');
+	console.log("entro");
 }
 
 function soloLetras(e) {
@@ -502,8 +504,8 @@ function isEmpty(val){
 		return true;
 }
 
-var confirmar = 0;
-function functionConfirmar(){
+var confirmar = 0;	
+function ConfirmarRespuestas(){
 	confirmar = 1;
 	$('.mdl-card-confirmacion').addClass('confirmar');
 }
