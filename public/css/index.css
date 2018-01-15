@@ -293,12 +293,31 @@ span.number{
 	position: absolute;
 	width: 100%;
 }
+.mdl-card-confirmacion .mdl-respuestas,
+.mdl-card-confirmacion .mdl-back-respuestas{
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-transition: -moz-transform 500ms;
+	-o-transition: -o-transform 500ms;
+	-webkit-transition: -webkit-transform 500ms;
+	transition: transform 500ms;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+.mdl-card-confirmacion .mdl-respuestas,
 .flip-card .card-front {
 	-moz-transform: perspective(600) rotateY(0);
 	-webkit-transform: perspective(600) rotateY(0);
 	transform: perspective(600) rotateY(0);
 	z-index: 900;
 }
+.mdl-card-confirmacion .mdl-back-respuestas,
 .flip-card .card-back {
 	-moz-transform: rotateY(-180deg);
 	-webkit-transform: rotateY(-180deg);
@@ -647,15 +666,42 @@ span.number{
 /*FORMULARIO*/
 .mdl-formulario,
 .mdl-respuestas{
-	display: inline-block;
 	border-radius: 10px;
 	border: 1px solid #F8B22C;
-    margin: 5px;
     padding: 30px 25px;
 }
-.mdl-respuestas{
+.mdl-formulario,
+.mdl-card-confirmacion{
+	display: inline-block;
+	margin: 5px;
+}
+.mdl-back-respuestas{
+	text-align: left;
+    padding: 25px;
+}
+.mdl-back-respuestas .mdl-back-contenido{
+	padding: 15px 0;
+}
+.mdl-back-respuestas .mdl-back-contenido.second{
+	border-top: 1px solid #F8B22C;
+	border-bottom: 1px solid #F8B22C;
+}
+.mdl-back-respuestas span{
+	font-size: 60px;
+    font-family: 'BentonSansBold';
+    color: #F8B22C;
+    line-height: 1;
+}
+.mdl-back-respuestas p{
+	font-size: 20px;
+	margin: 0;
+}
+.mdl-card-confirmacion{
 	max-width: 400px;
 	width: 100%;
+	display: inline-block;
+    position: relative;
+    transform-style: preserve-3d;
 }
 .mdl-formulario{
     width: 100%;
