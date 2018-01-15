@@ -72,6 +72,14 @@ function solicitarEstimacion() {
 		try{
         	data = JSON.parse(data);
         	if(data.error == 0){
+        		limpiarCampos();
+        		if(c_email == true) {
+					$('#c-email').parent().removeClass('is-checked');
+				}else if(c_telefono == true) {
+					$('#c-telefono').parent().removeClass('is-checked');
+				}else if(c_ambos == true) {
+					$('#c-ambos').parent().removeClass('is-checked');
+				}
         	}else {
         		return;
         	}
@@ -500,4 +508,13 @@ function isEmpty(val){
 
 function functionConfirmar(){
 	$('.mdl-card-confirmacion').addClass('confirmar');
+}
+function limpiarCampos() {
+	var nombre_completo = $('#nombre_completo').val("");
+	var empresa  		= $('#empresa').val("");
+	var email 	 		= $('#email').val("");
+	var pais 	 		= $('#pais').val("");
+	var cargo 	 		= $('#cargo').val("");
+	var telefono 		= $('#telefono').val("");
+	var relacion		= $('#relacion').val("");
 }
