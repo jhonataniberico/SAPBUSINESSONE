@@ -241,6 +241,13 @@ span.number{
 	-o-transition: max-width .3s linear;
 	transition: max-width .3s linear;
 }
+.mdl-tablet .mdl-card-question{
+	max-width: 230px;
+}
+.mdl-tablet .mdl-card-question .flip-card{
+	width: 230px;
+    height: 210px;
+}
 .mdl-card-question.visi-hidden{
 	display: none;
 }
@@ -495,41 +502,56 @@ span.number{
     color: #FFFFFF;
     outline: none !important;
 }
+.mdl-select.mdl-standar .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+	width: 100%;
+}
+.mdl-select.mdl-standar .bootstrap-select .btn-default{
+	background-color: #FFFFFF;
+	color: #757575;
+    height: 46px;
+	border-radius: 0;
+}
 .mdl-idioma .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
 	width: 105px;
 	margin-top: 30px;
 }
-.mdl-select .bootstrap-select .btn-default.active, 
-.mdl-select .bootstrap-select .btn-default:active, 
-.mdl-select .bootstrap-select.open>.dropdown-toggle.btn-default,
-.mdl-select .bootstrap-select .btn-default:focus,
-.mdl-select .bootstrap-select .btn-default{
+.mdl-tablet .mdl-select .bootstrap-select .btn-default.active, 
+.mdl-tablet .mdl-select .bootstrap-select .btn-default:active, 
+.mdl-tablet .mdl-select .bootstrap-select.open>.dropdown-toggle.btn-default,
+.mdl-tablet .mdl-select .bootstrap-select .btn-default:focus,
+.mdl-tablet .mdl-select .bootstrap-select .btn-default{
 	border: 1px solid #F8B22C;
 	border-radius: 0;
 	color: #FFFFFF;
 }
-.mdl-select .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+.mdl-tablet .mdl-select .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
 	width: 210px;
 }
-.mdl-select .bootstrap-select.btn-group .dropdown-menu li a,
-.mdl-select .bootstrap-select.btn-group .dropdown-toggle .filter-option{
+.mdl-tablet .mdl-select .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+	width: 230px;
+}
+.mdl-tablet .mdl-select .bootstrap-select.btn-group .dropdown-menu li a,
+.mdl-tablet .mdl-select .bootstrap-select.btn-group .dropdown-toggle .filter-option{
 	text-align: center;
 	color: #FFFFFF;
     font-family: 'BentonSansBold';
     font-size: 16px;
     outline: none;
 }
-.mdl-select .bootstrap-select.btn-group .dropdown-menu li{
+.mdl-tablet .mdl-select .bootstrap-select.btn-group .dropdown-menu li{
     border: 1px solid #F8B22C;
-    margin: 8px 0;
+    margin: 3px 0;
 }
-.mdl-select .bootstrap-select.btn-group .dropdown-menu{
+.mdl-tablet .mdl-select .bootstrap-select.btn-group .dropdown-menu{
 	background-color: transparent;
 	padding: 0;
 	margin: 0;
 }
 .mdl-select .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
 	background-color: #F8B22C;
+}
+.mdl-select.mdl-standar .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+	color: #FFFFFF;
 }
 .mdl-select .dropdown-menu>li>a{
     padding: 6px 10px;
@@ -541,6 +563,9 @@ span.number{
 }
 .mdl-select{
     margin: 10px 0;
+}
+.mdl-select.mdl-standar{
+	margin: 5px 0;
 }
 /*BARRA SCROLL*/
 ::-webkit-scrollbar-track {
@@ -680,6 +705,9 @@ span.number{
 	background-color: #4983B6;
 	color: #FFFFFF;
 }
+.button-confirmar:hover{
+	background-color: #4983B6;
+}
 .button-confirmar{
 	background-color: #4983B6;
 	color: #FFFFFF;
@@ -717,6 +745,7 @@ span.number{
 .mdl-formulario .col-xs-4{
 	padding: 0 5px;
 }
+/*COMPONENTES MATERIAL*/
 .mdl-label .mdl-checkbox{
     max-width: 235px;
 }
@@ -730,6 +759,16 @@ span.number{
 }
 .mdl-label .mdl-checkbox__box-outline{
     border: 2px solid #FFFFFF;
+}
+.mdl-checkbox.is-checked .mdl-checkbox__box-outline,
+.mdl-radio.is-checked .mdl-radio__outer-circle{
+    border: 2px solid #4983B6;
+}
+.mdl-checkbox__ripple-container .mdl-ripple,
+.mdl-checkbox.is-checked .mdl-checkbox__tick-outline,
+.mdl-radio__ripple-container .mdl-ripple,
+.mdl-radio__inner-circle{
+	background: #4983B6;
 }
 @media (max-width: 1200px){
 	.mdl-container.mdl-ipad{

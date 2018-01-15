@@ -444,7 +444,7 @@ function operar(id,tipo) {
 		}else if(i == 1) {
 			$('#textOperar').text('Seleccione');
 			divIncrement.removeClass('select-increment');
-			$('.mdl-select').removeClass('select-increment');
+			$('.mdl-tablet').find('.mdl-select').removeClass('select-increment');
 			cardSelec.removeClass('aparecer');
 			$('.contenido').removeClass('aparecer');
 			cardHidden.fadeOut(400);
@@ -465,7 +465,7 @@ function selectFacturacion(id){
 		$('.fp-next').removeClass('arrow-block');
 	}
 	$('.contenido').removeClass('aparecer');
-	$('.mdl-select').addClass('select-increment');
+	$('.mdl-tablet').find('.mdl-select').addClass('select-increment');
 	var selectButton = $('#'+id).parents('.mdl-select .btn-group').find('button');
 	var Select       = $('#'+id).parents('.mdl-card-question').find('.contenido');
 	Select.addClass('aparecer');

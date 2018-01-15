@@ -588,16 +588,18 @@
 								</div>
             				</div>
             				<div class="col-sm-6">
-								<select class="selectpicker" id="relacion" name="relacion" title="Relación con SAP">
-									<option value="Cliente">Cliente</option>
-									<option value="Cliente potencial">Cliente potencial</option>
-									<option value="Consultor">Consultor</option>
-									<option value="Empleado SAP">Empleado SAP</option>
-									<option value="Estudiante">Estudiante</option>
-									<option value="Partner">Partner</option>
-									<option value="Partner potencial">Partner potencial</option>
-									<option value="Prensa/Analista">Prensa/Analista</option>
-								</select>
+            					<div class="mdl-select mdl-standar">
+									<select class="selectpicker" id="relacion" name="relacion" title="Relación con SAP">
+										<option value="Cliente">Cliente</option>
+										<option value="Cliente potencial">Cliente potencial</option>
+										<option value="Consultor">Consultor</option>
+										<option value="Empleado SAP">Empleado SAP</option>
+										<option value="Estudiante">Estudiante</option>
+										<option value="Partner">Partner</option>
+										<option value="Partner potencial">Partner potencial</option>
+										<option value="Prensa/Analista">Prensa/Analista</option>
+									</select>
+								</div>
             				</div>
             				<div class="col-sm-6">
             					<div class="mdl-input">
@@ -632,7 +634,7 @@
 								</label>
             				</div>
             				<div class="col-xs-12 text-right">
-    							<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="solicitarEstimacion();">Solicitar estimaci&oacute;n</button>
+    							<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="solicitarEstimacion();">Solicitar estimaci&oacute;n</button>
             				</div>
 	            		</form>
 	            	</div>
