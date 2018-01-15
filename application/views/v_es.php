@@ -523,7 +523,7 @@
         				<h2>tenemos en mente una soluci&oacute;n ideal para su negocio.</h2>
             		</div>
             	</div>
-	            <div class="mdl-container text-center">
+	            <div class="mdl-container relative text-center">
 	            	<div class="mdl-solicitud">
 		            	<div class="mdl-card-confirmacion">
 	            			<div class="mdl-respuestas text-left">

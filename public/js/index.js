@@ -83,8 +83,6 @@ function solicitarEstimacion() {
         msj('error',err.message);
       }
 	});
-	$('.mdl-solicitud').addClass('fadeOutLeft');
-	console.log("entro");
 }
 
 function soloLetras(e) {
@@ -533,5 +531,11 @@ function limpiarCampos() {
 }
 
 function enviarGracias() {
-	
+	$('.mdl-solicitud').addClass('animated fadeOutLeft');
+	$('.mdl-agradecimiento').addClass('animated fadeInRight');
+	$('.fp-controlArrow.fp-prev').css("display","none");
+	$('.question').css("display","none");
+	setTimeout(function(){ 
+		location.reload();
+	}, 5000);
 }
