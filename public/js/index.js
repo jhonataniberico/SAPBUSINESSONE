@@ -498,3 +498,6 @@ function isEmpty(val){
 		return true;
 }
 
+function functionConfirmar(){
+	$('.mdl-card-confirmacion').addClass('confirmar');
+}

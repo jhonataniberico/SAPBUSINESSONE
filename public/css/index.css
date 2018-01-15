@@ -325,6 +325,7 @@ span.number{
 	z-index: 800;
 	background-color: #F8B22C;
 }
+.mdl-card-confirmacion.confirmar .mdl-respuestas,
 .flip-card:hover .card-front {
 	-moz-transform: rotateY(180deg);
 	-ms-transform: rotateY(180deg);
@@ -341,6 +342,7 @@ span.number{
 	transform: rotateY(0);
 	cursor: default;
 }
+.mdl-card-confirmacion.confirmar .mdl-back-respuestas,
 .flip-card:hover .card-back {
 	z-index: 950;
 	-moz-transform: rotateY(0deg);
@@ -677,7 +679,8 @@ span.number{
 }
 .mdl-back-respuestas{
 	text-align: left;
-    padding: 25px;
+    padding: 5px 25px;
+    background-color: transparent !important;
 }
 .mdl-back-respuestas .mdl-back-contenido{
 	padding: 15px 0;
@@ -702,6 +705,8 @@ span.number{
 	display: inline-block;
     position: relative;
     transform-style: preserve-3d;
+    height: 417px;
+    vertical-align: top;
 }
 .mdl-formulario{
     width: 100%;

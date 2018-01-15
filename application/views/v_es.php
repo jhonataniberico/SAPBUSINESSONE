@@ -557,7 +557,7 @@
             					</div>
             				</div>
             				<div class="col-xs-12 p-0 text-right m-t-10">
-            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar">Confirmar respuestas</button>
+            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="functionConfirmar()">Confirmar respuestas</button>
             				</div>
 	            		</div>
 	            		<div class="mdl-back-respuestas">
