@@ -74,6 +74,7 @@ function solicitarEstimacion() {
         	if(data.error == 0){
 				if(confirmar == 1) {
 					limpiarCampos();
+					enviarGracias();
 				}
         	}else {
         		return;
@@ -520,7 +521,6 @@ function limpiarCampos() {
 	var c_ambos    		= $('#c-ambos').is(':checked');
 	var terminos		= $('#checkbox-1').is(':checked');
 
-
 	if(c_email == true) {
 		$('#c-email').parent().removeClass('is-checked');
 	}else if(c_telefono == true) {
@@ -528,4 +528,8 @@ function limpiarCampos() {
 	}else if(c_ambos == true) {
 		$('#c-ambos').parent().removeClass('is-checked');
 	}
+}
+
+function enviarGracias() {
+	
 }
