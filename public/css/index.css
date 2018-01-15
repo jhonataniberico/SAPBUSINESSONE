@@ -195,7 +195,7 @@ p{
 }
 /*QUESTIONS*/
 .question{
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
 span.number{
 	color: #F8B22C;
@@ -207,6 +207,7 @@ span.number{
 .question h2{
 	display: inline-block;
 	text-align: left;
+	margin: 0;
 }
 .question-respuestas{
 	display: inline-block;
@@ -567,7 +568,7 @@ span.number{
     margin: 3px 0;
 }
 .mdl-tablet .mdl-select .bootstrap-select.btn-group .dropdown-menu{
-	background-color: transparent;
+	background-color: #000000;
 	padding: 0;
 	margin: 0;
 }
@@ -713,7 +714,7 @@ span.number{
 }
 .mdl-formulario{
     width: 100%;
-    max-width: calc(100% - 425px);
+    max-width: calc(100% - 520px);
 }
 .mdl-agradecimiento{
     opacity: 0;
@@ -819,6 +820,10 @@ span.number{
 .mdl-label .mdl-checkbox,
 .mdl-formulario .mdl-radio{
 	font-family: 'BentonSansRegular';
+}
+.mdl-formulario .mdl-radio{
+	font-size: 14.5px;
+	font-family: 'BentonSansLight';
 }
 .mdl-formulario .col-xs-4{
 	padding: 0 5px;
@@ -1099,9 +1104,77 @@ span.number{
 	    right: calc(0% + 55px);
 	}
 }
-
+@media (min-width: 768px) and (max-height: 750px){
+	.question h2{
+		font-size: 35px;
+	}
+	span.number{
+		font-size: 50px;
+	}
+	.question{
+		margin-bottom: 15px;
+	}
+	.header-left{
+		padding: 10px 0 10px 40px;
+	}
+	.header-right{
+		height: 68px;
+	}
+	.mdl-idioma .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+		margin-top: 20px;
+	}
+	.fondo-bottom img{
+		max-width: 1050px;
+	}
+	.mdl-container{
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+	.logo-home{
+		max-width: 280px;
+	}
+	.title-home{
+		font-size: 36px;
+	}
+	.flip-card{
+		height: 185px;
+	}
+	.mdl-card-question .card-front img{
+		max-width: 120px;
+	}
+	.mdl-tablet .mdl-card-question{
+		max-width: 220px;
+	}
+	.mdl-tablet .mdl-card-question .flip-card {
+	    width: 220px;
+	    height: 185px;
+	}
+	.mdl-tablet .mdl-select .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+		width: 220px;
+	}
+	.mdl-tablet .mdl-select .bootstrap-select.btn-group .dropdown-menu li a, .mdl-tablet .mdl-select .bootstrap-select.btn-group .dropdown-toggle .filter-option{
+		font-size: 14px;
+	}
+}
+@media (max-width: 1140px) and (max-height: 900px){
+	.mdl-card-question .contenido{
+		display: none;
+	}
+}
 @media (max-width: 420px) and (max-height: 640px){
 	.mdl-card-question .contenido{
 		display: none;
+	}
+}
+@media (max-width: 1280px) and (max-height: 800px){
+	.fondo-bottom img{
+		max-width: 1000px;
+	}
+	.question{
+		margin-bottom: 20px;
+	}
+	.mdl-container{
+		margin-left: 25px;
+		margin-right: 25px;
 	}
 }
