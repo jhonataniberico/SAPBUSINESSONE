@@ -149,7 +149,7 @@ function guardarDatos(id,datos) {
 	var buttonToggle = $('#'+id+'.select-prioridad');
 	var cardSelect   = $('#'+id+'.select-one').parent().find('.contenido');
 	var cardToggle   = $('#'+id+'.select-prioridad').parent().find('.contenido');
-	global_datos     = datos;	
+	global_datos     = datos;
 	$('.contenido').removeClass('aparecer');
 	$('.content-card').find('.select-one').removeClass('button-select');
 	buttonSelect.addClass('button-select');
@@ -200,6 +200,9 @@ function saveDatos(pantalla) {
 		type  : 'POST'
 	}).done(function(data){
 		try{
+			if(pantalla == 4) {
+				mostrarDatos();
+			}
 		} catch (err){
 			msj('error',err.message);
 		}
@@ -291,7 +294,6 @@ $( document ).ready(function() {
     	}
     	if($('body').attr('class') == 'fp-viewing-0-4') {
     		saveDatos(4);
-    		mostrarDatos();
     		var id_button = $('.mdl-card-question .content-card').find('.select-infraestructura.select-one.button-select').attr('id');;
     		array_ids.push(id_button);
     		if(array_ids.length != 0) {

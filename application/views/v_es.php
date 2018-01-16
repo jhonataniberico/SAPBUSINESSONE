@@ -553,7 +553,7 @@
 	            				</div>
 	            				<div class="col-xs-12 p-0">
 	            					<div class="div-respuestas">
-	            						<p id="infraestructura">Cloud</p>
+	            						<p id="infraestructura"></p>
 	            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
 	            					</div>
 	            				</div>

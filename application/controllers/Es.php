@@ -28,6 +28,7 @@ class Es extends CI_Controller {
 		    $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
+            $this->session->unset_userdata('Infraestructura');
           	$datos 	     = $this->input->post('global_datos');
           	$pantalla    = $this->input->post('pantalla');
           	$idioma      = $this->input->post('idioma');
@@ -54,9 +55,9 @@ class Es extends CI_Controller {
           			if($pantalla == 3) {
           				$arrayUpdate = array($columna => $datos_prio);
           				$session     = array($columna => $datos_prio);
-          			}else {
+          			}else if($pantalla == 4){
           				$arrayUpdate = array($columna => $datos);
-          				$session     = array($columna => $datos);
+          				$session     = array('Infraestructura' => $datos);
           			}
           		}
           		$this->M_solicitud->updateDatos($arrayUpdate, $_SESSION['id_sol'], 'solicitud', 'Id');
