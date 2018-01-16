@@ -45,7 +45,7 @@ p{
 .bottom-right p{
     margin: 0;
     font-family: 'BentonSansRegular';
-    font-size: 24px;
+    font-size: 20px;
 }
 .fp-viewing-0-3 .bottom-right{
 	opacity: 1;
@@ -187,7 +187,7 @@ p{
 	border-left: 1px solid #FFFFFF;
 	padding-left: 20px;
 	vertical-align: middle;
-    font-size: 24px;
+    font-size: 21px;
 }
 .logo-header{
 	max-width: 140px;
@@ -199,7 +199,7 @@ p{
 }
 span.number{
 	color: #F8B22C;
-    font-size: 75px;
+    font-size: 60px;
     font-weight: 100;
     margin-right: 10px;
     display: inline-block;
@@ -208,6 +208,7 @@ span.number{
 	display: inline-block;
 	text-align: left;
 	margin: 0;
+	font-size: 38px;
 }
 .question-respuestas{
 	display: inline-block;
@@ -223,9 +224,13 @@ span.number{
 .question-respuestas p{
 	margin: 0;
     padding: 0;
-    color: #F8B22C;
-    font-size: 38px;
-    line-height: 36px;
+    font-size: 32px;
+    line-height: 32px;
+    max-width: 800px;
+    color: #FFFFFF;
+}
+.question-respuestas p span{
+	color: #F8B22C;
 }
 /*FULLPAGE*/
 .fp-controlArrow.fp-prev{
@@ -360,8 +365,8 @@ span.number{
 .flip-card .card-back label{
     font-family: 'BentonSansLight';
     color: #000000;
-    line-height: 22px;
-    font-size: 17.5px;
+    line-height: 21px;
+    font-size: 17px;
     padding: 25px 15px;
     height: 162px;
     text-align: left;
@@ -412,9 +417,9 @@ span.number{
     display: inline-block;
     width: 100%;
     font-family: 'BentonSansBold';
-    font-size: 18px;
+    font-size: 16px;
     vertical-align: middle;
-    line-height: 32px;
+    line-height: 29px;
 }
 .content-card .select-empleados button i{
 	color: #FFFFFF;
@@ -492,7 +497,9 @@ span.number{
 .mdl-card-question .card-front p{
     color: #FFFFFF;
     line-height: 18px;
-    font-size: 16px;
+    font-size: 14px;
+    max-width: 152px;
+    margin: auto;
 }
 
 .mdl-card-question .card-back i,
@@ -560,8 +567,11 @@ span.number{
 	text-align: center;
 	color: #FFFFFF;
     font-family: 'BentonSansBold';
-    font-size: 16px;
+    font-size: 15px;
     outline: none;
+}
+.mdl-tablet .mdl-select .bootstrap-select.btn-group .dropdown-toggle .filter-option{
+	font-size: 18px;
 }
 .mdl-tablet .mdl-select .bootstrap-select.btn-group .dropdown-menu li{
     border: 1px solid #F8B22C;
@@ -674,7 +684,7 @@ span.number{
 .mdl-respuestas{
 	border-radius: 10px;
 	border: 1px solid #F8B22C;
-    padding: 30px 25px;
+    padding: 25px;
 }
 .mdl-formulario,
 .mdl-card-confirmacion{
@@ -683,7 +693,7 @@ span.number{
 }
 .mdl-back-respuestas{
 	text-align: left;
-    padding: 5px 25px;
+    padding: 25px;
     background-color: transparent !important;
 }
 .mdl-back-respuestas .mdl-back-contenido{
@@ -694,13 +704,13 @@ span.number{
 	border-bottom: 1px solid #F8B22C;
 }
 .mdl-back-respuestas span{
-	font-size: 60px;
+	font-size: 45px;
     font-family: 'BentonSansBold';
     color: #F8B22C;
     line-height: 1;
 }
 .mdl-back-respuestas p{
-	font-size: 20px;
+	font-size: 18px;
 	margin: 0;
 }
 .mdl-card-confirmacion{
@@ -733,15 +743,15 @@ span.number{
 .mdl-agradecimiento h2{
     font-family: 'BentonSansBold';
     color: #F8B22C;
-    font-size: 70px;
-    margin-bottom: 40px;
+    font-size: 60px;
+    margin-bottom: 20px;
 }
 .mdl-agradecimiento p{
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 28px;
+    line-height: 32px;
 }
 .title-formulario{
-	font-size: 24px;
+	font-size: 20px;
     margin: 0;
     line-height: 24px;
 }
@@ -760,7 +770,7 @@ span.number{
     width: 100%;
     margin: 0;
     font-family: 'BentonSansRegular';
-    font-size: 18px;
+    font-size: 15px;
     line-height: 18px;
     vertical-align: middle;
 }
@@ -802,7 +812,7 @@ span.number{
 	border-radius: 0;
     height: 46px;
     padding: 6px 15px;
-    font-size: 18px;
+    font-size: 15px;
     font-family: 'BentonSansRegular';
 }
 .mdl-formulario .col-sm-6{
@@ -813,7 +823,7 @@ span.number{
     border-radius: 0;
 }
 .mdl-formulario .text-contacto{
-    font-size: 18px;
+    font-size: 15px;
     margin: 5px 0;
     line-height: 20px;
 }
@@ -822,7 +832,7 @@ span.number{
 	font-family: 'BentonSansRegular';
 }
 .mdl-formulario .mdl-radio{
-	font-size: 14.5px;
+	font-size: 12px;
 	font-family: 'BentonSansLight';
 }
 .mdl-formulario .col-xs-4{

@@ -506,6 +506,7 @@ var confirmar = 0;
 function ConfirmarRespuestas(){
 	confirmar = 1;
 	$('.mdl-card-confirmacion').addClass('confirmar');
+	$('.fp-controlArrow.fp-prev').css("display","none");
 }
 function limpiarCampos() {
 	var nombre_completo = $('#nombre_completo').val("");

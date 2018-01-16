@@ -271,7 +271,7 @@
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
-	            				<label>Aproveche la nube para concentrarse en crecer, y no en implementar y gestionar su TI.</label>
+	            				<label>Aprovechar la nube para concentrarse en crecer, y no en implementar y gestionar su TI.</label>
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
@@ -297,7 +297,7 @@
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
-	            				<label>Ofrezca a los empleados m&oacute;viles acceso al software a trav&eacute;s de una aplicaci&oacute;n m&oacute;vil intuitiva.</label>
+	            				<label>Ofrecer a los empleados acceso al software a trav&eacute;s de una aplicaci&oacute;n m&oacute;vil intuitiva.</label>
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
@@ -323,7 +323,7 @@
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
-	            				<label>Con el poder de SAP HANA disminuya en un 70% sus tiempos de an&aacute;lisis.</label>
+	            				<label>Con el poder de <br>SAP HANA se puede disminuir en un 70% sus tiempos de an&aacute;lisis.</label>
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
@@ -349,7 +349,7 @@
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
-	            				<label>Anticipe resultados con anal&iacute;ticas predictivas y dele el rumbo indicado a su negocio.</label>
+	            				<label>Anticipar resultados con anal&iacute;tica predictiva y darle el rumbo indicado a su negocio.</label>
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
@@ -375,7 +375,7 @@
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
-	            				<label>Cuente con un aliado, para afrontar los desaf&iacute;os de la era digital hacia la conquista de sus metas.</label>
+	            				<label>Contar con un aliado, para afrontar los desaf&iacute;os de la era digital y conquistar sus metas.</label>
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
@@ -401,7 +401,7 @@
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
-	            				<label>Cree informes r&aacute;pidos y precisos sobre env&iacute;os entrantes y salientes, inventario y ubicaciones de productos.</label>
+	            				<label style="font-size: 16px;">Crear informes r&aacute;pidos y precisos sobre env&iacute;os entrantes y salientes, inventarios y ubicaciones de productos.</label>
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
@@ -427,7 +427,7 @@
 	        <div class="slide text-center">
 	        	<div class="question">
             		<span class="number">04/05</span>
-            		<h2>¿Que tipo de infraestructura utiliza&#63;</h2>
+            		<h2>¿Que tipo de infraestructura est&aacute; buscando&#63;</h2>
             	</div>
 	            <div class="mdl-container mdl-flex text-center">
 	            	<div class="mdl-card-question">
@@ -438,7 +438,7 @@
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
-	            				<label>Implementarlo sobre su actual infraestructura o adquirir una de las opciones de hardware certificada.</label>
+	            				<label>Implementar en su actual infraestructura o adquirir una de las opciones de hardware certificado.</label>
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
@@ -491,7 +491,7 @@
 								<i class="mdi mdi-add"></i>
 	            			</div>
 	            			<div class="card-back">
-	            				<label>Una combinaci&oacute;n de ambas donde la informaci&oacute;n sensible puede permanecer en su IT local.</label>
+	            				<label>Combinar ambas infraestructuras donde la informaci&oacute;n sensible puede permanecer en su IT local.</label>
 								<i class="mdi mdi-remove"></i>
 	            			</div>
 	            		</div>
@@ -519,8 +519,7 @@
         		<div class="question">
             		<span class="number">05/05</span>
             		<div class="question-respuestas">
-            			<p>Basados en sus respuestas,</p>
-        				<h2>tenemos en mente una soluci&oacute;n ideal para su negocio.</h2>
+            			<p><span>Basados en sus respuestas,</span> tenemos en mente una soluci&oacute;n ideal para su negocio.</p>
             		</div>
             	</div>
 	            <div class="mdl-container relative text-center">
@@ -644,13 +643,13 @@
 									</label>
 	        					</div>
 	        				</div>
-	        				<div class="col-sm-6 mdl-label">
+	        				<div class="col-xs-12 mdl-label m-t-20">
 	    						<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
 									<input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
 									<span class="mdl-checkbox__label f-s-14" style="">He leido y acepto los <a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" style="">Términos y condiciones de SAP</a></span>
 								</label>
 	        				</div>
-	        				<div class="col-xs-12 text-right m-t-25">
+	        				<div class="col-xs-12 text-right m-t-25 m-b-10">
 								<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="solicitarEstimacion();">Solicitar estimaci&oacute;n</button>
 	        				</div>
 	            		</form>
