@@ -603,12 +603,29 @@ span.number{
 	margin: 5px 0;
 }
 /*BARRA SCROLL*/
+::-webkit-scrollbar {
+	width: 4px;
+	height: 5px;
+}
 ::-webkit-scrollbar-track {
-	background: rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-	background: rgba(0, 0, 0, 0.2);
+	background-color: #aaa;
+	border-radius: 10px;
 }
+
+.mdl-respuestas::-webkit-scrollbar-track,
+.mdl-respuestas::-webkit-scrollbar-thumb {
+    background-color: transparent;
+	opacity: 0;
+}
+.mdl-respuestas:HOVER::-webkit-scrollbar-thumb{
+	background-color: #aaa;
+	opacity: 1;
+} 
+
 /*ModalQuestion*/
 #ModalQuestion .modal-content{
 	background-color: #000000;
@@ -686,6 +703,9 @@ span.number{
 	border: 1px solid #F8B22C;
     padding: 25px;
 }
+.mdl-respuestas{
+	overflow-y: scroll;
+}
 .mdl-formulario,
 .mdl-card-confirmacion{
 	display: inline-block;
@@ -759,12 +779,11 @@ span.number{
 	background-color: #FFFFFF;
 	color: #000000;
 	margin: 5px 0;
-    padding: 5px 5px 5px 15px;
-    height: 46px;
+    padding: 8px 5px 8px 15px;
     display: flex;
     align-items: center;
 }
-.div-respuestas p{
+.div-respuestas ul{
     display: inline-block;
     max-width: calc(100% - 85px);
     width: 100%;
@@ -773,6 +792,7 @@ span.number{
     font-size: 15px;
     line-height: 18px;
     vertical-align: middle;
+    padding-left: 15px;
 }
 .div-respuestas button{
     color: #4983B6;

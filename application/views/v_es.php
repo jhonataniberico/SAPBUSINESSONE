@@ -529,32 +529,44 @@
 	            				<h2 class="title-formulario m-b-10">Sus respuestas fueron:</h2>
 	            				<div class="col-xs-12 p-0">
 	            					<div class="div-respuestas">
-	            						<ul><li></li></ul>
-	            						<!-- <p id="industria">Productos de consumo</p> -->
+	            						<ul>
+	            							<li id="industria"></li>
+	            						</ul>
 	            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
 	            					</div>
 	            				</div>
 	            				<div class="col-xs-12 p-0">
 	            					<div class="div-respuestas">
-	            						<p id="tamanio">100 - 500 empleados</p>
+	            						<ul>
+	            							<li id="tamanio"></li>
+	            						</ul>
 	            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
 	            					</div>
 	            				</div>
 	            				<div class="col-xs-12 p-0">
 	            					<div class="div-respuestas">
-	            						<p id="factura">1-3 Millones de D&oacute;lares</p>
+	            						<ul>
+	            							<li id="factura">/li>
+	            						</ul>
 	            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
 	            					</div>
 	            				</div>
 	            				<div class="col-xs-12 p-0">
 	            					<div class="div-respuestas">
-	            						<p id="prioridad">An&aacute;lisis en tiempo real con SAP HANA</p>
+	            						<ul>
+	            							<li id="prioridad"></li>
+	            							<li id="">Emprendedores</li>
+	            							<li id="">Cloud</li>
+	            							<li id="">Movilidad</li>
+	            						</ul>
 	            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
 	            					</div>
 	            				</div>
 	            				<div class="col-xs-12 p-0">
 	            					<div class="div-respuestas">
-	            						<p id="infraestructura"></p>
+	            						<ul>
+	            							<li id="infraestructura">/li>
+	            						</ul>
 	            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
 	            					</div>
 	            				</div>
