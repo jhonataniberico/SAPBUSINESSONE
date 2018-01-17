@@ -530,7 +530,7 @@
 	            				<div class="col-xs-12 p-0">
 	            					<div class="div-respuestas">
 	            						<ul>
-	            							<li id="industria"></li>
+	            							<li id="industria">Retail</li>
 	            						</ul>
 	            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
 	            					</div>
@@ -538,7 +538,7 @@
 	            				<div class="col-xs-12 p-0">
 	            					<div class="div-respuestas">
 	            						<ul>
-	            							<li id="tamanio"></li>
+	            							<li id="tamanio">1 - 50</li>
 	            						</ul>
 	            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
 	            					</div>
@@ -546,7 +546,7 @@
 	            				<div class="col-xs-12 p-0">
 	            					<div class="div-respuestas">
 	            						<ul>
-	            							<li id="factura">/li>
+	            							<li id="factura">1-3 Millones de D&oacute;lares</li>
 	            						</ul>
 	            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
 	            					</div>
@@ -554,10 +554,9 @@
 	            				<div class="col-xs-12 p-0">
 	            					<div class="div-respuestas">
 	            						<ul>
-	            							<li id="prioridad"></li>
+	            							<li id="prioridad">Movilidad</li>
 	            							<li id="">Emprendedores</li>
 	            							<li id="">Cloud</li>
-	            							<li id="">Movilidad</li>
 	            						</ul>
 	            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
 	            					</div>
@@ -565,7 +564,7 @@
 	            				<div class="col-xs-12 p-0">
 	            					<div class="div-respuestas">
 	            						<ul>
-	            							<li id="infraestructura">/li>
+	            							<li id="infraestructura">Local</li>
 	            						</ul>
 	            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
 	            					</div>
