@@ -529,7 +529,8 @@
 	            				<h2 class="title-formulario m-b-10">Sus respuestas fueron:</h2>
 	            				<div class="col-xs-12 p-0">
 	            					<div class="div-respuestas">
-	            						<p id="industria">Productos de consumo</p>
+	            						<ul><li></li></ul>
+	            						<!-- <p id="industria">Productos de consumo</p> -->
 	            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
 	            					</div>
 	            				</div>
