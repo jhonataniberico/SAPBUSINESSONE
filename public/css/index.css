@@ -843,8 +843,11 @@ span.number{
     max-width: 235px;
 }
 .mdl-label .mdl-checkbox__label{
-	font-size: 15px;
+	font-size: 14px;
     line-height: 18px;
+}
+.mdl-label .mdl-checkbox__label a{
+	font-size: 14px;
 }
 .mdl-label .mdl-checkbox__label a{
 	text-decoration: none;
