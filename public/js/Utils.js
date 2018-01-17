@@ -1,7 +1,6 @@
 function log(msj) {
 	console.log(msj);
 }
-
 function tocar(event){
 	$(event).css("cursor", "move");
 	
@@ -9,7 +8,6 @@ function tocar(event){
 		$(event).css("cursor", "pointer");
 	});
 }
-
 var CONFIG = (function() {
 	var private = {
 		'ANP' : 'Acci&oacute;n No permitida',
@@ -27,15 +25,12 @@ var CONFIG = (function() {
 		}
 	};
 })();
-
 function modal(idModal) {
 	$('#'+idModal).modal('toggle');
 }
-
 function abrirCerrarModal(idModal) {
 	$('#'+idModal).modal('toggle');
 }
-
 function msj(tipo, msj, cabecera) {
 	if (tipo == 'error') {
 		toastr.error(msj, cabecera, {
@@ -63,7 +58,6 @@ function msj(tipo, msj, cabecera) {
 		toastr.success(msj, cabecera, {timeOut: 4000});
 	}
 }
-
 function mostrarNotificacion(tipo, msj, cabecera) {
 	if (tipo == 'error') {
 		toastr.error(msj, cabecera, {
@@ -100,26 +94,10 @@ function mostrarNotificacion(tipo, msj, cabecera) {
 		});
 	}
 }
-
 function cerrarSesion() {
 	$('#formLogout').submit();
 	localStorage.clear();
 }
-/*
-function existCampo(campo, valor, tbl) {
-	var result = $.ajax({
-		type : "POST",
-		'url' : 'exiCampo',
-		data : {
-			'p_campo' : campo,
-			'p_valor' : valor,
-			'p_tbl' : tbl
-		},
-		'async' : false
-	}).responseText;
-	return result;
-}*/
-
 function checkClaveActual(clave) {
 	var result = 1;
 	$.ajax({
@@ -133,7 +111,6 @@ function checkClaveActual(clave) {
 	});
 	return result;
 }
-
 function existCampoById(campo, valor, tbl) {
 	$.ajax({
 		type : "POST",
@@ -147,16 +124,11 @@ function existCampoById(campo, valor, tbl) {
 		return data;
 	});
 }
-
-// PARA ARREGLAR EL INPUTTEXT
 function postTrans(formName) {
 	$("#" + formName + " :input").each(function() {
 		$(this).removeClass("dirty");
 	});
 }
-
-// INIT RECORTE
-// idImg = ID DE LA IMAGEN A RECORTAR
 function initCropper(idImg) {
 	'use strict';
 	var console = window.console || {
@@ -205,19 +177,14 @@ function initCropper(idImg) {
 
 	return $image;
 }
-
 function recortarImagen($image, fotoOriginal) {
     var $this = $('<button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-method="getCroppedCanvas" id="botonRecortarPerfil" onclick="recortarImagen(this.id, \'fotoRecortar\')">recortar</button>');
     var data = $this.data();
     var $target;
     var result;
-    
-    //VERIFICAR SI EL BOTON ESTA DISABLED
     if ($this.prop('disabled') || $this.hasClass('disabled')) {
       return;
     }
-    
-    //VERIFICANDO QUE EXISTE
     if (data.method) {
       data = $.extend({}, data);
       if (typeof data.target !== 'undefined') {
@@ -229,21 +196,17 @@ function recortarImagen($image, fotoOriginal) {
           }
         }
       }
-      //alert('$(image).height(): '+$imageOrig.height()+'  $(image).width(): '+$imageOrig.width());
       if ( (/iP(hone|od|ad)/).test(window.navigator.platform) && (fotoOriginal.height() > 1000 || fotoOriginal.width() > 1000)) {
     	  alert('achicar!!');
       }
-      //RECORTAR IMAGEN
       result = $image.cropper('getCroppedCanvas', null, null);
       return result.toDataURL("image/png"); 
     }
 }
-
 function convertCanvasToImage(canvas, size) {
 	var image = new Image();
 	return canvas.toDataURL("image/png");
 }
-
 function goToSystem(rol, ruta) {
 	$.ajax({
 		url : "irASistemaSess",
@@ -263,7 +226,6 @@ function goToSystem(rol, ruta) {
 	});
 	return false;
 }
-
 function getCheckedFromTabla(idTabla, indiceColumnaCB) {
 	arryDiv = [];
 	var jason = JSON.stringify($('#' + idTabla).bootstrapTable('getOptions'));
@@ -280,15 +242,13 @@ function getCheckedFromTabla(idTabla, indiceColumnaCB) {
 	});
 	return arryDiv;
 }
-
 function getCheckedFromTablaByAttr(idTabla, indiceColumnaCB) {
 	arryDiv = [];
 	var jason = JSON.stringify($('#' + idTabla).bootstrapTable('getOptions'));
 	var obj = jQuery.parseJSON(jason);
 	$.each(obj.data, function(key, value) {
 		$.each(value, function(key, value) {
-			if (key == indiceColumnaCB) {// console.log('val:
-											// '+$(value).find(':checkbox').attr('attr-cambio'));
+			if (key == indiceColumnaCB) {
 				if ($(value).find(':checkbox').attr('attr-cambio') == 'true') {
 					arryDiv.push(value);
 				}
@@ -298,15 +258,13 @@ function getCheckedFromTablaByAttr(idTabla, indiceColumnaCB) {
 	});
 	return arryDiv;
 }
-
 function getCheckedFromTablaByAttrFOCO(idTabla, indiceColumnaCB) {
 	arryDiv = [];
 	var jason = JSON.stringify($('#' + idTabla).bootstrapTable('getOptions'));
 	var obj = jQuery.parseJSON(jason);
 	$.each(obj.data, function(key, value) {
 		$.each(value, function(key, value) {
-			if (key == indiceColumnaCB) {// console.log('val:
-											// '+$(value).find(':checkbox').attr('attr-cambio'));
+			if (key == indiceColumnaCB) {
 				if ($(value).find(':checkbox').attr('attr-foco') == 'true') {
 					arryDiv.push(value);
 				}
@@ -316,7 +274,6 @@ function getCheckedFromTablaByAttrFOCO(idTabla, indiceColumnaCB) {
 	});
 	return arryDiv;
 }
-
 function getInputTextFromTablaByAttr(idTabla, indiceColumnaCB) {
 	arryDiv = [];
 	var jason = JSON.stringify($('#' + idTabla).bootstrapTable('getOptions'));
@@ -333,12 +290,9 @@ function getInputTextFromTablaByAttr(idTabla, indiceColumnaCB) {
 	});
 	return arryDiv;
 }
-
 function initSearchTable() {
-	// MOSTRAR U OCULTAR INPUTTEXT EN TABLE
 	$('#btnViewSearch').clickToggle(
 			function() {
-				/*$('.search').css('display', 'block');*/
 				$('.search').css('visibility', 'visible');
 				var search = $('.search').find('input[type=text]').filter(':visible:first');
 				setTimeout(function() {
@@ -347,33 +301,19 @@ function initSearchTable() {
 						$(this).select();
 					});
 				}, 420);
-
-				/*$('#custom-toolbar').css('display', 'none'); // NOMBRE DE LA*/
-				
-				/*var marginLeft = (-$('#iconViewSearch').offset().left + $('#titleTb').offset().left + 20) +"px";
-				search.parent().parent().css("marginLeft", marginLeft);*/
-				/*$('#titleTb').css('display', 'none');*/
 				$('#titleTb').css('visibility', 'hidden');
-				// CABECERA
 				$('#iconViewSearch').removeClass('mdi-search');
 				$('#iconViewSearch').addClass('mdi-clear');
 			}, function() {
-				/*$('.search').css('display', 'none');
-				$('#titleTb').css('display', 'block');*/
 				$('.search').css('visibility', 'hidden');
 				$('#titleTb').css('visibility', 'visible');
-				/*$('#custom-toolbar').css('display', 'block'); // NOMBRE DE LA
-				// CABECERA*/
 				$('#iconViewSearch').removeClass('mdi-clear');
 				$('#iconViewSearch').addClass('mdi-search');
 			});
 }
-
 function initSearchTableNew() {
-	// MOSTRAR U OCULTAR INPUTTEXT EN TABLE
 	$('#btnViewSearch').clickToggle(
 		function() {
-			/*$('.search').css('display', 'block');*/
 			$('.search').css('visibility', 'visible');
 			var search = $('.search').find('input[type=text]').filter(':visible:first');
 			setTimeout(function() {
@@ -382,28 +322,16 @@ function initSearchTableNew() {
 					$(this).select();
 				});
 			}, 420);
-
-			/*$('#custom-toolbar').css('display', 'none'); // NOMBRE DE LA*/
-			
-			/*var marginLeft = (-$('#iconViewSearch').offset().left + $('#titleTb').offset().left + 20) +"px";
-			search.parent().parent().css("marginLeft", marginLeft);*/
-			/*$('#titleTb').css('display', 'none');*/
 			$('#titleTb').css('visibility', 'hidden');
-			// CABECERA
 			$('#iconViewSearch').removeClass('mdi-search');
 			$('#iconViewSearch').addClass('mdi-clear');
 		}, function() {
-			/*$('.search').css('display', 'none');
-			$('#titleTb').css('display', 'block');*/
 			$('.search').css('visibility', 'hidden');
 			$('#titleTb').css('visibility', 'visible');
-			/*$('#custom-toolbar').css('display', 'block'); // NOMBRE DE LA
-			// CABECERA*/
 			$('#iconViewSearch').removeClass('mdi-clear');
 			$('#iconViewSearch').addClass('mdi-search');
 		});
 }
-
 function initSearchTableById(idTabla) {
 	toolBarCont = $("#"+idTabla).parent().parent().parent().find(".fixed-table-toolbar");
 	var titulo = $('#'+idTabla).closest('.mdl-card').find('.mdl-card__title h2.mdl-card__title-text');
@@ -433,7 +361,6 @@ function initSearchTableById(idTabla) {
 			});
 			$('#contTbAllPreguntas').parent().css('margin-top','21px');
 			$('#contTbAllPreguntas').find('.pull-left.search').addClass('inputSearch');
-//			$('#contTbAllPreguntas').find('.mdl-card__title-text').addClass('inputSearch');
 			titulo.css('display', 'none');
 		},function() {
 			fixed_toolbar = $(this).parent().parent();
@@ -441,16 +368,13 @@ function initSearchTableById(idTabla) {
 			$('.search').css('visibility', 'visible');
 			search.val('');
 			search.keyup();
-			
 			$(fixed_toolbar).find(".search").css('display', 'none');
-//			$(fixed_toolbar).find(".search").find('input[type=text]').val('');
 			$('#contTbAllPreguntas').parent().css('margin-top','0px');
 			$(fixed_toolbar).find('#iconViewSearch').removeClass('mdi mdi-clear');
 			$(fixed_toolbar).find('#iconViewSearch').addClass('mdi mdi-search');
 			titulo.css('display', 'block');
 		});
 }
-
 function setCombo(idNameCombo, valores, _default, selected, value_0 = 1) {
 	if(value_0 != 1) {
 		value_0 = 0;
@@ -466,32 +390,26 @@ function setCombo(idNameCombo, valores, _default, selected, value_0 = 1) {
 	$('#' + idNameCombo).selectpicker('refresh');
 
 }
-
 function setCombo2(idNameCombo, valores) {
 	$('#' + idNameCombo).find('option').remove().end().append(valores);
 	$('select[name=' + idNameCombo + ']').val("");
 	$('#' + idNameCombo).selectpicker('refresh');
 }
-
 function setValueCombo(idNameCombo, valorSeteado) {
 	$('select[name=' + idNameCombo + ']').val(valorSeteado);
 	$('#' + idNameCombo).selectpicker('refresh');
 }
-
 function setComboFull(idNameCombo, valores, _default) {
 	$('#'+idNameCombo).find('option').remove().end().append('<option value="">Selec. '+_default+'</option>'+valores);
 	$('#'+idNameCombo).mobileSelect('refresh');
 }
-
 function setComboValorFull(idNameCombo, valor) {
 	$('#'+idNameCombo).val(valor);
 	$('#'+idNameCombo).mobileSelect('refresh');
 }
-
 function getComboVal(idCombo) {
 	return $('#'+idCombo+' option:selected').val();
 }
-
 function isDate(txtDate) {
 	var currVal = txtDate;
 	if (currVal == '') {
@@ -499,14 +417,12 @@ function isDate(txtDate) {
 	}
 	var rxDatePattern = /^(\d{1,2})(\/|-)(\d{1,2})(\/|-)(\d{4})$/;
 	var dtArray = currVal.match(rxDatePattern); // is format OK?
-
 	if (dtArray == null) {
 		return false;
 	}
 	dtDay = dtArray[1];
 	dtMonth = dtArray[3];
 	dtYear = dtArray[5];
-
 	if (dtMonth < 1 || dtMonth > 12)
 		return false;
 	else if (dtDay < 1 || dtDay > 31)
@@ -535,11 +451,6 @@ function isDate(txtDate) {
 		return this;
 	};
 }(jQuery));
-
-/*
- * function marcarNodo(nodo){ $.ajax({ url: "setNodoSession", data: { nodo :
- * nodo}, async : false, type: 'POST' }) .done(function(data){ }); }
- */
 
 function toggleFullScreen() {
 	if ((document.fullScreenElement && document.fullScreenElement !== null)
@@ -584,15 +495,12 @@ function changeIconMenu() {
 		menuC = 0;
 	}
 }
-
 function cerrarMenu() {
 	$('body').removeClass('menubar-visible');
 }
-
 function abrirMenu() {
 	$('body').addClass('menubar-visible');
 }
-
 function successValidConfig(idTabla, indexRow, indexCampo, pk, nuevoValor, msj, clase, idGrupo, idNota) {
 	$('#' + idTabla).bootstrapTable(
 			'updateCell',
@@ -604,7 +512,6 @@ function successValidConfig(idTabla, indexRow, indexCampo, pk, nuevoValor, msj, 
 						+ nuevoValor + '</span>'
 			});
 }
-
 function successValid(idTabla, indexRow, indexCampo, pk, nuevoValor, msj, clase) {
 	$('#' + idTabla).bootstrapTable(
 			'updateCell',
@@ -616,19 +523,15 @@ function successValid(idTabla, indexRow, indexCampo, pk, nuevoValor, msj, clase)
 						+ nuevoValor + '</span>'
 			});
 }
-
 function marcarNodo(id) {
 	$("#" + id).addClass("active");
 	$("#" + id).find("a").addClass("active");
 }
-
 function openModalFeedBack(){
 	$('#navBar').removeClass('is-visible');
 	$('.mdl-layout__obfuscator').removeClass('is-visible');
 	modal('modalFeedBack');
 }
-
-
 function enviarFeedback(ruta, tipo, rutaOrigen) {
 	var txtArea = (tipo == 'COL' ? 'feedbackMsjColegio' : 'feedbackMsjSmiledu');
 	if(tipo == 'COL') {
@@ -640,7 +543,7 @@ function enviarFeedback(ruta, tipo, rutaOrigen) {
 	if (msj.trim() != "") {
 		modal('modalFeedBackTY');
 		var valorSede = $("#sedeFeed").val();
-		var hijos = ''; //$("#sedeFeed").text();//console.log(hijos);
+		var hijos = '';
 		$("#sedeFeed option:selected").each(function () {
 			var $this = $(this);
 		    if ($this.length) {
@@ -666,16 +569,13 @@ function enviarFeedback(ruta, tipo, rutaOrigen) {
 		});
 	}
 }
-
 function openModalMisionVision() {
 	abrirCerrarModal("modalMisionVision");
 }
-
 function goToPerfilUsuario(data) {
 	window.location.href = window.location.origin
 			+ '/smiledu/c_perfil?usuario=' + data;
 }
-
 function setearInput(idInput, val, previo, disabled, clase) {
 	if(!val) {
 		val = null;
@@ -714,7 +614,6 @@ function setearInput(idInput, val, previo, disabled, clase) {
 		$('.'+clase).removeClass('is-disabled');
 	}
 }
-
 function setearCombo(idCombo, val, previo, disabled){
 	if(!previo){
 		previo = null;
@@ -734,32 +633,26 @@ function setearCombo(idCombo, val, previo, disabled){
 	$("#"+idCombo).val(val);
 	$("#"+idCombo).selectpicker('render');
 }
-
 function setValor(idNameCombo,valores) {
 	$('select[name='+idNameCombo+']').val(valores);
 	$('#'+idNameCombo).selectpicker('refresh');
 }
-
 function disableEnableCombo(idCombo, disaEna){
 	$('#'+idCombo).prop('disabled', disaEna);
 	$('#'+idCombo).selectpicker('refresh');
 }
-
 function isInt(value) {
 	return !isNaN(value) && (function(x) { return (x | 0) === x; })(parseFloat(value));
 }
-
 function isFloat(value) {
 	return value != "" && !isNaN(value) && Math.round(value) != value;
 }
-
 function isNumerico(value) {
 	if(isInt(value) || isFloat(value)) {
         return true;
    }
    return false;
 }
-
 function setChecked(idCheck, boolCheck){
 	if(boolCheck == 'true'){
 		$("#"+idCheck).parent().addClass("is-checked");
@@ -769,7 +662,6 @@ function setChecked(idCheck, boolCheck){
 		$("#"+idCheck).attr("checked", false);
 	}
 }
-
 function isChecked(element){
 	var tof = false;
 	if($(element).parent().hasClass("is-checked")){
@@ -778,7 +670,6 @@ function isChecked(element){
 	
 	return tof;
 }
-
 function disableEnableInput(idInput, tof){
 	$('#'+idInput).attr("disabled", tof);
 	if(tof == false){
@@ -788,12 +679,10 @@ function disableEnableInput(idInput, tof){
 		$("#"+idInput).css('cursor', 'not-allowed');
 	}
 }
-
 function reintentarBusqueda(){
 	$("#searchMagic").focus();
 	$("#searchMagic").select();
 }
-
 function tableEventsUpgradeMdlComponentsMDL(idTable){
 	$(function () {
 	    $('#'+idTable).on('all.bs.table', function (e, name, args) {
@@ -821,7 +710,6 @@ function tableEventsUpgradeMdlComponentsMDL(idTable){
 	    	    $('[data-toggle="tooltip"]').tooltip(); 
 	        });
 	    	componentHandler.upgradeAllRegistered();
-
 	    })
 	    .on('uncheck.bs.table', function (e, row) {
 	    	$(document).ready(function(){
@@ -840,7 +728,6 @@ function tableEventsUpgradeMdlComponentsMDL(idTable){
 	    	    $('[data-toggle="tooltip"]').tooltip(); 
 	        });
 	    	componentHandler.upgradeAllRegistered();
-
 	    })
 	    .on('load-success.bs.table', function (e, data) {
 
@@ -868,17 +755,14 @@ function tableEventsUpgradeMdlComponentsMDL(idTable){
 	    });
 	});
 }
-
 String.prototype.initCap = function () {
     return this.toLowerCase().replace(/(?:^|\s)[a-z]/g, function (m) {
         return m.toUpperCase();
     });
 };
-
 Number.prototype.round = function(places) {
 	return +(Math.round(this + "e+" + places)  + "e-" + places);
 }
-
 function getFechaHoy_dd_mm_yyyy() {
 	var d = new Date();
 	var mes = (d.getMonth()+1+'').length === 1 ? '0'+(d.getMonth()+1) : (d.getMonth()+1);
@@ -886,7 +770,6 @@ function getFechaHoy_dd_mm_yyyy() {
 	var hoyDia = dia+'/'+mes+'/'+d.getFullYear();
 	return hoyDia;
 }
-
 function setMultiCombo(idNameCombo, valores,selected) {
 	$('#' + idNameCombo).find('option').remove().end().append(valores);
 	if(selected == undefined){
@@ -894,7 +777,6 @@ function setMultiCombo(idNameCombo, valores,selected) {
 	}
 	$('#' + idNameCombo).selectpicker('refresh');
 }
-
 function readable(bytes, precision) {
 	var kilobyte = 1024, megabyte = kilobyte * 1024, gigabyte = megabyte * 1024, terabyte = gigabyte * 1024;
 	precision = precision || 2;
@@ -912,7 +794,6 @@ function readable(bytes, precision) {
 		return bytes + ' B';
 	}
 }
-
 function getBase64Image(img) {
 	var canvas = document.createElement("canvas");
 	canvas.width  = img.width;
@@ -922,7 +803,6 @@ function getBase64Image(img) {
 	var dataURL = canvas.toDataURL("image/jpeg");
 	return dataURL;
 } 
-
 function getBase64ImagePNG(img) {
 	var canvas = document.createElement("canvas");
 	canvas.width  = img.width;
@@ -932,7 +812,6 @@ function getBase64ImagePNG(img) {
 	var dataURL = canvas.toDataURL("image/png");
 	return dataURL;
 }
-
 var addEvent = (function () {
   if (document.addEventListener) {
     return function (el, type, fn) {
@@ -956,10 +835,8 @@ var addEvent = (function () {
     };
   }
 })();
-
 var salir = document.getElementById('logoutBtn');
 localStorage.removeItem('storage-event-logout');
-
 addEvent(window, 'storage', function (event) {
     if (event.key == 'storage-event-logout') {
       if(event.newValue == 'logout') {
@@ -968,11 +845,9 @@ addEvent(window, 'storage', function (event) {
       }
     }
 });
-
 addEvent(salir, 'click', function () {
     localStorage.setItem('storage-event-logout', 'logout');
 });
-
 function readCookie(name) {
     var nameEQ = escape(name) + "=";
     var ca = document.cookie.split(';');
@@ -983,17 +858,14 @@ function readCookie(name) {
     }
     return null;
 }
-
 function updateMdl(){
 	componentHandler.upgradeAllRegistered();
 }
-
 function removeSessionStorage() {
 	for(var i = 0; i < arguments.length; i++) {
 		sessionStorage.removeItem(arguments[i]);
 	}
 }
-
 function disEnabledInputComboGroup(group,tof){
 	for(var i = 0; i < group.length; i++) {
 		$("#"+group[i]).parent().addClass("is-dirty");
@@ -1009,12 +881,10 @@ function disEnabledInputComboGroup(group,tof){
 		$('.divInput').removeClass('is-disabled');
 	}
 }
-
 function setearSinOpciones(id,valor){
 	$("#"+id).val(valor).prop('selected', true);
 	$("#"+id).selectpicker('render');
 }
-
 function setearNullGroup(){
 	for(var i = 0; i < arguments.length; i++) {
 		$("#"+arguments[i]).val(null);
@@ -1023,7 +893,6 @@ function setearNullGroup(){
 		$("#"+arguments[i]).parent().parent().removeClass("is-invalid");
 	}
 }
-
 function setearInputAdm(idInput, val){
 	if(!val){
 		val = null;
@@ -1037,7 +906,6 @@ function setearInputAdm(idInput, val){
 		$("#"+idInput).parent().parent().addClass("is-invalid");
 	}
 }
-
 function setearComboAdm(idCombo, val){
 	$("#"+idCombo).val(val);
 	$("#"+idCombo).selectpicker('refresh');
@@ -1049,7 +917,6 @@ function setearComboAdm(idCombo, val){
 		$("#"+idCombo).parent().parent().parent().addClass("is-invalid");
 	}
 }
-
 function cambioCampoAdm(element){
 	val = $(element).val();
 	if(val != null && val.length != 0 && val != 0){
@@ -1058,7 +925,6 @@ function cambioCampoAdm(element){
 		$(element).closest(".mdl-input-group").addClass("is-invalid");
 	}
 }
-
 function getFechaTexto(fecha) {
 	var texto = null;
 	try {
@@ -1076,7 +942,6 @@ function getFechaTexto(fecha) {
 	}
 	return texto;
 }
-
 function cambiarRol(aElement) {
 	var urlSmiledu  = window.location.protocol+'//'+window.location.hostname+'/';
 	var arrayUrl    = (window.location.pathname).split('/');
@@ -1085,7 +950,6 @@ function cambiarRol(aElement) {
 	$('#sistemaActi').val(arrayUrl[2]);
 	$('#formCambioRol').submit();
 }
-
 function getComboYearActual(id) {
 	var fecha = new Date();
 	var year = fecha.getFullYear();
@@ -1095,10 +959,6 @@ function getComboYearActual(id) {
 	}).attr('selected', true);
 	$("#"+id).selectpicker('render');
 }
-
-/*Realiza una resta y devuelve la rpta en minutos 
- *@Jhonatan Meza
- */
 function restarHoras(horaInicio,horaFin){
 	var inicio = convertirFormatoHora(horaInicio);
 	var fin    = convertirFormatoHora(horaFin);
@@ -1110,9 +970,6 @@ function restarHoras(horaInicio,horaFin){
 	nFin    = nFin+parseInt(fin[1]);
 	return nFin-nInicio;
 }
-
-/*valida con un boolean si la fecha es menor = 1 sino = 0*/
-/*@Jhonatan Meza*/
 function validarFechaMenorActual(date){
     var x=new Date();
     var fecha = date.split("/");
@@ -1124,9 +981,6 @@ function validarFechaMenorActual(date){
     else
       return true;
 }
-
-/*d  = dias a sumar, fecha = fecha que desea sumarle los dias*/
-/*@Jhonatan Meza*/
 function sumaFecha(d, fecha)
 {
 	var Fecha = new Date();
@@ -1144,9 +998,6 @@ function sumaFecha(d, fecha)
   	var fechaFinal = dia+sep+mes+sep+anno;
   	return (fechaFinal);
  }
-
-//Funcion que devuelve un true si la fecha a validar esta en rango de 2 fechas, sino false
-/*@Jhonatan Meza*/
 function valueFechaRangoFechas(valuefecha,fecha1,fecha2){
 	 var sep = valuefecha.indexOf('/') != -1 ? '/' : '-'; 
 	 var aFecha = valuefecha.split(sep);
@@ -1166,7 +1017,6 @@ function valueFechaRangoFechas(valuefecha,fecha1,fecha2){
 		 return false;
 	 }
 }
-
 function isHour(valueHour){
 	var hour   = parseInt(valueHour.substr(0,3));
 	var minute = parseInt(valueHour.substr(3,4));
@@ -1177,14 +1027,11 @@ function isHour(valueHour){
 		return false;
 	}
 }
-
 var date_regex = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
 
 function validate_fechaMayorQue(fechaInicial,fechaFinal){
     valuesStart=fechaInicial.split("/");
     valuesEnd=fechaFinal.split("/");
-
-    // Verificamos que la fecha no sea posterior a la actual
     var dateStart=new Date(valuesStart[2],(valuesStart[1]-1),valuesStart[0]);
     var dateEnd=new Date(valuesEnd[2],(valuesEnd[1]-1),valuesEnd[0]);
     if(dateStart > dateEnd) {
@@ -1192,39 +1039,29 @@ function validate_fechaMayorQue(fechaInicial,fechaFinal){
     }
     return 1;
 }
-
 function justNumbers(e) {
    var keynum = window.event ? window.event.keyCode : e.which;
    if ((keynum == 8) || (keynum == 46))
         return true;
     return /\d/.test(String.fromCharCode(keynum));
 }
-
 function get_elapsed_time_string(total_seconds) {
 	  function pretty_time_string(num) {
 	    return ( num < 10 ? "0" : "" ) + num;
 	  }
-
 	  var hours = Math.floor(total_seconds / 3600);
 	  total_seconds = total_seconds % 3600;
-
 	  var minutes = Math.floor(total_seconds / 60);
 	  total_seconds = total_seconds % 60;
-
 	  var seconds = Math.floor(total_seconds);
-
 	  hours = pretty_time_string(hours);
 	  minutes = pretty_time_string(minutes);
 	  seconds = pretty_time_string(seconds);
-
 	  var currentTimeString = hours + ":" + minutes + ":" + seconds;
-
 	  return currentTimeString;
 	}
 
 function convertirFormatoFecha(txtDate, flg) {
-	/*Esta por mejorar solo admite formato dd/mm/yyy y retorna yyyy-mm-dd*/
-	/*@Jhonatan Meza*/
 	if(flg != undefined) {
 		var fecha = txtDate.split("-");
 		return (fecha[2]+"/"+fecha[1]+"/"+fecha[0]);
@@ -1232,12 +1069,9 @@ function convertirFormatoFecha(txtDate, flg) {
 		var fecha = txtDate.split("/");
 	    return (fecha[2]+"-"+fecha[1]+"-"+fecha[0]);
 	}
-    
 }
 
 function convertirFormatoHora(txtHora){
-	/*Convierte formato hh:mm:ss*/
-	/*@Jhonatan Meza*/
 	var hora = txtHora.length == 7 ? ("0"+txtHora) : txtHora;
 	hora = hora.replace(' ', ':');
 	hora = hora.split(':');
@@ -1250,7 +1084,6 @@ function convertirFormatoHora(txtHora){
 	}
 	return h+":"+hora[1]+":00"; 
 }
-
 function restarHoras1(horaInicio, horaFin) {
 	var inicio = horaInicio.length == 7 ? ("0"+horaInicio) : horaInicio;
 	var fin = horaFin.length == 7 ? ("0"+horaFin) : horaFin;	
@@ -1258,13 +1091,10 @@ function restarHoras1(horaInicio, horaFin) {
 	inicio = inicio.split(':');
 	fin = horaFin.replace(' ', ':');
 	fin = horaFin.split(':');
-	
 	  inicioMinutos = parseInt(inicio[1]);
 	  inicioHoras = parseInt(inicio[0]);
-
 	  finMinutos = parseInt(fin[1]);
 	  finHoras = parseInt(fin[0]);
-	  
 	  transcurridoMinutos = finMinutos - inicioMinutos;
 	  transcurridoHoras = finHoras - inicioHoras;
 	  if (transcurridoMinutos < 0) {
@@ -1282,14 +1112,13 @@ function restarHoras1(horaInicio, horaFin) {
 	  return horas+" : "+minutos;
 
 	}
-
 $(".letras").keypress(function (key) {
-	if ((key.charCode < 97 || key.charCode > 122)//letras mayusculas
-	    && (key.charCode < 65 || key.charCode > 90) //letras minusculas
-	    && (key.charCode != 45) //retroceso
+	if ((key.charCode < 97 || key.charCode > 122)
+	    && (key.charCode < 65 || key.charCode > 90)
+	    && (key.charCode != 45)
 	    && (key.charCode != 241) 
 	     && (key.charCode != 209) 
-	     && (key.charCode != 32) //espacio
+	     && (key.charCode != 32)
 	     && (key.charCode != 225) 
 	     && (key.charCode != 233) 
 	     && (key.charCode != 237) 
@@ -1310,21 +1139,17 @@ $(".letras").keypress(function (key) {
 	     && (key.charCode != 55) 
 	     && (key.charCode != 56) 
 	     && (key.charCode != 57)
-
 	    )
 	    return false;
 });
-
 function validateEmail($email) {
   var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
   return emailReg.test( $email );
 }
-
 $(".numeros").keypress(function (key) {
 	if (key.charCode < 48 || key.charCode > 57)
 	    return false;
 });
-
 function removeObjectFromArray(arrayData,objRemove){
 	for(var i = 0; i < arrayData.length; i++){
 		if(arrayData[i] == objRemove){
@@ -1334,9 +1159,6 @@ function removeObjectFromArray(arrayData,objRemove){
 	}
 	return arrayData;
 }
-
-/*d  = dias a restar, fecha = fecha que desea restarle los dias*/
-/*@Sebastian Peredo*/
 function restarFecha(d, fecha)
 {
 	var Fecha = new Date();
@@ -1354,14 +1176,12 @@ function restarFecha(d, fecha)
   	var fechaFinal = dia+sep+mes+sep+anno;
   	return (fechaFinal);
  }
-
 function justNumbers(e) {
 	   var keynum = window.event ? window.event.keyCode : e.which;
 	   if ((keynum == 8) || (keynum == 46))
 	        return true;
 	    return /\d/.test(String.fromCharCode(keynum));
 }
-
 function fijarFechaInicioInFechaFinal(element, idFechaFinal, tipo){
 	var idFecha = $(element).attr("id");
 	var fechaValor = $('#'+idFecha).val();
@@ -1377,7 +1197,6 @@ function fijarFechaInicioInFechaFinal(element, idFechaFinal, tipo){
 	}
 	componentHandler.upgradeAllRegistered();
 }
-
 function fijarFechaMaxToday(element, idFechaFinal, divFecha) {
 	var idFecha = $(element).attr("id");
 	var fechaValor = $('#'+idFecha).val();
@@ -1394,12 +1213,6 @@ function fijarFechaMaxToday(element, idFechaFinal, divFecha) {
 	componentHandler.upgradeAllRegistered();
 	initButtonCalendarDaysMaxToday(idFechaFinal,undefined, d);
 }
-
-/**
- * Devuelve los valores de una sola columna del array de entrada
- * @author : jmeza
- * @param  : arry, column, indice
- */
 function array_column(arry, column, indice) {
     var result;
     if(typeof indice != "undefined") {
@@ -1414,14 +1227,6 @@ function array_column(arry, column, indice) {
     }
     return result;
 }
-
-/**
- * Refresca los tabs
- * @author : jmeza
- * @param  : contTabBar   Id del contenedor de los tabs bar con   "#" 
- * @param  : contTabPanel Id del contenedor de los tabs panel con "#"
- * @param  : seleted      Href del tab a seleccionar sin el       "#"
- */
 function refreshTabActive(contTabBar, contTabPanel, selected){
 	var bars   = $(contTabBar).find('a');
 	var panels = $(contTabPanel).find('.mdl-tabs__panel');
