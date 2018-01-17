@@ -74,11 +74,16 @@ class Es extends CI_Controller {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
+          $explode = explode(",", $this->session->userdata('Prioridad'));
+          $html = '';
+          foreach ($explode as $key) {
+            $html .= '<li>'.$key.'</li>';
+          }
           $tamanio = $this->session->userdata('Tamanio') == null ? '-' : $this->session->userdata('Tamanio').' empleados';
           $data['Industria']       = $this->session->userdata('industria') == null ? '-' : $this->session->userdata('industria');
           $data['Factura_anual']   = $this->session->userdata('Factura_anual') == null ? '-' : $this->session->userdata('Factura_anual');
   	      $data['Tamanio']   		   = $tamanio;
-  	      $data['Prioridad']       = $this->session->userdata('Prioridad') == null ? '-' : $this->session->userdata('Prioridad');
+  	      $data['Prioridad']       = $html;
   	      $data['Infraestructura'] = $this->session->userdata('Infraestructura') == null ? '-' : $this->session->userdata('Infraestructura');
   	      $data['error'] 			     = EXIT_SUCCESS;
         } catch (Exception $e) {

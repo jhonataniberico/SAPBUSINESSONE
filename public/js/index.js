@@ -385,7 +385,8 @@ function mostrarDatos() {
           	$('#industria').text(data.Industria);
           	$('#factura').text(data.Factura_anual)
            	$('#tamanio').text(data.Tamanio);
-           	$('#prioridad').text(data.Prioridad);
+           	$('#prioridad').find('li').remove();
+           	$('#prioridad').append(data.Prioridad);
            	$('#infraestructura').text(data.Infraestructura);
         }else {
         }
