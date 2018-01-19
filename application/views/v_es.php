@@ -12,7 +12,6 @@
     <meta name="theme-color"            content="#000000">
 	<title>SAP Business One</title>
     <link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/logo_favicon.png">
-	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>fullPage/dist/jquery.fullpage.min.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
@@ -56,141 +55,138 @@
     		<div class="bottom-right">
 				<p>Puede seleccionar m&aacute;s de una opci&oacute;n</p>
     		</div>
-	        <div class="slide">
-        		<div class="mdl-container">
-        			<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+    		<div class="fondo-bottom">
+    			<img src="<?php echo RUTA_IMG?>fondo/fondo.png">
+    		</div>
+    		<div id="home" class="window-center">
+    			<div class="mdl-container">
+	    			<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	            	<h2 class="title-home">Diferentes escenarios. Una soluci&oacute;n</h2>
-        		</div>
-        		<div class="fondo-bottom">
-        			<img src="<?php echo RUTA_IMG?>fondo/fondo.png">
-        		</div>
-	        </div>
-	        <div class="slide text-center">
-            	<div class="question">
-            		<span class="number">01/05</span>
-            		<h2>¿En qu&eacute; industria se desempe&ntilde;a&#63;</h2>
-            	</div>
-	            <div class="mdl-container mdl-ipad mdl-flex text-center">
-	            	<div class="mdl-card-question">
-	            		<div class="flip-card">
-	            			<div class="card-front card-front-none">
-	            				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
-	            				<p>Servicios Profesionales</p>
-	            			</div>
-	            		</div>
-	            		<div class="content-card">
-	            			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
-	            			<div class="contenido">
-	            				<div class="contenido-left">
-	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
-	            				</div>
-	            				<div class="contenido-right">
-            						<h2>Sab&iacute;a que...</h2>
-            						<p>... los prestadores de servicios profesionales exitosos aprovechan la tecnolog&iacute;a en nuevas formas para perfeccionar las pr&aacute;cticas de negocio, 
-            						mejorar la agilidad y atender mejor a los clientes.</p>
-            						<small>(IDC, septiembre 2016)</small>
-	            				</div>
-	            			</div>
-	            		</div>
+	    		</div>
+    		</div>
+    		<div id="first-window" class="window-center">
+				<div class="mdl-container text-center">
+					<div class="question">
+		        		<span class="number">01/05</span>
+		        		<h2>¿En qu&eacute; industria se desempe&ntilde;a&#63;</h2>
+		        	</div>
+		        	<div class="mdl-card-question">
+		        		<div class="flip-card">
+		        			<div class="card-front card-front-none">
+		        				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
+		        				<p>Servicios Profesionales</p>
+		        			</div>
+		        		</div>
+		        		<div class="content-card">
+		        			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Servicios Profesionales')">Seleccione</button>
+		        			<div class="contenido">
+		        				<div class="contenido-left">
+		        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+		        				</div>
+		        				<div class="contenido-right">
+		    						<h2>Sab&iacute;a que...</h2>
+		    						<p>... los prestadores de servicios profesionales exitosos aprovechan la tecnolog&iacute;a en nuevas formas para perfeccionar las pr&aacute;cticas de negocio, 
+		    						mejorar la agilidad y atender mejor a los clientes.</p>
+		    						<small>(IDC, septiembre 2016)</small>
+		        				</div>
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="mdl-card-question">
+		        		<div class="flip-card">
+		    				<div class="card-front card-front-none">
+		        				<img src="<?php echo RUTA_IMG?>cards/card-retail.png">
+		        				<p>Retail</p>
+		        			</div>
+		        		</div>
+		        		<div class="content-card">
+		        			<button id="buttonCard2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Retail')">Seleccione</button>
+		        			<div class="contenido">
+		        				<div class="contenido-left">
+		        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+		        				</div>
+		        				<div class="contenido-right">
+		    						<h2>Sab&iacute;a que...</h2>
+		    						<p>... por cada innovador que sale a crear un nuevo mercado o tipo de producto, hay al menos un centenar de mercados
+		    						 que se paralizan o se reducen.</p>
+		    						<small>(IDC, septiembre 2016)</small>
+		        				</div>
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="mdl-card-question">
+		        		<div class="flip-card">
+		        			<div class="card-front card-front-none">
+		        				<img src="<?php echo RUTA_IMG?>cards/card-distribucion.png">
+		        				<p>Distribuci&oacute;n</p>
+		        			</div>
+		        		</div>
+		        		<div class="content-card">
+		        			<button id="buttonCard3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Distribución')">Seleccione</button>
+		        			<div class="contenido">
+		        				<div class="contenido-left">
+		        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+		        				</div>
+		        				<div class="contenido-right">
+		    						<h2>Sab&iacute;a que...</h2>
+		    						<p>... puede mejorar la experiencia general del cliente con la realizaci&oacute;n de pedidos multicanal y su r&aacute;pido
+		    						 procesamiento.</p>
+		    						<small>(SAP Performance Benchmarking)</small>
+		        				</div>
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="mdl-card-question">
+		    			<div class="flip-card">
+		    				<div class="card-front card-front-none">
+		        				<img src="<?php echo RUTA_IMG?>cards/card-producto.png">
+		        				<p>Productos de consumo</p>
+		        			</div>
+		    			</div>
+		    			<div class="content-card">
+		        			<button id="buttonCard4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Productos de consumo')">Seleccione</button>
+		        			<div class="contenido">
+		        				<div class="contenido-left">
+		        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+		        				</div>
+		        				<div class="contenido-right">
+		    						<h2>Sab&iacute;a que...</h2>
+		    						<p>... las empresas exitosas del sector reinventan su forma de operar, aprovechando la tecnolog&iacute;a para perfeccionar las
+		    						pr&aacute;cticas de negocio, mejorar la agilidad y atender mejor a clientes y distribuidores.</p>
+		    						<small>(IDC, septiembre 2016)</small>
+		        				</div>
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="mdl-card-question">
+		        		<div class="flip-card">
+		        			<div class="card-front card-front-none">
+		        				<img src="<?php echo RUTA_IMG?>cards/card-proceso.png">
+		        				<p>Procesos/Manufactura</p>
+		        			</div>
+		        		</div>
+		        		<div class="content-card">
+		        			<button id="buttonCard5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Procesos/Manufactura')">Seleccione</button>
+		        			<div class="contenido">
+		        				<div class="contenido-left">
+		        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
+		        				</div>
+		        				<div class="contenido-right">
+		    						<h2>Sab&iacute;a que...</h2>
+		    						<p>... se reduce el 19% en el costo de fabricaci&oacute;n con un monitorio en tiempo real de costo de producci&oacute;n y variantes.</p>
+		    						<small>(IDC, septiembre 2016)</small>
+		        				</div>
+		        			</div>
+		        		</div>
+		        	</div>
+				</div>
+			</div>
+			<div id="second-window" class="window-center">
+				<div class="mdl-container text-center">
+					<div class="question">
+	            		<span class="number">02/05</span>
+	            		<h2>¿De qu&eacute; tama&ntilde;o es su empresa&#63;</h2>
 	            	</div>
-	            	<div class="mdl-card-question">
-	            		<div class="flip-card">
-            				<div class="card-front card-front-none">
-	            				<img src="<?php echo RUTA_IMG?>cards/card-retail.png">
-	            				<p>Retail</p>
-	            			</div>
-	            		</div>
-	            		<div class="content-card">
-	            			<button id="buttonCard2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Retail')">Seleccione</button>
-	            			<div class="contenido">
-	            				<div class="contenido-left">
-	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
-	            				</div>
-	            				<div class="contenido-right">
-            						<h2>Sab&iacute;a que...</h2>
-            						<p>... por cada innovador que sale a crear un nuevo mercado o tipo de producto, hay al menos un centenar de mercados
-            						 que se paralizan o se reducen.</p>
-            						<small>(IDC, septiembre 2016)</small>
-	            				</div>
-	            			</div>
-	            		</div>
-	            	</div>
-	            	<div class="mdl-card-question">
-	            		<div class="flip-card">
-	            			<div class="card-front card-front-none">
-	            				<img src="<?php echo RUTA_IMG?>cards/card-distribucion.png">
-	            				<p>Distribuci&oacute;n</p>
-	            			</div>
-	            		</div>
-	            		<div class="content-card">
-	            			<button id="buttonCard3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Distribución')">Seleccione</button>
-	            			<div class="contenido">
-	            				<div class="contenido-left">
-	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
-	            				</div>
-	            				<div class="contenido-right">
-            						<h2>Sab&iacute;a que...</h2>
-            						<p>... puede mejorar la experiencia general del cliente con la realizaci&oacute;n de pedidos multicanal y su r&aacute;pido
-            						 procesamiento.</p>
-            						<small>(SAP Performance Benchmarking)</small>
-	            				</div>
-	            			</div>
-	            		</div>
-	            	</div>
-	            	<div class="mdl-card-question">
-            			<div class="flip-card">
-            				<div class="card-front card-front-none">
-	            				<img src="<?php echo RUTA_IMG?>cards/card-producto.png">
-	            				<p>Productos de consumo</p>
-	            			</div>
-            			</div>
-            			<div class="content-card">
-	            			<button id="buttonCard4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Productos de consumo')">Seleccione</button>
-	            			<div class="contenido">
-	            				<div class="contenido-left">
-	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
-	            				</div>
-	            				<div class="contenido-right">
-            						<h2>Sab&iacute;a que...</h2>
-            						<p>... las empresas exitosas del sector reinventan su forma de operar, aprovechando la tecnolog&iacute;a para perfeccionar las
-            						pr&aacute;cticas de negocio, mejorar la agilidad y atender mejor a clientes y distribuidores.</p>
-            						<small>(IDC, septiembre 2016)</small>
-	            				</div>
-	            			</div>
-	            		</div>
-	            	</div>
-	            	<div class="mdl-card-question">
-	            		<div class="flip-card">
-	            			<div class="card-front card-front-none">
-	            				<img src="<?php echo RUTA_IMG?>cards/card-proceso.png">
-	            				<p>Procesos/Manufactura</p>
-	            			</div>
-	            		</div>
-	            		<div class="content-card">
-	            			<button id="buttonCard5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Procesos/Manufactura')">Seleccione</button>
-	            			<div class="contenido">
-	            				<div class="contenido-left">
-	            					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
-	            				</div>
-	            				<div class="contenido-right">
-            						<h2>Sab&iacute;a que...</h2>
-            						<p>... se reduce el 19% en el costo de fabricaci&oacute;n con un monitorio en tiempo real de costo de producci&oacute;n y variantes.</p>
-            						<small>(IDC, septiembre 2016)</small>
-	            				</div>
-	            			</div>
-	            		</div>
-	            	</div>
-	        	</div>
-	        	<div class="logo-bottom">
-        			<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
-        		</div>
-	        </div>
-	        <div class="slide text-center">
-	        	<div class="question">
-            		<span class="number">02/05</span>
-            		<h2>¿De qu&eacute; tama&ntilde;o es su empresa&#63;</h2>
-            	</div>
-	            <div class="mdl-container mdl-tablet mdl-flex text-center">
 	            	<div class="mdl-card-question">
             			<div class="flip-card">
             				<div class="card-front card-front-none">
@@ -252,17 +248,14 @@
 	            			</div>
 	            		</div>
 	            	</div>
-	        	</div>
-	        	<div class="logo-bottom">
-        			<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
-        		</div>
-	        </div>
-	        <div class="slide text-center">
-	        	<div class="question">
-            		<span class="number">03/05</span>
-            		<h2>¿Cu&aacute;l es la prioridad de su negocio&#63;</h2>
-            	</div>
-	            <div class="mdl-container mdl-ipad mdl-flex text-center">
+				</div>
+			</div>
+			<div id="third-window" class="window-center">
+				<div class="mdl-container text-center">
+					<div class="question">
+	            		<span class="number">03/05</span>
+	            		<h2>¿Cu&aacute;l es la prioridad de su negocio&#63;</h2>
+	            	</div>
 	            	<div class="mdl-card-question mdl-card-3">
 	            		<div class="flip-card">
 	            			<div class="card-front">
@@ -419,17 +412,14 @@
 	            			</div>
 	            		</div>
 	            	</div>
-	        	</div>
-	        	<div class="logo-bottom">
-        			<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
-        		</div>
-	        </div>
-	        <div class="slide text-center">
-	        	<div class="question">
-            		<span class="number">04/05</span>
-            		<h2>¿Que tipo de infraestructura est&aacute; buscando&#63;</h2>
-            	</div>
-	            <div class="mdl-container mdl-flex text-center">
+				</div>
+			</div>
+			<div id="fourth-window" class="window-center">
+				<div class="mdl-container text-center">
+					<div class="question">
+	            		<span class="number">04/05</span>
+	            		<h2>¿Que tipo de infraestructura est&aacute; buscando&#63;</h2>
+	            	</div>
 	            	<div class="mdl-card-question">
 	            		<div class="flip-card">
 	            			<div class="card-front">
@@ -510,19 +500,16 @@
 	            			</div>
 	            		</div>
 	            	</div>
-	        	</div>
-				<div class="logo-bottom">
-        			<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
-        		</div>
-	        </div>
-	        <div class="slide text-center">
-        		<div class="question">
-            		<span class="number">05/05</span>
-            		<div class="question-respuestas">
-            			<p><span>Basados en sus respuestas,</span> tenemos en mente una soluci&oacute;n ideal para su negocio.</p>
-            		</div>
-            	</div>
-	            <div class="mdl-container relative text-center">
+				</div>
+			</div>
+			<div id="fifth-window" class="window-center">
+				<div class="mdl-container text-center">
+					<div class="question">
+	            		<span class="number">05/05</span>
+	            		<div class="question-respuestas">
+	            			<p><span>Basados en sus respuestas,</span> tenemos en mente una soluci&oacute;n ideal para su negocio.</p>
+	            		</div>
+	            	</div>
 	            	<div class="mdl-solicitud">
 		            	<div class="mdl-card-confirmacion">
 	            			<div class="mdl-respuestas text-left">
@@ -666,14 +653,11 @@
 	        				</div>
 	            		</form>
             		</div>
-            		<div class="mdl-agradecimiento">
-            			<h2>Gracias por su inter&eacute;s</h2>
-            			<p>Un representante de SAP se pondr&aacute; en contacto con Usted para ayudarlo a dar el primer paso.</p>
-            		</div>
-	        	</div>
-	        </div>
+				</div>
+			</div>
 	    </div>
 	</section>
+	
 	<!--MODAL-->
 	<div class="modal fade" id="ModalQuestion" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm text-center">
@@ -702,9 +686,6 @@
 	<script src="<?php echo RUTA_PLUGINS?>bootstrap-select/js/bootstrap-select.min.js?v=<?php echo time();?>"></script>
 	<script src="<?php echo RUTA_PLUGINS?>bootstrap-select/js/i18n/defaults-es_ES.min.js?v=<?php echo time();?>"></script>
 	<script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
-    <script src="<?php echo RUTA_PLUGINS?>fullPage/vendors/jquery.easings.min.js?v=<?php echo time();?>"></script>
-    <script src="<?php echo RUTA_PLUGINS?>fullPage/vendors/scrolloverflow.min.js?v=<?php echo time();?>"></script>
-    <script src="<?php echo RUTA_PLUGINS?>fullPage/dist/jquery.fullpage.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_JS?>index.js?v=<?php echo time();?>"></script>

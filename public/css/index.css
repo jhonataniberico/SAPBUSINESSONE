@@ -11,12 +11,20 @@ p{
 	font-family: 'BentonSansRegular';
 }
 /*GENERAL*/
+.window-center{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
 .arrow-block{
 	opacity: .5;
 	pointer-events: none;
 }
 .mdl-container{
 	max-width: 1350px;
+	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
 }
