@@ -46,7 +46,7 @@ class Es extends CI_Controller {
             $this->session->unset_userdata('Infraestructura');
             $datos       = $this->input->post('global_datos');
             $pantalla    = $this->input->post('pantalla');
-            $idioma      = $this->input->post('idioma');
+            $idioma      = /*$this->input->post('idioma')*/'Español';
             $datos_prio  = $this->input->post('datos_prio');
             $operar      = $this->input->post('operar');
             $facturacion = $this->input->post('facturacion');
