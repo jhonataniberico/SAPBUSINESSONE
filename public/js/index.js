@@ -196,7 +196,7 @@ function saveDatos(pantalla) {
 				  datos_prio   : datos_array.toString(),
 				  operar       : operar,
 				  facturacion  : facturacion},
-		url   : 'es/saveDatos',
+		url   : 'es/Savedatos',
 		type  : 'POST'
 	}).done(function(data){
 		try{
@@ -543,3 +543,4 @@ function enviarGracias() {
 		location.reload();
 	}, 5000);
 }
+
