@@ -359,6 +359,7 @@ $( document ).ready(function() {
 });
 
 function mostrarDatos() {
+	console.log('entra');
 	$.ajax({
 		url   : 'es/mostrarDatos',
 		type  : 'POST'

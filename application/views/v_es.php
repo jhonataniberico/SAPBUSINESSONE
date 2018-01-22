@@ -546,10 +546,7 @@
 		            				</div>
 		            				<div class="col-xs-12 p-0">
 		            					<div class="div-respuestas">
-		            						<ul>
-		            							<li id="prioridad">Movilidad</li>
-		            							<li id="">Emprendedores</li>
-		            							<li id="">Cloud</li>
+		            						<ul id="prioridad">
 		            						</ul>
 		            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
 		            					</div>
