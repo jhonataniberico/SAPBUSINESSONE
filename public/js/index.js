@@ -1,12 +1,3 @@
-$(document).ready(function() {
-	$('#principal').fullpage({
-		autoScrolling: false,
-		fitToSection: false,
-		interlockedSlides: false,
-		touchSensitivity: 5000
-	});
-});
-
 function solicitarEstimacion() {
 	var nombre_completo = $('#nombre_completo').val();
 	var empresa  		= $('#empresa').val();
@@ -385,7 +376,8 @@ function mostrarDatos() {
           	$('#industria').text(data.Industria);
           	$('#factura').text(data.Factura_anual)
            	$('#tamanio').text(data.Tamanio);
-           	$('#prioridad').text(data.Prioridad);
+           	$('#prioridad').find('li').remove();
+           	$('#prioridad').append(data.Prioridad);
            	$('#infraestructura').text(data.Infraestructura);
         }else {
         }
@@ -541,4 +533,84 @@ function enviarGracias() {
 	setTimeout(function(){ 
 		location.reload();
 	}, 5000);
+}
+
+/*BUTTONS NEXT - PREV */
+
+var homePage      = $('#home');
+var firstWindow   = $('#first-window');
+var secondWindow  = $('#second-window');
+var thirdWindow   = $('#third-window');
+var fourthWindow = $('#fourth-window');
+var fifthWindow   = $('#fifth-window');
+var i = 1;
+
+function buttonNext(){
+	$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
+	homePage.addClass('animated fadeOutLeft');
+	firstWindow.addClass('animated fadeInRight');
+	$('.button-arrow').css("display","block");
+}
+
+function buttonQuestion(direction){
+	if(direction == 2){
+		i++;
+		if(i == 2){
+			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
+			firstWindow.addClass('animated fadeOutLeft');
+			secondWindow.addClass('animated fadeInRight');
+		}
+		else if(i == 3){
+			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
+			secondWindow.addClass('animated fadeOutLeft');
+			thirdWindow.addClass('animated fadeInRight');
+		}
+		else if(i == 4){
+			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
+			thirdWindow.addClass('animated fadeOutLeft');
+			fourthWindow.addClass('animated fadeInRight');
+		}
+		else if(i == 5){
+			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
+			fourthWindow.addClass('animated fadeOutLeft');
+			fifthWindow.addClass('animated fadeInRight');
+			$('.button-arrow.button-next').css("display","none");
+			i = 5;
+			return;
+		}
+	}
+	else if(direction == 1){
+		i--;
+		if(i == 4){
+			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
+			fourthWindow.addClass('animated fadeInLeft');
+			fifthWindow.addClass('animated fadeOutRight');
+			$('.button-arrow.button-next').css("display","block");
+		}
+		else if(i == 3){
+			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
+			thirdWindow.addClass('animated fadeInLeft');
+			fourthWindow.addClass('animated fadeOutRight');
+		}
+		else if(i == 2){
+			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
+			secondWindow.addClass('animated fadeInLeft');
+			thirdWindow.addClass('animated fadeOutRight');
+		}
+		else if(i == 1){
+			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
+			firstWindow.addClass('animated fadeInLeft');
+			secondWindow.addClass('animated fadeOutRight');
+		}
+		else if(i < 1){
+			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
+			homePage.removeClass('animated fadeOutLeft')
+			homePage.addClass('animated fadeInLeft');
+			firstWindow.addClass('animated fadeOutRight');
+			$('.button-arrow').css("display","none");
+			homePage.find('.button-next').css("display","block");
+			i = 1;
+			return;
+		}
+	}
 }
