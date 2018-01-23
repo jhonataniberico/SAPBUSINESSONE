@@ -202,12 +202,6 @@ function saveDatos(pantalla) {
 
 
 var array_ids = new Array();
-/*$(window).load(function() {
-  if($('body').attr('class') == 'fp-viewing-0-0') {
-  	$('.fp-prev').addClass('hidden');
-  }	
-});*/
-
 var select 				   = 0;
 var select_prioridad 	   = 0;
 var select_infraestructura = 0;
@@ -215,118 +209,6 @@ var select_tam 			   = 0;
 var select_empl 	       = 0;
 $( document ).ready(function() {
 	var array_button 		   = new Array();
-	//botón adelante
-    /*$(".button-next").click(function() {
-    	setTimeout(function(){
-    	 if($('body').attr('class') != 'fp-viewing-0-0') {
-    		$('.button-prev').removeClass("hidden");
-    	 }
-    	 if($('body').attr('class') == 'fp-viewing-0-1') {
-    	 	if(select == 0) {
-    	 		$('.button-next').addClass('arrow-block');
-    	 	}else if(select == 1) {
-    	 		$('.button-next').removeClass('arrow-block');
-    	 	}
-    	}
-    	if($('body').attr('class') == 'fp-viewing-0-2') {
-			if(select_tam == 0) {
-    	 		$('.button-next').addClass('arrow-block');
-    	 	}else if(select_tam == 1) {
-    	 		$('.button-next').removeClass('arrow-block');
-    	 	}
-    	}
-    	if($('body').attr('class') == 'fp-viewing-0-3') {
-    		if(select_prioridad == 0) {
-    	 		$('.button-next').addClass('arrow-block');
-    	 	}else if(select_prioridad == 1) {
-    	 		$('.button-next').removeClass('arrow-block');
-    	 	}
-    	}
-    	if($('body').attr('class') == 'fp-viewing-0-4') {
-			if(select_infraestructura == 0) {
-    	 		$('.button-next').addClass('arrow-block');
-    	 	}else if(select_infraestructura == 1) {
-    	 		$('.button-next').removeClass('arrow-block');
-    	 	}
-    	}
-    	 if($('body').attr('class') == 'fp-viewing-0-5') {
-    	 	$('.button-next').addClass( "hidden" );
-    	 }
-    	}, 500);
-    	if($('body').attr('class') == 'fp-viewing-0-1') {
-    		saveDatos(1);
-    		var id_button = $('.mdl-card-question .content-card').find('.select.select-one.button-select').attr('id');
-    		array_ids.push(id_button);
-    		if(array_ids.length != 0) {
-				array_ids.splice(0, 1, id_button);
-				var id = array_ids[1];
-				$('#'+id).addClass('button-select');
-			}
-    	}
-    	if($('body').attr('class') == 'fp-viewing-0-2') {
-    		saveDatos(2);   
-    		var id_button = $('.mdl-card-question .content-card').find('.select-tam.select-one.button-select').attr('id');
-    		array_ids.push(id_button);
-    		if(array_ids.length != 0) {
-				array_ids.splice(1, 1, id_button);
-			}
-			var id = array_ids[2];
-			$('#'+id).addClass('button-select');
-    	}
-    	if($('body').attr('class') == 'fp-viewing-0-3') {
-    		saveDatos(3);
-    		var id_button = $('.mdl-card-question .content-card').find('.select-prioridad.button-select').attr('id');
-    		array_ids.push(id_button);
-    		if(array_ids.length != 0) {
-				array_ids.splice(2, 1, id_button);
-				var id = array_ids[3];
-				$('#'+id).addClass('button-select');
-			}
-    	}
-    	if($('body').attr('class') == 'fp-viewing-0-4') {
-    		saveDatos(4);
-    		var id_button = $('.mdl-card-question .content-card').find('.select-infraestructura.select-one.button-select').attr('id');;
-    		array_ids.push(id_button);
-    		if(array_ids.length != 0) {
-				array_ids.splice(3, 1, id_button);
-			}
-    	}
-    });
-    //botón atrás
-    $(".button-prev").click(function(){
-    	setTimeout(function(){
-    	 if($('body').attr('class') == 'fp-viewing-0-0') {
-    		$('.button-prev').addClass('hidden');
-			$('.button-next').removeClass('arrow-block');
-    	 }
-    	 if($('body').attr('class') == 'fp-viewing-0-1') {
-			$('.button-next').removeClass('arrow-block');
-			var id = array_ids[0];
-			$('#'+id).addClass('button-select');
-    	}
-    	if($('body').attr('class') == 'fp-viewing-0-2') {
-			$('.button-next').removeClass('arrow-block');
-			var id = array_ids[1];
-			$('#'+id).addClass('button-select');
-    	}
-    	if($('body').attr('class') == 'fp-viewing-0-3') {
-			$('.button-next').removeClass('arrow-block');
-			var id = array_ids[2];
-			$('#'+id).addClass('button-select');
-			while(datos_array.length > 0) {
-  				datos_array.pop();
-			}
-    	}
-    	if($('body').attr('class') == 'fp-viewing-0-4') {
-			$('.button-next').removeClass('arrow-block');
-			var id = array_ids[3];
-			$('#'+id).addClass('button-select');
-    	}
-    	 if($('body').attr('class') != 'fp-viewing-0-5') {
-    		$('.button-next').removeClass('hidden');
-    	 }
-    	}, 500);
-    });*/
     //botón seleccione
     $(".select").click(function () {
 		select = 1;
@@ -334,7 +216,7 @@ $( document ).ready(function() {
 	});
 	$("#buttonMas").click(function () {
 		select_tam = 1;
-		facturacion = /*$('#facturacion').val()*/'1-3 Millones de Dólares';
+		facturacion = $('#facturacion').val();
 		if(facturacion != null) {
 			$('.button-next').prop("disabled", false);
 		}
@@ -632,35 +514,23 @@ function buttonQuestion(direction){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
 			fourthWindow.addClass('animated fadeInLeft');
 			fifthWindow.addClass('animated fadeOutRight');
-			/*if(select_infraestructura != 1) {
-				$('.button-arrow.button-next').css("display","block");
-			}*/
 			$('.button-arrow.button-next').css("display","block");
 		}
 		else if(m == 3){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
 			thirdWindow.addClass('animated fadeInLeft');
 			fourthWindow.addClass('animated fadeOutRight');
-			/*if(select_prioridad != 1) {
-				$('.button-arrow.button-next').css("display","block");
-			}*/
 		}
 		else if(m == 2){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
 			secondWindow.addClass('animated fadeInLeft');
 			thirdWindow.addClass('animated fadeOutRight');
-			/*if(select_tam != 1) {
-				$('.button-arrow.button-next').css("display","block");
-			}*/
 			$('#'+id_primero).addClass('button-select');
 		}
 		else if(m == 1){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
 			firstWindow.addClass('animated fadeInLeft');
 			secondWindow.addClass('animated fadeOutRight');
-			/*if(select != 1) {
-				$('.button-arrow.button-next').css("display","block");
-			}*/
 		}
 		else if(m < 1){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
