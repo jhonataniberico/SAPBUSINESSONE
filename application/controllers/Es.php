@@ -21,6 +21,7 @@ class Es extends CI_Controller {
     print_r('uni linke: '.$this->session->userdata('universidad'));
     print_r('pais linke: '.$this->session->userdata('pais_linke'));
     print_r('pantalla: '.$this->session->userdata('pantalla'));
+    $data['pantalla'] = $this->session->userdata('pantalla');
     $this->session->unset_userdata('Industria');
     $this->session->unset_userdata('Infraestructura');
     $this->session->unset_userdata('Factura_anual');

@@ -710,6 +710,10 @@
         } else {
             $('select').selectpicker();
         }
+
+        $(window).load(function() {
+		    //console.log(<?php echo $pantalla ?>);
+		});
     </script>
 </body>
 </html>
