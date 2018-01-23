@@ -26,7 +26,8 @@ class callback extends CI_Controller {
 		$session = array('nombre_linke' => $user->firstName.' '.$user->lastName,
 		        	 	 'email_linke'  => $user->emailAddress,
 				 		 'universidad'  => $user->headline,
-				 		 'pais_linke' 	=> $user->location->name);
+				 		 'pais_linke' 	=> $user->location->name,
+				 		 'pantalla'     => 5);
 		$this->session->set_userdata($session);
 		header("location: es");
     } 
