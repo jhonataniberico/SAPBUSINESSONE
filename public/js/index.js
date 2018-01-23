@@ -451,7 +451,7 @@ function operar(id,tipo) {
 
 var facturacion = null;
 function selectFacturacion(id){
-	facturacion = /*$('#facturacion').val()*/'1-3 Millones de Dólares';
+	facturacion = $('#facturacion').val();
 	if($('#textOperar') != 'Seleccione' && facturacion != null) {
 		$('.button-next').prop("disabled", false);
 	}
@@ -541,7 +541,9 @@ var fourthWindow  = $('#window4');
 var fifthWindow   = $('#window5');
 
 function buttonNext(){
-	$('.button-next').prop("disabled", true);
+	if(pant1 == 0) {
+		$('.button-next').prop("disabled", true);
+	}
 	$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
 	homePage.addClass('animated fadeOutLeft');
 	firstWindow.addClass('animated fadeInRight');
@@ -551,6 +553,9 @@ function buttonNext(){
 	footerLogo.addClass('opacity');
 }
 
+var pant1 = 0;
+var pant3 = 0;
+var pant4 = 0;
 function buttonQuestion(direction){
 	if(direction == 2){
 		m++;
@@ -570,6 +575,7 @@ function buttonQuestion(direction){
 			if(select != 1) {
 				$('.button-next').prop("disabled", true);
 			}
+			pant1 = 1;
 		}
 		else if(m == 3){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
@@ -583,7 +589,10 @@ function buttonQuestion(direction){
 			}
 			var id = array_ids[2];
 			$('#'+id).addClass('button-select');
-			$('.button-next').prop("disabled", true);
+			if(pant3 == 0) {
+				$('.button-next').prop("disabled", true);
+			}
+			pant3 = 1;
 		}
 		else if(m == 4){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
@@ -597,7 +606,10 @@ function buttonQuestion(direction){
 				var id = array_ids[3];
 				$('#'+id).addClass('button-select');
 			}
-			$('.button-next').prop("disabled", true);
+			if(pant4 == 0){
+				$('.button-next').prop("disabled", true);
+			}
+			pant4 = 1;
 		}
 		else if(m == 5){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
