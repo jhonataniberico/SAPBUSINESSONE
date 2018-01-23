@@ -26,27 +26,6 @@
 <body>
 	<section id="principal">
 	    <div class="section">
-    		<div class="header">
-    			<div class="header-left">
-    				<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-    				<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
-    			</div>
-    			<div class="header-right">
-    				<div class="mdl-idioma">
-						<select class="selectpicker" id="Idioma"  name="Idioma" onchange="cambiarIdioma()">
-							<option value="Español">Espa&ntilde;ol</option>
-							<option value="Inglés">Ingl&eacute;s</option>
-							<option value="Portugués">Portug&eacute;s</option>
-						</select>
-    				</div>
-					<div class="background3"></div>
-					<div class="background2"></div>
-					<div class="background1"></div>
-    			</div>
-    		</div>
-    		<div class="bottom-right">
-				<p>Puede seleccionar m&aacute;s de una opci&oacute;n</p>
-    		</div>
     		<div id="home" class="window-center">
     			<div class="header-home">
 					<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
@@ -70,7 +49,28 @@
 	    		</div>
     		</div>
 			<div class="mdl-container-question">
-				<div id="first-window" class="window-center opacity-done">
+				<div class="header">
+	    			<div class="header-left">
+	    				<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+	    				<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
+	    			</div>
+	    			<div class="header-right">
+	    				<div class="mdl-idioma">
+							<select class="selectpicker" id="Idioma"  name="Idioma" onchange="cambiarIdioma()">
+								<option value="Español">Espa&ntilde;ol</option>
+								<option value="Inglés">Ingl&eacute;s</option>
+								<option value="Portugués">Portug&eacute;s</option>
+							</select>
+	    				</div>
+						<div class="background3"></div>
+						<div class="background2"></div>
+						<div class="background1"></div>
+	    			</div>
+	    		</div>
+	    		<div class="logo-bottom">
+        			<img src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_home.png">
+        		</div>
+				<div id="window1" class="window-center opacity-done">
 					<div class="mdl-container text-center">
 						<div class="question">
 			        		<span class="number">01/05</span>
@@ -187,76 +187,78 @@
 			        	</div>
 					</div>
 				</div>
-				<div id="second-window" class="window-center opacity-done">
-					<div class="mdl-container text-center">
+				<div id="window2" class="window-center opacity-done">
+					<div class="mdl-container mdl-tablet text-center">
 						<div class="question">
 		            		<span class="number">02/05</span>
 		            		<h2>¿De qu&eacute; tama&ntilde;o es su empresa&#63;</h2>
 		            	</div>
-		            	<div class="mdl-card-question">
-	            			<div class="flip-card">
-	            				<div class="card-front card-front-none">
-		            				<img src="<?php echo RUTA_IMG?>cards/card-empleados.png">
-		            				<p>Número de empleados</p>
-		            			</div>
-	            			</div>
-	            			<div class="content-card">
-	            				<div class="select-empleados">
-	            					<button id="buttonMenos" class="mdl-button mdl-js-button mdl-button--icon select-one" onclick="operar(this.id,1)"><i class="mdi mdi-remove"></i></button>
-	            					<span id="textOperar">Seleccione</span>
-	            					<button id="buttonMas" class="mdl-button mdl-js-button mdl-button--icon select-one" onclick="operar(this.id,2)"><i class="mdi mdi-add"></i></button>
-	            				</div>
-		            			<div class="contenido">
-		            				<div class="contenido-left">
-		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
-		            				</div>
-		            				<div class="contenido-right">
-	            						<h2>Sab&iacute;a que...</h2>
-	            						<p>... las interacciones con los clientes y consumidores es el punto de partida para el crecimiento de los ingresos de las peque&ntilde;as y medianas
-	            						 empresas de productos de consumo.</p>
-	            						<small>(IDC, septiembre 2016)</small>
-		            				</div>
-		            			</div>
-		            		</div>
-		            	</div>
-		            	<div class="mdl-card-question visi-hidden">
-		            		<div class="flip-card">
-		            			<div class="card-front card-front-none">
-		            				<img src="<?php echo RUTA_IMG?>cards/card-facturacion.png">
-		            				<p>Facturaci&oacute;n anual</p>
-		            			</div>
-		            		</div>
-		            		<div class="content-card">
-		            			<div class="row">
-		            				<div class="col-xs-12">
-		            					<div class="mdl-select">
-		            						<select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
-												<option value="< 1 Millón de Dólares">< 1 Millón de Dólares</option>
-												<option value="1-3 Millones de Dólares">1-3 Millones de Dólares</option>
-												<option value="3-5 Millones de Dólares">3-5 Millones de Dólares</option>
-												<option value="5-10 Millones de Dólares">5-10 Millones de Dólares</option>
-												<option value="10-20 Millones de Dólares">10-20 Millones de Dólares</option>
-												<option value="20-40 Millones de Dólares">20-40 Millones de Dólares</option>
-												<option value="No poseo información">No poseo información</option>
-											</select>
-		            					</div>
+		            	<div class="mdl-flex">
+	            			<div class="mdl-card-question">
+		            			<div class="flip-card">
+		            				<div class="card-front card-front-none">
+			            				<img src="<?php echo RUTA_IMG?>cards/card-empleados.png">
+			            				<p>Número de empleados</p>
 			            			</div>
 		            			</div>
-		            			<div class="contenido">
-		            				<div class="contenido-left">
-		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
+		            			<div class="content-card">
+		            				<div class="select-empleados">
+		            					<button id="buttonMenos" class="mdl-button mdl-js-button mdl-button--icon select-one" onclick="operar(this.id,1)"><i class="mdi mdi-remove"></i></button>
+		            					<span id="textOperar">Seleccione</span>
+		            					<button id="buttonMas" class="mdl-button mdl-js-button mdl-button--icon select-one" onclick="operar(this.id,2)"><i class="mdi mdi-add"></i></button>
 		            				</div>
-		            				<div class="contenido-right">
-	            						<h2>Sab&iacute;a que...</h2>
-	            						<p>... el aumento de las ventas por correo electr&oacute;nico, ahora es un poco m&aacute;s del 10% de las ventas totales.</p>
-	            						<small>(IDC, septiembre 2016)</small>
-		            				</div>
-		            			</div>
-		            		</div>
+			            			<div class="contenido">
+			            				<div class="contenido-left">
+			            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
+			            				</div>
+			            				<div class="contenido-right">
+		            						<h2>Sab&iacute;a que...</h2>
+		            						<p>... las interacciones con los clientes y consumidores es el punto de partida para el crecimiento de los ingresos de las peque&ntilde;as y medianas
+		            						 empresas de productos de consumo.</p>
+		            						<small>(IDC, septiembre 2016)</small>
+			            				</div>
+			            			</div>
+			            		</div>
+			            	</div>
+			            	<div class="mdl-card-question visi-hidden">
+			            		<div class="flip-card">
+			            			<div class="card-front card-front-none">
+			            				<img src="<?php echo RUTA_IMG?>cards/card-facturacion.png">
+			            				<p>Facturaci&oacute;n anual</p>
+			            			</div>
+			            		</div>
+			            		<div class="content-card">
+			            			<div class="row">
+			            				<div class="col-xs-12">
+			            					<div class="mdl-select">
+			            						<select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
+													<option value="< 1 Millón de Dólares">< 1 Millón de Dólares</option>
+													<option value="1-3 Millones de Dólares">1-3 Millones de Dólares</option>
+													<option value="3-5 Millones de Dólares">3-5 Millones de Dólares</option>
+													<option value="5-10 Millones de Dólares">5-10 Millones de Dólares</option>
+													<option value="10-20 Millones de Dólares">10-20 Millones de Dólares</option>
+													<option value="20-40 Millones de Dólares">20-40 Millones de Dólares</option>
+													<option value="No poseo información">No poseo información</option>
+												</select>
+			            					</div>
+				            			</div>
+			            			</div>
+			            			<div class="contenido">
+			            				<div class="contenido-left">
+			            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
+			            				</div>
+			            				<div class="contenido-right">
+		            						<h2>Sab&iacute;a que...</h2>
+		            						<p>... el aumento de las ventas por correo electr&oacute;nico, ahora es un poco m&aacute;s del 10% de las ventas totales.</p>
+		            						<small>(IDC, septiembre 2016)</small>
+			            				</div>
+			            			</div>
+			            		</div>
+			            	</div>	
 		            	</div>
 					</div>
 				</div>
-				<div id="third-window" class="window-center opacity-done">
+				<div id="window3" class="window-center opacity-done">
 					<div class="mdl-container text-center">
 						<div class="question">
 		            		<span class="number">03/05</span>
@@ -419,8 +421,11 @@
 		            		</div>
 		            	</div>
 					</div>
+		    		<div class="bottom-right">
+						<p>Puede seleccionar m&aacute;s de una opci&oacute;n</p>
+		    		</div>
 				</div>
-				<div id="fourth-window" class="window-center opacity-done">
+				<div id="window4" class="window-center opacity-done">
 					<div class="mdl-container text-center">
 						<div class="question">
 		            		<span class="number">04/05</span>
@@ -508,7 +513,7 @@
 		            	</div>
 					</div>
 				</div>
-				<div id="fifth-window" class="window-center opacity-done">
+				<div id="window5" class="window-center opacity-done">
 					<div class="mdl-container text-center">
 						<div class="question">
 		            		<span class="number">05/05</span>
@@ -525,7 +530,7 @@
 		            						<ul>
 		            							<li id="industria">Retail</li>
 		            						</ul>
-		            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
+		            						<button id="first" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id)">Editar</button>
 		            					</div>
 		            				</div>
 		            				<div class="col-xs-12 p-0">
@@ -533,7 +538,7 @@
 		            						<ul>
 		            							<li id="tamanio">1 - 50</li>
 		            						</ul>
-		            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
+		            						<button id="second" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id)">Editar</button>
 		            					</div>
 		            				</div>
 		            				<div class="col-xs-12 p-0">
@@ -541,14 +546,14 @@
 		            						<ul>
 		            							<li id="factura">1-3 Millones de D&oacute;lares</li>
 		            						</ul>
-		            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
+		            						<button id="third" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id)">Editar</button>
 		            					</div>
 		            				</div>
 		            				<div class="col-xs-12 p-0">
 		            					<div class="div-respuestas">
 		            						<ul id="prioridad">
 		            						</ul>
-		            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
+		            						<button id="third" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id)">Editar</button>
 		            					</div>
 		            				</div>
 		            				<div class="col-xs-12 p-0">
@@ -556,7 +561,7 @@
 		            						<ul>
 		            							<li id="infraestructura">Local</li>
 		            						</ul>
-		            						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Editar</button>
+		            						<button id="fourth" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id)">Editar</button>
 		            					</div>
 		            				</div>
 		            				<div class="col-xs-12 p-0 text-right m-t-10">
