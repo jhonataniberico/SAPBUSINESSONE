@@ -416,11 +416,11 @@ var id_primero 	  = "";
 var homePage      = $('#home');
 var header        = $('.header');
 var footerLogo    = $('.logo-bottom');
-var firstWindow   = $('#window1');
-var secondWindow  = $('#window2');
-var thirdWindow   = $('#window3');
-var fourthWindow  = $('#window4');
-var fifthWindow   = $('#window5');
+var firstWindow   = $('#window1-page');
+var secondWindow  = $('#window2-page');
+var thirdWindow   = $('#window3-page');
+var fourthWindow  = $('#window4-page');
+var fifthWindow   = $('#window5-page');
 
 function buttonNext(){
 	if(pant1 == 0) {
@@ -551,8 +551,10 @@ function buttonQuestion(direction){
 var num = null;
 
 function EditQuestion(id){
-	var windowQestion = $('#'+id+'-window');
+	num = id.substr(6,1);
+	m = num;
+	var windowQestion  = $('#'+id+'-page');
 	$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight');
-	windowQestion.addClass('animated fadeInLeft')
-	console.log(windowQestion);
+	windowQestion.addClass('animated fadeInLeft');
+	$('.button-arrow.button-next').css("display","block");
 }
