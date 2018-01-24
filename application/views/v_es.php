@@ -232,7 +232,7 @@
 			            				<div class="col-xs-12">
 			            					<div class="mdl-select">
 			            						<select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
-													<option value="< 1 Millón de Dólares">< 1 Millón de Dólares</option>
+													<!-- <option value="< 1 Millón de Dólares">< 1 Millón de Dólares</option> -->
 													<option value="1-3 Millones de Dólares">1-3 Millones de Dólares</option>
 													<option value="3-5 Millones de Dólares">3-5 Millones de Dólares</option>
 													<option value="5-10 Millones de Dólares">5-10 Millones de Dólares</option>
@@ -631,26 +631,26 @@
 		        				</div>
 		        				<div class="col-sm-6">
 		        					<p class="text-contacto">Quiero ser contactado por representante de ventas:</p>
-		        					<div class="col-xs-4">
+		        					<div class="mdl-input-label">
 		        						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="c-email">
 											<input type="radio" id="c-email" class="mdl-radio__button" name="options" value="1">
 											<span class="mdl-radio__label">Por Email</span>
 										</label>
 		        					</div>
-		        					<div class="col-xs-4">
+		        					<div class="mdl-input-label">
 		        						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="c-telefono">
 											<input type="radio" id="c-telefono" class="mdl-radio__button" name="options" value="2">
 											<span class="mdl-radio__label">Por tel&eacute;fono</span>
 										</label>
 		        					</div>
-		        					<div class="col-xs-4">
+		        					<div class="mdl-input-label">
 		        						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="c-ambos">
 											<input type="radio" id="c-ambos" class="mdl-radio__button" name="options" value="3">
 											<span class="mdl-radio__label">Ambos</span>
 										</label>
 		        					</div>
 		        				</div>
-		        				<div class="col-xs-12 mdl-label m-t-20">
+		        				<div class="col-xs-12 mdl-label m-t-10">
 		    						<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
 										<input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
 										<span class="mdl-checkbox__label f-s-14" style="">He leido y acepto los <a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" style="">Términos y condiciones de SAP</a></span>
@@ -714,7 +714,6 @@
         } else {
             $('select').selectpicker();
         }
-
         $(window).load(function() {
         	  if(<?php echo $pantalla ?> == 5) { 
         	 	//console.log("<?php echo $nombre_comple ?>");
