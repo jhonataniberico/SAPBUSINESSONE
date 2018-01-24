@@ -530,7 +530,7 @@
 		            						<ul>
 		            							<li id="industria">Retail</li>
 		            						</ul>
-		            						<button id="window1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id)">Editar</button>
+		            						<button id="window1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id, 1)">Editar</button>
 		            					</div>
 		            				</div>
 		            				<div class="col-xs-12 p-0">
@@ -538,7 +538,7 @@
 		            						<ul>
 		            							<li id="tamanio">1 - 50</li>
 		            						</ul>
-		            						<button id="window2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id)">Editar</button>
+		            						<button id="window2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id, 2)">Editar</button>
 		            					</div>
 		            				</div>
 		            				<div class="col-xs-12 p-0">
@@ -546,14 +546,14 @@
 		            						<ul>
 		            							<li id="factura">1-3 Millones de D&oacute;lares</li>
 		            						</ul>
-		            						<button id="window2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id)">Editar</button>
+		            						<button id="window2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id, 2)">Editar</button>
 		            					</div>
 		            				</div>
 		            				<div class="col-xs-12 p-0">
 		            					<div class="div-respuestas">
 		            						<ul id="prioridad">
 		            						</ul>
-		            						<button id="window3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id)">Editar</button>
+		            						<button id="window3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id, 3)">Editar</button>
 		            					</div>
 		            				</div>
 		            				<div class="col-xs-12 p-0">
@@ -561,7 +561,7 @@
 		            						<ul>
 		            							<li id="infraestructura">Local</li>
 		            						</ul>
-		            						<button id="window4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id)">Editar</button>
+		            						<button id="window4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id, 4)">Editar</button>
 		            					</div>
 		            				</div>
 		            				<div class="col-xs-12 p-0 text-right m-t-10">

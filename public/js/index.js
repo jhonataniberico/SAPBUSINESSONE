@@ -180,6 +180,7 @@ function saveDatos(pantalla) {
 		  }
 		});
 	}
+	console.log(datos_array);
 	$.ajax({
 		data  : { global_datos : global_datos,
 				  pantalla     : pantalla,
@@ -517,6 +518,7 @@ function buttonQuestion(direction){
 			$('.button-arrow.button-next').css("display","block");
 		}
 		else if(m == 3){
+			datos_array = [];
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
 			thirdWindow.addClass('animated fadeInLeft');
 			fourthWindow.addClass('animated fadeOutRight');
@@ -550,7 +552,10 @@ function buttonQuestion(direction){
 /*EDIT QUESTION*/
 var num = null;
 
-function EditQuestion(id){
+function EditQuestion(id, pant){
+	if(pant == 3) {
+		datos_array = [];
+	}
 	num = id.substr(6,1);
 	m = num;
 	var windowQestion  = $('#'+id+'-page');
