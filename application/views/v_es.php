@@ -716,7 +716,6 @@
         }
 
         $(window).load(function() {
-		    //console.log(<?php echo $pantalla ?>);
 		});
     </script>
 </body>
