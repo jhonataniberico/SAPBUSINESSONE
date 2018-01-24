@@ -866,10 +866,20 @@ span.number{
     transform-style: preserve-3d;
     height: 417px;
     vertical-align: top;
+    -webkit-transition: max-width .3s ease-in-out;
+    -moz-transition: max-width .3s ease-in-out;
+    -ms-transition: max-width .3s ease-in-out;
+    -o-transition: max-width .3s ease-in-out;
+    transition: max-width .3s ease-in-out;
 }
 .mdl-formulario{
     width: 100%;
     max-width: calc(100% - 520px);
+    -webkit-transition: max-width .3s ease-in-out;
+    -moz-transition: max-width .3s ease-in-out;
+    -ms-transition: max-width .3s ease-in-out;
+    -o-transition: max-width .3s ease-in-out;
+    transition: max-width .3s ease-in-out;
 }
 .mdl-agradecimiento{
     opacity: 0;
@@ -1121,6 +1131,10 @@ span.number{
 	}
 	.mdl-card-question .contenido{
 		display: none;
+	}
+	.mdl-card-confirmacion,
+	.mdl-formulario{
+		max-width: 100%;
 	}
 }
 @media (max-width: 768px){
