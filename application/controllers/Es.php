@@ -20,8 +20,13 @@ class Es extends CI_Controller {
     print_r('Email linke: '.$this->session->userdata('email_linke'));
     print_r('uni linke: '.$this->session->userdata('universidad'));
     print_r('pais linke: '.$this->session->userdata('pais_linke'));
-    print_r('pantalla: '.$this->session->userdata('pantalla'));
-    $data['pantalla'] = $this->session->userdata('pantalla');*/
+    print_r('pantalla: '.$this->session->userdata('pantalla'));*/
+    $data['nombre_comple'] = 'Juan';
+    $data['email_link'] = 'j@gmail.com'/*$this->session->userdata('email_linke')*/;
+    $data['univer'] = 'ricardo'/*$this->session->userdata('universidad')*/;
+    $data['pais_link'] = 'peru'/*$this->session->userdata('pais_linke')*/;
+    $data['dato'] = 'asdasd';
+    $data['pantalla'] = 5/*$this->session->userdata('pantalla')*/;
     $this->session->unset_userdata('Industria');
     $this->session->unset_userdata('Infraestructura');
     $this->session->unset_userdata('Factura_anual');
@@ -140,6 +145,13 @@ class Es extends CI_Controller {
                              'Relacion'        => $relacion,
                              'Contacto'        => $contacto);
             $this->session->set_userdata($session);
+
+            $this->session->unset_userdata('nombre_linke');
+            $this->session->unset_userdata('email_linke');
+            $this->session->unset_userdata('universidad');
+            $this->session->unset_userdata('pais_linke');
+            $this->session->unset_userdata('nombre_linke');
+
             $this->sendGmailSap($email);
             $data['msj'] = $datoInsert['msj'];
       $data['error'] = $datoInsert['error'];

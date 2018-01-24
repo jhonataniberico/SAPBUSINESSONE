@@ -48,9 +48,9 @@ function getCallback()
         $url = "https://api.linkedin.com/v1/people/~:(id,firstName,lastName,pictureUrls::(original),headline,publicProfileUrl,location,industry,positions,email-address)?format=json&oauth2_access_token=" . $accessToken;
         $user = file_get_contents($url, false);
 
-        var_dump(json_decode($user));
-        die();
-        //return (json_decode($user));
+        /*var_dump(json_decode($user));
+        die();*/
+        return (json_decode($user));
 
 
 

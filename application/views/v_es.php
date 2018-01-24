@@ -716,7 +716,18 @@
         }
 
         $(window).load(function() {
-		    //console.log(<?php echo $pantalla ?>);
+        	 if(<?php echo $pantalla ?> == 5) { 
+        	 	//console.log("<?php echo $nombre_comple ?>");
+	        	var fifthWindow   = $('#window5-page');
+	        	var homePage      = $('#home');
+			    // console.log(<?php echo $pantalla ?>);
+			    $('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight');
+			    homePage.css("display","none");
+				fifthWindow.addClass('animated fadeInLeft');
+				$('#nombre_completo').val("<?php echo $nombre_comple ?>");
+				$('#email').val("<?php echo $email_link ?>");
+				$('#pais').val("<?php echo $pais_link ?>");
+			}
 		});
     </script>
 </body>
