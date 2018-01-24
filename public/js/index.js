@@ -283,6 +283,8 @@ function operar(id,tipo) {
 			divIncrement.addClass('select-increment');
 			cardSelec.addClass('aparecer');
 			cardHidden.fadeIn(400);
+			$("#facturacion").val('0');
+			$('.selectpicker').selectpicker('refresh');
 		}else if(i == 3) {
 			$('#textOperar').text('50 - 100');
 		}else if(i == 4) {
