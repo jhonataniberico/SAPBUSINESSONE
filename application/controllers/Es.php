@@ -16,19 +16,12 @@ class Es extends CI_Controller {
 
   public function index() {
     //ELIMINAR DATOS EN SESIÓN AL CARGAR LA PÁGINA
-    /*print_r('Nombre linke: '.$this->session->userdata('nombre_linke'));
-    print_r('Email linke: '.$this->session->userdata('email_linke'));
-    print_r('uni linke: '.$this->session->userdata('universidad'));
-    print_r('pais linke: '.$this->session->userdata('pais_linke'));
-    print_r('pantalla: '.$this->session->userdata('pantalla'));
-    print_r('titulo: '.$this->session->userdata('titulo'));
-    print_r('comp: '.$this->session->userdata('compania'));*/
-    $data['nombre_comple'] = 'Juan';
-    $data['email_link'] = 'j@gmail.com'/*$this->session->userdata('email_linke')*/;
-    $data['univer'] = 'ricardo'/*$this->session->userdata('universidad')*/;
-    $data['pais_link'] = 'peru'/*$this->session->userdata('pais_linke')*/;
-    $data['dato'] = 'asdasd';
-    $data['pantalla'] = 5/*$this->session->userdata('pantalla')*/;
+    /*$data['nombre_comple'] = $this->session->userdata('nombre_linke');
+    $data['email_link'] = $this->session->userdata('email_linke');
+    $data['comp'] = $this->session->userdata('compania');
+    $data['tit'] = $this->session->userdata('titulo');
+    $data['pais_link'] = $this->session->userdata('pais_linke');
+    $data['pantalla'] = $this->session->userdata('pantalla');
     $data['industria'] = $this->session->userdata('industria');
     $data['Factura_anual'] = $this->session->userdata('Factura_anual');
     $data['Tamanio'] = $this->session->userdata('Tamanio');
@@ -38,7 +31,8 @@ class Es extends CI_Controller {
     foreach ($explode as $key) {
       $html .= '<li>'.$key.'</li>';
     }
-    $data['priori'] = $html;
+    $data['priori'] = $html;*/
+    $data['pantalla'] = 5;
 
     $client_id     = "864xp2wdu9eghe";
     $client_secret = "M6NxoP4EWlaADF2U";
@@ -158,7 +152,9 @@ class Es extends CI_Controller {
             $this->session->unset_userdata('email_linke');
             $this->session->unset_userdata('universidad');
             $this->session->unset_userdata('pais_linke');
-            $this->session->unset_userdata('nombre_linke');
+            $this->session->unset_userdata('titulo');
+            $this->session->unset_userdata('compania');
+            $this->session->unset_userdata('pantalla');
             $this->session->unset_userdata('Industria');
             $this->session->unset_userdata('Infraestructura');
             $this->session->unset_userdata('Factura_anual');

@@ -584,7 +584,7 @@
 			            		</div>
 		            		</div>
 		            		<form class="mdl-formulario text-left">
-		        				<h2 class="title-formulario m-b-10">Reg&iacute;strese para revisarlo juntos m&aacute;s en detalle: <span><a style="font-family: 'Arial';color: #fff;font-size: 22px;font-weight: bold;" href="<?php  echo "https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id={$client_id}&redirect_uri={$redirect_uri}&state={$csrf_token}&scope={$scopes}"; ?>">Linked<i class="fa fa-lg fa-linkedin-square" style="color: #0077B5;background-color: #fff;height: 19px;width: 21px;margin-left: 2px;" aria-hidden="true"></i></a></span></h2>
+		        				<h2 class="title-formulario m-b-10">Introdusca aqu&iacute; sus datos o con&eacute;ctate v&iacute;a <span><a style="font-family: 'Arial';color: #fff;font-size: 22px;font-weight: bold;" href="<?php  echo "https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id={$client_id}&redirect_uri={$redirect_uri}&state={$csrf_token}&scope={$scopes}"; ?>"><i class="fa fa-lg fa-linkedin-square" style="color: #0077B5;background-color: #fff;height: 19px;width: 21px;margin-left: 2px;" aria-hidden="true"></i>Conéctese ahora</a></span></h2>
 		        				<div class="col-sm-6">
 		        					<div class="mdl-input">
 									    <input type="text" class="form-control" id="nombre_completo" maxlength="50" onkeypress="return soloLetras(event);" onchange="validarCampos()" placeholder="Nombre Completo">
@@ -602,7 +602,7 @@
 		        				</div>
 		        				<div class="col-sm-6">
 		        					<div class="mdl-input">
-										<input type="text" class="form-control" id="telefono" maxlength="7" onkeypress="return valida(event);"  onchange="validarCampos()" placeholder="Teléfono">
+										<input type="text" class="form-control" id="telefono" onchange="validarCampos()" placeholder="Teléfono">
 									</div>
 		        				</div>
 		        				<div class="col-sm-6">
@@ -715,7 +715,8 @@
             $('select').selectpicker();
         }
         $(window).load(function() {
-        	  if(<?php echo $pantalla ?> == 5) { 
+        	  if(<?php echo $pantalla ?> == 0) {
+				m = 5; 
         	 	//console.log("<?php echo $nombre_comple ?>");
 	        	var fifthWindow   = $('#window5-page');
 	        	var homePage      = $('#home');
@@ -723,7 +724,11 @@
 			    $('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight');
 			    homePage.css("display","none");
 				fifthWindow.addClass('animated fadeInLeft');
-				/*$('#nombre_completo').val("<?php echo $nombre_comple ?>");
+				$('.button-arrow.button-prev').css("display","block");
+				$('.header').addClass('opacity');
+				$('.logo-bottom').addClass('opacity');
+				/*$('#telefono').css('border-color','red');
+				$('#nombre_completo').val("<?php echo $nombre_comple ?>");
 				$('#email').val("<?php echo $email_link ?>");
 				$('#pais').val("<?php echo $pais_link ?>");
 				$('#cargo').val("<?php echo $tit ?>");
