@@ -373,6 +373,7 @@ function isEmpty(val){
 var confirmar = 0;	
 function ConfirmarRespuestas(){
 	confirmar = 1;
+	$('.button-arrow.button-prev').css("display","none");
 	$('.mdl-card-confirmacion').addClass('confirmar');
 	$('.fp-controlArrow.fp-prev').css("display","none");
 }
