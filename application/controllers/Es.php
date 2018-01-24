@@ -145,7 +145,8 @@ class Es extends CI_Controller {
                              'Cargo'           => $cargo,
                              'Telefono'        => $telefono,
                              'Relacion'        => $relacion,
-                             'Contacto'        => $contacto);
+                             'Contacto'        => $contacto,
+                             'pantalla'        => 0);
             $this->session->set_userdata($session);
 
             $this->session->unset_userdata('nombre_linke');
@@ -154,7 +155,6 @@ class Es extends CI_Controller {
             $this->session->unset_userdata('pais_linke');
             $this->session->unset_userdata('titulo');
             $this->session->unset_userdata('compania');
-            $this->session->unset_userdata('pantalla');
             $this->session->unset_userdata('Industria');
             $this->session->unset_userdata('Infraestructura');
             $this->session->unset_userdata('Factura_anual');
