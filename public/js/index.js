@@ -403,7 +403,7 @@ function limpiarCampos() {
 function enviarGracias() {
 	$('.mdl-solicitud').addClass('animated fadeOutLeft');
 	$('.mdl-agradecimiento').addClass('animated fadeInRight');
-	$('.fp-controlArrow.fp-prev').css("display","none");
+	$('.button-arrow').css("display","none");
 	$('.question').css("display","none");
 	setTimeout(function(){ 
 		location.reload();

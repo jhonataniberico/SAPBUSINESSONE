@@ -652,7 +652,7 @@
 		        				</div>
 		        				<div class="col-xs-12 mdl-label m-t-20">
 		    						<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-										<input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
+										<input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
 										<span class="mdl-checkbox__label f-s-14" style="">He leido y acepto los <a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" style="">Términos y condiciones de SAP</a></span>
 									</label>
 		        				</div>
@@ -660,6 +660,10 @@
 									<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="solicitarEstimacion();">Solicitar estimaci&oacute;n</button>
 		        				</div>
 		            		</form>
+	            		</div>
+	            		<div class="mdl-agradecimiento">
+	            			<h2>Gracias por su interés</h2>
+	            			<p>Un representante de SAP se pondrá en contacto con Usted para ayudarlo a dar el primer paso.</p>
 	            		</div>
 	            	</div>
 				</div>
