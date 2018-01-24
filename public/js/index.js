@@ -571,6 +571,12 @@ function buttonQuestion(direction){
 var num = null;
 
 function EditQuestion(id, pant){
+	if(pant == 1) {
+		datos_array = [];
+	}
+	if(pant == 2) {
+		datos_array = [];
+	}
 	if(pant == 3) {
 		datos_array = [];
 	}
