@@ -267,7 +267,7 @@ h2,p{
 }
 .button-next-prev .button-arrow.button-next{
 	display: block;
-	right: calc(0% + 320px);
+	right: calc(0% + 300px);
 }
 .button-arrow{
 	display: none;
@@ -1115,8 +1115,8 @@ span.number{
 	.background-body .background-body3{
 		max-width: 60px;
 	}
-	.fp-viewing-0-0 .fp-controlArrow.fp-next{
-		right: calc(0% + 215px);
+	.button-next-prev .button-arrow.button-next{
+    	right: calc(0% + 180px);
 	}
 	.fondo-bottom img{
 		max-width: calc(100% - 180px);
@@ -1186,8 +1186,8 @@ span.number{
 	.background-body .background-body1, .background-body .background-body2, .background-body .background-body3{
 		max-width: 40px;
 	}
-	.fp-viewing-0-0 .fp-controlArrow.fp-next{
-		right: calc(0% + 140px);
+	.button-next-prev .button-arrow.button-next{
+		right: calc(0% + 120px);
 	}
 	span.number{
 		font-size: 60px;

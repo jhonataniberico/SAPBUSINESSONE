@@ -179,7 +179,6 @@ function saveDatos(pantalla) {
 		  }
 		});
 	}
-	console.log(datos_array);
 	$.ajax({
 		data  : { global_datos : global_datos,
 				  pantalla     : pantalla,
@@ -436,6 +435,7 @@ function buttonNext(){
 }
 
 var pant1 = 0;
+var pant2 = 0;
 var pant3 = 0;
 var pant4 = 0;
 function buttonQuestion(direction){
@@ -458,6 +458,10 @@ function buttonQuestion(direction){
 				$('.button-next').prop("disabled", true);
 			}
 			pant1 = 1;
+			if(pant2 == 0) {
+				$('.button-next').prop("disabled", true);
+			}
+			pant2 = 1;
 		}
 		else if(m == 3){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
@@ -521,17 +525,26 @@ function buttonQuestion(direction){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
 			thirdWindow.addClass('animated fadeInLeft');
 			fourthWindow.addClass('animated fadeOutRight');
+			if(pant4 == 1){
+				$('.button-next').prop("disabled", false);
+			}
 		}
 		else if(m == 2){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
 			secondWindow.addClass('animated fadeInLeft');
 			thirdWindow.addClass('animated fadeOutRight');
 			$('#'+id_primero).addClass('button-select');
+			if(facturacion != null && $('#textOperar').text() != null) {
+				$('.button-next').prop("disabled", false);
+			}
 		}
 		else if(m == 1){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
 			firstWindow.addClass('animated fadeInLeft');
 			secondWindow.addClass('animated fadeOutRight');
+			if(pant2 == 1){
+				$('.button-next').prop("disabled", false);
+			}
 		}
 		else if(m < 1){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
@@ -542,6 +555,9 @@ function buttonQuestion(direction){
 			footerLogo.removeClass('opacity');
 			$('.button-arrow').css("display","none");
 			homePage.find('.button-next').css("display","block");
+			if(pant1 == 1) {
+				$('.button-next').prop("disabled", false);
+			}
 			m = 1;
 			return;
 		}

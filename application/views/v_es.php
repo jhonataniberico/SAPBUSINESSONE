@@ -716,7 +716,7 @@
         }
 
         $(window).load(function() {
-        	 if(<?php echo $pantalla ?> == 5) { 
+        	  if(<?php echo $pantalla ?> == 5) { 
         	 	//console.log("<?php echo $nombre_comple ?>");
 	        	var fifthWindow   = $('#window5-page');
 	        	var homePage      = $('#home');
@@ -724,9 +724,16 @@
 			    $('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight');
 			    homePage.css("display","none");
 				fifthWindow.addClass('animated fadeInLeft');
-				$('#nombre_completo').val("<?php echo $nombre_comple ?>");
+				/*$('#nombre_completo').val("<?php echo $nombre_comple ?>");
 				$('#email').val("<?php echo $email_link ?>");
 				$('#pais').val("<?php echo $pais_link ?>");
+				$('#cargo').val("<?php echo $tit ?>");
+				$('#empresa').val("<?php echo $comp ?>");
+				$('#industria').text("<?php echo $industria ?>");
+				$('#tamanio').text("<?php echo $Tamanio ?>");
+				$('#factura').text("<?php echo $Factura_anual ?>");
+				$('#prioridad').append("<?php echo $priori ?>");
+				$('#infraestructura').text("<?php echo $Infraestructura ?>");*/
 			}
 		});
     </script>
