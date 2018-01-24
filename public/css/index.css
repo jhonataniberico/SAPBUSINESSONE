@@ -1107,6 +1107,10 @@ span.number{
 		padding-right: 20px;
 		padding-left: 20px;
 	}
+	.window-center.opacity-done .mdl-container{
+		overflow-y: scroll;
+    	padding: 100px;
+	}
 	.mdl-all-window{
 		max-width: 100%;
 		padding-left: 0;
@@ -1114,6 +1118,9 @@ span.number{
 	}
 	.logo-home{
 		max-width: 280px;
+	}
+	.mdl-card-question .contenido{
+		display: none;
 	}
 }
 @media (max-width: 768px){

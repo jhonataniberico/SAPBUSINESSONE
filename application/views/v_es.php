@@ -715,7 +715,7 @@
             $('select').selectpicker();
         }
         $(window).load(function() {
-        	  if(<?php echo $pantalla ?> == 5) { 
+        	  if(<?php echo $pantalla ?> == 0) { 
         	 	//console.log("<?php echo $nombre_comple ?>");
 	        	var fifthWindow   = $('#window5-page');
 	        	var homePage      = $('#home');
