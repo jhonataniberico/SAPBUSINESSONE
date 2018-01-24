@@ -33,7 +33,7 @@ function getCallback()
 
     if (isset($_REQUEST['code'])) {
         $code = $_REQUEST['code'];
-        print_r('codigo: '.$_REQUEST['code']);
+        //print_r('codigo: '.$_REQUEST['code']);
         $url = "https://www.linkedin.com/oauth/v2/accessToken";
         $params = [
             'client_id' => $client_id,
