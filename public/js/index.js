@@ -13,7 +13,6 @@ function solicitarEstimacion() {
 	var contacto		= null;
 
 	if(terminos == false) {
-		//HACER UNA ACCIÓN QUE INDIQUE QUE LLENE LOS TÉRMINOS
 		return;
 	}
 	if(c_email == true) {

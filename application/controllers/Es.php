@@ -121,7 +121,6 @@ class Es extends CI_Controller {
             $telefono        = $this->input->post('telefono');
             $relacion        = $this->input->post('relacion');
             $contacto        = $this->input->post('contacto');
-            //INSERTAMOS LOS DATOS A LA BASE DE DATOS
             $arrayInsert = array('nombre_completo' => $nombre_completo,
                                  'Empresa'         => $empresa,
                                  'Email'           => $email,
@@ -132,7 +131,6 @@ class Es extends CI_Controller {
                                  'Contactado'      => $contacto,
                                  'Id_solicitud'    => $_SESSION['id_sol']);
             $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'usuario');
-            //GUARDAMOS EN SESIÓN LOS DATOS
             $session = array('nombre_completo' => $nombre_completo,
                              'Empresa'         => $empresa,
                              'Email'           => $email,
@@ -142,8 +140,6 @@ class Es extends CI_Controller {
                              'Relacion'        => $relacion,
                              'Contacto'        => $contacto);
             $this->session->set_userdata($session);
-
-            //ENVIAR EMAIL AL CLIENTE Y A LA EMPRESA
             $this->sendGmailSap($email);
             $data['msj'] = $datoInsert['msj'];
       $data['error'] = $datoInsert['error'];
