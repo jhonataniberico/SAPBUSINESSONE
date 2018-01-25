@@ -354,6 +354,19 @@ function selectFacturacion(id){
 	var selectButton = $('#'+id).parents('.mdl-select .btn-group').find('button');
 	var Select       = $('#'+id).parents('.mdl-card-question').find('.contenido');
 	Select.addClass('aparecer');
+
+	var modal   = $('#ModalQuestion');
+    var img     = Select.find('.contenido-left').find('img');
+    var content = Select.find('.contenido-right').find('p');
+    var small   = Select.find('.contenido-right').find('small');
+    modal.find('.mdl-card__title').find('img').attr({
+        "alt"   : img.attr('alt'),
+        "src"   : img.attr('src')
+    });
+    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
+    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
+	modal.modal('toggle');
+	
 	selectButton.click(function(){
 		Select.removeClass('aparecer');
 	})
