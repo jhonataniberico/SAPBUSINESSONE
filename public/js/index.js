@@ -134,6 +134,7 @@ var isMobile = {
 
 var global_datos = null;
 var datos_array = [];
+var array_3pant = [];
 function guardarDatos(id,datos) {
 	var buttonSelect = $('#'+id+'.select-one');
 	var buttonToggle = $('#'+id+'.select-prioridad');
@@ -162,7 +163,7 @@ function guardarDatos(id,datos) {
 	modal.modal('toggle');
 }
 
-function saveDatos(pantalla, ids_array) {
+function saveDatos(pantalla) {
 	var idioma = $('#Idioma').val();
 	var operar = null;
 	if(pantalla == 2) {
@@ -171,20 +172,21 @@ function saveDatos(pantalla, ids_array) {
 	if(pantalla == 3) {
 		$( ".select-prioridad.button-select" ).each(function() {
 		  var id = $( this ).attr('id');
+		  array_3pant.push(id);
 		  var dato_card = $('#'+id).parents('.mdl-card-question').find('.card-front p').text();
 		  if($( this ).attr('id') != undefined) {
 		  	datos_array.push(dato_card);
 		  }
 		});
 	}
+	//console.log(array_3pant);
 	$.ajax({
 		data  : { global_datos : global_datos,
 				  pantalla     : pantalla,
 				  idioma 	   : idioma,
 				  datos_prio   : datos_array.toString(),
 				  operar       : operar,
-				  facturacion  : facturacion,
-				  ids_array    : ids_array},
+				  facturacion  : facturacion},
 		url   : 'es/Savedatos',
 		type  : 'POST'
 	}).done(function(data){
@@ -240,6 +242,8 @@ $( document ).ready(function() {
 
 function mostrarDatos() {
 	$.ajax({
+		data  : {array_ids : array_ids,
+				 array_3pant : array_3pant},
 		url   : 'es/mostrarDatos',
 		type  : 'POST'
 	}).done(function(data){
@@ -355,6 +359,19 @@ function selectFacturacion(id){
 	var selectButton = $('#'+id).parents('.mdl-select .btn-group').find('button');
 	var Select       = $('#'+id).parents('.mdl-card-question').find('.contenido');
 	Select.addClass('aparecer');
+
+	var modal   = $('#ModalQuestion');
+    var img     = Select.find('.contenido-left').find('img');
+    var content = Select.find('.contenido-right').find('p');
+    var small   = Select.find('.contenido-right').find('small');
+    modal.find('.mdl-card__title').find('img').attr({
+        "alt"   : img.attr('alt'),
+        "src"   : img.attr('src')
+    });
+    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
+    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
+	modal.modal('toggle');
+	
 	selectButton.click(function(){
 		Select.removeClass('aparecer');
 	})
@@ -463,7 +480,7 @@ function buttonQuestion(direction){
 			var id_button = $('.mdl-card-question .content-card').find('.select.select-one.button-select').attr('id');
 			id_primero = id_button;
     		array_ids.push(id_button);
-    		saveDatos(1, array_ids);
+    		saveDatos(1);
     		if(array_ids.length != 0) {
 				array_ids.splice(0, 1, id_button);
 				var id = array_ids[1];
@@ -482,9 +499,9 @@ function buttonQuestion(direction){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
 			secondWindow.addClass('animated fadeOutLeft');
 			thirdWindow.addClass('animated fadeInRight');
-			var id_button = $('#facturacion').val();
+			var id_button = $('#textOperar').text();
 			array_ids.push(id_button);
-			saveDatos(2, array_ids);
+			saveDatos(2);
     		if(array_ids.length != 0) {
 				array_ids.splice(1, 1, id_button);
 			}
@@ -499,9 +516,9 @@ function buttonQuestion(direction){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
 			thirdWindow.addClass('animated fadeOutLeft');
 			fourthWindow.addClass('animated fadeInRight');
-			var id_button = $('.mdl-card-question .content-card').find('.select-prioridad.button-select').attr('id');
+			var id_button = $('#facturacion').val();/*$('.mdl-card-question .content-card').find('.select-prioridad.button-select').attr('id')*/;
     		array_ids.push(id_button);
-    		saveDatos(3, array_ids);
+    		saveDatos(3);
     		if(array_ids.length != 0) {
 				array_ids.splice(2, 1, id_button);
 				var id = array_ids[3];
@@ -519,7 +536,7 @@ function buttonQuestion(direction){
 			$('.button-arrow.button-next').css("display","none");
 			var id_button = $('.mdl-card-question .content-card').find('.select-infraestructura.select-one.button-select').attr('id');;
     		array_ids.push(id_button);
-    		saveDatos(4, array_ids);
+    		saveDatos(4);
     		if(array_ids.length != 0) {
 				array_ids.splice(3, 1, id_button);
 			}
@@ -587,13 +604,19 @@ var num = null;
 function EditQuestion(id, pant){
 	if(pant == 1) {
 		datos_array = [];
+		array_ids = [];
 		//$('#buttonCard4').addClass('button-select');
+		pant1 = 1;
+		pant2 = 1;
 	}
 	if(pant == 2) {
 		datos_array = [];
+		pant3 = 1;
 	}
 	if(pant == 3) {
 		datos_array = [];
+		array_3pant = [];
+		pant4 = 1;
 	}
 	num = id.substr(6,1);
 	m = num;
@@ -609,12 +632,24 @@ function EditQuestion(id, pant){
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
+        	console.log(data.array_3pant);
            	$('#'+data.ids_array[0]).addClass('button-select');
-           	$("#facturacion").val(data.ids_array[1]);
+           	$("#textOperar").text(data.ids_array[1]);
+           	var divIncrement = $('#buttonMas.select-one').parent();
+           	var cardSelec    = $('#buttonMas.select-one').parents('.content-card').find('.contenido');
+           	var cardHidden   = $('.mdl-card-question.visi-hidden');
+           	divIncrement.addClass('select-increment');
+			cardSelec.addClass('aparecer');
+			cardHidden.fadeIn(400);
+			$("#facturacion").val(data.ids_array[2]);
+			$("#facturacion").parent().addClass('button-select');
+			var divIncrement2 = $('#facturacion').parents().find('.mdl-select');
+			divIncrement2.addClass('select-increment');
+			$.each(data.array_3pant, function( index, value ) {
+			  $('#'+value).addClass('button-select');
+			});
 			$('.selectpicker').selectpicker('refresh');
-			$('#'+data.ids_array[2]).addClass('button-select');
 			$('#'+data.ids_array[3]).addClass('button-select');
-           	console.log(data.ids_array[0]);
         }else {
         }
       } catch (err){
