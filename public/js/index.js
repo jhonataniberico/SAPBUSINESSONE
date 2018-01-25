@@ -179,7 +179,6 @@ function saveDatos(pantalla) {
 		  }
 		});
 	}
-	//console.log(array_3pant);
 	$.ajax({
 		data  : { global_datos : global_datos,
 				  pantalla     : pantalla,
@@ -605,7 +604,6 @@ function EditQuestion(id, pant){
 	if(pant == 1) {
 		datos_array = [];
 		array_ids = [];
-		//$('#buttonCard4').addClass('button-select');
 		pant1 = 1;
 		pant2 = 1;
 	}
@@ -625,14 +623,12 @@ function EditQuestion(id, pant){
 	windowQestion.addClass('animated fadeInLeft');
 	$('.button-arrow.button-next').css("display","block");
 	$.ajax({
-		//data  : { },
 		url   : 'es/EditQuestion',
 		type  : 'POST'
 	}).done(function(data){
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
-        	console.log(data.array_3pant);
            	$('#'+data.ids_array[0]).addClass('button-select');
            	$("#textOperar").text(data.ids_array[1]);
            	var divIncrement = $('#buttonMas.select-one').parent();
