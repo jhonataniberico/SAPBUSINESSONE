@@ -14,6 +14,13 @@ h2,p{
 	z-index: 10 !important;
 	opacity: 1 !important;
 }
+.center-agradecimiento{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    overflow-y: hidden !important;
+    padding: 0;
+}
 /*GENERAL*/
 .window-center{
 	width: 100%;
@@ -1105,6 +1112,9 @@ span.number{
 	.window-center.opacity-done .mdl-container{
 		height: 100%;
 	}
+	.window-center.opacity-done .mdl-container.center-agradecimiento{
+		height: inherit;
+	}
 	.logo-header{
 		max-width: 120px;
 	}
@@ -1160,6 +1170,10 @@ span.number{
 	.logo-bottom{
 		background-color: #000000;
 		width: 100%;
+	    padding: 20px 25px;
+	}
+	.mdl-agradecimiento{
+		max-width: 650px;
 	}
 }
 @media (max-width: 650px){
@@ -1195,7 +1209,7 @@ span.number{
 }
 @media (max-width: 420px){
 	.window-center.opacity-done .mdl-container{
-	    padding: 80px 20px;
+	    padding: 60px 25px;
 	}
 	.window-center.opacity-done .mdl-container.mdl-tablet{
 		overflow-y: scroll;
@@ -1225,7 +1239,7 @@ span.number{
 	.logo-bottom,
 	.header-left,
 	.header-home{
-		padding: 20px 0 20px 20px
+		padding: 12px;
 	}
 	.background-body{
 		max-width: 60px;
@@ -1242,6 +1256,9 @@ span.number{
 		max-width: 75px;
 	    margin-right: 5px;
 	}
+	.logo-bottom img{
+		max-width: 120px;
+	}
 	.header h2{
 	    font-size: 12px;
 	    max-width: 115px;
@@ -1250,7 +1267,7 @@ span.number{
 	}
 	.header-right{
 		max-width: 105px;
-		height: 68px;
+		height: 52px;
 	}
 	.header-right .background1, 
 	.header-right .background2, 
@@ -1259,14 +1276,14 @@ span.number{
 	}
 	.mdl-idioma .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
 		width: 95px;
-    	margin-top: 18px;
+    	margin-top: 12px;
 	}
 	.mdl-idioma .bootstrap-select.btn-group .dropdown-toggle .filter-option,
 	.mdl-idioma .bootstrap-select.btn-group .dropdown-menu li a span.text{
 		font-size: 13px;
 	}
 	.question{
-	    margin: 20px auto;
+	    margin: 10px auto;
     	max-width: 270px;
 	}
 	.question h2{
@@ -1313,6 +1330,17 @@ span.number{
 	}
 	.arrow-left{
 		border-width: 25px 20px 25px 0;
+	}
+	.mdl-agradecimiento{
+	    max-width: 300px;
+	    padding: 150px 0;
+	}
+	.mdl-agradecimiento h2{
+	    font-size: 30px;
+	}
+	.mdl-agradecimiento p{
+		font-size: 18px;
+    	line-height: 22px;
 	}
 }	
 @media(max-width: 320px){
