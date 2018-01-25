@@ -59,6 +59,7 @@ class Es extends CI_Controller {
             $datos_prio  = $this->input->post('datos_prio');
             $operar      = $this->input->post('operar');
             $facturacion = $this->input->post('facturacion');
+            $ids_array   = $this->input->post('ids_array');
             $columna     = null;
             if($pantalla == 2) {$columna = 'Factura_anual';} elseif ($pantalla == 3) {$columna = 'Prioridad';}elseif ($pantalla == 4) {$columna = 'Infraestructura';}
             if($pantalla == 1) {
@@ -67,21 +68,25 @@ class Es extends CI_Controller {
                                    'Id_lenguaje' => $idIdioma);
               $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
               $session = array('industria' => $datos,
-                               'id_sol'    => $datoInsert['Id']);
+                               'id_sol'    => $datoInsert['Id'],
+                               'ids_array' => $ids_array);
               $this->session->set_userdata($session);
             }else {
               if($pantalla == 2) {
                 $arrayUpdate = array($columna  => $facturacion,
                                      'Tamanio' => $operar);
                 $session = array($columna  => $facturacion,
-                                 'Tamanio' => $operar);
+                                 'Tamanio' => $operar,
+                               'ids_array' => $ids_array);
               }else {
                 if($pantalla == 3) {
                   $arrayUpdate = array($columna => $datos_prio);
-                  $session     = array($columna => $datos_prio);
+                  $session     = array($columna => $datos_prio,
+                                       'ids_array' => $ids_array);
                 }else if($pantalla == 4){
                   $arrayUpdate = array($columna => $datos);
-                  $session     = array('Infraestructura' => $datos);
+                  $session     = array('Infraestructura' => $datos,
+                                       'ids_array' => $ids_array);
                 }
               }
               $this->M_solicitud->updateDatos($arrayUpdate, $_SESSION['id_sol'], 'solicitud', 'Id');
@@ -228,5 +233,17 @@ class Es extends CI_Controller {
         $data['msj'] = $e->getMessage();
       }
       return json_encode(array_map('utf8_encode', $data));
+    }
+
+    function EditQuestion() {
+      $data['error'] = EXIT_ERROR;
+      $data['msj']   = null;
+      try {
+        $data['ids_array'] = $this->session->userdata('ids_array');
+        $data['error']           = EXIT_SUCCESS;
+      } catch (Exception $e) {
+          $data['msj'] = $e->getMessage();
+      }
+      echo json_encode($data);
     }
 }
