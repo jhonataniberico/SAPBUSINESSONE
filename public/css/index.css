@@ -1235,7 +1235,8 @@ span.number{
 	    line-height: 20px;
 	}
 	.logo-bottom{
-
+		background-color: #000000;
+		width: 100%;
 	}
 }
 @media (max-width: 650px){
