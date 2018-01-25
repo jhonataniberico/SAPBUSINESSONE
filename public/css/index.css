@@ -1102,11 +1102,9 @@ span.number{
 	}
 }
 @media (max-width: 1200px){
-	.mdl-container.mdl-ipad{
-		-webkit-justify-content: flex-start;
-		justify-content: flex-start;
-	    max-width: 900px;
-	    overflow-x: scroll;
+	.window-center.opacity-done .mdl-container.mdl-tablet{
+		height: initial;
+		overflow-y: initial;
 	}
 	.mdl-container .title-home {
         max-width: 420px;
@@ -1136,6 +1134,23 @@ span.number{
 	.mdl-formulario{
 		max-width: 100%;
 	}
+	.question{
+	    max-width: 720px;
+	    margin: 30px auto;
+	    text-align: center;
+	}
+	.question h2{
+	    max-width: 450px;
+	    font-size: 32px;
+	    line-height: 30px;
+	}
+	.question-respuestas p{
+	    font-size: 28px;
+    	line-height: 28px;
+	}
+	.question-respuestas{
+		max-width: 550px;
+	}
 }
 @media (max-width: 768px){
 	.logo-home{
@@ -1164,10 +1179,9 @@ span.number{
 		-webkit-justify-content: flex-start;
 		justify-content: flex-start;
 	}
-	/*.mdl-container.mdl-tablet{
-		-webkit-justify-content: center;
-		justify-content: center;
-	}*/
+	.window-center.opacity-done .mdl-container{
+		height: 100%;
+	}
 	.logo-header{
 		max-width: 120px;
 	}
@@ -1188,14 +1202,19 @@ span.number{
 	.bottom-right{
 		max-width: 300px;
 	}
-	.question h2{
-    	max-width: 400px;
-	    font-size: 38px;
-	    line-height: 38px;
-	    width: 100%;
-	}
 	.question{
 		margin-bottom: 20px;
+	}
+	span.number{
+		font-size: 40px;
+	}
+	.question h2{
+	    font-size: 22px;
+		line-height: 22px;
+	    max-width: 400px;
+	}
+	.question-respuestas{
+	    max-width: 420px;
 	}
 	.mdl-idioma .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
 		margin-top: 22px;
@@ -1212,11 +1231,12 @@ span.number{
 	}
 	.question-respuestas p{
 		font-size: 19px;
-	    text-align: center;
+	    text-align: left;
 	    line-height: 20px;
 	}
-	.mdl-formulario{
-		max-width: 100%;
+	.logo-bottom{
+		background-color: #000000;
+		width: 100%;
 	}
 }
 @media (max-width: 650px){
@@ -1252,9 +1272,11 @@ span.number{
 }
 @media (max-width: 420px){
 	.window-center.opacity-done .mdl-container{
-	    overflow-y: scroll;
-	    height: 100%;
 	    padding: 80px 20px;
+	}
+	.window-center.opacity-done .mdl-container.mdl-tablet{
+		overflow-y: scroll;
+		height: 100%;
 	}
 	.mdl-container{
 		padding-right: 20px;
@@ -1321,20 +1343,29 @@ span.number{
 		font-size: 13px;
 	}
 	.question{
-		margin-bottom: 20px;
+	    margin: 20px auto;
+    	max-width: 270px;
 	}
 	.question h2{
-		max-width: 205px;
-    	font-size: 19px;
-	    line-height: 20px;
-	    margin: 0;
+		max-width: 185px;
+	    font-size: 14px;
+	    line-height: 14px;
+	    text-align: left;
+	}
+	.question-respuestas p{
+		font-size: 16px;
 	    text-align: center;
+	    line-height: 15px;
+	}
+	.title-formulario{
+		font-size: 16px;
+	    line-height: 16px;
 	}
 	.mdl-flex{
 		display: inline-block;
 	}
 	span.number{
-	    font-size: 40px;
+	    font-size: 28px;
 	}
 	.bottom-right{
 	    max-width: 165px;
