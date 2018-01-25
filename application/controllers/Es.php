@@ -18,10 +18,10 @@ class Es extends CI_Controller {
     //ELIMINAR DATOS EN SESIÓN AL CARGAR LA PÁGINA
     /*$data['nombre_comple'] = $this->session->userdata('nombre_linke');
     $data['email_link'] = $this->session->userdata('email_linke');
-    $data['comp'] = $this->session->userdata('compania');
-    $data['tit'] = $this->session->userdata('titulo');
+    $data['comp'] = $this->session->userdata('compania') == null ? '' : $this->session->userdata('compania');
+    $data['tit'] = $this->session->userdata('titulo') == null ? '' : $this->session->userdata('titulo');
     $data['pais_link'] = $this->session->userdata('pais_linke');
-    $data['pantalla'] = $this->session->userdata('pantalla');
+    $data['pantalla'] = $this->session->userdata('pantalla') == '' ? 0 : $this->session->userdata('pantalla');
     $data['industria'] = $this->session->userdata('industria');
     $data['Factura_anual'] = $this->session->userdata('Factura_anual');
     $data['Tamanio'] = $this->session->userdata('Tamanio');

@@ -731,6 +731,12 @@
 				$('#nombre_completo').val("<?php echo $nombre_comple ?>");
 				$('#email').val("<?php echo $email_link ?>");
 				$('#pais').val("<?php echo $pais_link ?>");
+				if("<?php echo $tit ?>" == '') {
+					$('#cargo').css('border-color','red');
+				}
+				if("<?php echo $comp ?>" == '') {
+					$('#empresa').css('border-color','red');
+				}
 				$('#cargo').val("<?php echo $tit ?>");
 				$('#empresa').val("<?php echo $comp ?>");
 				$('#industria').text("<?php echo $industria ?>");
