@@ -148,20 +148,18 @@ function guardarDatos(id,datos) {
     buttonToggle.click(function() {
     	cardToggle.toggleClass("aparecer");
 	});
-    if( isMobile.any() ) {
-    	var modal   = $('#ModalQuestion');
-	    var card    = buttonSelect.closest('.mdl-card-question');
-	    var img     = card.find('.contenido-left').find('img');
-	    var content = card.find('.contenido-right').find('p');
-	    var small   = card.find('.contenido-right').find('small');
-	    modal.find('.mdl-card__title').find('img').attr({
-	        "alt"   : img.attr('alt'),
-	        "src"   : img.attr('src')
-	    });
-	    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
-	    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
-    	modal.modal('toggle');
-    }
+	var modal   = $('#ModalQuestion');
+    var card    = buttonSelect.closest('.mdl-card-question');
+    var img     = card.find('.contenido-left').find('img');
+    var content = card.find('.contenido-right').find('p');
+    var small   = card.find('.contenido-right').find('small');
+    modal.find('.mdl-card__title').find('img').attr({
+        "alt"   : img.attr('alt'),
+        "src"   : img.attr('src')
+    });
+    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
+    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
+	modal.modal('toggle');
 }
 
 function saveDatos(pantalla) {
@@ -273,6 +271,7 @@ function cambiarIdioma() {
 }
 var i = 1;
 function operar(id,tipo) {
+	var buttonSelect = $('#'+id+'.select-one');
 	var cardSelec    = $('#'+id+'.select-one').parents('.content-card').find('.contenido');
 	var divIncrement = $('#'+id+'.select-one').parent();
 	var cardHidden   = $('.mdl-card-question.visi-hidden');
@@ -285,6 +284,18 @@ function operar(id,tipo) {
 			cardHidden.fadeIn(400);
 			$("#facturacion").val('0');
 			$('.selectpicker').selectpicker('refresh');
+			var modal   = $('#ModalQuestion');
+		    var card    = buttonSelect.closest('.mdl-card-question');
+		    var img     = card.find('.contenido-left').find('img');
+		    var content = card.find('.contenido-right').find('p');
+		    var small   = card.find('.contenido-right').find('small');
+		    modal.find('.mdl-card__title').find('img').attr({
+		        "alt"   : img.attr('alt'),
+		        "src"   : img.attr('src')
+		    });
+		    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
+		    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
+			modal.modal('toggle');
 		}else if(i == 3) {
 			$('#textOperar').text('50 - 100');
 		}else if(i == 4) {

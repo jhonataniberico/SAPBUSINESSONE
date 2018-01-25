@@ -19,6 +19,7 @@
     <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>bentonsans.css?v=<?php echo time();?>">
+    <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>roboto.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>animate.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
@@ -715,7 +716,7 @@
             $('select').selectpicker();
         }
         $(window).load(function() {
-        	  if(<?php echo $pantalla ?> == 0) {
+        	  /*if(<?php echo $pantalla ?> == 3) {
 				m = 5; 
         	 	//console.log("<?php echo $nombre_comple ?>");
 	        	var fifthWindow   = $('#window5-page');
@@ -744,7 +745,7 @@
 				$('#factura').text("<?php echo $Factura_anual ?>");
 				$('#prioridad').append("<?php echo $priori ?>");
 				$('#infraestructura').text("<?php echo $Infraestructura ?>");*/
-			}
+			//}
 		});
     </script>
 </body>
