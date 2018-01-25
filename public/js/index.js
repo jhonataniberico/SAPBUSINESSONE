@@ -560,6 +560,8 @@ function buttonQuestion(direction){
 			homePage.find('.button-next').css("display","block");
 			if(pant1 == 1) {
 				$('.button-next').prop("disabled", false);
+			}else {
+				$('.button-next').prop("disabled", false);
 			}
 			m = 1;
 			return;
