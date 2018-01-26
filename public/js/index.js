@@ -422,6 +422,21 @@ function ConfirmarRespuestas(){
 	$('.mdl-card-confirmacion').addClass('confirmar');
 	$('.fp-controlArrow.fp-prev').css("display","none");
 	$('.mdl-formulario').removeClass('disabled');
+	$.ajax({
+		data  : {confirmar : confirmar},
+		url   : 'es/ConfirmarRespuestas',
+		type  : 'POST'
+	}).done(function(data){
+		try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+        }else {
+        	return;
+        }
+      } catch (err){
+        msj('error',err.message);
+      }
+	});
 }
 
 function limpiarCampos() {
@@ -764,4 +779,45 @@ function mostrarDatosFlecha(pant) {
         msj('error',err.message);
       }
 	});
+}
+
+function ingresar() {
+	var usuario  = $('#usuario').val();
+	var password = $('#password').val();
+	if(usuario == null) {
+		$('#usuario').parent().addClass('is-invalid');
+		return;
+	}
+	if(password == null) {
+		$('#password').parent().addClass('is-invalid');
+		return;
+	}
+	$.ajax({
+		data  : { usuario  : usuario,
+				  password : password},
+		url   : 'login/ingresar',
+		type  : 'POST'
+	}).done(function(data){
+		try{
+        	data = JSON.parse(data);
+        	if(data.error == 0){
+        		location.href = 'admin';
+        		$('#usuario').val("");
+        		$('#password').val("");
+        	}else {
+				$('#usuario').parent().addClass('is-invalid');
+				$('#password').parent().addClass('is-invalid');
+        		return;
+        	}
+      } catch (err){
+        msj('error',err.message);
+      }
+	});
+}
+
+function verificarDatos(e){
+	if(e.keyCode === 13){
+		e.preventDefault();
+		ingresar();
+    }
 }

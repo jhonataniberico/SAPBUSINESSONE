@@ -32,6 +32,7 @@ class Es extends CI_Controller {
       $html .= '<li>'.$key.'</li>';
     }
     $data['priori'] = $html;*/
+    $data['confirmar'] = $this->session->userdata('confirmar');
     $data['pantalla'] = 0;
     $client_id     = "864xp2wdu9eghe";
     $client_secret = "M6NxoP4EWlaADF2U";
@@ -258,4 +259,18 @@ class Es extends CI_Controller {
       }
       echo json_encode($data);
     }
+
+    function ConfirmarRespuestas() {
+      $data['error'] = EXIT_ERROR;
+      $data['msj']   = null;
+      try {
+        $confirmar = $this->input->post('confirmar');
+        $session = array('confirmar' => $confirmar);
+        $this->session->set_userdata($session);
+        $data['error'] = EXIT_SUCCESS;
+      }catch(Exception $e) {
+        $data['msj'] = $e->getMessage();
+      }
+      echo json_encode($data);
+  }
 }

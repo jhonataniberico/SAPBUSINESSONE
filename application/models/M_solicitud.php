@@ -55,7 +55,6 @@ class M_solicitud extends  CI_Model{
                 WHERE s.Id = u.Id_solicitud
                  AND u.Id_persona = ?;";
         $result = $this->db->query($sql, array($id_persona));
-        $this->db->last_query();
         return $result->result();
     }
 

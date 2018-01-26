@@ -718,6 +718,11 @@
         $(window).load(function() {
         	  /*if(<?php echo $pantalla ?> == 3) {
 				m = 5; 
+				if(<?php echo $pantalla ?> == 1) {
+					$('.button-arrow.button-prev').css("display","none");
+					$('.mdl-card-confirmacion').addClass('confirmar');
+					$('.mdl-formulario').removeClass('disabled');
+				}
 	        	var fifthWindow   = $('#window5-page');
 	        	var homePage      = $('#home');
 			    $('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight');
