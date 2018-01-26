@@ -112,12 +112,12 @@ h2,p{
 	position: absolute;
     right: 0;
     left: 0;
-    bottom: 40px;
+    bottom: 30px;
     text-align: center;
 }
 .bottom-right p{
     margin: 0;
-    font-size: 20px;
+    font-size: 16px;
 }
 .background-body{
 	height: 100vh;
