@@ -566,6 +566,11 @@ function buttonQuestion(direction){
 			fourthWindow.addClass('animated fadeInLeft');
 			fifthWindow.addClass('animated fadeOutRight');
 			$('.button-arrow.button-next').css("display","block");
+			if(data_ids_arr == 5) {
+				
+				$('#'+global_array[3]).addClass('button-select');
+			}
+			mostrarDatosFlecha(4);
 		}
 		else if(m == 3){
 			datos_array = [];
@@ -576,6 +581,12 @@ function buttonQuestion(direction){
 			if(pant3 == 1){
 				$('.button-next').prop("disabled", false);
 			}
+			if(data_ids_arr == 5) {
+				$.each(global_terce, function( index, value ) {
+				  $('#'+value).addClass('button-select');
+				});
+			}
+			mostrarDatosFlecha(2);
 		}
 		else if(m == 2){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
@@ -586,6 +597,21 @@ function buttonQuestion(direction){
 			if(facturacion != null && $('#textOperar').text() != 'Seleccione') {
 				$('.button-next').prop("disabled", false);
 			}
+			if(data_ids_arr == 5) {
+				
+				$("#textOperar").text(global_array[1]);
+	           	var divIncrement = $('#buttonMas.select-one').parent();
+	           	var cardSelec    = $('#buttonMas.select-one').parents('.content-card').find('.contenido');
+	           	var cardHidden   = $('.mdl-card-question.visi-hidden');
+	           	divIncrement.addClass('select-increment');
+				cardSelec.addClass('aparecer');
+				cardHidden.fadeIn(400);
+				$("#facturacion").val(global_array[2]);
+				$("#facturacion").parent().addClass('button-select');
+				var divIncrement2 = $('#facturacion').parents().find('.mdl-select');
+				divIncrement2.addClass('select-increment');
+			}
+			mostrarDatosFlecha(2);
 		}
 		else if(m == 1){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
@@ -594,6 +620,10 @@ function buttonQuestion(direction){
 			if(pant1 == 1){
 				$('.button-next').prop("disabled", false);
 			}
+			if(data_ids_arr == 5) {
+				$('#'+global_array[0]).addClass('button-select');
+			}
+			mostrarDatosFlecha(1);
 		}
 		else if(m < 1){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
@@ -617,6 +647,9 @@ function buttonQuestion(direction){
 
 /*EDIT QUESTION*/
 var num = null;
+var data_ids_arr = null;
+var global_array = [];
+var global_terce = [];
 function EditQuestion(id, pant){
 	if(pant == 1) {
 		datos_array = [];
@@ -646,6 +679,8 @@ function EditQuestion(id, pant){
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
+        	//global_array.push(ids_array);
+        	data_ids_arr = data.pantalla_sess;
            	$('#'+data.ids_array[0]).addClass('button-select');
            	$("#textOperar").text(data.ids_array[1]);
            	var divIncrement = $('#buttonMas.select-one').parent();
@@ -658,6 +693,65 @@ function EditQuestion(id, pant){
 			$("#facturacion").parent().addClass('button-select');
 			var divIncrement2 = $('#facturacion').parents().find('.mdl-select');
 			divIncrement2.addClass('select-increment');
+			//global_terce.push(data.array_3pant);
+			$.each(data.array_3pant, function( index, value ) {
+			  $('#'+value).addClass('button-select');
+			});
+			$('.selectpicker').selectpicker('refresh');
+			$('#'+data.ids_array[3]).addClass('button-select');
+        }else {
+        	return;
+        }
+      } catch (err){
+        msj('error',err.message);
+      }
+	});
+}
+
+function mostrarDatosFlecha(pant) {
+	if(pant == 1) {
+		datos_array = [];
+		array_ids   = [];
+		pant1 = 1;
+		pant2 = 1;
+	}
+	if(pant == 2) {
+		datos_array = [];
+		pant3 		= 1;
+	}
+	if(pant == 3) {
+		datos_array = [];
+		array_3pant = [];
+		pant4 		= 1;
+	}
+	/*num = id.substr(6,1);
+	m = num;
+	var windowQestion = $('#'+id+'-page');*/
+	/*$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight');
+	windowQestion.addClass('animated fadeInLeft');
+	$('.button-arrow.button-next').css("display","block");*/
+	$.ajax({
+		url   : 'es/EditQuestion',
+		type  : 'POST'
+	}).done(function(data){
+		try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+        	//global_array.push(ids_array);
+        	data_ids_arr = data.pantalla_sess;
+           	$('#'+data.ids_array[0]).addClass('button-select');
+           	$("#textOperar").text(data.ids_array[1]);
+           	var divIncrement = $('#buttonMas.select-one').parent();
+           	var cardSelec    = $('#buttonMas.select-one').parents('.content-card').find('.contenido');
+           	var cardHidden   = $('.mdl-card-question.visi-hidden');
+           	divIncrement.addClass('select-increment');
+			cardSelec.addClass('aparecer');
+			cardHidden.fadeIn(400);
+			$("#facturacion").val(data.ids_array[2]);
+			$("#facturacion").parent().addClass('button-select');
+			var divIncrement2 = $('#facturacion').parents().find('.mdl-select');
+			divIncrement2.addClass('select-increment');
+			//global_terce.push(data.array_3pant);
 			$.each(data.array_3pant, function( index, value ) {
 			  $('#'+value).addClass('button-select');
 			});

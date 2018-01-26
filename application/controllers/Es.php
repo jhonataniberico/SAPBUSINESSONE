@@ -238,6 +238,7 @@ class Es extends CI_Controller {
       try {
         $data['ids_array']   = $this->session->userdata('ids_array');
         $data['array_3pant'] = $this->session->userdata('array_3pant');
+        $data['pantalla_sess'] = $this->session->userdata('pantalla') == '' ? 0 : $this->session->userdata('pantalla');
         $data['error'] = EXIT_SUCCESS;
       } catch (Exception $e) {
           $data['msj'] = $e->getMessage();
