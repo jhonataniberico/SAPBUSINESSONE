@@ -182,7 +182,7 @@ h2,p{
 .logo-bottom{
     position: fixed;
     bottom: 0;
-    padding: 40px;
+    padding: 25px;
     left: 0;
     opacity: 0;
     -webkit-transition: opacity .5s ease-in-out .2s;
@@ -212,12 +212,12 @@ h2,p{
     opacity: 0;
 }
 .header-left{
-    padding: 20px 0 20px 40px;
+    padding: 18px 0 18px 25px;
     float: left;
 }
 .header-right{
     float: right;
-    height: 72px;
+    height: 68px;
     max-width: 225px;
     width: 100%;
 }
