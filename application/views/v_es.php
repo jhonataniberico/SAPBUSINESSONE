@@ -70,6 +70,9 @@
 	    		</div>
 	    		<div class="logo-bottom">
         			<img src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_home.png">
+		    		<div class="bottom-right">
+						<p>Puede seleccionar m&aacute;s de una opci&oacute;n</p>
+		    		</div>
         		</div>
 				<div id="window1-page" class="window-center opacity-done">
 					<div class="mdl-container text-center">
@@ -422,9 +425,6 @@
 		            		</div>
 		            	</div>
 					</div>
-		    		<div class="bottom-right">
-						<p>Puede seleccionar m&aacute;s de una opci&oacute;n</p>
-		    		</div>
 				</div>
 				<div id="window4-page" class="window-center opacity-done">
 					<div class="mdl-container text-center">

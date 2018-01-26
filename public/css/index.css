@@ -112,7 +112,7 @@ h2,p{
 	position: absolute;
     right: 0;
     left: 0;
-    bottom: 30px;
+    bottom: 35px;
     text-align: center;
 }
 .bottom-right p{
@@ -191,6 +191,7 @@ h2,p{
 	-o-transition: opacity .5s ease-in-out .2s;
 	transition: opacity .5s ease-in-out .2s;
     opacity: 0;
+    width: 100%;
 }
 .logo-bottom img{
 	max-width: 150px;
