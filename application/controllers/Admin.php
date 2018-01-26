@@ -15,10 +15,10 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
-		if($this->session->userdata('user') == null) {
+		if($this->session->userdata('usuario') == null) {
 			header("location: Login");
 		}
-		$data['html'] = ''/*$this->getTable()*/;
+		$data['html'] = $this->getTable();
 		$this->load->view('v_admin', $data);
 	}
 
@@ -47,24 +47,28 @@ class Admin extends CI_Controller {
            $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
-	}
+	}*/
 
 	function getTable() {
-		$datos = $this->M_reportes->getDatosInscritos();
+		$datos = $this->M_reportes->getDatosTabla();
 		$html = '';
 		foreach ($datos as $key) {
 			$html .= '<tr>
-                        <td>'.$key->Nombres.' '.$key->Apellidos.'</td>
-                        <td>'.$key->Pais.'</td>
+                        <td>'.$key->nombre_completo.'</td>
+                        <td>'.$key->Empresa.'</td>
                         <td>'.$key->Email.'</td>
-                        <td>'.$key->event_name.'</td>
-                        <td>'.$key->fecha.'</td>
+                        <td>'.$key->Telefono.'</td>
+                        <td>'.$key->Industria.'</td>
+                        <td>'.$key->Tamanio.'</td>
+                        <td>'.$key->Factura_anual.'</td>
+                        <td>'.$key->Prioridad.'</td>
+                        <td>'.$key->Infraestructura.'</td>
                     </tr>';
 		}
 		return $html;
 	}
 
-	function cambiarFecha() {
+	/*function cambiarFecha() {
 		$data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {

@@ -12,6 +12,9 @@ function solicitarEstimacion() {
 	var terminos		= $('#checkbox-1').is(':checked');
 	var contacto		= null;
 
+	if(nombre_completo == '' && empresa == '' && email == '' && pais == '' && cargo == '' && telefono == '' && c_email == false && terminos == false) {
+		validarCampos();
+	}
 	if(terminos == false) {
 		return;
 	}
@@ -47,6 +50,7 @@ function solicitarEstimacion() {
 	if(contacto == false) {
 		  return;
 	}
+	$('.button-confirmar').prop("disabled", true);
 	$.ajax({
 		data  : { nombre_completo : nombre_completo,
 				  empresa 	      : empresa,

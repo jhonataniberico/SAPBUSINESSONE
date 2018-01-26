@@ -24,7 +24,7 @@ class Login extends CI_Controller {
 		$data['error'] = EXIT_ERROR;
         $data['msj']   = null;
          try {
-			$usuario = $this->input->post('user');
+			$usuario = $this->input->post('usuario');
 			$password = $this->input->post('password');
 			$username = $this->M_usuario->verificarUsuario($usuario, $password);
 			if(count($username) != 0) {
@@ -32,7 +32,7 @@ class Login extends CI_Controller {
 				$session = array('usuario' => $usuario,
 								 'Id_user' 	   => $username[0]->Id);
           		$this->session->set_userdata($session);
-				$data['error'] = EXIT_SUCCESS;
+          		$data['error'] = EXIT_SUCCESS;
 				}
 			}
         }catch(Exception $e) {

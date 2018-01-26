@@ -587,7 +587,17 @@
 			            		</div>
 		            		</div>
 		            		<form class="mdl-formulario disabled text-left">
-		        				<h2 class="title-formulario m-b-10">Introduzca aqu&iacute; sus datos o <span><a class="button-linkedin" href="<?php  echo "https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id={$client_id}&redirect_uri={$redirect_uri}&state={$csrf_token}&scope={$scopes}"; ?>"><i class="fa fa-linkedin" aria-hidden="true"></i>Conéctese v&iacute;a LinkedIn</a></span></h2>
+		            			<div class="content-datos">
+		            				<div class="content-personal">
+		            					<p><i class="mdi mdi-arrow_downward"></i>Introduzca aqu&iacute; sus datos</p>
+		            				</div>
+		            				<div class="content-separacion">
+		            					<p>o</p>
+		            				</div>
+		            				<div class="content-linkedin">
+		            					<a class="button-linkedin" href="<?php  echo "https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id={$client_id}&redirect_uri={$redirect_uri}&state={$csrf_token}&scope={$scopes}"; ?>"><i class="fa fa-linkedin" aria-hidden="true"></i>Conéctese v&iacute;a LinkedIn</a>
+		            				</div>
+		            			</div>
 		        				<div class="col-sm-6">
 		        					<div class="mdl-input">
 									    <input type="text" class="form-control" id="nombre_completo" maxlength="50" onkeypress="return soloLetras(event);" onchange="validarCampos()" placeholder="Nombre Completo">

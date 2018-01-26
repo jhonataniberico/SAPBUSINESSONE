@@ -31,14 +31,18 @@
                 <thead>
                     <tr>
                         <th>Nombres</th>
-                        <th>Pa&iacute;</th>
+                        <th>Empresa</th>
                         <th>Correo electr&oacute;nico</th>
-                        <th>Fecha de evento</th>
-                        <th>Nombre de evento</th>
+                        <th>Tel&eacute;fono</th>
+                        <th>Industria</th>
+                        <th>Cantidad de empleados</th>
+                        <th>Facturaci&oacute;n</th>
+                        <th>Prioridad</th>
+                        <th>Infraestructura</th>
                     </tr>
                 </thead>
                 <tbody>
-                   
+                   <?php echo $html ?>
                 </tbody>
             </table>
         </div>
