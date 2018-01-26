@@ -74,10 +74,10 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
+	'dsn'	=> '',//104.238.117.150
 	/*'hostname' => 'http://www.sap-latam.com/sAP_business_one/',
 	'username' => 'brainblue',
-	'password' => 'Bra1n#blu3',
+	'password' => 'Brain$blue18',
 	'database' => 'sapbusinessone',*/
 	'hostname' => 'localhost',
 	'username' => 'root',

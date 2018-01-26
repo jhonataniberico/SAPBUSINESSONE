@@ -585,7 +585,19 @@
 			            		</div>
 		            		</div>
 		            		<form class="mdl-formulario text-left">
-		        				<h2 class="title-formulario m-b-10">Introdusca aqu&iacute; sus datos o <span><a style="font-family: 'Arial';color: #fff;font-size: 22px;font-weight: bold;" href="<?php  echo "https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id={$client_id}&redirect_uri={$redirect_uri}&state={$csrf_token}&scope={$scopes}"; ?>"><i class="fa fa-lg fa-linkedin-square" style="color: #0077B5;background-color: #fff;height: 19px;width: 21px;margin-left: 2px;" aria-hidden="true"></i>Conéctese v&iacute;a LinkedIn</a></span></h2>
+		            			<div class="col-xs-12 boton-linkedin">
+		            				<div class="col-xs-12">
+		            					<div class="col-xs-10">
+		            						<h2 class="title-formulario m-b-10">Introdusca aqu&iacute; sus datos o</h2>
+			            					<div class="col-xs-6" style="background-color: #1B8DCB;position:  absolute;top: 0px;right: 76px;width: 42%;">
+			            						<div class="col-xs-2" style="background-color: #0977B9;margin-left: -16px;">
+			            							<span style="font-size:25px;font-weight: bold;">in</span>
+			            						</div>
+			            						<a style="font-family: 'Arial';color: #fff;font-size: 19px;font-weight: lighter;" href="<?php  echo "https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id={$client_id}&redirect_uri={$redirect_uri}&state={$csrf_token}&scope={$scopes}"; ?>">Conéctese v&iacute;a LinkedIn</a>
+			            					</div>
+		            					</div>
+		            				</div>
+		            			</div>
 		        				<div class="col-sm-6">
 		        					<div class="mdl-input">
 									    <input type="text" class="form-control" id="nombre_completo" maxlength="50" onkeypress="return soloLetras(event);" onchange="validarCampos()" placeholder="Nombre Completo">
@@ -718,10 +730,8 @@
         $(window).load(function() {
         	  /*if(<?php echo $pantalla ?> == 3) {
 				m = 5; 
-        	 	//console.log("<?php echo $nombre_comple ?>");
 	        	var fifthWindow   = $('#window5-page');
 	        	var homePage      = $('#home');
-			    // console.log(<?php echo $pantalla ?>);
 			    $('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight');
 			    homePage.css("display","none");
 				fifthWindow.addClass('animated fadeInLeft');
@@ -741,7 +751,7 @@
 				$('#cargo').val("<?php echo $tit ?>");
 				$('#empresa').val("<?php echo $comp ?>");
 				$('#industria').text("<?php echo $industria ?>");
-				$('#tamanio').text("<?php echo $Tamanio ?>");
+				$('#tamanio').text("<?php echo $Tamanio ?>");//falta agregar empleados
 				$('#factura').text("<?php echo $Factura_anual ?>");
 				$('#prioridad').append("<?php echo $priori ?>");
 				$('#infraestructura').text("<?php echo $Infraestructura ?>");*/

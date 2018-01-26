@@ -33,18 +33,17 @@ class Es extends CI_Controller {
     }
     $data['priori'] = $html;*/
     $data['pantalla'] = 0;
-
     $client_id     = "864xp2wdu9eghe";
     $client_secret = "M6NxoP4EWlaADF2U";
     $redirect_uri  = "http://www.sap-latam.com/sap_business_one/callback";
     $csrf_token    = random_int(1111111, 9999999);
     $scopes        = "r_basicprofile%20r_emailaddress";
-    $data['client_id'] = $client_id;
+    $data['client_id']     = $client_id;
     $data['client_secret'] = $client_secret;
-    $data['redirect_uri'] = $redirect_uri;
-    $data['csrf_token'] = $csrf_token;
-    $data['scopes'] = $scopes;
-    $data['nombre_linke'] = $this->session->userdata('emailAddress');
+    $data['redirect_uri']  = $redirect_uri;
+    $data['csrf_token']    = $csrf_token;
+    $data['scopes']        = $scopes;
+    $data['nombre_linke']  = $this->session->userdata('emailAddress');
     $this->load->view('v_es', $data);
   }
 
@@ -99,13 +98,13 @@ class Es extends CI_Controller {
         $data['msj']   = null;
         try {
           $ids_array   = $this->input->post('array_ids');
-          $array_3pant   = $this->input->post('array_3pant');
+          $array_3pant = $this->input->post('array_3pant');
           $explode = explode(",", $this->session->userdata('Prioridad'));
           $html    = '';
           foreach ($explode as $key) {
             $html .= '<li>'.$key.'</li>';
           }
-          $session = array('ids_array' => $ids_array,
+          $session = array('ids_array'   => $ids_array,
                            'array_3pant' => $array_3pant);
           $this->session->set_userdata($session);
           $tamanio = $this->session->userdata('Tamanio') == null ? '-' : $this->session->userdata('Tamanio').' empleados';
@@ -153,7 +152,6 @@ class Es extends CI_Controller {
                              'Contacto'        => $contacto,
                              'pantalla'        => 0);
             $this->session->set_userdata($session);
-
             $this->session->unset_userdata('nombre_linke');
             $this->session->unset_userdata('email_linke');
             $this->session->unset_userdata('universidad');
@@ -166,9 +164,9 @@ class Es extends CI_Controller {
             $this->session->unset_userdata('Tamanio');
             $this->session->unset_userdata('Prioridad');
 
-            //$this->sendGmailSap($email);
-            $data['msj'] = $datoInsert['msj'];
-      $data['error'] = $datoInsert['error'];
+          //$this->sendGmailSap($email);
+          $data['msj']  = $datoInsert['msj'];
+          $data['error'] = $datoInsert['error'];
         } catch (Exception $e) {
             $data['msj'] = $e->getMessage();
         }
@@ -189,7 +187,6 @@ class Es extends CI_Controller {
         }
        // cargamos la libreria email de ci
        $this->load->library("email");
-
        //configuracion para gmail
        $configGmail = array(
                             'protocol'  => 'smtp',
@@ -239,9 +236,9 @@ class Es extends CI_Controller {
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
       try {
-        $data['ids_array'] = $this->session->userdata('ids_array');
+        $data['ids_array']   = $this->session->userdata('ids_array');
         $data['array_3pant'] = $this->session->userdata('array_3pant');
-        $data['error']           = EXIT_SUCCESS;
+        $data['error'] = EXIT_SUCCESS;
       } catch (Exception $e) {
           $data['msj'] = $e->getMessage();
       }
