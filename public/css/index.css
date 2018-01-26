@@ -114,6 +114,7 @@ h2,p{
     left: 0;
     bottom: 35px;
     text-align: center;
+	display: none;
 }
 .bottom-right p{
     margin: 0;

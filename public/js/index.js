@@ -511,6 +511,7 @@ function buttonQuestion(direction){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
 			secondWindow.addClass('animated fadeOutLeft');
 			thirdWindow.addClass('animated fadeInRight');
+			$('.bottom-right').css("display","block");
 			var id_button = $('#textOperar').text();
 			array_ids.push(id_button);
 			saveDatos(2);
@@ -527,6 +528,7 @@ function buttonQuestion(direction){
 		else if(m == 4){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
 			thirdWindow.addClass('animated fadeOutLeft');
+			$('.bottom-right').css("display","none");
 			fourthWindow.addClass('animated fadeInRight');
 			var id_button = $('#facturacion').val();
     		array_ids.push(id_button);
@@ -568,6 +570,7 @@ function buttonQuestion(direction){
 			datos_array = [];
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
 			thirdWindow.addClass('animated fadeInLeft');
+			$('.bottom-right').css("display","block");
 			fourthWindow.addClass('animated fadeOutRight');
 			if(pant4 == 1){
 				$('.button-next').prop("disabled", false);
@@ -577,6 +580,7 @@ function buttonQuestion(direction){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
 			secondWindow.addClass('animated fadeInLeft');
 			thirdWindow.addClass('animated fadeOutRight');
+			$('.bottom-right').css("display","none");
 			$('#'+id_primero).addClass('button-select');
 			if(facturacion != null && $('#textOperar').text() != 'Seleccione') {
 				$('.button-next').prop("disabled", false);
