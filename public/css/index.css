@@ -583,13 +583,13 @@ span.number{
 .content-card .contenido-right p{
     line-height: 14px;
     font-size: 12px;
-    height: 105px;
+    height: 106px;
 }
 .content-card.bottom .contenido-right p{
 	height: 105px;
 }
 .mdl-card-3 .content-card .contenido-right p{
-	height: 75px;
+	height: 76px;
 }
 .content-card .contenido-right small{
 	font-family: 'RobotoLight';
