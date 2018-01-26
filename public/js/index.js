@@ -135,11 +135,13 @@ var isMobile = {
 var global_datos = null;
 var datos_array = [];
 var array_3pant = [];
+
 function guardarDatos(id,datos) {
 	var buttonSelect = $('#'+id+'.select-one');
 	var buttonToggle = $('#'+id+'.select-prioridad');
 	var cardSelect   = $('#'+id+'.select-one').parent().find('.contenido');
 	var cardToggle   = $('#'+id+'.select-prioridad').parent().find('.contenido');
+	var modal   = $('#ModalQuestion');
 	global_datos     = datos;
 	$('.contenido').removeClass('aparecer');
 	$('.content-card').find('.select-one').removeClass('button-select');
@@ -148,19 +150,29 @@ function guardarDatos(id,datos) {
 	buttonToggle.toggleClass("button-select");
     buttonToggle.click(function() {
     	cardToggle.toggleClass("aparecer");
+    	var img_toggle     = cardToggle.find('.contenido-left').find('img');
+    	var content_toggle = cardToggle.find('.contenido-right').find('p');
+    	var small_toggle   = cardToggle.find('.contenido-right').find('small');
+    	modal.find('.mdl-card__title').find('img').attr({
+	        "alt"   : img_toggle.attr('alt'),
+	        "src"   : img_toggle.attr('src')
+	    });
+	    modal.find('.mdl-card__supporting-text').find('p').text(content_toggle[0].innerText);
+	    modal.find('.mdl-card__supporting-text').find('small').text(small_toggle[0].innerText);
+		modal.modal('toggle');
 	});
-	var modal   = $('#ModalQuestion');
-    var card    = buttonSelect.closest('.mdl-card-question');
-    var img     = card.find('.contenido-left').find('img');
-    var content = card.find('.contenido-right').find('p');
-    var small   = card.find('.contenido-right').find('small');
-    modal.find('.mdl-card__title').find('img').attr({
-        "alt"   : img.attr('alt'),
-        "src"   : img.attr('src')
-    });
-    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
-    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
-	modal.modal('toggle');
+	buttonSelect.click(function() {
+	    var img     = cardSelect.find('.contenido-left').find('img');
+	    var content = cardSelect.find('.contenido-right').find('p');
+	    var small   = cardSelect.find('.contenido-right').find('small');
+	    modal.find('.mdl-card__title').find('img').attr({
+	        "alt"   : img.attr('alt'),
+	        "src"   : img.attr('src')
+	    });
+	    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
+	    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
+		modal.modal('toggle');
+	});
 }
 
 function saveDatos(pantalla) {
@@ -370,7 +382,7 @@ function selectFacturacion(id){
     modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
     modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
 	modal.modal('toggle');
-	
+
 	selectButton.click(function(){
 		Select.removeClass('aparecer');
 	})
@@ -432,13 +444,14 @@ function limpiarCampos() {
 }
 
 function enviarGracias() {
+	fifthWindow.find('.mdl-container').addClass('center-agradecimiento');
 	$('.mdl-solicitud').addClass('animated fadeOutLeft');
 	$('.mdl-agradecimiento').addClass('animated fadeInRight');
 	$('.button-arrow').css("display","none");
 	$('.question').css("display","none");
 	setTimeout(function(){ 
 		location.reload();
-	}, 5000);
+	}, 5000000000);
 }
 
 /*BUTTONS NEXT - PREV */
