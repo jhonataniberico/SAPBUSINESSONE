@@ -117,7 +117,7 @@ h2,p{
 }
 .bottom-right p{
     margin: 0;
-    font-size: 16px;
+    font-size: 16px; 
 }
 .background-body{
 	height: 100vh;
