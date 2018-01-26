@@ -463,14 +463,14 @@ function limpiarCampos() {
 }
 
 function enviarGracias() {
-	fifthWindow.find('.mdl-container').addClass('center-agradecimiento');
+	$('#window5-page').addClass('display-flex');
 	$('.mdl-solicitud').addClass('animated fadeOutLeft');
 	$('.mdl-agradecimiento').addClass('animated fadeInRight');
 	$('.button-arrow').css("display","none");
 	$('.question').css("display","none");
 	setTimeout(function(){ 
 		location.reload();
-	}, 5000);
+	}, 4000);
 }
 
 /*BUTTONS NEXT - PREV */
