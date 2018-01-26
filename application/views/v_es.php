@@ -526,44 +526,46 @@
 			            	<div class="mdl-card-confirmacion">
 		            			<div class="mdl-respuestas text-left">
 		            				<h2 class="title-formulario m-b-10">Sus respuestas fueron:</h2>
-		            				<div class="col-xs-12 p-0">
-		            					<div class="div-respuestas">
-		            						<ul>
-		            							<li id="industria">Retail</li>
-		            						</ul>
-		            						<button id="window1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id, 1)">Editar</button>
-		            					</div>
-		            				</div>
-		            				<div class="col-xs-12 p-0">
-		            					<div class="div-respuestas">
-		            						<ul>
-		            							<li id="tamanio">1 - 50</li>
-		            						</ul>
-		            						<button id="window2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id, 2)">Editar</button>
-		            					</div>
-		            				</div>
-		            				<div class="col-xs-12 p-0">
-		            					<div class="div-respuestas">
-		            						<ul>
-		            							<li id="factura">1-3 Millones de D&oacute;lares</li>
-		            						</ul>
-		            						<button id="window2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id, 2)">Editar</button>
-		            					</div>
-		            				</div>
-		            				<div class="col-xs-12 p-0">
-		            					<div class="div-respuestas">
-		            						<ul id="prioridad">
-		            						</ul>
-		            						<button id="window3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id, 3)">Editar</button>
-		            					</div>
-		            				</div>
-		            				<div class="col-xs-12 p-0">
-		            					<div class="div-respuestas">
-		            						<ul>
-		            							<li id="infraestructura">Local</li>
-		            						</ul>
-		            						<button id="window4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id, 4)">Editar</button>
-		            					</div>
+		            				<div class="contenedor-respuestas">
+	            						<div class="col-xs-12 p-0">
+			            					<div class="div-respuestas">
+			            						<ul>
+			            							<li id="industria">Retail</li>
+			            						</ul>
+			            						<button id="window1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id, 1)">Editar</button>
+			            					</div>
+			            				</div>
+			            				<div class="col-xs-12 p-0">
+			            					<div class="div-respuestas">
+			            						<ul>
+			            							<li id="tamanio">1 - 50</li>
+			            						</ul>
+			            						<button id="window2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id, 2)">Editar</button>
+			            					</div>
+			            				</div>
+			            				<div class="col-xs-12 p-0">
+			            					<div class="div-respuestas">
+			            						<ul>
+			            							<li id="factura">1-3 Millones de D&oacute;lares</li>
+			            						</ul>
+			            						<button id="window2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id, 2)">Editar</button>
+			            					</div>
+			            				</div>
+			            				<div class="col-xs-12 p-0">
+			            					<div class="div-respuestas">
+			            						<ul id="prioridad">
+			            						</ul>
+			            						<button id="window3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id, 3)">Editar</button>
+			            					</div>
+			            				</div>
+			            				<div class="col-xs-12 p-0">
+			            					<div class="div-respuestas">
+			            						<ul>
+			            							<li id="infraestructura">Local</li>
+			            						</ul>
+			            						<button id="window4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id, 4)">Editar</button>
+			            					</div>
+			            				</div>
 		            				</div>
 		            				<div class="col-xs-12 p-0 text-right m-t-10">
 		            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="ConfirmarRespuestas()">Confirmar respuestas</button>
@@ -658,7 +660,7 @@
 									</label>
 		        				</div>
 		        				<div class="col-xs-12 text-right m-t-25 m-b-10">
-									<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="solicitarEstimacion();">Solicitar estimaci&oacute;n</button>
+									<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="solicitarEstimacion();">Enviar informaci&oacute;n</button>
 		        				</div>
 		            		</form>
 	            		</div>

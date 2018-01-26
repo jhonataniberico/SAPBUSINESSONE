@@ -470,7 +470,7 @@ function enviarGracias() {
 	$('.question').css("display","none");
 	setTimeout(function(){ 
 		location.reload();
-	}, 5000000000);
+	}, 5000);
 }
 
 /*BUTTONS NEXT - PREV */
@@ -642,7 +642,7 @@ function buttonQuestion(direction){
 		}
 		else if(m < 1){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
-			homePage.removeClass('animated fadeOutLeft')
+			homePage.removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
 			homePage.addClass('animated fadeInLeft');
 			firstWindow.addClass('animated fadeOutRight');
 			header.removeClass('opacity');
