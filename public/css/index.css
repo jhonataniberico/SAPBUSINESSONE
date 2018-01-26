@@ -21,6 +21,23 @@ h2,p{
     overflow-y: hidden !important;
     padding: 0;
 }
+.button-linkedin{
+    background-color: #008FCC;
+    padding: 8px 10px;
+    font-size: 16px;
+    text-decoration: none !important;
+    color: #fff !important;
+    position: relative;
+    padding-left: 45px;
+}
+.button-linkedin i{
+    background-color: #0076B3;
+    padding: 8.5px 10px;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 /*GENERAL*/
 .window-center{
 	width: 100%;
