@@ -851,7 +851,7 @@ span.number{
 }
 .mdl-formulario{
     width: 100%;
-    max-width: calc(100% - 520px);
+    max-width: calc(100% - 580px);
     -webkit-transition: max-width .3s ease-in-out;
     -moz-transition: max-width .3s ease-in-out;
     -ms-transition: max-width .3s ease-in-out;
@@ -1025,6 +1025,19 @@ span.number{
 	}
 	.title-home{
 		margin-top: 10px;
+	}
+	.question{
+		margin-bottom: 0;
+	}
+	.question h2{
+		font-size: 30px;
+	}
+	span.number{
+		font-size: 45px;
+	}
+	.question-respuestas p{
+		font-size: 26px;
+    	line-height: 24px;
 	}
 }
 @media (max-width: 1200px){

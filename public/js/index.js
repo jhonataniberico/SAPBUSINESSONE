@@ -134,11 +134,8 @@ var isMobile = {
 
 var global_datos = null;
 var datos_array = [];
-<<<<<<< Updated upstream
 var array_3pant = [];
-=======
 
->>>>>>> Stashed changes
 function guardarDatos(id,datos) {
 	var buttonSelect = $('#'+id+'.select-one');
 	var buttonToggle = $('#'+id+'.select-prioridad');
