@@ -1,5 +1,5 @@
 function solicitarEstimacion() {
-	var nombre_completo = $('#nombre_completo').val();
+	var nombre_completo = $('#nombre_completo').val(); 
 	var empresa  		= $('#empresa').val();
 	var email 	 		= $('#email').val();
 	var pais 	 		= $('#pais').val();
@@ -502,7 +502,7 @@ function buttonQuestion(direction){
 				$('.button-next').prop("disabled", true);
 			}
 			pant1 = 1;
-			if(pant2 == 0) {
+			if(pant2 == 0 || facturacion == null && $('#textOperar').text() == 'Seleccione') {
 				$('.button-next').prop("disabled", true);
 			}
 			pant2 = 1;
@@ -578,10 +578,9 @@ function buttonQuestion(direction){
 			secondWindow.addClass('animated fadeInLeft');
 			thirdWindow.addClass('animated fadeOutRight');
 			$('#'+id_primero).addClass('button-select');
-			if(facturacion != null && $('#textOperar').text() != null) {
+			if(facturacion != null && $('#textOperar').text() != 'Seleccione') {
 				$('.button-next').prop("disabled", false);
 			}
-			console.log('entra1');
 		}
 		else if(m == 1){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
@@ -590,7 +589,6 @@ function buttonQuestion(direction){
 			if(pant2 == 1){
 				$('.button-next').prop("disabled", false);
 			}
-			console.log('entra2');
 		}
 		else if(m < 1){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
