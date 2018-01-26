@@ -7,7 +7,6 @@ body{
 }
 h2,p{
     font-family: 'RobotoRegular';
-	/*font-family: 'BentonSansRegular';*/
 }
 /*CLASES GENERALES*/
 .opacity{
@@ -16,7 +15,7 @@ h2,p{
 }
 .button-linkedin{
     background-color: #008FCC;
-    padding: 8px 10px;
+    padding: 10px;
     font-size: 16px;
     text-decoration: none !important;
     color: #fff !important;
@@ -994,6 +993,35 @@ span.number{
 .mdl-formulario .col-xs-4{
 	padding: 0 5px;
 }
+.mdl-formulario .content-datos{
+	padding: 5px;
+}
+.mdl-formulario .content-datos .content-personal{
+    display: inline-block;
+    background-color: #F6F6F6;
+    color: #000000;
+    vertical-align: middle;
+    padding: 7px 10px;
+}
+.mdl-formulario .content-datos .content-separacion p,
+.mdl-formulario .content-datos .content-personal p{
+	margin: 0;
+}
+.mdl-formulario .content-datos .content-personal p i{
+	vertical-align: middle;
+    font-size: 18px;
+    margin-right: 5px;
+    color: #4983B6;
+}
+.mdl-formulario .content-datos .content-separacion{
+	display: inline-block;
+    vertical-align: middle;
+    padding: 7px 10px;
+}
+.mdl-formulario .content-datos .content-linkedin{
+	display: inline-block;
+	vertical-align: middle;
+}
 /*COMPONENTES MATERIAL*/
 .mdl-input-label{
 	display: inline-block;
@@ -1350,22 +1378,23 @@ span.number{
 	    font-size: 28px;
 	}
 	.bottom-right{
-	    max-width: 165px;
-	    bottom: 20px;
+        max-width: 135px;
+	    bottom: 10px;
 	    right: 20px;
 	    left: initial;
 	    text-align: right;
 	}
 	.bottom-right p{
-		font-size: 14px;
-    	line-height: 16px;
+	    font-size: 13px;
+    	line-height: 14px;
 	}
 	.button-next-prev .button-arrow.button-next{
 		right: calc(0% + 60px);
 	}
 	.button-arrow{
-	    width: 55px;
-    	height: 55px;
+        width: 45px;
+	    height: 55px;
+	    min-width: 45px;
 	}
 	.arrow-right{
 	    border-width: 25px 0 25px 20px;
@@ -1383,6 +1412,23 @@ span.number{
 	.mdl-agradecimiento p{
 		font-size: 18px;
     	line-height: 22px;
+	}
+	.mdl-formulario .content-datos .content-linkedin{
+		width: 100%;
+	}
+	.mdl-formulario .content-datos .content-separacion,
+	.mdl-formulario .content-datos .content-personal{
+		margin-bottom: 10px;
+	}
+	.button-linkedin{
+		display: inline-block;
+	    width: 100%;
+	}
+	.button-linkedin i{
+		padding: 11px;
+	}
+	.mdl-formulario, .mdl-respuestas{
+		padding: 15px;
 	}
 }	
 @media(max-width: 320px){
