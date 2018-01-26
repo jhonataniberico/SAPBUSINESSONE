@@ -731,11 +731,16 @@ span.number{
 	background-color: #aaa;
 	border-radius: 10px;
 }
-
-.mdl-respuestas::-webkit-scrollbar-track,
-.mdl-respuestas::-webkit-scrollbar-thumb {
-    background-color: transparent;
-	opacity: 0;
+.mdl-respuestas::-webkit-scrollbar{
+	width: 2px;
+}
+.mdl-respuestas::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: #888;
+}
+.mdl-respuestas::-webkit-scrollbar-track{
+    border-radius: 10px;
+    background: #eee;
 }
 .mdl-respuestas:HOVER::-webkit-scrollbar-thumb{
 	background-color: #aaa;
@@ -823,6 +828,10 @@ span.number{
 	border-radius: 10px;
 	border: 1px solid #F8B22C;
     padding: 25px;
+}
+.mdl-formulario.disabled{
+	opacity: 0.3;
+    pointer-events: none;
 }
 .mdl-respuestas{
 	overflow-y: scroll;

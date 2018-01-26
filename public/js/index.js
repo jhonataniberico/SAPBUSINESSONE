@@ -421,6 +421,7 @@ function ConfirmarRespuestas(){
 	$('.button-arrow.button-prev').css("display","none");
 	$('.mdl-card-confirmacion').addClass('confirmar');
 	$('.fp-controlArrow.fp-prev').css("display","none");
+	$('.mdl-formulario').removeClass('disabled');
 }
 
 function limpiarCampos() {

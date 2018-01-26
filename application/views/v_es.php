@@ -584,7 +584,7 @@
 		        					</div>
 			            		</div>
 		            		</div>
-		            		<form class="mdl-formulario text-left">
+		            		<form class="mdl-formulario disabled text-left">
 		        				<h2 class="title-formulario m-b-10">Introduzca aqu&iacute; sus datos o <span><a class="button-linkedin" href="<?php  echo "https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id={$client_id}&redirect_uri={$redirect_uri}&state={$csrf_token}&scope={$scopes}"; ?>"><i class="fa fa-linkedin" aria-hidden="true"></i>Conéctese v&iacute;a LinkedIn</a></span></h2>
 		        				<div class="col-sm-6">
 		        					<div class="mdl-input">
