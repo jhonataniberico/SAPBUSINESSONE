@@ -47,4 +47,16 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, array($Id_usuario));
         return $result->result();
     }
+
+    function getRespUsuario($id_persona) {
+        $sql = "SELECT s.* 
+                  FROM usuario u,
+                       solicitud s
+                WHERE s.Id = u.Id_solicitud
+                 AND u.Id_persona = ?;";
+        $result = $this->db->query($sql, array($id_persona));
+        $this->db->last_query();
+        return $result->result();
+    }
+
 }

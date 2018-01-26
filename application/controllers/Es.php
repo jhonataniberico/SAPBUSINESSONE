@@ -150,7 +150,8 @@ class Es extends CI_Controller {
                              'Telefono'        => $telefono,
                              'Relacion'        => $relacion,
                              'Contacto'        => $contacto,
-                             'pantalla'        => 0);
+                             'pantalla'        => 0,
+                             'id_persona'      => $datoInsert['Id']);
             $this->session->set_userdata($session);
             $this->session->unset_userdata('nombre_linke');
             $this->session->unset_userdata('email_linke');
@@ -164,7 +165,7 @@ class Es extends CI_Controller {
             $this->session->unset_userdata('Tamanio');
             $this->session->unset_userdata('Prioridad');
 
-          //$this->sendGmailSap($email);
+          $this->sendGmailSap($email);
           $data['msj']  = $datoInsert['msj'];
           $data['error'] = $datoInsert['error'];
         } catch (Exception $e) {
@@ -185,6 +186,7 @@ class Es extends CI_Controller {
         }else if($_SESSION['Contacto'] == 1){
           $contact = 'por Email';
         }
+        $respuestas = $this->M_solicitud->getRespUsuario($_SESSION['id_persona']);
        // cargamos la libreria email de ci
        $this->load->library("email");
        //configuracion para gmail
@@ -221,10 +223,21 @@ class Es extends CI_Controller {
           <h1>Su relación con sap es de '.$_SESSION['Relacion'].'</h1>
           <h1>Le gustaría que le contacten '.$contact.'</h1>
           <h1>Solicitó un registro a la plataforma de SAP</h1>
+          <h1>Sus respuestas fueron:</h1>
+          <h1>¿En qué industria se desempeña?</h1>
+          <h1>'.$respuestas[0]->Industria.'</h1>
+          <h1>¿De qué tamaño es su empresa?</h1>
+          <h1>'.$respuestas[0]->Tamanio.' empleados</h1>
+          <h1>Su facturacion es: '.$respuestas[0]->Factura_anual.'</h1>
+          <h1>¿Cuál es la prioridad de su negocio?</h1>
+          <h1>'.$respuestas[0]->Prioridad.'</h1>
+          <h1>¿Qué tipo de infraestructura está buscando?</h1>
+          <h1>'.$respuestas[0]->Infraestructura.'</h1>
          </body>
         </html>';
         $this->email->message($texto);//AQUI SE INSERTA EL HTML
         $this->email->send();
+        $this->session->unset_userdata('id_persona');
         $data['error'] = EXIT_SUCCESS;
       }catch (Exception $e){
         $data['msj'] = $e->getMessage();
