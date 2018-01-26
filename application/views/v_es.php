@@ -720,7 +720,7 @@
         $(window).load(function() {
         	  /*if(<?php echo $pantalla ?> == 3) {
 				m = 5; 
-				if(<?php echo $pantalla ?> == 1) {
+				if(<?php echo $confirmar ?> == 1) {
 					$('.button-arrow.button-prev').css("display","none");
 					$('.mdl-card-confirmacion').addClass('confirmar');
 					$('.mdl-formulario').removeClass('disabled');
