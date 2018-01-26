@@ -994,13 +994,13 @@ span.number{
 .mdl-input-label{
 	display: inline-block;
 	width: 100%;
-	max-width: 120px;
+	max-width: 112px;
 }
 .mdl-label .mdl-checkbox{
     max-width: 235px;
 }
 .mdl-label .mdl-checkbox__label{
-	font-size: 14px;
+	font-size: 13px;
     line-height: 18px;
 }
 .mdl-label .mdl-checkbox__label a{
@@ -1053,8 +1053,9 @@ span.number{
 		font-size: 45px;
 	}
 	.question-respuestas p{
-		font-size: 26px;
+		font-size: 25px;
     	line-height: 24px;
+	    max-width: 650px;
 	}
 }
 @media (max-width: 1200px){
