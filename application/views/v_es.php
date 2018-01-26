@@ -669,16 +669,16 @@
 										<span class="mdl-checkbox__label f-s-14" style="">He le&iacute;do y acepto los <a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" style="">Términos y condiciones de SAP</a></span>
 									</label>
 		        				</div>
-		        				<div class="col-xs-12 text-right m-t-25 m-b-10">
+		        				<div class="col-xs-12 text-right m-t-25">
 									<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="solicitarEstimacion();">Enviar informaci&oacute;n</button>
 		        				</div>
 		            		</form>
 	            		</div>
-	            		<div class="mdl-agradecimiento">
-	            			<h2>Gracias por su interés</h2>
-	            			<p>Un representante de SAP se pondrá en contacto con Usted para ayudarlo a dar el primer paso.</p>
-	            		</div>
 	            	</div>
+            		<div class="mdl-agradecimiento">
+            			<h2>Gracias por su interés</h2>
+            			<p>Un representante de SAP se pondrá en contacto con Usted para ayudarlo a dar el primer paso.</p>
+            		</div>
 				</div>
 				<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect button-arrow button-prev" onclick="buttonQuestion(1)">
 					<div class="arrow arrow-left"></div>
