@@ -724,6 +724,7 @@
 					$('.button-arrow.button-prev').css("display","none");
 					$('.mdl-card-confirmacion').addClass('confirmar');
 					$('.mdl-formulario').removeClass('disabled');
+					confirmar = 1;
 				}
 	        	var fifthWindow   = $('#window5-page');
 	        	var homePage      = $('#home');

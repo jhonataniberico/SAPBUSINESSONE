@@ -32,7 +32,7 @@ class Es extends CI_Controller {
       $html .= '<li>'.$key.'</li>';
     }
     $data['priori'] = $html;*/
-    $data['confirmar'] = $this->session->userdata('confirmar');
+    $data['confirmar'] = $this->session->userdata('confirmar') == null ? 0 : $this->session->userdata('confirmar');
     $data['pantalla'] = 0;
     $client_id     = "864xp2wdu9eghe";
     $client_secret = "M6NxoP4EWlaADF2U";
