@@ -14,13 +14,6 @@ h2,p{
 	z-index: 10 !important;
 	opacity: 1 !important;
 }
-.center-agradecimiento{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    overflow-y: hidden !important;
-    padding: 0;
-}
 .button-linkedin{
     background-color: #008FCC;
     padding: 8px 10px;
@@ -432,7 +425,6 @@ span.number{
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	display: block;
-	height: 100%;
 	position: absolute;
 	width: 100%;
 }
@@ -833,8 +825,9 @@ span.number{
 	opacity: 0.3;
     pointer-events: none;
 }
-.mdl-respuestas{
+.contenedor-respuestas{
 	overflow-y: scroll;
+	height: 280px;
 }
 .mdl-formulario,
 .mdl-card-confirmacion{
@@ -880,11 +873,11 @@ span.number{
 .mdl-formulario{
     width: 100%;
     max-width: calc(100% - 580px);
-    -webkit-transition: max-width .3s ease-in-out;
-    -moz-transition: max-width .3s ease-in-out;
-    -ms-transition: max-width .3s ease-in-out;
-    -o-transition: max-width .3s ease-in-out;
-    transition: max-width .3s ease-in-out;
+    -webkit-transition: max-width .3s ease-in-out, opacity .5s ease-in-out;
+    -moz-transition: max-width .3s ease-in-out, opacity .5s ease-in-out;
+    -ms-transition: max-width .3s ease-in-out, opacity .5s ease-in-out;
+    -o-transition: max-width .3s ease-in-out, opacity .5s ease-in-out;
+    transition: max-width .3s ease-in-out, opacity .5s ease-in-out;
 }
 .mdl-agradecimiento{
     opacity: 0;
@@ -1122,6 +1115,13 @@ span.number{
 	#ModalQuestion.fade.in,
 	.modal-backdrop.fade.in{
 		display: block !important;
+	}
+	.center-agradecimiento{
+	    display: flex;
+	    align-items: center;
+	    flex-direction: row;
+	    overflow-y: hidden !important;
+	    padding: 0;
 	}
 }
 @media (max-width: 768px){
