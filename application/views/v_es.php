@@ -59,8 +59,8 @@
 	    				<div class="mdl-idioma">
 							<select class="selectpicker" id="Idioma"  name="Idioma" onchange="cambiarIdioma()">
 								<option value="Español">Espa&ntilde;ol</option>
-								<option value="Inglés">Ingl&eacute;s</option>
-								<option value="Portugués">Portug&eacute;s</option>
+								<option value="Inglés" disabled="true">Ingl&eacute;s</option>
+								<option value="Portugués" disabled="true">Portug&eacute;s</option>
 							</select>
 	    				</div>
 						<div class="background3"></div>
@@ -70,6 +70,9 @@
 	    		</div>
 	    		<div class="logo-bottom">
         			<img src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_home.png">
+		    		<div class="bottom-right">
+						<p>Puede seleccionar m&aacute;s de una opci&oacute;n</p>
+		    		</div>
         		</div>
 				<div id="window1-page" class="window-center opacity-done">
 					<div class="mdl-container text-center">
@@ -422,9 +425,6 @@
 		            		</div>
 		            	</div>
 					</div>
-		    		<div class="bottom-right">
-						<p>Puede seleccionar m&aacute;s de una opci&oacute;n</p>
-		    		</div>
 				</div>
 				<div id="window4-page" class="window-center opacity-done">
 					<div class="mdl-container text-center">
@@ -654,7 +654,7 @@
 		        				<div class="col-xs-12 mdl-label m-t-10">
 		    						<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
 										<input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
-										<span class="mdl-checkbox__label f-s-14" style="">He leido y acepto los <a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" style="">Términos y condiciones de SAP</a></span>
+										<span class="mdl-checkbox__label f-s-14" style="">He le&iacute;do y acepto los <a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" style="">Términos y condiciones de SAP</a></span>
 									</label>
 		        				</div>
 		        				<div class="col-xs-12 text-right m-t-25 m-b-10">

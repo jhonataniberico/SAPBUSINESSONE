@@ -112,12 +112,13 @@ h2,p{
 	position: absolute;
     right: 0;
     left: 0;
-    bottom: 40px;
+    bottom: 35px;
     text-align: center;
+	display: none;
 }
 .bottom-right p{
     margin: 0;
-    font-size: 20px;
+    font-size: 16px; 
 }
 .background-body{
 	height: 100vh;
@@ -191,6 +192,7 @@ h2,p{
 	-o-transition: opacity .5s ease-in-out .2s;
 	transition: opacity .5s ease-in-out .2s;
     opacity: 0;
+    width: 100%;
 }
 .logo-bottom img{
 	max-width: 150px;
@@ -994,13 +996,13 @@ span.number{
 .mdl-input-label{
 	display: inline-block;
 	width: 100%;
-	max-width: 120px;
+	max-width: 112px;
 }
 .mdl-label .mdl-checkbox{
     max-width: 235px;
 }
 .mdl-label .mdl-checkbox__label{
-	font-size: 14px;
+	font-size: 13px;
     line-height: 18px;
 }
 .mdl-label .mdl-checkbox__label a{
@@ -1053,8 +1055,9 @@ span.number{
 		font-size: 45px;
 	}
 	.question-respuestas p{
-		font-size: 26px;
+		font-size: 25px;
     	line-height: 24px;
+	    max-width: 650px;
 	}
 }
 @media (max-width: 1200px){
