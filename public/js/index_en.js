@@ -271,7 +271,7 @@ function mostrarDatos() {
 	$.ajax({
 		data  : {array_ids   : array_ids,
 				 array_3pant : array_3pant},
-		url   : 'es/mostrarDatos',
+		url   : 'en/mostrarDatos',
 		type  : 'POST'
 	}).done(function(data){
 		try{
@@ -710,6 +710,7 @@ function EditQuestion(id, pant){
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
+        	//global_array.push(ids_array);
         	data_ids_arr = data.pantalla_sess;
            	$('#'+data.ids_array[0]).addClass('button-select');
            	$("#textOperar").text(data.ids_array[1]);
@@ -754,6 +755,12 @@ function mostrarDatosFlecha(pant) {
 		array_3pant = [];
 		pant4 		= 1;
 	}
+	/*num = id.substr(6,1);
+	m = num;
+	var windowQestion = $('#'+id+'-page');*/
+	/*$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight');
+	windowQestion.addClass('animated fadeInLeft');
+	$('.button-arrow.button-next').css("display","block");*/
 	$.ajax({
 		url   : 'es/EditQuestion',
 		type  : 'POST'
@@ -761,28 +768,26 @@ function mostrarDatosFlecha(pant) {
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
-        	if(data.pantalla_sess == null || data.ids_array == null || data.array_3pant == null) {
-        		return;
-        	}else {
-        		data_ids_arr = data.pantalla_sess;
-	           	$('#'+data.ids_array[0]).addClass('button-select');
-	           	$("#textOperar").text(data.ids_array[1]);
-	           	var divIncrement = $('#buttonMas.select-one').parent();
-	           	var cardSelec    = $('#buttonMas.select-one').parents('.content-card').find('.contenido');
-	           	var cardHidden   = $('.mdl-card-question.visi-hidden');
-	           	divIncrement.addClass('select-increment');
-				cardSelec.addClass('aparecer');
-				cardHidden.fadeIn(400);
-				$("#facturacion").val(data.ids_array[2]);
-				$("#facturacion").parent().addClass('button-select');
-				var divIncrement2 = $('#facturacion').parents().find('.mdl-select');
-				divIncrement2.addClass('select-increment');
-				$.each(data.array_3pant, function( index, value ) {
-				  $('#'+value).addClass('button-select');
-				});
-				$('.selectpicker').selectpicker('refresh');
-				$('#'+data.ids_array[3]).addClass('button-select');
-        	}
+        	//global_array.push(ids_array);
+        	data_ids_arr = data.pantalla_sess;
+           	$('#'+data.ids_array[0]).addClass('button-select');
+           	$("#textOperar").text(data.ids_array[1]);
+           	var divIncrement = $('#buttonMas.select-one').parent();
+           	var cardSelec    = $('#buttonMas.select-one').parents('.content-card').find('.contenido');
+           	var cardHidden   = $('.mdl-card-question.visi-hidden');
+           	divIncrement.addClass('select-increment');
+			cardSelec.addClass('aparecer');
+			cardHidden.fadeIn(400);
+			$("#facturacion").val(data.ids_array[2]);
+			$("#facturacion").parent().addClass('button-select');
+			var divIncrement2 = $('#facturacion').parents().find('.mdl-select');
+			divIncrement2.addClass('select-increment');
+			//global_terce.push(data.array_3pant);
+			$.each(data.array_3pant, function( index, value ) {
+			  $('#'+value).addClass('button-select');
+			});
+			$('.selectpicker').selectpicker('refresh');
+			$('#'+data.ids_array[3]).addClass('button-select');
         }else {
         	return;
         }
