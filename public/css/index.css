@@ -594,7 +594,7 @@ span.number{
 }
 #ModalQuestion .mdl-card .mdl-card__supporting-text h2,
 .content-card .contenido-right h2{
-	font-size: 18px;
+	font-size: 17px;
     font-family: 'RobotoBold';
     margin: 5px 0;
     line-height: 20px;
@@ -624,7 +624,7 @@ span.number{
     color: #FFFFFF;
     line-height: 18px;
     font-size: 14px;
-    max-width: 152px;
+    max-width: 178px;
     margin: auto;
 }
 
