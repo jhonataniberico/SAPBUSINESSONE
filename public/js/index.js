@@ -602,7 +602,6 @@ function buttonQuestion(direction){
 				$('#'+global_array[3]).addClass('button-select');
 			}
 			mostrarDatosFlecha(4);
-			console.log('entra');
 		}
 		else if(m == 3){
 			datos_array = [];
@@ -619,7 +618,6 @@ function buttonQuestion(direction){
 				});
 			}
 			mostrarDatosFlecha(2);
-			console.log('entra1');
 		}
 		else if(m == 2){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
