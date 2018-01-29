@@ -57,7 +57,7 @@
 	    			</div>
 	    			<div class="header-right">
 	    				<div class="mdl-idioma">
-							<select class="selectpicker" id="Idioma" title="English" name="Idioma" onchange="cambiarIdioma()">
+							<select class="selectpicker" id="Idioma" name="Idioma" onchange="cambiarIdioma()">
 								<option value="Inglés">English</option>
 								<option value="Español">Spanish</option>
 								<option value="Portugués">Portuguese</option>
@@ -692,7 +692,7 @@
 						<img alt="" src="">
 					</div>
 				    <div class="mdl-card__supporting-text">
-                        <h2>Sabía que...</h2>
+                        <h2>Did you know that...</h2>
                         <p></p>
                         <small></small>
 					</div> 
