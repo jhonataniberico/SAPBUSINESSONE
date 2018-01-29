@@ -52,8 +52,9 @@ class Admin extends CI_Controller {
 	function getTable() {
 		$datos = $this->M_reportes->getDatosTabla();
 		$html = '';
+		$cont = 1;
 		foreach ($datos as $key) {
-			$html .= '<tr>
+			$html .= '<tr class="tr-cursor-pointer tr-ver-info-solicitud" data-idSolicitud="'.$cont.'">
                         <td>'.$key->nombre_completo.'</td>
                         <td>'.$key->Empresa.'</td>
                         <td>'.$key->Email.'</td>
@@ -64,6 +65,7 @@ class Admin extends CI_Controller {
                         <td>'.$key->Prioridad.'</td>
                         <td>'.$key->Infraestructura.'</td>
                     </tr>';
+            $cont++;
 		}
 		return $html;
 	}
