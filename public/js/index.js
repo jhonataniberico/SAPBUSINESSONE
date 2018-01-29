@@ -154,28 +154,39 @@ function guardarDatos(id,datos) {
 	buttonToggle.toggleClass("button-select");
     buttonToggle.click(function() {
     	cardToggle.toggleClass("aparecer");
-    	var img_toggle     = cardToggle.find('.contenido-left').find('img');
-    	var content_toggle = cardToggle.find('.contenido-right').find('p');
-    	var small_toggle   = cardToggle.find('.contenido-right').find('small');
-    	modal.find('.mdl-card__title').find('img').attr({
-	        "alt"   : img_toggle.attr('alt'),
-	        "src"   : img_toggle.attr('src')
-	    });
-	    modal.find('.mdl-card__supporting-text').find('p').text(content_toggle[0].innerText);
-	    modal.find('.mdl-card__supporting-text').find('small').text(small_toggle[0].innerText);
-		modal.modal('toggle');
+    	if (window.matchMedia("(max-width: 1200px)").matches) {
+	    	var img_toggle     = cardToggle.find('.contenido-left').find('img');
+	    	var content_toggle = cardToggle.find('.contenido-right').find('p');
+	    	var small_toggle   = cardToggle.find('.contenido-right').find('small');
+	    	modal.find('.mdl-card__title').find('img').attr({
+		        "alt"   : img_toggle.attr('alt'),
+		        "src"   : img_toggle.attr('src')
+		    });
+		    modal.find('.mdl-card__supporting-text').find('p').text(content_toggle[0].innerText);
+		    modal.find('.mdl-card__supporting-text').find('small').text(small_toggle[0].innerText);
+		    if(buttonToggle.hasClass('button-select')){
+		    	modal.modal('show');
+		    	buttonToggle.css("background-color","#F8B22C");
+		    }else{
+		    	modal.modal('hide');
+		    	buttonToggle.css("background-color","transparent");
+		    }
+			
+		}
 	});
 	buttonSelect.click(function() {
-	    var img     = cardSelect.find('.contenido-left').find('img');
-	    var content = cardSelect.find('.contenido-right').find('p');
-	    var small   = cardSelect.find('.contenido-right').find('small');
-	    modal.find('.mdl-card__title').find('img').attr({
-	        "alt"   : img.attr('alt'),
-	        "src"   : img.attr('src')
-	    });
-	    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
-	    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
-		modal.modal('toggle');
+		if (window.matchMedia("(max-width: 1200px)").matches) {
+			var img     = cardSelect.find('.contenido-left').find('img');
+		    var content = cardSelect.find('.contenido-right').find('p');
+		    var small   = cardSelect.find('.contenido-right').find('small');
+		    modal.find('.mdl-card__title').find('img').attr({
+		        "alt"   : img.attr('alt'),
+		        "src"   : img.attr('src')
+		    });
+		    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
+		    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
+			modal.modal('show');
+		}
 	});
 }
 
@@ -223,7 +234,6 @@ var select_tam 			   = 0;
 var select_empl 	       = 0;
 $( document ).ready(function() {
 	var array_button 		   = new Array();
-    //botón seleccione
     $(".select").click(function () {
 		select = 1;
 		$('.button-next').prop("disabled", false);
@@ -298,6 +308,7 @@ function operar(id,tipo) {
 	var cardSelec    = $('#'+id+'.select-one').parents('.content-card').find('.contenido');
 	var divIncrement = $('#'+id+'.select-one').parent();
 	var cardHidden   = $('.mdl-card-question.visi-hidden');
+	var modal        = $('#ModalQuestion');
 	if(tipo == 2) {
 		i++;
 		if(i == 2) {
@@ -307,18 +318,19 @@ function operar(id,tipo) {
 			cardHidden.fadeIn(400);
 			$("#facturacion").val('0');
 			$('.selectpicker').selectpicker('refresh');
-			var modal   = $('#ModalQuestion');
-		    var card    = buttonSelect.closest('.mdl-card-question');
-		    var img     = card.find('.contenido-left').find('img');
-		    var content = card.find('.contenido-right').find('p');
-		    var small   = card.find('.contenido-right').find('small');
-		    modal.find('.mdl-card__title').find('img').attr({
-		        "alt"   : img.attr('alt'),
-		        "src"   : img.attr('src')
-		    });
-		    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
-		    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
-			modal.modal('toggle');
+			if (window.matchMedia("(max-width: 1200px)").matches) {
+			    var card    = buttonSelect.closest('.mdl-card-question');
+			    var img     = card.find('.contenido-left').find('img');
+			    var content = card.find('.contenido-right').find('p');
+			    var small   = card.find('.contenido-right').find('small');
+			    modal.find('.mdl-card__title').find('img').attr({
+			        "alt"   : img.attr('alt'),
+			        "src"   : img.attr('src')
+			    });
+			    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
+			    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
+				modal.modal('show');
+			}
 		}else if(i == 3) {
 			$('#textOperar').text('50 - 100');
 		}else if(i == 4) {
@@ -376,20 +388,20 @@ function selectFacturacion(id){
 	$('.mdl-tablet').find('.mdl-select').addClass('select-increment');
 	var selectButton = $('#'+id).parents('.mdl-select .btn-group').find('button');
 	var Select       = $('#'+id).parents('.mdl-card-question').find('.contenido');
+	var modal        = $('#ModalQuestion');
 	Select.addClass('aparecer');
-
-	var modal   = $('#ModalQuestion');
-    var img     = Select.find('.contenido-left').find('img');
-    var content = Select.find('.contenido-right').find('p');
-    var small   = Select.find('.contenido-right').find('small');
-    modal.find('.mdl-card__title').find('img').attr({
-        "alt"   : img.attr('alt'),
-        "src"   : img.attr('src')
-    });
-    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
-    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
-	modal.modal('toggle');
-
+	if (window.matchMedia("(max-width: 1200px)").matches) {
+	    var img     = Select.find('.contenido-left').find('img');
+	    var content = Select.find('.contenido-right').find('p');
+	    var small   = Select.find('.contenido-right').find('small');
+	    modal.find('.mdl-card__title').find('img').attr({
+	        "alt"   : img.attr('alt'),
+	        "src"   : img.attr('src')
+	    });
+	    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
+	    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
+		modal.modal('show');
+	}
 	selectButton.click(function(){
 		Select.removeClass('aparecer');
 	})
@@ -824,4 +836,8 @@ function verificarDatos(e){
 		e.preventDefault();
 		ingresar();
     }
+}
+
+function closeModal(){
+	$('#ModalQuestion').modal('hide');
 }

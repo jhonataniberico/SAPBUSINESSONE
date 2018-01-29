@@ -755,12 +755,7 @@ span.number{
 	background-color: #aaa;
 	opacity: 1;
 } 
-
 /*ModalQuestion*/
-#ModalQuestion.fade.in,
-.modal-backdrop.fade.in{
-	display: none !important;
-}
 #ModalQuestion .modal-content{
 	background-color: #000000;
 }
@@ -1140,10 +1135,6 @@ span.number{
 	}
 	.question-respuestas{
 		max-width: 550px;
-	}
-	#ModalQuestion.fade.in,
-	.modal-backdrop.fade.in{
-		display: block !important;
 	}
 }
 @media (max-width: 768px){
