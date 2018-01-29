@@ -297,7 +297,7 @@ function cambiarIdioma() {
 		location.href = 'Es';
 	}else if(idioma == 'Inglés') {
 		location.href = 'En';
-	}else if(idioma == 'Portugés') {
+	}else if(idioma == 'Portugués') {
 		location.href = 'Pt';
 	}
 }
