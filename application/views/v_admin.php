@@ -29,6 +29,7 @@
 <body>
     <section id="principal">
         <div id="content">
+            <a onclick="cerrarCesion()">Cerrar cesión</a>
             <div class="table-responsive">
                 <table id="example" class="display nowrap" cellspacing="0" width="100%">
                   <thead>
@@ -70,6 +71,7 @@
     <script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
     <script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.4.2/js/buttons.html5.min.js"></script>
     <script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.4.2/js/buttons.print.min.js"></script>
+    <script src="<?php echo RUTA_JS?>index.js?v=<?php echo time();?>"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {

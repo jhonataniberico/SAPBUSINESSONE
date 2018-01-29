@@ -13,41 +13,13 @@ class Admin extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 
-	public function index()
-	{
+	public function index() {
 		if($this->session->userdata('usuario') == null) {
 			header("location: Login");
 		}
 		$data['html'] = $this->getTable();
 		$this->load->view('v_admin', $data);
 	}
-
-	/*function buscar() {
-		$data['error'] = EXIT_ERROR;
-        $data['msj']   = null;
-        try {
-			$buscador = _post('buscador');
-			if($buscador == null || $buscador == '') {
-				$buscador = null;
-			}
-			$html = '';
-			$datos = $this->M_reportes->getDatosBuscador($buscador);
-			foreach ($datos as $key) {
-			$html .= '<tr>
-                        <td>'.$key->Nombres.' '.$key->Apellidos.'</td>
-                        <td>'.$key->Pais.'</td>
-                        <td>'.$key->Email.'</td>
-                        <td>'.$key->event_name.'</td>
-                        <td>'.$key->fecha.'</td>
-                    </tr>';
-			}
-			$data['html'] = $html;
-			$data['error'] = EXIT_SUCCESS;
-        }catch(Exception $e) {
-           $data['msj'] = $e->getMessage();
-        }
-        echo json_encode($data);
-	}*/
 
 	function getTable() {
 		$datos = $this->M_reportes->getDatosTabla();
@@ -70,59 +42,16 @@ class Admin extends CI_Controller {
 		return $html;
 	}
 
-	/*function cambiarFecha() {
-		$data['error'] = EXIT_ERROR;
+    function cerrarCesion() {
+        $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
-			$fecha = _post('fecha');
-			$evento = _post('evento');
-			if($fecha == null || $fecha == '') {
-				$fecha = null;
-			}
-			$html = '';
-			$datos = $this->M_reportes->getDatosBuscadorFecha($fecha, $evento);
-			foreach ($datos as $key) {
-			$html .= '<tr>
-                        <td>'.$key->Nombres.' '.$key->Apellidos.'</td>
-                        <td>'.$key->Pais.'</td>
-                        <td>'.$key->Email.'</td>
-                        <td>'.$key->event_name.'</td>
-                        <td>'.$key->fecha.'</td>
-                    </tr>';
-			}
-			$data['html'] = $html;
-			$data['error'] = EXIT_SUCCESS;
+            $this->session->unset_userdata('Id_user');
+            $this->session->unset_userdata('usuario');
+            $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e) {
            $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
-	}
-
-	function cambiarEvento() {
-		$data['error'] = EXIT_ERROR;
-        $data['msj']   = null;
-        try {
-			$evento = _post('evento');
-			$fecha  = _post('fecha');
-			if($evento == null || $evento == '') {
-				$evento = null;
-			}
-			$html = '';
-			$datos = $this->M_reportes->getDatosBuscadorEvento($evento, $fecha);
-			foreach ($datos as $key) {
-			$html .= '<tr>
-                        <td>'.$key->Nombres.' '.$key->Apellidos.'</td>
-                        <td>'.$key->Pais.'</td>
-                        <td>'.$key->Email.'</td>
-                        <td>'.$key->event_name.'</td>
-                        <td>'.$key->fecha.'</td>
-                    </tr>';
-			}
-			$data['html'] = $html;
-			$data['error'] = EXIT_SUCCESS;
-        }catch(Exception $e) {
-           $data['msj'] = $e->getMessage();
-        }
-        echo json_encode($data);
-	}*/
+    }
 }
