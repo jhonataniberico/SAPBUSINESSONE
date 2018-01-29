@@ -27,15 +27,15 @@ class Admin extends CI_Controller {
 		$cont = 1;
 		foreach ($datos as $key) {
 			$html .= '<tr class="tr-cursor-pointer tr-ver-info-solicitud" data-idSolicitud="'.$cont.'">
-                        <td>'.$key->nombre_completo.'</td>
-                        <td>'.$key->Empresa.'</td>
-                        <td>'.$key->Email.'</td>
-                        <td>'.$key->Telefono.'</td>
-                        <td>'.$key->Industria.'</td>
-                        <td>'.$key->Tamanio.'</td>
-                        <td>'.$key->Factura_anual.'</td>
-                        <td>'.$key->Prioridad.'</td>
-                        <td>'.$key->Infraestructura.'</td>
+                        <td class="text-center">'.$key->nombre_completo.'</td>
+                        <td class="text-center">'.$key->Empresa.'</td>
+                        <td class="text-center">'.$key->Email.'</td>
+                        <td class="text-center">'.$key->Telefono.'</td>
+                        <td class="text-center">'.$key->Industria.'</td>
+                        <td class="text-center">'.$key->Tamanio.'</td>
+                        <td class="text-center">'.$key->Factura_anual.'</td>
+                        <td class="text-center">'.$key->Prioridad.'</td>
+                        <td class="text-center">'.$key->Infraestructura.'</td>
                     </tr>';
             $cont++;
 		}
