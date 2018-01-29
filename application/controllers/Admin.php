@@ -41,17 +41,4 @@ class Admin extends CI_Controller {
 		}
 		return $html;
 	}
-
-    function cerrarCesion() {
-        $data['error'] = EXIT_ERROR;
-        $data['msj']   = null;
-        try {
-            $this->session->unset_userdata('Id_user');
-            $this->session->unset_userdata('usuario');
-            $data['error'] = EXIT_SUCCESS;
-        }catch(Exception $e) {
-           $data['msj'] = $e->getMessage();
-        }
-        echo json_encode($data);
-    }
 }
