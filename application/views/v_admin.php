@@ -27,7 +27,7 @@
         <div class="fondo-imagen"></div>
         <div class="container">
             <div class="row">
-            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="tabla-solicitudes">
                 <thead>
                     <tr>
                         <th>Nombres</th>
@@ -45,6 +45,8 @@
                    <?php echo $html ?>
                 </tbody>
             </table>
+        </div>
+        <div class="col-xs-12 text-right buttons-export" style="margin-top: 20px; margin-bottom: 15px">
         </div>
     </section>
 	<script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
