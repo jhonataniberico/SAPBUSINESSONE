@@ -837,7 +837,16 @@ function verificarDatos(e){
 		ingresar();
     }
 }
-
 function closeModal(){
 	$('#ModalQuestion').modal('hide');
+}
+$(document).ready(function() {
+	resizeContent();
+    $(window).resize(function() {
+        resizeContent();
+    });
+});
+function resizeContent() {
+   var top = $( window ).height();
+   $("#home").css('height', top);
 }
