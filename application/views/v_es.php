@@ -430,7 +430,7 @@
 					<div class="mdl-container text-center">
 						<div class="question">
 		            		<span class="number">04/05</span>
-		            		<h2>¿Que tipo de infraestructura est&aacute; buscando&#63;</h2>
+		            		<h2 class="unique">¿Que tipo de infraestructura est&aacute; buscando&#63;</h2>
 		            	</div>
 		            	<div class="mdl-card-question">
 		            		<div class="flip-card">
