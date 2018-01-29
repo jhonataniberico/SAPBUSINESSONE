@@ -1318,7 +1318,7 @@ span.number{
 	    padding-left: 5px;
 	}
 	.header-right{
-		max-width: 105px;
+		max-width: 100px;
 		height: 52px;
 	}
 	.header-right .background1, 
@@ -1327,7 +1327,7 @@ span.number{
 		max-width: 3px;
 	}
 	.mdl-idioma .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
-		width: 95px;
+		width: 90px;
     	margin-top: 12px;
 	}
 	.mdl-idioma .bootstrap-select.btn-group .dropdown-toggle .filter-option,
@@ -1456,6 +1456,9 @@ span.number{
 	}
 	.button-next-prev .button-arrow.button-next{
 		right: calc(0% + 45px);
+	}
+	.question h2{
+		max-width: 145px;
 	}
 }
 @media (max-width: 1140px) and (max-height: 900px){
