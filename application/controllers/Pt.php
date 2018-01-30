@@ -166,6 +166,7 @@ class Pt extends CI_Controller {
             $this->session->unset_userdata('Factura_anual');
             $this->session->unset_userdata('Tamanio');
             $this->session->unset_userdata('Prioridad');
+            $this->session->unset_userdata('idioma');
 
           $this->sendGmailSap($email);
           $data['msj']  = $datoInsert['msj'];

@@ -166,6 +166,7 @@ class En extends CI_Controller {
             $this->session->unset_userdata('Factura_anual');
             $this->session->unset_userdata('Tamanio');
             $this->session->unset_userdata('Prioridad');
+            $this->session->unset_userdata('idioma');
 
           $this->sendGmailSap($email);
           $data['msj']  = $datoInsert['msj'];
@@ -275,7 +276,7 @@ class En extends CI_Controller {
       echo json_encode($data);
   }
 
-  
+
   function cambiarIdioma() {
     $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
