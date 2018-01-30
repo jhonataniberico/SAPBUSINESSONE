@@ -60,7 +60,7 @@ function solicitarEstimacion() {
 				  telefono 		  : telefono,
 				  relacion 		  : relacion,
 				  contacto 		  : contacto},
-		url   : 'es/solicitarEstimacion',
+		url   : 'pt/solicitarEstimacion',
 		type  : 'POST'
 	}).done(function(data){
 		try{
@@ -213,7 +213,7 @@ function saveDatos(pantalla) {
 				  datos_prio   : datos_array.toString(),
 				  operar       : operar,
 				  facturacion  : facturacion},
-		url   : 'es/Savedatos',
+		url   : 'pt/Savedatos',
 		type  : 'POST'
 	}).done(function(data){
 		try{
@@ -455,7 +455,7 @@ function ConfirmarRespuestas(){
 	$('.mdl-formulario').removeClass('disabled');
 	$.ajax({
 		data  : {confirmar : confirmar},
-		url   : 'es/ConfirmarRespuestas',
+		url   : 'pt/ConfirmarRespuestas',
 		type  : 'POST'
 	}).done(function(data){
 		try{
@@ -719,7 +719,7 @@ function EditQuestion(id, pant){
 	windowQestion.addClass('animated fadeInLeft');
 	$('.button-arrow.button-next').css("display","block");
 	$.ajax({
-		url   : 'es/EditQuestion',
+		url   : 'pt/EditQuestion',
 		type  : 'POST'
 	}).done(function(data){
 		try{
@@ -777,7 +777,7 @@ function mostrarDatosFlecha(pant) {
 	windowQestion.addClass('animated fadeInLeft');
 	$('.button-arrow.button-next').css("display","block");*/
 	$.ajax({
-		url   : 'es/EditQuestion',
+		url   : 'pt/EditQuestion',
 		type  : 'POST'
 	}).done(function(data){
 		try{

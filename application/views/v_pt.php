@@ -58,7 +58,7 @@
 	    			<div class="header-right">
 	    				<div class="mdl-idioma">
 							<select class="selectpicker" id="Idioma" name="Idioma" onchange="cambiarIdioma()">
-								<option value="Portugués">portugues</option>
+								<option value="Portugués">Portugues</option>
 								<option value="Español">Espanhol</option>
 								<option value="Inglés">Inglês</option>
 							</select>
@@ -71,7 +71,7 @@
 	    		<div class="logo-bottom">
         			<img src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_home.png">
 		    		<div class="bottom-right">
-						<p>You may select more than one option</p>
+						<p>Você pode selecionar mais de uma opção</p>
 		    		</div>
         		</div>
 				<div id="window1-page" class="window-center opacity-done">
@@ -230,14 +230,14 @@
 			            			<div class="row">
 			            				<div class="col-xs-12">
 			            					<div class="mdl-select">
-			            						<select class="selectpicker" id="facturacion" name="facturacion" title="Select" onchange="selectFacturacion(this.id)">
+			            						<select class="selectpicker" id="facturacion" name="facturacion" title="Selecione" onchange="selectFacturacion(this.id)">
 													<option value="< 1 Milhões de dólares">< 1 Milhões de dólares</option>
 													<option value="1-3 Milhões de dólares">1-3 Milhões de dólares</option>
 													<option value="3-5 Milhões de dólares">3-5 Milhões de dólares</option>
 													<option value="5-10 Milhões de dólares">5-10 Milhões de dólares</option>
 													<option value="10-20 Milhões de dólares">10-20 Milhões de dólares</option>
 													<option value="20-40 Milhões de dólares">20-40 Milhões de dólares</option>
-													<option value="I have no information">I have no information</option>
+													<option value="I have no information">Sem informação</option>
 												</select>
 			            					</div>
 				            			</div>
@@ -663,7 +663,7 @@
 									</label>
 		        				</div>
 		        				<div class="col-xs-12 text-right m-t-25">
-									<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="solicitarEstimacion();">Sem informação</button>
+									<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="solicitarEstimacion();">Enviar informações</button>
 		        				</div>
 		            		</form>
 	            		</div>
@@ -713,7 +713,7 @@
 	<script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
-    <script src="<?php echo RUTA_JS?>index_en.js?v=<?php echo time();?>"></script>
+    <script src="<?php echo RUTA_JS?>index_pt.js?v=<?php echo time();?>"></script>
     <script type="text/javascript">
     	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
         	$('select').selectpicker('mobile');
