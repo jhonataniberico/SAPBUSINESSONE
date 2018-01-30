@@ -284,6 +284,7 @@ function mostrarDatos() {
            	$('#prioridad').append(data.Prioridad);
            	$('#infraestructura').text(data.Infraestructura);
         }else {
+        	return;
         }
       } catch (err){
         msj('error',err.message);
@@ -300,6 +301,21 @@ function cambiarIdioma() {
 	}else if(idioma == 'Portugués') {
 		location.href = 'Pt';
 	}
+	$.ajax({
+		data  : {idioma   : idioma},
+		url   : 'es/cambiarIdioma',
+		type  : 'POST'
+	}).done(function(data){
+		try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+        }else {
+        	return;
+        }
+      } catch (err){
+        msj('error',err.message);
+      }
+	});
 }
 
 var i = 1;
