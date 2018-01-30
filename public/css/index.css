@@ -1,4 +1,3 @@
-@CHARSET "ISO-8859-1"; 
 body{
 	margin: 0;
 	padding: 0;
@@ -48,6 +47,47 @@ h2,p{
 	cursor: no-drop;
 	background-color: #4983B6; 
 	color: #FFFFFF;
+}
+/*ADMIN*/
+.mdl-card-table{
+	width: 100%;
+	color: #757575;
+}
+.mdl-card-table .dataTables_filter{
+    position: fixed;
+    right: 15px;
+    margin-top: 15px;
+}
+.mdl-card-table .dt-buttons{
+	padding: 15px;
+}
+table.dataTable.no-footer{
+	margin-bottom: 30px;
+}
+.dataTables_wrapper .dataTables_paginate{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+}
+.dataTables_info{
+	margin: 15px;
+    padding: 0;
+}
+.dataTables_wrapper .dataTables_filter input{
+	border-radius: 5px;
+    border: 2px solid #a2a2a2;
+    height: 30px;
+}
+.logo-table{
+    max-width: 250px;
+}
+.button-logout{
+	float: right;
+	margin: 20px 0;
+	background-color: #4983B6 !important;
+	color: #FFFFFF !important;
+    text-decoration: none !important;
+    text-transform: initial;
 }
 /*GENERAL*/
 .window-center{
