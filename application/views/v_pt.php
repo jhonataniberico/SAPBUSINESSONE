@@ -593,73 +593,73 @@
 		            			</div>
 		        				<div class="col-sm-6">
 		        					<div class="mdl-input">
-									    <input type="text" class="form-control" id="nombre_completo" maxlength="50" onkeypress="return soloLetras(event);" onchange="validarCampos()" placeholder="Full name">
+									    <input type="text" class="form-control" id="nombre_completo" maxlength="50" onkeypress="return soloLetras(event);" onchange="validarCampos()" placeholder="Nome completo">
 									</div>
 		        				</div>
 		        				<div class="col-sm-6">
 		        					<div class="mdl-input">
-								    	<input type="text" class="form-control NEGRO_FONDO" id="cargo" maxlength="50" onkeypress="return soloLetras(event);"  onchange="validarCampos()" placeholder="Position">
+								    	<input type="text" class="form-control NEGRO_FONDO" id="cargo" maxlength="50" onkeypress="return soloLetras(event);"  onchange="validarCampos()" placeholder="Cargo">
 								  	</div>
 		        				</div>
 		        				<div class="col-sm-6">
 		        					<div class="mdl-input">
-										<input type="text" class="form-control" id="empresa" maxlength="50" onkeypress="return soloLetras(event);" onchange="validarCampos()" placeholder="Company">
+										<input type="text" class="form-control" id="empresa" maxlength="50" onkeypress="return soloLetras(event);" onchange="validarCampos()" placeholder="Empresa">
 									</div>
 		        				</div>
 		        				<div class="col-sm-6">
 		        					<div class="mdl-input">
-										<input type="text" class="form-control" id="telefono" onchange="validarCampos()" placeholder="Phone">
+										<input type="text" class="form-control" id="telefono" onchange="validarCampos()" placeholder="Telefone">
 									</div>
 		        				</div>
 		        				<div class="col-sm-6">
 		        					<div class="mdl-input">
-										<input type="email" class="form-control" id="email" maxlength="50" aria-describedby="emailHelp" placeholder="Email">
+										<input type="email" class="form-control" id="email" maxlength="50" aria-describedby="emailHelp" placeholder="E-mail">
 									</div>
 		        				</div>
 		        				<div class="col-sm-6">
 		        					<div class="mdl-select mdl-standar">
 										<select class="selectpicker" id="relacion" name="relacion" title="Relación con SAP">
-											<option value="Customer">Customer</option>
-											<option value="Potential customer">Potential Customer</option>
-											<option value="Consultant">Consultant</option>
-											<option value="SAP employee">SAP employee</option>
-											<option value="Student">Student</option>
-											<option value="Partner">Partner</option>
-											<option value="Potential Partner">potential Partner</option>
-											<option value="Press/Analyst">Press/Analyst</option>
+											<option value="Cliente">Cliente</option>
+											<option value="Cliente em potencial">Cliente em potencial</option>
+											<option value="Consultor">Consultor</option>
+											<option value="Funcionário da SAP">Funcionário da SAP</option>
+											<option value="Estudante">Estudante</option>
+											<option value="Parceiro">Parceiro</option>
+											<option value="Parceiro em potencial">Parceiro em potencial</option>
+											<option value="Imprensa/Analista">Imprensa/Analista</option>
 										</select>
 									</div>
 		        				</div>
 		        				<div class="col-sm-6">
 		        					<div class="mdl-input">
-										<input type="text" class="form-control" id="pais" maxlength="100" onkeypress="return soloLetras(event);"  onchange="validarCampos()" placeholder="Country">
+										<input type="text" class="form-control" id="pais" maxlength="100" onkeypress="return soloLetras(event);"  onchange="validarCampos()" placeholder="País">
 									</div>
 		        				</div>
 		        				<div class="col-sm-6">
-		        					<p class="text-contacto">I’d like to be contacted by a sales representative:</p>
+		        					<p class="text-contacto">Quero ser contatado por um representante de vendas:</p>
 		        					<div class="mdl-input-label">
 		        						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="c-email">
 											<input type="radio" id="c-email" class="mdl-radio__button" name="options" value="1">
-											<span class="mdl-radio__label">By email</span>
+											<span class="mdl-radio__label">Por e-mail</span>
 										</label>
 		        					</div>
 		        					<div class="mdl-input-label">
 		        						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="c-telefono">
 											<input type="radio" id="c-telefono" class="mdl-radio__button" name="options" value="2">
-											<span class="mdl-radio__label">By phone</span>
+											<span class="mdl-radio__label">Por telefone</span>
 										</label>
 		        					</div>
 		        					<div class="mdl-input-label">
 		        						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="c-ambos">
 											<input type="radio" id="c-ambos" class="mdl-radio__button" name="options" value="3">
-											<span class="mdl-radio__label">Both</span>
+											<span class="mdl-radio__label">Ambos</span>
 										</label>
 		        					</div>
 		        				</div>
 		        				<div class="col-xs-12 mdl-label m-t-10">
 		    						<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
 										<input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
-										<span class="mdl-checkbox__label f-s-14" style="">I have read and agree to the <a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" style="">SAP terms and conditions</a></span>
+										<span class="mdl-checkbox__label f-s-14" style="">Li e aceito os <a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" style="">termos e condições da SAP</a></span>
 									</label>
 		        				</div>
 		        				<div class="col-xs-12 text-right m-t-25">
@@ -669,8 +669,8 @@
 	            		</div>
 	            	</div>
             		<div class="mdl-agradecimiento">
-            			<h2>Thanks for your interest</h2>
-            			<p>A SAP representative will contact you to help you take the first step.</p>
+            			<h2>Obrigado por seu interesse</h2>
+            			<p>Um representante da SAP entrará em contato com você para ajudá-lo a dar o primeiro passo.</p>
             		</div>
 				</div>
 				<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect button-arrow button-prev" onclick="buttonQuestion(1)">
