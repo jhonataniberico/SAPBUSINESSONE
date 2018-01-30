@@ -33,7 +33,7 @@
 		    	</div>
     			<div class="mdl-container mdl-all-window">
 	    			<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	            	<h2 class="title-home">Diferentes cenários. Uma solução</h2>
+	            	<h2 class="title-home">Diferentes cen&aacute;rios. Uma solu&ccedil;&atilde;o</h2>
 	    		</div>
 	    		<div class="background-body">
 					<div class="background-body3"></div>
@@ -53,14 +53,14 @@
 				<div class="header">
 	    			<div class="header-left">
 	    				<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	    				<h2>¿Está pronto para o SAP Business One&#63;</h2>
+	    				<h2>¿Est&aacute; pronto para o SAP Business One&#63;</h2>
 	    			</div>
 	    			<div class="header-right">
 	    				<div class="mdl-idioma">
 							<select class="selectpicker" id="Idioma" name="Idioma" onchange="cambiarIdioma()">
 								<option value="Portugués">Portugues</option>
 								<option value="Español">Espanhol</option>
-								<option value="Inglés">Inglês</option>
+								<option value="Inglés">Ingl&ecirc;s</option>
 							</select>
 	    				</div>
 						<div class="background3"></div>
@@ -71,20 +71,20 @@
 	    		<div class="logo-bottom">
         			<img src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_home.png">
 		    		<div class="bottom-right">
-						<p>Você pode selecionar mais de uma opção</p>
+						<p>Voc&ecirc; pode selecionar mais de uma op&ccedil;&atilde;o</p>
 		    		</div>
         		</div>
 				<div id="window1-page" class="window-center opacity-done">
 					<div class="mdl-container text-center">
 						<div class="question">
 			        		<span class="number">01/05</span>
-			        		<h2>¿Em que setor você atua&#63;</h2>
+			        		<h2>¿Em que setor voc&ecirc; atua&#63;</h2>
 			        	</div>
 			        	<div class="mdl-card-question">
 			        		<div class="flip-card">
 			        			<div class="card-front card-front-none">
 			        				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
-			        				<p>Serviços profissionais</p>
+			        				<p>Servi&ccedil;os profissionais</p>
 			        			</div>
 			        		</div>
 			        		<div class="content-card">
@@ -94,8 +94,8 @@
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
 			        				</div>
 			        				<div class="contenido-right">
-			    						<h2>Você sabia que...</h2>
-			    						<p>... os prestadores de serviços de sucesso aproveitam a tecnologia em novas formas para aperfeiçoar as práticas de negócio, aumentar a agilidade e atender melhor aos clientes.</p>
+			    						<h2>Voc&ecirc; sabia que...</h2>
+			    						<p>... os prestadores de servi&ccedil;os de sucesso aproveitam a tecnologia em novas formas para aperfei&ccedil;oar as pr&aacute;ticas de neg&oacute;cio, aumentar a agilidade e atender melhor aos clientes.</p>
 			    						<small>(IDC, Setembro 2016)</small>
 			        				</div>
 			        			</div>
@@ -115,8 +115,8 @@
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
 			        				</div>
 			        				<div class="contenido-right">
-			    						<h2>Você sabia que...</h2>
-			    						<p>... para cada inovador que cria um novo mercado ou tipo de produto, há no mínimo uma centena de mercados que paralisam ou sofrem redução.</p>
+			    						<h2>Voc&ecirc; sabia que...</h2>
+			    						<p>... para cada inovador que cria um novo mercado ou tipo de produto, h&aacute; no m&iacute;nimo uma centena de mercados que paralisam ou sofrem redu&ccedil;&atilde;o.</p>
 			    						<small>(IDC, Setembro 2016)</small>
 			        				</div>
 			        			</div>
@@ -126,7 +126,7 @@
 			        		<div class="flip-card">
 			        			<div class="card-front card-front-none">
 			        				<img src="<?php echo RUTA_IMG?>cards/card-distribucion.png">
-			        				<p>Distribuição</p>
+			        				<p>Distribui&ccedil;&atilde;o</p>
 			        			</div>
 			        		</div>
 			        		<div class="content-card">
@@ -136,8 +136,8 @@
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
 			        				</div>
 			        				<div class="contenido-right">
-			    						<h2>Você sabia que...</h2>
-			    						<p>... pode melhorar a  experiência geral do cliente com a realização de pedidos multicanal e seu processamento rápido.</p>
+			    						<h2>Voc&ecirc; sabia que...</h2>
+			    						<p>... pode melhorar a  experi&ecirc;ncia geral do cliente com a realizaç&atilde;o de pedidos multicanal e seu processamento r&aacute;pido.</p>
 			    						<small>(SAP Performance Benchmarking)</small>
 			        				</div>
 			        			</div>
@@ -157,8 +157,8 @@
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
 			        				</div>
 			        				<div class="contenido-right">
-			    						<h2>Você sabia que...</h2>
-			    						<p>... as empresas de sucesso no setor reinventam sua forma de operar, aproveitando a tecnologia para aperfeiçoar as práticas de negócio, aumentar a agilidade e atender melhor  aos clientes e distribuidores.</p>
+			    						<h2>Voc&ecirc; sabia que...</h2>
+			    						<p>... as empresas de sucesso no setor reinventam sua forma de operar, aproveitando a tecnologia para aperfei&ccedil;oar as pr&aacute;ticas de neg&oacute;cio, aumentar a agilidade e atender melhor  aos clientes e distribuidores.</p>
 			    						<small>(IDC, Setembro 2016)</small>
 			        				</div>
 			        			</div>
@@ -178,8 +178,8 @@
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
 			        				</div>
 			        				<div class="contenido-right">
-			    						<h2>Você sabia que...</h2>
-			    						<p>... &eacute; poss&iacute;vel  reduzir o custo de fabricação em  19% com controle em tempo real do custo de produção e suas variantes.</p>
+			    						<h2>Voc&ecirc; sabia que...</h2>
+			    						<p>... &eacute; poss&iacute;vel  reduzir o custo de fabrica&ccedil;&atilde;o em  19% com controle em tempo real do custo de produ&ccedil;&atilde;o e suas variantes.</p>
 			    						<small>(IDC, Setembro 2016)</small>
 			        				</div>
 			        			</div>
@@ -212,8 +212,8 @@
 			            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 			            				</div>
 			            				<div class="contenido-right">
-		            						<h2>Você sabia que...</h2>
-		            						<p>... a interação com os clientes e os consumidores é o ponto de partida para o crescimento da receita das pequenas e médias empresas de produtos de consumo.</p>
+		            						<h2>Voc&ecirc; sabia que...</h2>
+		            						<p>... a intera&ccedil;&atilde;o com os clientes e os consumidores &eacute; o ponto de partida para o crescimento da receita das pequenas e m&eacute;dias empresas de produtos de consumo.</p>
 		            						<small>(IDC, Setembro  2016)</small>
 			            				</div>
 			            			</div>
@@ -231,13 +231,13 @@
 			            				<div class="col-xs-12">
 			            					<div class="mdl-select">
 			            						<select class="selectpicker" id="facturacion" name="facturacion" title="Selecione" onchange="selectFacturacion(this.id)">
-													<option value="< 1 Milhões de dólares">< 1 Milhões de dólares</option>
-													<option value="1-3 Milhões de dólares">1-3 Milhões de dólares</option>
-													<option value="3-5 Milhões de dólares">3-5 Milhões de dólares</option>
-													<option value="5-10 Milhões de dólares">5-10 Milhões de dólares</option>
-													<option value="10-20 Milhões de dólares">10-20 Milhões de dólares</option>
-													<option value="20-40 Milhões de dólares">20-40 Milhões de dólares</option>
-													<option value="I have no information">Sem informação</option>
+													<option value="< 1 Milhões de dólares">< 1 Milh&otilde;es de d&oacute;lares</option>
+													<option value="1-3 Milhões de dólares">1-3 Milh&otilde;es de d&oacute;lares</option>
+													<option value="3-5 Milhões de dólares">3-5 Milh&otilde;es de d&oacute;lares</option>
+													<option value="5-10 Milhões de dólares">5-10 Milh&otilde;es de d&oacute;lares</option>
+													<option value="10-20 Milhões de dólares">10-20 Milh&otilde;es de d&oacute;lares</option>
+													<option value="20-40 Milhões de dólares">20-40 Milh&otilde;es de d&oacute;lares</option>
+													<option value="I have no information">Sem informa&ccedil;&atilde;o</option>
 												</select>
 			            					</div>
 				            			</div>
@@ -247,8 +247,8 @@
 			            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 			            				</div>
 			            				<div class="contenido-right">
-		            						<h2>Você sabia que...</h2>
-		            						<p>... o aumento das vendas por e-mail, agora é pouco mais de 10% do total de vendas.</p>
+		            						<h2>Voc&ecirc; sabia que...</h2>
+		            						<p>... o aumento das vendas por e-mail, agora &eacute; pouco mais de 10% do total de vendas.</p>
 		            						<small>(IDC, Setembro  2016)</small>
 			            				</div>
 			            			</div>
@@ -261,7 +261,7 @@
 					<div class="mdl-container text-center">
 						<div class="question">
 		            		<span class="number">03/05</span>
-		            		<h2>¿Qual é a prioridade da sua empresa&#63;</h2>
+		            		<h2>¿Qual &eacute; a prioridade da sua empresa&#63;</h2>
 		            	</div>
 		            	<div class="mdl-card-question mdl-card-3">
 		            		<div class="flip-card">
@@ -271,7 +271,7 @@
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Aproveitar a nuvem para se concentrar em crescer, e não em implementar e gerenciar sua  TI.</label>
+		            				<label>Aproveitar a nuvem para se concentrar em crescer, e n&atilde;o em implementar e gerenciar sua  TI.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -282,8 +282,8 @@
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 		            				</div>
 		            				<div class="contenido-right">
-	            						<h2>Você sabia que...</h2>
-	            						<p>... mais de 90% das empresas já estão usando tecnologia de nuvem em ambiente público, privado ou híbrido.</p>
+	            						<h2>Voc&ecirc; sabia que...</h2>
+	            						<p>... mais de 90% das empresas j&aacute; est&atilde;o usando tecnologia de nuvem em ambiente p&uacute;blico, privado ou h&iacute;brido.</p>
 	            						<small>(IDC, Setembro  2016)</small>
 		            				</div>
 		            			</div>
@@ -297,7 +297,7 @@
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Oferecer aos funcionários acesso a software através de um aplicativo móvel intuitivo.</label>
+		            				<label>Oferecer aos funcion&aacute;rios acesso a software atrav&eacute;s de um aplicativo m&oacute;vel intuitivo.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -308,8 +308,8 @@
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 		            				</div>
 		            				<div class="contenido-right">
-	            						<h2>Você sabia que...</h2>
-	            						<p>... pode acessar análises integradas para tomar decisões em tempo real.</p>
+	            						<h2>Voc&ecirc; sabia que...</h2>
+	            						<p>... pode acessar an&aacute;lises integradas para tomar decis&otilde;es em tempo real.</p>
 	            						<small>(IDC, Setembro 2016)</small>
 		            				</div>
 		            			</div>
@@ -319,11 +319,11 @@
 		            		<div class="flip-card">
 		            			<div class="card-front">
 		            				<img class="m-b-0" src="<?php echo RUTA_IMG?>cards/card-sap.png">
-		            				<p>Análise em tempo real com o SAP HANA</p>
+		            				<p>An&aacute;lise em tempo real com o SAP HANA</p>
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Com o poder do SAP HANA é possível reduzir seu tempo de análise em 70%.</label>
+		            				<label>Com o poder do SAP HANA &eacute; poss&iacute;vel reduzir seu tempo de an&aacute;lise em 70%.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -334,8 +334,8 @@
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 		            				</div>
 		            				<div class="contenido-right">
-	            						<h2>Você sabia que...</h2>
-	            						<p>... o Business One aproveita uma tecnologia In-Memory Computing para gerar informações e  análise.</p>
+	            						<h2>Voc&ecirc; sabia que...</h2>
+	            						<p>... o Business One aproveita uma tecnologia In-Memory Computing para gerar informa&ccedil;&otilde;es e  an&aacute;lise.</p>
 	            						<small>(IDC, Setembro 2016)</small>
 		            				</div>
 		            			</div>
@@ -345,11 +345,11 @@
 		            		<div class="flip-card">
 		            			<div class="card-front">
 		            				<img class="m-b-0" src="<?php echo RUTA_IMG?>cards/card-analytics.png">
-		            				<p>Análises preditivas com o Analytics</p>
+		            				<p>An&aacute;lises preditivas com o Analytics</p>
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Antecipar resultados com análise preditiva e dar a direção certa para sua empresa.</label>
+		            				<label>Antecipar resultados com an&aacute;lise preditiva e dar a dire&ccedil;&atilde;o certa para sua empresa.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -360,8 +360,8 @@
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 		            				</div>
 		            				<div class="contenido-right">
-	            						<h2>Você sabia que...</h2>
-	            						<p>... obterá a capacidade de explorar, aumentar e analisar de forma instantânea todos os dados praticamente em tempo real.</p>
+	            						<h2>Voc&ecirc; sabia que...</h2>
+	            						<p>... obter&aacute; a capacidade de explorar, aumentar e analisar de forma instantânea todos os dados praticamente em tempo real.</p>
 	            						<small>(IDC, Setembro 2016)</small>
 		            				</div>
 		            			</div>
@@ -386,8 +386,8 @@
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 		            				</div>
 		            				<div class="contenido-right">
-	            						<h2>Você sabia que...</h2>
-	            						<p>... 35% dos varejistas pequenos e médios investiram em tecnologia para aumentar a receita.</p>
+	            						<h2>Voc&ecirc; sabia que...</h2>
+	            						<p>... 35% dos varejistas pequenos e m&eacute;dios investiram em tecnologia para aumentar a receita.</p>
 	            						<small>(IDC, Setembro 2016)</small>
 		            				</div>
 		            			</div>
@@ -397,11 +397,11 @@
 		            		<div class="flip-card">
 		            			<div class="card-front">
 		            				<img src="<?php echo RUTA_IMG?>cards/card-subsidaries.png">
-		            				<p>Agências ou subsidiárias</p>
+		            				<p>Ag&ecirc;ncias ou subsidi&aacute;rias</p>
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Criar informações rápidas e precisas sobre envios de entrada e saída, inventários e localização dos produtos.</label>
+		            				<label>Criar informa&ccedil;&otilde;es r&aacute;pidas e precisas sobre envios de entrada e sa&iacute;da, invent&aacute;rios e localizaç&atilde;o dos produtos.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -412,8 +412,8 @@
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 		            				</div>
 		            				<div class="contenido-right">
-	            						<h2>Você sabia que...</h2>
-	            						<p>... há uma plataforma empresarial flexível que lhe permitirá descobrir todo o potencial de seu ecossistema.</p>
+	            						<h2>Voc&ecirc; sabia que...</h2>
+	            						<p>... h&aacute; uma plataforma empresarial flex&iacute;vel que lhe permitir&aacute; descobrir todo o potencial de seu ecossistema.</p>
 	            						<small>(IDC, Setembro 2016)</small>
 		            				</div>
 		            			</div>
@@ -425,7 +425,7 @@
 					<div class="mdl-container text-center">
 						<div class="question">
 		            		<span class="number">04/05</span>
-		            		<h2 class="unique">¿Que tipo de infraestrutura você está procurando&#63;</h2>
+		            		<h2 class="unique">¿Que tipo de infraestrutura voc&ecirc; est&aacute; procurando&#63;</h2>
 		            	</div>
 		            	<div class="mdl-card-question">
 		            		<div class="flip-card">
@@ -435,7 +435,7 @@
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Implementar em sua atual infraestrutura ou adquirir uma das opções de hardware certificado.</label>
+		            				<label>Implementar em sua atual infraestrutura ou adquirir uma das op&ccedil;&atilde;es de hardware certificado.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -443,8 +443,8 @@
 		            			<button id="buttonLocal" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one select-infraestructura" onclick="guardarDatos(this.id,'Local')">Selecione</button>
 		            			<div class="contenido">
 		            				<div class="contenido-right">
-	            						<h2>Você sabia que...</h2>
-	            						<p>... é possível fazer uma conexão destes aplicativos (comércio eletrônico, ponto de venda, Marketplace, CRM, etc.) com o SAP Business One facilmente quando se usa o On-Premise.</p>
+	            						<h2>Voc&ecirc; sabia que...</h2>
+	            						<p>... &eacute; poss&iacute;vel fazer uma conex&atilde;o destes aplicativos (com&eacute;rcio eletr&ocirc;nico, ponto de venda, Marketplace, CRM, etc.) com o SAP Business One facilmente quando se usa o On-Premise.</p>
 	            						<small>(IDC, Setembro 2016)</small>
 		            				</div>
 		            				<div class="contenido-left">
@@ -461,7 +461,7 @@
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Executar  o software na nuvem juntamente com suas informações empresariais.</label>
+		            				<label>Executar  o software na nuvem juntamente com suas informa&ccedil;&otilde;es empresariais.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -469,8 +469,8 @@
 		            			<button id="buttonCloudI" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one select-infraestructura" onclick="guardarDatos(this.id,'Nuvem')">Selecione</button>
 		            			<div class="contenido">
 		            				<div class="contenido-right">
-	            						<h2>Você sabia que...</h2>
-	            						<p>... 21% está cada vez mais interessado em alternativas ou hospedagem para o que, no momento, executam no local.</p>
+	            						<h2>Voc&ecirc; sabia que...</h2>
+	            						<p>... 21% est&aacute; cada vez mais interessado em alternativas ou hospedagem para o que, no momento, executam no local.</p>
 	            						<small>(IDC, Setembro 2016)</small>
 		            				</div>
 		            				<div class="contenido-left">
@@ -483,11 +483,11 @@
 		            		<div class="flip-card">
 		            			<div class="card-front">
 		            				<img src="<?php echo RUTA_IMG?>cards/card-hibrida.png">
-		            				<p>Híbrida</p>
+		            				<p>H&iacute;brida</p>
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Combinar as duas infraestruturas para que as informações sensíveis possam permanecer em sua T I local.</label>
+		            				<label>Combinar as duas infraestruturas para que as informa&ccedil;&otilde;es sens&iacute;veis possam permanecer em sua T I local.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -495,8 +495,8 @@
 		            			<button id="buttonHibrida" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one select-infraestructura" onclick="guardarDatos(this.id,'Híbrida')">Selecione</button>
 		            			<div class="contenido">
 		            				<div class="contenido-right">
-	            						<h2>Você sabia que...</h2>
-	            						<p>... elas têm uma boa aceitação nas empresas em relação a um futuro próximo, já que estão sendo  desenvolvidos software de gestão de nuvem para poder gerenciar uma nuvem privada e, no momento certo, adquirir recursos nos grandes provedores públicos.</p>
+	            						<h2>Voc&ecirc; sabia que...</h2>
+	            						<p>... elas t&ecirc;m uma boa aceita&ccedil;&atilde;o nas empresas em rela&ccedil;&atilde;o a um futuro pr&oacute;ximo, j&aacute; que est&atilde;o sendo  desenvolvidos software de gest&atilde;o de nuvem para poder gerenciar uma nuvem privada e, no momento certo, adquirir recursos nos grandes provedores p&uacute;blicos.</p>
 	            						<small>(IDC, Setembro 2016)</small>
 		            				</div>
 		            				<div class="contenido-left">
@@ -512,7 +512,7 @@
 						<div class="question">
 		            		<span class="number">05/05</span>
 		            		<div class="question-respuestas">
-		            			<p><span>Com base em suas respostas,</span> temos uma  solução ideal para sua empresa.</p>
+		            			<p><span>Com base em suas respostas,</span> temos uma solu&ccedil;&atilde;o ideal para sua empresa.</p>
 		            		</div>
 		            	</div>
 		            	<div class="mdl-solicitud">
@@ -622,7 +622,7 @@
 											<option value="Cliente">Cliente</option>
 											<option value="Cliente em potencial">Cliente em potencial</option>
 											<option value="Consultor">Consultor</option>
-											<option value="Funcionário da SAP">Funcionário da SAP</option>
+											<option value="Funcionário da SAP">Funcion&aacute;rio da SAP</option>
 											<option value="Estudante">Estudante</option>
 											<option value="Parceiro">Parceiro</option>
 											<option value="Parceiro em potencial">Parceiro em potencial</option>
@@ -659,18 +659,18 @@
 		        				<div class="col-xs-12 mdl-label m-t-10">
 		    						<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
 										<input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
-										<span class="mdl-checkbox__label f-s-14" style="">Li e aceito os <a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" style="">termos e condições da SAP</a></span>
+										<span class="mdl-checkbox__label f-s-14" style="">Li e aceito os <a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" style="">termos e condi&ccedil;&otilde;es da SAP</a></span>
 									</label>
 		        				</div>
 		        				<div class="col-xs-12 text-right m-t-25">
-									<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="solicitarEstimacion();">Enviar informações</button>
+									<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="solicitarEstimacion();">Enviar informa&ccedil;&otilde;es</button>
 		        				</div>
 		            		</form>
 	            		</div>
 	            	</div>
             		<div class="mdl-agradecimiento">
             			<h2>Obrigado por seu interesse</h2>
-            			<p>Um representante da SAP entrará em contato com você para ajudá-lo a dar o primeiro passo.</p>
+            			<p>Um representante da SAP entrar&aacute; em contato com voc&ecirc; para ajud&aacute;-lo a dar o primeiro passo.</p>
             		</div>
 				</div>
 				<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect button-arrow button-prev" onclick="buttonQuestion(1)">
@@ -692,7 +692,7 @@
 						<img alt="" src="">
 					</div>
 				    <div class="mdl-card__supporting-text">
-                        <h2>Sabía que...</h2>
+                        <h2>Voc&ecirc; sabia que...</h2>
                         <p></p>
                         <small></small>
 					</div> 
