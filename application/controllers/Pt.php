@@ -108,7 +108,7 @@ class Pt extends CI_Controller {
           $session = array('ids_array'   => $ids_array,
                            'array_3pant' => $array_3pant);
           $this->session->set_userdata($session);
-          $tamanio = $this->session->userdata('Tamanio') == null ? '-' : $this->session->userdata('Tamanio').' employees';
+          $tamanio = $this->session->userdata('Tamanio') == null ? '-' : $this->session->userdata('Tamanio').' funcionários';
           $data['Industria']       = $this->session->userdata('industria') == null ? '-' : $this->session->userdata('industria');
           $data['Factura_anual']   = $this->session->userdata('Factura_anual') == null ? '-' : $this->session->userdata('Factura_anual');
           $data['Tamanio']         = $tamanio;
@@ -228,7 +228,7 @@ class Pt extends CI_Controller {
           <h1>¿En qué industria se desempeña?</h1>
           <h1>'.$respuestas[0]->Industria.'</h1>
           <h1>¿De qué tamaño es su empresa?</h1>
-          <h1>'.$respuestas[0]->Tamanio.' employees</h1>
+          <h1>'.$respuestas[0]->Tamanio.' funcionários</h1>
           <h1>Su facturacion es: '.$respuestas[0]->Factura_anual.'</h1>
           <h1>¿Cuál es la prioridad de su negocio?</h1>
           <h1>'.$respuestas[0]->Prioridad.'</h1>

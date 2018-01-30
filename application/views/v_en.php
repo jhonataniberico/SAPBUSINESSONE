@@ -598,7 +598,7 @@
 		        				</div>
 		        				<div class="col-sm-6">
 		        					<div class="mdl-input">
-								    	<input type="text" class="form-control NEGRO_FONDO" id="cargo" maxlength="50" onkeypress="return soloLetras(event);"  onchange="validarCampos()" placeholder="Position">
+								    	<input type="text" class="form-control NEGRO_FONDO" id="cargo" maxlength="50" onkeypress="return soloLetras(event);"  onchange="validarCampos()" placeholder="Title">
 								  	</div>
 		        				</div>
 		        				<div class="col-sm-6">
