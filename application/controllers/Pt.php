@@ -67,7 +67,8 @@ class Pt extends CI_Controller {
                                    'Id_lenguaje' => $idIdioma);
               $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
               $session = array('industria' => $datos,
-                               'id_sol'    => $datoInsert['Id']);
+                               'id_sol'    => $datoInsert['Id'],
+                                'idioma'   => $idioma);
               $this->session->set_userdata($session);
             }else {
               if($pantalla == 2) {

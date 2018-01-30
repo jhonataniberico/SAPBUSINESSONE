@@ -67,7 +67,8 @@ class Es extends CI_Controller {
                                    'Id_lenguaje' => $idIdioma);
               $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
               $session = array('industria' => $datos,
-                               'id_sol'    => $datoInsert['Id']);
+                               'id_sol'    => $datoInsert['Id'],
+                                'idioma'   => $idioma);
               $this->session->set_userdata($session);
             }else {
               if($pantalla == 2) {
@@ -165,6 +166,7 @@ class Es extends CI_Controller {
             $this->session->unset_userdata('Factura_anual');
             $this->session->unset_userdata('Tamanio');
             $this->session->unset_userdata('Prioridad');
+            $this->session->unset_userdata('idioma');
 
           $this->sendGmailSap($email);
           $data['msj']  = $datoInsert['msj'];

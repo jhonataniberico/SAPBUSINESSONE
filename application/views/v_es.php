@@ -741,7 +741,9 @@
 			    $('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight');
 			    homePage.css("display","none");
 				fifthWindow.addClass('animated fadeInLeft');
-				$('.button-arrow.button-prev').css("display","block");
+				if(<?php echo $confirmar ?> == 0) {
+					$('.button-arrow.button-prev').css("display","block");
+				}
 				$('.header').addClass('opacity');
 				$('.logo-bottom').addClass('opacity');
 				/*$('#telefono').css('border-color','red');
