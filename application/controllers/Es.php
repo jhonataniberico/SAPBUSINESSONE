@@ -260,31 +260,31 @@ class Es extends CI_Controller {
                           <h2 style="text-align: center">Datos del Cliente</h2>
                           <div>
                             <strong style="    max-width: 140px;width: 100%;display: inline-block;">Cliente</strong>
-                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> Jose Minaya Castañeda</p>
+                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['nombre_completo'].'</p>
                           </div>
                           <div>
                             <strong style="    max-width: 140px;width: 100%;display: inline-block;">Cargo</strong>
-                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> Semi Senior Frontend Developer</p>
+                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['Cargo'].'</p>
                           </div>
                           <div>
                             <strong style="    max-width: 140px;width: 100%;display: inline-block;">Empresa</strong>
-                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> SOFTHY Soluciones en Software SAC</p>
+                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['Empresa'].'</p>
                           </div>
                           <div>
                             <strong style="    max-width: 140px;width: 100%;display: inline-block;">Teléfono</strong>
-                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> 991963695</p>
+                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['Telefono'].'</p>
                           </div>
                           <div>
                             <strong style="    max-width: 140px;width: 100%;display: inline-block;">Email</strong>
-                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> jose.minayac15@gmail.com</p>
+                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['Email'].'</p>
                           </div>
                           <div>
                             <strong style="    max-width: 140px;width: 100%;display: inline-block;">Relación con SAP</strong>
-                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> Cliente</p>
+                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['Relacion'].'</p>
                           </div>
                           <div>
                             <strong style="    max-width: 140px;width: 100%;display: inline-block;">País</strong>
-                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> Perú</p>
+                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['Pais'].'</p>
                           </div>
                           <h2 style="text-align: center">Respuestas</h2>
                           <div style="display: flex;">
@@ -292,7 +292,7 @@ class Es extends CI_Controller {
                             <div>
                               <p style="margin: 0;">¿En qué industria se desempeña?</p>
                               <ul style="margin: 5px 0;padding-left: 15px;">
-                                <li>Productos de consumo</li>
+                                <li>'.$respuestas[0]->Industria.'</li>
                               </ul>
                             </div>
                           </div>
@@ -301,7 +301,7 @@ class Es extends CI_Controller {
                             <div>
                               <p style="margin: 0;">¿De qué tamaño es su empresa?</p>
                               <ul style="margin: 5px 0;padding-left: 15px;">
-                                <li>1 - 50 empleados</li>
+                                <li>'.$respuestas[0]->Tamanio.' empleados</li>
                               </ul>
                             </div>
                           </div>
@@ -310,7 +310,7 @@ class Es extends CI_Controller {
                             <div>
                               <p style="margin: 0;">Su facturación</p>
                               <ul style="margin: 5px 0;padding-left: 15px;">
-                                <li>10-20 millones de dolares</li>
+                                <li>'.$respuestas[0]->Factura_anual.'</li>
                               </ul>
                             </div>
                           </div>
@@ -319,7 +319,7 @@ class Es extends CI_Controller {
                             <div>
                               <p style="margin: 0;">¿Cuál es la prioridad de su negocio?</p>
                               <ul style="margin: 5px 0;padding-left: 15px;">
-                                <li>Emprendedores</li>
+                                <li>'.$respuestas[0]->Prioridad.'</li>
                               </ul>
                             </div>
                           </div>
@@ -328,14 +328,14 @@ class Es extends CI_Controller {
                             <div>
                               <p style="margin: 0;">¿Que tipo de infraestructura está buscando?</p>
                               <ul style="margin: 5px 0;padding-left: 15px;">
-                                <li>Local</li>
+                                <li>'.$respuestas[0]->Infraestructura.'</li>
                               </ul>
                             </div>
                           </div>
                         </div>
                       </div>
                     </body>
-                    </html>';
+                  </html>';
 
         $this->email->message($texto);//AQUI SE INSERTA EL HTML
         $this->email->send();

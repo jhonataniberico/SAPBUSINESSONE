@@ -211,33 +211,102 @@ class Pt extends CI_Controller {
 
        //CONSTRUIMOS EL HTML
        $texto = '<!DOCTYPE html>
-         <html>
-         <head>
-          <title>EMAIL SAP</title>
-         </head>
-         <body>
-          <h1>Hola SAP</h1>
-          <h1>El Cliente: '.$_SESSION['nombre_completo'].'</h1>
-          <h1>Con Email: '.$_SESSION['Email'].'</h1>
-          <h1>Con el teléfono: '.$_SESSION['Telefono'].'</h1>
-          <h1>Con el Cargo de '.$_SESSION['Cargo'].'</h1>
-          <h1>De la empresa de '.$_SESSION['Empresa'].'</h1>
-          <h1>Del país de '.$_SESSION['Pais'].'</h1>
-          <h1>Su relación con sap es de '.$_SESSION['Relacion'].'</h1>
-          <h1>Le gustaría que le contacten '.$contact.'</h1>
-          <h1>Solicitó un registro a la plataforma de SAP</h1>
-          <h1>Sus respuestas fueron:</h1>
-          <h1>¿En qué industria se desempeña?</h1>
-          <h1>'.$respuestas[0]->Industria.'</h1>
-          <h1>¿De qué tamaño es su empresa?</h1>
-          <h1>'.$respuestas[0]->Tamanio.' funcionários</h1>
-          <h1>Su facturacion es: '.$respuestas[0]->Factura_anual.'</h1>
-          <h1>¿Cuál es la prioridad de su negocio?</h1>
-          <h1>'.$respuestas[0]->Prioridad.'</h1>
-          <h1>¿Qué tipo de infraestructura está buscando?</h1>
-          <h1>'.$respuestas[0]->Infraestructura.'</h1>
-         </body>
-        </html>';
+                    <html>
+                    <head>
+                      <title></title>
+                    </head>
+                    <body style="font-family: "Open Sans",Arial,Helvetica,sans-serif;">
+                      <div style="max-width: 600px; width: 100%; margin: auto;background-color: #000000;">
+                        <div style="height: 200px;border-bottom: 5px solid #e4e4e4;">
+                          <div style="text-align: center;float: left;padding: 75px 30px;max-width: 200px;width: 100%;">
+                            <img src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_header.png" style="max-width: 200px;">
+                          </div>
+                          <div style="height: 100%;max-width: 150px;width: 100%;float: right;display: inline-block;">
+                            <div style="height: 100%;width: 100%;max-width: 30px;float: right;background-color: #54442E;"></div>
+                            <div style="height: 100%;width: 100%;max-width: 30px;float: right;background-color: #8D6832;"></div>
+                            <div style="height: 100%;width: 100%;max-width: 30px;float: right;background-color: #E29D2E;"></div>
+                          </div>
+                        </div>
+                        <div style="background-color: #000000; color: #FFFFFF;padding: 30px;">
+                          <h2 style="text-align: center">Datos del Cliente</h2>
+                          <div>
+                            <strong style="    max-width: 140px;width: 100%;display: inline-block;">Cliente</strong>
+                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['nombre_completo'].'</p>
+                          </div>
+                          <div>
+                            <strong style="    max-width: 140px;width: 100%;display: inline-block;">Cargo</strong>
+                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['Cargo'].'</p>
+                          </div>
+                          <div>
+                            <strong style="    max-width: 140px;width: 100%;display: inline-block;">Empresa</strong>
+                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['Empresa'].'</p>
+                          </div>
+                          <div>
+                            <strong style="    max-width: 140px;width: 100%;display: inline-block;">Teléfono</strong>
+                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['Telefono'].'</p>
+                          </div>
+                          <div>
+                            <strong style="    max-width: 140px;width: 100%;display: inline-block;">Email</strong>
+                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['Email'].'</p>
+                          </div>
+                          <div>
+                            <strong style="    max-width: 140px;width: 100%;display: inline-block;">Relación con SAP</strong>
+                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['Relacion'].'</p>
+                          </div>
+                          <div>
+                            <strong style="    max-width: 140px;width: 100%;display: inline-block;">País</strong>
+                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['Pais'].'</p>
+                          </div>
+                          <h2 style="text-align: center">Respuestas</h2>
+                          <div style="display: flex;">
+                            <div style="margin-right: 20px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">1</span></div>
+                            <div>
+                              <p style="margin: 0;">¿En qué industria se desempeña?</p>
+                              <ul style="margin: 5px 0;padding-left: 15px;">
+                                <li>'.$respuestas[0]->Industria.'</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div style="display: flex;">
+                            <div style="margin-right: 20px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">2</span></div>
+                            <div>
+                              <p style="margin: 0;">¿De qué tamaño es su empresa?</p>
+                              <ul style="margin: 5px 0;padding-left: 15px;">
+                                <li>'.$respuestas[0]->Tamanio.' empleados</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div style="display: flex;">
+                            <div style="margin-right: 20px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">3</span></div>
+                            <div>
+                              <p style="margin: 0;">Su facturación</p>
+                              <ul style="margin: 5px 0;padding-left: 15px;">
+                                <li>'.$respuestas[0]->Factura_anual.'</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div style="display: flex;">
+                            <div style="margin-right: 20px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">4</span></div>
+                            <div>
+                              <p style="margin: 0;">¿Cuál es la prioridad de su negocio?</p>
+                              <ul style="margin: 5px 0;padding-left: 15px;">
+                                <li>'.$respuestas[0]->Prioridad.'</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div style="display: flex;">
+                            <div style="margin-right: 20px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">5</span></div>
+                            <div>
+                              <p style="margin: 0;">¿Que tipo de infraestructura está buscando?</p>
+                              <ul style="margin: 5px 0;padding-left: 15px;">
+                                <li>'.$respuestas[0]->Infraestructura.'</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </body>
+                  </html>';
         $this->email->message($texto);//AQUI SE INSERTA EL HTML
         $this->email->send();
         $this->session->unset_userdata('id_persona');
