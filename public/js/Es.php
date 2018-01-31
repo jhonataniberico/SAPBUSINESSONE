@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Es extends CI_Controller {
@@ -16,7 +16,7 @@ class Es extends CI_Controller {
 
   public function index() {
     //ELIMINAR DATOS EN SESIÓN AL CARGAR LA PÁGINA
-    /*$data['nombre_comple'] = $this->session->userdata('nombre_linke');
+    $data['nombre_comple'] = $this->session->userdata('nombre_linke');
     $data['email_link'] = $this->session->userdata('email_linke');
     $data['comp'] = $this->session->userdata('compania') == null ? '' : $this->session->userdata('compania');
     $data['tit'] = $this->session->userdata('titulo') == null ? '' : $this->session->userdata('titulo');
@@ -26,25 +26,25 @@ class Es extends CI_Controller {
     $data['Factura_anual'] = $this->session->userdata('Factura_anual');
     $data['Tamanio'] = $this->session->userdata('Tamanio');
     $data['Infraestructura'] = $this->session->userdata('Infraestructura');
+    $data['confirmar'] = $this->session->userdata('confirmar') == null ? 0 : $this->session->userdata('confirmar');
     $explode = explode(",", $this->session->userdata('Prioridad'));
     $html    = '';
     foreach ($explode as $key) {
       $html .= '<li>'.$key.'</li>';
     }
-    $data['priori'] = $html;*/
-    $data['confirmar'] = $this->session->userdata('confirmar') == null ? 0 : $this->session->userdata('confirmar');
-    $data['pantalla'] = 0;
+    $data['priori'] = $html;
+
     $client_id     = "864xp2wdu9eghe";
     $client_secret = "M6NxoP4EWlaADF2U";
     $redirect_uri  = "http://www.sap-latam.com/sap_business_one/callback";
     $csrf_token    = random_int(1111111, 9999999);
     $scopes        = "r_basicprofile%20r_emailaddress";
-    $data['client_id']     = $client_id;
+    $data['client_id'] = $client_id;
     $data['client_secret'] = $client_secret;
-    $data['redirect_uri']  = $redirect_uri;
-    $data['csrf_token']    = $csrf_token;
-    $data['scopes']        = $scopes;
-    $data['nombre_linke']  = $this->session->userdata('emailAddress');
+    $data['redirect_uri'] = $redirect_uri;
+    $data['csrf_token'] = $csrf_token;
+    $data['scopes'] = $scopes;
+    $data['nombre_linke'] = $this->session->userdata('emailAddress');
     $this->load->view('v_es', $data);
   }
 
@@ -68,7 +68,7 @@ class Es extends CI_Controller {
               $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
               $session = array('industria' => $datos,
                                'id_sol'    => $datoInsert['Id'],
-                                'idioma'   => $idioma);
+                               'idioma'    => $idioma);
               $this->session->set_userdata($session);
             }else {
               if($pantalla == 2) {
@@ -166,9 +166,9 @@ class Es extends CI_Controller {
             $this->session->unset_userdata('Factura_anual');
             $this->session->unset_userdata('Tamanio');
             $this->session->unset_userdata('Prioridad');
-            $this->session->unset_userdata('idioma');
+	    $this->session->unset_userdata('idioma');
 
-          $this->sendGmailSap($email);
+          //$this->sendGmailSap($email);
           $data['msj']  = $datoInsert['msj'];
           $data['error'] = $datoInsert['error'];
         } catch (Exception $e) {
@@ -195,8 +195,8 @@ class Es extends CI_Controller {
        //configuracion para gmail
        $configGmail = array(
                             'protocol'  => 'smtp',
-                            'smtp_host' => 'relay-hosting.secureserver.net',
-                            'smtp_port' => 587,
+                            'smtp_host' => 'smtpout.secureserver.net',
+                            'smtp_port' => 465,
                             'smtp_user' => 'confirmaciones@merino.com.pe',
                             'smtp_pass' => 'cFm$17Pe',
                             'mailtype'  => 'html',
@@ -205,12 +205,12 @@ class Es extends CI_Controller {
                           );    
        //cargamos la configuración para enviar con gmail
        $this->email->initialize($configGmail);
-       $this->email->from('eventos@sap-latam.com');
+       $this->email->from('info@mcg-agency.com');
        $this->email->to('jhonatanibericom@gmail.com');//EMAIL AL QUIÉN IRÁ DIRIGIDO
        $this->email->subject('Bienvenido/a a SAP BUSINESS ONE');
 
        //CONSTRUIMOS EL HTML
-       /*$texto = '<!DOCTYPE html>
+       $texto = '<!DOCTYPE html>
          <html>
          <head>
           <title>EMAIL SAP</title>
@@ -237,106 +237,7 @@ class Es extends CI_Controller {
           <h1>¿Qué tipo de infraestructura está buscando?</h1>
           <h1>'.$respuestas[0]->Infraestructura.'</h1>
          </body>
-        </html>';*/
-
-        $texto = '<!DOCTYPE html>
-                    <html>
-                    <head>
-                      <title></title>
-                    </head>
-                    <body style="font-family: "Open Sans",Arial,Helvetica,sans-serif;">
-                      <div style="max-width: 600px; width: 100%; margin: auto;background-color: #000000;">
-                        <div style="height: 200px;border-bottom: 5px solid #e4e4e4;">
-                          <div style="text-align: center;float: left;padding: 75px 30px;max-width: 200px;width: 100%;">
-                            <img src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_header.png" style="max-width: 200px;">
-                          </div>
-                          <div style="height: 100%;max-width: 150px;width: 100%;float: right;display: inline-block;">
-                            <div style="height: 100%;width: 100%;max-width: 30px;float: right;background-color: #54442E;"></div>
-                            <div style="height: 100%;width: 100%;max-width: 30px;float: right;background-color: #8D6832;"></div>
-                            <div style="height: 100%;width: 100%;max-width: 30px;float: right;background-color: #E29D2E;"></div>
-                          </div>
-                        </div>
-                        <div style="background-color: #000000; color: #FFFFFF;padding: 30px;">
-                          <h2 style="text-align: center">Datos del Cliente</h2>
-                          <div>
-                            <strong style="    max-width: 140px;width: 100%;display: inline-block;">Cliente</strong>
-                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> Jose Minaya Castañeda</p>
-                          </div>
-                          <div>
-                            <strong style="    max-width: 140px;width: 100%;display: inline-block;">Cargo</strong>
-                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> Semi Senior Frontend Developer</p>
-                          </div>
-                          <div>
-                            <strong style="    max-width: 140px;width: 100%;display: inline-block;">Empresa</strong>
-                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> SOFTHY Soluciones en Software SAC</p>
-                          </div>
-                          <div>
-                            <strong style="    max-width: 140px;width: 100%;display: inline-block;">Teléfono</strong>
-                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> 991963695</p>
-                          </div>
-                          <div>
-                            <strong style="    max-width: 140px;width: 100%;display: inline-block;">Email</strong>
-                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> jose.minayac15@gmail.com</p>
-                          </div>
-                          <div>
-                            <strong style="    max-width: 140px;width: 100%;display: inline-block;">Relación con SAP</strong>
-                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> Cliente</p>
-                          </div>
-                          <div>
-                            <strong style="    max-width: 140px;width: 100%;display: inline-block;">País</strong>
-                            <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> Perú</p>
-                          </div>
-                          <h2 style="text-align: center">Respuestas</h2>
-                          <div style="display: flex;">
-                            <div style="margin-right: 20px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">1</span></div>
-                            <div>
-                              <p style="margin: 0;">¿En qué industria se desempeña?</p>
-                              <ul style="margin: 5px 0;padding-left: 15px;">
-                                <li>Productos de consumo</li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div style="display: flex;">
-                            <div style="margin-right: 20px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">2</span></div>
-                            <div>
-                              <p style="margin: 0;">¿De qué tamaño es su empresa?</p>
-                              <ul style="margin: 5px 0;padding-left: 15px;">
-                                <li>1 - 50 empleados</li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div style="display: flex;">
-                            <div style="margin-right: 20px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">3</span></div>
-                            <div>
-                              <p style="margin: 0;">Su facturación</p>
-                              <ul style="margin: 5px 0;padding-left: 15px;">
-                                <li>10-20 millones de dolares</li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div style="display: flex;">
-                            <div style="margin-right: 20px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">4</span></div>
-                            <div>
-                              <p style="margin: 0;">¿Cuál es la prioridad de su negocio?</p>
-                              <ul style="margin: 5px 0;padding-left: 15px;">
-                                <li>Emprendedores</li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div style="display: flex;">
-                            <div style="margin-right: 20px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">5</span></div>
-                            <div>
-                              <p style="margin: 0;">¿Que tipo de infraestructura está buscando?</p>
-                              <ul style="margin: 5px 0;padding-left: 15px;">
-                                <li>Local</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </body>
-                    </html>';
-
+        </html>';
         $this->email->message($texto);//AQUI SE INSERTA EL HTML
         $this->email->send();
         $this->session->unset_userdata('id_persona');
