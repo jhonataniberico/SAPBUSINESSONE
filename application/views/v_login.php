@@ -31,12 +31,7 @@
         <div class="fondo-imagen"></div>
         <div class="card-login">
             <div class="mdl-card mdl-card-login">
-                <div class="mdl-card__title">
-                    <h2>HPE Latin America Hybrid IT Bootcamp</h2>
-                    <p>January 30th to February 1st, 2018</p>
-                    <p class="reservation">HPE - LABS Reservation page</p>
-                </div>
-                <div class="mdl-card__supporting-text">
+                <div class="mdl-card__supporting-text" style="position: relative;left: -300px;">
                     <img class="logo" src="<?php echo RUTA_IMG;?>logo/logo-home.png">
                     <div class="event">
                         <h2>HPE Latin America Hybrid IT Bootcamp</h2>
