@@ -168,7 +168,7 @@ class Pt extends CI_Controller {
             $this->session->unset_userdata('Prioridad');
             $this->session->unset_userdata('idioma');
 
-          $this->sendGmailSap($email);
+          //$this->sendGmailSap($email);
           $data['msj']  = $datoInsert['msj'];
           $data['error'] = $datoInsert['error'];
         } catch (Exception $e) {
@@ -195,17 +195,17 @@ class Pt extends CI_Controller {
        //configuracion para gmail
        $configGmail = array(
                             'protocol'  => 'smtp',
-                            'smtp_host' => 'mail.taxirosenverg.com',
-                            'smtp_port' => 587,
-                            'smtp_user' => 'user@taxirosenverg.com',
-                            'smtp_pass' => 'ZRNX3SwQkWJH',
+                            'smtp_host' => 'smtpout.secureserver.net',
+                            'smtp_port' => 3535,
+                            'smtp_user' => 'confirmaciones@merino.com.pe',
+                            'smtp_pass' => 'cFm$17Pe',
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
                             'newline'   => "\r\n"
                           );    
        //cargamos la configuración para enviar con gmail
        $this->email->initialize($configGmail);
-       $this->email->from('user@taxirosenverg.com');
+       $this->email->from('info@mcg-agency.com');
        $this->email->to('jhonatanibericom@gmail.com');//EMAIL AL QUIÉN IRÁ DIRIGIDO
        $this->email->subject('Bienvenido/a a SAP BUSINESS ONE');
 
