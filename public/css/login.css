@@ -1,0 +1,38 @@
+.card-content{
+	background-color: #000000;
+    width: 100%;
+    max-width: calc(100% - 400px);
+    float: left;
+    display: inline-block;
+    padding: 30px;
+    height: 100vh;
+    position: relative;
+}
+.card-login{
+    background-color: #FFF;
+    width: 100%;
+    max-width: 400px;
+    float: right;
+    padding: 30px;
+    height: 100vh;
+}
+.card-content .contenido{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+.card-content .contenido h2{
+	color: #FFFFFF;
+    font-size: 32px;
+    line-height: 1;
+}
+.contenido-top{		
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+.contenido-bottom{		
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}

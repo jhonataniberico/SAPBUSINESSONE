@@ -19,20 +19,26 @@
     <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>roboto.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
-	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>index1.min.css?v=<?php echo time();?>">
-    <style>
-        @media ( max-width: 420px ){
-            .fondo-imagen{display: none;}
-        }
-    </style>
+	<!-- <link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.min.css?v=<?php echo time();?>"> -->
+    <link rel="stylesheet"    href="<?php echo RUTA_CSS?>login.css?v=<?php echo time();?>">
 </head>
 <body>
     <section id="principal">
-        <div class="fondo-imagen"></div>
+        <div class="card-content">
+            <div class="contenido-top">
+                <img class="logo-home logo-table" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+            </div>
+            <div class="contenido">
+                <img class="logo-home logo-table" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+                <h2>Diferentes escenarios. Una soluci&oacute;n.</h2>
+            </div>
+            <div class="contenido-bottom">
+                <img class="logo-home logo-table" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+            </div>
+        </div>
         <div class="card-login">
             <div class="mdl-card mdl-card-login">
                 <div class="mdl-card__title">
-                    <img class="logo-home logo-table" src="<?php echo RUTA_IMG?>logo/logo_header.png">
                 </div>
                 <div class="mdl-card__supporting-text">
                     <div class="mdl-input">
