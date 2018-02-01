@@ -618,7 +618,7 @@
 		        				</div>
 		        				<div class="col-sm-6">
 		        					<div class="mdl-select mdl-standar">
-										<select class="selectpicker" id="relacion" name="relacion" title="Relación con SAP">
+										<select class="selectpicker" id="relacion" name="relacion" title="Relationship with SAP">
 											<option value="Customer">Customer</option>
 											<option value="Potential customer">Potential Customer</option>
 											<option value="Consultant">Consultant</option>

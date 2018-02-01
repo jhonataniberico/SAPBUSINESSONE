@@ -277,6 +277,8 @@ function mostrarDatos() {
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
+        	$("#relacion").val('0');
+			$('.selectpicker').selectpicker('refresh');
           	$('#industria').text(data.Industria);
           	$('#factura').text(data.Factura_anual)
            	$('#tamanio').text(data.Tamanio);
@@ -617,7 +619,6 @@ function buttonQuestion(direction){
 				
 				$('#'+global_array[3]).addClass('button-select');
 			}
-			mostrarDatosFlecha(4);
 		}
 		else if(m == 3){
 			datos_array = [];
@@ -633,7 +634,6 @@ function buttonQuestion(direction){
 				  $('#'+value).addClass('button-select');
 				});
 			}
-			mostrarDatosFlecha(2);
 		}
 		else if(m == 2){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
@@ -658,7 +658,6 @@ function buttonQuestion(direction){
 				var divIncrement2 = $('#facturacion').parents().find('.mdl-select');
 				divIncrement2.addClass('select-increment');
 			}
-			mostrarDatosFlecha(2);
 		}
 		else if(m == 1){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
@@ -670,7 +669,6 @@ function buttonQuestion(direction){
 			if(data_ids_arr == 5) {
 				$('#'+global_array[0]).addClass('button-select');
 			}
-			mostrarDatosFlecha(1);
 		}
 		else if(m < 1){
 			$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
@@ -739,66 +737,11 @@ function EditQuestion(id, pant){
 			$("#facturacion").parent().addClass('button-select');
 			var divIncrement2 = $('#facturacion').parents().find('.mdl-select');
 			divIncrement2.addClass('select-increment');
-			//global_terce.push(data.array_3pant);
 			$.each(data.array_3pant, function( index, value ) {
 			  $('#'+value).addClass('button-select');
 			});
 			$('.selectpicker').selectpicker('refresh');
 			$('#'+data.ids_array[3]).addClass('button-select');
-        }else {
-        	return;
-        }
-      } catch (err){
-        msj('error',err.message);
-      }
-	});
-}
-
-function mostrarDatosFlecha(pant) {
-	if(pant == 1) {
-		datos_array = [];
-		array_ids   = [];
-		pant1 = 1;
-		pant2 = 1;
-	}
-	if(pant == 2) {
-		datos_array = [];
-		pant3 		= 1;
-	}
-	if(pant == 3) {
-		datos_array = [];
-		array_3pant = [];
-		pant4 		= 1;
-	}
-	$.ajax({
-		url   : 'es/EditQuestion',
-		type  : 'POST'
-	}).done(function(data){
-		try{
-        data = JSON.parse(data);
-        if(data.error == 0){
-        	if(data.pantalla_sess == null || data.ids_array == null || data.array_3pant == null) {
-        		return;
-        	}else {
-        		data_ids_arr = data.pantalla_sess;
-	           	$('#'+data.ids_array[0]).addClass('button-select');
-	           	$("#textOperar").text(data.ids_array[1]);
-	           	var divIncrement = $('#buttonMas.select-one').parent();
-	           	var cardSelec    = $('#buttonMas.select-one').parents('.content-card').find('.contenido');
-	           	var cardHidden   = $('.mdl-card-question.visi-hidden');
-	           	divIncrement.addClass('select-increment');
-				cardSelec.addClass('aparecer');
-				cardHidden.fadeIn(400);
-				$("#facturacion").val(data.ids_array[2]);
-				$("#facturacion").parent().addClass('button-select');
-				var divIncrement2 = $('#facturacion').parents().find('.mdl-select');
-				divIncrement2.addClass('select-increment');
-				$.each(data.array_3pant, function( index, value ) {
-				  $('#'+value).addClass('button-select');
-				});
-				$('.selectpicker').selectpicker('refresh');
-				$('#'+data.ids_array[3]).addClass('button-select');
-        	}
         }else {
         	return;
         }
@@ -860,4 +803,22 @@ $(document).ready(function() {
 function resizeContent() {
    var top = $( window ).height();
    $("#home").css('height', top);
+}
+
+function cerrarCesion() {
+	$.ajax({
+		url   : 'admin/cerrarCesion',
+		type  : 'POST'
+	}).done(function(data){
+		try{
+        	data = JSON.parse(data);
+        	if(data.error == 0){
+        		location.href = 'Login';
+        	}else {
+        		return;
+        	}
+      } catch (err){
+        msj('error',err.message);
+      }
+	});
 }
