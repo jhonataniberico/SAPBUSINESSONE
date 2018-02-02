@@ -19,46 +19,62 @@
     <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>roboto.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
-	<!-- <link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.min.css?v=<?php echo time();?>"> -->
     <link rel="stylesheet"    href="<?php echo RUTA_CSS?>login.css?v=<?php echo time();?>">
 </head>
 <body>
     <section id="principal">
         <div class="card-content">
             <div class="contenido-top">
-                <img class="logo-home logo-table" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+                <img class="logo-home logo-table" src="<?php echo RUTA_IMG?>logo/logo_home.png">
             </div>
             <div class="contenido">
                 <img class="logo-home logo-table" src="<?php echo RUTA_IMG?>logo/logo_header.png">
                 <h2>Diferentes escenarios. Una soluci&oacute;n.</h2>
             </div>
             <div class="contenido-bottom">
-                <img class="logo-home logo-table" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+                <img class="logo-home logo-table" src="<?php echo RUTA_IMG?>fondo/fondo.png">
             </div>
         </div>
         <div class="card-login">
             <div class="mdl-card mdl-card-login">
-                <div class="mdl-card__title">
+                <div class="mdl-card__title p-b-0">
+                    <p>Sign in with your organizational account.</p>
                 </div>
                 <div class="mdl-card__supporting-text">
                     <div class="mdl-input">
+                        <div class="mdl-icon">
+                            <i class="mdi mdi-person"></i>
+                        </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <label class="mdl-textfield__label" for="usuario">Usuario</label>
+                            <label class="mdl-textfield__label" for="usuario">Username</label>
                             <input class="mdl-textfield__input" type="text" id="usuario" maxlength="50" onkeyup="verificarDatos(event);">
                             <span class="mdl-textfield__error">Invalid user</span>
                         </div>
                     </div>
                     <div class="mdl-input">
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <label class="mdl-textfield__label" for="password">Contrase&ntilde;a</label>
+                        <div class="mdl-icon">
+                            <i class="mdi mdi-lock"></i>
+                        </div>
+                        <div id="input-password" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <label class="mdl-textfield__label" for="password">Password</label>
                             <input class="mdl-textfield__input" type="password" id="password" maxlength="50" onkeyup="verificarDatos(event);">
                             <span class="mdl-textfield__error">Invalid password</span>
+                            <a id="showpass" class="mdl-button mdl-js-button mdl-js-button-ripple-effect mdl-button--icon"><i class="mdi mdi-visibility_off"></i></a>
                         </div>
+                    </div>
+                    <div class="mdl-input">
+                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                            <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+                            <span class="mdl-checkbox__label">Recordarme</span>
+                        </label>
                     </div>
                     <div class="m-t-30">
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Login</button>
                     </div>
                 </div>
+            </div>
+            <div class="login-bottom">
+                <small>Copyright &copy;2017. All Rights Reserved.</small>
             </div>
         </div>
     </section>
@@ -70,13 +86,6 @@
 	<script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
-    <script src="<?php echo RUTA_JS?>index.js?v=<?php echo time();?>"></script>
-    <script type="text/javascript">
-    	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-        	$('select').selectpicker('mobile');
-        } else {
-            $('select').selectpicker();
-        }
-    </script>
+    <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script>
 </body>
 </html>

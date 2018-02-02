@@ -1,3 +1,10 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.mdl-textfield__label,p{
+	font-family: 'RobotoRegular';
+}
 .card-content{
 	background-color: #000000;
     width: 100%;
@@ -13,7 +20,7 @@
     width: 100%;
     max-width: 400px;
     float: right;
-    padding: 30px;
+    padding: 20px;
     height: 100vh;
 }
 .card-content .contenido{
@@ -33,6 +40,62 @@
 }
 .contenido-bottom{		
 	position: absolute;
-	bottom: 20px;
-	left: 20px;
+	bottom: 0;
+	left: 0;
+}
+.contenido-bottom img{
+	width: 100%;
+}
+.contenido-top img{
+	width: 100%;
+	max-width: 150px;
+}
+/*MDL-INPUT*/
+.mdl-input {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    height: 68px;
+}
+.mdl-input .mdl-icon {
+    width: 30px;
+    margin-right: 5px;
+}
+.mdl-textfield__label:after {
+    bottom: 15px;
+    background-color: #000000;
+}
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label, 
+.mdl-textfield--floating-label.is-dirty .mdl-textfield__label, 
+.mdl-textfield--floating-label.has-placeholder .mdl-textfield__label{
+	color: #000000;
+}
+.mdl-checkbox__ripple-container .mdl-ripple,
+.mdl-checkbox.is-checked .mdl-checkbox__tick-outline{
+	background: #000000;
+}
+.mdl-checkbox.is-checked .mdl-checkbox__box-outline{
+	border: 2px solid #000000;
+}
+.mdl-card__title p{
+	font-size: 16px;
+	margin: 0;
+}
+.mdl-card__supporting-text{
+	width: 100%;
+}
+#showpass{
+	position: absolute;
+    right: 0;
+    text-decoration: none;
+    display: none;
+}
+#input-password.is-dirty a{
+	display: block;
+}
+.login-bottom{
+	position: absolute;
+    bottom: 20px;
+    margin-left: 10px;
+    color: #757575;
 }
