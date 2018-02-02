@@ -566,17 +566,17 @@
 			            		<div class="mdl-back-respuestas">
 		        					<div class="mdl-back-contenido">
 		        						<span>10,511</span>
-		        						<p>empresas en nuestra regi&oacute;n utilizan SAP Business One.</p>
-		        						<small>(n&uacute;mero compartido por Samuli, Customer Counting global)</small>
+		        						<p>empresas em nossa regi&atilde;o usam o SAP Business One.</p>
+		        						<small>(n&uacute;mero informado por Samuli, Customer Counting global)</small>
 		        					</div>
 		        					<div class="mdl-back-contenido second">
 		        						<span>40 a 60%</span>
-		        						<p>de reducci&oacute;n en las cargas administrativas de su negocio.</p>
+		        						<p>de redu&ccedil;&atilde;o nas cargas administrativas de sua empresa.</p>
 		        					</div>
 		        					<div class="mdl-back-contenido">
 		        						<span>103</span>
-		        						<p>partners especializados en SAP Business One para nuestra regi&oacute;n.</p>
-		        						<small>(n&uacute;mero extra&iacute;do del &uacute;ltimo reporte de Vini Ricarte)</small>
+		        						<p>parceiros especializados no SAP Business One para nossa regi&atilde;o.</p>
+		        						<small>(n&uacute;mero extra&iacute;do do &uacute;ltimo relat&oacute;rio de Vini Ricarte)</small>
 		        					</div>
 			            		</div>
 		            		</div>

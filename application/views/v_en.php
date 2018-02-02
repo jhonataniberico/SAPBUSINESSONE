@@ -567,16 +567,16 @@
 		        					<div class="mdl-back-contenido">
 		        						<span>10,511</span>
 		        						<p>companies in our region use SAP Business One.</p>
-		        						<small>(n&uacute;mero compartido por Samuli, Customer Counting global)</small>
+		        						<small>(number shared by Samuli, global Customer Counting)</small>
 		        					</div>
 		        					<div class="mdl-back-contenido second">
 		        						<span>40 a 60%</span>
-		        						<p>of reduction in the administrative burdens of your business.</p>
+		        						<p>reduction in the administrative load of your business.</p>
 		        					</div>
 		        					<div class="mdl-back-contenido">
 		        						<span>103</span>
-		        						<p>specialized partners in SAP Business One for our region.</p>
-		        						<small>(n&uacute;mero extra&iacute;do del &uacute;ltimo reporte de Vini Ricarte)</small>
+		        						<p>partners specializing in SAP Business One for our region.</p>
+		        						<small>(number extracted from Vini Ricarte’s last report)</small>
 		        					</div>
 			            		</div>
 		            		</div>
