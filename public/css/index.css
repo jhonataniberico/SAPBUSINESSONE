@@ -1464,6 +1464,13 @@ span.number{
 	.mdl-formulario, .mdl-respuestas{
 		padding: 15px;
 	}
+	.mdl-back-respuestas span{
+	    font-size: 36px;
+        line-height: 36px;
+	}
+	.mdl-back-respuestas p{
+	    line-height: 20px;
+	}
 }	
 @media(max-width: 320px){
 	.mdl-container {
