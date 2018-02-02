@@ -210,41 +210,12 @@ class Es extends CI_Controller {
        $this->email->subject('Bienvenido/a a SAP BUSINESS ONE');
 
        //CONSTRUIMOS EL HTML
-       /*$texto = '<!DOCTYPE html>
-         <html>
-         <head>
-          <title>EMAIL SAP</title>
-         </head>
-         <body>
-          <h1>Hola SAP</h1>
-          <h1>El Cliente: '.$_SESSION['nombre_completo'].'</h1>
-          <h1>Con Email: '.$_SESSION['Email'].'</h1>
-          <h1>Con el teléfono: '.$_SESSION['Telefono'].'</h1>
-          <h1>Con el Cargo de '.$_SESSION['Cargo'].'</h1>
-          <h1>De la empresa de '.$_SESSION['Empresa'].'</h1>
-          <h1>Del país de '.$_SESSION['Pais'].'</h1>
-          <h1>Su relación con sap es de '.$_SESSION['Relacion'].'</h1>
-          <h1>Le gustaría que le contacten '.$contact.'</h1>
-          <h1>Solicitó un registro a la plataforma de SAP</h1>
-          <h1>Sus respuestas fueron:</h1>
-          <h1>¿En qué industria se desempeña?</h1>
-          <h1>'.$respuestas[0]->Industria.'</h1>
-          <h1>¿De qué tamaño es su empresa?</h1>
-          <h1>'.$respuestas[0]->Tamanio.' empleados</h1>
-          <h1>Su facturacion es: '.$respuestas[0]->Factura_anual.'</h1>
-          <h1>¿Cuál es la prioridad de su negocio?</h1>
-          <h1>'.$respuestas[0]->Prioridad.'</h1>
-          <h1>¿Qué tipo de infraestructura está buscando?</h1>
-          <h1>'.$respuestas[0]->Infraestructura.'</h1>
-         </body>
-        </html>';*/
-
         $texto = '<!DOCTYPE html>
                     <html>
                     <head>
                       <title></title>
                     </head>
-                    <body style="font-family: 'Open Sans',Arial,Helvetica,sans-serif;">
+                    <body style="font-family: "Open Sans",Arial,Helvetica,sans-serif;">
                       <div style="max-width: 600px; width: 100%; margin: auto;background-color: #000000;">
                         <div style="height: 140px;border-bottom: 5px solid #e4e4e4;">
                           <div style="text-align: center;float: left;padding: 50px 15px;max-width: 180px;width: 100%;">
