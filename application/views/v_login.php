@@ -65,7 +65,7 @@
                     <div class="mdl-input">
                         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
                             <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
-                            <span class="mdl-checkbox__label">Recordarme</span>
+                            <span class="mdl-checkbox__label">Remind me</span>
                         </label>
                     </div>
                     <div class="m-t-30">
