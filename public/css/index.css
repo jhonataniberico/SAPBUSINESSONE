@@ -1335,9 +1335,8 @@ span.number{
 		right: calc(0% + 120px);
 	}
 	.question h2{
-	    max-width: 320px;
-	    font-size: 28px;
-	    line-height: 26px;
+	    max-width: 250px;
+	    line-height: 24px;
 	    margin: 0;
 	}
 	.mdl-formulario .content-datos .content-linkedin{
