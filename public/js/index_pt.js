@@ -294,7 +294,7 @@ function cambiarIdioma() {
 	}
 	$.ajax({
 		data  : {idioma   : idioma},
-		url   : 'es/cambiarIdioma',
+		url   : 'pt/cambiarIdioma',
 		type  : 'POST'
 	}).done(function(data){
 		try{
