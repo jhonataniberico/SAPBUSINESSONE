@@ -889,7 +889,7 @@ span.number{
 }
 .mdl-back-respuestas{
 	text-align: left;
-    padding: 25px;
+    padding: 0 15px;
     background-color: transparent !important;
 }
 .mdl-back-respuestas .mdl-back-contenido{
@@ -903,7 +903,7 @@ span.number{
 	font-size: 45px;
     font-family: 'RobotoBold';
     color: #F8B22C;
-    line-height: 32px;
+    line-height: 48px;
 }
 .mdl-back-respuestas p{
 	font-size: 18px;

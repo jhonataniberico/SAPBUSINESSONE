@@ -449,7 +449,7 @@
 		            				<div class="contenido-right">
 	            						<h2>Sab&iacute;a que...</h2>
 	            						<p>... se puede hacer la conexi&oacute;n de estas aplicaciones (comercio electr&oacute;nico, punto de venta, Marketplace, CRM, etc.) con
-	            						 SAP Business One f&aacute;cilmente cuando es empleas On-Premise.</p>
+	            						 SAP Business One f&aacute;cilmente cuando se emplea On-Premise.</p>
 	            						<small>(IDC, septiembre 2016)</small>
 		            				</div>
 		            				<div class="contenido-left">
