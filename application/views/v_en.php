@@ -566,7 +566,7 @@
 			            		</div>
 			            		<div class="mdl-back-respuestas">
 		        					<div class="mdl-back-contenido">
-		        						<span>10.511</span>
+		        						<span>10,511</span>
 		        						<p>companies in our region use SAP Business One.</p>
 		        					</div>
 		        					<div class="mdl-back-contenido second">
