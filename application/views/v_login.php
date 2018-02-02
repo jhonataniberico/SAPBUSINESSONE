@@ -28,7 +28,7 @@
                 <img class="logo-home logo-table" src="<?php echo RUTA_IMG?>logo/logo_home.png">
             </div>
             <div class="contenido">
-                <img class="logo-home logo-table" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+                <img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
                 <h2>Diferentes escenarios. Una soluci&oacute;n.</h2>
             </div>
             <div class="contenido-bottom">

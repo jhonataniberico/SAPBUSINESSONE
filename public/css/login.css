@@ -14,6 +14,11 @@ body{
     padding: 30px;
     height: 100vh;
     position: relative;
+    -webkit-transition: max-width .3s linear;
+    -moz-transition: max-width .3s linear;
+    -ms-transition: max-width .3s linear;
+    -o-transition: max-width .3s linear;
+    transition: max-width .3s linear;
 }
 .card-login{
     background-color: #FFF;
@@ -22,6 +27,11 @@ body{
     float: right;
     padding: 20px;
     height: 100vh;
+    -webkit-transition: max-width .3s linear;
+    -moz-transition: max-width .3s linear;
+    -ms-transition: max-width .3s linear;
+    -o-transition: max-width .3s linear;
+    transition: max-width .3s linear;
 }
 .card-content .contenido{
 	position: absolute;
@@ -77,6 +87,9 @@ body{
 .mdl-checkbox.is-checked .mdl-checkbox__box-outline{
 	border: 2px solid #000000;
 }
+.mdl-card-login{
+	width: 100%;
+}
 .mdl-card__title p{
 	font-size: 16px;
 	margin: 0;
@@ -98,4 +111,38 @@ body{
     bottom: 20px;
     margin-left: 10px;
     color: #757575;
+}
+@media ( max-width: 1050px ){
+	.logo-home{
+		max-width: 280px;
+	}
+	.card-content .contenido h2{
+		font-size: 28px;
+	    max-width: 300px;
+	    line-height: 30px;
+	}
+}
+@media ( max-width: 768px ){
+	.logo-home{
+		max-width: 200px;
+	}
+	.card-content .contenido h2{
+		font-size: 24px;
+	    max-width: 280px;
+	    line-height: 30px;
+	}
+	.card-login{
+		max-width: 320px;
+	}
+	.card-content{
+		max-width: calc(100% - 320px);
+	}
+}
+@media ( max-width: 420px ){
+	.card-content{
+		display: none;
+	}
+	.card-login {
+	    max-width: 100%;
+	}
 }
