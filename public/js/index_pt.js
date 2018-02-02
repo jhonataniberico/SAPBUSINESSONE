@@ -11,7 +11,6 @@ function solicitarEstimacion() {
 	var c_ambos    		= $('#c-ambos').is(':checked');
 	var terminos		= $('#checkbox-1').is(':checked');
 	var contacto		= null;
-
 	if(nombre_completo == '' && empresa == '' && email == '' && pais == '' && cargo == '' && telefono == '' && c_email == false && terminos == false) {
 		validarCampos();
 	}
@@ -78,7 +77,6 @@ function solicitarEstimacion() {
       }
 	});
 }
-
 function soloLetras(e) {
     key 	   = e.keyCode || e.which;
     tecla 	   = String.fromCharCode(key).toLowerCase();
@@ -96,7 +94,6 @@ function soloLetras(e) {
          return false;
      }
  }
-
  function valida(e) {
     tecla = (document.all) ? e.keyCode : e.which;
     //Tecla de retroceso para borrar, siempre la permite
@@ -108,12 +105,10 @@ function soloLetras(e) {
     tecla_final = String.fromCharCode(tecla);
     return patron.test(tecla_final);
 }
-
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
-
 //DETECT DEVICE FOR MOBILE
 var isMobile = {
     Android: function() {
@@ -135,11 +130,9 @@ var isMobile = {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
-
 var global_datos = null;
 var datos_array = [];
 var array_3pant = [];
-
 function guardarDatos(id,datos) {
 	var buttonSelect = $('#'+id+'.select-one');
 	var buttonToggle = $('#'+id+'.select-prioridad');
@@ -189,7 +182,6 @@ function guardarDatos(id,datos) {
 		}
 	});
 }
-
 function saveDatos(pantalla) {
 	var idioma = $('#Idioma').val();
 	var operar = null;
@@ -266,7 +258,6 @@ $( document ).ready(function() {
 		pant4 = 1;
 	});
 });
-
 function mostrarDatos() {
 	$.ajax({
 		data  : {array_ids   : array_ids,
@@ -292,7 +283,6 @@ function mostrarDatos() {
       }
 	});
 }
-
 function cambiarIdioma() {
 	var idioma = $('#Idioma').val();
 	if(idioma == 'Español') {
@@ -318,7 +308,6 @@ function cambiarIdioma() {
       }
 	});
 }
-
 var i = 1;
 function operar(id,tipo) {
 	var buttonSelect = $('#'+id+'.select-one');
@@ -394,7 +383,6 @@ function operar(id,tipo) {
 		}
 	}
 }
-
 var facturacion = null;
 function selectFacturacion(id){
 	facturacion = $('#facturacion').val();
@@ -423,7 +411,6 @@ function selectFacturacion(id){
 		Select.removeClass('aparecer');
 	})
 }
-
 function validarCampos(){
 	var $inputs = $('form :input');
 	var formvalido = true;
@@ -437,17 +424,11 @@ function validarCampos(){
 	});
 	return formvalido;
 }
-		 
-/*
-* Funcion que valida que un campo sea completado
-* @retun bool 
-*/
 function isEmpty(val){
 	if(jQuery.trim(val).length != 0)
     	return false;
 		return true;
 }
-
 var confirmar = 0;	
 function ConfirmarRespuestas(){
 	confirmar = 1;
@@ -471,7 +452,6 @@ function ConfirmarRespuestas(){
       }
 	});
 }
-
 function limpiarCampos() {
 	var nombre_completo = $('#nombre_completo').val("");
 	var empresa  		= $('#empresa').val("");
@@ -494,7 +474,6 @@ function limpiarCampos() {
 		$('#c-ambos').parent().removeClass('is-checked');
 	}
 }
-
 function enviarGracias() {
 	$('#window5-page').addClass('display-flex');
 	$('.mdl-solicitud').addClass('animated fadeOutLeft');
@@ -505,7 +484,6 @@ function enviarGracias() {
 		location.reload();
 	}, 4000);
 }
-
 /*BUTTONS NEXT - PREV */
 var m = 1;
 var id_primero 	  = "";
@@ -529,7 +507,6 @@ function buttonNext(){
 	header.addClass('opacity');
 	footerLogo.addClass('opacity');
 }
-
 var pant1 = 0;
 var pant2 = 0;
 var pant3 = 0;
@@ -688,7 +665,6 @@ function buttonQuestion(direction){
 		}
 	}
 }
-
 /*EDIT QUESTION*/
 var num = null;
 var data_ids_arr = null;
@@ -748,47 +724,6 @@ function EditQuestion(id, pant){
         msj('error',err.message);
       }
 	});
-}
-
-function ingresar() {
-	var usuario  = $('#usuario').val();
-	var password = $('#password').val();
-	if(usuario == null) {
-		$('#usuario').parent().addClass('is-invalid');
-		return;
-	}
-	if(password == null) {
-		$('#password').parent().addClass('is-invalid');
-		return;
-	}
-	$.ajax({
-		data  : { usuario  : usuario,
-				  password : password},
-		url   : 'login/ingresar',
-		type  : 'POST'
-	}).done(function(data){
-		try{
-        	data = JSON.parse(data);
-        	if(data.error == 0){
-        		location.href = 'admin';
-        		$('#usuario').val("");
-        		$('#password').val("");
-        	}else {
-				$('#usuario').parent().addClass('is-invalid');
-				$('#password').parent().addClass('is-invalid');
-        		return;
-        	}
-      } catch (err){
-        msj('error',err.message);
-      }
-	});
-}
-
-function verificarDatos(e){
-	if(e.keyCode === 13){
-		e.preventDefault();
-		ingresar();
-    }
 }
 function closeModal(){
 	$('#ModalQuestion').modal('hide');

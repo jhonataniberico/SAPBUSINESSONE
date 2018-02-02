@@ -38,7 +38,6 @@ function ingresar() {
       }
 	});
 }
-
 function cerrarCesion() {
 	$.ajax({
 		url   : 'admin/cerrarCesion',
@@ -56,7 +55,6 @@ function cerrarCesion() {
       }
 	});
 }
-
 $("#showpass").click(function() {
 	$(this).find('i').toggleClass("mdi-remove_red_eye mdi-visibility_off");
     var input = $(this).parent().find('.mdl-textfield__input');
@@ -66,7 +64,6 @@ $("#showpass").click(function() {
       input.attr("type", "password");
     }
 });
-
 function soloLetras(e) {
     key 	   = e.keyCode || e.which;
     tecla 	   = String.fromCharCode(key).toLowerCase();
@@ -84,7 +81,6 @@ function soloLetras(e) {
          return false;
      }
  }
-
  function valida(e) {
     tecla = (document.all) ? e.keyCode : e.which;
     //Tecla de retroceso para borrar, siempre la permite
@@ -96,12 +92,10 @@ function soloLetras(e) {
     tecla_final = String.fromCharCode(tecla);
     return patron.test(tecla_final);
 }
-
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
-
 function verificarDatos(e){
 	if(e.keyCode === 13){
 		e.preventDefault();
