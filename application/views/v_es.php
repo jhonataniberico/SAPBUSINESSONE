@@ -573,16 +573,16 @@
 			            		</div>
 			            		<div class="mdl-back-respuestas">
 		        					<div class="mdl-back-contenido">
-		        						<span>XX.000</span>
-		        						<p>empresas en nuestra regi&oacute;n utilizan SAP Business One</p>
+		        						<span>10.511</span>
+		        						<p>empresas en nuestra regi&oacute;n utilizan SAP Business One.</p>
 		        					</div>
 		        					<div class="mdl-back-contenido second">
 		        						<span>40 a 60%</span>
-		        						<p>de reducci&oacute;n en las cargas administrativas de su negocio</p>
+		        						<p>de reducci&oacute;n en las cargas administrativas de su negocio.</p>
 		        					</div>
 		        					<div class="mdl-back-contenido">
-		        						<span>X00+</span>
-		        						<p>partners especializados en SAP Business One para nuestra regi&oacute;n</p>
+		        						<span>100+</span>
+		        						<p>partners especializados en SAP Business One para nuestra regi&oacute;n.</p>
 		        					</div>
 			            		</div>
 		            		</div>

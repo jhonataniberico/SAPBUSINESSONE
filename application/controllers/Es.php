@@ -244,7 +244,7 @@ class Es extends CI_Controller {
                     <head>
                       <title></title>
                     </head>
-                    <body style="font-family: 'Open Sans',Arial,Helvetica,sans-serif;">
+                    <body style="font-family: "Open Sans",Arial,Helvetica,sans-serif;">
                       <div style="max-width: 600px; width: 100%; margin: auto;background-color: #000000;">
                         <div style="height: 140px;border-bottom: 5px solid #e4e4e4;">
                           <div style="text-align: center;float: left;padding: 50px 15px;max-width: 180px;width: 100%;">
