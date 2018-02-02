@@ -207,7 +207,7 @@ class Pt extends CI_Controller {
        $this->email->initialize($configGmail);
        $this->email->from('info@mcg-agency.com');
        $this->email->to('jhonatanibericom@gmail.com');//EMAIL AL QUIÉN IRÁ DIRIGIDO
-       $this->email->subject('Bienvenido/a a SAP BUSINESS ONE');
+       $this->email->subject('Bem-vindo/a ao SAP BUSINESS ONE');
 
        //CONSTRUIMOS EL HTML
        $texto = '<!DOCTYPE html>
@@ -228,7 +228,7 @@ class Pt extends CI_Controller {
                           </div>
                         </div>
                         <div style="background-color: #000000; color: #FFFFFF;padding: 30px;">
-                          <h2 style="text-align: center">Datos del Cliente</h2>
+                          <h2 style="text-align: center">Dados do cliente</h2>
                           <div>
                             <strong style="    max-width: 140px;width: 100%;display: inline-block;">Cliente</strong>
                             <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['nombre_completo'].'</p>
@@ -242,7 +242,7 @@ class Pt extends CI_Controller {
                             <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['Empresa'].'</p>
                           </div>
                           <div>
-                            <strong style="    max-width: 140px;width: 100%;display: inline-block;">Teléfono</strong>
+                            <strong style="    max-width: 140px;width: 100%;display: inline-block;">Telefone</strong>
                             <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['Telefono'].'</p>
                           </div>
                           <div>
@@ -250,18 +250,18 @@ class Pt extends CI_Controller {
                             <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['Email'].'</p>
                           </div>
                           <div>
-                            <strong style="    max-width: 140px;width: 100%;display: inline-block;">Relación con SAP</strong>
+                            <strong style="    max-width: 140px;width: 100%;display: inline-block;">Relacionamento com SAP</strong>
                             <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['Relacion'].'</p>
                           </div>
                           <div>
                             <strong style="    max-width: 140px;width: 100%;display: inline-block;">País</strong>
                             <p style="display: inline-block; margin: 0;"><span style="margin-right: 20px;">:</span> '.$_SESSION['Pais'].'</p>
                           </div>
-                          <h2 style="text-align: center">Respuestas</h2>
+                          <h2 style="text-align: center">Respostas</h2>
                           <div style="display: flex;">
                             <div style="margin-right: 20px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">1</span></div>
                             <div>
-                              <p style="margin: 0;">¿En qué industria se desempeña?</p>
+                              <p style="margin: 0;">¿Em que setor você atua?</p>
                               <ul style="margin: 5px 0;padding-left: 15px;">
                                 <li>'.$respuestas[0]->Industria.'</li>
                               </ul>
@@ -270,16 +270,16 @@ class Pt extends CI_Controller {
                           <div style="display: flex;">
                             <div style="margin-right: 20px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">2</span></div>
                             <div>
-                              <p style="margin: 0;">¿De qué tamaño es su empresa?</p>
+                              <p style="margin: 0;">¿Qual o tamanho da sua empresa?</p>
                               <ul style="margin: 5px 0;padding-left: 15px;">
-                                <li>'.$respuestas[0]->Tamanio.' empleados</li>
+                                <li>'.$respuestas[0]->Tamanio.' empregados</li>
                               </ul>
                             </div>
                           </div>
                           <div style="display: flex;">
                             <div style="margin-right: 20px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">3</span></div>
                             <div>
-                              <p style="margin: 0;">Su facturación</p>
+                              <p style="margin: 0;">Sua cobrança</p>
                               <ul style="margin: 5px 0;padding-left: 15px;">
                                 <li>'.$respuestas[0]->Factura_anual.'</li>
                               </ul>
@@ -288,7 +288,7 @@ class Pt extends CI_Controller {
                           <div style="display: flex;">
                             <div style="margin-right: 20px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">4</span></div>
                             <div>
-                              <p style="margin: 0;">¿Cuál es la prioridad de su negocio?</p>
+                              <p style="margin: 0;">¿Qual é a prioridade da sua empresa?</p>
                               <ul style="margin: 5px 0;padding-left: 15px;">
                                 <li>'.$respuestas[0]->Prioridad.'</li>
                               </ul>
@@ -297,7 +297,7 @@ class Pt extends CI_Controller {
                           <div style="display: flex;">
                             <div style="margin-right: 20px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">5</span></div>
                             <div>
-                              <p style="margin: 0;">¿Que tipo de infraestructura está buscando?</p>
+                              <p style="margin: 0;">¿Que tipo de infraestrutura você está procurando?</p>
                               <ul style="margin: 5px 0;padding-left: 15px;">
                                 <li>'.$respuestas[0]->Infraestructura.'</li>
                               </ul>
