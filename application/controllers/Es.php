@@ -228,78 +228,78 @@ class Es extends CI_Controller {
                           </div>
                         </div>
                         <div style="background-color: #000000; color: #FFFFFF;padding: 30px;">
-                          <h2 style="text-align: center">Datos del Cliente</h2>
+                          <h2 style="text-align: center;color: #FFFFFF;">Datos del Cliente</h2>
                           <div style="display: flex; align-items: center;margin: 5px 0;">
-                            <strong style="    max-width: 85px;width: 100%;display: inline-block;">Cliente:</strong>
-                            <p style="display: inline-block; margin: 0;overflow: hidden;text-overflow: ellipsis;">'.$_SESSION['nombre_completo'].'</p>
+                            <strong style="    max-width: 85px;width: 100%;display: inline-block;color: #FFFFFF;">Cliente:</strong>
+                            <p style="display: inline-block; margin: 0;overflow: hidden;text-overflow: ellipsis;color: #FFFFFF;">'.$_SESSION['nombre_completo'].'</p>
                           </div>
                           <div style="display: flex; align-items: center;margin: 5px 0;">
-                            <strong style="    max-width: 85px;width: 100%;display: inline-block;">Cargo:</strong>
-                            <p style="display: inline-block; margin: 0;overflow: hidden;text-overflow: ellipsis;"></span>'.$_SESSION['Cargo'].'</p>
+                            <strong style="    max-width: 85px;width: 100%;display: inline-block;color: #FFFFFF;">Cargo:</strong>
+                            <p style="display: inline-block; margin: 0;overflow: hidden;text-overflow: ellipsis;color: #FFFFFF;"></span>'.$_SESSION['Cargo'].'</p>
                           </div>
                           <div style="display: flex; align-items: center;margin: 5px 0;">
-                            <strong style="    max-width: 85px;width: 100%;display: inline-block;">Empresa:</strong>
-                            <p style="display: inline-block; margin: 0;overflow: hidden;text-overflow: ellipsis;">'.$_SESSION['Empresa'].'</p>
+                            <strong style="    max-width: 85px;width: 100%;display: inline-block;color: #FFFFFF;">Empresa:</strong>
+                            <p style="display: inline-block; margin: 0;overflow: hidden;text-overflow: ellipsis;color: #FFFFFF;">'.$_SESSION['Empresa'].'</p>
                           </div>
                           <div style="display: flex; align-items: center;margin: 5px 0;">
-                            <strong style="    max-width: 85px;width: 100%;display: inline-block;">Tel&eacute;fono:</strong>
-                            <p style="display: inline-block; margin: 0;overflow: hidden;text-overflow: ellipsis;">'.$_SESSION['Telefono'].'</p>
+                            <strong style="    max-width: 85px;width: 100%;display: inline-block;color: #FFFFFF;">Tel&eacute;fono:</strong>
+                            <p style="display: inline-block; margin: 0;overflow: hidden;text-overflow: ellipsis;color: #FFFFFF;">'.$_SESSION['Telefono'].'</p>
                           </div>
                           <div style="display: flex; align-items: center;margin: 5px 0;">
-                            <strong style="    max-width: 85px;width: 100%;display: inline-block;">Email:</strong>
-                            <p style="display: inline-block; margin: 0;overflow: hidden;text-overflow: ellipsis;">'.$_SESSION['Email'].'</p>
+                            <strong style="    max-width: 85px;width: 100%;display: inline-block;color: #FFFFFF;">Email:</strong>
+                            <p style="display: inline-block; margin: 0;overflow: hidden;text-overflow: ellipsis;color: #FFFFFF;">'.$_SESSION['Email'].'</p>
                           </div>
                           <div style="display: flex; align-items: center;margin: 5px 0;">
-                            <strong style="    max-width: 85px;width: 100%;display: inline-block;">Relaci&oacute;n con SAP:</strong>
-                            <p style="display: inline-block; margin: 0;overflow: hidden;text-overflow: ellipsis;">'.$_SESSION['Relacion'].'</p>
+                            <strong style="    max-width: 85px;width: 100%;display: inline-block;color: #FFFFFF;">Relaci&oacute;n con SAP:</strong>
+                            <p style="display: inline-block; margin: 0;overflow: hidden;text-overflow: ellipsis;color: #FFFFFF;">'.$_SESSION['Relacion'].'</p>
                           </div>
                           <div style="display: flex; align-items: center;margin: 5px 0;">
-                            <strong style="    max-width: 85px;width: 100%;display: inline-block;">Pa&iacute;s:</strong>
-                            <p style="display: inline-block; margin: 0;overflow: hidden;text-overflow: ellipsis;">'.$_SESSION['Pais'].'</p>
+                            <strong style="    max-width: 85px;width: 100%;display: inline-block;color: #FFFFFF;">Pa&iacute;s:</strong>
+                            <p style="display: inline-block; margin: 0;overflow: hidden;text-overflow: ellipsis;color: #FFFFFF;">'.$_SESSION['Pais'].'</p>
                           </div>
-                          <h2 style="text-align: center">Respuestas</h2>
+                          <h2 style="text-align: center;color: #FFFFFF;">Respuestas</h2>
                           <div style="display: flex;margin: 10px 0;">
-                            <div style="margin-right: 15px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">1</span></div>
+                            <div style="margin-right: 15px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;color: #FFFFFF;">1</span></div>
                             <div>
-                              <p style="margin: 0;">¿En qu&eacute; industria se desempe&ntilde;a&#63;</p>
+                              <p style="margin: 0;color: #FFFFFF;">¿En qu&eacute; industria se desempe&ntilde;a&#63;</p>
                               <ul style="margin: 2px 0;padding-left: 15px;">
-                                <li>'.$respuestas[0]->Industria.'</li>
+                                <li style="color: #FFFFFF;">'.$respuestas[0]->Industria.'</li>
                               </ul>
                             </div>
                           </div>
                           <div style="display: flex;margin: 10px 0;">
-                            <div style="margin-right: 15px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">2</span></div>
+                            <div style="margin-right: 15px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;color: #FFFFFF;">2</span></div>
                             <div>
-                              <p style="margin: 0;">¿De qu&eacute; tama&ntilde;o es su empresa&#63;</p>
+                              <p style="margin: 0;color: #FFFFFF;">¿De qu&eacute; tama&ntilde;o es su empresa&#63;</p>
                               <ul style="margin: 2px 0;padding-left: 15px;">
-                                <li>'.$respuestas[0]->Tamanio.' empleados</li>
+                                <li style="color: #FFFFFF;">'.$respuestas[0]->Tamanio.' empleados</li>
                               </ul>
                             </div>
                           </div>
                           <div style="display: flex;margin: 10px 0;">
-                            <div style="margin-right: 15px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">3</span></div>
+                            <div style="margin-right: 15px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;color: #FFFFFF;">3</span></div>
                             <div>
-                              <p style="margin: 0;">Su facturaci&oacute;n</p>
+                              <p style="margin: 0;color: #FFFFFF;">Su facturaci&oacute;n</p>
                               <ul style="margin: 2px 0;padding-left: 15px;">
-                                <li>'.$respuestas[0]->Factura_anual.'</li>
+                                <li style="color: #FFFFFF;">'.$respuestas[0]->Factura_anual.'</li>
                               </ul>
                             </div>
                           </div>
                           <div style="display: flex;margin: 10px 0;">
-                            <div style="margin-right: 15px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">4</span></div>
+                            <div style="margin-right: 15px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;color: #FFFFFF;">4</span></div>
                             <div>
-                              <p style="margin: 0;">¿Cu&aacute;l es la prioridad de su negocio&#63;</p>
+                              <p style="margin: 0;color: #FFFFFF;">¿Cu&aacute;l es la prioridad de su negocio&#63;</p>
                               <ul style="margin: 2px 0;padding-left: 15px;">
-                                <li>'.$respuestas[0]->Prioridad.'</li>
+                                <li style="color: #FFFFFF;">'.$respuestas[0]->Prioridad.'</li>
                               </ul>
                             </div>
                           </div>
                           <div style="display: flex;margin: 10px 0;">
-                            <div style="margin-right: 15px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;">5</span></div>
+                            <div style="margin-right: 15px;max-width: 40px;height:40px;width: 100%;display: inline-block;background-color: #FDB917; border-radius: 25px;display: flex;align-items: center;"><span style="margin: auto;color: #FFFFFF;">5</span></div>
                             <div>
-                              <p style="margin: 0;">¿Que tipo de infraestructura est&aacute; buscando&#63;</p>
+                              <p style="margin: 0;color: #FFFFFF;">¿Que tipo de infraestructura est&aacute; buscando&#63;</p>
                               <ul style="margin: 2px 0;padding-left: 15px;">
-                                <li>'.$respuestas[0]->Infraestructura.'</li>
+                                <li style="color: #FFFFFF;">'.$respuestas[0]->Infraestructura.'</li>
                               </ul>
                             </div>
                           </div>
