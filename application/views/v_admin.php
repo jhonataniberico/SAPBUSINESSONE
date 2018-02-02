@@ -23,8 +23,6 @@
     <link rel="stylesheet"    href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
     <link rel="stylesheet"    href="https://cdn.datatables.net/autofill/2.2.2/css/autoFill.dataTables.min.css">
     <link rel="stylesheet"    href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css">
-    <link rel="stylesheet"    href="https://cdn.datatables.net/fixedcolumns/3.2.4/css/fixedColumns.   dataTables.min.css">
-    <link rel="stylesheet"    href="https://cdn.datatables.net/fixedheader/3.1.3/css/fixedHeader.dataTables.min.css">
     <link rel="stylesheet"    href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css">
     <link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
 <body>
@@ -74,7 +72,7 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
     <script type="text/javascript" src="//cdn.datatables.net/buttons/1.4.2/js/buttons.html5.min.js"></script>
     <script type="text/javascript" src="//cdn.datatables.net/buttons/1.4.2/js/buttons.print.min.js"></script>
-    <script src="<?php echo RUTA_JS?>index.js?v=<?php echo time();?>"></script>
+    <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script>
     <script type="text/javascript">
       $(document).ready(function() {
           $('#example').DataTable( {
