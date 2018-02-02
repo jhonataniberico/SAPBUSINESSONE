@@ -228,7 +228,7 @@ class En extends CI_Controller {
                           </div>
                         </div>
                         <div style="background-color: #000000; color: #FFFFFF;padding: 30px;">
-                          <h2 style="text-align: center;color: #FFFFFF;">Client data</h2>
+                          <h2 style="text-align: center;color: #FFFFFF;">Customer Information</h2>
                           <div style="display: flex; align-items: center;margin: 5px 0;">
                             <strong style="    max-width: 85px;width: 100%;display: inline-block;color: #FFFFFF;">Client:</strong>
                             <p style="display: inline-block; margin: 0;overflow: hidden;text-overflow: ellipsis;color: #FFFFFF;">'.$_SESSION['nombre_completo'].'</p>

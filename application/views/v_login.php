@@ -29,7 +29,7 @@
             </div>
             <div class="contenido">
                 <img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-                <h2>Diferentes escenarios. Una soluci&oacute;n.</h2>
+                <h2>Different scenarios. One solution</h2>
             </div>
             <div class="contenido-bottom">
                 <img src="<?php echo RUTA_IMG?>fondo/fondo.png">
