@@ -1109,6 +1109,39 @@ span.number{
 .mdl-radio__inner-circle{
 	background: #4983B6;
 }
+/*CHAT*/
+.chat{
+    max-width: 150px;
+    background-color: #1D8ACB;
+    color: #FFFFFF;
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    right: 100px;
+    padding: 5px;
+    z-index: 10;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+}
+.chat a{
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'RobotoRegular';
+}
+.chat img{
+	max-width: 40px;
+    width: 100%;
+}
+.chat label{
+    margin: 0;
+    font-family: 'RobotoRegular';
+    font-weight: 100;
+}
 @media (max-width: 1400px) and (max-height: 680px){
 	.logo-home{
 		max-width: 250px;
@@ -1180,6 +1213,15 @@ span.number{
 	}
 	.question-respuestas{
 		max-width: 550px;
+	}
+	.chat label{
+		display: none;
+	}
+	.chat{
+		max-width: 60px;
+	    padding: 8px;
+	    right: 15px;
+	    bottom: 15px;
 	}
 }
 @media (max-width: 768px){
@@ -1469,6 +1511,15 @@ span.number{
 	}
 	.mdl-back-respuestas p{
 	    line-height: 20px;
+	}
+	.chat{
+	    right: 10px;
+	    bottom: 10px;
+	    padding: 5px;
+	    max-width: 50px;
+	}
+	.chat img{
+		max-width: 40px;
 	}
 }	
 @media(max-width: 320px){

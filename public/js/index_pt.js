@@ -503,6 +503,7 @@ function buttonNext(){
 	homePage.addClass('animated fadeOutLeft');
 	firstWindow.addClass('animated fadeInRight');
 	$('.button-arrow').css("display","block");
+	$('.chat').css("display","block")
 	$('#'+id_primero).addClass('button-select');
 	header.addClass('opacity');
 	footerLogo.addClass('opacity');
@@ -574,6 +575,7 @@ function buttonQuestion(direction){
 			fourthWindow.addClass('animated fadeOutLeft');
 			fifthWindow.addClass('animated fadeInRight');
 			$('.button-arrow.button-next').css("display","none");
+			$('.chat').css("display","none");
 			var id_button = $('.mdl-card-question .content-card').find('.select-infraestructura.select-one.button-select').attr('id');;
     		array_ids.push(id_button);
     		saveDatos(4);
@@ -591,6 +593,7 @@ function buttonQuestion(direction){
 			fourthWindow.addClass('animated fadeInLeft');
 			fifthWindow.addClass('animated fadeOutRight');
 			$('.button-arrow.button-next').css("display","block");
+			$('.chat').css("display","block");
 			if(data_ids_arr == 5) {
 				
 				$('#'+global_array[3]).addClass('button-select');
@@ -654,6 +657,7 @@ function buttonQuestion(direction){
 			header.removeClass('opacity');
 			footerLogo.removeClass('opacity');
 			$('.button-arrow').css("display","none");
+			$('.chat').css("display","none");
 			homePage.find('.button-next').css("display","block");
 			if(pant1 == 1) {
 				$('.button-next').prop("disabled", false);
