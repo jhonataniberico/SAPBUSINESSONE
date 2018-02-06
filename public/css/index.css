@@ -1114,7 +1114,7 @@ span.number{
     max-width: 150px;
     background-color: #1D8ACB;
     color: #FFFFFF;
-    position: absolute;
+    position: fixed;
     width: 100%;
     bottom: 10px;
     right: 100px;
