@@ -33,6 +33,7 @@
     			<div class="mdl-container mdl-all-window">
 	    			<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	            	<h2 class="title-home">Diferentes escenarios. Una soluci&oacute;n</h2>
+	            	<a href="https://z1.liveper.sn/api/account/81933160/route/campaign/194741814/engagement/250005114"></a>
 	    		</div>
 	    		<div class="background-body">
 					<div class="background-body3"></div>
@@ -72,6 +73,9 @@
 		    		<div class="bottom-right">
 						<p>Puede seleccionar m&aacute;s de una opci&oacute;n</p>
 		    		</div>
+        		</div>
+        		<div class="chat">
+        			<a href="https://z1.liveper.sn/api/account/81933160/route/campaign/194741814/engagement/250005114" target="_blank"><img src="<?php echo RUTA_IMG?>chat.png"><label>Chatea con nosotros</label></a>
         		</div>
 				<div id="window1-page" class="window-center opacity-done">
 					<div class="mdl-container text-center">

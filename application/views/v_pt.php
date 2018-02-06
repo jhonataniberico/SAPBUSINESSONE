@@ -73,6 +73,9 @@
 						<p>Voc&ecirc; pode selecionar mais de uma op&ccedil;&atilde;o</p>
 		    		</div>
         		</div>
+        		<div class="chat">
+        			<a href="https://z1.liveper.sn/api/account/81933160/route/campaign/194741814/engagement/250005714" target="_blank"><img src="<?php echo RUTA_IMG?>chat.png"><label>Chatea con nosotros</label></a>
+        		</div>
 				<div id="window1-page" class="window-center opacity-done">
 					<div class="mdl-container text-center">
 						<div class="question">
