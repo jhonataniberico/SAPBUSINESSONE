@@ -13,6 +13,7 @@ h2,p{
 	z-index: 10 !important;
 	opacity: 1 !important;
 }
+<<<<<<< Updated upstream
 .button-linkedin{
     background-color: #008FCC;
     padding: 10px;
@@ -89,6 +90,15 @@ table.dataTable.no-footer{
     text-decoration: none !important;
     text-transform: initial;
 }
+=======
+.center-agradecimiento{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    overflow-y: hidden !important;
+    padding: 0;
+}
+>>>>>>> Stashed changes
 /*GENERAL*/
 .window-center{
 	width: 100%;
@@ -1255,6 +1265,9 @@ span.number{
 		height: 100%;
 	    padding: 100px 70px;
 	}
+	.window-center.opacity-done .mdl-container.center-agradecimiento{
+		height: inherit;
+	}
 	.logo-header{
 		max-width: 120px;
 	}
@@ -1314,9 +1327,12 @@ span.number{
 	}
 	.mdl-agradecimiento{
 		max-width: 650px;
+<<<<<<< Updated upstream
 	}
 	.mdl-back-respuestas{
 		padding: 5px;
+=======
+>>>>>>> Stashed changes
 	}
 }
 @media (max-width: 650px){
@@ -1424,6 +1440,14 @@ span.number{
 	.mdl-container.mdl-flex{
 		max-width: 260px;
 	}
+<<<<<<< Updated upstream
+=======
+	.logo-bottom,
+	.header-left,
+	.header-home{
+		padding: 12px;
+	}
+>>>>>>> Stashed changes
 	.background-body{
 		max-width: 60px;
 	}
@@ -1435,8 +1459,40 @@ span.number{
 	.logo-home{
 		max-width: 200px;
 	}
+<<<<<<< Updated upstream
 	.logo-bottom img{
 		max-width: 120px;
+=======
+	.logo-header{
+		max-width: 75px;
+	    margin-right: 5px;
+	}
+	.logo-bottom img{
+		max-width: 120px;
+	}
+	.header h2{
+	    font-size: 12px;
+	    max-width: 115px;
+	    line-height: 14px;
+	    padding-left: 5px;
+	}
+	.header-right{
+		max-width: 105px;
+		height: 52px;
+	}
+	.header-right .background1, 
+	.header-right .background2, 
+	.header-right .background3{
+		max-width: 3px;
+	}
+	.mdl-idioma .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+		width: 95px;
+    	margin-top: 12px;
+	}
+	.mdl-idioma .bootstrap-select.btn-group .dropdown-toggle .filter-option,
+	.mdl-idioma .bootstrap-select.btn-group .dropdown-menu li a span.text{
+		font-size: 13px;
+>>>>>>> Stashed changes
 	}
 	.question{
 	    margin: 10px auto;
@@ -1502,6 +1558,7 @@ span.number{
 		font-size: 18px;
     	line-height: 22px;
 	}
+<<<<<<< Updated upstream
 	.mdl-formulario, .mdl-respuestas{
 		padding: 15px;
 	}
@@ -1521,6 +1578,8 @@ span.number{
 	.chat img{
 		max-width: 40px;
 	}
+=======
+>>>>>>> Stashed changes
 }	
 @media(max-width: 320px){
 	.mdl-container {
