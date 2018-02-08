@@ -104,10 +104,6 @@ table.dataTable.no-footer{
 	-o-transition: opacity .3s ease-in-out;
 	transition: all .3s ease-in-out;
 }
-/*.arrow-block{
-	opacity: .5;
-	pointer-events: none;
-}*/
 .mdl-container{
 	max-width: 1350px;
 	width: 100%;
@@ -157,7 +153,6 @@ table.dataTable.no-footer{
 	-o-transition: max-width .3s ease-in-out;
 	transition: max-width .3s ease-in-out;
 }
-
 .bottom-right{
 	position: absolute;
     right: 0;
@@ -666,7 +661,6 @@ span.number{
     max-width: 178px;
     margin: auto;
 }
-
 .mdl-card-question .card-back i,
 .mdl-card-question .card-front i,
 .mdl-card__menu{
