@@ -10,12 +10,18 @@ function solicitarEstimacion() {
 	var c_telefono    	= $('#c-telefono').is(':checked');
 	var c_ambos    		= $('#c-ambos').is(':checked');
 	var terminos		= $('#checkbox-1').is(':checked');
+	var term_cond		= null;
 	var contacto		= null;
 	if(nombre_completo == '' && empresa == '' && email == '' && pais == '' && cargo == '' && telefono == '' && c_email == false && terminos == false) {
 		validarCampos();
 	}
 	if(terminos == false) {
 		return;
+	}
+	if(terminos == true) {
+		term_cond = 1
+	}else {
+		term_cond = 0;
 	}
 	if(c_email == true) {
 		contacto = 1;
@@ -58,7 +64,8 @@ function solicitarEstimacion() {
 				  cargo 		  : cargo,
 				  telefono 		  : telefono,
 				  relacion 		  : relacion,
-				  contacto 		  : contacto},
+				  contacto 		  : contacto,
+				  term_cond       : term_cond},
 		url   : 'en/solicitarEstimacion',
 		type  : 'POST'
 	}).done(function(data){

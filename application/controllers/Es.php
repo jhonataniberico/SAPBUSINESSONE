@@ -133,13 +133,15 @@ class Es extends CI_Controller {
             $cargo           = $this->input->post('cargo');
             $telefono        = $this->input->post('telefono');
             $relacion        = $this->input->post('relacion');
-            $contacto        = $this->input->post('contacto');
+            $contacto        = $this->input->post('contacto');//
+            $term_cond        = $this->input->post('term_cond');
             $arrayInsert = array('nombre_completo' => $nombre_completo,
                                  'Empresa'         => $empresa,
                                  'Email'           => $email,
                                  'Pais'            => $pais,
                                  'Cargo'           => $cargo,
                                  'Telefono'        => $telefono,
+                                 'Terminos'        => $term_cond,
                                  'Relacion'        => $relacion,
                                  'Contactado'      => $contacto,
                                  'Id_solicitud'    => $_SESSION['id_sol']);
