@@ -23,11 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-<<<<<<< Updated upstream
-// $config['base_url'] = 'http://localhost/SAPBUSINESSONE';
-=======
->>>>>>> Stashed changes
-$config['base_url'] = 'http://192.168.200.158/SAPBUSINESSONE';
+ $config['base_url'] = 'http://localhost/SAPBUSINESSONE';
 
 /*
 |--------------------------------------------------------------------------
