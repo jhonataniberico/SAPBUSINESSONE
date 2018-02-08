@@ -567,7 +567,7 @@
 		        					<div class="mdl-back-contenido">
 		        						<span>10,511</span>
 		        						<p>companies in our region use SAP Business One.</p>
-		        						<small>(number shared by Samuli, global Customer Counting)</small>
+		        						<small>(Samuli Ajo, Global Customer Counting)</small>
 		        					</div>
 		        					<div class="mdl-back-contenido second">
 		        						<span>40 a 60%</span>
@@ -576,7 +576,7 @@
 		        					<div class="mdl-back-contenido">
 		        						<span>103</span>
 		        						<p>partners specializing in SAP Business One for our region.</p>
-		        						<small>(number extracted from Vini Ricarte’s last report)</small>
+		        						<small>(Vinicius Ricarte, Channel Sales Development)</small>
 		        					</div>
 			            		</div>
 		            		</div>

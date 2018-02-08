@@ -570,7 +570,7 @@
 		        					<div class="mdl-back-contenido">
 		        						<span>10,511</span>
 		        						<p>empresas em nossa regi&atilde;o usam o SAP Business One.</p>
-		        						<small>(n&uacute;mero informado por Samuli, Customer Counting global)</small>
+		        						<small>(Samuli Ajo, Global Customer Counting)</small>
 		        					</div>
 		        					<div class="mdl-back-contenido second">
 		        						<span>40 a 60%</span>
@@ -579,7 +579,7 @@
 		        					<div class="mdl-back-contenido">
 		        						<span>103</span>
 		        						<p>parceiros especializados no SAP Business One para nossa regi&atilde;o.</p>
-		        						<small>(n&uacute;mero extra&iacute;do do &uacute;ltimo relat&oacute;rio de Vini Ricarte)</small>
+		        						<small>(Vinicius Ricarte, Channel Sales Development)</small>
 		        					</div>
 			            		</div>
 		            		</div>
