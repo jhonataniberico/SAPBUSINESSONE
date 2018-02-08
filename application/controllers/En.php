@@ -171,6 +171,7 @@ class En extends CI_Controller {
             $this->session->unset_userdata('idioma');
 
           //$this->sendGmailSap($email);
+          //$this->emailClienteSap($email);
           $data['msj']  = $datoInsert['msj'];
           $data['error'] = $datoInsert['error'];
         } catch (Exception $e) {
@@ -331,6 +332,118 @@ class En extends CI_Controller {
         $this->email->message($texto);//AQUI SE INSERTA EL HTML
         $this->email->send();
         $this->session->unset_userdata('id_persona');
+        $data['error'] = EXIT_SUCCESS;
+      }catch (Exception $e){
+        $data['msj'] = $e->getMessage();
+      }
+      return json_encode(array_map('utf8_encode', $data));
+    }
+
+    function emailClienteSap($email) {
+      $data['error'] = EXIT_ERROR;
+      $data['msj']   = null;
+      try {  
+       // cargamos la libreria email de ci
+       $this->load->library("email");
+       //configuracion para gmail
+       $configGmail = array(
+                            'protocol'  => 'smtp',
+                            'smtp_host' => 'smtpout.secureserver.net',
+                            'smtp_port' => 3535,
+                            'smtp_user' => 'confirmaciones@merino.com.pe',
+                            'smtp_pass' => 'cFm$17Pe',
+                            'mailtype'  => 'html',
+                            'charset'   => 'utf-8',
+                            'newline'   => "\r\n"
+                          );    
+       //cargamos la configuración para enviar con gmail
+       $this->email->initialize($configGmail);
+       $this->email->from('info@sap-latam.com');
+       $this->email->to($email);//EMAIL AL QUIÉN IRÁ DIRIGIDO
+       $this->email->subject('Estoy interesado en SAP Business One para mi negocio.');
+
+       //CONSTRUIMOS EL HTML
+        $texto = '<!DOCTYPE html>
+                <html>
+                <head>
+                  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                    <meta name="viewport" content="width=device-width">
+                  <title></title>
+                  <style type="text/css">
+                    table,tbody,tr,td,th{padding: 0;margin: 0;border-spacing: 0;border-collapse: inherit;}
+                    body{margin: 0;padding: 0; height: 100vh;}
+                    table.body{background-color: #F3F3F3;width: 100%;height: 100%;border:0;}
+                    h2,p{font-family: "Open Sans",Arial,Helvetica,sans-serif;margin: 0;}
+                  </style>
+                </head>
+                <body>
+                  <table class="body" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td>
+                        <table align="center" cellspacing="0" cellpadding="0" border="0" style="width: 100%;max-width: 600px;margin: 0 auto;background-color: #000000;text-align: center;float: none;">
+                          <tbody>
+                            <tr>
+                              <th>
+                                <table cellspacing="0" cellpadding="0" border="0">
+                                  <tbody>
+                                    <tr>
+                                      <th style="width: 525px;text-align: left;padding-left: 20px;">
+                                        <table cellspacing="0" cellpadding="0" border="0">
+                                          <tbody>
+                                            <tr style="text-align: left;">
+                                              <th style="text-align: left;"><img width="150" src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_header.png"></th>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </th>
+                                      <th style="width: 75px;">
+                                        <table cellspacing="0" cellpadding="0" border="0">
+                                          <tbody>
+                                            <tr>
+                                              <td style="height: 100px;width: 25px;background-color: #54442E;"></td>
+                                              <td style="height: 100px;width: 25px;background-color: #8D6832;"></td>
+                                              <td style="height: 100px;width: 25px;background-color: #E29D2E;"></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </th>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </th>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table align="center" cellspacing="0" cellpadding="0" style="width: 100%;border:1px solid #000000;max-width: 600px;margin: 5px auto;;text-align: center;float: none;background-color: #FFFFFF;">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <table align="center" cellspacing="0" cellpadding="0" style="text-align: center;margin: auto;">
+                                  <tbody>
+                                    <tr>
+                                      <td style="padding: 20px 40px 10px 40px;">
+                                        <h2 style="color: #000000;">Thanks for your interest</h2>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td style="padding:10px 40px 20px 40px;">
+                                        <p style="color: #000000;">A SAP representative will contact you to help you take the first step.</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </body>
+                </html>';
+
+        $this->email->message($texto);//AQUI SE INSERTA EL HTML
+        $this->email->send();
         $data['error'] = EXIT_SUCCESS;
       }catch (Exception $e){
         $data['msj'] = $e->getMessage();
