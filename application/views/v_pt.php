@@ -52,12 +52,12 @@
 				<div class="header">
 	    			<div class="header-left">
 	    				<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	    				<h2>¿Est&aacute; pronto para o SAP Business One&#63;</h2>
+	    				<h2>¿Voc&ecirc; Est&aacute; pronto para o SAP Business One&#63;</h2>
 	    			</div>
 	    			<div class="header-right">
 	    				<div class="mdl-idioma">
 							<select class="selectpicker" id="Idioma" name="Idioma" onchange="cambiarIdioma()">
-								<option value="Portugués">Portugues</option>
+								<option value="Portugués">Portugu&ecirc;s</option>
 								<option value="Español">Espanhol</option>
 								<option value="Inglés">Ingl&ecirc;s</option>
 							</select>
@@ -74,13 +74,13 @@
 		    		</div>
         		</div>
         		<div class="chat">
-        			<a href="https://z1.liveper.sn/api/account/81933160/route/campaign/194741814/engagement/250005714" target="_blank"><img src="<?php echo RUTA_IMG?>chat.png"><label>Chatea con nosotros</label></a>
+        			<a href="https://z1.liveper.sn/api/account/81933160/route/campaign/194741814/engagement/250005714" target="_blank"><img src="<?php echo RUTA_IMG?>chat.png"><label>Fale Conosco</label></a>
         		</div>
 				<div id="window1-page" class="window-center opacity-done">
 					<div class="mdl-container text-center">
 						<div class="question">
 			        		<span class="number">01/05</span>
-			        		<h2>¿Em que setor voc&ecirc; atua&#63;</h2>
+			        		<h2>Em que setor voc&ecirc; atua&#63;</h2>
 			        	</div>
 			        	<div class="mdl-card-question">
 			        		<div class="flip-card">
@@ -149,7 +149,7 @@
 			    			<div class="flip-card">
 			    				<div class="card-front card-front-none">
 			        				<img src="<?php echo RUTA_IMG?>cards/card-producto.png">
-			        				<p>Produto de Consumo</p>
+			        				<p>Bens de Consumo</p>
 			        			</div>
 			    			</div>
 			    			<div class="content-card">
@@ -193,7 +193,7 @@
 					<div class="mdl-container mdl-tablet text-center">
 						<div class="question">
 		            		<span class="number">02/05</span>
-		            		<h2>¿Qual o tamanho da sua empresa&#63;</h2>
+		            		<h2>Qual o tamanho da sua empresa&#63;</h2>
 		            	</div>
 		            	<div class="mdl-flex">
 	            			<div class="mdl-card-question">
@@ -233,7 +233,7 @@
 			            				<div class="col-xs-12">
 			            					<div class="mdl-select">
 			            						<select class="selectpicker" id="facturacion" name="facturacion" title="Selecione" onchange="selectFacturacion(this.id)">
-													<option value="< 1 Milhões de dólares">< 1 Milh&otilde;es de d&oacute;lares</option>
+													<option value="< 1 Milhão de dólares">< 1 Milh&otilde;es de d&oacute;lares</option>
 													<option value="1-3 Milhões de dólares">1-3 Milh&otilde;es de d&oacute;lares</option>
 													<option value="3-5 Milhões de dólares">3-5 Milh&otilde;es de d&oacute;lares</option>
 													<option value="5-10 Milhões de dólares">5-10 Milh&otilde;es de d&oacute;lares</option>
@@ -427,7 +427,7 @@
 					<div class="mdl-container text-center">
 						<div class="question">
 		            		<span class="number">04/05</span>
-		            		<h2 class="unique">¿Que tipo de infraestrutura voc&ecirc; est&aacute; procurando&#63;</h2>
+		            		<h2 class="unique">Que tipo de infraestrutura voc&ecirc; est&aacute; procurando&#63;</h2>
 		            	</div>
 		            	<div class="mdl-card-question">
 		            		<div class="flip-card">
@@ -437,7 +437,7 @@
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Implementar em sua atual infraestrutura ou adquirir uma das op&ccedil;&atilde;es de hardware certificado.</label>
+		            				<label>Implementar em sua atual infraestrutura ou adquirir uma das op&ccedil;&otilde;es de hardware certificado.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -472,7 +472,7 @@
 		            			<div class="contenido">
 		            				<div class="contenido-right">
 	            						<h2>Voc&ecirc; sabia que...</h2>
-	            						<p>... 21% est&aacute; cada vez mais interessado em alternativas ou hospedagem para o que, no momento, executam no local.</p>
+	            						<p>... 21% das empresas est&atilde;o cada vez mais interessadas em alternativas ou hospedagem para o que, no momento, executam no local.</p>
 	            						<small>(IDC, Setembro 2016)</small>
 		            				</div>
 		            				<div class="contenido-left">
@@ -489,7 +489,7 @@
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Combinar as duas infraestruturas para que as informa&ccedil;&otilde;es sens&iacute;veis possam permanecer em sua T I local.</label>
+		            				<label>Combinar as duas infraestruturas para que as informa&ccedil;&otilde;es sens&iacute;veis possam permanecer em sua TI local.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -498,7 +498,7 @@
 		            			<div class="contenido">
 		            				<div class="contenido-right">
 	            						<h2>Voc&ecirc; sabia que...</h2>
-	            						<p>... elas t&ecirc;m uma boa aceita&ccedil;&atilde;o nas empresas em rela&ccedil;&atilde;o a um futuro pr&oacute;ximo, j&aacute; que est&atilde;o sendo  desenvolvidos software de gest&atilde;o de nuvem para poder gerenciar uma nuvem privada e, no momento certo, adquirir recursos nos grandes provedores p&uacute;blicos.</p>
+	            						<p>... elas t&ecirc;m uma boa aceita&ccedil;&atilde;o nas empresas com rela&ccedil;&atilde;o a um futuro pr&oacute;ximo, j&aacute; que est&atilde;o sendo  desenvolvidos softwares de gest&atilde;o de nuvem para gerenciar uma nuvem privada e, no momento certo, adquirir recursos nos grandes provedores p&uacute;blicos.</p>
 	            						<small>(IDC, Setembro 2016)</small>
 		            				</div>
 		            				<div class="contenido-left">
@@ -563,13 +563,13 @@
 			            				</div>
 		            				</div>
 		            				<div class="col-xs-12 p-0 text-right m-t-10">
-		            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="ConfirmarRespuestas()">Confirmar respostas</button>
+		            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="ConfirmarRespuestas()">Confirmar respostas</button>hermosa
 		            				</div>
 			            		</div>
 			            		<div class="mdl-back-respuestas">
 		        					<div class="mdl-back-contenido">
 		        						<span>10,511</span>
-		        						<p>empresas em nossa regi&atilde;o usam o SAP Business One.</p>
+		        						<p>das empresas em nossa regi&atilde;o usam o SAP Business One.</p>
 		        						<small>(Samuli Ajo, Global Customer Counting)</small>
 		        					</div>
 		        					<div class="mdl-back-contenido second">
