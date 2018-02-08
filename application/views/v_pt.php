@@ -233,7 +233,7 @@
 			            				<div class="col-xs-12">
 			            					<div class="mdl-select">
 			            						<select class="selectpicker" id="facturacion" name="facturacion" title="Selecione" onchange="selectFacturacion(this.id)">
-													<option value="< 1 Milhão de dólares">< 1 Milh&otilde;es de d&oacute;lares</option>
+													<option value="< 1 Milhão de dólares">< 1 Milh&atilde;o de d&oacute;lares</option>
 													<option value="1-3 Milhões de dólares">1-3 Milh&otilde;es de d&oacute;lares</option>
 													<option value="3-5 Milhões de dólares">3-5 Milh&otilde;es de d&oacute;lares</option>
 													<option value="5-10 Milhões de dólares">5-10 Milh&otilde;es de d&oacute;lares</option>
@@ -498,7 +498,7 @@
 		            			<div class="contenido">
 		            				<div class="contenido-right">
 	            						<h2>Voc&ecirc; sabia que...</h2>
-	            						<p>... elas t&ecirc;m uma boa aceita&ccedil;&atilde;o nas empresas com rela&ccedil;&atilde;o a um futuro pr&oacute;ximo, j&aacute; que est&atilde;o sendo  desenvolvidos softwares de gest&atilde;o de nuvem para gerenciar uma nuvem privada e, no momento certo, adquirir recursos nos grandes provedores p&uacute;blicos.</p>
+	            						<p style="height: 116px;">... elas t&ecirc;m uma boa aceita&ccedil;&atilde;o nas empresas com rela&ccedil;&atilde;o a um futuro pr&oacute;ximo, j&aacute; que est&atilde;o sendo  desenvolvidos softwares de gest&atilde;o de nuvem para gerenciar uma nuvem privada e, no momento certo, adquirir recursos nos grandes provedores p&uacute;blicos.</p>
 	            						<small>(IDC, Setembro 2016)</small>
 		            				</div>
 		            				<div class="contenido-left">

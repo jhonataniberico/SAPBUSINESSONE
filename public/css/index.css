@@ -824,10 +824,9 @@ span.number{
     text-align: left;
 }
 #ModalQuestion .mdl-card .mdl-card__supporting-text p{
-
     line-height: 16px;
     font-size: 14px;
-    height: 120px;
+    height: 140px;
 }
 #ModalQuestion .mdl-card .mdl-card__menu button i{
 	color: #FFFFFF;
@@ -1141,6 +1140,7 @@ span.number{
     margin: 0;
     font-family: 'RobotoRegular';
     font-weight: 100;
+    width: 100%;
 }
 @media (max-width: 1400px) and (max-height: 680px){
 	.logo-home{
