@@ -219,20 +219,36 @@ class Pt extends CI_Controller {
                     <title></title>
                   </head>
                   <body style="font-family: "Open Sans",Arial,Helvetica,sans-serif;">
-                    <table cellspacing="0" cellpadding="0" border="0" style="max-width: 500px; width: 100%; margin: auto;border: 1px solid #757575;">
+                    <table align="center" cellspacing="0" cellpadding="0" border="0" style="max-width: 500px; width: 100%; margin: auto;border: 1px solid #757575;">
                       <tr>
-                        <td>
-                          <table cellspacing="0" cellpadding="0" border="0" style="background-color: #000000;width: 100%;">
+                        <th>
+                          <table cellspacing="0" cellpadding="0" border="0" style="background-color: #000000;">
                             <tbody>
                               <tr>
-                                <td style="width: 365px;padding: 30px;text-align: left;"><img width="150" src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_header.png"></td>
-                                <td style="height: 100%;width: 25px;background-color: #54442E;"></td>
-                                <td style="height: 100%;width: 25px;background-color: #8D6832;"></td>
-                                <td style="height: 100%;width: 25px;background-color: #E29D2E;"></td>
+                                <th style="width: 425px;text-align: left;padding-left: 20px;">
+                                  <table cellspacing="0" cellpadding="0" border="0">
+                                    <tbody>
+                                      <tr style="text-align: left;">
+                                        <th style="text-align: left;"><img width="150" src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_header.png"></th>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </th>
+                                <th style="width: 75px;">
+                                  <table cellspacing="0" cellpadding="0" border="0">
+                                    <tbody>
+                                      <tr>
+                                        <td style="height: 100px;width: 25px;background-color: #54442E;"></td>
+                                        <td style="height: 100px;width: 25px;background-color: #8D6832;"></td>
+                                        <td style="height: 100px;width: 25px;background-color: #E29D2E;"></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </th>
                               </tr>
                             </tbody>
                           </table>
-                        </td>
+                        </th>
                       </tr>
                       <tr>
                         <td>
