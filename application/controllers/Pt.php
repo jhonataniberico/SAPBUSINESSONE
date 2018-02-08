@@ -205,7 +205,7 @@ class Pt extends CI_Controller {
                           );    
        //cargamos la configuración para enviar con gmail
        $this->email->initialize($configGmail);
-       $this->email->from('info@mcg-agency.com');
+       $this->email->from('info@sap-latam.com');
        $this->email->to('jhonatanibericom@gmail.com');//EMAIL AL QUIÉN IRÁ DIRIGIDO
        $this->email->subject('Estou interessado em SAP Business One para o meu negócio.');
 

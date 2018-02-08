@@ -348,7 +348,7 @@ function operar(id,tipo) {
 		}else if(i == 7) {
 			$('#textOperar').text('2500 - 5000');
 		}else if(i == 8) {
-			$('#textOperar').text('5000 a más');
+			$('#textOperar').text('5000 +');
 		}else if(i > 8) {
 			i = 8;
 			return;
