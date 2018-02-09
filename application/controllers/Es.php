@@ -288,6 +288,10 @@ class Es extends CI_Controller {
                                       <td><h2 style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">País:</h2></td>
                                       <td><p style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Pais'].'</p></td>
                                     </tr>
+                                    <tr style="padding: 0 20px;">
+                                      <td><h2 style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Quiero que me contacten:</h2></td>
+                                      <td><p style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$contact.'</p></td>
+                                    </tr>
                                   </tbody>
                                 </table>
                               </tr>

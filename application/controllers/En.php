@@ -186,11 +186,11 @@ class En extends CI_Controller {
       $data['msj']   = null;
       try {  
         if($_SESSION['Contacto'] == 3){
-          $contact = 'por email y teléfono';
+          $contact = 'By email and phone';
         }else if($_SESSION['Contacto'] == 2){
-          $contact = 'por teléfono';
+          $contact = 'By phone';
         }else if($_SESSION['Contacto'] == 1){
-          $contact = 'por Email';
+          $contact = 'By email';
         }
         $respuestas = $this->M_solicitud->getRespUsuario($_SESSION['id_persona']);
        // cargamos la libreria email de ci
@@ -287,6 +287,10 @@ class En extends CI_Controller {
                                     <tr style="padding: 0 20px;">
                                       <td><h2 style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Country:</h2></td>
                                       <td><p style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Pais'].'</p></td>
+                                    </tr>
+                                    <tr style="padding: 0 20px;">
+                                      <td><h2 style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">I’d like to be contacted:</h2></td>
+                                      <td><p style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$contact.'</p></td>
                                     </tr>
                                   </tbody>
                                 </table>

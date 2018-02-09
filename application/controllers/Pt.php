@@ -186,11 +186,11 @@ class Pt extends CI_Controller {
       $data['msj']   = null;
       try {  
         if($_SESSION['Contacto'] == 3){
-          $contact = 'por email y teléfono';
+          $contact = 'Por e-mail e telefone';
         }else if($_SESSION['Contacto'] == 2){
-          $contact = 'por teléfono';
+          $contact = 'Por telefone';
         }else if($_SESSION['Contacto'] == 1){
-          $contact = 'por Email';
+          $contact = 'Por e-mail';
         }
         $respuestas = $this->M_solicitud->getRespUsuario($_SESSION['id_persona']);
        // cargamos la libreria email de ci
@@ -287,6 +287,10 @@ class Pt extends CI_Controller {
                                     <tr style="padding: 0 20px;">
                                       <td><h2 style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Pa&iacute;s:</h2></td>
                                       <td><p style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Pais'].'</p></td>
+                                    </tr>
+                                    <tr style="padding: 0 20px;">
+                                      <td><h2 style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Quero ser contatado:</h2></td>
+                                      <td><p style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$contact.'</p></td>
                                     </tr>
                                   </tbody>
                                 </table>
