@@ -48,6 +48,38 @@ h2,p{
 	background-color: #4983B6; 
 	color: #FFFFFF;
 }
+/* BTN animation */
+.button-next:after {
+	content: '';
+	mix-blend-mode: screen;
+	position: absolute;
+	top: 30px;
+	left: 20px;
+    width: 25px;
+    height: 25px;
+    background: #F8B749;
+	opacity: 0;
+	border-radius: 100%;
+	transform-origin: 50% 50%;
+}
+@keyframes ripple {
+  0%, 35% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(4);
+  }
+}
+.button-next::after {
+  animation: ripple 1.2s ease-out infinite;
+  animation-delay: 1s;
+}
 /*ADMIN*/
 .mdl-card-table{
 	width: 100%;
