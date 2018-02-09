@@ -181,7 +181,7 @@
                     titleClass: 'toast-title',
                     messageClass: 'toast-message',
                     target: 'body',
-                    closeHtml: '<button type="button">&times;</button>',
+                    closeHtml: '<button class="mdl-button mdl-js-button mdl-button--icon close-toastr" type="button"><i class="mdi mdi-close"></i></button>',
                     newestOnTop: true,
                     preventDuplicates: false,
                     progressBar: false
@@ -277,7 +277,7 @@
 
                 function displayToast() {
                     $toastElement.hide();
-
+                    $('#toast-container').addClass('aparecer-toast');
                     $toastElement[options.showMethod](
                         {duration: options.showDuration, easing: options.showEasing, complete: options.onShown}
                     );
@@ -346,6 +346,7 @@
                 }
 
                 function hideToast(override) {
+                    $('#toast-container').removeClass('aparecer-toast');
                     if ($(':focus', $toastElement).length && !override) {
                         return;
                     }

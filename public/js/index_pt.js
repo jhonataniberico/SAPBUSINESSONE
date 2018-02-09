@@ -15,13 +15,38 @@ function solicitarEstimacion() {
 	if(nombre_completo == '' && empresa == '' && email == '' && pais == '' && cargo == '' && telefono == '' && c_email == false && terminos == false) {
 		validarCampos();
 	}
-	if(terminos == false) {
+	
+	if(nombre_completo == null || nombre_completo == '') {
+		msj('error', 'Insira seu nome completo');
 		return;
 	}
-	if(terminos == true) {
-		term_cond = 1
-	}else {
-		term_cond = 0;
+	if(empresa == null || empresa == '') {
+		msj('error', 'Insira sua empresa');
+		return;
+	}
+	if(email == null || email == '') {
+		msj('error', 'Digite seu e-mail');
+		return;
+	}
+	if (!validateEmail(email)) {
+		$('#email').css('border-color','red');
+		return;
+	}
+	if(pais == null || pais == '') {
+		msj('error', 'Entre no seu país');
+		return;
+	}
+	if(cargo == null || cargo == '') {
+		msj('error', 'Insira sua posição');
+		return;
+	}
+	if(telefono == null || telefono == '') {
+		msj('error', 'Insira sua posição');
+		return;
+	}
+	if(relacion == null || relacion == '') {
+		msj('error', 'Selecione o que é o seu relacionamento com o SAP');
+		return;
 	}
 	if(c_email == true) {
 		contacto = 1;
@@ -30,30 +55,18 @@ function solicitarEstimacion() {
 	}else if(c_ambos == true) {
 		contacto = 3;
 	}
-	if(nombre_completo == null || nombre_completo == '') {
-		return;
-	}
-	if(empresa == null || empresa == '') {
-		return;
-	}
-	if(email == null || email == '') {
-		return;
-	}
-	if (!validateEmail(email)) {
-		$('#email').css('border-color','red');
-		return;
-	}
-	if(pais == null || pais == '') {
-		return;
-	}
-	if(cargo == null || cargo == '') {
-		return;
-	}
-	if(telefono == null || telefono == '') {
-		return;
-	}
-	if(contacto == false) {
+	if(contacto == null || contacto == '') {
+		  msj('error', 'Selecione os meios pelos quais você deseja entrar em contato');
 		  return;
+	}
+	if(terminos == true) {
+		term_cond = 1
+	}else {
+		term_cond = 0;
+	}
+	if(terminos == false) {
+		msj('error', 'Aceitar os termos e condições');
+		return;
 	}
 	$('.button-confirmar').prop("disabled", true);
 	$.ajax({

@@ -26,6 +26,14 @@ class Admin extends CI_Controller {
 		$html = '';
 		$cont = 1;
 		foreach ($datos as $key) {
+            $contactado = null;
+            if($key->Contactado == 1) {
+                $contactado = 'Por Email';
+            }else if($key->Contactado == 2) {
+                $contactado = 'Por Teléfono';
+            }else if($key->Contactado == 3) {
+                $contactado = 'Por Email y teléfono';
+            }
 			$html .= '<tr class="tr-cursor-pointer tr-ver-info-solicitud" data-idSolicitud="'.$cont.'">
                         <td class="text-center">'.$key->nombre_completo.'</td>
                         <td class="text-center">'.$key->Empresa.'</td>
@@ -36,6 +44,7 @@ class Admin extends CI_Controller {
                         <td class="text-center">'.$key->Factura_anual.'</td>
                         <td class="text-center">'.$key->Prioridad.'</td>
                         <td class="text-center">'.$key->Infraestructura.'</td>
+                        <td class="text-center">'.$contactado.'</td>
                     </tr>';
             $cont++;
 		}

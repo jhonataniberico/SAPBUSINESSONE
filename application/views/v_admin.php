@@ -44,6 +44,7 @@
                                 <th class="text-center">Facturaci&oacute;n</th>
                                 <th class="text-center">Prioridad</th>
                                 <th class="text-center">Infraestructura</th>
+                                <th class="text-center">Contactado</th>
                             </tr>
                         </thead>
                       <tbody>

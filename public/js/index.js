@@ -15,13 +15,37 @@ function solicitarEstimacion() {
 	if(nombre_completo == '' && empresa == '' && email == '' && pais == '' && cargo == '' && telefono == '' && c_email == false && terminos == false) {
 		validarCampos();
 	}
-	if(terminos == false) {
+	if(nombre_completo == null || nombre_completo == '') {
+		msj('error', 'Ingrese su nombre completo');
 		return;
 	}
-	if(terminos == true) {
-		term_cond = 1
-	}else {
-		term_cond = 0;
+	if(empresa == null || empresa == '') {
+		msj('error', 'Ingrese su empresa');
+		return;
+	}
+	if(email == null || email == '') {
+		msj('error', 'Ingrese su email');
+		return;
+	}
+	if (!validateEmail(email)) {
+		$('#email').css('border-color','red');
+		return;
+	}
+	if(pais == null || pais == '') {
+		msj('error', 'Ingrese su país');
+		return;
+	}
+	if(cargo == null || cargo == '') {
+		msj('error', 'Ingrese su cargo');
+		return;
+	}
+	if(telefono == null || telefono == '') {
+		msj('error', 'Ingrese su teléfono');
+		return;
+	}
+	if(relacion == null || relacion == '') {
+		msj('error', 'Seleccione cuál es su relación con SAP');
+		return;
 	}
 	if(c_email == true) {
 		contacto = 1;
@@ -30,30 +54,18 @@ function solicitarEstimacion() {
 	}else if(c_ambos == true) {
 		contacto = 3;
 	}
-	if(nombre_completo == null || nombre_completo == '') {
-		return;
-	}
-	if(empresa == null || empresa == '') {
-		return;
-	}
-	if(email == null || email == '') {
-		return;
-	}
-	if (!validateEmail(email)) {
-		$('#email').css('border-color','red');
-		return;
-	}
-	if(pais == null || pais == '') {
-		return;
-	}
-	if(cargo == null || cargo == '') {
-		return;
-	}
-	if(telefono == null || telefono == '') {
-		return;
-	}
-	if(contacto == false) {
+	if(contacto == null || contacto == '') {
+		msj('error', 'Seleccione el medio por el que quiere ser contactado');
 		  return;
+	}
+	if(terminos == true) {
+		term_cond = 1
+	}else {
+		term_cond = 0;
+	}
+	if(terminos == false) {
+		msj('error', 'Acepte los términos y condiciones');
+		return;
 	}
 	$('.button-confirmar').prop("disabled", true);
 	$.ajax({

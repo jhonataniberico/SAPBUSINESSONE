@@ -15,13 +15,38 @@ function solicitarEstimacion() {
 	if(nombre_completo == '' && empresa == '' && email == '' && pais == '' && cargo == '' && telefono == '' && c_email == false && terminos == false) {
 		validarCampos();
 	}
-	if(terminos == false) {
+
+	if(nombre_completo == null || nombre_completo == '') {
+		msj('error', 'Enter your full name');
 		return;
 	}
-	if(terminos == true) {
-		term_cond = 1
-	}else {
-		term_cond = 0;
+	if(empresa == null || empresa == '') {
+		msj('error', 'Enter your company');
+		return;
+	}
+	if(email == null || email == '') {
+		msj('error', 'Enter your email');
+		return;
+	}
+	if (!validateEmail(email)) {
+		$('#email').css('border-color','red');
+		return;
+	}
+	if(pais == null || pais == '') {
+		msj('error', 'Enter your country');
+		return;
+	}
+	if(cargo == null || cargo == '') {
+		msj('error', 'Enter your position');
+		return;
+	}
+	if(telefono == null || telefono == '') {
+		msj('error', 'Enter your phone');
+		return;
+	}
+	if(relacion == null || relacion == '') {
+		msj('error', 'Enter your relationship with SAP');
+		return;
 	}
 	if(c_email == true) {
 		contacto = 1;
@@ -30,30 +55,19 @@ function solicitarEstimacion() {
 	}else if(c_ambos == true) {
 		contacto = 3;
 	}
-	if(nombre_completo == null || nombre_completo == '') {
-		return;
-	}
-	if(empresa == null || empresa == '') {
-		return;
-	}
-	if(email == null || email == '') {
-		return;
-	}
-	if (!validateEmail(email)) {
-		$('#email').css('border-color','red');
-		return;
-	}
-	if(pais == null || pais == '') {
-		return;
-	}
-	if(cargo == null || cargo == '') {
-		return;
-	}
-	if(telefono == null || telefono == '') {
-		return;
-	}
-	if(contacto == false) {
+	if(contacto == null || contacto == '') {
+		msj('error', 'Select the means by which you want to be contacted');
 		  return;
+	}
+	if(terminos == true) {
+		term_cond = 1
+	}else {
+		term_cond = 0;
+	}
+	if(terminos == false) {
+		
+		msj('error', 'Accept the terms and conditions');
+		return;
 	}
 	$('.button-confirmar').prop("disabled", true);
 	$.ajax({
