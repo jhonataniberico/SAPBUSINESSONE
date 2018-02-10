@@ -34,25 +34,27 @@ function abrirCerrarModal(idModal) {
 function msj(tipo, msj, cabecera) {
 	if (tipo == 'error') {
 		toastr.error(msj, cabecera, {
-			positionClass: "toast-bottom-center",
-			showDuration: 500,
-		    hideDuration: 500,
-			timeOut: 2500,
-			showEasing: "linear",
-			hideEasing: "linear",
-			showMethod: "slideDown",
-			hideMethod: "slideUp"
+			closeButton: true,
+			positionClass: "toast-bottom-right",
+			showDuration: 250,
+		    hideDuration: 250,
+			timeOut: 5000,
+			showEasing: "swing",
+			hideEasing: "swing",
+			showMethod: "fadeIn",
+			hideMethod: "fadeOut"
 		});
 	} else if (tipo == 'warning') {
 		toastr.warning(msj, cabecera, {
-			positionClass: "toast-bottom-center",
-			showDuration: 500,
-		    hideDuration: 500,
-			timeOut: 2500,
-			showEasing: "linear",
-			hideEasing: "linear",
-			showMethod: "slideDown",
-			hideMethod: "slideUp"
+			closeButton: true,
+			positionClass: "toast-bottom-right",
+			showDuration: 250,
+		    hideDuration: 250,
+			timeOut: 5000,
+			showEasing: "swing",
+			hideEasing: "swing",
+			showMethod: "fadeIn",
+			hideMethod: "fadeOut"
 		});
 	} else {
 		toastr.success(msj, cabecera, {timeOut: 4000});
