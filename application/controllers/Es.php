@@ -365,6 +365,16 @@ class Es extends CI_Controller {
       try {  
        // cargamos la libreria email de ci
        $this->load->library("email");
+
+       if($_SESSION['Contacto'] == 3){
+          $contact = 'por email y teléfono';
+        }else if($_SESSION['Contacto'] == 2){
+          $contact = 'por teléfono';
+        }else if($_SESSION['Contacto'] == 1){
+          $contact = 'por Email';
+        }
+        $respuestas = $this->M_solicitud->getRespUsuario($_SESSION['id_persona']);
+
        //configuracion para gmail
        $configGmail = array(
                             'protocol'  => 'smtp',
@@ -449,6 +459,49 @@ class Es extends CI_Controller {
                                       <td style="padding:10px 40px 20px 40px;">
                                         <p style="color: #000000;">Un representante de SAP se pondrá en contacto con Usted para ayudarlo a dar el primer paso.</p>
                                       </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <table style="width: 100%;padding: 20px;" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr style="padding: 5px 20px;">
+                                      <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/1.jpg""></td>
+                                      <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">¿En qué industria se desempeña?</p></td>
+                                    </tr>
+                                    <tr style="padding: 5px 20px;">
+                                      <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Industria.'</p></td>
+                                    </tr>
+                                    <tr style="padding: 5px 20px;">
+                                      <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/2.jpg""></td>
+                                      <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">¿De qué tamaño es su empresa?</p></td>
+                                    </tr>
+                                    <tr style="padding: 5px 20px;">
+                                      <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Tamanio.' empleados</p></td>
+                                    </tr>
+                                    <tr style="padding: 5px 20px;">
+                                      <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/3.jpg""></td>
+                                      <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Su facturación</p></td>
+                                    </tr>
+                                    <tr style="padding: 5px 20px;">
+                                      <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Factura_anual.'</p></td>
+                                    </tr>
+                                    <tr style="padding: 5px 20px;">
+                                      <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/4.jpg""></td>
+                                      <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">¿Cual es la prioridad de su negocio?</p></td>
+                                    </tr>
+                                    <tr style="padding: 5px 20px;">
+                                      <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Prioridad.'</p></td>
+                                    </tr>
+                                    <tr style="padding: 5px 20px;">
+                                      <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/5.jpg""></td>
+                                      <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">¿Qué tipo de infraestructura está buscando?</p></td>
+                                    </tr>
+                                    <tr style="padding: 5px 20px;">
+                                      <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Infraestructura.'</p></td>
                                     </tr>
                                   </tbody>
                                 </table>

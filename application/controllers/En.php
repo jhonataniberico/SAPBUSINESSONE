@@ -454,6 +454,49 @@ class En extends CI_Controller {
                                 </table>
                               </td>
                             </tr>
+                            <tr>
+                                <td>
+                                  <table style="width: 100%;padding: 20px;" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                      <tr style="padding: 5px 20px;">
+                                        <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/1.jpg""></td>
+                                        <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">¿What industry do you work in?</p></td>
+                                      </tr>
+                                      <tr style="padding: 5px 20px;">
+                                        <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Industria.'</p></td>
+                                      </tr>
+                                      <tr style="padding: 5px 20px;">
+                                        <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/2.jpg""></td>
+                                        <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">¿How big is your company?</p></td>
+                                      </tr>
+                                      <tr style="padding: 5px 20px;">
+                                        <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Tamanio.' employees</p></td>
+                                      </tr>
+                                      <tr style="padding: 5px 20px;">
+                                        <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/3.jpg""></td>
+                                        <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Your billing</p></td>
+                                      </tr>
+                                      <tr style="padding: 5px 20px;">
+                                        <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Factura_anual.'</p></td>
+                                      </tr>
+                                      <tr style="padding: 5px 20px;">
+                                        <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/4.jpg""></td>
+                                        <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">¿What is your business priority?</p></td>
+                                      </tr>
+                                      <tr style="padding: 5px 20px;">
+                                        <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Prioridad.'</p></td>
+                                      </tr>
+                                      <tr style="padding: 5px 20px;">
+                                        <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/5.jpg""></td>
+                                        <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">¿What kind of infrastructure are you looking for?</p></td>
+                                      </tr>
+                                      <tr style="padding: 5px 20px;">
+                                        <td style="text-align: left;"><p style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Infraestructura.'</p></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
                           </tbody>
                         </table>
                       </td>
