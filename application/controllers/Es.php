@@ -181,7 +181,7 @@ class Es extends CI_Controller {
   }
 
     //EMAIL SAP
-    function sendGmailSap($email) {
+  function sendGmailSap($email) {
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
       try {  

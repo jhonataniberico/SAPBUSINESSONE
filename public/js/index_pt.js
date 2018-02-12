@@ -428,7 +428,7 @@ function operar(id,tipo) {
 	}
 }
 var facturacion = null;
-function selectFacturacion(id){
+function selectFacturacion(id) {
 	facturacion = $('#facturacion').val();
 	if($('#textOperar') != 'Seleccione' && facturacion != null) {
 		$('.button-next').prop("disabled", false);
@@ -455,7 +455,7 @@ function selectFacturacion(id){
 		Select.removeClass('aparecer');
 	})
 }
-function validarCampos(){
+function validarCampos() {
 	var $inputs = $('form :input');
 	var formvalido = true;
 	$inputs.each(function() {
