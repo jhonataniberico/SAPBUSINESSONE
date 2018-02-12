@@ -134,7 +134,7 @@ class Es extends CI_Controller {
             $telefono        = $this->input->post('telefono');
             $relacion        = $this->input->post('relacion');
             $contacto        = $this->input->post('contacto');//
-            $term_cond        = $this->input->post('term_cond');
+            $term_cond       = $this->input->post('term_cond');
             $arrayInsert = array('nombre_completo' => $nombre_completo,
                                  'Empresa'         => $empresa,
                                  'Email'           => $email,
