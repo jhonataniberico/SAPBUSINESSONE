@@ -762,13 +762,6 @@ function resizeContent() {
    $("#home").css('height', top);
 }
 function returnHome(){
-	$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
-	homePage.removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
-	homePage.addClass('animated fadeInLeft');
-	header.removeClass('opacity');
-	footerLogo.removeClass('opacity');
-	$('.button-arrow').css("display","none");
-	$('.chat').css("display","none");
-	homePage.find('.button-next').css("display","block");
-	$('.button-next').prop("disabled", false);
+	global_datos = null;
+	location.href = 'es';
 }
