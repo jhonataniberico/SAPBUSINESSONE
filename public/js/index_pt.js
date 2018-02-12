@@ -245,7 +245,7 @@ var select_infraestructura = 0;
 var select_tam 			   = 0;
 var select_empl 	       = 0;
 $( document ).ready(function() {
-	var array_button 		   = new Array();
+	var array_button = new Array();
     $(".select").click(function () {
 		select = 1;
 		$('.button-next').prop("disabled", false);
@@ -629,7 +629,7 @@ function buttonQuestion(direction){
 				$('.button-next').prop("disabled", false);
 			}
 			if(data_ids_arr == 5) {
-				$.each(global_terce, function( index, value ) {
+				$.each(global_terce, function(index, value ) {
 				  $('#'+value).addClass('button-select');
 				});
 			}
@@ -736,7 +736,7 @@ function EditQuestion(id, pant){
 			$("#facturacion").parent().addClass('button-select');
 			var divIncrement2 = $('#facturacion').parents().find('.mdl-select');
 			divIncrement2.addClass('select-increment');
-			$.each(data.array_3pant, function( index, value ) {
+			$.each(data.array_3pant, function(index, value ) {
 			  $('#'+value).addClass('button-select');
 			});
 			$('.selectpicker').selectpicker('refresh');
