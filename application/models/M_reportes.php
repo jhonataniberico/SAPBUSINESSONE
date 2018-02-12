@@ -11,7 +11,8 @@ class M_reportes extends  CI_Model{
 				       u.Empresa,
 				       u.Email,
 				       u.Telefono,
-                       u.Contactado
+                       u.Contactado,
+                       u.Pais
 				  FROM usuario u,
 				  	   solicitud s
 				  WHERE u.Id_solicitud = s.Id";

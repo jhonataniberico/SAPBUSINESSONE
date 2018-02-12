@@ -39,12 +39,13 @@
                                 <th class="text-center">Empresa</th>
                                 <th class="text-center">Correo electr&oacute;nico</th>
                                 <th class="text-center">Tel&eacute;fono</th>
-                                <th class="text-center">Industria</th>
-                                <th class="text-center">Cantidad de empleados</th>
-                                <th class="text-center">Facturaci&oacute;n</th>
-                                <th class="text-center">Prioridad</th>
-                                <th class="text-center">Infraestructura</th>
+                                <th class="text-center" style="display: none">Industria</th>
+                                <th class="text-center" style="display: none">Cantidad de empleados</th>
+                                <th class="text-center" style="display: none">Facturaci&oacute;n</th>
+                                <th class="text-center" style="display: none">Prioridad</th>
+                                <th class="text-center" style="display: none">Infraestructura</th>
                                 <th class="text-center">Contactado</th>
+                                <th class="text-center">Pa&iacute;s</th>
                             </tr>
                         </thead>
                       <tbody>
