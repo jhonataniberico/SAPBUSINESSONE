@@ -46,20 +46,57 @@
                             <i class="mdi mdi-person"></i>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <label class="mdl-textfield__label" for="usuario">Username</label>
-                            <input class="mdl-textfield__input" type="text" id="usuario" maxlength="50" onkeyup="verificarDatos(event);">
-                            <span class="mdl-textfield__error">Invalid user</span>
+                            <label class="mdl-textfield__label" for="fullname">FullName</label>
+                            <input class="mdl-textfield__input" type="text" id="fullname" maxlength="50" onkeyup="verificarDatos(event);">
+                            <span class="mdl-textfield__error">Invalid name</span>
                         </div>
                     </div>
                     <div class="mdl-input">
                         <div class="mdl-icon">
-                            <i class="mdi mdi-lock"></i>
+                            <i class="mdi mdi-business"></i>
                         </div>
-                        <div id="input-password" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <label class="mdl-textfield__label" for="password">Password</label>
-                            <input class="mdl-textfield__input" type="password" id="password" maxlength="50" onkeyup="verificarDatos(event);">
-                            <span class="mdl-textfield__error">Invalid password</span>
-                            <a id="showpass" class="mdl-button mdl-js-button mdl-js-button-ripple-effect mdl-button--icon"><i class="mdi mdi-visibility_off"></i></a>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <label class="mdl-textfield__label" for="company">Company</label>
+                            <input class="mdl-textfield__input" type="text" id="company" maxlength="50" onkeyup="verificarDatos(event);">
+                        </div>
+                    </div>
+                    <div class="mdl-input">
+                        <div class="mdl-icon">
+                            <i class="mdi mdi-email"></i>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <label class="mdl-textfield__label" for="email">Email</label>
+                            <input class="mdl-textfield__input" type="text" id="email" maxlength="50" onkeyup="verificarDatos(event);">
+                            <span class="mdl-textfield__error">Invalid email</span>
+                        </div>
+                    </div>
+                    <div class="mdl-input">
+                        <div class="mdl-icon">
+                            <i class="mdi mdi-call"></i>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <label class="mdl-textfield__label" for="phone">Phone</label>
+                            <input class="mdl-textfield__input" type="text" id="phone" maxlength="50" onkeyup="verificarDatos(event);">
+                            <span class="mdl-textfield__error">Invalid phone</span>
+                        </div>
+                    </div>
+                    <div class="mdl-input">
+                        <div class="mdl-icon">
+                            <i class="mdi mdi-language"></i>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <label class="mdl-textfield__label" for="country">Country</label>
+                            <input class="mdl-textfield__input" type="text" id="country" maxlength="50" onkeyup="verificarDatos(event);">
+                        </div>
+                    </div>
+                    <div class="mdl-input">
+                        <div class="mdl-icon">
+                            <i class="mdi mdi-work"></i>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <label class="mdl-textfield__label" for="title">Title</label>
+                            <input class="mdl-textfield__input" type="text" id="title" maxlength="50" onkeyup="verificarDatos(event);">
+                            <span class="mdl-textfield__error">Invalid user</span>
                         </div>
                     </div>
                     <div class="m-t-30">
