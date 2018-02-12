@@ -555,4 +555,32 @@ class Pt extends CI_Controller {
       }
       echo json_encode($data);
   }
+
+  function emailPartner() {
+    $data['error'] = EXIT_ERROR;
+    $data['msj']   = null;
+    try {
+      $configGmail = array(
+                            'protocol'  => 'smtp',
+                            'smtp_host' => 'smtpout.secureserver.net',
+                            'smtp_port' => 3535,
+                            'smtp_user' => 'confirmaciones@merino.com.pe',
+                            'smtp_pass' => 'cFm$17Pe',
+                            'mailtype'  => 'html',
+                            'charset'   => 'utf-8',
+                            'newline'   => "\r\n"
+                          );    
+       //cargamos la configuración para enviar con gmail
+       $this->email->initialize($configGmail);
+       $this->email->from('info@sap-latam.com');
+       $this->email->to('email_partner@gmail.com');//EMAIL AL QUIÉN IRÁ DIRIGIDO
+       $this->email->subject('Estoy interesado en SAP Business One para mi negocio.');
+       $texto = '';
+      $this->email->message($texto);//AQUI SE INSERTA EL HTML
+      $this->email->send();
+      $data['error'] = EXIT_SUCCESS;
+    }catch(Exception $e) {
+      $data['msj'] = $e->getMessage();
+    }
+  }
 }
