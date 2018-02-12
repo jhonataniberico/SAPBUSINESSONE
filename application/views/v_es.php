@@ -33,7 +33,6 @@
     			<div class="mdl-container mdl-all-window">
 	    			<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	            	<h2 class="title-home">Diferentes escenarios. Una soluci&oacute;n</h2>
-	            	<a href="https://z1.liveper.sn/api/account/81933160/route/campaign/194741814/engagement/250005114"></a>
 	    		</div>
 	    		<div class="background-body">
 					<div class="background-body3"></div>
@@ -56,6 +55,7 @@
 	    				<h2>¿Est&aacute; listo para SAP Business One&#63;</h2>
 	    			</div>
 	    			<div class="header-right">
+    					<button class="mdl-button mdl-js-button mdl-button--icon button-home" onclick="returnHome()"><i class="mdi mdi-home"></i></button>
 	    				<div class="mdl-idioma">
 							<select class="selectpicker" id="Idioma"  name="Idioma" onchange="cambiarIdioma()">
 								<option value="Español">Espa&ntilde;ol</option>

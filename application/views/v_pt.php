@@ -55,6 +55,7 @@
 	    				<h2>¿Voc&ecirc; Est&aacute; pronto para o SAP Business One&#63;</h2>
 	    			</div>
 	    			<div class="header-right">
+	    				<button class="mdl-button mdl-js-button mdl-button--icon button-home" onclick="returnHome()"><i class="mdi mdi-home"></i></button>
 	    				<div class="mdl-idioma">
 							<select class="selectpicker" id="Idioma" name="Idioma" onchange="cambiarIdioma()">
 								<option value="Portugués">Portugu&ecirc;s</option>
