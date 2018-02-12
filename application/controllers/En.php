@@ -170,8 +170,10 @@ class En extends CI_Controller {
             $this->session->unset_userdata('Prioridad');
             $this->session->unset_userdata('idioma');
 
+          //ENVÍO DE EMAILS
           //$this->sendGmailSap($email);
           //$this->emailClienteSap($email);
+          //$this->emailPartner();
           $data['msj']  = $datoInsert['msj'];
           $data['error'] = $datoInsert['error'];
         } catch (Exception $e) {
@@ -348,7 +350,6 @@ class En extends CI_Controller {
                     </table>
                   </body>
                   </html>';
-
         $this->email->message($texto);//AQUI SE INSERTA EL HTML
         $this->email->send();
         $this->session->unset_userdata('id_persona');
@@ -359,7 +360,7 @@ class En extends CI_Controller {
       return json_encode(array_map('utf8_encode', $data));
     }
 
-    function emailClienteSap($email) {
+  function emailClienteSap($email) {
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
       try {  
@@ -504,7 +505,6 @@ class En extends CI_Controller {
                   </table>
                 </body>
                 </html>';
-
         $this->email->message($texto);//AQUI SE INSERTA EL HTML
         $this->email->send();
         $data['error'] = EXIT_SUCCESS;

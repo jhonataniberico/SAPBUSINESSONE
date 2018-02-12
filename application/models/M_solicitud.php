@@ -14,7 +14,6 @@ class M_solicitud extends  CI_Model{
         }
         return array("error" => EXIT_SUCCESS, "msj" => MSJ_INS, "Id" => $sol);
     }
-
     function updateDatos($arrayData, $id, $tabla){
         $this->db->where('Id'  , $id);
         $this->db->update($tabla, $arrayData);
@@ -23,7 +22,6 @@ class M_solicitud extends  CI_Model{
         }
         return array('error' => EXIT_SUCCESS,'msj' => MSJ_UPT);
     }
-
     function getDatosSolicitud($id) {
         $sql = "SELECT *
                   FROM solicitud
@@ -31,7 +29,6 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, array($id));
         return $result->result();
     }
-
     function getDatosPais($Nombre) {
     	$sql = "SELECT Id_lenguaje
                   FROM lenguaje
@@ -39,7 +36,6 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, array($Nombre));
         return $result->row()->Id_lenguaje;
     }
-
     function getDatosUsuario($Id_usuario) {
         $sql = "SELECT *
                   FROM usuario
@@ -47,7 +43,6 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, array($Id_usuario));
         return $result->result();
     }
-
     function getRespUsuario($id_persona) {
         $sql = "SELECT s.* 
                   FROM usuario u,
@@ -57,5 +52,4 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, array($id_persona));
         return $result->result();
     }
-
 }
