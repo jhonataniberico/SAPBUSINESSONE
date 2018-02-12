@@ -29,6 +29,13 @@
     		<div id="home" class="window-center">
     			<div class="header-home">
 					<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
+					<div class="mdl-idioma">
+						<select class="selectpicker" id="IdiomaHome"  name="Idioma" onchange="cambiarIdiomaHome()">
+							<option value="Español">Espa&ntilde;ol</option>
+							<option value="Inglés">Ingl&eacute;s</option>
+							<option value="Portugués">Portugu&eacute;s</option>
+						</select>
+    				</div>
 		    	</div>
     			<div class="mdl-container mdl-all-window">
 	    			<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
