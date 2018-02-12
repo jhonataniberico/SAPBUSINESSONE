@@ -211,7 +211,7 @@ class Es extends CI_Controller {
        //cargamos la configuración para enviar con gmail
        $this->email->initialize($configGmail);
        $this->email->from('info@sap-latam.com');
-       $this->email->to('jhonatanibericom@gmail.com');//EMAIL AL QUIÉN IRÁ DIRIGIDO
+       $this->email->to('jminaya@brainblue.com');//EMAIL AL QUIÉN IRÁ DIRIGIDO alejandra.cuellar@sap.com
        $this->email->subject('Estoy interesado en SAP Business One para mi negocio.');
 
        //CONSTRUIMOS EL HTML
