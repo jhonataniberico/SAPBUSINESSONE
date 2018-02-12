@@ -237,7 +237,6 @@ function saveDatos(pantalla) {
 		}
 	});
 }
-
 var array_ids = new Array();
 var select 				   = 0;
 var select_prioridad 	   = 0;

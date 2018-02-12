@@ -575,7 +575,7 @@ class Pt extends CI_Controller {
        $this->email->from('info@sap-latam.com');
        $this->email->to('email_partner@gmail.com');//EMAIL AL QUIÉN IRÁ DIRIGIDO
        $this->email->subject('Estoy interesado en SAP Business One para mi negocio.');
-       $texto = '';
+       $texto = 'html del partner';
       $this->email->message($texto);//AQUI SE INSERTA EL HTML
       $this->email->send();
       $data['error'] = EXIT_SUCCESS;
