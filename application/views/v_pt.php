@@ -571,7 +571,7 @@
 			            				</div>
 		            				</div>
 		            				<div class="col-xs-12 p-0 text-right m-t-10">
-		            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="ConfirmarRespuestas()">Confirmar respostas</button>hermosa
+		            					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="ConfirmarRespuestas()">Confirmar respostas</button>
 		            				</div>
 			            		</div>
 			            		<div class="mdl-back-respuestas">
