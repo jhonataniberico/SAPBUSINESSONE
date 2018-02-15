@@ -59,7 +59,7 @@
 				<div class="header">
 	    			<div class="header-left">
 	    				<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	    				<h2>¿Voc&ecirc; Est&aacute; pronto para o SAP Business One&#63;</h2>
+	    				<h2>Voc&ecirc; Est&aacute; pronto para o SAP Business One&#63;</h2>
 	    			</div>
 	    			<div class="header-right">
 	    				<button class="mdl-button mdl-js-button mdl-button--icon button-home" onclick="returnHome()"><i class="mdi mdi-home"></i></button>
@@ -271,7 +271,7 @@
 					<div class="mdl-container text-center">
 						<div class="question">
 		            		<span class="number">03/05</span>
-		            		<h2>¿Qual &eacute; a prioridade da sua empresa&#63;</h2>
+		            		<h2>Qual &eacute; a prioridade da sua empresa&#63;</h2>
 		            	</div>
 		            	<div class="mdl-card-question mdl-card-3">
 		            		<div class="flip-card">
