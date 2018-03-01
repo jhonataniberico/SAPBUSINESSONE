@@ -13,7 +13,7 @@ class M_reportes extends  CI_Model{
 				       u.Telefono,
                        u.Contactado,
                        u.Pais,
-                       DATE_FORMAT(u.fecha_sol, '%d/%m/%Y %H:%i %p') AS fecha_sol,
+                       COALESCE(DATE_FORMAT(u.fecha_sol, '%d/%m/%Y %H:%i %p'), '00/00/0000 00:00') AS fecha_sol,
                        u.Cargo,
                        u.Relacion
 				  FROM usuario u,
