@@ -39,11 +39,6 @@
                                 <th class="text-center">Empresa</th>
                                 <th class="text-center">Correo electr&oacute;nico</th>
                                 <th class="text-center">Tel&eacute;fono</th>
-                                <th class="text-center" style="display: none">Industria</th>
-                                <th class="text-center" style="display: none">Cantidad de empleados</th>
-                                <th class="text-center" style="display: none">Facturaci&oacute;n</th>
-                                <th class="text-center" style="display: none">Prioridad</th>
-                                <th class="text-center" style="display: none">Infraestructura</th>
                                 <th class="text-center">Relaci&oacute;n</th>
                                 <th class="text-center">Cargo</th>
                                 <th class="text-center">Contactado</th>
