@@ -44,8 +44,11 @@ class Admin extends CI_Controller {
                         <td class="text-center" style="display: none">'.$key->Factura_anual.'</td>
                         <td class="text-center" style="display: none">'.$key->Prioridad.'</td>
                         <td class="text-center" style="display: none">'.$key->Infraestructura.'</td>
+                        <td class="text-center">'.$key->Relacion.'</td>
+                        <td class="text-center">'.$key->Cargo.'</td>
                         <td class="text-center">'.$contactado.'</td>
                         <td class="text-center">'.$key->Pais.'</td>
+                        <td class="text-center">'.$key->fecha_sol.'</td>
                     </tr>';
             $cont++;
 		}

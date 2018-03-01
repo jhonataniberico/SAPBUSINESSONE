@@ -44,8 +44,11 @@
                                 <th class="text-center" style="display: none">Facturaci&oacute;n</th>
                                 <th class="text-center" style="display: none">Prioridad</th>
                                 <th class="text-center" style="display: none">Infraestructura</th>
+                                <th class="text-center">Relaci&oacute;n</th>
+                                <th class="text-center">Cargo</th>
                                 <th class="text-center">Contactado</th>
                                 <th class="text-center">Pa&iacute;s</th>
+                                <th class="text-center">Fecha</th>
                             </tr>
                         </thead>
                       <tbody>

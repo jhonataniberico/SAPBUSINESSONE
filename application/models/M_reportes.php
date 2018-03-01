@@ -12,7 +12,10 @@ class M_reportes extends  CI_Model{
 				       u.Email,
 				       u.Telefono,
                        u.Contactado,
-                       u.Pais
+                       u.Pais,
+                       DATE_FORMAT(u.fecha_sol, '%d/%m/%Y %H:%i') AS fecha_sol,
+                       u.Cargo,
+                       u.Relacion
 				  FROM usuario u,
 				  	   solicitud s
 				  WHERE u.Id_solicitud = s.Id";
