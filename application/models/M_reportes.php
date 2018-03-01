@@ -1,5 +1,4 @@
 <?php
-
 class M_reportes extends  CI_Model{
     function __construct(){
         parent::__construct();
@@ -22,5 +21,4 @@ class M_reportes extends  CI_Model{
         $result = $this->db->query($sql, array());
         return $result->result();
     }
-
 }
