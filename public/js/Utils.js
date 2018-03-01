@@ -1,14 +1,13 @@
-function log(msj) {
+function log(msj){
 	console.log(msj);
 }
 function tocar(event){
 	$(event).css("cursor", "move");
-	
-	$(event).mouseup(function() {
+	$(event).mouseup(function(){
 		$(event).css("cursor", "pointer");
 	});
 }
-var CONFIG = (function() {
+var CONFIG = (function(){
 	var private = {
 		'ANP' : 'Acci&oacute;n No permitida',
 		'MSJ_ERR' : 'Comun&iacute;quese con alguna persona a cargo :(',
@@ -20,19 +19,16 @@ var CONFIG = (function() {
 		'TIPOS'      : 'image/*,video/*'
 	};
 	return {
-		get : function(name) {
+		get : function(name){
 			return private[name];
 		}
 	};
 })();
-function modal(idModal) {
+function modal(idModal){
 	$('#'+idModal).modal('toggle');
 }
-function abrirCerrarModal(idModal) {
-	$('#'+idModal).modal('toggle');
-}
-function msj(tipo, msj, cabecera) {
-	if (tipo == 'error') {
+function msj(tipo, msj, cabecera){
+	if (tipo == 'error'){
 		toastr.error(msj, cabecera, {
 			closeButton: true,
 			positionClass: "toast-bottom-right",
@@ -44,7 +40,7 @@ function msj(tipo, msj, cabecera) {
 			showMethod: "fadeIn",
 			hideMethod: "fadeOut"
 		});
-	} else if (tipo == 'warning') {
+	} else if (tipo == 'warning'){
 		toastr.warning(msj, cabecera, {
 			closeButton: true,
 			positionClass: "toast-bottom-right",
@@ -56,7 +52,7 @@ function msj(tipo, msj, cabecera) {
 			showMethod: "fadeIn",
 			hideMethod: "fadeOut"
 		});
-	} else {
+	} else{
 		toastr.success(msj, cabecera, {timeOut: 4000});
 	}
 }
