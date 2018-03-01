@@ -32,7 +32,7 @@ function solicitarEstimacion(){
 		return;
 	}
 	if(pais == null || pais == ''){
-		msj('error', 'Ingrese su país');
+		msj('error', 'Ingrese su pa&iacute;s');
 		return;
 	}
 	if(cargo == null || cargo == ''){
@@ -40,11 +40,11 @@ function solicitarEstimacion(){
 		return;
 	}
 	if(telefono == null || telefono == ''){
-		msj('error', 'Ingrese su teléfono');
+		msj('error', 'Ingrese su tel&eacute;fono');
 		return;
 	}
 	if(relacion == null || relacion == ''){
-		msj('error', 'Seleccione cuál es su relación con SAP');
+		msj('error', 'Seleccione cu&aacute;l es su relaci&oacute;n con SAP');
 		return;
 	}
 	if(c_email == true){
@@ -64,7 +64,7 @@ function solicitarEstimacion(){
 		term_cond = 0;
 	}
 	if(terminos == false){
-		msj('error', 'Acepte los términos y condiciones');
+		msj('error', 'Acepte los t&eacute;rminos y condiciones');
 		return;
 	}
 	$('.button-confirmar').prop("disabled", true);
