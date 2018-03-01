@@ -273,7 +273,7 @@ $(document).ready(function(){
 		pant4 = 1;
 	});
 });
-function mostrarDatos(){
+function mostrarDatos() {
 	$.ajax({
 		data : {array_ids   : array_ids,
 				array_3pant : array_3pant},
