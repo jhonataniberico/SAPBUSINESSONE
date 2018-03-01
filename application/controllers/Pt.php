@@ -144,7 +144,8 @@ class Pt extends CI_Controller {
                                  'Terminos'        => $term_cond,
                                  'Relacion'        => $relacion,
                                  'Contactado'      => $contacto,
-                                 'Id_solicitud'    => $_SESSION['id_sol']);
+                                 'Id_solicitud'    => $_SESSION['id_sol'],
+                                 'fecha_sol'       => date('Y-m-d H:i:s'));
             $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'usuario');
             $session = array('nombre_completo' => $nombre_completo,
                              'Empresa'         => $empresa,
