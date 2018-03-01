@@ -525,7 +525,7 @@ function enviarGracias(){
 	}, 4000);
 }
 /*BUTTONS NEXT - PREV */
-var m = 1;
+var m 			  = 1;
 var id_primero 	  = "";
 var homePage      = $('#home');
 var header        = $('.header');

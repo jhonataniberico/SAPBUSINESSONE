@@ -452,7 +452,7 @@ function selectFacturacion(id){
 	})
 }
 function validarCampos(){
-	var $inputs = $('form :input');
+	var $inputs    = $('form :input');
 	var formvalido = true;
 	$inputs.each(function(){
 		if(isEmpty($(this).val())){
@@ -524,7 +524,7 @@ function enviarGracias(){
 	}, 4000);
 }
 /*BUTTONS NEXT - PREV */
-var m = 1;
+var m 			  = 1;
 var id_primero 	  = "";
 var homePage      = $('#home');
 var header        = $('.header');
