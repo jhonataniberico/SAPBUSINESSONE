@@ -117,7 +117,7 @@ function soloLetras(e){
     if (tecla==8){
         return true;
     }
-    patron =/[0-9]/;
+    patron 		=/[0-9]/;
     tecla_final = String.fromCharCode(tecla);
     return patron.test(tecla_final);
 }
