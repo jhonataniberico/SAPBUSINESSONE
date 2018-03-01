@@ -1,4 +1,4 @@
-function solicitarEstimacion() {
+function solicitarEstimacion(){
 	var nombre_completo = $('#nombre_completo').val(); 
 	var empresa  		= $('#empresa').val();
 	var email 	 		= $('#email').val();
@@ -12,83 +12,83 @@ function solicitarEstimacion() {
 	var terminos		= $('#checkbox-1').is(':checked');
 	var term_cond		= null;
 	var contacto		= null;
-	if(nombre_completo == '' && empresa == '' && email == '' && pais == '' && cargo == '' && telefono == '' && c_email == false && terminos == false) {
+	if(nombre_completo == '' && empresa == '' && email == '' && pais == '' && cargo == '' && telefono == '' && c_email == false && terminos == false){
 		validarCampos();
 	}
-	if(nombre_completo == null || nombre_completo == '') {
+	if(nombre_completo == null || nombre_completo == ''){
 		msj('error', 'Ingrese su nombre completo');
 		return;
 	}
-	if(empresa == null || empresa == '') {
+	if(empresa == null || empresa == ''){
 		msj('error', 'Ingrese su empresa');
 		return;
 	}
-	if(email == null || email == '') {
+	if(email == null || email == ''){
 		msj('error', 'Ingrese su email');
 		return;
 	}
-	if (!validateEmail(email)) {
+	if (!validateEmail(email)){
 		$('#email').css('border-color','red');
 		return;
 	}
-	if(pais == null || pais == '') {
+	if(pais == null || pais == ''){
 		msj('error', 'Ingrese su país');
 		return;
 	}
-	if(cargo == null || cargo == '') {
+	if(cargo == null || cargo == ''){
 		msj('error', 'Ingrese su cargo');
 		return;
 	}
-	if(telefono == null || telefono == '') {
+	if(telefono == null || telefono == ''){
 		msj('error', 'Ingrese su teléfono');
 		return;
 	}
-	if(relacion == null || relacion == '') {
+	if(relacion == null || relacion == ''){
 		msj('error', 'Seleccione cuál es su relación con SAP');
 		return;
 	}
-	if(c_email == true) {
+	if(c_email == true){
 		contacto = 1;
-	}else if(c_telefono == true) {
+	}else if(c_telefono == true){
 		contacto = 2;
-	}else if(c_ambos == true) {
+	}else if(c_ambos == true){
 		contacto = 3;
 	}
-	if(contacto == null || contacto == '') {
+	if(contacto == null || contacto == ''){
 		msj('error', 'Seleccione el medio por el que quiere ser contactado');
 		  return;
 	}
-	if(terminos == true) {
+	if(terminos == true){
 		term_cond = 1
 	}else {
 		term_cond = 0;
 	}
-	if(terminos == false) {
+	if(terminos == false){
 		msj('error', 'Acepte los términos y condiciones');
 		return;
 	}
 	$('.button-confirmar').prop("disabled", true);
 	$.ajax({
-		data  : { nombre_completo : nombre_completo,
-				  empresa 	      : empresa,
-				  email 		  : email,
-				  pais 			  : pais,
-				  cargo 		  : cargo,
-				  telefono 		  : telefono,
-				  relacion 		  : relacion,
-				  contacto 		  : contacto,
-				  term_cond       : term_cond},
-		url   : 'es/solicitarEstimacion',
-		type  : 'POST'
+		data : {nombre_completo : nombre_completo,
+				empresa 	    : empresa,
+				email 		  	: email,
+				pais 			: pais,
+				cargo 		  	: cargo,
+				telefono 		: telefono,
+				relacion 		: relacion,
+				contacto 		: contacto,
+				term_cond       : term_cond},
+		url  : 'es/solicitarEstimacion',
+		type : 'POST'
 	}).done(function(data){
 		try{
         	data = JSON.parse(data);
         	if(data.error == 0){
-				if(confirmar == 1) {
+				if(confirmar == 1){
 					limpiarCampos();
 					enviarGracias();
 				}
-        	}else {
+        	}else{
         		return;
         	}
       } catch (err){
@@ -96,12 +96,11 @@ function solicitarEstimacion() {
       }
 	});
 }
-function soloLetras(e) {
+function soloLetras(e){
     key 	   = e.keyCode || e.which;
     tecla 	   = String.fromCharCode(key).toLowerCase();
     letras     = " áéíóúabcdefghijklmnñopqrstuvwxyz";
     especiales = "8-37-39-46";
-
     tecla_especial = false
     for(var i in especiales){
          if(key == especiales[i]){
@@ -113,60 +112,58 @@ function soloLetras(e) {
          return false;
      }
  }
- function valida(e) {
+ function valida(e){
     tecla = (document.all) ? e.keyCode : e.which;
-    //Tecla de retroceso para borrar, siempre la permite
     if (tecla==8){
         return true;
     }
-    // Patron de entrada, en este caso solo acepta números
     patron =/[0-9]/;
     tecla_final = String.fromCharCode(tecla);
     return patron.test(tecla_final);
 }
-function validateEmail(email) {
+function validateEmail(email){
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
 //DETECT DEVICE FOR MOBILE
 var isMobile = {
-    Android: function() {
+    Android: function(){
         return navigator.userAgent.match(/Android/i);
     },
-    BlackBerry: function() {
+    BlackBerry: function(){
         return navigator.userAgent.match(/BlackBerry/i);
     },
-    iOS: function() {
+    iOS: function(){
         return navigator.userAgent.match(/iPhone|iPad|iPod/i);
     },
-    Opera: function() {
+    Opera: function(){
         return navigator.userAgent.match(/Opera Mini/i);
     },
-    Windows: function() {
+    Windows: function(){
         return navigator.userAgent.match(/IEMobile/i);
     },
-    any: function() {
+    any: function(){
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
 var global_datos = null;
-var datos_array = [];
-var array_3pant = [];
-function guardarDatos(id,datos) {
+var datos_array  = [];
+var array_3pant  = [];
+function guardarDatos(id,datos){
 	var buttonSelect = $('#'+id+'.select-one');
 	var buttonToggle = $('#'+id+'.select-prioridad');
 	var cardSelect   = $('#'+id+'.select-one').parent().find('.contenido');
 	var cardToggle   = $('#'+id+'.select-prioridad').parent().find('.contenido');
-	var modal   = $('#ModalQuestion');
+	var modal   	 = $('#ModalQuestion');
 	global_datos     = datos;
 	$('.contenido').removeClass('aparecer');
 	$('.content-card').find('.select-one').removeClass('button-select');
 	buttonSelect.addClass('button-select');
 	cardSelect.addClass('aparecer');
 	buttonToggle.toggleClass("button-select");
-    buttonToggle.click(function() {
+    buttonToggle.click(function(){
     	cardToggle.toggleClass("aparecer");
-    	if (window.matchMedia("(max-width: 1200px)").matches) {
+    	if (window.matchMedia("(max-width: 1200px)").matches){
 	    	var img_toggle     = cardToggle.find('.contenido-left').find('img');
 	    	var content_toggle = cardToggle.find('.contenido-right').find('p');
 	    	var small_toggle   = cardToggle.find('.contenido-right').find('small');
@@ -186,8 +183,8 @@ function guardarDatos(id,datos) {
 			
 		}
 	});
-	buttonSelect.click(function() {
-		if (window.matchMedia("(max-width: 1200px)").matches) {
+	buttonSelect.click(function(){
+		if (window.matchMedia("(max-width: 1200px)").matches){
 			var img     = cardSelect.find('.contenido-left').find('img');
 		    var content = cardSelect.find('.contenido-right').find('p');
 		    var small   = cardSelect.find('.contenido-right').find('small');
@@ -201,34 +198,34 @@ function guardarDatos(id,datos) {
 		}
 	});
 }
-function saveDatos(pantalla) {
+function saveDatos(pantalla){
 	var idioma = $('#Idioma').val();
 	var operar = null;
 	if(pantalla == 2) {
 		operar = $('#textOperar').text();
 	}
-	if(pantalla == 3) {
-		$( ".select-prioridad.button-select" ).each(function() {
+	if(pantalla == 3){
+		$( ".select-prioridad.button-select" ).each(function(){
 		  var id = $( this ).attr('id');
 		  array_3pant.push(id);
 		  var dato_card = $('#'+id).parents('.mdl-card-question').find('.card-front p').text();
-		  if($( this ).attr('id') != undefined) {
+		  if($( this ).attr('id') != undefined){
 		  	datos_array.push(dato_card);
 		  }
 		});
 	}
 	$.ajax({
-		data  : { global_datos : global_datos,
-				  pantalla     : pantalla,
-				  idioma 	   : idioma,
-				  datos_prio   : datos_array.toString(),
-				  operar       : operar,
-				  facturacion  : facturacion},
-		url   : 'es/Savedatos',
-		type  : 'POST'
+		data : {global_datos : global_datos,
+				pantalla     : pantalla,
+				idioma 	     : idioma,
+				datos_prio   : datos_array.toString(),
+				operar       : operar,
+				facturacion  : facturacion},
+		url  : 'es/Savedatos',
+		type : 'POST'
 	}).done(function(data){
 		try{
-			if(pantalla == 4) {
+			if(pantalla == 4){
 				mostrarDatos();
 			}
 		} catch (err){
@@ -236,52 +233,52 @@ function saveDatos(pantalla) {
 		}
 	});
 }
-var array_ids = new Array();
+var array_ids 			   = new Array();
 var select 				   = 0;
 var select_prioridad 	   = 0;
 var select_infraestructura = 0;
 var select_tam 			   = 0;
 var select_empl 	       = 0;
-$( document ).ready(function() {
+$( document ).ready(function(){
 	var array_button = new Array();
-    $(".select").click(function () {
+    $(".select").click(function (){
 		select = 1;
 		$('.button-next').prop("disabled", false);
 	});
-	$("#buttonMas").click(function () {
-		select_tam = 1;
+	$("#buttonMas").click(function(){
+		select_tam  = 1;
 		facturacion = $('#facturacion').val();
-		if(facturacion != null) {
+		if(facturacion != null){
 			$('.button-next').prop("disabled", false);
 		}
 		pant2 = 1;
 	});
-	$(".select-prioridad").click(function () {
+	$(".select-prioridad").click(function(){
 		select_prioridad = 1;
-		var id_button = $('.mdl-card-question .content-card').find('.select-prioridad.button-select').attr('id');
+		var id_button    = $('.mdl-card-question .content-card').find('.select-prioridad.button-select').attr('id');
 		array_button.push(id_button);
 		if(array_button.length > 0){
 			array_button.splice(0, 1, id_button);
 		}
-		if($('#'+array_button[0]).hasClass('button-select') == true) {
+		if($('#'+array_button[0]).hasClass('button-select') == true){
 			$('.button-next').prop("disabled", false);
 		}else {
 			$('.button-next').prop("disabled", true);
 		}
 		pant3 = 1;
 	});
-	$(".select-infraestructura").click(function () {
+	$(".select-infraestructura").click(function(){
 		select_infraestructura = 1;
 		$('.button-next').prop("disabled", false);
 		pant4 = 1;
 	});
 });
-function mostrarDatos() {
+function mostrarDatos(){
 	$.ajax({
-		data  : {array_ids   : array_ids,
-				 array_3pant : array_3pant},
-		url   : 'es/mostrarDatos',
-		type  : 'POST'
+		data : {array_ids   : array_ids,
+				array_3pant : array_3pant},
+		url  : 'es/mostrarDatos',
+		type : 'POST'
 	}).done(function(data){
 		try{
         data = JSON.parse(data);
@@ -294,7 +291,7 @@ function mostrarDatos() {
            	$('#prioridad').find('li').remove();
            	$('#prioridad').append(data.Prioridad);
            	$('#infraestructura').text(data.Infraestructura);
-        }else {
+        }else{
         	return;
         }
       } catch (err){
@@ -302,24 +299,24 @@ function mostrarDatos() {
       }
 	});
 }
-function cambiarIdioma() {
+function cambiarIdioma(){
 	var idioma = $('#Idioma').val();
-	if(idioma == 'Español') {
+	if(idioma == 'Español'){
 		location.href = 'Es';
-	}else if(idioma == 'Inglés') {
+	}else if(idioma == 'Inglés'){
 		location.href = 'En';
-	}else if(idioma == 'Portugués') {
+	}else if(idioma == 'Portugués'){
 		location.href = 'Pt';
 	}
 	$.ajax({
-		data  : {idioma   : idioma},
+		data  : {idioma : idioma},
 		url   : 'es/cambiarIdioma',
 		type  : 'POST'
 	}).done(function(data){
-		try{
+	  try{
         data = JSON.parse(data);
         if(data.error == 0){
-        }else {
+        }else{
         	return;
         }
       } catch (err){
@@ -327,24 +324,24 @@ function cambiarIdioma() {
       }
 	});
 }
-function cambiarIdiomaHome() {
+function cambiarIdiomaHome(){
 	var idioma = $('#IdiomaHome').val();
-	if(idioma == 'Español') {
+	if(idioma == 'Español'){
 		location.href = 'Es';
-	}else if(idioma == 'Inglés') {
+	}else if(idioma == 'Inglés'){
 		location.href = 'En';
-	}else if(idioma == 'Portugués') {
+	}else if(idioma == 'Portugués'){
 		location.href = 'Pt';
 	}
 	$.ajax({
-		data  : {idioma   : idioma},
-		url   : 'es/cambiarIdioma',
-		type  : 'POST'
+		data : {idioma : idioma},
+		url  : 'es/cambiarIdioma',
+		type : 'POST'
 	}).done(function(data){
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
-        }else {
+        }else{
         	return;
         }
       } catch (err){
@@ -353,22 +350,22 @@ function cambiarIdiomaHome() {
 	});
 }
 var i = 1;
-function operar(id,tipo) {
+function operar(id,tipo){
 	var buttonSelect = $('#'+id+'.select-one');
 	var cardSelec    = $('#'+id+'.select-one').parents('.content-card').find('.contenido');
 	var divIncrement = $('#'+id+'.select-one').parent();
 	var cardHidden   = $('.mdl-card-question.visi-hidden');
 	var modal        = $('#ModalQuestion');
-	if(tipo == 2) {
+	if(tipo == 2){
 		i++;
-		if(i == 2) {
+		if(i == 2){
 			$('#textOperar').text('1 - 50');
 			divIncrement.addClass('select-increment');
 			cardSelec.addClass('aparecer');
 			cardHidden.fadeIn(400);
 			$("#facturacion").val('0');
 			$('.selectpicker').selectpicker('refresh');
-			if (window.matchMedia("(max-width: 1200px)").matches) {
+			if (window.matchMedia("(max-width: 1200px)").matches){
 			    var card    = buttonSelect.closest('.mdl-card-question');
 			    var img     = card.find('.contenido-left').find('img');
 			    var content = card.find('.contenido-right').find('p');
@@ -381,29 +378,29 @@ function operar(id,tipo) {
 			    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
 				modal.modal('show');
 			}
-		}else if(i == 3) {
+		}else if(i == 3){
 			$('#textOperar').text('50 - 100');
-		}else if(i == 4) {
+		}else if(i == 4){
 			$('#textOperar').text('100 - 500');
-		}else if(i == 5) {
+		}else if(i == 5){
 			$('#textOperar').text('500 - 1000');
-		}else if(i == 6) {
+		}else if(i == 6){
 			$('#textOperar').text('1000 - 2500');
-		}else if(i == 7) {
+		}else if(i == 7){
 			$('#textOperar').text('2500 - 5000');
-		}else if(i == 8) {
+		}else if(i == 8){
 			$('#textOperar').text('5000 a más');
-		}else if(i > 8) {
+		}else if(i > 8){
 			i = 8;
 			return;
 		}
-	}else if(tipo == 1) {
+	}else if(tipo == 1){
 		i--;
-		if(i == 7) {
+		if(i == 7){
 			$('#textOperar').text('2500 - 5000');
-		}else if(i == 6) {
+		}else if(i == 6){
 			$('#textOperar').text('1000 - 2500');
-		}else if(i == 5) {
+		}else if(i == 5){
 			$('#textOperar').text('500 - 1000');
 		}else if(i == 4){
 			$('#textOperar').text('100 - 500');
@@ -411,7 +408,7 @@ function operar(id,tipo) {
 			$('#textOperar').text('50 - 100');
 		}else if(i == 2){
 			$('#textOperar').text('1 - 50');
-		}else if(i == 1) {
+		}else if(i == 1){
 			$('#textOperar').text('Seleccione');
 			divIncrement.removeClass('select-increment');
 			$('.mdl-tablet').find('.mdl-select').removeClass('select-increment');
@@ -421,7 +418,7 @@ function operar(id,tipo) {
 			$("#facturacion").val('0');
 			$('.selectpicker').selectpicker('refresh');
 			return;
-		}else if(i < 1) {
+		}else if(i < 1){
 			i = 1;
 			return;
 		}
@@ -430,7 +427,7 @@ function operar(id,tipo) {
 var facturacion = null;
 function selectFacturacion(id){
 	facturacion = $('#facturacion').val();
-	if($('#textOperar') != 'Seleccione' && facturacion != null) {
+	if($('#textOperar') != 'Seleccione' && facturacion != null){
 		$('.button-next').prop("disabled", false);
 	}
 	$('.contenido').removeClass('aparecer');
@@ -439,7 +436,7 @@ function selectFacturacion(id){
 	var Select       = $('#'+id).parents('.mdl-card-question').find('.contenido');
 	var modal        = $('#ModalQuestion');
 	Select.addClass('aparecer');
-	if (window.matchMedia("(max-width: 1200px)").matches) {
+	if (window.matchMedia("(max-width: 1200px)").matches){
 	    var img     = Select.find('.contenido-left').find('img');
 	    var content = Select.find('.contenido-right').find('p');
 	    var small   = Select.find('.contenido-right').find('small');
@@ -456,14 +453,14 @@ function selectFacturacion(id){
 	})
 }
 function validarCampos(){
-	var $inputs = $('form :input');
+	var $inputs    = $('form :input');
 	var formvalido = true;
-	$inputs.each(function() {
+	$inputs.each(function(){
 		if(isEmpty($(this).val())){
-				$(this).css('border-color','red');
-				formvalido = false;
+			$(this).css('border-color','red');
+			formvalido = false;
 		}else{
-				$(this).css('border-color','');
+			$(this).css('border-color','');
 		}
 	});
 	return formvalido;
@@ -481,14 +478,14 @@ function ConfirmarRespuestas(){
 	$('.fp-controlArrow.fp-prev').css("display","none");
 	$('.mdl-formulario').removeClass('disabled');
 	$.ajax({
-		data  : {confirmar : confirmar},
-		url   : 'es/ConfirmarRespuestas',
-		type  : 'POST'
+		data : {confirmar : confirmar},
+		url  : 'es/ConfirmarRespuestas',
+		type : 'POST'
 	}).done(function(data){
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
-        }else {
+        }else{
         	return;
         }
       } catch (err){
@@ -496,7 +493,7 @@ function ConfirmarRespuestas(){
       }
 	});
 }
-function limpiarCampos() {
+function limpiarCampos(){
 	var nombre_completo = $('#nombre_completo').val("");
 	var empresa  		= $('#empresa').val("");
 	var email 	 		= $('#email').val("");
@@ -509,16 +506,15 @@ function limpiarCampos() {
 	var c_telefono    	= $('#c-telefono').is(':checked');
 	var c_ambos    		= $('#c-ambos').is(':checked');
 	var terminos		= $('#checkbox-1').is(':checked');
-
-	if(c_email == true) {
+	if(c_email == true){
 		$('#c-email').parent().removeClass('is-checked');
-	}else if(c_telefono == true) {
+	}else if(c_telefono == true){
 		$('#c-telefono').parent().removeClass('is-checked');
-	}else if(c_ambos == true) {
+	}else if(c_ambos == true){
 		$('#c-ambos').parent().removeClass('is-checked');
 	}
 }
-function enviarGracias() {
+function enviarGracias(){
 	$('#window5-page').addClass('display-flex');
 	$('.mdl-solicitud').addClass('animated fadeOutLeft');
 	$('.mdl-agradecimiento').addClass('animated fadeInRight');
@@ -540,7 +536,7 @@ var thirdWindow   = $('#window3-page');
 var fourthWindow  = $('#window4-page');
 var fifthWindow   = $('#window5-page');
 function buttonNext(){
-	if(pant1 == 0) {
+	if(pant1 == 0){
 		$('.button-next').prop("disabled", true);
 	}
 	$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight')
@@ -567,16 +563,16 @@ function buttonQuestion(direction){
 			id_primero 	  = id_button;
     		array_ids.push(id_button);
     		saveDatos(1);
-    		if(array_ids.length != 0) {
+    		if(array_ids.length != 0){
 				array_ids.splice(0, 1, id_button);
 				var id = array_ids[1];
 				$('#'+id).addClass('button-select');
 			}
-			if(select != 1) {
+			if(select != 1){
 				$('.button-next').prop("disabled", true);
 			}
 			pant1 = 1;
-			if(pant2 == 0 || facturacion == null && $('#textOperar').text() == 'Seleccione') {
+			if(pant2 == 0 || facturacion == null && $('#textOperar').text() == 'Seleccione'){
 				$('.button-next').prop("disabled", true);
 			}
 		}
@@ -588,12 +584,12 @@ function buttonQuestion(direction){
 			var id_button = $('#textOperar').text();
 			array_ids.push(id_button);
 			saveDatos(2);
-    		if(array_ids.length != 0) {
+    		if(array_ids.length != 0){
 				array_ids.splice(1, 1, id_button);
 			}
 			var id = array_ids[2];
 			$('#'+id).addClass('button-select');
-			if(pant3 == 0) {
+			if(pant3 == 0){
 				$('.button-next').prop("disabled", true);
 			}
 		}
@@ -605,7 +601,7 @@ function buttonQuestion(direction){
 			var id_button = $('#facturacion').val();
     		array_ids.push(id_button);
     		saveDatos(3);
-    		if(array_ids.length != 0) {
+    		if(array_ids.length != 0){
 				array_ids.splice(2, 1, id_button);
 				var id = array_ids[3];
 				$('#'+id).addClass('button-select');
@@ -623,7 +619,7 @@ function buttonQuestion(direction){
 			var id_button = $('.mdl-card-question .content-card').find('.select-infraestructura.select-one.button-select').attr('id');;
     		array_ids.push(id_button);
     		saveDatos(4);
-    		if(array_ids.length != 0) {
+    		if(array_ids.length != 0){
 				array_ids.splice(3, 1, id_button);
 			}
 			m = 5;
@@ -638,8 +634,7 @@ function buttonQuestion(direction){
 			fifthWindow.addClass('animated fadeOutRight');
 			$('.button-arrow.button-next').css("display","block");
 			$('.chat').css("display","block");
-			if(data_ids_arr == 5) {
-				
+			if(data_ids_arr == 5){
 				$('#'+global_array[3]).addClass('button-select');
 			}
 		}
@@ -652,7 +647,7 @@ function buttonQuestion(direction){
 			if(pant3 == 1){
 				$('.button-next').prop("disabled", false);
 			}
-			if(data_ids_arr == 5) {
+			if(data_ids_arr == 5){
 				$.each(global_terce, function(index, value ) {
 				  $('#'+value).addClass('button-select');
 				});
@@ -667,8 +662,7 @@ function buttonQuestion(direction){
 			if(facturacion != null && $('#textOperar').text() != 'Seleccione') {
 				$('.button-next').prop("disabled", false);
 			}
-			if(data_ids_arr == 5) {
-				
+			if(data_ids_arr == 5){
 				$("#textOperar").text(global_array[1]);
 	           	var divIncrement = $('#buttonMas.select-one').parent();
 	           	var cardSelec    = $('#buttonMas.select-one').parents('.content-card').find('.contenido');
@@ -689,7 +683,7 @@ function buttonQuestion(direction){
 			if(pant1 == 1){
 				$('.button-next').prop("disabled", false);
 			}
-			if(data_ids_arr == 5) {
+			if(data_ids_arr == 5){
 				$('#'+global_array[0]).addClass('button-select');
 			}
 		}
@@ -703,7 +697,7 @@ function buttonQuestion(direction){
 			$('.button-arrow').css("display","none");
 			$('.chat').css("display","none");
 			homePage.find('.button-next').css("display","block");
-			if(pant1 == 1) {
+			if(pant1 == 1){
 				$('.button-next').prop("disabled", false);
 			}else {
 				$('.button-next').prop("disabled", false);
@@ -722,8 +716,8 @@ function EditQuestion(id, pant){
 	if(pant == 1) {
 		datos_array = [];
 		array_ids   = [];
-		pant1 = 1;
-		pant2 = 1;
+		pant1 		= 1;
+		pant2 		= 1;
 	}
 	if(pant == 2) {
 		datos_array = [];
@@ -735,14 +729,14 @@ function EditQuestion(id, pant){
 		pant4 		= 1;
 	}
 	num = id.substr(6,1);
-	m = num;
+	m   = num;
 	var windowQestion = $('#'+id+'-page');
 	$('.opacity-done').removeClass('animated fadeInRight fadeOutLeft fadeInLeft fadeOutRight');
 	windowQestion.addClass('animated fadeInLeft');
 	$('.button-arrow.button-next').css("display","block");
 	$.ajax({
-		url   : 'es/EditQuestion',
-		type  : 'POST'
+		url  : 'es/EditQuestion',
+		type : 'POST'
 	}).done(function(data){
 		try{
         data = JSON.parse(data);
@@ -776,13 +770,13 @@ function EditQuestion(id, pant){
 function closeModal(){
 	$('#ModalQuestion').modal('hide');
 }
-$(document).ready(function() {
+$(document).ready(function(){
 	resizeContent();
-    $(window).resize(function() {
+    $(window).resize(function(){
         resizeContent();
     });
 });
-function resizeContent() {
+function resizeContent(){
    var top = $( window ).height();
    $("#home").css('height', top);
 }

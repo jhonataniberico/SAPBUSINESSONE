@@ -14,31 +14,31 @@ class En extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 
-  public function index() {
+  public function index(){
     //ELIMINAR DATOS EN SESIÓN AL CARGAR LA PÁGINA
     /*$data['nombre_comple'] = $this->session->userdata('nombre_linke');
-    $data['email_link'] = $this->session->userdata('email_linke');
-    $data['comp'] = $this->session->userdata('compania') == null ? '' : $this->session->userdata('compania');
-    $data['tit'] = $this->session->userdata('titulo') == null ? '' : $this->session->userdata('titulo');
-    $data['pais_link'] = $this->session->userdata('pais_linke');
-    $data['pantalla'] = $this->session->userdata('pantalla') == '' ? 0 : $this->session->userdata('pantalla');
-    $data['industria'] = $this->session->userdata('industria');
-    $data['Factura_anual'] = $this->session->userdata('Factura_anual');
-    $data['Tamanio'] = $this->session->userdata('Tamanio');
+    $data['email_link']      = $this->session->userdata('email_linke');
+    $data['comp']            = $this->session->userdata('compania') == null ? '' : $this->session->userdata('compania');
+    $data['tit']             = $this->session->userdata('titulo') == null ? '' : $this->session->userdata('titulo');
+    $data['pais_link']       = $this->session->userdata('pais_linke');
+    $data['pantalla']        = $this->session->userdata('pantalla') == '' ? 0 : $this->session->userdata('pantalla');
+    $data['industria']       = $this->session->userdata('industria');
+    $data['Factura_anual']   = $this->session->userdata('Factura_anual');
+    $data['Tamanio']         = $this->session->userdata('Tamanio');
     $data['Infraestructura'] = $this->session->userdata('Infraestructura');
-    $explode = explode(",", $this->session->userdata('Prioridad'));
-    $html    = '';
-    foreach ($explode as $key) {
+    $explode                 = explode(",", $this->session->userdata('Prioridad'));
+    $html                    = '';
+    foreach ($explode as $key){
       $html .= '<li>'.$key.'</li>';
     }
-    $data['priori'] = $html;*/
-    $data['confirmar'] = $this->session->userdata('confirmar') == null ? 0 : $this->session->userdata('confirmar');
-    $data['pantalla'] = 0;
-    $client_id     = "864xp2wdu9eghe";
-    $client_secret = "M6NxoP4EWlaADF2U";
-    $redirect_uri  = "http://www.sap-latam.com/sap_business_one/callback";
-    $csrf_token    = random_int(1111111, 9999999);
-    $scopes        = "r_basicprofile%20r_emailaddress";
+    $data['priori']        = $html;*/
+    $data['confirmar']     = $this->session->userdata('confirmar') == null ? 0 : $this->session->userdata('confirmar');
+    $data['pantalla']      = 0;
+    $client_id             = "864xp2wdu9eghe";
+    $client_secret         = "M6NxoP4EWlaADF2U";
+    $redirect_uri          = "http://www.sap-latam.com/sap_business_one/callback";
+    $csrf_token            = random_int(1111111, 9999999);
+    $scopes                = "r_basicprofile%20r_emailaddress";
     $data['client_id']     = $client_id;
     $data['client_secret'] = $client_secret;
     $data['redirect_uri']  = $redirect_uri;
@@ -48,7 +48,7 @@ class En extends CI_Controller {
     $this->load->view('v_en', $data);
   }
 
-  function Savedatos() {
+  function Savedatos(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
@@ -61,27 +61,27 @@ class En extends CI_Controller {
             $facturacion = $this->input->post('facturacion');
             $columna     = null;
             if($pantalla == 2) {$columna = 'Factura_anual';} elseif ($pantalla == 3) {$columna = 'Prioridad';}elseif ($pantalla == 4) {$columna = 'Infraestructura';}
-            if($pantalla == 1) {
-              $idIdioma = $this->M_solicitud->getDatosPais($idioma);
+            if($pantalla == 1){
+              $idIdioma    = $this->M_solicitud->getDatosPais($idioma);
               $arrayInsert = array('Industria'   => $datos,
                                    'Id_lenguaje' => $idIdioma);
               $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
-              $session = array('industria' => $datos,
-                               'id_sol'    => $datoInsert['Id'],
-                                'idioma'   => $idioma);
+              $session    = array('industria' => $datos,
+                                  'id_sol'    => $datoInsert['Id'],
+                                  'idioma'    => $idioma);
               $this->session->set_userdata($session);
             }else {
-              if($pantalla == 2) {
+              if($pantalla == 2){
                 $arrayUpdate = array($columna  => $facturacion,
                                      'Tamanio' => $operar);
-                $session = array($columna  => $facturacion,
-                                 'Tamanio' => $operar);
+                $session     = array($columna  => $facturacion,
+                                     'Tamanio' => $operar);
               }else {
-                if($pantalla == 3) {
+                if($pantalla == 3){
                   $arrayUpdate = array($columna => $datos_prio);
                   $session     = array($columna => $datos_prio);
                 }else if($pantalla == 4){
-                  $arrayUpdate = array($columna => $datos);
+                  $arrayUpdate = array($columna          => $datos);
                   $session     = array('Infraestructura' => $datos);
                 }
               }
@@ -95,7 +95,7 @@ class En extends CI_Controller {
         echo json_encode($data);
   }
 
-  function mostrarDatos() {
+  function mostrarDatos(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
@@ -147,16 +147,16 @@ class En extends CI_Controller {
                                  'Id_solicitud'    => $_SESSION['id_sol'],
                                  'fecha_sol'       => date('Y-m-d H:i:s'));
             $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'usuario');
-            $session = array('nombre_completo' => $nombre_completo,
-                             'Empresa'         => $empresa,
-                             'Email'           => $email,
-                             'Pais'            => $pais,
-                             'Cargo'           => $cargo,
-                             'Telefono'        => $telefono,
-                             'Relacion'        => $relacion,
-                             'Contacto'        => $contacto,
-                             'pantalla'        => 0,
-                             'id_persona'      => $datoInsert['Id']);
+            $session    = array('nombre_completo' => $nombre_completo,
+                                'Empresa'         => $empresa,
+                                'Email'           => $email,
+                                'Pais'            => $pais,
+                                'Cargo'           => $cargo,
+                                'Telefono'        => $telefono,
+                                'Relacion'        => $relacion,
+                                'Contacto'        => $contacto,
+                                'pantalla'        => 0,
+                                'id_persona'      => $datoInsert['Id']);
             $this->session->set_userdata($session);
             $this->session->unset_userdata('nombre_linke');
             $this->session->unset_userdata('email_linke');
@@ -170,21 +170,18 @@ class En extends CI_Controller {
             $this->session->unset_userdata('Tamanio');
             $this->session->unset_userdata('Prioridad');
             $this->session->unset_userdata('idioma');
-
-          //ENVÍO DE EMAILS
           //$this->sendGmailSap($email);
           //$this->emailClienteSap($email);
           //$this->emailPartner();
-          $data['msj']  = $datoInsert['msj'];
+          $data['msj']   = $datoInsert['msj'];
           $data['error'] = $datoInsert['error'];
-        } catch (Exception $e) {
+        } catch (Exception $e){
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
   }
 
-    //EMAIL SAP
-    function sendGmailSap($email) {
+  function sendGmailSap($email) {
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
       try {  
@@ -196,27 +193,20 @@ class En extends CI_Controller {
           $contact = 'By email';
         }
         $respuestas = $this->M_solicitud->getRespUsuario($_SESSION['id_persona']);
-       // cargamos la libreria email de ci
        $this->load->library("email");
-       //configuracion para gmail
-       $configGmail = array(
-                            'protocol'  => 'smtp',
+       $configGmail = array('protocol'  => 'smtp',
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,
                             'smtp_user' => 'confirmaciones@merino.com.pe',
                             'smtp_pass' => 'cFm$17Pe',
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
-                            'newline'   => "\r\n"
-                          );    
-       //cargamos la configuración para enviar con gmail
+                            'newline'   => "\r\n");    
        $this->email->initialize($configGmail);
        $this->email->from('info@sap-latam.com');
-       $this->email->to('jminaya@brainblue.com');//EMAIL AL QUIÉN IRÁ DIRIGIDO alejandra.cuellar@sap.com
+       $this->email->to('jminaya@brainblue.com');
        $this->email->subject('I am interested in SAP Business One for my business.');
-
-       //CONSTRUIMOS EL HTML
-          $texto = '<!DOCTYPE html>
+       $texto = '<!DOCTYPE html>
                   <html>
                   <head>
                     <title></title>
@@ -351,7 +341,7 @@ class En extends CI_Controller {
                     </table>
                   </body>
                   </html>';
-        $this->email->message($texto);//AQUI SE INSERTA EL HTML
+        $this->email->message($texto);
         $this->email->send();
         $this->session->unset_userdata('id_persona');
         $data['error'] = EXIT_SUCCESS;
@@ -361,31 +351,24 @@ class En extends CI_Controller {
       return json_encode(array_map('utf8_encode', $data));
     }
 
-  function emailClienteSap($email) {
+  function emailClienteSap($email){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
       try {  
-       // cargamos la libreria email de ci
        $this->load->library("email");
-       //configuracion para gmail
-       $configGmail = array(
-                            'protocol'  => 'smtp',
+       $configGmail = array('protocol'  => 'smtp',
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,
                             'smtp_user' => 'confirmaciones@merino.com.pe',
                             'smtp_pass' => 'cFm$17Pe',
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
-                            'newline'   => "\r\n"
-                          );    
-       //cargamos la configuración para enviar con gmail
+                            'newline'   => "\r\n");    
        $this->email->initialize($configGmail);
        $this->email->from('info@sap-latam.com');
-       $this->email->to($email);//EMAIL AL QUIÉN IRÁ DIRIGIDO
+       $this->email->to($email);
        $this->email->subject('Thanks for your interest in SAP Business One.');
-
-       //CONSTRUIMOS EL HTML
-        $texto = '<!DOCTYPE html>
+       $texto = '<!DOCTYPE html>
                 <html>
                 <head>
                   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -515,12 +498,12 @@ class En extends CI_Controller {
       return json_encode(array_map('utf8_encode', $data));
     }
 
-    function EditQuestion() {
+    function EditQuestion(){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
       try {
-        $data['ids_array']   = $this->session->userdata('ids_array');
-        $data['array_3pant'] = $this->session->userdata('array_3pant');
+        $data['ids_array']     = $this->session->userdata('ids_array');
+        $data['array_3pant']   = $this->session->userdata('array_3pant');
         $data['pantalla_sess'] = $this->session->userdata('pantalla') == '' ? 0 : $this->session->userdata('pantalla');
         $data['error'] = EXIT_SUCCESS;
       } catch (Exception $e) {
@@ -529,59 +512,57 @@ class En extends CI_Controller {
       echo json_encode($data);
     }
 
-    function ConfirmarRespuestas() {
+    function ConfirmarRespuestas(){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
       try {
         $confirmar = $this->input->post('confirmar');
-        $session = array('confirmar' => $confirmar);
+        $session   = array('confirmar' => $confirmar);
         $this->session->set_userdata($session);
         $data['error'] = EXIT_SUCCESS;
-      }catch(Exception $e) {
+      }catch(Exception $e){
         $data['msj'] = $e->getMessage();
       }
       echo json_encode($data);
   }
 
 
-  function cambiarIdioma() {
+  function cambiarIdioma(){
     $data['error'] = EXIT_ERROR;
     $data['msj']   = null;
       try {
-        $idioma = $this->input->post('idioma');
+        $idioma  = $this->input->post('idioma');
         $session = array('idioma' => $idioma);
         $this->session->set_userdata($session);
         $data['error'] = EXIT_SUCCESS;
-      }catch(Exception $e) {
+      }catch(Exception $e){
         $data['msj'] = $e->getMessage();
       }
       echo json_encode($data);
   }
 
-  function emailPartner() {
+  function emailPartner(){
     $data['error'] = EXIT_ERROR;
     $data['msj']   = null;
     try {
-      $configGmail = array(
-                            'protocol'  => 'smtp',
+      $configGmail = array('protocol'  => 'smtp',
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,
                             'smtp_user' => 'confirmaciones@merino.com.pe',
                             'smtp_pass' => 'cFm$17Pe',
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
-                            'newline'   => "\r\n"
-                          );    
-       //cargamos la configuración para enviar con gmail
-       $this->email->initialize($configGmail);
-       $this->email->from('info@sap-latam.com');
-       $this->email->to('email_partner@gmail.com');//EMAIL AL QUIÉN IRÁ DIRIGIDO
-       $this->email->subject('Estoy interesado en SAP Business One para mi negocio.');
-       $texto = 'html del partner';
+                            'newline'   => "\r\n");    
+      //cargamos la configuración para enviar con gmail
+      $this->email->initialize($configGmail);
+      $this->email->from('info@sap-latam.com');
+      $this->email->to('email_partner@gmail.com');//EMAIL AL QUIÉN IRÁ DIRIGIDO
+      $this->email->subject('Estoy interesado en SAP Business One para mi negocio.');
+      $texto = 'html del partner';
       $this->email->message($texto);//AQUI SE INSERTA EL HTML
       $this->email->send();
       $data['error'] = EXIT_SUCCESS;
-    }catch(Exception $e) {
+    }catch(Exception $e){
       $data['msj'] = $e->getMessage();
     }
   }

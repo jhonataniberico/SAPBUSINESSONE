@@ -19,17 +19,17 @@ class Login extends CI_Controller {
 		$this->load->view('v_login');
 	}
 
-	function ingresar() {
+	function ingresar(){
 		$data['error'] = EXIT_ERROR;
         $data['msj']   = null;
          try {
-			$usuario = $this->input->post('usuario');
+			$usuario  = $this->input->post('usuario');
 			$password = $this->input->post('password');
 			$username = $this->M_usuario->verificarUsuario($usuario, $password);
-			if(count($username) != 0) {
-				if($username[0]->usuario == $usuario) {
+			if(count($username) != 0){
+				if($username[0]->usuario == $usuario){
 				$session = array('usuario' => $usuario,
-								 'Id_user' 	   => $username[0]->Id);
+								 'Id_user' => $username[0]->Id);
           		$this->session->set_userdata($session);
           		$data['error'] = EXIT_SUCCESS;
 				}

@@ -13,25 +13,25 @@ class Admin extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 
-	public function index() {
-		if($this->session->userdata('usuario') == null) {
+	public function index(){
+		if($this->session->userdata('usuario') == null){
 			header("location: Login");
 		}
 		$data['html'] = $this->getTable();
 		$this->load->view('v_admin', $data);
 	}
 
-	function getTable() {
+	function getTable(){
 		$datos = $this->M_reportes->getDatosTabla();
-		$html = '';
-		$cont = 1;
-		foreach ($datos as $key) {
+		$html  = '';
+		$cont  = 1;
+		foreach ($datos as $key){
             $contactado = null;
-            if($key->Contactado == 1) {
+            if($key->Contactado == 1){
                 $contactado = 'Por Email';
-            }else if($key->Contactado == 2) {
+            }else if($key->Contactado == 2){
                 $contactado = 'Por Teléfono';
-            }else if($key->Contactado == 3) {
+            }else if($key->Contactado == 3){
                 $contactado = 'Por Email y teléfono';
             }
 			$html .= '<tr class="tr-cursor-pointer tr-ver-info-solicitud" data-idSolicitud="'.$cont.'">
@@ -50,14 +50,14 @@ class Admin extends CI_Controller {
 		return $html;
 	}
 
-    function cerrarCesion() {
+    function cerrarCesion(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
             $this->session->unset_userdata('usuario');
             $this->session->unset_userdata('Id_user');
             $data['error'] = EXIT_SUCCESS;
-        } catch (Exception $e) {
+        } catch (Exception $e){
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);

@@ -4,7 +4,7 @@ class M_reportes extends  CI_Model{
         parent::__construct();
     }
 
-    function getDatosTabla() {
+    function getDatosTabla(){
         $sql = "SELECT s.*,
 					   u.nombre_completo,
 				       u.Empresa,

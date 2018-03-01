@@ -12,13 +12,13 @@ class callback extends CI_Controller {
     {    
     	require_once "init.php";
 		$user = getCallback();
-		$_SESSION['user'] 	  = $user;
-		$data['firstName'] 	  = $user->firstName;
-		$data['lastName'] 	  = $user->lastName;
-		$data['emailAddress'] = $user->emailAddress;
-		$data['company'] 	  = isset($user->positions->values) == true ? $user->positions->values[0]->company->name : null;
-		$data['title'] 	  	  = isset($user->positions->values) == true ? $user->positions->values[0]->title : null;
-		$data['location'] 	  = $user->location->name;
+		$_SESSION['user'] 	  			= $user;
+		$data['firstName'] 	  			= $user->firstName;
+		$data['lastName'] 	  			= $user->lastName;
+		$data['emailAddress'] 			= $user->emailAddress;
+		$data['company'] 	  			= isset($user->positions->values) == true ? $user->positions->values[0]->company->name : null;
+		$data['title'] 	  	  			= isset($user->positions->values) == true ? $user->positions->values[0]->title : null;
+		$data['location'] 	  			= $user->location->name;
 		$session = array('nombre_linke' => $user->firstName.' '.$user->lastName,
 		        	 	 'email_linke'  => $user->emailAddress,
 				 		 'compania'  	=> isset($user->positions->values) == true ? $user->positions->values[0]->company->name : null,

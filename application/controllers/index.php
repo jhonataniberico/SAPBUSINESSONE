@@ -10,6 +10,5 @@
 </head>
 <body style="margin-top: 200px; text-align: center;">
     <h1><a style="font-family: 'Arial';" href="<?php  echo "https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id={$client_id}&redirect_uri={$redirect_uri}&state={$csrf_token}&scope={$scopes}"; ?>">LinkedIn</a></h1>
-    
 </body>
 </html>
