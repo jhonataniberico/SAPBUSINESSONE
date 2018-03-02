@@ -60,7 +60,7 @@ function solicitarEstimacion(){
 	}
 	if(terminos == true){
 		term_cond = 1
-	}else {
+	}else{
 		term_cond = 0;
 	}
 	if(terminos == false){
@@ -88,7 +88,7 @@ function solicitarEstimacion(){
 					limpiarCampos();
 					enviarGracias();
 				}
-        	}else {
+        	}else{
         		return;
         	}
       } catch(err){
@@ -97,10 +97,10 @@ function solicitarEstimacion(){
 	});
 }
 function soloLetras(e){
-    key 	   	   = e.keyCode || e.which;
-    tecla 	   	   = String.fromCharCode(key).toLowerCase();
-    letras     	   = " áéíóúabcdefghijklmnñopqrstuvwxyz";
-    especiales 	   = "8-37-39-46";
+    key 	   	  = e.keyCode || e.which;
+    tecla 	   	  = String.fromCharCode(key).toLowerCase();
+    letras     	  = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+    especiales 	  = "8-37-39-46";
     tecla_especial = false
     for(var i in especiales){
          if(key == especiales[i]){
@@ -168,8 +168,8 @@ function guardarDatos(id,datos){
 	    	var content_toggle = cardToggle.find('.contenido-right').find('p');
 	    	var small_toggle   = cardToggle.find('.contenido-right').find('small');
 	    	modal.find('.mdl-card__title').find('img').attr({
-		        "alt"   : img_toggle.attr('alt'),
-		        "src"   : img_toggle.attr('src')
+		        "alt" : img_toggle.attr('alt'),
+		        "src" : img_toggle.attr('src')
 		    });
 		    modal.find('.mdl-card__supporting-text').find('p').text(content_toggle[0].innerText);
 		    modal.find('.mdl-card__supporting-text').find('small').text(small_toggle[0].innerText);
@@ -189,8 +189,8 @@ function guardarDatos(id,datos){
 		    var content = cardSelect.find('.contenido-right').find('p');
 		    var small   = cardSelect.find('.contenido-right').find('small');
 		    modal.find('.mdl-card__title').find('img').attr({
-		        "alt"   : img.attr('alt'),
-		        "src"   : img.attr('src')
+		        "alt" : img.attr('alt'),
+		        "src" : img.attr('src')
 		    });
 		    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
 		    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
@@ -262,7 +262,7 @@ $( document ).ready(function(){
 		}
 		if($('#'+array_button[0]).hasClass('button-select') == true){
 			$('.button-next').prop("disabled", false);
-		}else {
+		}else{
 			$('.button-next').prop("disabled", true);
 		}
 		pant3 = 1;
@@ -315,7 +315,7 @@ function cambiarIdioma(){
 	  try{
         data = JSON.parse(data);
         if(data.error == 0){
-        }else {
+        }else{
         	return;
         }
       } catch (err){
@@ -364,14 +364,14 @@ function operar(id,tipo){
 			cardHidden.fadeIn(400);
 			$("#facturacion").val('0');
 			$('.selectpicker').selectpicker('refresh');
-			if (window.matchMedia("(max-width: 1200px)").matches) {
+			if (window.matchMedia("(max-width: 1200px)").matches){
 			    var card    = buttonSelect.closest('.mdl-card-question');
 			    var img     = card.find('.contenido-left').find('img');
 			    var content = card.find('.contenido-right').find('p');
 			    var small   = card.find('.contenido-right').find('small');
 			    modal.find('.mdl-card__title').find('img').attr({
-			        "alt"   : img.attr('alt'),
-			        "src"   : img.attr('src')
+			        "alt" : img.attr('alt'),
+			        "src" : img.attr('src')
 			    });
 			    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
 			    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
@@ -435,13 +435,13 @@ function selectFacturacion(id){
 	var Select       = $('#'+id).parents('.mdl-card-question').find('.contenido');
 	var modal        = $('#ModalQuestion');
 	Select.addClass('aparecer');
-	if (window.matchMedia("(max-width: 1200px)").matches) {
+	if (window.matchMedia("(max-width: 1200px)").matches){
 	    var img     = Select.find('.contenido-left').find('img');
 	    var content = Select.find('.contenido-right').find('p');
 	    var small   = Select.find('.contenido-right').find('small');
 	    modal.find('.mdl-card__title').find('img').attr({
-	        "alt"   : img.attr('alt'),
-	        "src"   : img.attr('src')
+	        "alt" : img.attr('alt'),
+	        "src" : img.attr('src')
 	    });
 	    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
 	    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
@@ -588,7 +588,7 @@ function buttonQuestion(direction){
 			}
 			var id = array_ids[2];
 			$('#'+id).addClass('button-select');
-			if(pant3 == 0) {
+			if(pant3 == 0){
 				$('.button-next').prop("disabled", true);
 			}
 		}
@@ -647,7 +647,7 @@ function buttonQuestion(direction){
 				$('.button-next').prop("disabled", false);
 			}
 			if(data_ids_arr == 5){
-				$.each(global_terce, function(index, value ) {
+				$.each(global_terce, function(index, value ){
 				  $('#'+value).addClass('button-select');
 				});
 			}
@@ -698,7 +698,7 @@ function buttonQuestion(direction){
 			homePage.find('.button-next').css("display","block");
 			if(pant1 == 1){
 				$('.button-next').prop("disabled", false);
-			}else {
+			}else{
 				$('.button-next').prop("disabled", false);
 			}
 			m = 1;
@@ -753,12 +753,12 @@ function EditQuestion(id, pant){
 			$("#facturacion").parent().addClass('button-select');
 			var divIncrement2 = $('#facturacion').parents().find('.mdl-select');
 			divIncrement2.addClass('select-increment');
-			$.each(data.array_3pant, function(index, value ) {
+			$.each(data.array_3pant, function(index, value ){
 			  $('#'+value).addClass('button-select');
 			});
 			$('.selectpicker').selectpicker('refresh');
 			$('#'+data.ids_array[3]).addClass('button-select');
-        }else {
+        }else{
         	return;
         }
       }catch(err){

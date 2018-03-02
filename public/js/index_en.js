@@ -97,10 +97,10 @@ function solicitarEstimacion(){
 	});
 }
 function soloLetras(e){
-    key 	   	   = e.keyCode || e.which;
-    tecla 	   	   = String.fromCharCode(key).toLowerCase();
-    letras     	   = " áéíóúabcdefghijklmnñopqrstuvwxyz";
-    especiales 	   = "8-37-39-46";
+    key 	   	  = e.keyCode || e.which;
+    tecla 	   	  = String.fromCharCode(key).toLowerCase();
+    letras     	  = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+    especiales 	  = "8-37-39-46";
     tecla_especial = false
     for(var i in especiales){
          if(key == especiales[i]){
@@ -168,8 +168,8 @@ function guardarDatos(id,datos){
 	    	var content_toggle = cardToggle.find('.contenido-right').find('p');
 	    	var small_toggle   = cardToggle.find('.contenido-right').find('small');
 	    	modal.find('.mdl-card__title').find('img').attr({
-		        "alt"   : img_toggle.attr('alt'),
-		        "src"   : img_toggle.attr('src')
+		        "alt" : img_toggle.attr('alt'),
+		        "src" : img_toggle.attr('src')
 		    });
 		    modal.find('.mdl-card__supporting-text').find('p').text(content_toggle[0].innerText);
 		    modal.find('.mdl-card__supporting-text').find('small').text(small_toggle[0].innerText);
@@ -189,8 +189,8 @@ function guardarDatos(id,datos){
 		    var content = cardSelect.find('.contenido-right').find('p');
 		    var small   = cardSelect.find('.contenido-right').find('small');
 		    modal.find('.mdl-card__title').find('img').attr({
-		        "alt"   : img.attr('alt'),
-		        "src"   : img.attr('src')
+		        "alt" : img.attr('alt'),
+		        "src" : img.attr('src')
 		    });
 		    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
 		    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
@@ -370,8 +370,8 @@ function operar(id,tipo){
 			    var content = card.find('.contenido-right').find('p');
 			    var small   = card.find('.contenido-right').find('small');
 			    modal.find('.mdl-card__title').find('img').attr({
-			        "alt"   : img.attr('alt'),
-			        "src"   : img.attr('src')
+			        "alt" : img.attr('alt'),
+			        "src" : img.attr('src')
 			    });
 			    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
 			    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
@@ -440,8 +440,8 @@ function selectFacturacion(id){
 	    var content = Select.find('.contenido-right').find('p');
 	    var small   = Select.find('.contenido-right').find('small');
 	    modal.find('.mdl-card__title').find('img').attr({
-	        "alt"   : img.attr('alt'),
-	        "src"   : img.attr('src')
+	        "alt" : img.attr('alt'),
+	        "src" : img.attr('src')
 	    });
 	    modal.find('.mdl-card__supporting-text').find('p').text(content[0].innerText);
 	    modal.find('.mdl-card__supporting-text').find('small').text(small[0].innerText);
