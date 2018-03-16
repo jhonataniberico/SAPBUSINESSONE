@@ -254,12 +254,12 @@
 			            				<div class="col-xs-12">
 			            					<div class="mdl-select">
 			            						<select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
-													<option value="< 1 Millón de Dólares">< 1 Millón de Dólares</option>
-													<option value="1 - 3 Millones de Dólares">1 - 3 Millones de Dólares</option>
-													<option value="3 - 5 Millones de Dólares">3 - 5 Millones de Dólares</option>
-													<option value="5 - 10 Millones de Dólares">5 - 10 Millones de Dólares</option>
-													<option value="10 - 20 Millones de Dólares">10 - 20 Millones de Dólares</option>
-													<option value="20 - 40 Millones de Dólares">20 - 40 Millones de Dólares</option>
+													<option value="< 1 Millón de Dólares">< 1 Millón de dólares</option>
+													<option value="1 - 3 Millones de dólares">1 - 3 Millones de dólares</option>
+													<option value="3 - 5 Millones de dólares">3 - 5 Millones de dólares</option>
+													<option value="5 - 10 Millones de dólares">5 - 10 Millones de dólares</option>
+													<option value="10 - 20 Millones de dólares">10 - 20 Millones de dólares</option>
+													<option value="20 - 40 Millones de dólares">20 - 40 Millones de dólares</option>
 													<option value="No poseo información">No poseo información</option>
 												</select>
 			            					</div>
