@@ -663,7 +663,7 @@
 									</div>
 		        				</div>
 		        				<div class="col-sm-6">
-		        					<p class="text-contacto">Quiero ser contactado por representante de ventas:</p>
+		        					<p class="text-contacto">Quiero ser contactado por un representante de ventas:</p>
 		        					<div class="mdl-input-label">
 		        						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="c-email">
 											<input type="radio" id="c-email" class="mdl-radio__button" name="options" value="1">
