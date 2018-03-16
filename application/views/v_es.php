@@ -74,8 +74,8 @@
 	    				<div class="mdl-idioma">
 							<select class="selectpicker" id="Idioma"  name="Idioma" onchange="cambiarIdioma()">
 								<option value="Español">Espa&ntilde;ol</option>
-								<option value="Inglés">Ingl&eacute;s</option>
-								<option value="Portugués">Portugu&eacute;s</option>
+								<option value="Inglés">English</option>
+								<option value="Portugués">Portugu&ecirc;s</option>
 							</select>
 	    				</div>
 						<div class="background3"></div>
