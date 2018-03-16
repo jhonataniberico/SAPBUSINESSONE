@@ -485,7 +485,7 @@
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Correr el software desde la nube junto con su informaci&oacute;n empresarial.</label>
+		            				<label>Ejecutar el software desde la nube junto con su informaci&oacute;n empresarial.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
