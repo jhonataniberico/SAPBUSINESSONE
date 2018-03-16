@@ -84,7 +84,7 @@
 	    			</div>
 	    		</div>
 	    		<div class="logo-bottom">
-        			<img src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_home.png">
+        			<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
 		    		<div class="bottom-right">
 						<p>Puede seleccionar m&aacute;s de una opci&oacute;n</p>
 		    		</div>

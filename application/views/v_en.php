@@ -67,7 +67,7 @@
 				<div class="header">
 	    			<div class="header-left">
 	    				<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	    				<h2>¿Are you ready for SAP Business One&#63;</h2>
+	    				<h2>Are you ready for SAP Business One&#63;</h2>
 	    			</div>
 	    			<div class="header-right">
 	    				<button class="mdl-button mdl-js-button mdl-button--icon button-home" onclick="returnHome()"><i class="mdi mdi-home"></i></button>
