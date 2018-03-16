@@ -40,8 +40,8 @@
 					<div class="mdl-idioma">
 						<select class="selectpicker" id="IdiomaHome" name="Idioma" onchange="cambiarIdiomaHome()">
 							<option value="Inglés">English</option>
-							<option value="Español">Spanish</option>
-							<option value="Portugués">Portuguese</option>
+							<option value="Español">Espa&ntilde;ol</option>
+							<option value="Portugués">Portugu&ecirc;s</option>
 						</select>
     				</div>
 		    	</div>
