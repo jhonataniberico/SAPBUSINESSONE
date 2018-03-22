@@ -109,7 +109,7 @@ class Pt extends CI_Controller {
           $session = array('ids_array'   => $ids_array,
                            'array_3pant' => $array_3pant);
           $this->session->set_userdata($session);
-          $tamanio = $this->session->userdata('Tamanio') == null ? '-' : $this->session->userdata('Tamanio').' funcionários';
+          $tamanio = $this->session->userdata('Tamanio') == null ? '-' : $this->session->userdata('Tamanio').' Funcionários';
           $data['Industria']       = $this->session->userdata('industria') == null ? '-' : $this->session->userdata('industria');
           $data['Factura_anual']   = $this->session->userdata('Factura_anual') == null ? '-' : $this->session->userdata('Factura_anual');
           $data['Tamanio']         = $tamanio;

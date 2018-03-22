@@ -91,7 +91,7 @@
           });
           $('.buttons-excel').empty();
           $('.buttons-print').empty();
-          $('.buttons-excel').append('<i class="fa fa-file-excel-o"></i>');
+          $('.buttons-excel').append('<i class="fa fa-download"></i>');
           $('.buttons-print').append('<i class="fa fa-print"></i>');
       });
     </script>

@@ -67,7 +67,7 @@
 				<div class="header">
 	    			<div class="header-left">
 	    				<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	    				<h2>Voc&ecirc; Est&aacute; pronto para o SAP Business One&#63;</h2>
+	    				<h2>Voc&ecirc; est&aacute; pronto para o SAP Business One&#63;</h2>
 	    			</div>
 	    			<div class="header-right">
 	    				<button class="mdl-button mdl-js-button mdl-button--icon button-home" onclick="returnHome()"><i class="mdi mdi-home"></i></button>
@@ -241,7 +241,7 @@
 			            		<div class="flip-card">
 			            			<div class="card-front card-front-none">
 			            				<img src="<?php echo RUTA_IMG?>cards/card-facturacion.png">
-			            				<p>Faturamento Anual</p>
+			            				<p>Faturamento anual</p>
 			            			</div>
 			            		</div>
 			            		<div class="content-card">
@@ -462,7 +462,7 @@
 		            			<div class="contenido">
 		            				<div class="contenido-right">
 	            						<h2>Voc&ecirc; sabia que...</h2>
-	            						<p>... &eacute; poss&iacute;vel fazer uma conex&atilde;o destes aplicativos (com&eacute;rcio eletr&ocirc;nico, ponto de venda, Marketplace, CRM, etc.) com o SAP Business One facilmente quando se usa o On-Premise.</p>
+	            						<p style="height: 116px;">... &eacute; poss&iacute;vel fazer uma conex&atilde;o destes aplicativos (com&eacute;rcio eletr&ocirc;nico, ponto de venda, Marketplace, CRM, etc.) com o SAP Business One facilmente quando se usa o On-Premise.</p>
 	            						<small>(IDC, Setembro 2016)</small>
 		            				</div>
 		            				<div class="contenido-left">
@@ -488,7 +488,7 @@
 		            			<div class="contenido">
 		            				<div class="contenido-right">
 	            						<h2>Voc&ecirc; sabia que...</h2>
-	            						<p>... 21% das empresas est&atilde;o cada vez mais interessadas em alternativas ou hospedagem para o que, no momento, executam no local.</p>
+	            						<p style="height: 116px;">... 21% das empresas est&atilde;o cada vez mais interessadas em alternativas ou hospedagem para o que, no momento, executam no local.</p>
 	            						<small>(IDC, Setembro 2016)</small>
 		            				</div>
 		            				<div class="contenido-left">

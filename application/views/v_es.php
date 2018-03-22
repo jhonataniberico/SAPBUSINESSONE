@@ -254,12 +254,21 @@
 			            				<div class="col-xs-12">
 			            					<div class="mdl-select">
 			            						<select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
+<<<<<<< Updated upstream
 													<option value="< 1 Millón de Dólares">< 1 Millón de dólares</option>
 													<option value="1 - 3 Millones de dólares">1 - 3 Millones de dólares</option>
 													<option value="3 - 5 Millones de dólares">3 - 5 Millones de dólares</option>
 													<option value="5 - 10 Millones de dólares">5 - 10 Millones de dólares</option>
 													<option value="10 - 20 Millones de dólares">10 - 20 Millones de dólares</option>
 													<option value="20 - 40 Millones de dólares">20 - 40 Millones de dólares</option>
+=======
+													<option value="< 1 Millón de dólares">< 1 Millón de dólares</option>
+													<option value="1-3 Millones de dólares">1-3 Millones de dólares</option>
+													<option value="3-5 Millones de dólares">3-5 Millones de dólares</option>
+													<option value="5-10 Millones de dólares">5-10 Millones de dólares</option>
+													<option value="10-20 Millones de dólares">10-20 Millones de dólares</option>
+													<option value="20-40 Millones de dólares">20-40 Millones de dólares</option>
+>>>>>>> Stashed changes
 													<option value="No poseo información">No poseo información</option>
 												</select>
 			            					</div>
@@ -667,7 +676,7 @@
 		        					<div class="mdl-input-label">
 		        						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="c-email">
 											<input type="radio" id="c-email" class="mdl-radio__button" name="options" value="1">
-											<span class="mdl-radio__label">Por Email</span>
+											<span class="mdl-radio__label">Por email</span>
 										</label>
 		        					</div>
 		        					<div class="mdl-input-label">
