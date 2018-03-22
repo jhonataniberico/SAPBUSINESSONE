@@ -86,7 +86,7 @@ h2,p{
 	color: #757575;
 }
 .mdl-card-table .dataTables_filter{
-    position: fixed;
+    position: relative;
     right: 15px;
     margin-top: 15px;
 }
@@ -97,7 +97,7 @@ table.dataTable.no-footer{
 	margin-bottom: 30px;
 }
 .dataTables_wrapper .dataTables_paginate{
-    position: fixed;
+    position: relative;
     right: 15px;
     bottom: 15px;
 }
@@ -1682,5 +1682,18 @@ span.number{
 @media (max-width: 420px) and (max-height: 640px){
 	.mdl-card-question .contenido{
 		display: none;
+	}
+}
+@media (max-height: 800px){
+	#content.mdl-container{
+		position: relative;
+		-webkit-transform: inherit;
+	    -moz-transform: inherit;
+	    -ms-transform: inherit;
+     	-o-transform: inherit;
+    	transform: inherit;
+    	margin: 50px auto;
+    	top: inherit;
+    	left: inherit;
 	}
 }

@@ -25,6 +25,11 @@
     <link rel="stylesheet"    href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css">
     <link rel="stylesheet"    href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css">
     <link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
+    <style type="text/css">
+        body{
+            overflow-y: scroll;
+        }
+    </style>
 <body>
     <section id="principal">
         <div id="content" class="mdl-container">
