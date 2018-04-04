@@ -311,24 +311,24 @@
 		            		<div class="flip-card">
 		            			<div class="card-front">
 		            				<img src="<?php echo RUTA_IMG?>cards/card-anywhere.png">
-		            				<p>Mobility</p>
+		            				<p>Mobilité</p>
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Offer employees access to software through an intuitive mobile app.</label>
+		            				<label>Offrir aux employés un accès au logiciel par le biais d'une application mobile intuitive.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonAnywhere" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Mobility')">Select</button>
+		            			<button id="buttonAnywhere" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Mobility')">Sélectionner</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 		            				</div>
 		            				<div class="contenido-right">
-	            						<h2>Did you know that...</h2>
-	            						<p>... you can access integrated analysis for real-time decision-making.</p>
-	            						<small>(IDC, September 2016)</small>
+	            						<h2>Le saviez-vous ?</h2>
+	            						<p>Vous pouvez accéder à une analyse intégrée pour une prise de décision en temps réel.</p>
+	            						<small>(IDC, spetembre 2016)</small>
 		            				</div>
 		            			</div>
 		            		</div>
@@ -337,24 +337,24 @@
 		            		<div class="flip-card">
 		            			<div class="card-front">
 		            				<img class="m-b-0" src="<?php echo RUTA_IMG?>cards/card-sap.png">
-		            				<p>Real time analysis with SAP HANA</p>
+		            				<p>Analyse en temps réel avec SAP HANA</p>
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Your analysis times can be reduced by 70% with the power of SAP HANA.</label>
+		            				<label>Votre temps d’analyse peut être réduit de 70% avec la puissance de SAP HANA.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonSap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Real time analysis with SAP HANA')">Select</button>
+		            			<button id="buttonSap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Real time analysis with SAP HANA')">Sélectionner</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 		            				</div>
 		            				<div class="contenido-right">
-	            						<h2>Did you know that...</h2>
-	            						<p>... Business One uses In-Memory Computing technology to create reports and analyses.</p>
-	            						<small>(IDC, September 2016)</small>
+	            						<h2>Le saviez-vous ?</h2>
+	            						<p>SAP Business One utilise la technologie In-Memory Computing pour créer des rapports et analyses.</p>
+	            						<small>(IDC, septembre 2016)</small>
 		            				</div>
 		            			</div>
 		            		</div>
@@ -363,16 +363,16 @@
 		            		<div class="flip-card">
 		            			<div class="card-front">
 		            				<img class="m-b-0" src="<?php echo RUTA_IMG?>cards/card-analytics.png">
-		            				<p>Predictive analysis with Analytics</p>
+		            				<p>Une analyse prédictive avec l'analytique</p>
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Anticipate results with predictive analytics and point your business in the right direction.</label>
+		            				<label>Anticiper les résultats avec des analyses prédictives et orienter votre entreprise vers la bonne direction.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonAnalytics" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Predictive analysis with Analytics')">Select</button>
+		            			<button id="buttonAnalytics" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Predictive analysis with Analytics')">Sélectionner</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
