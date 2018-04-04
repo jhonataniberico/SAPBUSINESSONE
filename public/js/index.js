@@ -301,12 +301,16 @@ function mostrarDatos(){
 }
 function cambiarIdioma(){
 	var idioma = $('#Idioma').val();
+	console.log('entra');
+	console.log(idioma);
 	if(idioma == 'Español'){
 		location.href = 'Es';
 	}else if(idioma == 'Inglés'){
 		location.href = 'En';
 	}else if(idioma == 'Portugués'){
 		location.href = 'Pt';
+	}else if(idioma == 'Francés'){
+		location.href = 'Fr';
 	}
 	$.ajax({
 		data  : {idioma : idioma},
@@ -332,6 +336,8 @@ function cambiarIdiomaHome(){
 		location.href = 'En';
 	}else if(idioma == 'Portugués'){
 		location.href = 'Pt';
+	}else if(idioma == 'Francés'){
+		location.href = 'Fr';
 	}
 	$.ajax({
 		data : {idioma : idioma},

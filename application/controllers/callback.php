@@ -32,6 +32,8 @@ class callback extends CI_Controller {
 			header("location: en");
 		}else if($_SESSION['idioma'] == 'Portugués') {
 			header("location: pt");
+		}else if($_SESSION['idioma'] == 'Francés') {
+			header("location: fr");
 		}
     } 
 }

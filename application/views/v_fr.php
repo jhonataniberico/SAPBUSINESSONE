@@ -39,9 +39,9 @@
 					<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
 					<div class="mdl-idioma">
 						<select class="selectpicker" id="IdiomaHome" name="Idioma" onchange="cambiarIdiomaHome()">
+							<option value="Francés">Francés</option>
 							<option value="Inglés">English</option>
 							<option value="Español">Espa&ntilde;ol</option>
-							<option value="Francés">Franc&etilde;s</option>
 							<option value="Portugués">Portugu&ecirc;s</option>
 						</select>
     				</div>
@@ -74,9 +74,9 @@
 	    				<button class="mdl-button mdl-js-button mdl-button--icon button-home" onclick="returnHome()"><i class="mdi mdi-home"></i></button>
 	    				<div class="mdl-idioma">
 							<select class="selectpicker" id="Idioma" name="Idioma" onchange="cambiarIdioma()">
+								<option value="Francés">Francés</option>
 								<option value="Inglés">English</option>
 								<option value="Español">Espa&ntilde;ol</option>
-								<option value="Francés">Franc&etilde;s</option>
 								<option value="Portugués">Portugu&ecirc;s</option>
 							</select>
 	    				</div>
@@ -251,13 +251,13 @@
 			            				<div class="col-xs-12">
 			            					<div class="mdl-select">
 			            						<select class="selectpicker" id="facturacion" name="facturacion" title="Select" onchange="selectFacturacion(this.id)">
-													<option value="< 1 Million dollars">< 1 Million d'Euro</option>
-													<option value="1 - 3 Millions of dollars">1 -3 Millions d'Euro</option>
-													<option value="3 - 5 Millions of dollars">3 - 5  Millions d'Euro</option>
-													<option value="5 - 10 Millions of dollars">5 - 10 Millions d'Euro</option>
-													<option value="10 - 20 Millions of dollars">10 - 20 Millions d'Euro</option>
-													<option value="20 - 40 Millions of dollars">20 - 40  Millions d'Euro</option>
-													<option value="I have no information">Je n'ai pas l'information</option>
+													<option value="< 1 Million d'Euro">< 1 Million d'Euro</option>
+													<option value="1 -3 Millions d'Euro">1 -3 Millions d'Euro</option>
+													<option value="3 - 5  Millions d'Euro">3 - 5  Millions d'Euro</option>
+													<option value="5 - 10 Millions d'Euro">5 - 10 Millions d'Euro</option>
+													<option value="10 - 20 Millions d'Euro">10 - 20 Millions d'Euro</option>
+													<option value="20 - 40  Millions d'Euro">20 - 40  Millions d'Euro</option>
+													<option value="Je n'ai pas l'information">Je n'ai pas l'information</option>
 												</select>
 			            					</div>
 				            			</div>
@@ -640,7 +640,7 @@
 		        				</div>
 		        				<div class="col-sm-6">
 		        					<div class="mdl-select mdl-standar">
-										<select class="selectpicker" id="relacion" name="relacion" title="Relationship with SAP">
+										<select class="selectpicker" id="relacion" name="relacion" title="Relation avec SAP">
 											<option value="Client">Client</option>
 											<option value="Client potentiel">Client potentiel</option>
 											<option value="Consultant">Consultant</option>
@@ -735,7 +735,7 @@
 	<script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
-    <script src="<?php echo RUTA_JS?>index_en.js?v=<?php echo time();?>"></script>
+    <script src="<?php echo RUTA_JS?>index_fr.js?v=<?php echo time();?>"></script>
     <script type="text/javascript">
     	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
         	$('select').selectpicker('mobile');
