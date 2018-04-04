@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible"  content="IE=edge">
     <meta name="viewport"               content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="description"            content="Proyecto de desarrollo de un producto wizard online que tenga un quiz y con una unica solucion que es SAP Business One">
-    <meta name="keywords"               content="SAP,producto wizard">
+    <meta name="description"            content="Projet de développement d'un produit d'assistant en ligne avec un quiz et une solution unique, SAP Business One">
+    <meta name="keywords"               content="SAP, produit de l'assistant">
     <meta name="robots"                 content="Index,Follow">
     <meta name="date"                   content="January 25, 2018"/>
     <meta name="language"               content="es">
@@ -41,13 +41,14 @@
 						<select class="selectpicker" id="IdiomaHome" name="Idioma" onchange="cambiarIdiomaHome()">
 							<option value="Inglés">English</option>
 							<option value="Español">Espa&ntilde;ol</option>
+							<option value="Francés">Franc&etilde;s</option>
 							<option value="Portugués">Portugu&ecirc;s</option>
 						</select>
     				</div>
 		    	</div>
     			<div class="mdl-container mdl-all-window">
 	    			<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	            	<h2 class="title-home">Different scenarios. One solution</h2>
+	            	<h2 class="title-home">Différents scénarios, une seule solution.</h2>
 	    		</div>
 	    		<div class="background-body">
 					<div class="background-body3"></div>
@@ -67,7 +68,7 @@
 				<div class="header">
 	    			<div class="header-left">
 	    				<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	    				<h2>Are you ready for SAP Business One&#63;</h2>
+	    				<h2>Etes-vous prêt pour SAP Business One &#63;</h2>
 	    			</div>
 	    			<div class="header-right">
 	    				<button class="mdl-button mdl-js-button mdl-button--icon button-home" onclick="returnHome()"><i class="mdi mdi-home"></i></button>
@@ -75,6 +76,7 @@
 							<select class="selectpicker" id="Idioma" name="Idioma" onchange="cambiarIdioma()">
 								<option value="Inglés">English</option>
 								<option value="Español">Espa&ntilde;ol</option>
+								<option value="Francés">Franc&etilde;s</option>
 								<option value="Portugués">Portugu&ecirc;s</option>
 							</select>
 	    				</div>
@@ -86,35 +88,35 @@
 	    		<div class="logo-bottom">
         			<img src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_home.png">
 		    		<div class="bottom-right">
-						<p>You may select more than one option</p>
+						<p>Vous pouvez sélectionner plus d'une option</p>
 		    		</div>
         		</div>
         		<div class="chat">
-        			<a href="https://z1.liveper.sn/api/account/81933160/route/campaign/194741814/engagement/476282014" target="_blank"><img src="<?php echo RUTA_IMG?>chat.png"><label>Chat with us</label></a>
+        			<a href="https://z1.liveper.sn/api/account/81933160/route/campaign/194741814/engagement/476282014" target="_blank"><img src="<?php echo RUTA_IMG?>chat.png"><label>Discute avec nous</label></a>
         		</div>
 				<div id="window1-page" class="window-center opacity-done">
 					<div class="mdl-container text-center">
 						<div class="question">
 			        		<span class="number">01/05</span>
-			        		<h2>¿What industry do you work in&#63;</h2>
+			        		<h2>Quelle est votre industrie &#63;</h2>
 			        	</div>
 			        	<div class="mdl-card-question">
 			        		<div class="flip-card">
 			        			<div class="card-front card-front-none">
 			        				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
-			        				<p>Professional services</p>
+			        				<p>Services professionnels</p>
 			        			</div>
 			        		</div>
 			        		<div class="content-card">
-			        			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Professional services')">Select</button>
+			        			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Professional services')">Sélectionner</button>
 			        			<div class="contenido">
 			        				<div class="contenido-left">
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
 			        				</div>
 			        				<div class="contenido-right">
-			    						<h2>Did you know that...</h2>
-			    						<p>... successful professional service providers use technology in new ways to perfect business practices, improve agility and provide better customer service.</p>
-			    						<small>(IDC, September 2016)</small>
+			    						<h2>Le saviez-vous ?</h2>
+			    						<p>Les entreprises leaders de conseil et de services professionnels utilisent la technologie de manière innovante pour perfectionner les pratiques commerciales, renforcer l’agilité et améliorer le service client.</p>
+			    						<small>(IDC, septembre 2016)</small>
 			        				</div>
 			        			</div>
 			        		</div>
@@ -127,15 +129,15 @@
 			        			</div>
 			        		</div>
 			        		<div class="content-card">
-			        			<button id="buttonCard2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Retail')">Select</button>
+			        			<button id="buttonCard2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Retail')">Sélectionner</button>
 			        			<div class="contenido">
 			        				<div class="contenido-left">
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
 			        				</div>
 			        				<div class="contenido-right">
-			    						<h2>Did you know that...</h2>
-			    						<p>... for every innovator who goes out to create a new market or type of product, there are at least a hundred markets that are paralyzed or reduced.</p>
-			    						<small>(IDC, September 2016)</small>
+			    						<h2>Le saviez-vous ?</h2>
+			    						<p>Pour chaque nouvel innovateur qui propose un nouveau marché ou type de produit, une centaine de marchés sont réduits ou paralysés.</p>
+			    						<small>(IDC, septembre 2016)</small>
 			        				</div>
 			        			</div>
 			        		</div>
@@ -148,14 +150,14 @@
 			        			</div>
 			        		</div>
 			        		<div class="content-card">
-			        			<button id="buttonCard3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Distribution')">Select</button>
+			        			<button id="buttonCard3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Distribution')">Sélectionner</button>
 			        			<div class="contenido">
 			        				<div class="contenido-left">
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
 			        				</div>
 			        				<div class="contenido-right">
-			    						<h2>Did you know that...</h2>
-			    						<p>... you can improve general customer experience by using multi-channel orders and quick processing.</p>
+			    						<h2>Le saviez-vous ?</h2>
+			    						<p>Vous pouvez augmenter de manière générale l’expérience client en utilisant des processus rapides et en mettant en place une prise de commande multicanal.</p>
 			    						<small>(SAP Performance Benchmarking)</small>
 			        				</div>
 			        			</div>
@@ -165,18 +167,18 @@
 			    			<div class="flip-card">
 			    				<div class="card-front card-front-none">
 			        				<img src="<?php echo RUTA_IMG?>cards/card-producto.png">
-			        				<p>Consumer products</p>
+			        				<p>Biens de consommation</p>
 			        			</div>
 			    			</div>
 			    			<div class="content-card">
-			        			<button id="buttonCard4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Consumer products')">Select</button>
+			        			<button id="buttonCard4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Consumer products')">Sélectionner</button>
 			        			<div class="contenido">
 			        				<div class="contenido-left">
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
 			        				</div>
 			        				<div class="contenido-right">
-			    						<h2>Did you know that...</h2>
-			    						<p>... successful companies in the sector reinvent their way of operating, using technology to perfect business practices, improve agility and provide better service to customers and distributors.</p>
+			    						<h2>Le saviez-vous ?</h2>
+			    						<p>Les leaders de cette industrie réinventent leurs manières d’opérer et utilisent la technologie comme outil pour perfectionner leurs pratiques commerciales et renforcer la satisfaction de leurs clients et distributeurs.</p>
 			    						<small>(IDC, September 2016)</small>
 			        				</div>
 			        			</div>
@@ -186,19 +188,19 @@
 			        		<div class="flip-card">
 			        			<div class="card-front card-front-none">
 			        				<img src="<?php echo RUTA_IMG?>cards/card-proceso.png">
-			        				<p>Processing/Manufacturing</p>
+			        				<p>Production/Industriel</p>
 			        			</div>
 			        		</div>
 			        		<div class="content-card">
-			        			<button id="buttonCard5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Processing/Manufacturing')">Select</button>
+			        			<button id="buttonCard5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Processing/Manufacturing')">Sélectionner</button>
 			        			<div class="contenido">
 			        				<div class="contenido-left">
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
 			        				</div>
 			        				<div class="contenido-right">
-			    						<h2>Did you know that...</h2>
-			    						<p>... manufacturing costs can be reduced by 19% with real time monitoring of production costs and variables.</p>
-			    						<small>(IDC, September 2016)</small>
+			    						<h2>Le saviez-vous ?</h2>
+			    						<p>Les coûts de fabrication peuvent être réduits de 19% avec un suivi en temps réel des différentes variables agissant sur les coûts de production.</p>
+			    						<small>(IDC, septembre 2016)</small>
 			        				</div>
 			        			</div>
 			        		</div>
@@ -209,20 +211,20 @@
 					<div class="mdl-container mdl-tablet text-center">
 						<div class="question">
 		            		<span class="number">02/05</span>
-		            		<h2>¿How big is your company&#63;</h2>
+		            		<h2>Quelle est la taille de votre entreprise&#63;</h2>
 		            	</div>
 		            	<div class="mdl-flex">
 	            			<div class="mdl-card-question">
 		            			<div class="flip-card">
 		            				<div class="card-front card-front-none">
 			            				<img src="<?php echo RUTA_IMG?>cards/card-empleados.png">
-			            				<p>Number of employees</p>
+			            				<p>Nombre d’employés</p>
 			            			</div>
 		            			</div>
 		            			<div class="content-card">
 		            				<div class="select-empleados">
 		            					<button id="buttonMenos" class="mdl-button mdl-js-button mdl-button--icon select-one" onclick="operar(this.id,1)"><i class="mdi mdi-remove"></i></button>
-		            					<span id="textOperar">Select</span>
+		            					<span id="textOperar">Sélectionner</span>
 		            					<button id="buttonMas" class="mdl-button mdl-js-button mdl-button--icon select-one" onclick="operar(this.id,2)"><i class="mdi mdi-add"></i></button>
 		            				</div>
 			            			<div class="contenido">
@@ -230,8 +232,8 @@
 			            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 			            				</div>
 			            				<div class="contenido-right">
-		            						<h2>Did you know that...</h2>
-		            						<p>... interactions with customers and consumers are the starting point for increasing the revenue of small and midsize consumer product companies.</p>
+		            						<h2>Le saviez-vous ?</h2>
+		            						<p>La qualité des échanges avec les clients et les consommateurs est le point de départ pour augmenter le résultat des petites et moyennes entreprises de biens de consommation.</p>
 		            						<small>(IDC, September  2016)</small>
 			            				</div>
 			            			</div>
@@ -241,7 +243,7 @@
 			            		<div class="flip-card">
 			            			<div class="card-front card-front-none">
 			            				<img src="<?php echo RUTA_IMG?>cards/card-facturacion.png">
-			            				<p>Annual Billing</p>
+			            				<p>Facturation annuelle</p>
 			            			</div>
 			            		</div>
 			            		<div class="content-card">
@@ -249,13 +251,13 @@
 			            				<div class="col-xs-12">
 			            					<div class="mdl-select">
 			            						<select class="selectpicker" id="facturacion" name="facturacion" title="Select" onchange="selectFacturacion(this.id)">
-													<option value="< 1 Million dollars">< 1 Million dollars</option>
-													<option value="1 - 3 Millions of dollars">1 - 3 Millions of dollars</option>
-													<option value="3 - 5 Millions of dollars">3 - 5 Millions of dollars</option>
-													<option value="5 - 10 Millions of dollars">5 - 10 Millions of dollars</option>
-													<option value="10 - 20 Millions of dollars">10 - 20 Millions of dollars</option>
-													<option value="20 - 40 Millions of dollars">20 - 40 Millions of dollars</option>
-													<option value="I have no information">I have no information</option>
+													<option value="< 1 Million dollars">< 1 Million d'Euro</option>
+													<option value="1 - 3 Millions of dollars">1 -3 Millions d'Euro</option>
+													<option value="3 - 5 Millions of dollars">3 - 5  Millions d'Euro</option>
+													<option value="5 - 10 Millions of dollars">5 - 10 Millions d'Euro</option>
+													<option value="10 - 20 Millions of dollars">10 - 20 Millions d'Euro</option>
+													<option value="20 - 40 Millions of dollars">20 - 40  Millions d'Euro</option>
+													<option value="I have no information">Je n'ai pas l'information</option>
 												</select>
 			            					</div>
 				            			</div>
@@ -265,9 +267,9 @@
 			            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 			            				</div>
 			            				<div class="contenido-right">
-		            						<h2>Did you know that...</h2>
-		            						<p>... the increase in email sales is now a little more than 10% of total sales.</p>
-		            						<small>(IDC, September  2016)</small>
+		            						<h2>Le saviez-vous ?</h2>
+		            						<p>L’augmentation des emails commerciaux représente aujourd'hui un peu plus de 10% des ventes globales.</p>
+		            						<small>(IDC, septembre 2016)</small>
 			            				</div>
 			            			</div>
 			            		</div>
@@ -279,7 +281,7 @@
 					<div class="mdl-container text-center">
 						<div class="question">
 		            		<span class="number">03/05</span>
-		            		<h2>¿What is your business priority&#63;</h2>
+		            		<h2>Quelle(s) est(sont) votre(vos) priorité(s)&#63;</h2>
 		            	</div>
 		            	<div class="mdl-card-question mdl-card-3">
 		            		<div class="flip-card">
@@ -289,20 +291,20 @@
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Use the cloud to concentrate on growth instead of IT implementation and management.</label>
+		            				<label>Utiliser le Cloud pour se concentrer sur la croissance plutôt que l’implémentation et la gestion IT.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonCloud" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Cloud')">Select</button>
+		            			<button id="buttonCloud" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Cloud')">Sélectionner</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 		            				</div>
 		            				<div class="contenido-right">
-	            						<h2>Did you know that...</h2>
-	            						<p>... more than 90% of companies are already using cloud technology in a public, private or hybrid environment.</p>
-	            						<small>(IDC, September  2016)</small>
+	            						<h2>Le saviez-vous ?</h2>
+	            						<p>Plus de 90% des entreprises utilisent déjà la technologie Cloud dans un environnement public, privé ou hybride.</p>
+	            						<small>(IDC, septembre 2016)</small>
 		            				</div>
 		            			</div>
 		            		</div>
