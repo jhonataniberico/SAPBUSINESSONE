@@ -41,6 +41,7 @@
 						<select class="selectpicker" id="IdiomaHome" name="Idioma" onchange="cambiarIdiomaHome()">
 							<option value="Inglés">English</option>
 							<option value="Español">Espa&ntilde;ol</option>
+							<option value="Francés">Franc&etilde;s</option>
 							<option value="Portugués">Portugu&ecirc;s</option>
 						</select>
     				</div>
@@ -73,6 +74,7 @@
 	    				<button class="mdl-button mdl-js-button mdl-button--icon button-home" onclick="returnHome()"><i class="mdi mdi-home"></i></button>
 	    				<div class="mdl-idioma">
 							<select class="selectpicker" id="Idioma" name="Idioma" onchange="cambiarIdioma()">
+								<option value="Francés">Franc&etilde;s</option>
 								<option value="Inglés">English</option>
 								<option value="Español">Espa&ntilde;ol</option>
 								<option value="Portugués">Portugu&ecirc;s</option>
