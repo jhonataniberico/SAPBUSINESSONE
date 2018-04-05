@@ -41,7 +41,7 @@
 						<select class="selectpicker" id="IdiomaHome"  name="Idioma" onchange="cambiarIdiomaHome()">
 							<option value="Español">Espa&ntilde;ol</option>
 							<option value="Inglés">English</option>
-							<option value="Francés">Francés</option>
+							<option value="Francés">Fran&ccedil;ais</option>
 							<option value="Portugués">Portugu&ecirc;s</option>
 						</select>
     				</div>
@@ -76,7 +76,7 @@
 							<select class="selectpicker" id="Idioma"  name="Idioma" onchange="cambiarIdioma()">
 								<option value="Español">Espa&ntilde;ol</option>
 								<option value="Inglés">English</option>
-								<option value="Francés">Francés</option>
+								<option value="Francés">Fran&ccedil;ais</option>
 								<option value="Portugués">Portugu&ecirc;s</option>
 							</select>
 	    				</div>
