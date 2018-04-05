@@ -301,8 +301,6 @@ function mostrarDatos(){
 }
 function cambiarIdioma(){
 	var idioma = $('#Idioma').val();
-	console.log('entra');
-	console.log(idioma);
 	if(idioma == 'Español'){
 		location.href = 'Es';
 	}else if(idioma == 'Inglés'){
