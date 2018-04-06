@@ -63,7 +63,7 @@
 	    				<img class="logo-partner" src="<?php echo RUTA_IMG?>logo/google.png">
 	    				<!-- <h2>Etes-vous prêt pour SAP Business One &#63;</h2> -->
 	    			</div>
-	    			<div class="header-right">
+	    			<div class="header-right eslogan">
 	    				<button class="mdl-button mdl-js-button mdl-button--icon button-home" onclick="returnHome()"><i class="mdi mdi-home"></i></button>
 	    				<h2>Les entreprises leaders</h2>
 						<div class="background3"></div>
