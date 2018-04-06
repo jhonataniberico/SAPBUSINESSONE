@@ -60,10 +60,12 @@
 				<div class="header">
 	    			<div class="header-left">
 	    				<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	    				<h2>Oletko valmiina SAP Business One'en&#63;</h2>
+	    				<img class="logo-partner" src="<?php echo RUTA_IMG?>logo/google.png">
+	    				<!-- <h2>Etes-vous prêt pour SAP Business One &#63;</h2> -->
 	    			</div>
 	    			<div class="header-right">
 	    				<button class="mdl-button mdl-js-button mdl-button--icon button-home" onclick="returnHome()"><i class="mdi mdi-home"></i></button>
+	    				<h2>Les entreprises leaders</h2>
 						<div class="background3"></div>
 						<div class="background2"></div>
 						<div class="background1"></div>
