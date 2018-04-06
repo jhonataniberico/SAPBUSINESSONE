@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="configuracion">
-                    
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Button</button>
                 </div>
             </div>
         </div>

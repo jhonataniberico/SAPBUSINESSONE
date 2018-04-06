@@ -538,14 +538,14 @@
 		            	<div class="mdl-solicitud">
 			            	<div class="mdl-card-confirmacion">
 		            			<div class="mdl-respuestas text-left">
-		            				<h2 class="title-formulario m-b-10">Your answers were:</h2>
+		            				<h2 class="title-formulario m-b-10">Vastasit:</h2>
 		            				<div class="contenedor-respuestas">
 	            						<div class="col-xs-12 p-0">
 			            					<div class="div-respuestas">
 			            						<ul>
 			            							<li id="industria">Retail</li>
 			            						</ul>
-			            						<button id="window1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id, 1)">Edit</button>
+			            						<button id="window1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="EditQuestion(this.id, 1)">Muokkaa</button>
 			            					</div>
 			            				</div>
 			            				<div class="col-xs-12 p-0">
