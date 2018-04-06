@@ -298,64 +298,6 @@ function mostrarDatos(){
       }
 	});
 }
-function cambiarIdioma(){
-	var idioma = $('#Idioma').val();
-	if(idioma == 'Español'){
-		location.href = 'Es';
-	}else if(idioma == 'Inglés'){
-		location.href = 'En';
-	}else if(idioma == 'Portugués'){
-		location.href = 'Pt';
-	}else if(idioma == 'Francés'){
-		location.href = 'Fr';
-	}else if(idioma == 'Finlandés'){
-		location.href = 'Fi';
-	}
-	$.ajax({
-		data : {idioma : idioma},
-		url  : 'fr/cambiarIdioma',
-		type : 'POST'
-	}).done(function(data){
-		try{
-        data = JSON.parse(data);
-        if(data.error == 0){
-        }else{
-        	return;
-        }
-      } catch (err){
-        msj('error',err.message);
-      }
-	});
-}
-function cambiarIdiomaHome(){
-	var idioma = $('#IdiomaHome').val();
-	if(idioma == 'Español'){
-		location.href = 'Es';
-	}else if(idioma == 'Inglés'){
-		location.href = 'En';
-	}else if(idioma == 'Portugués'){
-		location.href = 'Pt';
-	}else if(idioma == 'Francés'){
-		location.href = 'Fr';
-	}else if(idioma == 'Finlandés'){
-		location.href = 'Fi';
-	}
-	$.ajax({
-		data : {idioma : idioma},
-		url  : 'fr/cambiarIdioma',
-		type : 'POST'
-	}).done(function(data){
-		try{
-        data = JSON.parse(data);
-        if(data.error == 0){
-        }else{
-        	return;
-        }
-      } catch (err){
-        msj('error',err.message);
-      }
-	});
-}
 var i = 1;
 function operar(id,tipo){
 	var buttonSelect = $('#'+id+'.select-one');

@@ -306,10 +306,6 @@ function cambiarIdioma(){
 		location.href = 'En';
 	}else if(idioma == 'Portugués'){
 		location.href = 'Pt';
-	}else if(idioma == 'Francés'){
-		location.href = 'Fr';
-	}else if(idioma == 'Finlandés'){
-		location.href = 'Fi';
 	}
 	$.ajax({
 		data : {idioma : idioma},
@@ -335,10 +331,6 @@ function cambiarIdiomaHome(){
 		location.href = 'En';
 	}else if(idioma == 'Portugués'){
 		location.href = 'Pt';
-	}else if(idioma == 'Francés'){
-		location.href = 'Fr';
-	}else if(idioma == 'Finlandés'){
-		location.href = 'Fi';
 	}
 	$.ajax({
 		data : {idioma : idioma},
