@@ -136,8 +136,8 @@
 			        				</div>
 			        				<div class="contenido-right">
 			    						<h2>Tiesitk&ouml; ett&auml;...</h2>
-			    						<p>... for every innovator who goes out to create a new market or type of product, there are at least a hundred markets that are paralyzed or reduced.</p>
-			    						<small>(IDC, September 2016)</small>
+			    						<p>...  jokainen joka l&auml;htee luomaan uutta markkinaa tai tuotetta kohtaa ainakin sata vastaavaa jotka eiv&auml;t ole menestyneet tai ovat ep&auml;onnistuneet.</p>
+			    						<small>(IDC, syyskuu 2016)</small>
 			        				</div>
 			        			</div>
 			        		</div>
@@ -179,7 +179,7 @@
 			        				<div class="contenido-right">
 			    						<h2>Tiesitk&ouml; ett&auml;...</h2>
 			    						<p>... successful companies in the sector reinvent their way of operating, using technology to perfect business practices, improve agility and provide better service to customers and distributors.</p>
-			    						<small>(IDC, September 2016)</small>
+			    						<small>(IDC, syyskuu 2016)</small>
 			        				</div>
 			        			</div>
 			        		</div>
@@ -200,7 +200,7 @@
 			        				<div class="contenido-right">
 			    						<h2>Tiesitk&ouml; ett&auml;...</h2>
 			    						<p>... manufacturing costs can be reduced by 19% with real time monitoring of production costs and variables.</p>
-			    						<small>(IDC, September 2016)</small>
+			    						<small>(IDC, syyskuu 2016)</small>
 			        				</div>
 			        			</div>
 			        		</div>
@@ -234,7 +234,7 @@
 			            				<div class="contenido-right">
 		            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 		            						<p>... interactions with customers and consumers are the starting point for increasing the revenue of small and midsize consumer product companies.</p>
-		            						<small>(IDC, September  2016)</small>
+		            						<small>(IDC, syyskuu 2016)</small>
 			            				</div>
 			            			</div>
 			            		</div>
@@ -269,7 +269,7 @@
 			            				<div class="contenido-right">
 		            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 		            						<p>... the increase in email sales is now a little more than 10% of total sales.</p>
-		            						<small>(IDC, September  2016)</small>
+		            						<small>(IDC, syyskuu 2016)</small>
 			            				</div>
 			            			</div>
 			            		</div>
@@ -304,7 +304,7 @@
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 	            						<p>... more than 90% of companies are already using cloud technology in a public, private or hybrid environment.</p>
-	            						<small>(IDC, September  2016)</small>
+	            						<small>(IDC, syyskuu 2016)</small>
 		            				</div>
 		            			</div>
 		            		</div>
@@ -330,7 +330,7 @@
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 	            						<p>... you can access integrated analysis for real-time decision-making.</p>
-	            						<small>(IDC, September 2016)</small>
+	            						<small>(IDC, syyskuu 2016)</small>
 		            				</div>
 		            			</div>
 		            		</div>
@@ -356,7 +356,7 @@
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 	            						<p>... Business One uses In-Memory Computing technology to create reports and analyses.</p>
-	            						<small>(IDC, September 2016)</small>
+	            						<small>(IDC, syyskuu 2016)</small>
 		            				</div>
 		            			</div>
 		            		</div>
@@ -382,7 +382,7 @@
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 	            						<p>... You’ll get the capacity to explore, increase and instantly analyze all data practically in real time.</p>
-	            						<small>(IDC, September 2016)</small>
+	            						<small>(IDC, syyskuu 2016)</small>
 		            				</div>
 		            			</div>
 		            		</div>
@@ -408,7 +408,7 @@
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 	            						<p>... 35% of small and midsize retailers have invested in revenue growth technology.</p>
-	            						<small>(IDC, September 2016)</small>
+	            						<small>(IDC, syyskuu 2016)</small>
 		            				</div>
 		            			</div>
 		            		</div>
@@ -434,7 +434,7 @@
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 	            						<p>... it has a flexible business platform that will let you discover all of the potential of your ecosystem.</p>
-	            						<small>(IDC, September 2016)</small>
+	            						<small>(IDC, syyskuu 2016)</small>
 		            				</div>
 		            			</div>
 		            		</div>
@@ -465,7 +465,7 @@
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 	            						<p>... these apps (ecommerce, point of sale, Marketplace, CRM, etc.) can easily be connected with SAP Business One when it is done On-Premise.</p>
-	            						<small>(IDC, September 2016)</small>
+	            						<small>(IDC, syyskuu 2016)</small>
 		            				</div>
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido4.png">
@@ -491,7 +491,7 @@
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 	            						<p>... 21% is more and more interested in alternatives or housed than now use On-Premise.</p>
-	            						<small>(IDC, September 2016)</small>
+	            						<small>(IDC, syyskuu 2016)</small>
 		            				</div>
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido4.png">
@@ -517,7 +517,7 @@
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 	            						<p>... they have good acceptance in companies facing the near future, since cloud management software is being developed to manage the private cloud while at the same time acquiring resources in large public suppliers.</p>
-	            						<small>(IDC, September 2016)</small>
+	            						<small>(IDC, syyskuu 2016)</small>
 		            				</div>
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido4.png">
