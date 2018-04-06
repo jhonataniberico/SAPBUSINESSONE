@@ -309,6 +309,8 @@ function cambiarIdioma(){
 		location.href = 'Pt';
 	}else if(idioma == 'Francés'){
 		location.href = 'Fr';
+	}else if(idioma == 'Finlandés'){
+		location.href = 'Fi';
 	}
 	$.ajax({
 		data  : {idioma : idioma},
@@ -336,6 +338,8 @@ function cambiarIdiomaHome(){
 		location.href = 'Pt';
 	}else if(idioma == 'Francés'){
 		location.href = 'Fr';
+	}else if(idioma == 'Finlandés'){
+		location.href = 'Fi';
 	}
 	$.ajax({
 		data : {idioma : idioma},
