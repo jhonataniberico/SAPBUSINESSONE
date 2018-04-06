@@ -146,7 +146,7 @@
 			        		<div class="flip-card">
 			        			<div class="card-front card-front-none">
 			        				<img src="<?php echo RUTA_IMG?>cards/card-distribucion.png">
-			        				<p>Distribution</p>
+			        				<p>Jakelu</p>
 			        			</div>
 			        		</div>
 			        		<div class="content-card">
@@ -157,8 +157,8 @@
 			        				</div>
 			        				<div class="contenido-right">
 			    						<h2>Tiesitk&ouml; ett&auml;...</h2>
-			    						<p>... you can improve general customer experience by using multi-channel orders and quick processing.</p>
-			    						<small>(SAP Performance Benchmarking)</small>
+			    						<p>... k&auml;ytt&auml;m&auml;ll&auml; monikanavaista ja nopeaa tilaustenk&auml;sittely&auml; voit parantaa asiakaskokemusta.</p>
+			    						<small>(SAP Performance Benchmarking))</small>
 			        				</div>
 			        			</div>
 			        		</div>
@@ -167,7 +167,7 @@
 			    			<div class="flip-card">
 			    				<div class="card-front card-front-none">
 			        				<img src="<?php echo RUTA_IMG?>cards/card-producto.png">
-			        				<p>Consumer products</p>
+			        				<p>Kuluttajatuotteet</p>
 			        			</div>
 			    			</div>
 			    			<div class="content-card">
@@ -178,7 +178,7 @@
 			        				</div>
 			        				<div class="contenido-right">
 			    						<h2>Tiesitk&ouml; ett&auml;...</h2>
-			    						<p>... successful companies in the sector reinvent their way of operating, using technology to perfect business practices, improve agility and provide better service to customers and distributors.</p>
+			    						<p>... menestyv&auml;t yritykset uudistavat toimintatapojaan hy&ouml;dynt&auml;m&auml;ll&auml; teknologiaa, parhaita k&auml;yt&auml;nt&ouml;j&auml;, parantamalla reagointikykyään ja tarjoamalla parempaa palvelua asiakkailleen ja jakelijoilleen.</p>
 			    						<small>(IDC, syyskuu 2016)</small>
 			        				</div>
 			        			</div>
@@ -188,7 +188,7 @@
 			        		<div class="flip-card">
 			        			<div class="card-front card-front-none">
 			        				<img src="<?php echo RUTA_IMG?>cards/card-proceso.png">
-			        				<p>Processing/Manufacturing</p>
+			        				<p>Prosessi/valmistava teollisuus</p>
 			        			</div>
 			        		</div>
 			        		<div class="content-card">
@@ -199,7 +199,7 @@
 			        				</div>
 			        				<div class="contenido-right">
 			    						<h2>Tiesitk&ouml; ett&auml;...</h2>
-			    						<p>... manufacturing costs can be reduced by 19% with real time monitoring of production costs and variables.</p>
+			    						<p>... valmistuskuluja voidaan v&auml;hent&auml;&auml; 19 %.:a tosiaikaisella tuotantokustannusten ja muuttujien seurannalla. </p>
 			    						<small>(IDC, syyskuu 2016)</small>
 			        				</div>
 			        			</div>
@@ -211,20 +211,20 @@
 					<div class="mdl-container mdl-tablet text-center">
 						<div class="question">
 		            		<span class="number">02/05</span>
-		            		<h2>¿How big is your company&#63;</h2>
+		            		<h2>Yrityksesi koko&#63;</h2>
 		            	</div>
 		            	<div class="mdl-flex">
 	            			<div class="mdl-card-question">
 		            			<div class="flip-card">
 		            				<div class="card-front card-front-none">
 			            				<img src="<?php echo RUTA_IMG?>cards/card-empleados.png">
-			            				<p>Number of employees</p>
+			            				<p>Ty&ouml;ntekij&ouml;iden m&auml;&auml;r&auml;</p>
 			            			</div>
 		            			</div>
 		            			<div class="content-card">
 		            				<div class="select-empleados">
 		            					<button id="buttonMenos" class="mdl-button mdl-js-button mdl-button--icon select-one" onclick="operar(this.id,1)"><i class="mdi mdi-remove"></i></button>
-		            					<span id="textOperar">Select</span>
+		            					<span id="textOperar">Valitse</span>
 		            					<button id="buttonMas" class="mdl-button mdl-js-button mdl-button--icon select-one" onclick="operar(this.id,2)"><i class="mdi mdi-add"></i></button>
 		            				</div>
 			            			<div class="contenido">
@@ -233,7 +233,7 @@
 			            				</div>
 			            				<div class="contenido-right">
 		            						<h2>Tiesitk&ouml; ett&auml;...</h2>
-		            						<p>... interactions with customers and consumers are the starting point for increasing the revenue of small and midsize consumer product companies.</p>
+		            						<p>... vuorovaikutus asiakkaiden ja kuluttajien kanssa on l&auml;ht&ouml;kohta liikevaihdon kasvattamiselle kasvavissa ja keskisuurissa yrityksiss&auml;.</p>
 		            						<small>(IDC, syyskuu 2016)</small>
 			            				</div>
 			            			</div>
@@ -243,7 +243,7 @@
 			            		<div class="flip-card">
 			            			<div class="card-front card-front-none">
 			            				<img src="<?php echo RUTA_IMG?>cards/card-facturacion.png">
-			            				<p>Annual Billing</p>
+			            				<p>Vuosittainen laskutus</p>
 			            			</div>
 			            		</div>
 			            		<div class="content-card">
@@ -251,13 +251,13 @@
 			            				<div class="col-xs-12">
 			            					<div class="mdl-select">
 			            						<select class="selectpicker" id="facturacion" name="facturacion" title="Select" onchange="selectFacturacion(this.id)">
-													<option value="< 1 Million dollars">< 1 Million dollars</option>
-													<option value="1 - 3 Millions of dollars">1 - 3 Millions of dollars</option>
-													<option value="3 - 5 Millions of dollars">3 - 5 Millions of dollars</option>
-													<option value="5 - 10 Millions of dollars">5 - 10 Millions of dollars</option>
-													<option value="10 - 20 Millions of dollars">10 - 20 Millions of dollars</option>
-													<option value="20 - 40 Millions of dollars">20 - 40 Millions of dollars</option>
-													<option value="I have no information">I have no information</option>
+													<option value="< Miljoonaa euroa">< Miljoonaa euroa</option>
+													<option value="1 - 3 Miljoonaa euroa">1 - 3 Miljoonaa euroa</option>
+													<option value="3 -  5 Miljoonaa euroa">3 -  5 Miljoonaa euroa</option>
+													<option value="5 - 10 Miljoonaa euroa">5 - 10 Miljoonaa euroa</option>
+													<option value="10 - 20 Miljoonaa euroa">10 - 20 Miljoonaa euroa</option>
+													<option value="20 - 40 Miljoonaa euroa">20 - 40 Miljoonaa euroa</option>
+													<option value="Ei tiedossa">Ei tiedossa</option>
 												</select>
 			            					</div>
 				            			</div>
@@ -268,7 +268,7 @@
 			            				</div>
 			            				<div class="contenido-right">
 		            						<h2>Tiesitk&ouml; ett&auml;...</h2>
-		            						<p>... the increase in email sales is now a little more than 10% of total sales.</p>
+		            						<p>... myynti s&auml;hk&ouml;postin v&auml;lityksell&auml; on t&auml;ll&auml; hetkell&auml; enemm&auml;n kuin 10 %:a kokonaismyynnist&auml;.</p>
 		            						<small>(IDC, syyskuu 2016)</small>
 			            				</div>
 			            			</div>
@@ -281,17 +281,17 @@
 					<div class="mdl-container text-center">
 						<div class="question">
 		            		<span class="number">03/05</span>
-		            		<h2>¿What is your business priority&#63;</h2>
+		            		<h2>Liiketoimintasi prioriteetit&#63;</h2>
 		            	</div>
 		            	<div class="mdl-card-question mdl-card-3">
 		            		<div class="flip-card">
 		            			<div class="card-front">
 		            				<img src="<?php echo RUTA_IMG?>cards/card-cloud.png">
-		            				<p>Cloud</p> 
+		            				<p>Pilviratkaisut</p> 
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Use the cloud to concentrate on growth instead of IT implementation and management.</label>
+		            				<label>K&auml;ytt&auml;m&auml;ll&auml; pilviratkaisuja voit keskitty&auml; liiketoimintasi kasvattamiseen sen sijaan ett&auml; investoit tietoj&auml;rjestelmiesi k&auml;ytt&ouml;&ouml;nottoon ja hallinnointiin.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -303,7 +303,7 @@
 		            				</div>
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
-	            						<p>... more than 90% of companies are already using cloud technology in a public, private or hybrid environment.</p>
+	            						<p>...  yli 90 %:a yrityksist&auml; k&auml;ytt&auml;&auml; jo nyt pilviteknologiaa joko julkisessa-, yksityisess&auml;- tai yhdistelm&auml;pilviymp&auml;rist&ouml;ss&auml;.</p>
 	            						<small>(IDC, syyskuu 2016)</small>
 		            				</div>
 		            			</div>
@@ -313,11 +313,11 @@
 		            		<div class="flip-card">
 		            			<div class="card-front">
 		            				<img src="<?php echo RUTA_IMG?>cards/card-anywhere.png">
-		            				<p>Mobility</p>
+		            				<p>Mobiiliratkaisut</p>
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Offer employees access to software through an intuitive mobile app.</label>
+		            				<label>Mahdollista ty&ouml;ntekij&ouml;ittesi p&auml;&auml;sy ratkaisuun mobiililaitteilta.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -329,7 +329,7 @@
 		            				</div>
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
-	            						<p>... you can access integrated analysis for real-time decision-making.</p>
+	            						<p>... voit hy&ouml;dynt&auml;&auml; tosiaikaista analytiikkaa p&auml;&auml;t&ouml;ksenteossasi.</p>
 	            						<small>(IDC, syyskuu 2016)</small>
 		            				</div>
 		            			</div>
@@ -339,11 +339,11 @@
 		            		<div class="flip-card">
 		            			<div class="card-front">
 		            				<img class="m-b-0" src="<?php echo RUTA_IMG?>cards/card-sap.png">
-		            				<p>Real time analysis with SAP HANA</p>
+		            				<p>SAP HANA tosiaikainen analytiikka</p>
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Your analysis times can be reduced by 70% with the power of SAP HANA.</label>
+		            				<label>Hy&ouml;dynt&auml;m&auml;ll&auml; SAP HANA:aa voit nopeuttaa analyysej&auml; 70 %:lla</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -355,7 +355,7 @@
 		            				</div>
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
-	            						<p>... Business One uses In-Memory Computing technology to create reports and analyses.</p>
+	            						<p>... SAP Business One hy&ouml;dynt&auml;&auml; raportoinnissa ja analytiikassa muistinvaraista tietojenk&auml;sittelyteknologiaa.</p>
 	            						<small>(IDC, syyskuu 2016)</small>
 		            				</div>
 		            			</div>
@@ -365,11 +365,11 @@
 		            		<div class="flip-card">
 		            			<div class="card-front">
 		            				<img class="m-b-0" src="<?php echo RUTA_IMG?>cards/card-analytics.png">
-		            				<p>Predictive analysis with Analytics</p>
+		            				<p>Ennustava analytiikka</p>
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Anticipate results with predictive analytics and point your business in the right direction.</label>
+		            				<label>Hy&ouml;dynn&auml; ennustavan analytiikan tuloksia ohjaamalla liiketoimintaasi oikeaan suuntaan.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -381,7 +381,7 @@
 		            				</div>
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
-	            						<p>... You’ll get the capacity to explore, increase and instantly analyze all data practically in real time.</p>
+	            						<p>... pystyt v&auml;litt&ouml;m&auml;sti tutkimaan ja analysoimaan kaikkia tietojasi.</p>
 	            						<small>(IDC, syyskuu 2016)</small>
 		            				</div>
 		            			</div>
@@ -391,11 +391,11 @@
 		            		<div class="flip-card">
 		            			<div class="card-front">
 		            				<img src="<?php echo RUTA_IMG?>cards/card-starup.png">
-		            				<p>Entrepreneurs</p>
+		            				<p>Yritt&auml;j&auml;t</p>
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Have an ally to face the challenges of the digital age and conquer your goals.</label>
+		            				<label>Kohtaa digitaalisen liiketoiminnan haasteet, voita ne ja saavuta tavoitteesi.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -407,7 +407,7 @@
 		            				</div>
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
-	            						<p>... 35% of small and midsize retailers have invested in revenue growth technology.</p>
+	            						<p>... 35 % v&auml;hitt&auml;ismyyjist&auml; ovat investoineet liikevaihtoa kasvattavaan teknologiaan.</p>
 	            						<small>(IDC, syyskuu 2016)</small>
 		            				</div>
 		            			</div>
@@ -417,11 +417,11 @@
 		            		<div class="flip-card">
 		            			<div class="card-front">
 		            				<img src="<?php echo RUTA_IMG?>cards/card-subsidaries.png">
-		            				<p>Branches or subsidiaries</p>
+		            				<p>Toimipisteet ja tyt&auml;ryhti&ouml;t</p>
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Create fast and accurate reports on incoming and outgoing shipments, inventories, and product locations.</label>
+		            				<label>Luo nopeasti t&auml;sm&auml;llisi&auml; raportteja saapuvista ja l&auml;htevist&auml; toimituksista, varastotilanteista ja tuotteiden sijainneista.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -433,7 +433,7 @@
 		            				</div>
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
-	            						<p>... it has a flexible business platform that will let you discover all of the potential of your ecosystem.</p>
+	            						<p>... joustava liiketoiminta-alusta auttaa sinua selvitt&auml;m&auml;&auml;n potentiaalin ekosysteemiss&auml;si.</p>
 	            						<small>(IDC, syyskuu 2016)</small>
 		            				</div>
 		            			</div>
@@ -445,17 +445,17 @@
 					<div class="mdl-container text-center">
 						<div class="question">
 		            		<span class="number">04/05</span>
-		            		<h2 class="unique">¿What kind of infrastructure are you looking for&#63;</h2>
+		            		<h2 class="unique">Millaista infrastuktuuria etsit&#63;</h2>
 		            	</div>
 		            	<div class="mdl-card-question">
 		            		<div class="flip-card">
 		            			<div class="card-front">
 		            				<img src="<?php echo RUTA_IMG?>cards/card-local.png">
-		            				<p>Local</p>
+		            				<p>Paikallinen</p>
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Implement in your current infrastructure or acquire one of the certified hardware options.</label>
+		            				<label>Ota ratkaisu käyttöön nykyisessä infratruktuurissasi tai valitse yksi sertifioiduista vaihtoehdoistamme.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -464,7 +464,7 @@
 		            			<div class="contenido">
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
-	            						<p>... these apps (ecommerce, point of sale, Marketplace, CRM, etc.) can easily be connected with SAP Business One when it is done On-Premise.</p>
+	            						<p>... sovellukset kuten s&auml;hk&ouml;inen kaupank&auml;ynti, kassap&auml;&auml;tteet, markkinapaikat, asiakkuudenhallinta tms. ovat helposti liitettävissä paikallisesti asennettuun SAP Business One -ratkaisuun.</p>
 	            						<small>(IDC, syyskuu 2016)</small>
 		            				</div>
 		            				<div class="contenido-left">
@@ -477,11 +477,11 @@
 		            		<div class="flip-card">
 		            			<div class="card-front">
 		            				<img src="<?php echo RUTA_IMG?>cards/card-cloud.png">
-		            				<p>Cloud</p>
+		            				<p>Pilviratkaisu</p>
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Run software from the cloud along with your business information.</label>
+		            				<label>K&auml;yt&auml; liiketoimintasi tiedot sis&auml;lt&auml;v&auml;&auml; ratkaisua pilvest&auml;.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -490,7 +490,7 @@
 		            			<div class="contenido">
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
-	            						<p>... 21% is more and more interested in alternatives or housed than now use On-Premise.</p>
+	            						<p>... 21 % yrityksist&auml; on enemm&auml;n ja enemm&auml;n kiinnostuneita vaihtoehdoista paikallisesti asennetulle ratkaisulle.</p>
 	            						<small>(IDC, syyskuu 2016)</small>
 		            				</div>
 		            				<div class="contenido-left">
@@ -503,11 +503,11 @@
 		            		<div class="flip-card">
 		            			<div class="card-front">
 		            				<img src="<?php echo RUTA_IMG?>cards/card-hibrida.png">
-		            				<p>Hybrid</p>
+		            				<p>Yhdistelm&auml;</p>
 									<i class="mdi mdi-add"></i>
 		            			</div>
 		            			<div class="card-back">
-		            				<label>Combine both infrastructures so that sensitive information can stay on your local IT.</label>
+		            				<label>Yhdistä molemmat infrastuktuurivaihtoehdot jotta luottamuksellinen tieto pysyy oman IT:n hallinnassa.</label>
 									<i class="mdi mdi-remove"></i>
 		            			</div>
 		            		</div>
@@ -516,7 +516,7 @@
 		            			<div class="contenido">
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
-	            						<p>... they have good acceptance in companies facing the near future, since cloud management software is being developed to manage the private cloud while at the same time acquiring resources in large public suppliers.</p>
+	            						<p>... l&auml;hitulevaisuudessa yleistyy malli jossa osaa ratkaisusta k&auml;ytet&auml;&auml;n yksityisess&auml; pilvess&auml; ja samalla osa toiminnallisuudesta hankitaan palveluna julkisesta pilvest&auml;.</p>
 	            						<small>(IDC, syyskuu 2016)</small>
 		            				</div>
 		            				<div class="contenido-left">
@@ -532,7 +532,7 @@
 						<div class="question">
 		            		<span class="number">05/05</span>
 		            		<div class="question-respuestas">
-		            			<p><span>Based on your answers,</span> we have an ideal solution in mind for your business.</p>
+		            			<p><span>Perustuen vastauksiisi</span> meillä on tarjota sinulle sopiva ratkaisu.</p>
 		            		</div>
 		            	</div>
 		            	<div class="mdl-solicitud">

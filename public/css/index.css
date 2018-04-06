@@ -587,9 +587,9 @@ span.number{
 .flip-card .card-back label{
     font-family: 'RobotoLight';
     color: #000000;
-    line-height: 21px;
-    font-size: 17px;
-    padding: 25px 15px;
+    line-height: 18px;
+    font-size: 15px;
+    padding: 22px 15px;
     height: 162px;
     text-align: left;
 }
