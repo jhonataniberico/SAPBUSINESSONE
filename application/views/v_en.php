@@ -98,7 +98,7 @@
 					<div class="mdl-container text-center">
 						<div class="question">
 			        		<span class="number">01/05</span>
-			        		<h2>¿What industry do you work in&#63;</h2>
+			        		<h2>What industry do you work in&#63;</h2>
 			        	</div>
 			        	<div class="mdl-card-question">
 			        		<div class="flip-card">
@@ -211,7 +211,7 @@
 					<div class="mdl-container mdl-tablet text-center">
 						<div class="question">
 		            		<span class="number">02/05</span>
-		            		<h2>¿How big is your company&#63;</h2>
+		            		<h2>How big is your company&#63;</h2>
 		            	</div>
 		            	<div class="mdl-flex">
 	            			<div class="mdl-card-question">
@@ -281,7 +281,7 @@
 					<div class="mdl-container text-center">
 						<div class="question">
 		            		<span class="number">03/05</span>
-		            		<h2>¿What is your business priority&#63;</h2>
+		            		<h2>What is your business priority&#63;</h2>
 		            	</div>
 		            	<div class="mdl-card-question mdl-card-3">
 		            		<div class="flip-card">
@@ -445,7 +445,7 @@
 					<div class="mdl-container text-center">
 						<div class="question">
 		            		<span class="number">04/05</span>
-		            		<h2 class="unique">¿What kind of infrastructure are you looking for&#63;</h2>
+		            		<h2 class="unique">What kind of infrastructure are you looking for&#63;</h2>
 		            	</div>
 		            	<div class="mdl-card-question">
 		            		<div class="flip-card">

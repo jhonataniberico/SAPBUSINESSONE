@@ -48,7 +48,7 @@
 		    	</div>
     			<div class="mdl-container mdl-all-window">
 	    			<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	            	<h2 class="title-home">Different scenarios. One solution</h2>
+	            	<h2 class="title-home">Erilaisia skenaarioita. Yksi ratkaisu</h2>
 	    		</div>
 	    		<div class="background-body">
 					<div class="background-body3"></div>
@@ -68,7 +68,7 @@
 				<div class="header">
 	    			<div class="header-left">
 	    				<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	    				<h2>Are you ready for SAP Business One&#63;</h2>
+	    				<h2>Oletko valmiina SAP Business One'en&#63;</h2>
 	    			</div>
 	    			<div class="header-right">
 	    				<button class="mdl-button mdl-js-button mdl-button--icon button-home" onclick="returnHome()"><i class="mdi mdi-home"></i></button>
@@ -98,25 +98,25 @@
 					<div class="mdl-container text-center">
 						<div class="question">
 			        		<span class="number">01/05</span>
-			        		<h2>¿What industry do you work in&#63;</h2>
+			        		<h2>Mik&auml; on toimialasi&#63;</h2>
 			        	</div>
 			        	<div class="mdl-card-question">
 			        		<div class="flip-card">
 			        			<div class="card-front card-front-none">
 			        				<img src="<?php echo RUTA_IMG?>cards/card-profesional.png">
-			        				<p>Professional services</p>
+			        				<p>Asiantuntijapalvelut</p>
 			        			</div>
 			        		</div>
 			        		<div class="content-card">
-			        			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Professional services')">Select</button>
+			        			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Professional services')">Valitse</button>
 			        			<div class="contenido">
 			        				<div class="contenido-left">
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
 			        				</div>
 			        				<div class="contenido-right">
-			    						<h2>Did you know that...</h2>
-			    						<p>... successful professional service providers use technology in new ways to perfect business practices, improve agility and provide better customer service.</p>
-			    						<small>(IDC, September 2016)</small>
+			    						<h2>Tiesitk&ouml; ett&auml;...</h2>
+			    						<p>... menestyv&auml;t asiantuntijapalvelujen tarjoajat hy&ouml;dynt&auml;v&auml;t teknologiaa uudella tavalla liiketoiminnassaan, parantavat joustavuutta ja tarjoavat parempaa asiakaspalvelua.</p>
+			    						<small>(IDC, syyskuu 2016)</small>
 			        				</div>
 			        			</div>
 			        		</div>
@@ -125,17 +125,17 @@
 			        		<div class="flip-card">
 			    				<div class="card-front card-front-none">
 			        				<img src="<?php echo RUTA_IMG?>cards/card-retail.png">
-			        				<p>Retail</p>
+			        				<p>V&auml;hitt&auml;ismyynti</p>
 			        			</div>
 			        		</div>
 			        		<div class="content-card">
-			        			<button id="buttonCard2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Retail')">Select</button>
+			        			<button id="buttonCard2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Retail')">Valitse</button>
 			        			<div class="contenido">
 			        				<div class="contenido-left">
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
 			        				</div>
 			        				<div class="contenido-right">
-			    						<h2>Did you know that...</h2>
+			    						<h2>Tiesitk&ouml; ett&auml;...</h2>
 			    						<p>... for every innovator who goes out to create a new market or type of product, there are at least a hundred markets that are paralyzed or reduced.</p>
 			    						<small>(IDC, September 2016)</small>
 			        				</div>
@@ -150,13 +150,13 @@
 			        			</div>
 			        		</div>
 			        		<div class="content-card">
-			        			<button id="buttonCard3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Distribution')">Select</button>
+			        			<button id="buttonCard3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Distribution')">Valitse</button>
 			        			<div class="contenido">
 			        				<div class="contenido-left">
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
 			        				</div>
 			        				<div class="contenido-right">
-			    						<h2>Did you know that...</h2>
+			    						<h2>Tiesitk&ouml; ett&auml;...</h2>
 			    						<p>... you can improve general customer experience by using multi-channel orders and quick processing.</p>
 			    						<small>(SAP Performance Benchmarking)</small>
 			        				</div>
@@ -171,13 +171,13 @@
 			        			</div>
 			    			</div>
 			    			<div class="content-card">
-			        			<button id="buttonCard4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Consumer products')">Select</button>
+			        			<button id="buttonCard4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Consumer products')">Valitse</button>
 			        			<div class="contenido">
 			        				<div class="contenido-left">
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
 			        				</div>
 			        				<div class="contenido-right">
-			    						<h2>Did you know that...</h2>
+			    						<h2>Tiesitk&ouml; ett&auml;...</h2>
 			    						<p>... successful companies in the sector reinvent their way of operating, using technology to perfect business practices, improve agility and provide better service to customers and distributors.</p>
 			    						<small>(IDC, September 2016)</small>
 			        				</div>
@@ -192,13 +192,13 @@
 			        			</div>
 			        		</div>
 			        		<div class="content-card">
-			        			<button id="buttonCard5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Processing/Manufacturing')">Select</button>
+			        			<button id="buttonCard5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Processing/Manufacturing')">Valitse</button>
 			        			<div class="contenido">
 			        				<div class="contenido-left">
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
 			        				</div>
 			        				<div class="contenido-right">
-			    						<h2>Did you know that...</h2>
+			    						<h2>Tiesitk&ouml; ett&auml;...</h2>
 			    						<p>... manufacturing costs can be reduced by 19% with real time monitoring of production costs and variables.</p>
 			    						<small>(IDC, September 2016)</small>
 			        				</div>
@@ -232,7 +232,7 @@
 			            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 			            				</div>
 			            				<div class="contenido-right">
-		            						<h2>Did you know that...</h2>
+		            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 		            						<p>... interactions with customers and consumers are the starting point for increasing the revenue of small and midsize consumer product companies.</p>
 		            						<small>(IDC, September  2016)</small>
 			            				</div>
@@ -267,7 +267,7 @@
 			            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 			            				</div>
 			            				<div class="contenido-right">
-		            						<h2>Did you know that...</h2>
+		            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 		            						<p>... the increase in email sales is now a little more than 10% of total sales.</p>
 		            						<small>(IDC, September  2016)</small>
 			            				</div>
@@ -296,13 +296,13 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonCloud" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Cloud')">Select</button>
+		            			<button id="buttonCloud" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Cloud')">Valitse</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 		            				</div>
 		            				<div class="contenido-right">
-	            						<h2>Did you know that...</h2>
+	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 	            						<p>... more than 90% of companies are already using cloud technology in a public, private or hybrid environment.</p>
 	            						<small>(IDC, September  2016)</small>
 		            				</div>
@@ -322,13 +322,13 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonAnywhere" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Mobility')">Select</button>
+		            			<button id="buttonAnywhere" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Mobility')">Valitse</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 		            				</div>
 		            				<div class="contenido-right">
-	            						<h2>Did you know that...</h2>
+	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 	            						<p>... you can access integrated analysis for real-time decision-making.</p>
 	            						<small>(IDC, September 2016)</small>
 		            				</div>
@@ -348,13 +348,13 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonSap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Real time analysis with SAP HANA')">Select</button>
+		            			<button id="buttonSap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Real time analysis with SAP HANA')">Valitse</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 		            				</div>
 		            				<div class="contenido-right">
-	            						<h2>Did you know that...</h2>
+	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 	            						<p>... Business One uses In-Memory Computing technology to create reports and analyses.</p>
 	            						<small>(IDC, September 2016)</small>
 		            				</div>
@@ -374,13 +374,13 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonAnalytics" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Predictive analysis with Analytics')">Select</button>
+		            			<button id="buttonAnalytics" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Predictive analysis with Analytics')">Valitse</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 		            				</div>
 		            				<div class="contenido-right">
-	            						<h2>Did you know that...</h2>
+	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 	            						<p>... You’ll get the capacity to explore, increase and instantly analyze all data practically in real time.</p>
 	            						<small>(IDC, September 2016)</small>
 		            				</div>
@@ -400,13 +400,13 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonStarup" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Entrepreneurs')">Select</button>
+		            			<button id="buttonStarup" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Entrepreneurs')">Valitse</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 		            				</div>
 		            				<div class="contenido-right">
-	            						<h2>Did you know that...</h2>
+	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 	            						<p>... 35% of small and midsize retailers have invested in revenue growth technology.</p>
 	            						<small>(IDC, September 2016)</small>
 		            				</div>
@@ -426,13 +426,13 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonSubsidaries" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Branches or subsidiaries')">Select</button>
+		            			<button id="buttonSubsidaries" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Branches or subsidiaries')">Valitse</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
 		            				</div>
 		            				<div class="contenido-right">
-	            						<h2>Did you know that...</h2>
+	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 	            						<p>... it has a flexible business platform that will let you discover all of the potential of your ecosystem.</p>
 	            						<small>(IDC, September 2016)</small>
 		            				</div>
@@ -460,10 +460,10 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card bottom">
-		            			<button id="buttonLocal" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one select-infraestructura" onclick="guardarDatos(this.id,'Local')">Select</button>
+		            			<button id="buttonLocal" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one select-infraestructura" onclick="guardarDatos(this.id,'Local')">Valitse</button>
 		            			<div class="contenido">
 		            				<div class="contenido-right">
-	            						<h2>Did you know that...</h2>
+	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 	            						<p>... these apps (ecommerce, point of sale, Marketplace, CRM, etc.) can easily be connected with SAP Business One when it is done On-Premise.</p>
 	            						<small>(IDC, September 2016)</small>
 		            				</div>
@@ -486,10 +486,10 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card bottom">
-		            			<button id="buttonCloudI" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one select-infraestructura" onclick="guardarDatos(this.id,'Cloud')">Select</button>
+		            			<button id="buttonCloudI" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one select-infraestructura" onclick="guardarDatos(this.id,'Cloud')">Valitse</button>
 		            			<div class="contenido">
 		            				<div class="contenido-right">
-	            						<h2>Did you know that...</h2>
+	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 	            						<p>... 21% is more and more interested in alternatives or housed than now use On-Premise.</p>
 	            						<small>(IDC, September 2016)</small>
 		            				</div>
@@ -512,10 +512,10 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card bottom">
-		            			<button id="buttonHibrida" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one select-infraestructura" onclick="guardarDatos(this.id,'Hybrid')">Select</button>
+		            			<button id="buttonHibrida" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one select-infraestructura" onclick="guardarDatos(this.id,'Hybrid')">Valitse</button>
 		            			<div class="contenido">
 		            				<div class="contenido-right">
-	            						<h2>Did you know that...</h2>
+	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
 	            						<p>... they have good acceptance in companies facing the near future, since cloud management software is being developed to manage the private cloud while at the same time acquiring resources in large public suppliers.</p>
 	            						<small>(IDC, September 2016)</small>
 		            				</div>
