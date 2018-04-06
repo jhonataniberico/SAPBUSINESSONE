@@ -35,26 +35,37 @@
         <div id="content" class="mdl-container">
             <img class="logo-home logo-table" src="<?php echo RUTA_IMG?>logo/logo_header.png">
             <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-logout" onclick="cerrarCesion()">Cerrar Sesión</a>
-            <div class="mdl-card mdl-card-table">
-                <div class="table-responsive">
-                    <table id="example" class="display nowrap table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
-                        <thead>
-                            <tr class="tr-header-reporte">
-                                <th class="text-center">Nombres</th>
-                                <th class="text-center">Empresa</th>
-                                <th class="text-center">Correo electr&oacute;nico</th>
-                                <th class="text-center">Tel&eacute;fono</th>
-                                <th class="text-center">Relaci&oacute;n</th>
-                                <th class="text-center">Cargo</th>
-                                <th class="text-center">Contactado</th>
-                                <th class="text-center">Pa&iacute;s</th>
-                                <th class="text-center">Fecha</th>
-                            </tr>
-                        </thead>
-                      <tbody>
-                          <?php echo $html ?>  
-                      </tbody>
-                    </table>
+            <ul class="nav nav-tabs m-t-50" role="tablist">
+                <li role="presentation" class="active"><a href="#reporte" aria-controls="home" role="tab" data-toggle="tab">Reporte</a></li>
+                <li role="presentation"><a href="#configuracion" aria-controls="profile" role="tab" data-toggle="tab">Configuraci&oacute;n</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="reporte">
+                    <div class="mdl-card mdl-card-table">
+                        <div class="table-responsive">
+                            <table id="example" class="display nowrap table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr class="tr-header-reporte">
+                                        <th class="text-center">Nombres</th>
+                                        <th class="text-center">Empresa</th>
+                                        <th class="text-center">Correo electr&oacute;nico</th>
+                                        <th class="text-center">Tel&eacute;fono</th>
+                                        <th class="text-center">Relaci&oacute;n</th>
+                                        <th class="text-center">Cargo</th>
+                                        <th class="text-center">Contactado</th>
+                                        <th class="text-center">Pa&iacute;s</th>
+                                        <th class="text-center">Fecha</th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                  <?php echo $html ?>  
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="configuracion">
+                    
                 </div>
             </div>
         </div>
