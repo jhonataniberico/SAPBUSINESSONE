@@ -78,7 +78,7 @@ function solicitarEstimacion(){
 				relacion 		: relacion,
 				contacto 		: contacto,
 				term_cond       : term_cond},
-		url  : 'en/solicitarEstimacion',
+		url  : 'fi/solicitarEstimacion',
 		type : 'POST'
 	}).done(function(data){
 		try{
@@ -221,7 +221,7 @@ function saveDatos(pantalla){
 				datos_prio   : datos_array.toString(),
 				operar       : operar,
 				facturacion  : facturacion},
-		url  : 'en/Savedatos',
+		url  : 'fi/Savedatos',
 		type : 'POST'
 	}).done(function(data){
 		try{
@@ -277,7 +277,7 @@ function mostrarDatos(){
 	$.ajax({
 		data : {array_ids   : array_ids,
 				array_3pant : array_3pant},
-		url  : 'en/mostrarDatos',
+		url  : 'fi/mostrarDatos',
 		type : 'POST'
 	}).done(function(data){
 		try{
@@ -308,10 +308,12 @@ function cambiarIdioma(){
 		location.href = 'Pt';
 	}else if(idioma == 'Francés'){
 		location.href = 'Fr';
+	}else if(idioma == 'Finlandés'){
+		location.href = 'Fi';
 	}
 	$.ajax({
 		data : {idioma : idioma},
-		url  : 'en/cambiarIdioma',
+		url  : 'fi/cambiarIdioma',
 		type : 'POST'
 	}).done(function(data){
 		try{
@@ -335,10 +337,12 @@ function cambiarIdiomaHome(){
 		location.href = 'Pt';
 	}else if(idioma == 'Francés'){
 		location.href = 'Fr';
+	}else if(idioma == 'Finlandés'){
+		location.href = 'Fi';
 	}
 	$.ajax({
 		data : {idioma : idioma},
-		url  : 'en/cambiarIdioma',
+		url  : 'fi/cambiarIdioma',
 		type : 'POST'
 	}).done(function(data){
 		try{
@@ -482,7 +486,7 @@ function ConfirmarRespuestas(){
 	$('.mdl-formulario').removeClass('disabled');
 	$.ajax({
 		data : {confirmar : confirmar},
-		url  : 'en/ConfirmarRespuestas',
+		url  : 'fi/ConfirmarRespuestas',
 		type : 'POST'
 	}).done(function(data){
 		try{
@@ -738,7 +742,7 @@ function EditQuestion(id, pant){
 	windowQestion.addClass('animated fadeInLeft');
 	$('.button-arrow.button-next').css("display","block");
 	$.ajax({
-		url  : 'en/EditQuestion',
+		url  : 'fi/EditQuestion',
 		type : 'POST'
 	}).done(function(data){
 		try{
@@ -785,5 +789,5 @@ function resizeContent(){
 }
 function returnHome(){
 	global_datos = null;
-	location.href = 'en';
+	location.href = 'fi';
 }

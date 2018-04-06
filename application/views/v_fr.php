@@ -43,6 +43,7 @@
 							<option value="Inglés">English</option>
 							<option value="Español">Espa&ntilde;ol</option>
 							<option value="Portugués">Portugu&ecirc;s</option>
+							<option value="Finlandés">Suomi</option>
 						</select>
     				</div>
 		    	</div>
@@ -78,6 +79,7 @@
 								<option value="Inglés">English</option>
 								<option value="Español">Espa&ntilde;ol</option>
 								<option value="Portugués">Portugu&ecirc;s</option>
+								<option value="Finlandés">Suomi</option>
 							</select>
 	    				</div>
 						<div class="background3"></div>
