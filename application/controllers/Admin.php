@@ -68,4 +68,36 @@ class Admin extends CI_Controller {
         }
         echo json_encode($data);
     }
+
+    function cargarFact(){
+        $respuesta = new stdClass();
+        $respuesta->mensaje = "";
+        if(count($_FILES) == 0){
+            $respuesta->mensaje = 'Seleccione su factura';
+        }else {
+            $tipo = $_FILES['archivo']['type']; 
+            $tamanio = $_FILES['archivo']['size']; 
+            $archivotmp = $_FILES['archivo']['tmp_name'];
+            $namearch = $_FILES['archivo']['name'];
+            $nuevo = explode(".",$namearch);
+            if($tamanio > '2000000'){
+                $respuesta->mensaje = 'El tamaño de su imagen debe ser menor';
+            }else {
+                if($nuevo[1] == 'jpeg' || $nuevo[1] == 'jpg' || $nuevo[1] == 'png'){
+                    $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'archivos'.DIRECTORY_SEPARATOR.'1'.basename($_FILES['archivo']['name']);
+                    print_r($target);
+                    if(move_uploaded_file($archivotmp, $target) ){
+                       /*$arrUpdt = array('documento' => $namearch);
+                       $this->M_solicitud->updateDatos($arrUpdt, $this->session->userdata('id_anotacion'), 'anotacion');*/
+                       $respuesta->mensaje = 'Su factura se subió correctamente';
+                    } else {
+                       $respuesta->mensaje = 'Hubo un problema en la subida de imagen';
+                    }
+                }else {
+                    $respuesta->mensaje = 'El formato de la factura es incorrecto';
+                }
+            }
+            echo json_encode($respuesta);
+        }
+    }
 }

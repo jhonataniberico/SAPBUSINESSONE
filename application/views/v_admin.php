@@ -65,11 +65,17 @@
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="configuracion">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Button</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-select" onclick="subirFactura();agregarDatos();" id="btnSubirFact">Seleccionar Archivo</button>
+                    <form id="frmArchivo" method="post" style="display: none;">
+                        <input id="archivo" type="file" name="archivo" />
+                        <input type="hidden" name="MAX_FILE_SIZE" value="2000000"/>
+                        <input class="boton" type="submit" name="enviar" value="Importar" style="display: none" />
+                    </form>
                 </div>
             </div>
         </div>
     </section>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.1.0/wNumb.min.js"></script>
@@ -89,6 +95,7 @@
     <script type="text/javascript" src="//cdn.datatables.net/buttons/1.4.2/js/buttons.html5.min.js"></script>
     <script type="text/javascript" src="//cdn.datatables.net/buttons/1.4.2/js/buttons.print.min.js"></script>
     <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script>
+    <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
     <script type="text/javascript">
       $(document).ready(function() {
           $('#example').DataTable( {
