@@ -21,7 +21,7 @@ class En extends CI_Controller {
     $data['comp']            = $this->session->userdata('compania') == null ? '' : $this->session->userdata('compania');
     $data['tit']             = $this->session->userdata('titulo') == null ? '' : $this->session->userdata('titulo');
     $data['pais_link']       = $this->session->userdata('pais_linke');
-    $data['pantalla']        = $this->session->userdata('pantalla') == '' ? 0 : $this->session->userdata('pantalla');
+    $data['pantalla1']        = $this->session->userdata('pantalla') == '' ? 0 : $this->session->userdata('pantalla');
     $data['industria']       = $this->session->userdata('industria');
     $data['Factura_anual']   = $this->session->userdata('Factura_anual');
     $data['Tamanio']         = $this->session->userdata('Tamanio');

@@ -729,7 +729,7 @@
             $('select').selectpicker();
         }
         $(window).load(function() {
-        	  if(<?php echo $pantalla ?> == 5) {
+        	  if(<?php echo $pantalla1 ?> == 5) {
 				m = 5; 
 				if(<?php echo $confirmar ?> == 1) {
 					$('.button-arrow.button-prev').css("display","none");
