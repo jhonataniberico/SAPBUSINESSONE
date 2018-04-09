@@ -35,47 +35,26 @@
         <div id="content" class="mdl-container">
             <img class="logo-home logo-table" src="<?php echo RUTA_IMG?>logo/logo_header.png">
             <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-logout" onclick="cerrarCesion()">Cerrar Sesión</a>
-            <ul class="nav nav-tabs m-t-50" role="tablist">
-                <li role="presentation" class="active"><a href="#reporte" aria-controls="home" role="tab" data-toggle="tab">Reporte</a></li>
-                <li role="presentation"><a href="#configuracion" aria-controls="profile" role="tab" data-toggle="tab">Configuraci&oacute;n</a></li>
-            </ul>
-            <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade in active" id="reporte">
-                    <div class="mdl-card mdl-card-table">
-                        <div class="table-responsive">
-                            <table id="example" class="display nowrap table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
-                                <thead>
-                                    <tr class="tr-header-reporte">
-                                        <th class="text-center">Nombres</th>
-                                        <th class="text-center">Empresa</th>
-                                        <th class="text-center">Correo electr&oacute;nico</th>
-                                        <th class="text-center">Tel&eacute;fono</th>
-                                        <th class="text-center">Relaci&oacute;n</th>
-                                        <th class="text-center">Cargo</th>
-                                        <th class="text-center">Contactado</th>
-                                        <th class="text-center">Pa&iacute;s</th>
-                                        <th class="text-center">Fecha</th>
-                                    </tr>
-                                </thead>
-                              <tbody>
-                                  <?php echo $html ?>  
-                              </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="configuracion">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-select" onclick="subirFactura();agregarDatos();" id="btnSubirFact">Seleccionar Archivo</button>
-                    <div class="form-group">
-                      <label for="eslogan">Eslogan:</label>
-                      <input type="text" class="form-control" id="eslogan">
-                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-select" onclick="subirEslogan()">Subir Eslogan</button>
-                    </div>
-                    <form id="frmArchivo" method="post" style="display: none;">
-                        <input id="archivo" type="file" name="archivo" />
-                        <input type="hidden" name="MAX_FILE_SIZE" value="2000000"/>
-                        <input class="boton" type="submit" name="enviar" value="Importar" style="display: none" />
-                    </form>
+            <div class="mdl-card mdl-card-table m-t-50">
+                <div class="table-responsive">
+                    <table id="example" class="display nowrap table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
+                        <thead>
+                            <tr class="tr-header-reporte">
+                                <th class="text-center">Nombres</th>
+                                <th class="text-center">Empresa</th>
+                                <th class="text-center">Correo electr&oacute;nico</th>
+                                <th class="text-center">Tel&eacute;fono</th>
+                                <th class="text-center">Relaci&oacute;n</th>
+                                <th class="text-center">Cargo</th>
+                                <th class="text-center">Contactado</th>
+                                <th class="text-center">Pa&iacute;s</th>
+                                <th class="text-center">Fecha</th>
+                            </tr>
+                        </thead>
+                      <tbody>
+                          <?php echo $html ?>  
+                      </tbody>
+                    </table>
                 </div>
             </div>
         </div>

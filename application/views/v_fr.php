@@ -60,12 +60,12 @@
 				<div class="header">
 	    			<div class="header-left">
 	    				<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	    				<img class="logo-partner" src="<?php echo RUTA_IMG?>logo/google.png">
+	    				<!-- <img class="logo-partner" src="<?php echo RUTA_IMG?>logo/google.png"> -->
 	    				<!-- <h2>Etes-vous prêt pour SAP Business One &#63;</h2> -->
 	    			</div>
-	    			<div class="header-right eslogan">
+	    			<div class="header-right none-idioma">
 	    				<button class="mdl-button mdl-js-button mdl-button--icon button-home" onclick="returnHome()"><i class="mdi mdi-home"></i></button>
-	    				<h2><?php echo $eslogan ?></h2>
+	    				<!-- <h2><?php echo $eslogan ?></h2> -->
 						<div class="background3"></div>
 						<div class="background2"></div>
 						<div class="background1"></div>
@@ -729,7 +729,7 @@
             $('select').selectpicker();
         }
         $(window).load(function() {
-        	  /*if(<?php echo $pantalla ?> == 3) {
+        	  if(<?php echo $pantalla ?> == 5) {
 				m = 5; 
 				if(<?php echo $confirmar ?> == 1) {
 					$('.button-arrow.button-prev').css("display","none");
@@ -747,7 +747,7 @@
 				}
 				$('.header').addClass('opacity');
 				$('.logo-bottom').addClass('opacity');
-				/*$('#telefono').css('border-color','red');
+				$('#telefono').css('border-color','red');
 				$('#nombre_completo').val("<?php echo $nombre_comple ?>");
 				$('#email').val("<?php echo $email_link ?>");
 				$('#pais').val("<?php echo $pais_link ?>");
@@ -763,8 +763,8 @@
 				$('#tamanio').text("<?php echo $Tamanio ?>");//falta agregar empleados
 				$('#factura').text("<?php echo $Factura_anual ?>");
 				$('#prioridad').append("<?php echo $priori ?>");
-				$('#infraestructura').text("<?php echo $Infraestructura ?>");*/
-			//}
+				$('#infraestructura').text("<?php echo $Infraestructura ?>");
+			}
 		});
     </script>
 </body>
