@@ -310,6 +310,12 @@ table.dataTable.no-footer{
     padding: 18px 0 18px 25px;
     float: left;
 }
+.header-right.none-idioma{
+	max-width: 95px;
+}
+.header-right.none-idioma .button-home{
+	margin-right: 10px;
+}
 .header-right{
     float: right;
     height: 68px;
@@ -1474,6 +1480,9 @@ span.number{
 	}
 	.header-home{
 		padding-right: 125px;
+	}
+	.header-right.none-idioma{
+		max-width: 42px;
 	}
 	.header-right{
 		max-width: 105px;
