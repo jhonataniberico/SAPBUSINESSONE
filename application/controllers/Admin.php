@@ -88,14 +88,7 @@ class Admin extends CI_Controller {
                 $respuesta->mensaje = 'El tamaño de su imagen debe ser menor';
             }else {
                 if($nuevo[1] == 'jpeg' || $nuevo[1] == 'jpg' || $nuevo[1] == 'png'){
-                    $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'img'.DIRECTORY_SEPARATOR.'logo'.DIRECTORY_SEPARATOR.'google.png'/*.'1'.basename($_FILES['archivo']['name'])*/;
-                    /*print_r($target);
-                    if (file_exists($target)) { 
-                        print_r('entra');
-                        unlink($target); 
-                    } else { 
-                        
-                    } */
+                    $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'img'.DIRECTORY_SEPARATOR.'logo'.DIRECTORY_SEPARATOR.'google.png';
                     if(move_uploaded_file($archivotmp, $target) ){
                        $arrUpdt = array('logo' => $namearch);
                        if($this->session->userdata('Idioma') == 'Francés'){
@@ -113,5 +106,23 @@ class Admin extends CI_Controller {
             }
             echo json_encode($respuesta);
         }
+    }
+
+    function subirEslogan(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $eslogan = $this->input->post('eslogan');
+            $arrUpdt = array('eslogan' => $eslogan);
+            if($this->session->userdata('Idioma') == 'Francés'){
+                $this->M_solicitud->updateDatosLogo($arrUpdt, 4, 'lenguaje');
+            }else if($this->session->userdata('Idioma') == 'Sueco'){
+                $this->M_solicitud->updateDatosLogo($arrUpdt, 5, 'lenguaje');
+            }
+            $data['error'] = EXIT_SUCCESS;
+        } catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
     }
 }

@@ -32,6 +32,12 @@ class Fr extends CI_Controller {
       $html .= '<li>'.$key.'</li>';
     }
     $data['priori']        = $html;*/
+    $datos_pais            = $this->M_solicitud->getDatosLenguaje('Francés');
+    if(count($datos_pais) == 0) {
+      $data['eslogan']       = '-';
+    }else {
+      $data['eslogan']       = $datos_pais[0]->eslogan;
+    }
     $data['confirmar']     = $this->session->userdata('confirmar') == null ? 0 : $this->session->userdata('confirmar');
     $data['pantalla']      = 0;
     $client_id             = "864xp2wdu9eghe";

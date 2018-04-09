@@ -60,4 +60,11 @@ class M_solicitud extends  CI_Model{
         }
         return array('error' => EXIT_SUCCESS,'msj' => MSJ_UPT);
     }
+    function getDatosLenguaje($pais){
+        $sql = "SELECT *
+                  FROM lenguaje
+                 WHERE Nombre LIKE ?";
+        $result = $this->db->query($sql, array($pais));
+        return $result->result();
+    }
 }

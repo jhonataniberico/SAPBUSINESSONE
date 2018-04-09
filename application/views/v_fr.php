@@ -65,7 +65,7 @@
 	    			</div>
 	    			<div class="header-right eslogan">
 	    				<button class="mdl-button mdl-js-button mdl-button--icon button-home" onclick="returnHome()"><i class="mdi mdi-home"></i></button>
-	    				<h2>Les entreprises leaders</h2>
+	    				<h2><?php echo $eslogan ?></h2>
 						<div class="background3"></div>
 						<div class="background2"></div>
 						<div class="background1"></div>

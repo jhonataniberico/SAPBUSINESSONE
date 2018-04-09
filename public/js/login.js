@@ -108,9 +108,6 @@ $( "#archivo" ).change(function() {
     msj('error', 'Seleccione un logo');
     return;
   }else {
-    /*$('#btnSubirFact').text('Cargado');
-    $('#btnSubirFact').css('background-color','#5CB85C');
-    $('#btnSubirFact').css('color','#FFFFFF');*/
   }
 });
 function agregarDatos(){
@@ -142,4 +139,25 @@ function agregarDatos(){
         $('#cantidad').val("");
         setTimeout(function(){ location.href = 'Factura'; }, 2000);
     });
+}
+function subirEslogan(){
+  var eslogan = $('#eslogan').val();
+  $.ajax({
+    data : {eslogan : eslogan},
+    url  : 'admin/subirEslogan',
+    type : 'POST'
+  }).done(function(data){
+    try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+          //location.href = 'Login';
+          $('#eslogan').val("");
+          msj('error', 'Se cambió su eslogan correctamente');
+        }else {
+          return;
+        }
+      }catch(err){
+        msj('error',err.message);
+      }
+  });
 }

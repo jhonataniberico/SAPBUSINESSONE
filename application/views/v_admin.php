@@ -66,6 +66,11 @@
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="configuracion">
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-select" onclick="subirFactura();agregarDatos();" id="btnSubirFact">Seleccionar Archivo</button>
+                    <div class="form-group">
+                      <label for="eslogan">Eslogan:</label>
+                      <input type="text" class="form-control" id="eslogan">
+                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-select" onclick="subirEslogan()">Subir Eslogan</button>
+                    </div>
                     <form id="frmArchivo" method="post" style="display: none;">
                         <input id="archivo" type="file" name="archivo" />
                         <input type="hidden" name="MAX_FILE_SIZE" value="2000000"/>
