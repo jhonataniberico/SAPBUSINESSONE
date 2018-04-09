@@ -307,6 +307,9 @@ table.dataTable.no-footer{
 	-o-transition: max-width .3s linear;
 	transition: max-width .3s linear;
 }
+.img-bottom{
+	background: url('../img/fondo/fondo.png') repeat-x;
+}
 .logo-bottom{
     position: fixed;
     bottom: 0;

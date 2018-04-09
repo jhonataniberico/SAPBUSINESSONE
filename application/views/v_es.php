@@ -60,6 +60,7 @@
 					</button>
 	    		</div>
 	    		<div class="fondo-bottom">
+	    			<!-- <img class="img-bottom"> -->
 	    			<img src="<?php echo RUTA_IMG?>fondo/fondo.png">
 	    		</div>
     		</div>

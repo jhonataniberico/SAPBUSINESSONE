@@ -60,7 +60,8 @@
                         <div class="col-xs-6">
                             <div class="form-group">
                                 <label for="eslogan">Escribe su Eslogan</label>
-                                <input type="email" class="form-control" id="eslogan" placeholder="Max. 100 carácteres">
+                                <input type="email" class="form-control" id="eslogan" maxlength="100" placeholder="Max. 100 carácteres">
+                                <span class="mdl-textfield__limit" for="eslogan" data-limit="100"></span>
                             </div>
                         </div>
                         <div class="col-xs-6">
