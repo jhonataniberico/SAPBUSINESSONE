@@ -77,7 +77,7 @@ class Admin extends CI_Controller {
         $respuesta = new stdClass();
         $respuesta->mensaje = "";
         if(count($_FILES) == 0){
-            $respuesta->mensaje = 'Seleccione su factura';
+            $respuesta->mensaje = 'Seleccione un logo';
         }else {
             $tipo = $_FILES['archivo']['type']; 
             $tamanio = $_FILES['archivo']['size']; 
@@ -88,25 +88,27 @@ class Admin extends CI_Controller {
                 $respuesta->mensaje = 'El tamaño de su imagen debe ser menor';
             }else {
                 if($nuevo[1] == 'jpeg' || $nuevo[1] == 'jpg' || $nuevo[1] == 'png'){
-                    $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'logo'.DIRECTORY_SEPARATOR.'google.png'/*.'1'.basename($_FILES['archivo']['name'])*/;
-                    if (file_exists($ruta)) { 
+                    $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'img'.DIRECTORY_SEPARATOR.'logo'.DIRECTORY_SEPARATOR.'google.png'/*.'1'.basename($_FILES['archivo']['name'])*/;
+                    /*print_r($target);
+                    if (file_exists($target)) { 
+                        print_r('entra');
                         unlink($target); 
                     } else { 
                         
-                    } 
+                    } */
                     if(move_uploaded_file($archivotmp, $target) ){
-                       $arrUpdt = array('documento' => $namearch);
+                       $arrUpdt = array('logo' => $namearch);
                        if($this->session->userdata('Idioma') == 'Francés'){
-                        $this->M_solicitud->updateDatosLogo($arrUpdt, 4, 'anotacion');
+                        $this->M_solicitud->updateDatosLogo($arrUpdt, 4, 'lenguaje');
                        }else if($this->session->userdata('Idioma') == 'Sueco'){
-                        $this->M_solicitud->updateDatosLogo($arrUpdt, 5, 'anotacion');
+                        $this->M_solicitud->updateDatosLogo($arrUpdt, 5, 'lenguaje');
                        }
-                       $respuesta->mensaje = 'Su factura se subió correctamente';
+                       $respuesta->mensaje = 'Su logo se subió correctamente';
                     } else {
                        $respuesta->mensaje = 'Hubo un problema en la subida de imagen';
                     }
                 }else {
-                    $respuesta->mensaje = 'El formato de la factura es incorrecto';
+                    $respuesta->mensaje = 'El formato de el logo es incorrecto';
                 }
             }
             echo json_encode($respuesta);

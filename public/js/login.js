@@ -102,17 +102,21 @@ function verificarDatos(e){
 function subirFactura(){
   $( "#archivo" ).trigger( "click" );
 }
+var factura = '';
 $( "#archivo" ).change(function() {
-  $('#btnSubirFact').text('Cargado');
-  $('#btnSubirFact').css('background-color','#5CB85C');
-  $('#btnSubirFact').css('color','#FFFFFF');
+  if(factura == undefined){
+    msj('error', 'Seleccione un logo');
+    return;
+  }else {
+    /*$('#btnSubirFact').text('Cargado');
+    $('#btnSubirFact').css('background-color','#5CB85C');
+    $('#btnSubirFact').css('color','#FFFFFF');*/
+  }
 });
 function agregarDatos(){
   var datos = new FormData();
   factura = $('#archivo')[0].files[0];
-  console.log(factura);
   if(factura == undefined){
-    msj('error', 'Seleccione una factura');
     return;
   }
     datos.append('archivo',$('#archivo')[0].files[0]);
@@ -125,6 +129,11 @@ function agregarDatos(){
         processData:false,
       }).done(function(respuesta){
         msj('error', respuesta.mensaje);
+        if(respuesta.mensaje == 'Su logo se subió correctamente'){
+          $('#btnSubirFact').text('Cargado');
+          $('#btnSubirFact').css('background-color','#5CB85C');
+          $('#btnSubirFact').css('color','#FFFFFF');
+        }
         $('#fecha').val("");
         $('#modelo').val("0");
         $('.selectpicker').selectpicker('refresh');
