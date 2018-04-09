@@ -37,9 +37,6 @@
         </div>
         <div class="card-login">
             <div class="mdl-card mdl-card-login">
-                <div class="mdl-card__title p-b-0">
-                    <p>Sign in with your organizational account.</p>
-                </div>
                 <div class="mdl-card__supporting-text">
                     <div class="mdl-input">
                         <div class="mdl-icon">

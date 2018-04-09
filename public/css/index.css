@@ -121,6 +121,40 @@ table.dataTable.no-footer{
     text-decoration: none !important;
     text-transform: initial;
 }
+.contenido-admin{
+	margin-top: 100px;
+}
+.contenido-admin h2,
+.contenido-admin p{
+	color: #000000;
+}
+.contenido-admin h2{
+	font-size: 32px;
+	margin: 10px 0;
+}
+.contenido-admin .mdl-admin{
+	width: 100%;
+	max-width: 500px;
+}
+.contenido-admin .mdl-admin .form-group label{
+	color: #000000;
+}
+.contenido-admin .mdl-admin button{
+	background-color: #00A1E4;
+    text-transform: initial;
+    color: #FFFFFF;
+    border-radius: 20px;
+    font-family: 'RobotoMedium';
+    width: 100%;
+    max-width: 160px;
+}
+.admin-logout{
+    background-color: transparent;
+    color: #FFFFFF;
+    text-transform: initial;
+    font-family: 'RobotoMedium';
+    padding: 0 14px;
+}
 /*GENERAL*/
 .window-center{
 	width: 100%;
