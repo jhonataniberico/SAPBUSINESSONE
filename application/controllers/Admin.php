@@ -22,12 +22,10 @@ class Admin extends CI_Controller {
 	}
 	function getTable(){
         if($this->session->userdata('Idioma') == 'Todos'){
-            print_r('entra');
             $datos = $this->M_reportes->getDatosTabla();
         }else if($this->session->userdata('Idioma') == 'Francés'){
             $datos = $this->M_reportes->getDatosTablaIdioma(4);
         }else if($this->session->userdata('Idioma') == 'Sueco'){
-            print_r('entra2');
             $datos = $this->M_reportes->getDatosTablaIdioma(5);
         }
 		$html  = '';
