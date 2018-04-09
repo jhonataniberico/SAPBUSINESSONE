@@ -32,14 +32,22 @@ class Login extends CI_Controller {
 						$session = array('usuario' => $usuario,
 								 		 'Id_user' => $username[0]->Id,
 								 		 'Idioma'  => 'Francés');
+						$data['href'] = 'Admin';
 					}else if($usuario == 'sapadmin'){
 						$session = array('usuario' => $usuario,
 								 		 'Id_user' => $username[0]->Id,
 								 		 'Idioma'  => 'Todos');
+						$data['href'] = 'Admin';
 					}else if($usuario == 'iradmin'){
 						$session = array('usuario' => $usuario,
 								 		 'Id_user' => $username[0]->Id,
 								 		 'Idioma'  => 'Sueco');
+						$data['href'] = 'Admin';
+					}else if($usuario == 'partnersap'){
+						$session = array('usuario' => $usuario,
+								 		 'Id_user' => $username[0]->Id,
+								 		 'Idioma'  => '');
+						$data['href'] = 'Configuracion';
 					}
 					$this->session->set_userdata($session);
 		          	$data['error'] = EXIT_SUCCESS;
