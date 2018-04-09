@@ -46,7 +46,7 @@
             </div>
             <div class="contenido-admin">
                 <h2>Configuracion del partner</h2>
-                <p>(*) El logo tiene que tener un tamaño de 115px x 30px</p>
+                <p>(*) El logo tiene que tener un tamaño de 100px x 32px</p>
                 <div class="mdl-admin">
                     <div class="col-xs-12 p-0">
                         <div class="col-xs-6">

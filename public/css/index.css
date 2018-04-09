@@ -419,9 +419,10 @@ table.dataTable.no-footer{
 }
 .logo-partner{
 	width: 100%;
-    max-width: 115px;
+    max-width: 120px;
     border-left: 1px solid #FFFFFF;
     padding-left: 20px;
+    height: 32px;
 }
 /*BUTTONS NEXT - PREV*/
 .button-next-prev{
