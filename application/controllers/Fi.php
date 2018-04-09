@@ -16,6 +16,8 @@ class Fi extends CI_Controller {
 
   public function index(){
     //ELIMINAR DATOS EN SESIÓN AL CARGAR LA PÁGINA
+    $session = array('idioma' => 'Sueco');
+    $this->session->set_userdata($session);
     /*$data['nombre_comple'] = $this->session->userdata('nombre_linke');
     $data['email_link']      = $this->session->userdata('email_linke');
     $data['comp']            = $this->session->userdata('compania') == null ? '' : $this->session->userdata('compania');

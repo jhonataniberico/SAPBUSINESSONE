@@ -6,6 +6,7 @@ class Admin extends CI_Controller {
 	function __construct() {
         parent::__construct();
         $this->load->model('M_solicitud');
+        $this->load->model('M_reportes');
         $this->load->helper("url");//BORRAR CACHÉ DE LA PÁGINA
         $this->output->set_header('Last-Modified:'.gmdate('D, d M Y H:i:s').'GMT');
         $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
@@ -21,37 +22,44 @@ class Admin extends CI_Controller {
 	}
 	function getTable(){
         if($this->session->userdata('Idioma') == 'Todos'){
+            print_r('entra');
             $datos = $this->M_reportes->getDatosTabla();
         }else if($this->session->userdata('Idioma') == 'Francés'){
             $datos = $this->M_reportes->getDatosTablaIdioma(4);
         }else if($this->session->userdata('Idioma') == 'Sueco'){
+            print_r('entra2');
             $datos = $this->M_reportes->getDatosTablaIdioma(5);
         }
 		$html  = '';
 		$cont  = 1;
-		foreach ($datos as $key){
-            $contactado = null;
-            if($key->Contactado == 1){
-                $contactado = 'Por Email';
-            }else if($key->Contactado == 2){
-                $contactado = 'Por Teléfono';
-            }else if($key->Contactado == 3){
-                $contactado = 'Por Email y teléfono';
+        if(count($datos) == 0) {
+            $html = '';
+            return $html;
+        }else {
+            foreach ($datos as $key){
+                $contactado = null;
+                if($key->Contactado == 1){
+                    $contactado = 'Por Email';
+                }else if($key->Contactado == 2){
+                    $contactado = 'Por Teléfono';
+                }else if($key->Contactado == 3){
+                    $contactado = 'Por Email y teléfono';
+                }
+                $html .= '<tr class="tr-cursor-pointer tr-ver-info-solicitud" data-idSolicitud="'.$cont.'">
+                            <td class="text-center">'.$key->nombre_completo.'</td>
+                            <td class="text-center">'.$key->Empresa.'</td>
+                            <td class="text-center">'.$key->Email.'</td>
+                            <td class="text-center">'.$key->Telefono.'</td>
+                            <td class="text-center">'.$key->Relacion.'</td>
+                            <td class="text-center">'.$key->Cargo.'</td>
+                            <td class="text-center">'.$contactado.'</td>
+                            <td class="text-center">'.$key->Pais.'</td>
+                            <td class="text-center">'.$key->fecha_sol.' pe</td>
+                        </tr>';
+                $cont++;
             }
-			$html .= '<tr class="tr-cursor-pointer tr-ver-info-solicitud" data-idSolicitud="'.$cont.'">
-                        <td class="text-center">'.$key->nombre_completo.'</td>
-                        <td class="text-center">'.$key->Empresa.'</td>
-                        <td class="text-center">'.$key->Email.'</td>
-                        <td class="text-center">'.$key->Telefono.'</td>
-                        <td class="text-center">'.$key->Relacion.'</td>
-                        <td class="text-center">'.$key->Cargo.'</td>
-                        <td class="text-center">'.$contactado.'</td>
-                        <td class="text-center">'.$key->Pais.'</td>
-                        <td class="text-center">'.$key->fecha_sol.' pe</td>
-                    </tr>';
-            $cont++;
-		}
-		return $html;
+            return $html;
+        }
 	}
     function cerrarCesion(){
         $data['error'] = EXIT_ERROR;
@@ -81,10 +89,13 @@ class Admin extends CI_Controller {
             }else {
                 if($nuevo[1] == 'jpeg' || $nuevo[1] == 'jpg' || $nuevo[1] == 'png'){
                     $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'archivos'.DIRECTORY_SEPARATOR.'1'.basename($_FILES['archivo']['name']);
-                    print_r($target);
                     if(move_uploaded_file($archivotmp, $target) ){
-                       /*$arrUpdt = array('documento' => $namearch);
-                       $this->M_solicitud->updateDatos($arrUpdt, $this->session->userdata('id_anotacion'), 'anotacion');*/
+                       $arrUpdt = array('documento' => $namearch);
+                       if($this->session->userdata('Idioma') == 'Francés'){
+                        $this->M_solicitud->updateDatosLogo($arrUpdt, 4, 'anotacion');
+                       }else if($this->session->userdata('Idioma') == 'Sueco'){
+                        $this->M_solicitud->updateDatosLogo($arrUpdt, 5, 'anotacion');
+                       }
                        $respuesta->mensaje = 'Su factura se subió correctamente';
                     } else {
                        $respuesta->mensaje = 'Hubo un problema en la subida de imagen';

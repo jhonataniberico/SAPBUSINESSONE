@@ -52,4 +52,12 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, array($id_persona));
         return $result->result();
     }
+    function updateDatosLogo($arrayData, $id, $tabla){
+        $this->db->where('Id_lenguaje'  , $id);
+        $this->db->update($tabla, $arrayData);
+        if ($this->db->trans_status() == false) {
+            throw new Exception('No se pudo actualizar los datos');
+        }
+        return array('error' => EXIT_SUCCESS,'msj' => MSJ_UPT);
+    }
 }
