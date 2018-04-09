@@ -88,7 +88,12 @@ class Admin extends CI_Controller {
                 $respuesta->mensaje = 'El tamaño de su imagen debe ser menor';
             }else {
                 if($nuevo[1] == 'jpeg' || $nuevo[1] == 'jpg' || $nuevo[1] == 'png'){
-                    $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'archivos'.DIRECTORY_SEPARATOR.'1'.basename($_FILES['archivo']['name']);
+                    $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'logo'.DIRECTORY_SEPARATOR.'google.png'/*.'1'.basename($_FILES['archivo']['name'])*/;
+                    if (file_exists($ruta)) { 
+                        unlink($target); 
+                    } else { 
+                        
+                    } 
                     if(move_uploaded_file($archivotmp, $target) ){
                        $arrUpdt = array('documento' => $namearch);
                        if($this->session->userdata('Idioma') == 'Francés'){
