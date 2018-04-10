@@ -34,12 +34,12 @@ class Fr extends CI_Controller {
     $data['priori']        = $html;*/
     $datos_pais            = $this->M_solicitud->getDatosLenguaje('Francés');
     if(count($datos_pais) == 0) {
-      $data['eslogan']       = '-';
+      $data['eslogan']     = '-';
     }else {
-      $data['eslogan']       = $datos_pais[0]->eslogan;
+      $data['eslogan']     = $datos_pais[0]->eslogan;
     }
     $data['confirmar']     = $this->session->userdata('confirmar') == null ? 0 : $this->session->userdata('confirmar');
-    $data['pantalla']      = 0;
+    $data['pantalla1']     = 0;
     $client_id             = "864xp2wdu9eghe";
     $client_secret         = "M6NxoP4EWlaADF2U";
     $redirect_uri          = "http://www.sap-latam.com/sap_business_one/callback";
@@ -203,15 +203,15 @@ class Fr extends CI_Controller {
        $configGmail = array('protocol'  => 'smtp',
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,
-                            'smtp_user' => 'info@sap-latam.com',
-                            'smtp_pass' => 'sapinfo18',
+                            'smtp_user' => 'info@marketinghpe.com',
+                            'smtp_pass' => 'hpeinfo18',
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
                             'newline'   => "\r\n");    
        $this->email->initialize($configGmail);
-       $this->email->from('info@sap-latam.com');
+       $this->email->from('info@marketinghpe.com');
        $this->email->to('jhonatanibericom@gmail.com');
-       $this->email->subject('I am interested in SAP Business One for my business.');
+       $this->email->subject('Je suis intéressé par SAP Business One pour mon entreprise.');
        $texto = '<!DOCTYPE html>
                   <html>
                   <head>
@@ -349,6 +349,7 @@ class Fr extends CI_Controller {
                   </html>';
         $this->email->message($texto);
         $this->email->send();
+        print_r($this->email->send());
         $data['error'] = EXIT_SUCCESS;
       }catch (Exception $e){
         $data['msj'] = $e->getMessage();
@@ -373,7 +374,7 @@ class Fr extends CI_Controller {
        $this->email->initialize($configGmail);
        $this->email->from('info@sap-latam.com');
        $this->email->to($email);
-       $this->email->subject('Thanks for your interest in SAP Business One.');
+       $this->email->subject('Merci de votre intérêt pour SAP Business One.');
        $texto = '<!DOCTYPE html>
                 <html>
                 <head>
