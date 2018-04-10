@@ -39,8 +39,14 @@
 					<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
 		    	</div>
     			<div class="mdl-container mdl-all-window">
-	    			<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	            	<h2 class="title-home">Différents scénarios, une seule solution.</h2>
+    				<div class="first-eslogan">
+    					<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+	            		<h2 class="title-home">Différents scénarios, une seule solution.</h2>
+    				</div>
+	    			<!-- <div class="second-eslogan">
+	    				<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+	            		<h2 class="title-home">Différents scénarios, une seule solution.</h2>
+	    			</div> -->
 	    		</div>
 	    		<div class="background-body">
 					<div class="background-body3"></div>
@@ -667,7 +673,7 @@
 		        				<div class="col-xs-12 mdl-label m-t-10">
 		    						<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
 										<input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
-										<span class="mdl-checkbox__label f-s-14" style="">J'ai lu et accepte les<a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" style="">termes et conditions SAP</a></span>
+										<span class="mdl-checkbox__label f-s-14" style="">J'ai lu et accepte les<a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank"> termes et conditions SAP</a></span>
 									</label>
 		        				</div>
 		        				<div class="col-xs-12 text-right m-t-25">
@@ -728,6 +734,13 @@
         } else {
             $('select').selectpicker();
         }
+        window.addEventListener("load", function() {
+        	// var load_screen = document.getElementById("load_screen");
+            setTimeout(function() {
+            	// document.body.removeChild(load_screen);
+            	$('.first-eslogan').css("opacity","0");
+            },2500);
+        });
         $(window).load(function() {
         	  if(<?php echo $pantalla1 ?> == 5) {
 				m = 5; 
