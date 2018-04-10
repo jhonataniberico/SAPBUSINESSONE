@@ -63,7 +63,6 @@ class Configuracion extends CI_Controller {
             echo json_encode($respuesta);
         }
     }
-
     function subirEslogan(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
