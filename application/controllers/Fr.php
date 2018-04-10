@@ -254,7 +254,7 @@ class Fr extends CI_Controller {
                           <table style="width: 100%;padding: 10px;">
                             <tbody>
                               <tr style="padding: 25px;margin: 30px;">
-                                <td style="text-align: center;padding: 10px 0;"><font style="font-family: "Open Sans",Arial,Helvetica,sans-serif;font-weight: bold;font-size: 20px;">Informations client</font></td>
+                                <td style="text-align: center;padding: 10px 0;"><font style="font-weight: bold;font-size: 20px;">Informations client</font></td>
                               </tr>
                               <tr>
                                 <table style="padding: 20px;" cellspacing="0" cellpadding="0" border="0">
@@ -295,7 +295,7 @@ class Fr extends CI_Controller {
                                 </table>
                               </tr>
                               <tr style="padding: 25px;margin: 30px;">
-                                <td style="text-align: center;padding: 10px 0;"><font style="font-family: "Open Sans",Arial,Helvetica,sans-serif;font-weight: bold;font-size: 20px;">Réponses</font></td>
+                                <td style="text-align: center;padding: 10px 0;"><font style="font-weight: bold;font-size: 20px;">Réponses</font></td>
                               </tr>
                               <tr>
                                 <td>
