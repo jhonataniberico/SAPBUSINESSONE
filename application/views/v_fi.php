@@ -74,11 +74,11 @@
 	    		<div class="logo-bottom">
         			<img src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_home.png">
 		    		<div class="bottom-right">
-						<p>You may select more than one option</p>
+						<p>Du kan välja mer än ett alternativ</p>
 		    		</div>
         		</div>
         		<div class="chat">
-        			<a href="https://z1.liveper.sn/api/account/81933160/route/campaign/194741814/engagement/476282014" target="_blank"><img src="<?php echo RUTA_IMG?>chat.png"><label>Chat with us</label></a>
+        			<a href="https://z1.liveper.sn/api/account/81933160/route/campaign/194741814/engagement/476282014" target="_blank"><img src="<?php echo RUTA_IMG?>chat.png"><label>chatta med oss</label></a>
         		</div>
 				<div id="window1-page" class="window-center opacity-done">
 					<div class="mdl-container text-center">
