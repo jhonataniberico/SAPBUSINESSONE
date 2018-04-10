@@ -116,28 +116,28 @@ function agregarDatos(){
   if(factura == undefined){
     return;
   }
-    datos.append('archivo',$('#archivo')[0].files[0]);
-     $.ajax({
-        type:"post",
-        dataType:"json",
-        url:"Admin/cargarFact",
-        contentType:false,
-        data:datos,
-        processData:false,
-      }).done(function(respuesta){
-        msj('error', respuesta.mensaje);
-        if(respuesta.mensaje == 'Su logo se subió correctamente'){
-          $('#btnSubirFact').text('Cargado');
-          $('#btnSubirFact').css('background-color','#5CB85C');
-          $('#btnSubirFact').css('color','#FFFFFF');
-        }
-        $('#fecha').val("");
-        $('#modelo').val("0");
-        $('.selectpicker').selectpicker('refresh');
-        $('#nro_factura').val("");
-        $('#monto').val("");
-        $('#cantidad').val("");
-        setTimeout(function(){ location.href = 'Factura'; }, 2000);
+  datos.append('archivo',$('#archivo')[0].files[0]);
+    $.ajax({
+      type:"post",
+      dataType:"json",
+      url:"Admin/cargarFact",
+      contentType:false,
+      data:datos,
+      processData:false,
+    }).done(function(respuesta){
+      msj('error', respuesta.mensaje);
+      if(respuesta.mensaje == 'Su logo se subió correctamente'){
+        $('#btnSubirFact').text('Cargado');
+        $('#btnSubirFact').css('background-color','#5CB85C');
+        $('#btnSubirFact').css('color','#FFFFFF');
+      }
+      $('#fecha').val("");
+      $('#modelo').val("0");
+      $('.selectpicker').selectpicker('refresh');
+      $('#nro_factura').val("");
+      $('#monto').val("");
+      $('#cantidad').val("");
+      setTimeout(function(){ location.href = 'Factura'; }, 2000);
     });
 }
 function subirEslogan(){
