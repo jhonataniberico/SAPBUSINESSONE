@@ -209,8 +209,8 @@ class Fr extends CI_Controller {
                             'charset'   => 'utf-8',
                             'newline'   => "\r\n");    
        $this->email->initialize($configGmail);
-       $this->email->from('info@marketinghpe.com');
-       $this->email->to('jhonatanibericom@gmail.com');
+       $this->email->from('info@sap-latam.com');
+       $this->email->to('jose.minayac15@gmail.com');
        $this->email->subject('Je suis intéressé par SAP Business One pour mon entreprise.');
        $texto = '<!DOCTYPE html>
                   <html>
@@ -366,8 +366,8 @@ class Fr extends CI_Controller {
        $configGmail = array('protocol'  => 'smtp',
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,
-                            'smtp_user' => 'info@sap-latam.com',
-                            'smtp_pass' => 'sapinfo18',
+                            'smtp_user' => 'info@marketinghpe.com',
+                            'smtp_pass' => 'hpeinfo18',
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
                             'newline'   => "\r\n");    
