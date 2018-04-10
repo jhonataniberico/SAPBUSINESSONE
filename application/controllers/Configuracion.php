@@ -37,13 +37,14 @@ class Configuracion extends CI_Controller {
             $tipo = $_FILES['archivo']['type']; 
             $tamanio = $_FILES['archivo']['size']; 
             $archivotmp = $_FILES['archivo']['tmp_name'];
+            print_r($archivotmp);
             $namearch = $_FILES['archivo']['name'];
             $nuevo = explode(".",$namearch);
             if($tamanio > '2000000'){
                 $respuesta->mensaje = 'El tamaño de su imagen debe ser menor';
             }else {
                 if($nuevo[1] == 'jpeg' || $nuevo[1] == 'jpg' || $nuevo[1] == 'png'){
-                    $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'img'.DIRECTORY_SEPARATOR.'logo'.DIRECTORY_SEPARATOR.'logo_partner.png';
+                    $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'img'.DIRECTORY_SEPARATOR.'logo'.DIRECTORY_SEPARATOR.'google.png';
                     if(move_uploaded_file($archivotmp, $target) ){
                        $arrUpdt = array('logo' => $namearch);
                        if($this->session->userdata('Idioma') == 'Francés'){

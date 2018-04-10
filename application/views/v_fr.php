@@ -64,7 +64,7 @@
 				<div class="header">
 	    			<div class="header-left">
 	    				<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	    				<img class="logo-partner" src="<?php echo RUTA_IMG?>logo/logo_partner.png">
+	    				<img class="logo-partner" src="<?php echo RUTA_IMG?>logo/google.png">
 	    				<!-- <h2>Etes-vous prêt pour SAP Business One &#63;</h2> -->
 	    			</div>
 	    			<div class="header-right eslogan">
