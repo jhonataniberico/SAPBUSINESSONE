@@ -77,11 +77,11 @@ class Admin extends CI_Controller {
         if(count($_FILES) == 0){
             $respuesta->mensaje = 'Seleccione un logo';
         }else {
-            $tipo = $_FILES['archivo']['type']; 
-            $tamanio = $_FILES['archivo']['size']; 
+            $tipo       = $_FILES['archivo']['type']; 
+            $tamanio    = $_FILES['archivo']['size']; 
             $archivotmp = $_FILES['archivo']['tmp_name'];
-            $namearch = $_FILES['archivo']['name'];
-            $nuevo = explode(".",$namearch);
+            $namearch   = $_FILES['archivo']['name'];
+            $nuevo      = explode(".",$namearch);
             if($tamanio > '2000000'){
                 $respuesta->mensaje = 'El tamaño de su imagen debe ser menor';
             }else {
