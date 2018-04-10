@@ -150,7 +150,6 @@ function subirEslogan(){
     try{
         data = JSON.parse(data);
         if(data.error == 0){
-          //location.href = 'Login';
           $('#eslogan').val("");
           msj('error', 'Se cambió su eslogan correctamente');
         }else {
