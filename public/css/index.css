@@ -298,6 +298,24 @@ table.dataTable.no-footer{
 	bottom: 0;
 	z-index: 0;
 }
+.fondo-bottom.fondo-partner{
+    background: url(../img/fondo/fondo.png) repeat-x;
+    width: 100%;
+    background-size: 1000px;
+    height: 240px;
+    left: 0;
+    right: 0;
+    background-position: 2000px;
+    transition: all .5s linear;
+}
+.fondo-bottom.fondo-partner.continue{
+    animation: continue 8s;	
+}
+@keyframes continue{
+	to{
+		background-position: 0;
+	}
+}
 .fondo-bottom img{
 	width: 100%;
 	max-width: calc(100% - 300px);

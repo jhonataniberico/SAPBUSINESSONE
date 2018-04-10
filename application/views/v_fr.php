@@ -58,9 +58,7 @@
 						<div class="arrow arrow-right"></div>
 					</button>
 	    		</div>
-	    		<div class="fondo-bottom">
-	    			<img src="<?php echo RUTA_IMG?>fondo/fondo.png">
-	    		</div>
+	    		<div class="fondo-bottom fondo-partner continue"></div>
     		</div>
 			<div class="mdl-container-question">
 				<div class="header">
@@ -738,7 +736,7 @@
             setTimeout(function() {
             	$('.first-eslogan').addClass('animated fadeOutLeft');
             	$('.second-eslogan').addClass('animated fadeInRight');
-            },2500);
+            },3000);
         });
         $(window).load(function() {
         	  if(<?php echo $pantalla1 ?> == 5) {
