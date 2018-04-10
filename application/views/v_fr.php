@@ -43,10 +43,10 @@
     					<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	            		<h2 class="title-home">Différents scénarios, une seule solution.</h2>
     				</div>
-	    			<!-- <div class="second-eslogan">
+	    			<div class="second-eslogan">
 	    				<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	            		<h2 class="title-home">Différents scénarios, une seule solution.</h2>
-	    			</div> -->
+	    			</div>
 	    		</div>
 	    		<div class="background-body">
 					<div class="background-body3"></div>
@@ -736,7 +736,8 @@
         }
         window.addEventListener("load", function() {
             setTimeout(function() {
-            	$('.first-eslogan').css("opacity","0");
+            	$('.first-eslogan').addClass('animated fadeOutLeft');
+            	$('.second-eslogan').addClass('animated fadeInRight');
             },2500);
         });
         $(window).load(function() {

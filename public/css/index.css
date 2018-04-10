@@ -1062,6 +1062,16 @@ span.number{
     text-align: center;
     margin: auto;
 }
+.second-eslogan{
+	position: absolute;
+	top: 0;
+}
+/*.first-eslogan.fadeOutLeft,*/
+.second-eslogan{
+	opacity: 0;
+    display: none;
+}
+.second-eslogan.fadeInRight,
 .mdl-agradecimiento.fadeInRight{
 	display: block;
 }
