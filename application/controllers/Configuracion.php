@@ -43,7 +43,7 @@ class Configuracion extends CI_Controller {
                 $respuesta->mensaje = 'El tamaño de su imagen debe ser menor';
             }else {
                 if($nuevo[1] == 'jpeg' || $nuevo[1] == 'jpg' || $nuevo[1] == 'png'){
-                    $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'img'.DIRECTORY_SEPARATOR.'logo'.DIRECTORY_SEPARATOR.'google.png';
+                    $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'img'.DIRECTORY_SEPARATOR.'logo'.DIRECTORY_SEPARATOR.'logo_partner.png';
                     if(move_uploaded_file($archivotmp, $target) ){
                        $arrUpdt = array('logo' => $namearch);
                        if($this->session->userdata('Idioma') == 'Francés'){

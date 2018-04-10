@@ -40,8 +40,8 @@
 		    	</div>
     			<div class="mdl-container mdl-all-window">
     				<div class="first-eslogan">
-    					<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	            		<h2 class="title-home">Différents scénarios, une seule solution.</h2>
+    					<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_partner.png">
+	            		<h2 class="title-home">&Eacute;crivez votre slogan ici</h2>
     				</div>
 	    			<div class="second-eslogan">
 	    				<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
@@ -64,7 +64,7 @@
 				<div class="header">
 	    			<div class="header-left">
 	    				<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	    				<img class="logo-partner" src="<?php echo RUTA_IMG?>logo/google.png">
+	    				<img class="logo-partner" src="<?php echo RUTA_IMG?>logo/logo_partner.png">
 	    				<!-- <h2>Etes-vous prêt pour SAP Business One &#63;</h2> -->
 	    			</div>
 	    			<div class="header-right eslogan">

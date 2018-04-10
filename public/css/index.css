@@ -229,6 +229,8 @@ table.dataTable.no-footer{
 	-ms-transition: max-width .3s ease-in-out;
 	-o-transition: max-width .3s ease-in-out;
 	transition: max-width .3s ease-in-out;
+	width: 100%;
+    max-width: 250px;
 }
 .bottom-right{
 	position: absolute;
