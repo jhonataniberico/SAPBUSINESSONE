@@ -38,7 +38,7 @@ class Login extends CI_Controller {
 								 		 'Id_user' => $username[0]->Id,
 								 		 'Idioma'  => 'Todos');
 						$data['href'] = 'Admin';
-					}else if($usuario == 'iradmin'){
+					}else if($usuario == 'fiadmin'){
 						$session = array('usuario' => $usuario,
 								 		 'Id_user' => $username[0]->Id,
 								 		 'Idioma'  => 'Sueco');
