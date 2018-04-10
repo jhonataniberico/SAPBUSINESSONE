@@ -49,7 +49,6 @@ class Fi extends CI_Controller {
     $data['nombre_linke']  = $this->session->userdata('emailAddress');
     $this->load->view('v_fi', $data);
   }
-
   function Savedatos(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
@@ -96,93 +95,89 @@ class Fi extends CI_Controller {
         }
         echo json_encode($data);
   }
-
   function mostrarDatos(){
-        $data['error'] = EXIT_ERROR;
-        $data['msj']   = null;
-        try {
-          $ids_array   = $this->input->post('array_ids');
-          $array_3pant = $this->input->post('array_3pant');
-          $explode = explode(",", $this->session->userdata('Prioridad'));
-          $html    = '';
-          foreach ($explode as $key) {
-            $html .= '<li>'.$key.'</li>';
-          }
-          $session = array('ids_array'   => $ids_array,
-                           'array_3pant' => $array_3pant);
-          $this->session->set_userdata($session);
-          $tamanio = $this->session->userdata('Tamanio') == null ? '-' : $this->session->userdata('Tamanio').' Anställda';
-          $data['Industria']       = $this->session->userdata('industria') == null ? '-' : $this->session->userdata('industria');
-          $data['Factura_anual']   = $this->session->userdata('Factura_anual') == null ? '-' : $this->session->userdata('Factura_anual');
-          $data['Tamanio']         = $tamanio;
-          $data['Prioridad']       = $html;
-          $data['Infraestructura'] = $this->session->userdata('Infraestructura') == null ? '-' : $this->session->userdata('Infraestructura');
-          $data['error']           = EXIT_SUCCESS;
-        } catch (Exception $e) {
-            $data['msj'] = $e->getMessage();
-        }
-        echo json_encode($data);
+    $data['error'] = EXIT_ERROR;
+    $data['msj']   = null;
+    try {
+      $ids_array   = $this->input->post('array_ids');
+      $array_3pant = $this->input->post('array_3pant');
+      $explode = explode(",", $this->session->userdata('Prioridad'));
+      $html    = '';
+      foreach ($explode as $key) {
+        $html .= '<li>'.$key.'</li>';
+      }
+      $session = array('ids_array'   => $ids_array,
+                       'array_3pant' => $array_3pant);
+      $this->session->set_userdata($session);
+      $tamanio = $this->session->userdata('Tamanio') == null ? '-' : $this->session->userdata('Tamanio').' Anställda';
+      $data['Industria']       = $this->session->userdata('industria') == null ? '-' : $this->session->userdata('industria');
+      $data['Factura_anual']   = $this->session->userdata('Factura_anual') == null ? '-' : $this->session->userdata('Factura_anual');
+      $data['Tamanio']         = $tamanio;
+      $data['Prioridad']       = $html;
+      $data['Infraestructura'] = $this->session->userdata('Infraestructura') == null ? '-' : $this->session->userdata('Infraestructura');
+      $data['error']           = EXIT_SUCCESS;
+    } catch (Exception $e) {
+        $data['msj'] = $e->getMessage();
+    }
+    echo json_encode($data);
   }
-
   function solicitarEstimacion() {
-        $data['error']  = EXIT_ERROR;
-        $data['msj']    = null;
-        try {
-            $nombre_completo = $this->input->post('nombre_completo');
-            $empresa         = $this->input->post('empresa');
-            $email           = $this->input->post('email');
-            $pais            = $this->input->post('pais');
-            $cargo           = $this->input->post('cargo');
-            $telefono        = $this->input->post('telefono');
-            $relacion        = $this->input->post('relacion');
-            $contacto        = $this->input->post('contacto');
-            $term_cond       = $this->input->post('term_cond');
-            $arrayInsert = array('nombre_completo' => $nombre_completo,
-                                 'Empresa'         => $empresa,
-                                 'Email'           => $email,
-                                 'Pais'            => $pais,
-                                 'Cargo'           => $cargo,
-                                 'Telefono'        => $telefono,
-                                 'Terminos'        => $term_cond,
-                                 'Relacion'        => $relacion,
-                                 'Contactado'      => $contacto,
-                                 'Id_solicitud'    => $_SESSION['id_sol'],
-                                 'fecha_sol'       => date('Y-m-d H:i:s'));
-            $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'usuario');
-            $session    = array('nombre_completo' => $nombre_completo,
-                                'Empresa'         => $empresa,
-                                'Email'           => $email,
-                                'Pais'            => $pais,
-                                'Cargo'           => $cargo,
-                                'Telefono'        => $telefono,
-                                'Relacion'        => $relacion,
-                                'Contacto'        => $contacto,
-                                'pantalla'        => 0,
-                                'id_persona'      => $datoInsert['Id']);
-            $this->session->set_userdata($session);
-            $this->session->unset_userdata('nombre_linke');
-            $this->session->unset_userdata('email_linke');
-            $this->session->unset_userdata('universidad');
-            $this->session->unset_userdata('pais_linke');
-            $this->session->unset_userdata('titulo');
-            $this->session->unset_userdata('compania');
-            $this->session->unset_userdata('Industria');
-            $this->session->unset_userdata('Infraestructura');
-            $this->session->unset_userdata('Factura_anual');
-            $this->session->unset_userdata('Tamanio');
-            $this->session->unset_userdata('Prioridad');
-            $this->session->unset_userdata('idioma');
-          //$this->sendGmailSap($email);
-          //$this->emailClienteSap($email);
-          //$this->emailPartner();
-          $data['msj']   = $datoInsert['msj'];
-          $data['error'] = $datoInsert['error'];
-        } catch (Exception $e){
-            $data['msj'] = $e->getMessage();
-        }
-        echo json_encode($data);
+    $data['error']  = EXIT_ERROR;
+    $data['msj']    = null;
+    try {
+        $nombre_completo = $this->input->post('nombre_completo');
+        $empresa         = $this->input->post('empresa');
+        $email           = $this->input->post('email');
+        $pais            = $this->input->post('pais');
+        $cargo           = $this->input->post('cargo');
+        $telefono        = $this->input->post('telefono');
+        $relacion        = $this->input->post('relacion');
+        $contacto        = $this->input->post('contacto');
+        $term_cond       = $this->input->post('term_cond');
+        $arrayInsert = array('nombre_completo' => $nombre_completo,
+                             'Empresa'         => $empresa,
+                             'Email'           => $email,
+                             'Pais'            => $pais,
+                             'Cargo'           => $cargo,
+                             'Telefono'        => $telefono,
+                             'Terminos'        => $term_cond,
+                             'Relacion'        => $relacion,
+                             'Contactado'      => $contacto,
+                             'Id_solicitud'    => $_SESSION['id_sol'],
+                             'fecha_sol'       => date('Y-m-d H:i:s'));
+        $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'usuario');
+        $session    = array('nombre_completo' => $nombre_completo,
+                            'Empresa'         => $empresa,
+                            'Email'           => $email,
+                            'Pais'            => $pais,
+                            'Cargo'           => $cargo,
+                            'Telefono'        => $telefono,
+                            'Relacion'        => $relacion,
+                            'Contacto'        => $contacto,
+                            'pantalla'        => 0,
+                            'id_persona'      => $datoInsert['Id']);
+        $this->session->set_userdata($session);
+        $this->session->unset_userdata('nombre_linke');
+        $this->session->unset_userdata('email_linke');
+        $this->session->unset_userdata('universidad');
+        $this->session->unset_userdata('pais_linke');
+        $this->session->unset_userdata('titulo');
+        $this->session->unset_userdata('compania');
+        $this->session->unset_userdata('Industria');
+        $this->session->unset_userdata('Infraestructura');
+        $this->session->unset_userdata('Factura_anual');
+        $this->session->unset_userdata('Tamanio');
+        $this->session->unset_userdata('Prioridad');
+        $this->session->unset_userdata('idioma');
+      //$this->sendGmailSap($email);
+      //$this->emailClienteSap($email);
+      $data['msj']   = $datoInsert['msj'];
+      $data['error'] = $datoInsert['error'];
+    } catch (Exception $e){
+        $data['msj'] = $e->getMessage();
+    }
+    echo json_encode($data);
   }
-
   function sendGmailSap($email) {
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
@@ -352,7 +347,6 @@ class Fi extends CI_Controller {
       }
       return json_encode(array_map('utf8_encode', $data));
     }
-
   function emailClienteSap($email){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
@@ -499,7 +493,6 @@ class Fi extends CI_Controller {
       }
       return json_encode(array_map('utf8_encode', $data));
     }
-
     function EditQuestion(){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
@@ -513,7 +506,6 @@ class Fi extends CI_Controller {
       }
       echo json_encode($data);
     }
-
     function ConfirmarRespuestas(){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
@@ -527,8 +519,6 @@ class Fi extends CI_Controller {
       }
       echo json_encode($data);
   }
-
-
   function cambiarIdioma(){
     $data['error'] = EXIT_ERROR;
     $data['msj']   = null;
@@ -541,31 +531,5 @@ class Fi extends CI_Controller {
         $data['msj'] = $e->getMessage();
       }
       echo json_encode($data);
-  }
-
-  function emailPartner(){
-    $data['error'] = EXIT_ERROR;
-    $data['msj']   = null;
-    try {
-      $configGmail = array('protocol'  => 'smtp',
-                            'smtp_host' => 'smtpout.secureserver.net',
-                            'smtp_port' => 3535,
-                            'smtp_user' => 'info@sap-latam.com',
-                            'smtp_pass' => 'sapinfo18',
-                            'mailtype'  => 'html',
-                            'charset'   => 'utf-8',
-                            'newline'   => "\r\n");    
-      //cargamos la configuración para enviar con gmail
-      $this->email->initialize($configGmail);
-      $this->email->from('info@sap-latam.com');
-      $this->email->to('email_partner@gmail.com');//EMAIL AL QUIÉN IRÁ DIRIGIDO
-      $this->email->subject('Estoy interesado en SAP Business One para mi negocio.');
-      $texto = 'html del partner';
-      $this->email->message($texto);//AQUI SE INSERTA EL HTML
-      $this->email->send();
-      $data['error'] = EXIT_SUCCESS;
-    }catch(Exception $e){
-      $data['msj'] = $e->getMessage();
-    }
   }
 }
