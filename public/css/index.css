@@ -1418,6 +1418,10 @@ span.number{
 	    right: 15px;
 	    bottom: 15px;
 	}
+	.button-next:after{
+		top: 25px;
+    	left: 25px;
+	}
 }
 @media (max-width: 768px){
 	.logo-home{
@@ -1732,6 +1736,13 @@ span.number{
 	}
 	.chat img{
 		max-width: 40px;
+	}
+	/* BTN animation */
+	.button-next:after {
+	    top: 20px;
+	    left: 15px;
+	    width: 15px;
+	    height: 15px;
 	}
 }	
 @media(max-width: 320px){
