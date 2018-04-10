@@ -735,9 +735,7 @@
             $('select').selectpicker();
         }
         window.addEventListener("load", function() {
-        	// var load_screen = document.getElementById("load_screen");
             setTimeout(function() {
-            	// document.body.removeChild(load_screen);
             	$('.first-eslogan').css("opacity","0");
             },2500);
         });
