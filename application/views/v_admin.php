@@ -39,7 +39,11 @@
                     <img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
                 </div>
                 <div class="header-right">
-                    <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect admin-logout m-r-25" onclick="cerrarCesion()">Cerrar Sesi&oacute;n</a>
+                    <?php if($idioma == 'Francés'){ ?>
+                    <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect admin-logout m-r-25" onclick="cerrarCesion()">Se déconnecter</a>
+                    <?php } else { ?>
+                    <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect admin-logout m-r-25" onclick="cerrarCesion()">Logout</a>
+                    <?php } ?>
                     <div class="background3"></div>
                     <div class="background2"></div>
                     <div class="background1"></div>
