@@ -18,6 +18,7 @@ class Admin extends CI_Controller {
 			header("location: Login");
 		}
 		$data['html'] = $this->getTable();
+        $data['idioma'] = $this->session->userdata('Idioma');
 		$this->load->view('v_admin', $data);
 	}
 	function getTable(){

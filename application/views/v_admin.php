@@ -39,6 +39,19 @@
                 <div class="table-responsive">
                     <table id="example" class="display nowrap table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
                         <thead>
+                            <?php if($idioma == 'Francés'){ ?>
+                            <tr class="tr-header-reporte">
+                                <th class="text-center">Client</th>
+                                <th class="text-center">Société</th>
+                                <th class="text-center">E-mail</th>
+                                <th class="text-center">Téléphone</th>
+                                <th class="text-center">Relation avec SAP</th>
+                                <th class="text-center">Position</th>
+                                <th class="text-center">Je veux être contacté</th>
+                                <th class="text-center">Pays</th>
+                                <th class="text-center">Date</th>
+                            </tr>
+                            <?php } else { ?>
                             <tr class="tr-header-reporte">
                                 <th class="text-center">Nombres</th>
                                 <th class="text-center">Empresa</th>
@@ -50,6 +63,7 @@
                                 <th class="text-center">Pa&iacute;s</th>
                                 <th class="text-center">Fecha</th>
                             </tr>
+                            <?php } ?>
                         </thead>
                       <tbody>
                           <?php echo $html ?>  
@@ -86,12 +100,21 @@
               responsive: true,
               dom: 'Bfrtip',
               lengthMenu: [
+                            //text: 'My button',
                             [ 10, 25, 50, -1 ],
-                            [ '10 rows', '25 rows', '50 rows', 'Show all' ]
+                            [ '10 lignes', '25 lignes', '50 lignes', 'Tout voir' ]
                           ],
                           buttons: [
-                             'pageLength',
-                             'excel', 'print'
+                              {
+                                text: 'Afficher 10 lignes',
+                                extend: 'pageLength'
+                              },
+                              {
+                                extend:'excel'
+                              },
+                              {
+                                extend:'print'
+                              }
                           ]
           });
           $('.buttons-excel').empty();
