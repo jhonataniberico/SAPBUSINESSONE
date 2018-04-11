@@ -69,14 +69,14 @@
                             <?php } else { ?>
                             <tr class="tr-header-reporte">
                                 <th class="text-center">Client</th>
-                                <th class="text-center">Empresa</th>
-                                <th class="text-center">Correo electr&oacute;nico</th>
-                                <th class="text-center">Tel&eacute;fono</th>
-                                <th class="text-center">Relaci&oacute;n</th>
-                                <th class="text-center">Cargo</th>
-                                <th class="text-center">Contactado</th>
-                                <th class="text-center">Pa&iacute;s</th>
-                                <th class="text-center">Fecha</th>
+                                <th class="text-center">Company</th>
+                                <th class="text-center">E-mail</th>
+                                <th class="text-center">Phone</th>
+                                <th class="text-center">Relationship</th>
+                                <th class="text-center">Position</th>
+                                <th class="text-center">Contacted</th>
+                                <th class="text-center">Country</th>
+                                <th class="text-center">Date</th>
                                 <th class="text-center" style="display: none">Industria</th>
                                 <th class="text-center" style="display: none">Tamaño</th>
                                 <th class="text-center" style="display: none">Factura</th>
