@@ -28,14 +28,24 @@
     <style type="text/css">
         body{
             overflow-y: scroll;
+            background-color: #EDEDED;
         }
     </style>
 <body>
     <section id="principal">
         <div id="content" class="mdl-container">
-            <img class="logo-home logo-table" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-            <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-logout" onclick="cerrarCesion()">Cerrar Sesión</a>
-            <div class="mdl-card mdl-card-table m-t-50">
+            <div class="header" style="opacity: 1;">
+                <div class="header-left">
+                    <img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+                </div>
+                <div class="header-right">
+                    <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect admin-logout m-r-25" onclick="cerrarCesion()">Cerrar Sesi&oacute;n</a>
+                    <div class="background3"></div>
+                    <div class="background2"></div>
+                    <div class="background1"></div>
+                </div>
+            </div>
+            <div class="mdl-card mdl-card-table contenido-admin">
                 <div class="table-responsive">
                     <table id="example" class="display nowrap table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
                         <thead>
