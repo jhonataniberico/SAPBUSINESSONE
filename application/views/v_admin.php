@@ -60,10 +60,15 @@
                                 <th class="text-center">Je veux être contacté</th>
                                 <th class="text-center">Pays</th>
                                 <th class="text-center">Date</th>
+                                <th class="text-center" style="display: none">Industria</th>
+                                <th class="text-center" style="display: none">Tamaño</th>
+                                <th class="text-center" style="display: none">Factura</th>
+                                <th class="text-center" style="display: none">Prioridad</th>
+                                <th class="text-center" style="display: none">Infraestructura</th>
                             </tr>
                             <?php } else { ?>
                             <tr class="tr-header-reporte">
-                                <th class="text-center">Nombres</th>
+                                <th class="text-center">Client</th>
                                 <th class="text-center">Empresa</th>
                                 <th class="text-center">Correo electr&oacute;nico</th>
                                 <th class="text-center">Tel&eacute;fono</th>
@@ -72,6 +77,11 @@
                                 <th class="text-center">Contactado</th>
                                 <th class="text-center">Pa&iacute;s</th>
                                 <th class="text-center">Fecha</th>
+                                <th class="text-center" style="display: none">Industria</th>
+                                <th class="text-center" style="display: none">Tamaño</th>
+                                <th class="text-center" style="display: none">Factura</th>
+                                <th class="text-center" style="display: none">Prioridad</th>
+                                <th class="text-center" style="display: none">Infraestructura</th>
                             </tr>
                             <?php } ?>
                         </thead>
@@ -106,7 +116,8 @@
     <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-          $('#example').DataTable( {
+        <?php if($idioma == 'Francés'){ ?>
+            $('#example').DataTable( {
               responsive: true,
               dom: 'Bfrtip',
               lengthMenu: [
@@ -126,7 +137,30 @@
                                 extend:'print'
                               }
                           ]
-          });
+            });
+        <?php } else { ?>
+            $('#example').DataTable( {
+              responsive: true,
+              dom: 'Bfrtip',
+              lengthMenu: [
+                            //text: 'My button',
+                            [ 10, 25, 50, -1 ],
+                            [ '10 lines', '25 lines', '50 lines', 'See everything' ]
+                          ],
+                          buttons: [
+                              {
+                                text: 'Show 10 lines',
+                                extend: 'pageLength'
+                              },
+                              {
+                                extend:'excel'
+                              },
+                              {
+                                extend:'print'
+                              }
+                          ]
+            });
+        <?php } ?>
           $('.buttons-excel').empty();
           $('.buttons-print').empty();
           $('.buttons-excel').append('<i class="fa fa-download"></i>');
