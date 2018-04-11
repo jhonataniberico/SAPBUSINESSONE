@@ -60,11 +60,11 @@
                                 <th class="text-center">Je veux être contacté</th>
                                 <th class="text-center">Pays</th>
                                 <th class="text-center">Date</th>
-                                <th class="text-center" style="display: none">Industria</th>
-                                <th class="text-center" style="display: none">Tamaño</th>
-                                <th class="text-center" style="display: none">Factura</th>
-                                <th class="text-center" style="display: none">Prioridad</th>
-                                <th class="text-center" style="display: none">Infraestructura</th>
+                                <th class="text-center" style="display: none">Industrie</th>
+                                <th class="text-center" style="display: none">Taille</th>
+                                <th class="text-center" style="display: none">Facture annuelle</th>
+                                <th class="text-center" style="display: none">Priorité</th>
+                                <th class="text-center" style="display: none">Infrastructure</th>
                             </tr>
                             <?php } else { ?>
                             <tr class="tr-header-reporte">
@@ -77,11 +77,11 @@
                                 <th class="text-center">Contacted</th>
                                 <th class="text-center">Country</th>
                                 <th class="text-center">Date</th>
-                                <th class="text-center" style="display: none">Industria</th>
-                                <th class="text-center" style="display: none">Tamaño</th>
-                                <th class="text-center" style="display: none">Factura</th>
-                                <th class="text-center" style="display: none">Prioridad</th>
-                                <th class="text-center" style="display: none">Infraestructura</th>
+                                <th class="text-center" style="display: none">Industry</th>
+                                <th class="text-center" style="display: none">Size</th>
+                                <th class="text-center" style="display: none">Annual invoice</th>
+                                <th class="text-center" style="display: none">Priority</th>
+                                <th class="text-center" style="display: none">Infrastructure</th>
                             </tr>
                             <?php } ?>
                         </thead>
