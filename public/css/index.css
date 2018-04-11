@@ -6,6 +6,7 @@ body{
 }
 h2,p{
     font-family: 'RobotoRegular';
+    color: #FFFFFF;
 }
 /*CLASES GENERALES*/
 .opacity{
@@ -730,6 +731,7 @@ span.number{
     font-size: 16px;
     vertical-align: middle;
     line-height: 29px;
+    color: #FFFFFF;
 }
 .content-card .select-empleados button i{
 	color: #FFFFFF;
@@ -797,6 +799,7 @@ span.number{
 	font-family: 'RobotoLight';
     font-size: 10px;
     font-style: italic;
+    color: #FFFFFF;
 }
 .mdl-card-question .card-front img{
 	width: 100%;
@@ -1054,6 +1057,7 @@ span.number{
 	width: 100%;
     display: inline-block;
     font-style: italic;
+    color: #FFFFFF;
 }
 .mdl-card-confirmacion{
 	max-width: 400px;
@@ -1195,6 +1199,7 @@ span.number{
 .mdl-formulario .mdl-radio{
 	font-size: 12px;
 	font-family: 'RobotoLight';
+	color: #FFFFFF;
 }
 .mdl-formulario .col-xs-4{
 	padding: 0 5px;
@@ -1212,6 +1217,9 @@ span.number{
 .mdl-formulario .content-datos .content-separacion p,
 .mdl-formulario .content-datos .content-personal p{
 	margin: 0;
+}
+.mdl-formulario .content-datos .content-personal p{
+	color: #000000;
 }
 .mdl-formulario .content-datos .content-personal p i{
 	vertical-align: middle;
@@ -1240,6 +1248,7 @@ span.number{
 .mdl-label .mdl-checkbox__label{
 	font-size: 13px;
     line-height: 18px;
+    color: #FFFFFF;
 }
 .mdl-label .mdl-checkbox__label a{
 	font-size: 14px;
