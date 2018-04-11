@@ -38,7 +38,7 @@
                 <div class="header-left">
                     <img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
                 </div>
-                <div class="header-right">
+                <div class="header-right admin">
                     <?php if($idioma == 'Francés'){ ?>
                     <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect admin-logout m-r-25" onclick="cerrarCesion()">Se déconnecter</a>
                     <?php } else { ?>

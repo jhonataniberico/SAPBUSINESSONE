@@ -150,10 +150,11 @@ table.dataTable.no-footer{
 }
 .admin-logout{
     background-color: transparent;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     text-transform: initial;
     font-family: 'RobotoMedium';
     padding: 0 14px;
+    width: 100%;
 }
 /*GENERAL*/
 .window-center{
@@ -366,6 +367,9 @@ table.dataTable.no-footer{
 .header-left{
     padding: 18px 0 18px 25px;
     float: left;
+}
+.header-right.admin{
+	max-width: 240px;
 }
 .header-right.none-idioma{
 	max-width: 95px;
