@@ -38,7 +38,7 @@
                 <div class="header-left">
                     <img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
                 </div>
-                <div class="header-right">
+                <div class="header-right admin">
                     <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect admin-logout m-r-25" onclick="cerrarCesion()">Cerrar Sesi&oacute;n</a>
                     <div class="background3"></div>
                     <div class="background2"></div>
