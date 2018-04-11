@@ -16,15 +16,15 @@ function solicitarEstimacion(){
 		validarCampos();
 	}
 	if(nombre_completo == null || nombre_completo == ''){
-		msj('error', 'Entrez votre nom complet');
+		msj('error', 'Renseigner votre nom complet');
 		return;
 	}
 	if(empresa == null || empresa == ''){
-		msj('error', 'Entrez votre entreprise');
+		msj('error', 'Renseigner votre société');
 		return;
 	}
 	if(email == null || email == ''){
-		msj('error', 'Entrer votre Email');
+		msj('error', 'Renseigner votre e-mail');
 		return;
 	}
 	if (!validateEmail(email)){
@@ -32,19 +32,19 @@ function solicitarEstimacion(){
 		return;
 	}
 	if(pais == null || pais == ''){
-		msj('error', 'Entrez votre pays');
+		msj('error', 'Renseigner votre pays');
 		return;
 	}
 	if(cargo == null || cargo == ''){
-		msj('error', 'Entrez votre position');
+		msj('error', 'Renseigner votre position');
 		return;
 	}
 	if(telefono == null || telefono == ''){
-		msj('error', 'Enter your phone');
+		msj('error', 'Renseigner votre téléphone');
 		return;
 	}
 	if(relacion == null || relacion == ''){
-		msj('error', 'Entrez votre téléphone');
+		msj('error', 'Sélectionner votre relation avec SAP');
 		return;
 	}
 	if(c_email == true){
@@ -55,7 +55,7 @@ function solicitarEstimacion(){
 		contacto = 3;
 	}
 	if(contacto == null || contacto == ''){
-		msj('error', 'Sélectionnez les moyens par lesquels vous souhaitez être contacté');
+		msj('error', 'Sélectionner le moyen avec lequel vous souhaitez être contacté');
 		  return;
 	}
 	if(terminos == true){
@@ -64,7 +64,7 @@ function solicitarEstimacion(){
 		term_cond = 0;
 	}
 	if(terminos == false){
-		msj('error', 'Acceptez les termes et conditions');
+		msj('error', 'Accepter les termes et conditions');
 		return;
 	}
 	$('.button-confirmar').prop("disabled", true);
