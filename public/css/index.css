@@ -2,7 +2,6 @@ body{
 	margin: 0;
 	padding: 0;
 	background-color: #000000;
-	color: #FFFFFF;
 	overflow: hidden;
 }
 h2,p{
@@ -1432,6 +1431,9 @@ span.number{
 		background-size: 800px;
     	height: 200px;
 	}
+	.header-right.admin{
+		max-width: 220px;
+	}
 }
 @media (max-width: 768px){
 	.logo-home{
@@ -1616,6 +1618,9 @@ span.number{
 	}
 	.button-linkedin i{
 		padding: 11px;
+	}
+	.header-right.admin{
+		max-width: 165px;
 	}
 }
 @media (max-width: 420px){

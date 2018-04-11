@@ -125,7 +125,9 @@
               responsive: true,
               dom: 'Bfrtip',
               language:{
+                "emptyTable":     "Aucune donnée disponible",
                 "info" : "Afficher _START_ a _END_ des _TOTAL_ résultats",
+                "infoEmpty":      "Afficher 0 to 0 of 0 résultats",
                 "search": "Chercher:",
                 "lengthMenu":   "Afficher _MENU_ lignes",
                 "paginate": {
