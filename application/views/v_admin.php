@@ -120,23 +120,34 @@
             $('#example').DataTable( {
               responsive: true,
               dom: 'Bfrtip',
-              lengthMenu: [
-                            //text: 'My button',
-                            [ 10, 25, 50, -1 ],
-                            [ '10 lignes', '25 lignes', '50 lignes', 'Tout voir' ]
-                          ],
-                          buttons: [
-                              {
-                                text: 'Afficher 10 lignes',
-                                extend: 'pageLength'
-                              },
-                              {
-                                extend:'excel'
-                              },
-                              {
-                                extend:'print'
-                              }
-                          ]
+              language:{
+                "info" : "Afficher _START_ a _END_ des _TOTAL_ résultats",
+                "search": "Chercher:",
+                "lengthMenu":   "Afficher _MENU_ lignes",
+                "paginate": {
+                    "first":    "Primero",
+                    "last":     "Ultimo",
+                    "next":     "Suivant",
+                    "previous": "Précédent"
+                },
+            },
+            lengthMenu: [
+                    //text: 'My button',
+                    [ 10, 25, 50, -1 ],
+                    [ '10 lignes', '25 lignes', '50 lignes', 'Tout voir' ]
+                  ],
+                  buttons: [
+                      {
+                        text: 'Afficher 10 lignes',
+                        extend: 'pageLength'
+                      },
+                      {
+                        extend:'excel'
+                      },
+                      {
+                        extend:'print'
+                      }
+                  ]
             });
         <?php } else { ?>
             $('#example').DataTable( {
