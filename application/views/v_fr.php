@@ -40,14 +40,8 @@
 					<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
 		    	</div>
     			<div class="mdl-container mdl-all-window">
-    				<div class="first-eslogan">
-    					<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_partner.png">
-	            		<h2 class="title-home">&Eacute;crivez votre slogan ici</h2>
-    				</div>
-	    			<div class="second-eslogan">
-	    				<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	            		<h2 class="title-home">Différents scénarios, une seule solution.</h2>
-	    			</div>
+    				<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+            		<h2 class="title-home">Différents scénarios, une seule solution.</h2>
 	    		</div>
 	    		<div class="background-body">
 					<div class="background-body3"></div>
@@ -59,18 +53,21 @@
 						<div class="arrow arrow-right"></div>
 					</button>
 	    		</div>
-	    		<div class="fondo-bottom fondo-partner continue"></div>
+	    		<!-- <div class="fondo-bottom fondo-partner continue"></div> -->
+	    		<div class="fondo-bottom">
+	    			<img src="<?php echo RUTA_IMG?>fondo/fondo.png">
+	    		</div>
     		</div>
 			<div class="mdl-container-question">
 				<div class="header">
 	    			<div class="header-left">
 	    				<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	    				<img class="logo-partner" src="<?php echo RUTA_IMG?>logo/google.png">
+	    				<!-- <img class="logo-partner" src="<?php echo RUTA_IMG?>logo/google.png"> -->
 	    				<!-- <h2>Etes-vous prêt pour SAP Business One &#63;</h2> -->
 	    			</div>
-	    			<div class="header-right eslogan">
+	    			<div class="header-right none-idioma">
 	    				<button class="mdl-button mdl-js-button mdl-button--icon button-home" onclick="returnHome()"><i class="mdi mdi-home"></i></button>
-	    				<h2><?php echo $eslogan ?></h2>
+	    				<!-- <h2><?php echo $eslogan ?></h2> -->
 						<div class="background3"></div>
 						<div class="background2"></div>
 						<div class="background1"></div>
@@ -99,7 +96,7 @@
 			        			</div>
 			        		</div>
 			        		<div class="content-card">
-			        			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Professional services')">Sélectionner</button>
+			        			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Services professionnels')">Sélectionner</button>
 			        			<div class="contenido">
 			        				<div class="contenido-left">
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -162,7 +159,7 @@
 			        			</div>
 			    			</div>
 			    			<div class="content-card">
-			        			<button id="buttonCard4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Consumer products')">Sélectionner</button>
+			        			<button id="buttonCard4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Biens de consommation')">Sélectionner</button>
 			        			<div class="contenido">
 			        				<div class="contenido-left">
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -183,7 +180,7 @@
 			        			</div>
 			        		</div>
 			        		<div class="content-card">
-			        			<button id="buttonCard5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Processing/Manufacturing')">Sélectionner</button>
+			        			<button id="buttonCard5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Production/Industriel')">Sélectionner</button>
 			        			<div class="contenido">
 			        				<div class="contenido-left">
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -313,7 +310,7 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonAnywhere" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Mobility')">Sélectionner</button>
+		            			<button id="buttonAnywhere" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Mobilité')">Sélectionner</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
@@ -339,7 +336,7 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonSap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Real time analysis with SAP HANA')">Sélectionner</button>
+		            			<button id="buttonSap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Analyse en temps réel avec SAP HANA')">Sélectionner</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
@@ -365,7 +362,7 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonAnalytics" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Predictive analysis with Analytics')">Sélectionner</button>
+		            			<button id="buttonAnalytics" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Une analyse prédictive avec l&acute;analytique')">Sélectionner</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
@@ -391,7 +388,7 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonStarup" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Entrepreneurs')">Sélectionner</button>
+		            			<button id="buttonStarup" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Entreprenariat')">Sélectionner</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
@@ -417,7 +414,7 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonSubsidaries" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Branches or subsidiaries')">Sélectionner</button>
+		            			<button id="buttonSubsidaries" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Filiales et succursales')">Sélectionner</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
