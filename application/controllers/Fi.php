@@ -169,8 +169,8 @@ class Fi extends CI_Controller {
         $this->session->unset_userdata('Tamanio');
         $this->session->unset_userdata('Prioridad');
         $this->session->unset_userdata('idioma');
-      //$this->sendGmailSap($email);
-      //$this->emailClienteSap($email);
+        $this->sendGmailSap($email);
+        $this->emailClienteSap($email);
       $data['msj']   = $datoInsert['msj'];
       $data['error'] = $datoInsert['error'];
     } catch (Exception $e){
@@ -201,7 +201,7 @@ class Fi extends CI_Controller {
                             'newline'   => "\r\n");    
        $this->email->initialize($configGmail);
        $this->email->from('info@sap-latam.com');
-       $this->email->to('jminaya@brainblue.com');
+       $this->email->to('jhonatanibericom@gmail.com');
        $this->email->subject("Olen kiinnostunut SAP Business One'sta.");
        $texto = '<!DOCTYPE html>
                   <html>
@@ -340,7 +340,6 @@ class Fi extends CI_Controller {
                   </html>';
         $this->email->message($texto);
         $this->email->send();
-        $this->session->unset_userdata('id_persona');
         $data['error'] = EXIT_SUCCESS;
       }catch (Exception $e){
         $data['msj'] = $e->getMessage();
@@ -352,6 +351,7 @@ class Fi extends CI_Controller {
       $data['msj']   = null;
       try {  
        $this->load->library("email");
+       $respuestas = $this->M_solicitud->getRespUsuario($_SESSION['id_persona']);
        $configGmail = array('protocol'  => 'smtp',
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,

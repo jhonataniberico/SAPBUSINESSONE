@@ -22,13 +22,14 @@
 	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>animate.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
-	<script type="text/javascript">
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-114404560-1', 'auto');
-			ga('send', 'pageview');
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117633230-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-117633230-1');
 	</script>
 </head>
 <body>
@@ -78,7 +79,7 @@
 		    		</div>
         		</div>
         		<div class="chat">
-        			<a href="https://z1.liveper.sn/api/account/81933160/route/campaign/194741814/engagement/476282014" target="_blank"><img src="<?php echo RUTA_IMG?>chat.png"><label>chatta med oss</label></a>
+        			<a href="https://z1.liveper.sn/api/account/81933160/route/campaign/194741814/engagement/476282014" target="_blank"><img src="<?php echo RUTA_IMG?>chat.png"><label>Keskustele kanssamme</label></a>
         		</div>
 				<div id="window1-page" class="window-center opacity-done">
 					<div class="mdl-container text-center">
@@ -94,7 +95,7 @@
 			        			</div>
 			        		</div>
 			        		<div class="content-card">
-			        			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Professional services')">Valitse</button>
+			        			<button id="buttonCard1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Asiantuntijapalvelut')">Valitse</button>
 			        			<div class="contenido">
 			        				<div class="contenido-left">
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -115,7 +116,7 @@
 			        			</div>
 			        		</div>
 			        		<div class="content-card">
-			        			<button id="buttonCard2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Retail')">Valitse</button>
+			        			<button id="buttonCard2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Vähittäismyynti')">Valitse</button>
 			        			<div class="contenido">
 			        				<div class="contenido-left">
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -136,7 +137,7 @@
 			        			</div>
 			        		</div>
 			        		<div class="content-card">
-			        			<button id="buttonCard3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Distribution')">Valitse</button>
+			        			<button id="buttonCard3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Jakelu')">Valitse</button>
 			        			<div class="contenido">
 			        				<div class="contenido-left">
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -157,7 +158,7 @@
 			        			</div>
 			    			</div>
 			    			<div class="content-card">
-			        			<button id="buttonCard4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Consumer products')">Valitse</button>
+			        			<button id="buttonCard4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Kuluttajatuotteet')">Valitse</button>
 			        			<div class="contenido">
 			        				<div class="contenido-left">
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -178,7 +179,7 @@
 			        			</div>
 			        		</div>
 			        		<div class="content-card">
-			        			<button id="buttonCard5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Processing/Manufacturing')">Valitse</button>
+			        			<button id="buttonCard5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select select-one" onclick="guardarDatos(this.id,'Prosessi/valmistava teollisuus')">Valitse</button>
 			        			<div class="contenido">
 			        				<div class="contenido-left">
 			        					<img src="<?php echo RUTA_IMG?>cards/card-contenido.png">
@@ -282,7 +283,7 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonCloud" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Cloud')">Valitse</button>
+		            			<button id="buttonCloud" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Pilviratkaisut')">Valitse</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
@@ -308,7 +309,7 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonAnywhere" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Mobility')">Valitse</button>
+		            			<button id="buttonAnywhere" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Mobiiliratkaisut')">Valitse</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
@@ -334,7 +335,7 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonSap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Real time analysis with SAP HANA')">Valitse</button>
+		            			<button id="buttonSap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'SAP HANA tosiaikainen analytiikka')">Valitse</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
@@ -360,7 +361,7 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonAnalytics" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Predictive analysis with Analytics')">Valitse</button>
+		            			<button id="buttonAnalytics" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Ennustava analytiikka')">Valitse</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
@@ -386,7 +387,7 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonStarup" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Entrepreneurs')">Valitse</button>
+		            			<button id="buttonStarup" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Yrittäjät')">Valitse</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
@@ -412,7 +413,7 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card">
-		            			<button id="buttonSubsidaries" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Branches or subsidiaries')">Valitse</button>
+		            			<button id="buttonSubsidaries" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-prioridad" onclick="guardarDatos(this.id,'Toimipisteet ja tytäryhtiöt')">Valitse</button>
 		            			<div class="contenido">
 		            				<div class="contenido-left">
 		            					<img src="<?php echo RUTA_IMG?>cards/card-contenido3.png">
@@ -446,7 +447,7 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card bottom">
-		            			<button id="buttonLocal" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one select-infraestructura" onclick="guardarDatos(this.id,'Local')">Valitse</button>
+		            			<button id="buttonLocal" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one select-infraestructura" onclick="guardarDatos(this.id,'Paikallinen')">Valitse</button>
 		            			<div class="contenido">
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
@@ -472,7 +473,7 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card bottom">
-		            			<button id="buttonCloudI" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one select-infraestructura" onclick="guardarDatos(this.id,'Cloud')">Valitse</button>
+		            			<button id="buttonCloudI" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one select-infraestructura" onclick="guardarDatos(this.id,'Pilviratkaisu')">Valitse</button>
 		            			<div class="contenido">
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
@@ -498,7 +499,7 @@
 		            			</div>
 		            		</div>
 		            		<div class="content-card bottom">
-		            			<button id="buttonHibrida" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one select-infraestructura" onclick="guardarDatos(this.id,'Hybrid')">Valitse</button>
+		            			<button id="buttonHibrida" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect select-one select-infraestructura" onclick="guardarDatos(this.id,'Yhdistelmä')">Valitse</button>
 		            			<div class="contenido">
 		            				<div class="contenido-right">
 	            						<h2>Tiesitk&ouml; ett&auml;...</h2>
@@ -721,7 +722,7 @@
 	<script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
-    <script src="<?php echo RUTA_JS?>index_en.js?v=<?php echo time();?>"></script>
+    <script src="<?php echo RUTA_JS?>index_fi.js?v=<?php echo time();?>"></script>
     <script type="text/javascript">
     	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
         	$('select').selectpicker('mobile');
