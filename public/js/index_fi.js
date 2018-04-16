@@ -16,15 +16,15 @@ function solicitarEstimacion(){
 		validarCampos();
 	}
 	if(nombre_completo == null || nombre_completo == ''){
-		msj('error', 'Enter your full name');
+		msj('error', 'Syötä koko nimesi');
 		return;
 	}
 	if(empresa == null || empresa == ''){
-		msj('error', 'Enter your company');
+		msj('error', 'Syötä yrityksesi');
 		return;
 	}
 	if(email == null || email == ''){
-		msj('error', 'Enter your email');
+		msj('error', 'Syötä sähköpostisi');
 		return;
 	}
 	if (!validateEmail(email)){
@@ -32,7 +32,7 @@ function solicitarEstimacion(){
 		return;
 	}
 	if(pais == null || pais == ''){
-		msj('error', 'Enter your country');
+		msj('error', 'Syötä maasi');
 		return;
 	}
 	if(cargo == null || cargo == ''){
@@ -40,11 +40,11 @@ function solicitarEstimacion(){
 		return;
 	}
 	if(telefono == null || telefono == ''){
-		msj('error', 'Enter your phone');
+		msj('error', 'Syötä puhelinnumerosi');
 		return;
 	}
 	if(relacion == null || relacion == ''){
-		msj('error', 'Enter your relationship with SAP');
+		msj('error', "Valitse suhteesi SAP'iin");
 		return;
 	}
 	if(c_email == true){
@@ -55,7 +55,7 @@ function solicitarEstimacion(){
 		contacto = 3;
 	}
 	if(contacto == null || contacto == ''){
-		msj('error', 'Select the means by which you want to be contacted');
+		msj('error', 'Valitse yhteydenottotapa');
 		  return;
 	}
 	if(terminos == true){
@@ -64,7 +64,7 @@ function solicitarEstimacion(){
 		term_cond = 0;
 	}
 	if(terminos == false){
-		msj('error', 'Accept the terms and conditions');
+		msj('error', 'Hyväksy ehdot ja säännöt');
 		return;
 	}
 	$('.button-confirmar').prop("disabled", true);
