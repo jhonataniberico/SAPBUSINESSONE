@@ -519,7 +519,7 @@
 						<div class="question">
 		            		<span class="number">05/05</span>
 		            		<div class="question-respuestas">
-		            			<p><span>Perustuen vastauksiisi</span> meillä on tarjota sinulle sopiva ratkaisu.</p>
+		            			<p><span>Perustuen vastauksiisi</span> meill&auml; on tarjota sinulle sopiva ratkaisu.</p>
 		            		</div>
 		            	</div>
 		            	<div class="mdl-solicitud">
@@ -574,16 +574,16 @@
 			            		<div class="mdl-back-respuestas">
 		        					<div class="mdl-back-contenido">
 		        						<span>10,511</span>
-		        						<p>companies in our region use SAP Business One.</p>
-		        						<small>(Samuli Ajo, Global Customer Counting)</small>
+		        						<p>yrityst&auml; alueellamme k&auml;ytt&auml;&auml; SAP Business One'a.</p>
+		        						<small>(Samuli Ajo, Global Customer Accounting)</small>
 		        					</div>
 		        					<div class="mdl-back-contenido second">
 		        						<span>40 a 60%</span>
-		        						<p>reduction in the administrative load of your business.</p>
+		        						<p>v&auml;hemm&auml;n liiketoimintasi hallintaan.</p>
 		        					</div>
 		        					<div class="mdl-back-contenido">
 		        						<span>103</span>
-		        						<p>partners specializing in SAP Business One for our region.</p>
+		        						<p>Alueellamme on SAP Business One'en erikoistunutta kumppania.</p>
 		        						<small>(Vinicius Ricarte, Channel Sales Development)</small>
 		        					</div>
 			            		</div>
@@ -594,7 +594,7 @@
 		            					<p><i class="mdi mdi-arrow_downward"></i>Anna yhteystietosi</p>
 		            				</div>
 		            				<div class="content-separacion">
-		            					<p>or</p>
+		            					<p>tai</p>
 		            				</div>
 		            				<div class="content-linkedin">
 		            					<a class="button-linkedin" href="<?php  echo "https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id={$client_id}&redirect_uri={$redirect_uri}&state={$csrf_token}&scope={$scopes}"; ?>"><i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn-yhteystietosi</a>
@@ -678,8 +678,8 @@
 	            		</div>
 	            	</div>
             		<div class="mdl-agradecimiento">
-            			<h2>Thanks for your interest</h2>
-            			<p>A SAP representative will contact you to help you take the first step.</p>
+            			<h2>Kiitos mielenkiinnostasi</h2>
+            			<p>SAPin edustaja ottaa sinuun yhteyttä sopiaksemme jatkosta.</p>
             		</div>
 				</div>
 				<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect button-arrow button-prev" onclick="buttonQuestion(1)">
@@ -701,7 +701,7 @@
 						<img alt="" src="">
 					</div>
 				    <div class="mdl-card__supporting-text">
-                        <h2>Did you know that...</h2>
+                        <h2>Tiesitk&ouml; ett&auml;...</h2>
                         <p></p>
                         <small></small>
 					</div> 
