@@ -194,13 +194,13 @@ class Fi extends CI_Controller {
        $configGmail = array('protocol'  => 'smtp',
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,
-                            'smtp_user' => 'info@sap-latam.com',
-                            'smtp_pass' => 'sapinfo18',
+                            'smtp_user' => 'info@sapmarketing.net',
+                            'smtp_pass' => 'sapmktinfo18',
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
                             'newline'   => "\r\n");    
        $this->email->initialize($configGmail);
-       $this->email->from('info@sap-latam.com');
+       $this->email->from('info@sapmarketing.net');
        $this->email->to('jhonatanibericom@gmail.com');
        $this->email->subject("Olen kiinnostunut SAP Business One'sta.");
        $texto = '<!DOCTYPE html>
@@ -355,13 +355,13 @@ class Fi extends CI_Controller {
        $configGmail = array('protocol'  => 'smtp',
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,
-                            'smtp_user' => 'info@sap-latam.com',
-                            'smtp_pass' => 'sapinfo18',
+                            'smtp_user' => 'info@sapmarketing.net',
+                            'smtp_pass' => 'sapmktinfo18',
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
                             'newline'   => "\r\n");    
        $this->email->initialize($configGmail);
-       $this->email->from('info@sap-latam.com');
+       $this->email->from('info@sapmarketing.net');
        $this->email->to($email);
        $this->email->subject('Kiitos mielenkiinnostasi SAP Business Onea kohtaan.');
        $texto = '<!DOCTYPE html>
