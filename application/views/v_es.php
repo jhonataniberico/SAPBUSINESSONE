@@ -79,9 +79,9 @@
 								<option value="Portugués">Portugu&ecirc;s</option>
 							</select>
 	    				</div>
-						<div class="background3"></div>
-						<div class="background2"></div>
 						<div class="background1"></div>
+						<div class="background2"></div>
+						<div class="background3"></div>
 	    			</div>
 	    		</div>
 	    		<div class="logo-bottom">
