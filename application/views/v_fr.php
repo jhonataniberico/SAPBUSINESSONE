@@ -238,7 +238,7 @@
 			            			<div class="row">
 			            				<div class="col-xs-12">
 			            					<div class="mdl-select">
-			            						<select class="selectpicker" id="facturacion" name="facturacion" title="Select" onchange="selectFacturacion(this.id)">
+			            						<select class="selectpicker" id="facturacion" name="facturacion" title="Sélectionner" onchange="selectFacturacion(this.id)">
 													<option value="< 1 Million d'Euro">< 1 Million d'Euro</option>
 													<option value="1 -3 Millions d'Euro">1 -3 Millions d'Euro</option>
 													<option value="3 - 5  Millions d'Euro">3 - 5  Millions d'Euro</option>

@@ -358,7 +358,7 @@ function operar(id,tipo){
 		}else if(i == 2){
 			$('#textOperar').text('1 - 50');
 		}else if(i == 1){
-			$('#textOperar').text('Seleccione');
+			$('#textOperar').text('Valitse');
 			divIncrement.removeClass('select-increment');
 			$('.mdl-tablet').find('.mdl-select').removeClass('select-increment');
 			cardSelec.removeClass('aparecer');
@@ -376,7 +376,7 @@ function operar(id,tipo){
 var facturacion = null;
 function selectFacturacion(id){
 	facturacion = $('#facturacion').val();
-	if($('#textOperar') != 'Seleccione' && facturacion != null){
+	if($('#textOperar') != 'Valitse' && facturacion != null){
 		$('.button-next').prop("disabled", false);
 	}
 	$('.contenido').removeClass('aparecer');
@@ -521,7 +521,7 @@ function buttonQuestion(direction){
 				$('.button-next').prop("disabled", true);
 			}
 			pant1 = 1;
-			if(pant2 == 0 || facturacion == null && $('#textOperar').text() == 'Seleccione'){
+			if(pant2 == 0 || facturacion == null && $('#textOperar').text() == 'Valitse'){
 				$('.button-next').prop("disabled", true);
 			}
 		}
@@ -608,7 +608,7 @@ function buttonQuestion(direction){
 			thirdWindow.addClass('animated fadeOutRight');
 			$('.bottom-right').css("display","none");
 			$('#'+id_primero).addClass('button-select');
-			if(facturacion != null && $('#textOperar').text() != 'Seleccione'){
+			if(facturacion != null && $('#textOperar').text() != 'Valitse'){
 				$('.button-next').prop("disabled", false);
 			}
 			if(data_ids_arr == 5){
