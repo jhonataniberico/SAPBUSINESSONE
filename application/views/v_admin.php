@@ -70,6 +70,23 @@
                                 <th class="text-center" style="display: none">Priorité</th>
                                 <th class="text-center" style="display: none">Infrastructure</th>
                             </tr>
+                            <?php } else if($idioma == 'Sueco'){ ?>
+                            <tr class="tr-header-reporte">
+                                <th class="text-center">Asiakas</th>
+                                <th class="text-center">Yritys</th>
+                                <th class="text-center">Sähköposti</th>
+                                <th class="text-center">Puhelin</th>
+                                <th class="text-center">Suhde SAP'iin</th>
+                                <th class="text-center">Lataa</th>
+                                <th class="text-center">Haluan yhteydenottoa</th>
+                                <th class="text-center">Maa</th>
+                                <th class="text-center">Päivämäärä</th>
+                                <th class="text-center" style="display: none">ala</th>
+                                <th class="text-center" style="display: none">koko</th>
+                                <th class="text-center" style="display: none">Vuotuinen lasku</th>
+                                <th class="text-center" style="display: none">prioriteetti</th>
+                                <th class="text-center" style="display: none">infrastruktuuri</th>
+                            </tr>
                             <?php } else { ?>
                             <tr class="tr-header-reporte">
                                 <th class="text-center">Client</th>
@@ -155,18 +172,53 @@
                       }
                   ]
             });
-        <?php } else { ?>
+        <?php } else if($idioma == 'Sueco'){ ?>
+            $('#example').DataTable( {
+              responsive: true,
+              dom: 'Bfrtip',
+              language:{
+                "emptyTable":     "Tietoja ei ole saatavilla",
+                "info" : "Afficher _START_ a _END_ des _TOTAL_ résultats",
+                "infoEmpty":      "Näytetään 0 - 0 tapahtumaa 0:sta",
+                "search": "haku:",
+                "lengthMenu":   "Afficher _MENU_ lignes",
+                "paginate": {
+                    "first":    "Primero",
+                    "last":     "Ultimo",
+                    "next":     "Seuraava",
+                    "previous": "Edellinen"
+                },
+            },
+            lengthMenu: [
+                    //text: 'My button',
+                    [ 10, 25, 50, -1 ],
+                    [ '10 lignes', '25 lignes', '50 lignes', 'Tout voir' ]
+                  ],
+                  buttons: [
+                      {
+                        text: 'Afficher 10 lignes',
+                        extend: 'pageLength'
+                      },
+                      {
+                        extend:'excel'
+                      },
+                      {
+                        extend:'print'
+                      }
+                  ]
+            });
+         <?php } else { ?>
             $('#example').DataTable( {
               responsive: true,
               dom: 'Bfrtip',
               lengthMenu: [
                             //text: 'My button',
                             [ 10, 25, 50, -1 ],
-                            [ '10 lines', '25 lines', '50 lines', 'See everything' ]
+                            [ '10 riviä', '25 riviä', '50 riviä', 'Katso kaikki' ]
                           ],
                           buttons: [
                               {
-                                text: 'Show 10 lines',
+                                text: 'Näytä 10 riviä',
                                 extend: 'pageLength'
                               },
                               {
