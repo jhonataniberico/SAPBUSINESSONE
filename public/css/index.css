@@ -765,11 +765,11 @@ span.number{
 	max-width: 45px;
 }
 .content-card.bottom .contenido-left img{
-	max-width: 40px;
+	max-width: 35px;
 	height: 75px;
 }
 .content-card.bottom .contenido-right{
-	width: calc(100% - 40px);
+	width: calc(100% - 35px);
 }
 .content-card .contenido-right{
 	width: calc(100% - 53px);
