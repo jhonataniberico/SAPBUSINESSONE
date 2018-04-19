@@ -759,7 +759,7 @@ span.number{
 }
 .content-card.bottom .contenido-left{
 	vertical-align: bottom;
-	width: 35px;
+	width: 30px;
 }
 .content-card .contenido-left img{
 	max-width: 45px;
@@ -1371,6 +1371,9 @@ span.number{
 		font-size: 25px;
     	line-height: 24px;
 	    max-width: 650px;
+	}
+	.dnone{
+		display: none !important;
 	}
 }
 @media (max-width: 1200px){
