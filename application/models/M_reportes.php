@@ -3,7 +3,6 @@ class M_reportes extends  CI_Model{
     function __construct(){
         parent::__construct();
     }
-
     function getDatosTabla(){
         $sql = "SELECT s.*,
 					   u.nombre_completo,
@@ -21,7 +20,6 @@ class M_reportes extends  CI_Model{
         $result = $this->db->query($sql, array());
         return $result->result();
     }
-
     function getDatosTablaIdioma($idioma){
       $sql = "SELECT s.*,
              u.nombre_completo,
