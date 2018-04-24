@@ -338,7 +338,7 @@ class Pt extends CI_Controller {
                 </table>
               </body>
               </html>';
-        $this->email->message($texto);//AQUI SE INSERTA EL HTML
+        $this->email->message($texto);
         $this->email->send();
         $this->session->unset_userdata('id_persona');
         $data['error'] = EXIT_SUCCESS;
