@@ -340,7 +340,6 @@ class Pt extends CI_Controller {
               </html>';
         $this->email->message($texto);
         $this->email->send();
-        $this->session->unset_userdata('id_persona');
         $data['error'] = EXIT_SUCCESS;
       }catch (Exception $e){
         $data['msj'] = $e->getMessage();
