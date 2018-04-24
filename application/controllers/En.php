@@ -47,7 +47,6 @@ class En extends CI_Controller {
     $data['nombre_linke']  = $this->session->userdata('emailAddress');
     $this->load->view('v_en', $data);
   }
-
   function Savedatos(){
     $data['error'] = EXIT_ERROR;
     $data['msj']   = null;
@@ -94,7 +93,6 @@ class En extends CI_Controller {
     }
     echo json_encode($data);
   }
-
   function mostrarDatos(){
     $data['error'] = EXIT_ERROR;
     $data['msj']   = null;
@@ -121,7 +119,6 @@ class En extends CI_Controller {
     }
     echo json_encode($data);
   }
-
   function solicitarEstimacion() {
     $data['error']  = EXIT_ERROR;
     $data['msj']    = null;
@@ -180,7 +177,6 @@ class En extends CI_Controller {
     }
     echo json_encode($data);
   }
-
   function sendGmailSap($email) {
     $data['error'] = EXIT_ERROR;
     $data['msj']   = null;
@@ -350,7 +346,6 @@ class En extends CI_Controller {
     }
     return json_encode(array_map('utf8_encode', $data));
     }
-
   function emailClienteSap($email){
     $data['error'] = EXIT_ERROR;
     $data['msj']   = null;
