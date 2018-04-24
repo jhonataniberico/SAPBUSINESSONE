@@ -47,306 +47,302 @@ class Pt extends CI_Controller {
     $data['nombre_linke']  = $this->session->userdata('emailAddress');
     $this->load->view('v_pt', $data);
   }
-
   function Savedatos(){
-        $data['error'] = EXIT_ERROR;
-        $data['msj']   = null;
-        try {
-            $this->session->unset_userdata('Infraestructura');
-            $datos       = $this->input->post('global_datos');
-            $pantalla    = $this->input->post('pantalla');
-            $idioma      = $this->input->post('idioma');
-            $datos_prio  = $this->input->post('datos_prio');
-            $operar      = $this->input->post('operar');
-            $facturacion = $this->input->post('facturacion');
-            $columna     = null;
-            if($pantalla == 2) {$columna = 'Factura_anual';} elseif ($pantalla == 3) {$columna = 'Prioridad';}elseif ($pantalla == 4) {$columna = 'Infraestructura';}
-            if($pantalla == 1){
-              $idIdioma    = $this->M_solicitud->getDatosPais($idioma);
-              $arrayInsert = array('Industria'   => $datos,
-                                   'Id_lenguaje' => $idIdioma);
-              $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
-              $session    = array('industria' => $datos,
-                                  'id_sol'    => $datoInsert['Id'],
-                                  'idioma'    => $idioma);
-              $this->session->set_userdata($session);
-            }else {
-              if($pantalla == 2){
-                $arrayUpdate = array($columna  => $facturacion,
-                                     'Tamanio' => $operar);
-                $session     = array($columna  => $facturacion,
-                                     'Tamanio' => $operar);
-              }else {
-                if($pantalla == 3){
-                  $arrayUpdate = array($columna => $datos_prio);
-                  $session     = array($columna => $datos_prio);
-                }else if($pantalla == 4){
-                  $arrayUpdate = array($columna          => $datos);
-                  $session     = array('Infraestructura' => $datos);
-                }
-              }
-              $this->M_solicitud->updateDatos($arrayUpdate, $_SESSION['id_sol'], 'solicitud', 'Id');
-              $this->session->set_userdata($session);
-            }
-            $data['error'] = EXIT_SUCCESS;
-          }catch(Exception $e){
-           $data['msj'] = $e->getMessage();
-        }
-        echo json_encode($data);
-  }
-
-  function mostrarDatos(){
-        $data['error'] = EXIT_ERROR;
-        $data['msj']   = null;
-        try {
-          $ids_array   = $this->input->post('array_ids');
-          $array_3pant = $this->input->post('array_3pant');
-          $explode = explode(",", $this->session->userdata('Prioridad'));
-          $html    = '';
-          foreach ($explode as $key) {
-            $html .= '<li>'.$key.'</li>';
-          }
-          $session = array('ids_array'   => $ids_array,
-                           'array_3pant' => $array_3pant);
+    $data['error'] = EXIT_ERROR;
+    $data['msj']   = null;
+    try {
+        $this->session->unset_userdata('Infraestructura');
+        $datos       = $this->input->post('global_datos');
+        $pantalla    = $this->input->post('pantalla');
+        $idioma      = $this->input->post('idioma');
+        $datos_prio  = $this->input->post('datos_prio');
+        $operar      = $this->input->post('operar');
+        $facturacion = $this->input->post('facturacion');
+        $columna     = null;
+        if($pantalla == 2) {$columna = 'Factura_anual';} elseif ($pantalla == 3) {$columna = 'Prioridad';}elseif ($pantalla == 4) {$columna = 'Infraestructura';}
+        if($pantalla == 1){
+          $idIdioma    = $this->M_solicitud->getDatosPais($idioma);
+          $arrayInsert = array('Industria'   => $datos,
+                               'Id_lenguaje' => $idIdioma);
+          $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
+          $session    = array('industria' => $datos,
+                              'id_sol'    => $datoInsert['Id'],
+                              'idioma'    => $idioma);
           $this->session->set_userdata($session);
-          $tamanio = $this->session->userdata('Tamanio') == null ? '-' : $this->session->userdata('Tamanio').' Funcionários';
-          $data['Industria']       = $this->session->userdata('industria') == null ? '-' : $this->session->userdata('industria');
-          $data['Factura_anual']   = $this->session->userdata('Factura_anual') == null ? '-' : $this->session->userdata('Factura_anual');
-          $data['Tamanio']         = $tamanio;
-          $data['Prioridad']       = $html;
-          $data['Infraestructura'] = $this->session->userdata('Infraestructura') == null ? '-' : $this->session->userdata('Infraestructura');
-          $data['error']           = EXIT_SUCCESS;
-        } catch (Exception $e){
-            $data['msj'] = $e->getMessage();
+        }else {
+          if($pantalla == 2){
+            $arrayUpdate = array($columna  => $facturacion,
+                                 'Tamanio' => $operar);
+            $session     = array($columna  => $facturacion,
+                                 'Tamanio' => $operar);
+          }else {
+            if($pantalla == 3){
+              $arrayUpdate = array($columna => $datos_prio);
+              $session     = array($columna => $datos_prio);
+            }else if($pantalla == 4){
+              $arrayUpdate = array($columna          => $datos);
+              $session     = array('Infraestructura' => $datos);
+            }
+          }
+          $this->M_solicitud->updateDatos($arrayUpdate, $_SESSION['id_sol'], 'solicitud', 'Id');
+          $this->session->set_userdata($session);
         }
-        echo json_encode($data);
+        $data['error'] = EXIT_SUCCESS;
+      }catch(Exception $e){
+       $data['msj'] = $e->getMessage();
+    }
+    echo json_encode($data);
   }
-
+  function mostrarDatos(){
+    $data['error'] = EXIT_ERROR;
+    $data['msj']   = null;
+    try {
+      $ids_array   = $this->input->post('array_ids');
+      $array_3pant = $this->input->post('array_3pant');
+      $explode = explode(",", $this->session->userdata('Prioridad'));
+      $html    = '';
+      foreach ($explode as $key) {
+        $html .= '<li>'.$key.'</li>';
+      }
+      $session = array('ids_array'   => $ids_array,
+                       'array_3pant' => $array_3pant);
+      $this->session->set_userdata($session);
+      $tamanio = $this->session->userdata('Tamanio') == null ? '-' : $this->session->userdata('Tamanio').' Funcionários';
+      $data['Industria']       = $this->session->userdata('industria') == null ? '-' : $this->session->userdata('industria');
+      $data['Factura_anual']   = $this->session->userdata('Factura_anual') == null ? '-' : $this->session->userdata('Factura_anual');
+      $data['Tamanio']         = $tamanio;
+      $data['Prioridad']       = $html;
+      $data['Infraestructura'] = $this->session->userdata('Infraestructura') == null ? '-' : $this->session->userdata('Infraestructura');
+      $data['error']           = EXIT_SUCCESS;
+    } catch (Exception $e){
+        $data['msj'] = $e->getMessage();
+    }
+    echo json_encode($data);
+  }
   function solicitarEstimacion(){
-        $data['error']  = EXIT_ERROR;
-        $data['msj']    = null;
-        try {
-            $nombre_completo = $this->input->post('nombre_completo');
-            $empresa         = $this->input->post('empresa');
-            $email           = $this->input->post('email');
-            $pais            = $this->input->post('pais');
-            $cargo           = $this->input->post('cargo');
-            $telefono        = $this->input->post('telefono');
-            $relacion        = $this->input->post('relacion');
-            $contacto        = $this->input->post('contacto');
-            $term_cond       = $this->input->post('term_cond');
-            $arrayInsert = array('nombre_completo' => $nombre_completo,
-                                 'Empresa'         => $empresa,
-                                 'Email'           => $email,
-                                 'Pais'            => $pais,
-                                 'Cargo'           => $cargo,
-                                 'Telefono'        => $telefono,
-                                 'Terminos'        => $term_cond,
-                                 'Relacion'        => $relacion,
-                                 'Contactado'      => $contacto,
-                                 'Id_solicitud'    => $_SESSION['id_sol'],
-                                 'fecha_sol'       => date('Y-m-d H:i:s'));
-            $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'usuario');
-            $session    = array('nombre_completo' => $nombre_completo,
-                                'Empresa'         => $empresa,
-                                'Email'           => $email,
-                                'Pais'            => $pais,
-                                'Cargo'           => $cargo,
-                                'Telefono'        => $telefono,
-                                'Relacion'        => $relacion,
-                                'Contacto'        => $contacto,
-                                'pantalla'        => 0,
-                                'id_persona'      => $datoInsert['Id']);
-            $this->session->set_userdata($session);
-            $this->session->unset_userdata('nombre_linke');
-            $this->session->unset_userdata('email_linke');
-            $this->session->unset_userdata('universidad');
-            $this->session->unset_userdata('pais_linke');
-            $this->session->unset_userdata('titulo');
-            $this->session->unset_userdata('compania');
-            $this->session->unset_userdata('Industria');
-            $this->session->unset_userdata('Infraestructura');
-            $this->session->unset_userdata('Factura_anual');
-            $this->session->unset_userdata('Tamanio');
-            $this->session->unset_userdata('Prioridad');
-            $this->session->unset_userdata('idioma');
-          //ENVÍO DE EMAILS
-          //$this->sendGmailSap($email);
-          //$this->emailClienteSap($email, $datoInsert['Id']);
-          //$this->emailPartner();
-          $data['msj']  = $datoInsert['msj'];
-          $data['error'] = $datoInsert['error'];
-        } catch (Exception $e){
-            $data['msj'] = $e->getMessage();
-        }
-        echo json_encode($data);
+    $data['error']  = EXIT_ERROR;
+    $data['msj']    = null;
+    try {
+        $nombre_completo = $this->input->post('nombre_completo');
+        $empresa         = $this->input->post('empresa');
+        $email           = $this->input->post('email');
+        $pais            = $this->input->post('pais');
+        $cargo           = $this->input->post('cargo');
+        $telefono        = $this->input->post('telefono');
+        $relacion        = $this->input->post('relacion');
+        $contacto        = $this->input->post('contacto');
+        $term_cond       = $this->input->post('term_cond');
+        $arrayInsert = array('nombre_completo' => $nombre_completo,
+                             'Empresa'         => $empresa,
+                             'Email'           => $email,
+                             'Pais'            => $pais,
+                             'Cargo'           => $cargo,
+                             'Telefono'        => $telefono,
+                             'Terminos'        => $term_cond,
+                             'Relacion'        => $relacion,
+                             'Contactado'      => $contacto,
+                             'Id_solicitud'    => $_SESSION['id_sol'],
+                             'fecha_sol'       => date('Y-m-d H:i:s'));
+        $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'usuario');
+        $session    = array('nombre_completo' => $nombre_completo,
+                            'Empresa'         => $empresa,
+                            'Email'           => $email,
+                            'Pais'            => $pais,
+                            'Cargo'           => $cargo,
+                            'Telefono'        => $telefono,
+                            'Relacion'        => $relacion,
+                            'Contacto'        => $contacto,
+                            'pantalla'        => 0,
+                            'id_persona'      => $datoInsert['Id']);
+        $this->session->set_userdata($session);
+        $this->session->unset_userdata('nombre_linke');
+        $this->session->unset_userdata('email_linke');
+        $this->session->unset_userdata('universidad');
+        $this->session->unset_userdata('pais_linke');
+        $this->session->unset_userdata('titulo');
+        $this->session->unset_userdata('compania');
+        $this->session->unset_userdata('Industria');
+        $this->session->unset_userdata('Infraestructura');
+        $this->session->unset_userdata('Factura_anual');
+        $this->session->unset_userdata('Tamanio');
+        $this->session->unset_userdata('Prioridad');
+        $this->session->unset_userdata('idioma');
+      //ENVÍO DE EMAILS
+      //$this->sendGmailSap($email);
+      //$this->emailClienteSap($email, $datoInsert['Id']);
+      //$this->emailPartner();
+      $data['msj']  = $datoInsert['msj'];
+      $data['error'] = $datoInsert['error'];
+    } catch (Exception $e){
+        $data['msj'] = $e->getMessage();
+    }
+    echo json_encode($data);
   }
-
   //EMAIL SAP
   function sendGmailSap($email){
-      $data['error'] = EXIT_ERROR;
-      $data['msj']   = null;
-      try {  
-        if($_SESSION['Contacto'] == 3){
-          $contact = 'Por e-mail e telefone';
-        }else if($_SESSION['Contacto'] == 2){
-          $contact = 'Por telefone';
-        }else if($_SESSION['Contacto'] == 1){
-          $contact = 'Por e-mail';
-        }
-        $respuestas = $this->M_solicitud->getRespUsuario($_SESSION['id_persona']);
-       // cargamos la libreria email de ci
-       $this->load->library("email");
-       //configuracion para gmail
-       $configGmail = array('protocol'  => 'smtp',
-                            'smtp_host' => 'smtpout.secureserver.net',
-                            'smtp_port' => 3535,
-                            'smtp_user' => 'info@sap-latam.com',
-                            'smtp_pass' => 'sapinfo18',
-                            'mailtype'  => 'html',
-                            'charset'   => 'utf-8',
-                            'newline'   => "\r\n");    
-       //cargamos la configuración para enviar con gmail
-       $this->email->initialize($configGmail);
-       $this->email->from('info@sap-latam.com');
-       $this->email->to('jminaya@brainblue.com');//EMAIL AL QUIÉN IRÁ DIRIGIDO alejandra.cuellar@sap.com
-       $this->email->subject('Estou interessado no SAP Business One para o minha empresa.');
-       //CONSTRUIMOS EL HTML
-          $texto = '<!DOCTYPE html>
-                  <html>
-                  <head>
-                    <title></title>
-                  </head>
-                  <body style="font-family: "Open Sans",Arial,Helvetica,sans-serif;">
-                    <table align="center" cellspacing="0" cellpadding="0" border="0" style="max-width: 500px; width: 100%; margin: auto;border: 1px solid #757575;">
-                      <tr>
-                        <th>
-                          <table cellspacing="0" cellpadding="0" border="0" style="background-color: #000000;">
-                            <tbody>
-                              <tr>
-                                <th style="width: 425px;text-align: left;padding-left: 20px;">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr style="text-align: left;">
-                                        <th style="text-align: left;"><img width="150" src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_header.png"></th>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </th>
-                                <th style="width: 75px;">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td style="height: 100px;width: 25px;background-color: #54442E;"></td>
-                                        <td style="height: 100px;width: 25px;background-color: #8D6832;"></td>
-                                        <td style="height: 100px;width: 25px;background-color: #E29D2E;"></td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </th>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </th>
-                      </tr>
-                      <tr>
-                        <td>
-                          <table style="width: 100%;padding: 10px;">
-                            <tbody>
-                              <tr style="padding: 25px;margin: 30px;">
-                                <td style="text-align: center;padding: 10px 0;"><font style="font-weight: bold;font-size: 20px;">Dados do cliente</font></td>
-                              </tr>
-                              <tr>
-                                <table style="padding: 20px;" cellspacing="0" cellpadding="0" border="0">
+    $data['error'] = EXIT_ERROR;
+    $data['msj']   = null;
+    try {  
+      if($_SESSION['Contacto'] == 3){
+        $contact = 'Por e-mail e telefone';
+      }else if($_SESSION['Contacto'] == 2){
+        $contact = 'Por telefone';
+      }else if($_SESSION['Contacto'] == 1){
+        $contact = 'Por e-mail';
+      }
+      $respuestas = $this->M_solicitud->getRespUsuario($_SESSION['id_persona']);
+     // cargamos la libreria email de ci
+     $this->load->library("email");
+     //configuracion para gmail
+     $configGmail = array('protocol'  => 'smtp',
+                          'smtp_host' => 'smtpout.secureserver.net',
+                          'smtp_port' => 3535,
+                          'smtp_user' => 'info@sap-latam.com',
+                          'smtp_pass' => 'sapinfo18',
+                          'mailtype'  => 'html',
+                          'charset'   => 'utf-8',
+                          'newline'   => "\r\n");    
+     //cargamos la configuración para enviar con gmail
+     $this->email->initialize($configGmail);
+     $this->email->from('info@sap-latam.com');
+     $this->email->to('jminaya@brainblue.com');//EMAIL AL QUIÉN IRÁ DIRIGIDO alejandra.cuellar@sap.com
+     $this->email->subject('Estou interessado no SAP Business One para o minha empresa.');
+     //CONSTRUIMOS EL HTML
+        $texto = '<!DOCTYPE html>
+                <html>
+                <head>
+                  <title></title>
+                </head>
+                <body style="font-family: "Open Sans",Arial,Helvetica,sans-serif;">
+                  <table align="center" cellspacing="0" cellpadding="0" border="0" style="max-width: 500px; width: 100%; margin: auto;border: 1px solid #757575;">
+                    <tr>
+                      <th>
+                        <table cellspacing="0" cellpadding="0" border="0" style="background-color: #000000;">
+                          <tbody>
+                            <tr>
+                              <th style="width: 425px;text-align: left;padding-left: 20px;">
+                                <table cellspacing="0" cellpadding="0" border="0">
                                   <tbody>
-                                    <tr style="padding: 0 20px;">
-                                      <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Cliente:</font></td>
-                                      <td><font style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['nombre_completo'].'</font></td>
-                                    </tr>
-                                    <tr style="padding: 0 20px;">
-                                      <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Cargo:</font></td>
-                                      <td><font  style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Cargo'].'</font></td>
-                                    </tr>
-                                    <tr style="padding: 0 20px;">
-                                      <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Empresa:</font></td>
-                                      <td><font style="font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Empresa'].'</font></td>
-                                    </tr>
-                                    <tr style="padding: 0 20px;">
-                                      <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Telefone:</font></td>
-                                      <td><font style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Telefono'].'</font></td>
-                                    </tr>
-                                    <tr style="padding: 0 20px;">
-                                      <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Email:</font></td>
-                                      <td><font style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Email'].'</font></td>
-                                    </tr>
-                                    <tr style="padding: 0 20px;">
-                                      <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Relacionamento com SAP:</font></td>
-                                      <td><font style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Relacion'].'</font></td>
-                                    </tr>
-                                    <tr style="padding: 0 20px;">
-                                      <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Pa&iacute;s:</font></td>
-                                      <td><font style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Pais'].'</font></td>
-                                    </tr>
-                                    <tr style="padding: 0 20px;">
-                                      <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Quero ser contatado:</font></td>
-                                      <td><font style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$contact.'</font></td>
+                                    <tr style="text-align: left;">
+                                      <th style="text-align: left;"><img width="150" src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_header.png"></th>
                                     </tr>
                                   </tbody>
                                 </table>
-                              </tr>
-                              <tr style="padding: 25px;margin: 30px;">
-                                <td style="text-align: center;"><font style="font-weight: bold;font-size: 20px;">Respostas</font></td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <table style="width: 100%;padding: 20px;" cellspacing="0" cellpadding="0">
-                                    <tbody>
-                                      <tr style="padding: 5px 20px;">
-                                        <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/1.jpg"></td>
-                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Em que setor você atua?</font></td>
-                                      </tr>
-                                      <tr style="padding: 5px 20px;">
-                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Industria.'</font></td>
-                                      </tr>
-                                      <tr style="padding: 5px 20px;">
-                                        <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/2.jpg"></td>
-                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Qual o tamanho da sua empresa?</font></td>
-                                      </tr>
-                                      <tr style="padding: 5px 20px;">
-                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Tamanio.' empregados</font></td>
-                                      </tr>
-                                      <tr style="padding: 5px 20px;">
-                                        <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/3.jpg"></td>
-                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Sua cobrança</font></td>
-                                      </tr>
-                                      <tr style="padding: 5px 20px;">
-                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Factura_anual.'</font></td>
-                                      </tr>
-                                      <tr style="padding: 5px 20px;">
-                                        <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/4.jpg"></td>
-                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Qual é a prioridade da sua empresa?</font></td>
-                                      </tr>
-                                      <tr style="padding: 5px 20px;">
-                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Prioridad.'</font></td>
-                                      </tr>
-                                      <tr style="padding: 5px 20px;">
-                                        <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/5.jpg"></td>
-                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Que tipo de infraestrutura você está procurando?</font></td>
-                                      </tr>
-                                      <tr style="padding: 5px 20px;">
-                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Infraestructura.'</font></td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </body>
-                  </html>';
+                              </th>
+                              <th style="width: 75px;">
+                                <table cellspacing="0" cellpadding="0" border="0">
+                                  <tbody>
+                                    <tr>
+                                      <td style="height: 100px;width: 25px;background-color: #54442E;"></td>
+                                      <td style="height: 100px;width: 25px;background-color: #8D6832;"></td>
+                                      <td style="height: 100px;width: 25px;background-color: #E29D2E;"></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </th>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <table style="width: 100%;padding: 10px;">
+                          <tbody>
+                            <tr style="padding: 25px;margin: 30px;">
+                              <td style="text-align: center;padding: 10px 0;"><font style="font-weight: bold;font-size: 20px;">Dados do cliente</font></td>
+                            </tr>
+                            <tr>
+                              <table style="padding: 20px;" cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                  <tr style="padding: 0 20px;">
+                                    <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Cliente:</font></td>
+                                    <td><font style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['nombre_completo'].'</font></td>
+                                  </tr>
+                                  <tr style="padding: 0 20px;">
+                                    <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Cargo:</font></td>
+                                    <td><font  style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Cargo'].'</font></td>
+                                  </tr>
+                                  <tr style="padding: 0 20px;">
+                                    <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Empresa:</font></td>
+                                    <td><font style="font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Empresa'].'</font></td>
+                                  </tr>
+                                  <tr style="padding: 0 20px;">
+                                    <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Telefone:</font></td>
+                                    <td><font style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Telefono'].'</font></td>
+                                  </tr>
+                                  <tr style="padding: 0 20px;">
+                                    <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Email:</font></td>
+                                    <td><font style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Email'].'</font></td>
+                                  </tr>
+                                  <tr style="padding: 0 20px;">
+                                    <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Relacionamento com SAP:</font></td>
+                                    <td><font style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Relacion'].'</font></td>
+                                  </tr>
+                                  <tr style="padding: 0 20px;">
+                                    <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Pa&iacute;s:</font></td>
+                                    <td><font style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Pais'].'</font></td>
+                                  </tr>
+                                  <tr style="padding: 0 20px;">
+                                    <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Quero ser contatado:</font></td>
+                                    <td><font style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$contact.'</font></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </tr>
+                            <tr style="padding: 25px;margin: 30px;">
+                              <td style="text-align: center;"><font style="font-weight: bold;font-size: 20px;">Respostas</font></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <table style="width: 100%;padding: 20px;" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr style="padding: 5px 20px;">
+                                      <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/1.jpg"></td>
+                                      <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Em que setor você atua?</font></td>
+                                    </tr>
+                                    <tr style="padding: 5px 20px;">
+                                      <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Industria.'</font></td>
+                                    </tr>
+                                    <tr style="padding: 5px 20px;">
+                                      <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/2.jpg"></td>
+                                      <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Qual o tamanho da sua empresa?</font></td>
+                                    </tr>
+                                    <tr style="padding: 5px 20px;">
+                                      <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Tamanio.' empregados</font></td>
+                                    </tr>
+                                    <tr style="padding: 5px 20px;">
+                                      <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/3.jpg"></td>
+                                      <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Sua cobrança</font></td>
+                                    </tr>
+                                    <tr style="padding: 5px 20px;">
+                                      <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Factura_anual.'</font></td>
+                                    </tr>
+                                    <tr style="padding: 5px 20px;">
+                                      <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/4.jpg"></td>
+                                      <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Qual é a prioridade da sua empresa?</font></td>
+                                    </tr>
+                                    <tr style="padding: 5px 20px;">
+                                      <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Prioridad.'</font></td>
+                                    </tr>
+                                    <tr style="padding: 5px 20px;">
+                                      <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/5.jpg"></td>
+                                      <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Que tipo de infraestrutura você está procurando?</font></td>
+                                    </tr>
+                                    <tr style="padding: 5px 20px;">
+                                      <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Infraestructura.'</font></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </body>
+                </html>';
         $this->email->message($texto);//AQUI SE INSERTA EL HTML
         $this->email->send();
         $this->session->unset_userdata('id_persona');
@@ -356,7 +352,6 @@ class Pt extends CI_Controller {
       }
       return json_encode(array_map('utf8_encode', $data));
     }
-
     function emailClienteSap($email, $id_pers){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
@@ -517,7 +512,6 @@ class Pt extends CI_Controller {
       }
       return json_encode(array_map('utf8_encode', $data));
     }
-
     function EditQuestion(){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
@@ -531,7 +525,6 @@ class Pt extends CI_Controller {
       }
       echo json_encode($data);
     }
-
     function ConfirmarRespuestas(){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
@@ -545,7 +538,6 @@ class Pt extends CI_Controller {
       }
       echo json_encode($data);
   }
-
   function cambiarIdioma(){
     $data['error'] = EXIT_ERROR;
     $data['msj']   = null;
@@ -559,7 +551,6 @@ class Pt extends CI_Controller {
       }
       echo json_encode($data);
   }
-
   function emailPartner() {
     $data['error'] = EXIT_ERROR;
     $data['msj']   = null;
