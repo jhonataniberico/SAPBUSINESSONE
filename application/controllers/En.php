@@ -548,13 +548,12 @@ class En extends CI_Controller {
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
                             'newline'   => "\r\n");    
-      //cargamos la configuración para enviar con gmail
       $this->email->initialize($configGmail);
       $this->email->from('info@sap-latam.com');
-      $this->email->to('email_partner@gmail.com');//EMAIL AL QUIÉN IRÁ DIRIGIDO
+      $this->email->to('email_partner@gmail.com');
       $this->email->subject('Estoy interesado en SAP Business One para mi negocio.');
       $texto = 'html del partner';
-      $this->email->message($texto);//AQUI SE INSERTA EL HTML
+      $this->email->message($texto);
       $this->email->send();
       $data['error'] = EXIT_SUCCESS;
     }catch(Exception $e){
