@@ -733,5 +733,19 @@ function resizeContent(){
 }
 function returnHome(){
 	global_datos = null;
-	location.href = 'fi';
+	$.ajax({
+		url  : 'fi/returnHome',
+		type : 'POST'
+	}).done(function(data){
+		try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+        	location.href = 'fi';
+        }else{
+        	return;
+        }
+      } catch (err){
+        msj('error',err.message);
+      }
+	});
 }

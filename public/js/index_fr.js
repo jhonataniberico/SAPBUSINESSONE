@@ -733,5 +733,19 @@ function resizeContent(){
 }
 function returnHome(){
 	global_datos = null;
-	location.href = 'fr';
+	$.ajax({
+		url  : 'fr/returnHome',
+		type : 'POST'
+	}).done(function(data){
+		try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+        	location.href = 'fr';
+        }else{
+        	return;
+        }
+      } catch (err){
+        msj('error',err.message);
+      }
+	});
 }

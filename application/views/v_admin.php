@@ -41,8 +41,10 @@
                 <div class="header-right admin">
                     <?php if($idioma == 'Francés'){ ?>
                     <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect admin-logout m-r-25" onclick="cerrarCesion()">Se déconnecter</a>
+                    <?php } else if($idioma == 'Sueco'){ ?>
+                    <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect admin-logout m-r-25" onclick="cerrarCesion()">kirjautua ulos</a>
                     <?php } else { ?>
-                    <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect admin-logout m-r-25" onclick="cerrarCesion()">Logout</a>
+                     <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect admin-logout m-r-25" onclick="cerrarCesion()">Logout</a>
                     <?php } ?>
                     <div class="background3"></div>
                     <div class="background2"></div>

@@ -566,4 +566,16 @@ class En extends CI_Controller {
       $data['msj'] = $e->getMessage();
     }
   }
+  function returnHome(){
+    $data['error'] = EXIT_ERROR;
+    $data['msj'] = null;
+    try {
+      $session = array('pantalla' => 0);
+      $this->session->set_userdata($session);
+      $data['error'] = EXIT_SUCCESS;
+    }catch(Exception $e) {
+      $data['msj'] = $e->getMessage();
+    }
+    echo json_encode($data);
+  }
 }

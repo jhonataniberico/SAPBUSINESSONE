@@ -784,5 +784,19 @@ function resizeContent(){
 }
 function returnHome(){
 	global_datos = null;
-	location.href = 'es';
+	$.ajax({
+		url  : 'es/returnHome',
+		type : 'POST'
+	}).done(function(data){
+		try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+        	location.href = 'es';
+        }else{
+        	return;
+        }
+      } catch (err){
+        msj('error',err.message);
+      }
+	});
 }
