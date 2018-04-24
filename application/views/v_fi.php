@@ -174,7 +174,7 @@
 			        	<div class="mdl-card-question">
 			        		<div class="flip-card">
 			        			<div class="card-front card-front-none">
-			        				<img src="<?php echo RUTA_IMG?>cards/card-proceso.png">
+			        				<img class="m-b-0" src="<?php echo RUTA_IMG?>cards/card-proceso.png">
 			        				<p>Prosessi/valmistava teollisuus</p>
 			        			</div>
 			        		</div>

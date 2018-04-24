@@ -642,7 +642,7 @@
 		        				</div>
 		        				<div class="col-sm-6">
 		        					<div class="mdl-input">
-										<input type="text" class="form-control" id="pais" maxlength="100" onkeypress="return soloLetras(event);"  onchange="validarCampos()" placeholder="Country">
+										<input type="text" class="form-control" id="pais" maxlength="100" onkeypress="return soloLetras(event);"  onchange="validarCampos()" placeholder="Pays">
 									</div>
 		        				</div>
 		        				<div class="col-sm-6">
