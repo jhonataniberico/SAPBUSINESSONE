@@ -170,8 +170,8 @@ class Es extends CI_Controller {
             $this->session->unset_userdata('Tamanio');
             $this->session->unset_userdata('Prioridad');
             $this->session->unset_userdata('idioma');
-          //$this->sendGmailSap($email);
-          //$this->emailClienteSap($email);
+          $this->sendGmailSap($email);
+          $this->emailClienteSap($email);
           //$this->emailPartner();
           $data['msj']  = $datoInsert['msj'];
           $data['error'] = $datoInsert['error'];
@@ -198,13 +198,13 @@ class Es extends CI_Controller {
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,
                             'smtp_user' => 'info@sap-latam.com',
-                            'smtp_pass' => 'sapinfo18',
+                            'smtp_pass' => 'sapinfo18#',
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
                             'newline'   => "\r\n");
        $this->email->initialize($configGmail);
        $this->email->from('info@sap-latam.com');
-       $this->email->to('jminaya@brainblue.com');
+       $this->email->to('jhonatanibericom@brainblue.com');
        $this->email->subject('Estoy interesado en SAP Business One para mi negocio.');
         $texto = '<!DOCTYPE html>
                   <html>
