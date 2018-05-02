@@ -14,16 +14,14 @@
     <link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/logo_favicon.png">
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
-    <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.css?v=<?php echo time();?>">
+    <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap/css/bootstrap.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>roboto.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
-    <link rel="stylesheet"    href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-    <link rel="stylesheet"    href="https://cdn.datatables.net/autofill/2.2.2/css/autoFill.dataTables.min.css">
-    <link rel="stylesheet"    href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css">
-    <link rel="stylesheet"    href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css">
+    <link rel="stylesheet"    href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet"    href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.bootstrap.min.css">
     <link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
     <style type="text/css">
         body{
@@ -46,26 +44,26 @@
                     <?php } else { ?>
                      <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect admin-logout m-r-25" onclick="cerrarCesion()">Logout</a>
                     <?php } ?>
-                    <div class="background3"></div>
-                    <div class="background2"></div>
                     <div class="background1"></div>
+                    <div class="background2"></div>
+                    <div class="background3"></div>
                 </div>
             </div>
             <div class="mdl-card mdl-card-table contenido-admin">
                 <div class="table-responsive">
-                    <table id="example" class="display nowrap table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
+                    <table id="example" class="table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
                         <thead>
                             <?php if($idioma == 'Francés'){ ?>
                             <tr class="tr-header-reporte">
-                                <th class="text-center">Client</th>
-                                <th class="text-center">Société</th>
-                                <th class="text-center">E-mail</th>
-                                <th class="text-center">Téléphone</th>
-                                <th class="text-center">Relation avec SAP</th>
-                                <th class="text-center">Position</th>
-                                <th class="text-center">Je veux être contacté</th>
-                                <th class="text-center">Pays</th>
-                                <th class="text-center">Date</th>
+                                <th class="text-left">Client</th>
+                                <th class="text-left">Société</th>
+                                <th class="text-left">E-mail</th>
+                                <th class="text-left">Téléphone</th>
+                                <th class="text-left">Relation avec SAP</th>
+                                <th class="text-left">Position</th>
+                                <th class="text-left">Je veux être contacté</th>
+                                <th class="text-left">Pays</th>
+                                <th class="text-left">Date</th>
                                 <th class="text-center" style="display: none">Industrie</th>
                                 <th class="text-center" style="display: none">Taille</th>
                                 <th class="text-center" style="display: none">Facture annuelle</th>
@@ -74,15 +72,15 @@
                             </tr>
                             <?php } else if($idioma == 'Sueco'){ ?>
                             <tr class="tr-header-reporte">
-                                <th class="text-center">Asiakas</th>
-                                <th class="text-center">Yritys</th>
-                                <th class="text-center">Sähköposti</th>
-                                <th class="text-center">Puhelin</th>
-                                <th class="text-center">Suhde SAP'iin</th>
-                                <th class="text-center">Lataa</th>
-                                <th class="text-center">Haluan yhteydenottoa</th>
-                                <th class="text-center">Maa</th>
-                                <th class="text-center">Päivämäärä</th>
+                                <th class="text-left">Asiakas</th>
+                                <th class="text-left">Yritys</th>
+                                <th class="text-left">Sähköposti</th>
+                                <th class="text-left">Puhelin</th>
+                                <th class="text-left">Suhde SAP'iin</th>
+                                <th class="text-left">Lataa</th>
+                                <th class="text-left">Haluan yhteydenottoa</th>
+                                <th class="text-left">Maa</th>
+                                <th class="text-left">Päivämäärä</th>
                                 <th class="text-center" style="display: none">ala</th>
                                 <th class="text-center" style="display: none">koko</th>
                                 <th class="text-center" style="display: none">Vuotuinen lasku</th>
@@ -91,15 +89,15 @@
                             </tr>
                             <?php } else { ?>
                             <tr class="tr-header-reporte">
-                                <th class="text-center">Client</th>
-                                <th class="text-center">Company</th>
-                                <th class="text-center">E-mail</th>
-                                <th class="text-center">Phone</th>
-                                <th class="text-center">Relationship</th>
-                                <th class="text-center">Position</th>
-                                <th class="text-center">Contacted</th>
-                                <th class="text-center">Country</th>
-                                <th class="text-center">Date</th>
+                                <th class="text-left">Client</th>
+                                <th class="text-left">Company</th>
+                                <th class="text-left">E-mail</th>
+                                <th class="text-left">Phone</th>
+                                <th class="text-left">Relationship</th>
+                                <th class="text-left">Position</th>
+                                <th class="text-left">Contacted</th>
+                                <th class="text-left">Country</th>
+                                <th class="text-left">Date</th>
                                 <th class="text-center" style="display: none">Industry</th>
                                 <th class="text-center" style="display: none">Size</th>
                                 <th class="text-center" style="display: none">Annual invoice</th>
@@ -116,25 +114,23 @@
             </div>
         </div>
     </section>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.1.0/wNumb.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/jquery.easy-autocomplete.min.js"></script> 
-    <script src="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.js?v=<?php echo time();?>"></script>
-    <script src="<?php echo RUTA_PLUGINS?>bootstrap-select/js/bootstrap-select.min.js?v=<?php echo time();?>"></script>
-    <script src="<?php echo RUTA_PLUGINS?>bootstrap-select/js/i18n/defaults-es_ES.min.js?v=<?php echo time();?>"></script>
-    <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
+    <script type="text/javascript" src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
+    <script type="text/javascript" src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
+    <script type="text/javascript" src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
+    <script type="text/javascript" src="<?php echo RUTA_PLUGINS?>bootstrap-select/js/bootstrap-select.min.js?v=<?php echo time();?>"></script>
+    <script type="text/javascript" src="<?php echo RUTA_PLUGINS?>bootstrap-select/js/i18n/defaults-es_ES.min.js?v=<?php echo time();?>"></script>
+    <script type="text/javascript" src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
     <script type="text/javascript" src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/dataTables.buttons.min.js"></script>
-    <script type="text/javascript" src="//cdn.datatables.net/buttons/1.4.2/js/buttons.flash.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
-    <script type="text/javascript" src="//cdn.datatables.net/buttons/1.4.2/js/buttons.html5.min.js"></script>
-    <script type="text/javascript" src="//cdn.datatables.net/buttons/1.4.2/js/buttons.print.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
     <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
     <script type="text/javascript">
@@ -144,35 +140,34 @@
               responsive: true,
               dom: 'Bfrtip',
               language:{
-                "emptyTable":     "Aucune donnée disponible",
-                "info" : "Afficher _START_ a _END_ des _TOTAL_ résultats",
-                "infoEmpty":      "Afficher 0 to 0 of 0 résultats",
-                "search": "Chercher:",
-                "lengthMenu":   "Afficher _MENU_ lignes",
-                "paginate": {
-                    "first":    "Primero",
-                    "last":     "Ultimo",
-                    "next":     "Suivant",
-                    "previous": "Précédent"
-                },
-            },
-            lengthMenu: [
-                    //text: 'My button',
-                    [ 10, 25, 50, -1 ],
-                    [ '10 lignes', '25 lignes', '50 lignes', 'Tout voir' ]
-                  ],
-                  buttons: [
-                      {
-                        text: 'Afficher 10 lignes',
-                        extend: 'pageLength'
-                      },
-                      {
-                        extend:'excel'
-                      },
-                      {
-                        extend:'print'
-                      }
-                  ]
+                  "emptyTable":     "Aucune donnée disponible",
+                  "info" : "Afficher _START_ a _END_ des _TOTAL_ résultats",
+                  "infoEmpty":      "Afficher 0 to 0 of 0 résultats",
+                  "search": "Chercher:",
+                  "lengthMenu":   "Afficher _MENU_ lignes",
+                  "paginate": {
+                      "first":    "Primero",
+                      "last":     "Ultimo",
+                      "next":     "Suivant",
+                      "previous": "Précédent"
+                  },
+              },
+              lengthMenu: [
+                      [ 10, 25, 50, -1 ],
+                      [ '10 lignes', '25 lignes', '50 lignes', 'Tout voir' ]
+                    ],
+              buttons: [
+                  {
+                    text: 'Afficher 10 lignes',
+                    extend: 'pageLength'
+                  },
+                  {
+                    extend:'excel'
+                  },
+                  {
+                    extend:'print'
+                  }
+              ]
             });
         <?php } else if($idioma == 'Sueco'){ ?>
             $('#example').DataTable( {
@@ -209,32 +204,32 @@
                               }
                           ]
             });
-         <?php } else { ?>
-            $('#example').DataTable( {
-              responsive: true,
-              dom: 'Bfrtip',
-              lengthMenu: [
-                            //text: 'My button',
-                            [ 10, 25, 50, -1 ],
-                            [ '10 riviä', '25 riviä', '50 riviä', 'Katso kaikki' ]
-                          ],
-                          buttons: [
-                              {
-                                text: 'Näytä 10 riviä',
-                                extend: 'pageLength'
-                              },
-                              {
-                                extend:'excel'
-                              },
-                              {
-                                extend:'print'
-                              }
-                          ]
-            });
-        <?php } ?>
+           <?php } else { ?>
+              $('#example').DataTable( {
+                  responsive: true,
+                  dom: 'Bfrtip',
+                  pageLength: 25,
+                  lengthMenu: [
+                    [ 10, 25, 50, -1 ],
+                    [ '10 lines', '25 lines', '50 lines', 'See everything' ]
+                  ],
+                  buttons: [
+                      {
+                        text: 'Show 25 lines',
+                        extend: 'pageLength'
+                      },
+                      {
+                        extend:'excel'
+                      },
+                      {
+                        extend:'print'
+                      }
+                  ]
+              });
+          <?php } ?>
           $('.buttons-excel').empty();
           $('.buttons-print').empty();
-          $('.buttons-excel').append('<i class="fa fa-download"></i>');
+          $('.buttons-excel').append('<i class="fa fa-file-excel-o"></i>');
           $('.buttons-print').append('<i class="fa fa-print"></i>');
       });
     </script>
