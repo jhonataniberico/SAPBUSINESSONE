@@ -38,13 +38,6 @@
     		<div id="home" class="window-center">
     			<div class="header-home">
 					<img src="<?php echo RUTA_IMG?>logo/logo_home.png">
-					<div class="mdl-idioma">
-						<select class="selectpicker" id="IdiomaHome" name="Idioma" onchange="cambiarIdiomaHome()">
-							<option value="Inglés">English</option>
-							<option value="Español">Espa&ntilde;ol</option>
-							<option value="Portugués">Portugu&ecirc;s</option>
-						</select>
-    				</div>
 		    	</div>
     			<div class="mdl-container mdl-all-window">
 	    			<img class="logo-home" src="<?php echo RUTA_IMG?>logo/logo_header.png">
@@ -70,15 +63,8 @@
 	    				<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
 	    				<h2>Are you ready for SAP Business One&#63;</h2>
 	    			</div>
-	    			<div class="header-right">
+	    			<div class="header-right none-idioma">
 	    				<button class="mdl-button mdl-js-button mdl-button--icon button-home" onclick="returnHome()"><i class="mdi mdi-home"></i></button>
-	    				<div class="mdl-idioma">
-							<select class="selectpicker" id="Idioma" name="Idioma" onchange="cambiarIdioma()">
-								<option value="Inglés">English</option>
-								<option value="Español">Espa&ntilde;ol</option>
-								<option value="Portugués">Portugu&ecirc;s</option>
-							</select>
-	    				</div>
 						<div class="background1"></div>
 						<div class="background2"></div>
 						<div class="background3"></div>
@@ -734,7 +720,7 @@
 	<script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
-    <script src="<?php echo RUTA_JS?>index_en.js?v=<?php echo time();?>"></script>
+    <script src="<?php echo RUTA_JS?>index_uk.js?v=<?php echo time();?>"></script>
     <script type="text/javascript">
     	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
         	$('select').selectpicker('mobile');

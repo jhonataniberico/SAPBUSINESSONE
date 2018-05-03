@@ -78,7 +78,7 @@ function solicitarEstimacion(){
 				relacion 		: relacion,
 				contacto 		: contacto,
 				term_cond       : term_cond},
-		url  : 'es/solicitarEstimacion',
+		url  : 'sp/solicitarEstimacion',
 		type : 'POST'
 	}).done(function(data){
 		try{
@@ -223,7 +223,7 @@ function saveDatos(pantalla){
 				datos_prio   : datos_array.toString(),
 				operar       : operar,
 				facturacion  : facturacion},
-		url  : 'es/Savedatos',
+		url  : 'sp/Savedatos',
 		type : 'POST'
 	}).done(function(data){
 		try{
@@ -279,7 +279,7 @@ function mostrarDatos(){
 	$.ajax({
 		data : {array_ids   : array_ids,
 				array_3pant : array_3pant},
-		url  : 'es/mostrarDatos',
+		url  : 'sp/mostrarDatos',
 		type : 'POST'
 	}).done(function(data){
 		try{
@@ -312,7 +312,7 @@ function cambiarIdioma(){
 	}
 	$.ajax({
 		data  : {idioma : idioma},
-		url   : 'es/cambiarIdioma',
+		url   : 'sp/cambiarIdioma',
 		type  : 'POST'
 	}).done(function(data){
 	  try{
@@ -337,7 +337,7 @@ function cambiarIdiomaHome(){
 	}
 	$.ajax({
 		data : {idioma : idioma},
-		url  : 'es/cambiarIdioma',
+		url  : 'sp/cambiarIdioma',
 		type : 'POST'
 	}).done(function(data){
 		try{
@@ -481,7 +481,7 @@ function ConfirmarRespuestas(){
 	$('.mdl-formulario').removeClass('disabled');
 	$.ajax({
 		data : {confirmar : confirmar},
-		url  : 'es/ConfirmarRespuestas',
+		url  : 'sp/ConfirmarRespuestas',
 		type : 'POST'
 	}).done(function(data){
 		try{
@@ -737,7 +737,7 @@ function EditQuestion(id, pant){
 	windowQestion.addClass('animated fadeInLeft');
 	$('.button-arrow.button-next').css("display","block");
 	$.ajax({
-		url  : 'es/EditQuestion',
+		url  : 'sp/EditQuestion',
 		type : 'POST'
 	}).done(function(data){
 		try{
@@ -785,7 +785,7 @@ function resizeContent(){
 function returnHome(){
 	global_datos = null;
 	$.ajax({
-		url  : 'es/returnHome',
+		url  : 'sp/returnHome',
 		type : 'POST'
 	}).done(function(data){
 		try{

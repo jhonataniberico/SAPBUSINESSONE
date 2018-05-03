@@ -204,7 +204,7 @@ class SP extends CI_Controller {
                             'newline'   => "\r\n");
        $this->email->initialize($configGmail);
        $this->email->from('info@sap-latam.com');
-       $this->email->to('jhonatanibericom@brainblue.com');
+       $this->email->to('jose.minayac15@gmail.com');
        $this->email->subject('Estoy interesado en SAP Business One para mi negocio.');
         $texto = '<!DOCTYPE html>
                   <html>
