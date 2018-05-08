@@ -188,11 +188,11 @@ class En extends CI_Controller {
         $contact = '-';
       } else {
         if($_SESSION['Contacto'] == 3){
-          $contact = 'por email y teléfono';
+          $contact = 'By email and phone';
         }else if($_SESSION['Contacto'] == 2){
-          $contact = 'por teléfono';
+          $contact = 'By phone';
         }else if($_SESSION['Contacto'] == 1){
-          $contact = 'por Email';
+          $contact = 'By email';
         }
       }
     $respuestas = $this->M_solicitud->getRespUsuario($_SESSION['id_persona']);

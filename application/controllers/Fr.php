@@ -181,7 +181,6 @@ class Fr extends CI_Controller {
             $this->session->unset_userdata('idioma');
             $this->sendGmailSap($email);
             $this->emailClienteSap($email);
-          //$this->emailPartner();
           $data['msj']   = $datoInsert['msj'];
           $data['error'] = $datoInsert['error'];
         } catch (Exception $e){
@@ -510,7 +509,6 @@ class Fr extends CI_Controller {
       }
       return json_encode(array_map('utf8_encode', $data));
     }
-
     function EditQuestion(){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
@@ -524,7 +522,6 @@ class Fr extends CI_Controller {
       }
       echo json_encode($data);
     }
-
     function ConfirmarRespuestas(){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
@@ -538,8 +535,6 @@ class Fr extends CI_Controller {
       }
       echo json_encode($data);
   }
-
-
   function cambiarIdioma(){
     $data['error'] = EXIT_ERROR;
     $data['msj']   = null;
@@ -552,32 +547,6 @@ class Fr extends CI_Controller {
         $data['msj'] = $e->getMessage();
       }
       echo json_encode($data);
-  }
-
-  function emailPartner(){
-    $data['error'] = EXIT_ERROR;
-    $data['msj']   = null;
-    try {
-      $configGmail = array('protocol'  => 'smtp',
-                            'smtp_host' => 'smtpout.secureserver.net',
-                            'smtp_port' => 3535,
-                            'smtp_user' => 'info@sap-latam.com',
-                            'smtp_pass' => 'sapinfo18',
-                            'mailtype'  => 'html',
-                            'charset'   => 'utf-8',
-                            'newline'   => "\r\n");    
-      //cargamos la configuración para enviar con gmail
-      $this->email->initialize($configGmail);
-      $this->email->from('info@sap-latam.com');
-      $this->email->to('email_partner@gmail.com');//EMAIL AL QUIÉN IRÁ DIRIGIDO
-      $this->email->subject('Estoy interesado en SAP Business One para mi negocio.');
-      $texto = 'html del partner';
-      $this->email->message($texto);//AQUI SE INSERTA EL HTML
-      $this->email->send();
-      $data['error'] = EXIT_SUCCESS;
-    }catch(Exception $e){
-      $data['msj'] = $e->getMessage();
-    }
   }
   function returnHome(){
     $data['error'] = EXIT_ERROR;
