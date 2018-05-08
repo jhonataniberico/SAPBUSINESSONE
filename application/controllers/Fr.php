@@ -141,6 +141,9 @@ class Fr extends CI_Controller {
             $relacion        = $this->input->post('relacion');
             $contacto        = $this->input->post('contacto');
             $term_cond       = $this->input->post('term_cond');
+            if($contacto == '-'){
+              $contacto = 0;
+            }
             $arrayInsert = array('nombre_completo' => $nombre_completo,
                                  'Empresa'         => $empresa,
                                  'Email'           => $email,
@@ -191,12 +194,16 @@ class Fr extends CI_Controller {
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
       try {  
-        if($_SESSION['Contacto'] == 3){
-          $contact = 'Par email et par téléphone';
-        }else if($_SESSION['Contacto'] == 2){
-          $contact = 'Par téléphone';
-        }else if($_SESSION['Contacto'] == 1){
-          $contact = 'Par email';
+        if($_SESSION['Contacto'] == '-'){
+          $contact = '-';
+        } else {
+          if($_SESSION['Contacto'] == 3){
+            $contact = 'por email y teléfono';
+          }else if($_SESSION['Contacto'] == 2){
+            $contact = 'por teléfono';
+          }else if($_SESSION['Contacto'] == 1){
+            $contact = 'por Email';
+          }
         }
         $respuestas = $this->M_solicitud->getRespUsuario($_SESSION['id_persona']);
        $this->load->library("email");
@@ -349,7 +356,6 @@ class Fr extends CI_Controller {
                   </html>';
         $this->email->message($texto);
         $this->email->send();
-        print_r($this->email->send());
         $data['error'] = EXIT_SUCCESS;
       }catch (Exception $e){
         $data['msj'] = $e->getMessage();

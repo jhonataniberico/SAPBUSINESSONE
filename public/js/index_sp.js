@@ -791,7 +791,7 @@ function returnHome(){
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
-        	location.href = 'es';
+        	location.href = 'sp';
         }else{
         	return;
         }

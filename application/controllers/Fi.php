@@ -134,6 +134,9 @@ class Fi extends CI_Controller {
         $relacion        = $this->input->post('relacion');
         $contacto        = $this->input->post('contacto');
         $term_cond       = $this->input->post('term_cond');
+        if($contacto == '-'){
+          $contacto = 0;
+        }
         $arrayInsert = array('nombre_completo' => $nombre_completo,
                              'Empresa'         => $empresa,
                              'Email'           => $email,
@@ -182,12 +185,16 @@ class Fi extends CI_Controller {
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
       try {  
-        if($_SESSION['Contacto'] == 3){
-          $contact = 'By email and phone';
-        }else if($_SESSION['Contacto'] == 2){
-          $contact = 'By phone';
-        }else if($_SESSION['Contacto'] == 1){
-          $contact = 'By email';
+        if($_SESSION['Contacto'] == '-'){
+          $contact = '-';
+        } else {
+          if($_SESSION['Contacto'] == 3){
+            $contact = 'por email y teléfono';
+          }else if($_SESSION['Contacto'] == 2){
+            $contact = 'por teléfono';
+          }else if($_SESSION['Contacto'] == 1){
+            $contact = 'por Email';
+          }
         }
         $respuestas = $this->M_solicitud->getRespUsuario($_SESSION['id_persona']);
        $this->load->library("email");

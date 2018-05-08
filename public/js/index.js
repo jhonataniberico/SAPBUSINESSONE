@@ -54,9 +54,8 @@ function solicitarEstimacion(){
 	}else if(c_ambos == true){
 		contacto = 3;
 	}
-	if(contacto == null || contacto == ''){
-		msj('error', 'Seleccione el medio por el que quiere ser contactado');
-		  return;
+	if(c_email == null || c_email == ''){
+		contacto = '-';
 	}
 	if(terminos == true){
 		term_cond = 1

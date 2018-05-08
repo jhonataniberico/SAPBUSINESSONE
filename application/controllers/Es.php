@@ -135,6 +135,9 @@ class Es extends CI_Controller {
             $relacion        = $this->input->post('relacion');
             $contacto        = $this->input->post('contacto');//
             $term_cond       = $this->input->post('term_cond');
+            if($contacto == '-'){
+              $contacto = 0;
+            }
             $arrayInsert = array('nombre_completo' => $nombre_completo,
                                  'Empresa'         => $empresa,
                                  'Email'           => $email,
@@ -184,13 +187,17 @@ class Es extends CI_Controller {
   function sendGmailSap($email){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
-      try {  
-        if($_SESSION['Contacto'] == 3){
-          $contact = 'por email y teléfono';
-        }else if($_SESSION['Contacto'] == 2){
-          $contact = 'por teléfono';
-        }else if($_SESSION['Contacto'] == 1){
-          $contact = 'por Email';
+      try { 
+        if($_SESSION['Contacto'] == '-'){
+          $contact = '-';
+        } else {
+          if($_SESSION['Contacto'] == 3){
+            $contact = 'por email y teléfono';
+          }else if($_SESSION['Contacto'] == 2){
+            $contact = 'por teléfono';
+          }else if($_SESSION['Contacto'] == 1){
+            $contact = 'por Email';
+          }
         }
         $respuestas = $this->M_solicitud->getRespUsuario($_SESSION['id_persona']);
        $this->load->library("email");
@@ -356,14 +363,7 @@ class Es extends CI_Controller {
       $data['msj']   = null;
       try {  
        $this->load->library("email");
-       if($_SESSION['Contacto'] == 3){
-          $contact = 'por email y teléfono';
-        }else if($_SESSION['Contacto'] == 2){
-          $contact = 'por teléfono';
-        }else if($_SESSION['Contacto'] == 1){
-          $contact = 'por Email';
-        }
-        $respuestas = $this->M_solicitud->getRespUsuario($_SESSION['id_persona']);
+       $respuestas = $this->M_solicitud->getRespUsuario($_SESSION['id_persona']);
        $configGmail = array('protocol'  => 'smtp',
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,
