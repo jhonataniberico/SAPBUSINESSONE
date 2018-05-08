@@ -361,7 +361,6 @@ class Fr extends CI_Controller {
       }
       return json_encode(array_map('utf8_encode', $data));
     }
-
   function emailClienteSap($email){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
