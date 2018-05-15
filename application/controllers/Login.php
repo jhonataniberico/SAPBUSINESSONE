@@ -24,29 +24,13 @@ class Login extends CI_Controller {
 			$usuario  = $this->input->post('usuario');
 			$password = $this->input->post('password');
 			$username = $this->M_usuario->verificarUsuario($usuario, $password);
+			/*echo $username[0]->idioma;
+			exit;*/
 			if(count($username) != 0){
 				if(strtolower($username[0]->usuario) == strtolower($usuario)){
-					if($usuario == 'fradmin'){
-						$session = array('usuario' => $usuario,
-								 		 'Id_user' => $username[0]->Id,
-								 		 'Idioma'  => 'Francés');
-						$data['href'] = 'Admin';
-					}else if($usuario == 'sapadmin'){
-						$session = array('usuario' => $usuario,
-								 		 'Id_user' => $username[0]->Id,
-								 		 'Idioma'  => 'Todos');
-						$data['href'] = 'Admin';
-					}else if($usuario == 'fiadmin'){
-						$session = array('usuario' => $usuario,
-								 		 'Id_user' => $username[0]->Id,
-								 		 'Idioma'  => 'Sueco');
-						$data['href'] = 'Admin';
-					}else if($usuario == 'partnersap'){
-						$session = array('usuario' => $usuario,
-								 		 'Id_user' => $username[0]->Id,
-								 		 'Idioma'  => '');
-						$data['href'] = 'Configuracion';
-					}
+					$session = array('usuario' => $usuario,
+									 'Idioma'  => $username[0]->idioma,
+							 		 'Id_user' => $username[0]->Id);
 					$this->session->set_userdata($session);
 		          	$data['error'] = EXIT_SUCCESS;
 				}

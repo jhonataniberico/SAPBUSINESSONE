@@ -18,7 +18,11 @@ class Admin extends CI_Controller {
 			header("location: Login");
 		}
 		$data['html'] = $this->getTable();
-        $data['idioma'] = $this->session->userdata('Idioma');
+        if($this->session->userdata('Idioma') == 'España' || $this->session->userdata('Idioma') == 'Reino unido'){
+            $data['idioma'] = 'Todos';
+        }else {
+            $data['idioma'] = $this->session->userdata('Idioma');
+        }
 		$this->load->view('v_admin', $data);
 	}
 	function getTable(){
@@ -28,6 +32,10 @@ class Admin extends CI_Controller {
             $datos = $this->M_reportes->getDatosTablaIdioma(4);
         }else if($this->session->userdata('Idioma') == 'Sueco'){
             $datos = $this->M_reportes->getDatosTablaIdioma(5);
+        }else if($this->session->userdata('Idioma') == 'España'){
+            $datos = $this->M_reportes->getDatosTablaIdioma(6);
+        }else if($this->session->userdata('Idioma') == 'Reino Unido'){
+            $datos = $this->M_reportes->getDatosTablaIdioma(7);
         }
 		$html  = '';
 		$cont  = 1;

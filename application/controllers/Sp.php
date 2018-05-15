@@ -62,13 +62,13 @@ class SP extends CI_Controller {
             $columna     = null;
             if($pantalla == 2) {$columna = 'Factura_anual';} elseif ($pantalla == 3) {$columna = 'Prioridad';}elseif ($pantalla == 4) {$columna = 'Infraestructura';}
             if($pantalla == 1){
-              $idIdioma    = $this->M_solicitud->getDatosPais($idioma);
+              $idIdioma    = $this->M_solicitud->getDatosPais('España');
               $arrayInsert = array('Industria'   => $datos,
-                                   'Id_lenguaje' => $idIdioma);
+                                   'Id_lenguaje' => 6);
               $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'solicitud');
               $session    = array('industria' => $datos,
                                   'id_sol'    => $datoInsert['Id'],
-                                  'idioma'    => $idioma);
+                                  'idioma'    => 'España');
               $this->session->set_userdata($session);
             }else {
               if($pantalla == 2){

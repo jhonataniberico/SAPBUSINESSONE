@@ -208,6 +208,19 @@
               $('#example').DataTable( {
                   responsive: true,
                   dom: 'Bfrtip',
+                  language:{
+                      "emptyTable":     "No data found",
+                      "info" : "Afficher _START_ a _END_ des _TOTAL_ résultats",
+                      "infoEmpty":      "Showing from 0 to 0 events of 0",
+                      "search": "Search:",
+                      "lengthMenu":   "Show _MENU_ lines",
+                      "paginate": {
+                          "first":    "First",
+                          "last":     "Latest",
+                          "next":     "next",
+                          "previous": "Previous"
+                      },
+                  },
                   pageLength: 25,
                   lengthMenu: [
                     [ 10, 25, 50, -1 ],
