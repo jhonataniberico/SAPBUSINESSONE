@@ -1003,7 +1003,7 @@ span.number{
 #ModalQuestion .mdl-card .mdl-card__menu button i{
 	color: #FFFFFF;
 }
-.modal.fade .modal-dialog{
+#ModalQuestion.modal.fade .modal-dialog{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1026,7 +1026,7 @@ span.number{
     max-width: 300px;
     width: 100%;
 }
-.modal.fade.in .modal-dialog{
+#ModalQuestion.modal.fade.in .modal-dialog{
 	opacity: 1;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -1036,6 +1036,38 @@ span.number{
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+.modal-large{
+	width: 100%;
+	margin: 0;
+}
+.modal-large .mdl-card{
+	width: 100%;
+	max-width: 750px;
+	margin: auto;
+	padding: 16px;
+}
+.modal-large .mdl-card .mdl-card__title{
+	display: block;
+	padding: 0;
+}
+.modal-large .mdl-card .mdl-card__title h2{
+	text-align: center;
+	font-size: 32px;
+	color: #000000;
+}
+.modal-large .mdl-card .mdl-card__supporting-text h2{
+	font-size: 20px;
+	margin:  10px 0;
+	color: #000000;
+}
+.modal-large .mdl-card .mdl-card__supporting-text strong{
+	font-size: 18px;
+	color: #000000;
+}
+.modal-large .mdl-card .mdl-card__supporting-text p{
+	font-size: 16px;
+	color: #000000;
 }
 /*FORMULARIO*/
 .mdl-formulario,
@@ -1212,7 +1244,7 @@ span.number{
     border-radius: 0;
 }
 .mdl-formulario .text-contacto{
-    font-size: 15px;
+    font-size: 14px;
     margin: 5px 0;
     line-height: 20px;
 }
@@ -1273,9 +1305,10 @@ span.number{
     max-width: 235px;
 }
 .mdl-label .mdl-checkbox__label{
-	font-size: 13px;
+	font-size: 14px;
     line-height: 18px;
     color: #FFFFFF;
+    font-weight: 100;
 }
 .mdl-label .mdl-checkbox__label a{
 	font-size: 14px;

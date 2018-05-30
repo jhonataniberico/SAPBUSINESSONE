@@ -687,7 +687,8 @@
 		        				<div class="col-xs-12 mdl-label m-t-10">
 		    						<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
 										<input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
-										<span class="mdl-checkbox__label f-s-14" style="">He le&iacute;do y acepto los <a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" style="">Términos y condiciones de SAP</a></span>
+										<span class="mdl-checkbox__label f-s-14" style="">He le&iacute;do y acepto los <a class="FONDO_TERMINOS" data-toggle="modal" data-target="#ModalTerminos">Términos y condiciones de SAP</a></span>
+										<!-- <span class="mdl-checkbox__label f-s-14" style="">He le&iacute;do y acepto los <a class="FONDO_TERMINOS" href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" style="">Términos y condiciones de SAP</a></span> -->
 									</label>
 		        				</div>
 		        				<div class="col-xs-12 text-right m-t-25">
@@ -727,6 +728,46 @@
     				<div class="mdl-card__menu">        				    
                         <button class="mdl-button mdl-js-button mdl-button--icon" onclick="closeModal()"><i class="mdi mdi-close"></i></button>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ModalTerminos" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-sm modal-large">
+            <div class="modal-content">
+                <div class="mdl-card" >
+                    <div class="mdl-card__title p-0">
+						<h2>SAP Marketing Configurator Portals Privacy Policy ("SCP Privacy Policy")</h2>
+					</div>
+				    <div class="mdl-card__supporting-text">
+                        <h2>1. Introduction.</h2>
+                        <p>SAP SE ("SAP") as a marketing strategy, developed SAP Configurators Portals, you register for (the "Configurator"). Unless you expressly agree otherwise (in particular as described in section 4. below) or if required by law, SAP will use any personal data you provide during the registration process, during the sites navigation, or otherwise in connection with SAP via chat. This SCP Privacy Policy covers the data you provided in connection with the Configurators; if you provide data to SAP in another context, e.g. in connection with the purchase of a SAP product or services, the data you provided in such other context may be covered by a separate privacy policy.</p>
+                        <h2>2. Use of your data obtained in connection with the Configurator.</h2>
+                        <strong>a. Registration data.</strong>
+                        <p>In connection with your registration, you have to provide basic registration information to us, namely your contact information (name, address, company, email and telephone number), job title and function, your relation to SAP (i.e. partner, customer, etc.), your industry sector, registration time/date, and payment details for the payment of the registration fee. You may further provide to us information on your social media accounts, emergency contact information, (together with the data listed in the previous sentence, the "Registration Data").</p>
+                        <p>SAP may include your Registration Data, your choices with respect to marketing communication (see section 4.a. below), and further information you provide to SAP in connection with the Configurator in its customer relationship management system ("SAP CRM") and combine it with existing SAP CRM data relating to you, including your participation at prior events.</p>
+						<p>SAP may use third parties for the provision of services in connection with the Configurators and the fulfillment of obligations towards you. Such third parties may process your Registration Data on behalf of SAP; they include payment and data/website hosting providers. Any use of service providers outside the European Economic Area will be subject to ensuring an adequate level of data protection, for example by means of entering into EU Model Clauses with the provider; you may request a copy of the EU Model Clauses SAP entered into from SAP (see contact in section 5. below).</p>
+						<strong>b. Survey data. Conference information.</strong>
+						<p>If you participate in a survey, SAP will use this information only in an anonymous manner unless you have expressly consented to a non-anonymous use. SAP may further use Registration Data and other data provided by you to create anonymous, aggregate information, in particular to improve products, services and future events; no personal data will be used for this purpose.</p>
+						<strong>c. Sensitive data.</strong>
+						<p>Special categories of data to us which enjoy particular protection under German and EU data protection law (“Special Categories of Personal Data”) such as data relating to your health is required for these kind of digital marketing materials. None of the marketing initiatives related to the SAP Configurator Portals requests or manages sensitive data of its participants. These sites uses cookies for digital marketing activities, as well as for some features of the site. It is important to note that cookies installed do not collect personal or sensitive information.</p>
+						<strong>3. No unauthorized data sharing with third parties.</strong>
+						<p>SAP will not provide your information for marketing purposes to any unrelated third parties without your authorization. In this context please note that the contact information submitted in your registration (name, title, company, address, phone, and e-mail) will be managed in a encrypted form.</p>
+						<h2>4. Use of data in accordance with your consent.</h2>
+						<strong>a. Marketing consent to be contacted about events, products or services.</strong>
+						<p>If you opt in to be contacted (in line with your consent) by SAP about its product or services and other marketing events or activities, the SAP Group may use your Registration Data, as well as (to the extent available in the SAP CRM or otherwise) an interaction profile based on your prior interactions with SAP including your participation at prior events, in order to keep you up to date on the latest SAP product announcements including software products and services, system enhancements, special offers, and other information regarding the SAP Group’s organizations (including marketing-related newsletters) as well as other marketing events and activities. The SAP Group may contact you by email, phone or by using any other communication address you have provided. In connection with the marketing-related activities, the SAP Group may provide a hashed user ID to third party operated social networks or other web offerings (e.g. Twitter, LinkedIn, Facebook, Instagram or Google) where this information is then matched against the social networks’ data or web offerings’ own bases in order to display to you more relevant information.</p>
+						<strong>b. SAP affiliates</strong>
+						<p>If you consent to it, SAP may share your personal data contained in the SAP CRM with its affiliated companies in the SAP Group and all SAP Group companies may use the data for the same marketing purposes related to SAP Group product and services and under the same conditions as SAP. The “SAP Group” includes various SAP named affiliated companies around the world as well as various SAP affiliates with more distinctive non-SAP brand names including Ariba, Concur, Hybris, SuccessFactors, and Sybase, a list of all SAP affiliates can be found <a href="https://www.sap.com/dam/site/corporate/legal/sap-legal-entities.pdf" target="_blank">here</a>.</p>
+						<h2>c. You may withdraw your consent with respect to any or both of the above cases under this section 4. at any time. Please direct any such request to <a href="mailto:webmaster@sap.com">webmaster@sap.com</a> .</h2>
+						<strong>5. Further information and contact.</strong>
+						<p>For further information on SAP's general handling of personal data, e.g. when you visit SAP websites, please visit <a href="https://www.sap.com/latinamerica/about/legal/privacy.html" target="_blank"></a> For any questions regarding data protection and SAP, please contact <a href="mailto:privacy@sap.com">privacy@sap.com</a></p>
+					</div>
+					<div class="mdl-card__actions">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-dismiss="modal"><i class="fa fa-times"></i>Cerrar</button>
+                    </div>
+                </div>
+                <div class="mdl-card__menu">
+                	<button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="fa fa-times"></i></button>
                 </div>
             </div>
         </div>
