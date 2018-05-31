@@ -22,14 +22,12 @@
 	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>animate.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
-	<!-- Global site tag (gtag.js) - Google Analytics --> 
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117633230-1"></script>
+  	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117633230-1"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-117633230-1');
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-117633230-1');
 	</script>
 </head>
 <body>
@@ -61,8 +59,7 @@
 				<div class="header">
 	    			<div class="header-left">
 	    				<img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_header.png">
-	    				<!-- <img class="logo-partner" src="<?php echo RUTA_IMG?>logo/google.png"> -->
-	    				<!-- <h2>Etes-vous prêt pour SAP Business One &#63;</h2> -->
+	    				<h2>Oletko valmiina SAP Business One'en ?</h2>
 	    			</div>
 	    			<div class="header-right none-idioma">
 	    				<button class="mdl-button mdl-js-button mdl-button--icon button-home" onclick="returnHome()"><i class="mdi mdi-home"></i></button>
@@ -174,7 +171,7 @@
 			        	<div class="mdl-card-question">
 			        		<div class="flip-card">
 			        			<div class="card-front card-front-none">
-			        				<img class="m-b-0" src="<?php echo RUTA_IMG?>cards/card-proceso.png">
+			        				<img class="m-b-0"  src="<?php echo RUTA_IMG?>cards/card-proceso.png">
 			        				<p>Prosessi/valmistava teollisuus</p>
 			        			</div>
 			        		</div>
@@ -519,7 +516,7 @@
 						<div class="question">
 		            		<span class="number">05/05</span>
 		            		<div class="question-respuestas">
-		            			<p><span>Perustuen vastauksiisi</span> meill&auml; on tarjota sinulle sopiva ratkaisu.</p>
+		            			<p><span>Perustuen vastauksiisi</span> meillä on tarjota sinulle sopiva ratkaisu.</p>
 		            		</div>
 		            	</div>
 		            	<div class="mdl-solicitud">
@@ -678,7 +675,7 @@
 	            		</div>
 	            	</div>
             		<div class="mdl-agradecimiento">
-            			<h2>Kiitos mielenkiinnostasi</h2>
+            			<h2>Haluan yhteydenottoa</h2>
             			<p>SAPin edustaja ottaa sinuun yhteyttä sopiaksemme jatkosta.</p>
             		</div>
 				</div>
@@ -755,7 +752,7 @@
             $('select').selectpicker();
         }
         $(window).load(function() {
-        	  /*if(<?php echo $pantalla ?> == 3) {
+        	  if(<?php echo $pantalla1 ?> == 5) {
 				m = 5; 
 				if(<?php echo $confirmar ?> == 1) {
 					$('.button-arrow.button-prev').css("display","none");
@@ -773,7 +770,7 @@
 				}
 				$('.header').addClass('opacity');
 				$('.logo-bottom').addClass('opacity');
-				/*$('#telefono').css('border-color','red');
+				$('#telefono').css('border-color','red');
 				$('#nombre_completo').val("<?php echo $nombre_comple ?>");
 				$('#email').val("<?php echo $email_link ?>");
 				$('#pais').val("<?php echo $pais_link ?>");
@@ -789,8 +786,8 @@
 				$('#tamanio').text("<?php echo $Tamanio ?>");//falta agregar empleados
 				$('#factura').text("<?php echo $Factura_anual ?>");
 				$('#prioridad').append("<?php echo $priori ?>");
-				$('#infraestructura').text("<?php echo $Infraestructura ?>");*/
-			//}
+				$('#infraestructura').text("<?php echo $Infraestructura ?>");
+			}
 		});
     </script>
 </body>
