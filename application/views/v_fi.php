@@ -22,7 +22,7 @@
 	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>animate.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
 	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics --> 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117633230-1"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
