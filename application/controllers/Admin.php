@@ -60,6 +60,7 @@ class Admin extends CI_Controller {
                             <td class="text-left">'.$key->Relacion.'</td>
                             <td class="text-left">'.$key->Cargo.'</td>
                             <td class="text-left">'.$contactado.'</td>
+                            <td class="text-left">'.$key->checks.'</td>
                             <td class="text-left">'.$key->Pais.'</td>
                             <td class="text-left">'.$key->fecha_sol.' pe</td>
                             <td class="text-center" style="display: none">'.$key->Industria.'</td>

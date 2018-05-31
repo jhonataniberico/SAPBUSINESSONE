@@ -13,7 +13,8 @@ class M_reportes extends  CI_Model{
                        u.Pais,
                        COALESCE(DATE_FORMAT(u.fecha_sol, '%d/%m/%Y %H:%i %p'), '00/00/0000 00:00') AS fecha_sol,
                        u.Cargo,
-                       u.Relacion
+                       u.Relacion,
+                       u.checks
 				  FROM usuario u,
 				  	   solicitud s
 				  WHERE u.Id_solicitud = s.Id";
@@ -30,7 +31,8 @@ class M_reportes extends  CI_Model{
                        u.Pais,
                        COALESCE(DATE_FORMAT(u.fecha_sol, '%d/%m/%Y %H:%i %p'), '00/00/0000 00:00') AS fecha_sol,
                        u.Cargo,
-                       u.Relacion
+                       u.Relacion,
+                       u.checks
           FROM usuario u,
                solicitud s
           WHERE u.Id_solicitud = s.Id

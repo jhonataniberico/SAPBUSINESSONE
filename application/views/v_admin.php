@@ -62,6 +62,7 @@
                                 <th class="text-left">Relation avec SAP</th>
                                 <th class="text-left">Position</th>
                                 <th class="text-left">Je veux être contacté</th>
+                                <th class="text-left">Déclaration de consentement</th>
                                 <th class="text-left">Pays</th>
                                 <th class="text-left">Date</th>
                                 <th class="text-center" style="display: none">Industrie</th>
@@ -79,6 +80,7 @@
                                 <th class="text-left">Suhde SAP'iin</th>
                                 <th class="text-left">Lataa</th>
                                 <th class="text-left">Haluan yhteydenottoa</th>
+                                <th class="text-left">Hyväksyntäilmoitus</th>
                                 <th class="text-left">Maa</th>
                                 <th class="text-left">Päivämäärä</th>
                                 <th class="text-center" style="display: none">ala</th>
@@ -96,6 +98,7 @@
                                 <th class="text-left">Relationship</th>
                                 <th class="text-left">Position</th>
                                 <th class="text-left">Contacted</th>
+                                <th class="text-left">Consent Statement</th>
                                 <th class="text-left">Country</th>
                                 <th class="text-left">Date</th>
                                 <th class="text-center" style="display: none">Industry</th>
