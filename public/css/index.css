@@ -1003,7 +1003,29 @@ span.number{
 #ModalQuestion .mdl-card .mdl-card__menu button i{
 	color: #FFFFFF;
 }
-#ModalQuestion.modal.fade .modal-dialog{
+#ModalPoliticas .modal-dialog{
+	max-width: 320px;
+}
+#ModalPoliticas .mdl-card{
+	width: 100%;
+}
+#ModalPoliticas .mdl-card__title h2{
+	color: #000000;
+	font-size: 24px;
+	margin: 5px 0;
+}
+#ModalPoliticas .mdl-card__suppoerting-text{
+	width: 100%;
+}
+#ModalPoliticas .mdl-card__actions{
+	text-align: right;
+	padding: 16px;
+}
+#ModalPoliticas .mdl-card__actions button{
+	text-transform: initial;
+	font-family: 'RobotoMedium';
+}
+.modal.fade .modal-dialog{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1026,7 +1048,7 @@ span.number{
     max-width: 300px;
     width: 100%;
 }
-#ModalQuestion.modal.fade.in .modal-dialog{
+.modal.fade.in .modal-dialog{
 	opacity: 1;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -1036,64 +1058,6 @@ span.number{
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-}
-.modal-large{
-	width: 100%;
-	margin: 0;
-}
-.modal-large .mdl-card{
-	width: 100%;
-	max-width: 750px;
-	margin: auto;
-	padding: 16px;
-}
-.modal-large .mdl-card .mdl-card__title{
-	display: block;
-	padding: 0;
-}
-.modal-large .mdl-card .mdl-card__title h2{
-	text-align: center;
-	font-size: 24px;
-	color: #000000;
-    margin: 10px auto;
-    max-width: 550px;
-}
-.modal-large .mdl-card .mdl-card__supporting-text h2{
-	font-size: 20px;
-	margin:  15px 0;
-	color: #000000;
-}
-.modal-large .mdl-card .mdl-card__supporting-text{
-	width: 100%;
-}
-.modal-large .mdl-card .mdl-card__supporting-text strong{
-	font-size: 16px;
-	color: #000000;
-    margin: 5px 0;
-    display: block;
-}
-.modal-large .mdl-card .mdl-card__supporting-text p{
-	font-size: 14px;
-	color: #000000;
-	line-height: 20px;
-}
-.modal-large .mdl-card__menu{
-    top: 8px;
-    right: 8px;
-}
-.modal-large .mdl-card__menu i{
-    color: #757575;
-}
-.modal-large .mdl-card__actions{
-	text-align: center;
-}
-.modal-large .mdl-card__actions button{
-	text-transform: initial;
-	font-family: 'RobotoMedium';
-}
-.modal-large .mdl-card__actions button i{
-	vertical-align: middle;
-	margin-right: 5px;
 }
 /*FORMULARIO*/
 .mdl-formulario,
@@ -1358,6 +1322,10 @@ span.number{
 }
 .js-label{
 	height: 100%;
+	margin: 5px 0;
+}
+.js-label span{
+	font-family: 'RobotoBold';
 }
 .js-label .mdl-checkbox__label{
 	font-size: 14px;
