@@ -1053,21 +1053,47 @@ span.number{
 }
 .modal-large .mdl-card .mdl-card__title h2{
 	text-align: center;
-	font-size: 32px;
+	font-size: 24px;
 	color: #000000;
+    margin: 10px auto;
+    max-width: 550px;
 }
 .modal-large .mdl-card .mdl-card__supporting-text h2{
 	font-size: 20px;
-	margin:  10px 0;
+	margin:  15px 0;
 	color: #000000;
+}
+.modal-large .mdl-card .mdl-card__supporting-text{
+	width: 100%;
 }
 .modal-large .mdl-card .mdl-card__supporting-text strong{
-	font-size: 18px;
-	color: #000000;
-}
-.modal-large .mdl-card .mdl-card__supporting-text p{
 	font-size: 16px;
 	color: #000000;
+    margin: 5px 0;
+    display: block;
+}
+.modal-large .mdl-card .mdl-card__supporting-text p{
+	font-size: 14px;
+	color: #000000;
+	line-height: 20px;
+}
+.modal-large .mdl-card__menu{
+    top: 8px;
+    right: 8px;
+}
+.modal-large .mdl-card__menu i{
+    color: #757575;
+}
+.modal-large .mdl-card__actions{
+	text-align: center;
+}
+.modal-large .mdl-card__actions button{
+	text-transform: initial;
+	font-family: 'RobotoMedium';
+}
+.modal-large .mdl-card__actions button i{
+	vertical-align: middle;
+	margin-right: 5px;
 }
 /*FORMULARIO*/
 .mdl-formulario,
@@ -1257,8 +1283,8 @@ span.number{
 }
 .mdl-formulario .mdl-radio{
 	font-size: 12px;
-	font-family: 'RobotoLight';
 	color: #FFFFFF;
+    font-weight: 100;
 }
 .mdl-formulario .col-xs-4{
 	padding: 0 5px;
@@ -1329,6 +1355,16 @@ span.number{
 .mdl-radio__ripple-container .mdl-ripple,
 .mdl-radio__inner-circle{
 	background: #4983B6;
+}
+.js-label{
+	height: 100%;
+}
+.js-label .mdl-checkbox__label{
+	font-size: 14px;
+	color: #000000;
+	line-height: 18px;
+    font-family: 'RobotoRegular';
+    font-weight: 100;
 }
 /*CHAT*/
 .chat{
