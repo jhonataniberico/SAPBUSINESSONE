@@ -54,9 +54,8 @@ function solicitarEstimacion(){
 	}else if(c_ambos == true){
 		contacto = 3;
 	}
-	if(contacto == null || contacto == ''){
-		msj('error', 'Select the means by which you want to be contacted');
-		  return;
+	if(c_email == null || c_email == ''){
+		contacto = '-';
 	}
 	if(terminos == true){
 		term_cond = 1
@@ -77,7 +76,8 @@ function solicitarEstimacion(){
 				telefono 		: telefono,
 				relacion 		: relacion,
 				contacto 		: contacto,
-				term_cond       : term_cond},
+				term_cond       : term_cond,
+				checks 			: checks},
 		url  : 'uk/solicitarEstimacion',
 		type : 'POST'
 	}).done(function(data){
@@ -802,9 +802,21 @@ function closePoliticas(){
 	$('#checkbox-1').parent().removeClass('is-checked');
 	$('#ModalPoliticas').modal('hide');
 }
+var checks = '';
 function acceptPoliticas(){
 	$('#checkbox-1').prop('checked', true);
 	$('#ModalPoliticas').modal('hide');
+	var check_2 = $('#checkbox-2').is(':checked');
+	var share   = $('#checkbox-3').is(':checked');
+	if(check_2 == true){
+		checks = 'General Marketing';
+	}
+	if(share == true){
+		checks = 'Sharing data';
+	}
+	if(check_2 == true && share == true){
+		checks = 'General Marketing, Sharing data';
+	}
 }
 $('#checkbox-1').change(function(){
 	if($('#checkbox-1').prop('checked', true)){

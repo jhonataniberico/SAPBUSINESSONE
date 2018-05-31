@@ -132,6 +132,7 @@ class Pt extends CI_Controller {
         $relacion        = $this->input->post('relacion');
         $contacto        = $this->input->post('contacto');
         $term_cond       = $this->input->post('term_cond');
+        $checks          = $this->input->post('checks');
         if($contacto == '-'){
           $contacto = 0;
         }
@@ -145,7 +146,8 @@ class Pt extends CI_Controller {
                              'Relacion'        => $relacion,
                              'Contactado'      => $contacto,
                              'Id_solicitud'    => $_SESSION['id_sol'],
-                             'fecha_sol'       => date('Y-m-d H:i:s'));
+                             'fecha_sol'       => date('Y-m-d H:i:s'),
+                             'checks'          => $checks);
         $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'usuario');
         $session    = array('nombre_completo' => $nombre_completo,
                             'Empresa'         => $empresa,
