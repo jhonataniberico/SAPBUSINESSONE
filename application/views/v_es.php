@@ -636,7 +636,7 @@
 		        				</div>
 		        				<div class="col-sm-6">
 		        					<div class="mdl-input">
-										<input type="text" class="form-control" id="telefono" onchange="validarCampos()" placeholder="Teléfono">
+										<input type="text" class="form-control" id="telefono" placeholder="Teléfono">
 									</div>
 		        				</div>
 		        				<div class="col-sm-6">
@@ -684,12 +684,15 @@
 										</label>
 		        					</div>
 		        				</div>
-		        				<div class="col-xs-12 mdl-label m-t-10">
-		    						<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-										<input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
-										<span class="mdl-checkbox__label f-s-14" style="">He le&iacute;do y acepto los <a class="FONDO_TERMINOS" href="http://www.sap-latam.com/sap_business_one/public/pdf/SAP_Marketing_Configurator_Portals_Privacy_Policy.pdf" target="_blank">T&eacute;rminos y condiciones de SAP</a></span>
-									</label>
-		        				</div>
+		        				<div class="col-xs-12 js-checkbox m-t-10 js-flex js-terminos">
+                                    <div class="js-flex--left">
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                                            <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
+                                        </label>
+                                        <span onclick="openModal()">He le&iacute;do y acepto los</span>
+                                    </div>
+                                    <a href="http://www.sap-latam.com/configurators/cloud/public/pdf/SAP_Privacy_Statement_CloudConfig_eng.pdf" target="_blank">Términos y condiciones de SAP</a>
+                                </div>
 		        				<div class="col-xs-12 text-right m-t-25">
 									<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="solicitarEstimacion();">Enviar informaci&oacute;n</button>
 		        				</div>
