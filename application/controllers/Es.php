@@ -496,10 +496,10 @@ class Es extends CI_Controller {
                               </td>
                             </tr>
                             <tr>
-                                  <td style="padding:10px 40px 20px 40px;">
-                                    <font style="color: #000000;font-size:14px;font-family: arial;"><strong>SAP Latinoamérica</strong></font>
-                                  </td>
-                                </tr>
+                              <td style="padding:10px 40px 20px 40px;">
+                                <font style="color: #000000;font-size:14px;font-family: arial;"><strong>SAP Latinoamérica</strong></font>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                       </td>

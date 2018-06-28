@@ -440,12 +440,12 @@ class Fr extends CI_Controller {
                                   <tbody>
                                     <tr>
                                       <td style="padding: 20px 40px 10px 40px;">
-                                        <font style="color: #000000;font-weight: bold;font-size: 20px;">Merci pour votre intérêt.</font>
+                                        <font style="color: #000000;font-weight: bold;font-size: 20px;">Merci pour votre participation!</font>
                                       </td>
                                     </tr>
                                     <tr>
                                       <td style="padding:10px 40px 20px 40px;">
-                                        <font style="color: #000000;">Un expert SAP vous recontactera pour vous aider dans votre réfléxion.</font>
+                                        <font style="color: #000000;">Nous sommes convaincus que SAP Business One a contribué à accélérer la transformation numérique de votre entreprise. Un expert SAP vous recontactera pour vous aider dans votre réfléxion.</font>
                                       </td>
                                     </tr>
                                   </tbody>

@@ -260,27 +260,27 @@ class Pt extends CI_Controller {
                             <table style="padding: 20px;" cellspacing="0" cellpadding="0" border="0">
                               <tbody>
                                 <tr style="padding: 0 20px;">
-                                  <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Cliente:</font></td>
+                                  <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;"><strong>Cliente:</strong></font></td>
                                   <td><font style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['nombre_completo'].'</font></td>
                                 </tr>
                                 <tr style="padding: 0 20px;">
-                                  <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Cargo:</font></td>
+                                  <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;"><strong>Cargo:</strong></font></td>
                                   <td><font  style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Cargo'].'</font></td>
                                 </tr>
                                 <tr style="padding: 0 20px;">
-                                  <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Empresa:</font></td>
+                                  <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;"><strong>Empresa:</strong></font></td>
                                   <td><font style="font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Empresa'].'</font></td>
                                 </tr>
                                 <tr style="padding: 0 20px;">
-                                  <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Telefone:</font></td>
+                                  <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;"><strong>Telefone:</strong></font></td>
                                   <td><font style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Telefono'].'</font></td>
                                 </tr>
                                 <tr style="padding: 0 20px;">
-                                  <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Email:</font></td>
+                                  <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;"><strong>Email:</strong></font></td>
                                   <td><font style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Email'].'</font></td>
                                 </tr>
                                 <tr style="padding: 0 20px;">
-                                  <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Relacionamento com SAP:</font></td>
+                                  <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;"><strong>Relacionamento com SAP:</strong></font></td>
                                   <td><font style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Relacion'].'</font></td>
                                 </tr>
                                 <tr style="padding: 0 20px;">
@@ -288,7 +288,7 @@ class Pt extends CI_Controller {
                                   <td><font style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$_SESSION['Pais'].'</font></td>
                                 </tr>
                                 <tr style="padding: 0 20px;">
-                                  <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Quero ser contatado:</font></td>
+                                  <td><font style="margin: 3px 0;font-size: 18px;font-family: "Open Sans",Arial,Helvetica,sans-serif;"><strong>Quero ser contatado:</strong></font></td>
                                   <td><font style="margin: 3px 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$contact.'</font></td>
                                 </tr>
                               </tbody>
@@ -303,35 +303,35 @@ class Pt extends CI_Controller {
                                 <tbody>
                                   <tr style="padding: 5px 20px;">
                                     <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/1.jpg"></td>
-                                    <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Em que setor você atua?</font></td>
+                                    <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;"><strong>Em que setor você atua?</strong></font></td>
                                   </tr>
                                   <tr style="padding: 5px 20px;">
                                     <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Industria.'</font></td>
                                   </tr>
                                   <tr style="padding: 5px 20px;">
                                     <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/2.jpg"></td>
-                                    <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Qual o tamanho da sua empresa?</font></td>
+                                    <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;"><strong>Qual o tamanho da sua empresa?</strong></font></td>
                                   </tr>
                                   <tr style="padding: 5px 20px;">
                                     <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Tamanio.' empregados</font></td>
                                   </tr>
                                   <tr style="padding: 5px 20px;">
                                     <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/3.jpg"></td>
-                                    <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Sua cobrança</font></td>
+                                    <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;"><strong>Sua cobrança</strong></font></td>
                                   </tr>
                                   <tr style="padding: 5px 20px;">
                                     <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Factura_anual.'</font></td>
                                   </tr>
                                   <tr style="padding: 5px 20px;">
                                     <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/4.jpg"></td>
-                                    <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Qual é a prioridade da sua empresa?</font></td>
+                                    <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;"><strong>Qual é a prioridade da sua empresa?</strong></font></td>
                                   </tr>
                                   <tr style="padding: 5px 20px;">
                                     <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Prioridad.'</font></td>
                                   </tr>
                                   <tr style="padding: 5px 20px;">
                                     <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/5.jpg"></td>
-                                    <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Que tipo de infraestrutura você está procurando?</font></td>
+                                    <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;"><strong>Que tipo de infraestrutura você está procurando?</strong></font></td>
                                   </tr>
                                   <tr style="padding: 5px 20px;">
                                     <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Infraestructura.'</font></td>
@@ -441,12 +441,12 @@ class Pt extends CI_Controller {
                                   <tbody>
                                     <tr>
                                       <td style="padding: 20px 40px 10px 40px;">
-                                        <font style="color: #000000;font-weight: bold;font-size: 20px;">Obrigado por seu interesse</font>
+                                        <font style="color: #000000;font-weight: bold;font-size: 20px;">Obrigado pela sua participação!</font>
                                       </td>
                                     </tr>
                                     <tr>
                                       <td style="padding:10px 40px 20px 40px;">
-                                        <font style="color: #000000;">Um representante da SAP entrar&aacute; em contato com voc&ecirc; para ajud&aacute;-lo a dar o primeiro passo.</font>
+                                        <font style="color: #000000;">Estamos confiantes de que o SAP Business One ajuda você a acelerar a transformação digital em sua empresa. Um representante da SAP entrará em contato para ajudá-lo a dar o primeiro passo.</font>
                                       </td>
                                     </tr>
                                   </tbody>
@@ -459,41 +459,46 @@ class Pt extends CI_Controller {
                                     <tbody>
                                       <tr style="padding: 5px 20px;">
                                         <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/1.jpg"></td>
-                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Em que setor você atua?</font></td>
+                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;"><strong>Em que setor você atua?</strong></font></td>
                                       </tr>
                                       <tr style="padding: 5px 20px;">
                                         <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Industria.'</font></td>
                                       </tr>
                                       <tr style="padding: 5px 20px;">
                                         <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/2.jpg"></td>
-                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Qual o tamanho da sua empresa?</font></td>
+                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;"><strong>Qual o tamanho da sua empresa?</strong></font></td>
                                       </tr>
                                       <tr style="padding: 5px 20px;">
                                         <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Tamanio.' empregados</font></td>
                                       </tr>
                                       <tr style="padding: 5px 20px;">
                                         <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/3.jpg"></td>
-                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Sua cobrança</font></td>
+                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;"><strong>Sua cobrança</strong></font></td>
                                       </tr>
                                       <tr style="padding: 5px 20px;">
                                         <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Factura_anual.'</font></td>
                                       </tr>
                                       <tr style="padding: 5px 20px;">
                                         <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/4.jpg"></td>
-                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Qual é a prioridade da sua empresa?</font></td>
+                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;"><strong>Qual é a prioridade da sua empresa?</strong></font></td>
                                       </tr>
                                       <tr style="padding: 5px 20px;">
                                         <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Prioridad.'</font></td>
                                       </tr>
                                       <tr style="padding: 5px 20px;">
                                         <td rowspan="2"><img width="35" src="http://www.sap-latam.com/sap_business_one/public/img/5.jpg"></td>
-                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">Que tipo de infraestrutura você está procurando?</font></td>
+                                        <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;"><strong>Que tipo de infraestrutura você está procurando?</strong></font></td>
                                       </tr>
                                       <tr style="padding: 5px 20px;">
                                         <td style="text-align: left;"><font style="margin: 0;font-family: "Open Sans",Arial,Helvetica,sans-serif;">'.$respuestas[0]->Infraestructura.'</font></td>
                                       </tr>
                                     </tbody>
                                   </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="padding:10px 40px 20px 40px;">
+                                  <font style="color: #000000;font-size:14px;font-family: arial;"><strong>SAP Latinoamérica</strong></font>
                                 </td>
                               </tr>
                           </tbody>

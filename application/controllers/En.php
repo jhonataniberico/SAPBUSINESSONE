@@ -431,7 +431,7 @@ class En extends CI_Controller {
                                 <tbody>
                                   <tr>
                                     <td style="padding: 20px 40px 10px 40px;">
-                                      <font style="color: #000000;font-weight: bold;font-size: 20px;">Thanks for your interest</font>
+                                      <font style="color: #000000;font-weight: bold;font-size: 20px;">Thanks for your participation!</font>
                                     </td>
                                   </tr>
                                   <tr>

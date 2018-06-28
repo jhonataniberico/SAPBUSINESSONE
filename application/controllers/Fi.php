@@ -430,7 +430,7 @@ class Fi extends CI_Controller {
                                   <tbody>
                                     <tr>
                                       <td style="padding: 20px 40px 10px 40px;">
-                                        <font style="color: #000000;font-weight: bold;font-size: 20px;">Kiitos kiinnostuksestasi</font>
+                                        <font style="color: #000000;font-weight: bold;font-size: 20px;">Kiitos osallistumisestanne!</font>
                                       </td>
                                     </tr>
                                     <tr>
