@@ -490,7 +490,7 @@ class En extends CI_Controller {
                                 <td style="padding:10px 40px 20px 40px;">
                                   <font style="color: #000000;font-size:14px;font-family: arial;"><strong>SAP Gobal</strong></font>
                                 </td>
-                              </tr>
+                            </tr>
                         </tbody>
                       </table>
                     </td>
