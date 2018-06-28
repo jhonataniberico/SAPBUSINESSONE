@@ -205,14 +205,14 @@ class Es extends CI_Controller {
        $configGmail = array('protocol'  => 'smtp',
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,
-                            'smtp_user' => 'info@sap-latam.com',
-                            'smtp_pass' => 'sapinfo18#',
+                            'smtp_user' => 'info@marketinghpe.com',
+                            'smtp_pass' => 'hpeinfo18',
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
                             'newline'   => "\r\n");
        $this->email->initialize($configGmail);
        $this->email->from('info@sap-latam.com');
-       $this->email->to('jhonatanibericom@brainblue.com');
+       $this->email->to('jhonatanibericom@gmail.com');
        $this->email->subject('Estoy interesado en SAP Business One para mi negocio.');
         $texto = '<!DOCTYPE html>
                   <html>
@@ -230,7 +230,7 @@ class Es extends CI_Controller {
                                   <table cellspacing="0" cellpadding="0" border="0">
                                     <tbody>
                                       <tr style="text-align: left;">
-                                        <th style="text-align: left;"><img width="80" height="53" src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_header.png"></th>
+                                        <th style="text-align: left;"><img width="150" height="53" src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_header.png"></th>
                                       </tr>
                                     </tbody>
                                   </table>
@@ -367,8 +367,8 @@ class Es extends CI_Controller {
        $configGmail = array('protocol'  => 'smtp',
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,
-                            'smtp_user' => 'info@sap-latam.com',
-                            'smtp_pass' => 'sapinfo18',
+                            'smtp_user' => 'info@marketinghpe.com',
+                            'smtp_pass' => 'hpeinfo18',
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
                             'newline'   => "\r\n");    
@@ -404,7 +404,7 @@ class Es extends CI_Controller {
                                         <table cellspacing="0" cellpadding="0" border="0">
                                           <tbody>
                                             <tr style="text-align: left;">
-                                              <th style="text-align: left;"><img width="80" height="45" src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_header.png"></th>
+                                              <th style="text-align: left;"><img width="150" height="45" src="http://www.sap-latam.com/sap_business_one/public/img/logo/logo_header.png"></th>
                                             </tr>
                                           </tbody>
                                         </table>
